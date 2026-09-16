@@ -1,0 +1,11 @@
+{
+  "name": "SIMUS.City.Editor",
+  "rootNamespace": "Simus.City.Editor",
+  "references": [
+    "SIMUS.City.Runtime"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "autoReferenced": true
+}

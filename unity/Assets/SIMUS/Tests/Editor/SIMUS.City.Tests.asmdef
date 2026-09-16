@@ -1,0 +1,14 @@
+{
+  "name": "SIMUS.City.Tests",
+  "rootNamespace": "Simus.City.Tests",
+  "references": [
+    "SIMUS.City.Runtime"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "autoReferenced": false
+}

@@ -38,15 +38,34 @@ VALUES (
   1,
   1,
   '{
+    "version": 1,
     "alignment_thresholds": {
       "negative": -3,
       "positive": 3
+    },
+    "alignment_axes": {
+      "x": {"negative": "CHAOTIC", "positive": "LAWFUL"},
+      "y": {"negative": "EVIL", "positive": "GOOD"}
+    },
+    "interpretations": {
+      "LAWFUL_GOOD": "질서 선",
+      "LAWFUL_NEUTRAL": "질서 중립",
+      "LAWFUL_EVIL": "질서 악",
+      "NEUTRAL_GOOD": "중립 선",
+      "TRUE_NEUTRAL": "완전 중립",
+      "NEUTRAL_EVIL": "중립 악",
+      "CHAOTIC_GOOD": "혼돈 선",
+      "CHAOTIC_NEUTRAL": "혼돈 중립",
+      "CHAOTIC_EVIL": "혼돈 악"
     },
     "initial_city_state": {
       "happiness": 50,
       "safety": 50,
       "cleanliness": 50
-    }
+    },
+    "initial_region_pollution": {"CENTER": 0},
+    "zero_response_policy": "EXCLUDE",
+    "completion_policy": "DRAIN"
   }'::jsonb,
   '00000000-0000-0000-0000-000000000001'
 )

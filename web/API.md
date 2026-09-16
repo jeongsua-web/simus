@@ -69,7 +69,9 @@ RUNNING 또는 CLOSING 회차를 반환합니다. 없으면 `session: null`입�
 
 ## GET /api/city-state
 
-Godot HTTPRequest에서 쿠키 없이 조회할 수 있습니다.
+Unity의 `UnityWebRequest`에서 인증·참여자 쿠키 없이 조회할 수 있습니다.
+후속 클라이언트 구현은 [Unity 연동 규격](../docs/unity-integration.md)의 필드 타입,
+null 처리, 버전 비교, 폴링 및 회차 전환 기준을 따릅니다.
 
 ```json
 {
@@ -87,9 +89,12 @@ Godot HTTPRequest에서 쿠키 없이 조회할 수 있습니다.
 }
 ```
 
-진행/종료 처리 중 회차를 우선 반환하고 없으면 가장 최근 확정 회차를 반환합니다. 대상이 없으면 `city_state: null`입니다.
+도시 상태 행이 있는 진행/종료 처리 중 회차를 우선 반환하고 없으면 가장 최근 확정 회차를 반환합니다.
+대상이 없으면 `city_state: null`입니다. 지역 상태가 없으면 `regions: []`, `overall_pollution: null`일 수 있습니다.
 도시와 지역은 한 SQL 스냅샷으로 조회합니다. bigint 버전은 정밀도 손실을 막기 위해 문자열로 반환합니다.
-Godot 네이티브 HTTP 클라이언트에서 사용하며 웹 내보내기는 같은 출처로 배포해야 합니다.
+`version`은 회차별 선택 반영 순번이며 상태 전이까지 나타내는 전체 응답 버전은 아닙니다.
+Unity Editor·데스크톱은 접근 가능한 서버 주소를 사용하고, WebGL은 API와 같은 출처로 배포합니다.
+현재 API에는 CORS 허용 설정이 없으며 이번 문서 작업에서 응답 구조나 서버 동작은 변경하지 않습니다.
 
 ## 검증 및 범위
 
@@ -101,5 +106,43 @@ Godot 네이티브 HTTP 클라이언트에서 사용하며 웹 내보내기는 �
 TEST_API_URL=http://localhost:3101 TEST_DATABASE_URL=postgresql://.../disposable_test_db node tests/api.integration.mjs
 ```
 
-관리자 회차 시작/종료 API, 자동 종료 작업, 최종 결과 계산은 이 네 API 범위에 포함되지 않습니다.
-접수 마감 재검사는 커밋 순간까지의 엄격한 종료 시각 보장을 대신하지 않으며, 최종 종료 처리에는 별도 조정 로직이 필요합니다.
+## 관리자 회차 운영
+
+`POST /api/admin/sessions/{session_id}/start`와 `POST /api/admin/sessions/{session_id}/end`는
+`Authorization: Bearer <JWT>`와 JSON 본문 `{ "request_key": "uuid" }`를 받습니다.
+JWT는 `ADMIN_TOKEN_ISSUER`, `ADMIN_TOKEN_AUDIENCE` 및 `ADMIN_JWKS_URL` 또는
+`ADMIN_JWKS_JSON`으로 RS256 서명·발급자·대상·만료를 검증합니다. JWT `sub`와 일치하는
+활성 `admin_users`만 실행할 수 있습니다. 같은 관리자의 요청 키는 같은 회차·작업에만 재사용할 수 있습니다.
+
+시작 API는 DRAFT 회차를 잠근 뒤 상황, 선택지 수, 지역, 유한한 영향값, 기존 상태·원장 부재와
+규칙 스냅샷을 검사합니다. 규칙 v1에는 -3/3 경계, 두 축의 방향, 9개 해석 문구, 도시·지역 초기값,
+`zero_response_policy`, `completion_policy: "DRAIN"`이 필요합니다. 초기 상태와 RUNNING 전환은 같은
+트랜잭션에 저장됩니다.
+
+종료 API는 RUNNING을 CLOSING으로 먼저 커밋해 새 선택을 차단합니다. 이미 회차 잠금을 가진 선택은
+완료 또는 롤백된 뒤 종료가 진행됩니다. 도시·지역·개인 원장 정합성을 확인하고 모든 결과와 FINALIZED를
+한 트랜잭션으로 저장합니다. 동시 호출과 응답 유실 뒤 재호출은 저장된 결과를 반환합니다.
+
+## 자동 종료와 복구
+
+스케줄러가 최소 1분 간격으로 다음 요청을 보내도록 구성합니다. `SESSION_JOB_TOKEN`은 32자 이상의
+무작위 비밀값이며 관리자 JWT와 별개입니다.
+
+```sh
+curl -X POST -H "Authorization: Bearer $SESSION_JOB_TOKEN" \
+  https://simus.example/api/internal/sessions/reconcile
+```
+
+작업은 종료 시각이 지난 RUNNING을 AUTO/CLOSING으로 전환하고, 모든 CLOSING을 같은 확정 함수로
+재개합니다. 서버가 종료 도중 재시작되어도 다음 호출이 DB 상태에서 복구합니다. 여러 스케줄러 호출은
+회차 행 잠금으로 직렬화됩니다. 스케줄러 실행이 늦으면 접수 자체는 기존 DB 시각 조건으로 cutoff부터
+거부되며, 확정 시각은 실제 복구 시각이 됩니다.
+
+## GET /api/sessions/{session_id}/result
+
+유효한 `simus_participant` 쿠키의 본인 확정 결과만 반환합니다. 회차가 FINALIZED 전이면 409,
+본인이 결과 대상이 아니면 `{ "result": null }`입니다. 점수 bigint는 문자열이며 응답은
+`session_id`, `x_score`, `y_score`, `response_count`, `alignment_code`, `interpretation`,
+`finalized_at`을 포함합니다. 참여자 ID를 요청에서 받지 않으므로 타인의 결과를 지정해 조회할 수 없습니다.
+
+접수 중 공개 API는 개인 점수와 선택지의 성향·도시·지역 영향값을 반환하지 않습니다.

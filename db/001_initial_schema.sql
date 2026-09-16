@@ -296,7 +296,7 @@ BEGIN
   END LOOP;
 END $$;
 
--- 브라우저/Godot에는 DB 자격 증명을 주지 않는다.
+-- 브라우저/Unity에는 DB 자격 증명을 주지 않는다.
 REVOKE ALL ON SCHEMA simus FROM PUBLIC;
 REVOKE ALL ON ALL TABLES IN SCHEMA simus FROM PUBLIC;
 REVOKE EXECUTE ON ALL FUNCTIONS IN SCHEMA simus FROM PUBLIC;

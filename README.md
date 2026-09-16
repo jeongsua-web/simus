@@ -1,5 +1,13 @@
 # SIM:US 개발 환경
 
+도시 시각화 클라이언트는 Unity를 사용한다. 기존 Next.js·PostgreSQL 구조와
+Next.js 참여 화면(`/participate`)은 유지한다. Unity는 DB에 직접 연결하지 않고
+`GET /api/city-state`로 도시 상태를 조회한다.
+응답 타입, 폴링 및 배포 기준은 [Unity 연동 규격](docs/unity-integration.md)을 따른다.
+
+기존 `godot/`은 전환 확인 시점(2026-09-16)에 숨김 파일을 포함한 작업물과 Git 추적 파일이 없는
+빈 폴더로 확인했으며 삭제하지 않았다. 이번 작업은 연동 문서 정리이며 Unity 프로젝트 생성은 후속 작업이다.
+
 Docker Desktop 실행 후 저장소 최상위에서:
 
 ```sh

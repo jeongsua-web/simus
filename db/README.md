@@ -4,6 +4,15 @@
 기존 PostgreSQL 데이터베이스 안에 `simus` 스키마와 테이블 18개를 생성한다.
 학과, 캐릭터/NPC, 확산, 알림, 선택적 요청 로그는 후속 범위로 제외했다.
 
+기존 DB에는 데이터 삭제 없이 후속 마이그레이션을 번호 순서대로 한 번씩 적용한다.
+
+```sh
+psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f db/002_session_lifecycle.sql
+```
+
+`002_session_lifecycle.sql`은 허용 상태 전이, 시작 후 설정 고정, 회차 상태·원장·결과 쓰기 범위,
+완전한 결과와 `FINALIZED`의 동일 커밋을 DB 트리거로 보강한다. 이미 존재하는 행은 변경하지 않는다.
+
 ## 실행
 
 PostgreSQL 14 이상에서 새 데이터베이스를 준비하고 실행한다.
@@ -16,6 +25,10 @@ psql -d simus -v ON_ERROR_STOP=1 -f db/001_initial_schema.sql
 원격 DB라면 `psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f db/001_initial_schema.sql`을 사용한다.
 기존 스키마를 지우지 않으며 두 번 실행하면 오류로 전체 롤백한다. 수정은 후속 마이그레이션으로 적용한다.
 Next.js 서버 쿼리에서는 `simus.city_states`처럼 스키마를 명시한다.
+
+Unity 도시 시각화 클라이언트와 브라우저에는 DB 접속 정보나 자격 증명을 제공하지 않는다.
+PostgreSQL 접근은 Next.js 서버가 담당하며 Unity는 `GET /api/city-state`만 조회한다.
+필드 타입과 null 처리, bigint 버전 비교는 [Unity 연동 규격](../docs/unity-integration.md)을 따른다.
 
 생성 후 핵심 제약조건을 검증할 수 있다. 검증 데이터는 롤백되어 남지 않는다.
 

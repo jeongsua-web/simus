@@ -14,6 +14,9 @@ export function json(data: unknown, status = 200) {
 export async function handle(action: () => Promise<NextResponse>) {
   try { return await action(); } catch (error) {
     if (error instanceof ApiError) return json({ error: { code: error.code, message: error.message } }, error.status);
+    const code = typeof error === "object" && error && "code" in error ? String(error.code) : "";
+    if (code === "23505" || code === "23514") return json({ error: { code: "CONFLICT", message: "현재 상태에서는 요청을 완료할 수 없습니다." } }, 409);
+    if (code === "40P01" || code === "55P03" || code === "57014") return json({ error: { code: "RETRYABLE_CONFLICT", message: "동시 작업이 진행 중입니다. 같은 요청 키로 다시 시도해주세요." } }, 503);
     console.error("API request failed", error);
     return json({ error: { code: "INTERNAL_ERROR", message: "요청 처리에 실패했습니다." } }, 500);
   }
