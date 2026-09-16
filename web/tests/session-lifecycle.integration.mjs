@@ -36,6 +36,10 @@ try {
   await db.query(`INSERT INTO simus.session_choices(session_id,situation_id,id,label,importance,alignment_dx,alignment_dy,happiness_base)
     VALUES($1,'33000000-0000-0000-0000-000000000001','44000000-0000-0000-0000-000000000001','A','MAJOR',2,2,1),
           ($1,'33000000-0000-0000-0000-000000000001','44000000-0000-0000-0000-000000000002','B','NORMAL',-1,-1,-1)`,[sid]);
+  assert.equal((await call('/api/admin/sessions')).status,401);
+  const draftList = await call('/api/admin/sessions',{auth:token});
+  assert.equal(draftList.status,200);
+  assert.equal(draftList.body.sessions.find(x=>x.id===sid).can_start,true);
   assert.equal((await call(`/api/admin/sessions/${sid}/start`,{data:{request_key:'55000000-0000-0000-0000-000000000001'}})).status,401);
   assert.equal((await call(`/api/admin/sessions/${sid}/start`,{auth:token,data:{request_key:'55000000-0000-0000-0000-000000000001'}})).status,200);
   const participant = await call('/api/participants',{method:'POST'});
@@ -51,6 +55,8 @@ try {
   const own = await call(`/api/sessions/${sid}/result`,{cookie:participant.cookie});
   assert.equal(own.status,200); assert.equal(own.body.result.alignment_code,'TRUE_NEUTRAL');
   assert.equal(own.body.result.interpretation,'result:TRUE_NEUTRAL');
+  const finalList = await call('/api/admin/sessions',{auth:token});
+  assert.equal(finalList.body.sessions.find(x=>x.id===sid).status,'FINALIZED');
   const stranger = await call('/api/participants',{method:'POST'});
   assert.equal((await call(`/api/sessions/${sid}/result`,{cookie:stranger.cookie})).body.result,null);
   assert.equal((await db.query('SELECT count(*) FROM simus.session_results WHERE session_id=$1',[sid])).rows[0].count,'1');

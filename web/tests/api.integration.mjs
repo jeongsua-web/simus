@@ -31,6 +31,15 @@ try {
   const submissions = await Promise.all([call('/api/choices',payload,person.cookie),call('/api/choices',payload,person.cookie)]);
   assert.deepEqual(submissions.map(r=>r.status).sort(),[200,201]);
   assert.equal(submissions[0].body.record_id,submissions[1].body.record_id);
+  const restored = await call(`/api/sessions/${sid}/responses`,null,person.cookie);
+  assert.equal(restored.status,200);
+  assert.deepEqual(restored.body.responses.map(x=>({situation_id:x.situation_id,choice_id:x.choice_id})),[{situation_id:tid,choice_id:cid}]);
+  assert.ok(!JSON.stringify(restored.body).includes('alignment_dx'));
+  assert.ok(!JSON.stringify(restored.body).includes('happiness_delta'));
+  const me = await call('/api/participants',null,person.cookie);
+  assert.equal(me.body.latest_session.id,sid);
+  assert.equal(me.body.latest_session.response_count,1);
+  assert.equal((await call('/api/participants',null,'simus_participant=expired','POST')).status,401);
   const after = (await call('/api/city-state')).body.city_state;
   assert.equal(BigInt(after.version),BigInt(before.version)+1n);
   assert.equal(after.happiness,Math.min(100,before.happiness+1));
@@ -51,5 +60,5 @@ try {
   assert.equal((await call('/api/choices',payload,person.cookie)).status,200);
   assert.equal((await call('/api/sessions/current')).body.session.accepting_choices,false);
   assert.equal((await db.query('SELECT count(*) FROM simus.choice_records WHERE session_id=$1',[sid])).rows[0].count,'2');
-  console.log('PASS: current session, identity reuse, authentication, validation, concurrent replay, conflicts, scores, clamping, closed-session rejection');
+  console.log('PASS: current session, identity reuse, response restoration without hidden values, expired auth, validation, replay, conflicts, scores, clamping, closed-session rejection');
 } finally { await db.end(); }

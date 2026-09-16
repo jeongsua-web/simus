@@ -35,7 +35,12 @@ export async function transaction<T>(action: (db: PoolClient) => Promise<T>): Pr
 }
 export function checkOrigin(request: NextRequest) {
   const origin = request.headers.get("origin");
-  if (request.headers.get("sec-fetch-site") === "cross-site" || (origin && origin !== new URL(request.url).origin)) {
+  // Next.js may normalize loopback URLs or use the server bind hostname.
+  // The browser's destination is Host, not that internal URL hostname.
+  const destination = new URL(request.url);
+  const host = request.headers.get("host");
+  if (host) destination.host = host;
+  if (request.headers.get("sec-fetch-site") === "cross-site" || (origin && origin !== destination.origin)) {
     throw new ApiError(403, "INVALID_ORIGIN", "같은 사이트에서 요청해주세요.");
   }
 }

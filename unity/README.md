@@ -1,5 +1,7 @@
 # SIM:US Unity client
 
+City visualization behavior, value mapping, preview data, and scene instructions are documented in [VISUALIZATION.md](VISUALIZATION.md).
+
 `docs/unity-integration.md` 계약에 맞춘 최소 도시 상태 클라이언트다. Next.js와 PostgreSQL에는
 변경을 요구하지 않으며 Unity는 `GET /api/city-state`만 호출한다.
 

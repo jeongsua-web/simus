@@ -124,7 +124,8 @@ export async function requestManualEnd(adminId: string, sessionId: string, reque
       return { finalized: true, finalized_at: session.rows[0].finalized_at };
     if (action.outcome !== "PENDING") throw new ApiError(409, "ACTION_NOT_RETRYABLE", "완료할 수 없는 관리자 작업입니다.");
     if (session.rows[0].status === "RUNNING") {
-      await db.query(`UPDATE simus.simulation_sessions SET status='CLOSING',admission_closed_at=clock_timestamp(),
+      await db.query(`UPDATE simus.simulation_sessions SET status='CLOSING',
+        admission_closed_at=LEAST(admission_closed_at,scheduled_end_at-admission_buffer,clock_timestamp()),
         end_requested_at=clock_timestamp(),end_mode='MANUAL',ended_by_admin_id=$2 WHERE id=$1`, [sessionId, adminId]);
     } else if (session.rows[0].status !== "CLOSING" && session.rows[0].status !== "FINALIZED") {
       throw new ApiError(409, "INVALID_SESSION_STATE", "RUNNING 회차만 종료할 수 있습니다.");
@@ -146,7 +147,7 @@ export async function reconcileSessions() {
     await transaction(async db => {
       const session = await db.query("SELECT status FROM simus.simulation_sessions WHERE id=$1 FOR UPDATE", [id]);
       if (session.rows[0]?.status === "RUNNING") await db.query(`UPDATE simus.simulation_sessions
-        SET status='CLOSING',admission_closed_at=scheduled_end_at-admission_buffer,end_requested_at=clock_timestamp(),end_mode='AUTO'
+        SET status='CLOSING',admission_closed_at=LEAST(admission_closed_at,scheduled_end_at-admission_buffer),end_requested_at=clock_timestamp(),end_mode='AUTO'
         WHERE id=$1`, [id]);
     });
     results.push(await finalizeClosingSession(id));

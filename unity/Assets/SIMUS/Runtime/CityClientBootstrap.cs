@@ -8,11 +8,12 @@ namespace Simus.City
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void Start()
         {
-            if (Object.FindObjectOfType<CityStatePoller>() != null) return;
+            if (Object.FindObjectOfType<CityStatePoller>() != null ||
+                Object.FindObjectOfType<CityVisualization>() != null) return;
             var root = new GameObject("SIMUS City Client");
             Object.DontDestroyOnLoad(root);
             var poller = root.AddComponent<CityStatePoller>();
-            root.AddComponent<CityStateDebugView>().SetPoller(poller);
+            root.AddComponent<CityVisualization>().SetPoller(poller);
         }
     }
 }

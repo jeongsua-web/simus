@@ -146,3 +146,21 @@ curl -X POST -H "Authorization: Bearer $SESSION_JOB_TOKEN" \
 `finalized_at`을 포함합니다. 참여자 ID를 요청에서 받지 않으므로 타인의 결과를 지정해 조회할 수 없습니다.
 
 접수 중 공개 API는 개인 점수와 선택지의 성향·도시·지역 영향값을 반환하지 않습니다.
+
+## GET /api/sessions/{session_id}/responses
+
+익명 참여자 쿠키가 필요합니다. 요청한 회차의 공개 수명 주기 필드와 호출자 본인이 제출한
+`situation_id`, `choice_id`, `received_at`만 반환합니다. 성향 점수, 선택지 영향값, 적용 변화량과
+도시 수치는 제외합니다. 새로고침 후 완료 상태를 복원하는 용도이며 확정 전에도 호출할 수 있습니다.
+
+## GET /api/participants
+
+유효한 참여자 쿠키가 필요하며 본인이 가장 최근 참여한 회차의 상태와 응답 수를 반환합니다. 만료되거나
+유효하지 않은 인증에는 401을 반환합니다. `POST /api/participants`는 참여자 쿠키가 전혀 없을 때만
+새 익명 참여자를 생성합니다.
+
+## GET /api/admin/sessions
+
+시작·종료 API와 같은 관리자 Bearer JWT 및 활성 관리자 DB 검증이 필요합니다. 전체 회차, 참여자·응답 수,
+수명 주기 시각, 서버에서 판단한 시작 전 검증 실패 원인을 반환합니다. `can_start`는 화면 표시용이며 실제
+시작 요청에서도 회차를 잠근 뒤 독립적으로 다시 검증합니다.

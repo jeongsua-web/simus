@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+Participant/result behavior and the administrator runbook are documented in [OPERATIONS.md](OPERATIONS.md).
+
 ## Getting Started
 
 First, run the development server:

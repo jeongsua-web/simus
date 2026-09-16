@@ -83,6 +83,34 @@ namespace Simus.City.Tests
             Assert.That(CityPollingPolicy.IsRetryable(404), Is.False);
         }
 
+        [Test]
+        public void VisualMappingUsesStableRegionCodeAndPollutionBands()
+        {
+            var region = CityStateJson.Parse("{\"city_state\":{" +
+                "\"session_id\":\"" + SessionA + "\",\"status\":\"RUNNING\"," +
+                "\"happiness\":50,\"safety\":50,\"cleanliness\":50,\"version\":\"1\"," +
+                "\"updated_at\":\"2026-09-16T00:00:00Z\",\"overall_pollution\":50," +
+                "\"regions\":[{\"id\":\"20000000-0000-0000-0000-000000000001\",\"code\":\"CENTER\"," +
+                "\"name\":\"Center\",\"map_metadata\":{},\"pollution\":50,\"updated_at\":\"2026-09-16T00:00:00Z\"}]}}")
+                .CityState.Regions[0];
+            Assert.That(CityVisualMapping.RegionKey(region), Is.EqualTo("CENTER"));
+            Assert.That(CityVisualMapping.Normalize(-1), Is.EqualTo(0));
+            Assert.That(CityVisualMapping.Normalize(101), Is.EqualTo(1));
+            var clean = CityVisualMapping.PollutionColor(0);
+            var polluted = CityVisualMapping.PollutionColor(100);
+            Assert.That(clean.g, Is.GreaterThan(clean.r));
+            Assert.That(polluted.r, Is.GreaterThan(polluted.g));
+        }
+
+        [Test]
+        public void VisualStatusLabelsDistinguishRoundLifecycle()
+        {
+            Assert.That(CityVisualMapping.StatusLabel("RUNNING"), Is.EqualTo("ROUND IN PROGRESS"));
+            Assert.That(CityVisualMapping.StatusLabel("CLOSING"), Is.EqualTo("FINALIZING RESULTS"));
+            Assert.That(CityVisualMapping.StatusLabel("FINALIZED"), Is.EqualTo("RESULTS FINALIZED"));
+            Assert.That(CityVisualMapping.StatusLabel(null), Is.EqualTo("NO ROUND"));
+        }
+
         private static string Json(string session, string status, string version)
         {
             return "{\"city_state\":{" +
