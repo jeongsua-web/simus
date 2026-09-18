@@ -1,5 +1,9 @@
 # SIM:US Unity client
 
+시연 대상·장면 저장·Windows 빌드·WebGL 출처 검증 절차는 [시연·배포 가이드](../docs/demo-deployment.md#5-unity-준비빌드실행)를 따른다.
+2026-09-18 재확인: Editor/ProjectSettings/실행 장면이 없어 실제 빌드 대상은 아직 미확정이다.
+Windows 데스크톱을 준비 기준으로 삼았으며 실행·빌드 성공을 의미하지 않는다.
+
 City visualization behavior, value mapping, preview data, and scene instructions are documented in [VISUALIZATION.md](VISUALIZATION.md).
 
 `docs/unity-integration.md` 계약에 맞춘 최소 도시 상태 클라이언트다. Next.js와 PostgreSQL에는

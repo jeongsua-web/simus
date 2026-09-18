@@ -8,6 +8,11 @@
 .env.*
 !.env.example
 !**/.env.example
+/web/.demo/
+/web/public/city/
+*.pem
+*.p12
+*.pfx
 
 # Node.js / Next.js
 **/node_modules/

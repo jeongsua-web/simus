@@ -1,5 +1,10 @@
 # SIM:US PostgreSQL 스키마
 
+시연용 새 DB에는 `001_initial_schema.sql` → `002_session_lifecycle.sql` → `seed_demo.sql`을 적용한다.
+`seed_demo.sql`은 관리자 화면에서 시작할 DRAFT를 준비한다. 기존 `seed_development.sql`은 즉시 RUNNING으로
+전환하는 개발용이므로 같은 DB에 혼용하지 않는다. 운영 DB에는 어느 seed도 적용하지 않는다.
+구체적인 명령과 데이터 분리는 [시연·배포 가이드](../docs/demo-deployment.md)에 있다.
+
 `001_initial_schema.sql`은 DB 초안 v0.1의 **이번 연결 시제품** 범위를 구현한다.
 기존 PostgreSQL 데이터베이스 안에 `simus` 스키마와 테이블 18개를 생성한다.
 학과, 캐릭터/NPC, 확산, 알림, 선택적 요청 로그는 후속 범위로 제외했다.
@@ -51,7 +56,11 @@ psql -d simus -v ON_ERROR_STOP=1 -f db/verify_schema.sql
 - 도시 변화량은 초안에서 허용한 독립 numeric 컬럼 방식으로 저장.
 - 개인·도시·지역 상태의 `updated_at`은 갱신하는 서버 쿼리에서 직접 설정한다.
 
-## 서버에서 이어서 구현할 필수 사항
+## 서버와 운영 계층의 책임
+
+아래 목록은 스키마만으로 완성되지 않는 책임의 목록이다. 현재 Next.js에는 인증·시작 검증·선택 트랜잭션·
+종료/결과 확정이 구현돼 있다. 현재 구현/검증 상태는 [README](../README.md)와
+[통합 검증 보고서](../docs/integration-report.md)를 기준으로 본다. 운영 계정 분리·스케줄러 배포는 남아 있다.
 
 이 SQL은 스키마 생성이며 다음 동작을 구현한 완성 서버가 아니다.
 

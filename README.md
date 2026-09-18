@@ -1,40 +1,48 @@
-# SIM:US 개발 환경
+﻿# SIM:US
 
-도시 시각화 클라이언트는 Unity를 사용한다. 기존 Next.js·PostgreSQL 구조와
-Next.js 참여 화면(`/participate`)은 유지한다. Unity는 DB에 직접 연결하지 않고
-`GET /api/city-state`로 도시 상태를 조회한다.
-응답 타입, 폴링 및 배포 기준은 [Unity 연동 규격](docs/unity-integration.md)을 따른다.
+Next.js 참여·관리자 화면, PostgreSQL 회차/선택/결과 저장, Unity 도시 시각화 클라이언트로 구성됩니다.
+Unity는 공개 `GET /api/city-state`만 읽으며 DB 접속 정보나 관리자 토큰을 사용하지 않습니다.
 
-기존 `godot/`은 전환 확인 시점(2026-09-16)에 숨김 파일을 포함한 작업물과 Git 추적 파일이 없는
-빈 폴더로 확인했으며 삭제하지 않았다. 이번 작업은 연동 문서 정리이며 Unity 프로젝트 생성은 후속 작업이다.
+**시연 시작:** [시연·배포 준비 가이드](docs/demo-deployment.md). DB 생성 → 마이그레이션 → 시연 DRAFT/관리자 설정 → 서버 실행 → Unity 준비 → 시연 체크리스트 순서입니다.
 
-Docker Desktop 실행 후 저장소 최상위에서:
+## 현재 가능한 기능
 
-```sh
-docker compose up
-```
+- 익명 참여, 상황 선택, 중복 제출 방지, 새로고침 후 응답 복원.
+- JWT와 활성 관리자 검증, 회차 준비 상태 조회, 시작·수동 종료.
+- 도시·지역 상태의 트랜잭션 갱신, 종료 후 본인 결과 조회, 결과 중복 확정 방지.
+- 인증된 reconcile API를 통한 자동 종료·중단된 종료 복구.
+- Unity 소스: 도시/지역 표현, 상태 HUD, API 폴링·재연결·마지막 정상 상태 유지, 미리보기.
 
-PostgreSQL이 준비되면 Next.js 의존성을 설치하고 개발 서버를 실행한다.
-첫 실행에는 Node 이미지 다운로드와 패키지 설치 시간이 필요하다.
-이미 별도로 실행한 `npm run dev`가 있으면 먼저 Ctrl+C로 종료한다.
+## 실행 대상과 주소
 
-- 참여 화면: http://localhost:3000/participate
-- 연결 확인: http://localhost:3000/api/health
-- 백그라운드 실행: `docker compose up -d`
-- 상태 확인: `docker compose ps`
-- 로그 확인: `docker compose logs -f web`
-- 종료: 실행 터미널의 Ctrl+C 또는 `docker compose stop`
+| 구분 | 현재 상태 / 주소 |
+| --- | --- |
+| 로컬 Next.js | `http://localhost:3000` |
+| 참여 / 관리자 | `/participate` / `/admin` |
+| 본인 결과 | `/result/{session_id}` (참여했던 브라우저 사용) |
+| 상태 / Unity API | `/api/health` / `/api/city-state` |
+| Unity 실제 빌드 대상 | **미확정**. Editor 버전·ProjectSettings·저장된 장면·빌드 산출물 없음 |
+| 시연 준비 기준 | Windows 데스크톱. Editor 설치 후 버전·장면·Windows 빌드 대상을 확정해야 함 |
+| 배포 서버 | **미설정·미배포**. 가이드의 `https://simus.example.com`은 설명용 예시 |
 
-소스 수정은 컨테이너에 바로 반영된다. 패키지 파일을 바꿨다면
-`docker compose restart web`으로 의존성을 다시 설치한다.
-매 시작 시 `npm ci`로 lockfile과 설치 내용을 맞춘다.
+기존 `compose.yaml`은 Node 24 / PostgreSQL 16의 **개발용** 구성입니다. `npm ci` 후 `next dev`를 실행하며,
+초기 DB에 001만 적용합니다. 002 마이그레이션과 관리자 설정은 별도입니다. 운영 배포 설정이나 공개 서버 주소는 없습니다.
 
-Compose가 개발용 DATABASE_URL을 직접 제공하므로 Docker 실행에는 `.env.local`이 필요 없다.
-Next.js를 컴퓨터에서 직접 실행할 때는 기존 `.env.local`의 localhost 주소를 사용한다.
-컨테이너 안에서는 DB 주소가 `db:5432`이며 Next.js의 환경변수가 `.env.local`보다 우선한다.
+## 검증과 제한
 
-DB 볼륨은 기존 것을 유지한다. 초기 SQL은 빈 DB 볼륨을 처음 만들 때만 적용된다.
-일반 종료로 데이터가 삭제되지는 않지만 `docker compose down -v`는 DB 볼륨도 삭제하므로 사용에 주의한다.
-개발 회차 데이터가 필요하면 `db/README.md`와 `web/API.md`를 참고한다.
+2026-09-18 검증 결과는 [시연 준비 검증 기록](docs/demo-validation.md), 이전 상세 검증은
+[통합 검증 보고서](docs/integration-report.md)에 있습니다.
 
-이 Compose는 코드 변경을 즉시 반영하는 로컬 개발용 구성이다.
+- 관리자 화면은 콘텐츠 생성·수정을 지원하지 않습니다. 시연에는 `db/seed_demo.sql`을 사용합니다.
+- 기존 `db/seed_development.sql`은 회차를 즉시 RUNNING으로 만드는 개발용입니다. 시연 DRAFT와 혼용하지 않습니다.
+- 자동 종료 스케줄러는 설치돼 있지 않습니다. API 호출 작업을 별도로 구성해야 합니다.
+- Unity C# 컴파일·EditMode·실제 도시 화면·데스크톱/WebGL 빌드는 Editor 부재로 미검증입니다.
+- WebGL은 선택 가능한 후속 대상입니다. 현재 CORS 허용 설정은 없으므로 동일 출처 구성이 필요합니다.
+- 실제 HTTPS 프록시, LAN/모바일 실기기, 운영 부하·백업 복구·권한 분리는 아직 검증하지 않았습니다.
+- DB의 종료 정책은 DRAIN입니다. 모든 부하에서 마감 이후 커밋이 절대 없다는 보장을 의미하지 않습니다.
+
+운영 DB에는 seed와 테스트를 실행하지 않습니다. 비밀값은 서버 환경/비밀 저장소로 주입하고 Git,
+`NEXT_PUBLIC_*`, Unity Assets/Resources/StreamingAssets 및 빌드에 넣지 않습니다.
+
+추가 문서: [API](web/API.md) · [운영 화면](web/OPERATIONS.md) · [DB](db/README.md) ·
+[Unity 준비](unity/README.md) · [도시 표현](unity/VISUALIZATION.md) · [연동 계약](docs/unity-integration.md)

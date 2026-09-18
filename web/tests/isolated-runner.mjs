@@ -5,7 +5,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { spawn } from 'node:child_process';
 import { once } from 'node:events';
-import { generateKeyPair, exportJWK } from 'jose';
+import { generateKeyPair, exportJWK, SignJWT } from 'jose';
 import pg from 'pg';
 import { runFlow } from './isolated-flow.mjs';
 import assert from 'node:assert/strict';
@@ -78,6 +78,27 @@ try {
   await startServer();
   console.log(await command(process.execPath, ['tests/session-lifecycle.integration.mjs'], env));
   await runFlow({ pool, env, stopServer, startServer });
+  // Exercise the documented DRAFT demo seed through the real lifecycle API.
+  await pool.query(await readFile(path.join(web, '../db/seed_demo.sql'), 'utf8'));
+  const demoToken = await new SignJWT({}).setProtectedHeader({ alg: 'RS256', kid: publicJwk.kid })
+    .setIssuer(env.ADMIN_TOKEN_ISSUER).setAudience(env.ADMIN_TOKEN_AUDIENCE)
+    .setSubject('dev-admin').setIssuedAt().setExpirationTime('5m').sign(privateKey);
+  const demoHeaders = { authorization: `Bearer ${demoToken}`, 'content-type': 'application/json' };
+  const demoId = '10000000-0000-0000-0000-000000000001';
+  const demoList = await (await fetch(env.TEST_API_URL + '/api/admin/sessions', { headers: demoHeaders })).json();
+  assert.equal(demoList.sessions.find(s => s.id === demoId).can_start, true);
+  for (const action of ['start', 'end']) {
+    const result = await fetch(`${env.TEST_API_URL}/api/admin/sessions/${demoId}/${action}`, {
+      method: 'POST', headers: demoHeaders,
+      body: JSON.stringify({ request_key: crypto.randomUUID() }),
+    });
+    assert.equal(result.status, 200, await result.text());
+  }
+  const originProbe = await fetch(env.TEST_API_URL + '/api/city-state', { headers: { Origin: 'https://different-origin.invalid' } });
+  assert.equal(originProbe.status, 200);
+  assert.equal(originProbe.headers.get('access-control-allow-origin'), null);
+  assert.equal(originProbe.headers.get('cache-control'), 'no-store');
+  console.log('PASS: demo DRAFT seed readiness/start/end; city API has no cross-origin CORS grant');
   await pool.end(); pool = null;
   const beforeOutage = await (await fetch(env.TEST_API_URL + '/api/city-state')).json();
   await command(path.join(bin, 'pg_ctl.exe'), ['-D', data, '-m', 'fast', '-w', 'stop']);
