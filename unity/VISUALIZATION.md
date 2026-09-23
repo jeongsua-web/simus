@@ -39,4 +39,4 @@ The HUD distinguishes:
 
 ## Verification limits in this checkout
 
-The repository does not contain `ProjectSettings/ProjectVersion.txt`, and no registered Unity Editor is available in the current environment. C# compilation, EditMode execution, and Play Mode screenshots must therefore be completed after opening the project in an installed Editor. The preview path provides deterministic visual test data for that check.
+The repository now contains `ProjectSettings/ProjectVersion.txt` for Unity 6000.3.24f1 and an imported static Neighborhood scene. The existing API visualization has not yet been recompiled or run in the Editor after this merge. Its preview path provides deterministic visual test data for that check.

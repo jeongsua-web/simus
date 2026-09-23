@@ -8,6 +8,8 @@ namespace Simus.City
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         private static void Start()
         {
+            // The imported Neighborhood scene has its own map and preview camera.
+            if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "Neighborhood") return;
             if (Object.FindObjectOfType<CityStatePoller>() != null ||
                 Object.FindObjectOfType<CityVisualization>() != null) return;
             var root = new GameObject("SIMUS City Client");

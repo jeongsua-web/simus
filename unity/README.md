@@ -1,5 +1,10 @@
 # SIM:US Unity client
 
+2026-09-24: Unity 6000.3.24f1로 만든 별도 [동네 맵 시제품](../docs/unity-neighborhood/README.md)을
+`Assets/Scenes/Neighborhood.unity`에 병합했다. 이 장면은 정적 맵과 카메라 조작을 보여주며
+현재 도시 상태 API와 연결되지 않는다. 기존 빈 장면용 도시 상태 클라이언트는 그대로 유지한다.
+아래 2026-09-16~18 기록과 시연·배포 가이드의 당시 상태 설명은 병합 전 기록이다.
+
 시연 대상·장면 저장·Windows 빌드·WebGL 출처 검증 절차는 [시연·배포 가이드](../docs/demo-deployment.md#5-unity-준비빌드실행)를 따른다.
 2026-09-18 재확인: Editor/ProjectSettings/실행 장면이 없어 실제 빌드 대상은 아직 미확정이다.
 Windows 데스크톱을 준비 기준으로 삼았으며 실행·빌드 성공을 의미하지 않는다.
@@ -9,7 +14,7 @@ City visualization behavior, value mapping, preview data, and scene instructions
 `docs/unity-integration.md` 계약에 맞춘 최소 도시 상태 클라이언트다. Next.js와 PostgreSQL에는
 변경을 요구하지 않으며 Unity는 `GET /api/city-state`만 호출한다.
 
-## 현재 프로젝트 상태
+## 2026-09-16 당시 프로젝트 상태
 
 2026-09-16 확인 결과 이 컴퓨터에는 Unity CLI 1.0.0-beta.9만 있고, CLI가 보고한 설치된
 Unity Editor와 등록된 Unity 프로젝트는 각각 0개였다. 따라서 특정 Editor 버전을 추측한
@@ -32,16 +37,14 @@ Unity Editor와 등록된 Unity 프로젝트는 각각 0개였다. 따라서 특
 
 ## Editor에서 여는 절차
 
-1. Unity Hub에서 팀이 사용할 Editor를 설치한다. 현재 저장소에는 버전 결정 근거가 없으므로 먼저 팀 버전을 선택한다.
-2. 그 Editor로 임시 빈 Core 프로젝트를 만든다.
-3. Editor를 닫고 임시 프로젝트의 `ProjectSettings/` 전체를 이 `unity/` 아래에 복사한다.
-   생성된 `ProjectSettings/ProjectVersion.txt`가 실제 설치 버전을 기록하게 한다. `Library/`, `Temp/`, `Logs/`는 복사하지 않는다.
-4. Unity Hub에서 이 `unity/` 폴더를 프로젝트로 추가해 연다. Package Manager가 manifest의 Newtonsoft 패키지를 복원할 때까지 기다린다.
-5. 빈 장면을 만들고 Play를 누르면 runtime bootstrap이 폴러와 디버그 화면을 자동 생성한다.
-6. 서버 주소나 폴링 주기를 바꾸려면 Play 전에 `SIMUS > Create City Client`를 실행하고,
+1. Unity 6000.3.24f1에서 `unity/` 폴더를 연다. 다른 버전으로 열기 전에 장면 호환성을 확인한다.
+2. Package Manager가 manifest의 Newtonsoft 패키지를 복원할 때까지 기다린다.
+3. `Assets/Scenes/Neighborhood.unity`를 열면 정적 맵 시제품을 확인할 수 있다. 조작법은 [동네 맵 안내](../docs/unity-neighborhood/README.md)를 따른다.
+4. 기존 API 연동 기능을 확인하려면 새 빈 장면을 만들고 Play를 누른다. runtime bootstrap이 폴러와 도시 시각화를 자동 생성한다.
+5. 서버 주소나 폴링 주기를 바꾸려면 Play 전에 `SIMUS > Create City Client`를 실행하고,
    생성된 오브젝트의 `City State Poller`에서 `Server Base Url`, `Polling Seconds`, `Timeout Seconds`를 설정한다.
    장면에 폴러가 있으면 bootstrap은 중복 인스턴스를 만들지 않는다.
-7. `Window > General > Test Runner > EditMode > Run All`로 계약 테스트를 실행한다.
+6. `Window > General > Test Runner > EditMode > Run All`로 계약 테스트를 실행한다.
 
 로컬 Editor·데스크톱 기본 주소는 `http://localhost:3000`이다. 다른 PC의 서버라면 접근 가능한
 LAN/HTTPS 주소로 바꾼다. WebGL 동일 출처 배포에서는 Server Base Url을 빈 문자열로 설정해
