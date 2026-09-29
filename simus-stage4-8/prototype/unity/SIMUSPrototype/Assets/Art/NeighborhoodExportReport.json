@@ -1,0 +1,81 @@
+{
+  "source": "outputs/district_prototype/SIMUS_Neighborhood_Prototype.blend",
+  "sourceSha256Before": "70882d25520a39396d93a0f1093fd381ecc6b7bc0cf68c8fccf83dc3be239bcd",
+  "sourceSha256After": "70882d25520a39396d93a0f1093fd381ecc6b7bc0cf68c8fccf83dc3be239bcd",
+  "sourcePreserved": true,
+  "blenderVersion": "5.2.2 LTS",
+  "exportedRoot": "SIMUS_MAP_ROOT",
+  "objectCount": 727,
+  "meshCount": 725,
+  "emptyCount": 2,
+  "evaluatedTriangleCount": 114128,
+  "convertedTextAndCurveCount": 40,
+  "materialCount": 32,
+  "blenderWorldBounds": {
+    "minimum": [
+      -100.0,
+      -100.0,
+      -2.4000000953674316
+    ],
+    "maximum": [
+      100.0,
+      100.0,
+      15.850000381469727
+    ],
+    "dimensionsMetersXYZ": [
+      200.0,
+      200.0,
+      18.250000476837158
+    ]
+  },
+  "fbxAxisForward": "-Z",
+  "fbxAxisUp": "Y",
+  "fbxApplyScaleOptions": "FBX_SCALE_UNITS",
+  "expectedUnityDimensionsMetersXYZ": [
+    200.0,
+    18.250000476837158,
+    200.0
+  ],
+  "fbxBytes": 3496540,
+  "sourceCameras": [
+    {
+      "name": "Overview",
+      "blenderPosition": [
+        104.0,
+        -145.0,
+        245.0
+      ],
+      "blenderRotationQuaternionWXYZ": [
+        0.9052308201789856,
+        0.2947119474411011,
+        0.09476254880428314,
+        0.2910706102848053
+      ],
+      "projection": "ORTHO",
+      "orthographicScale": 292.0
+    },
+    {
+      "name": "Plan",
+      "blenderPosition": [
+        0.0,
+        0.0,
+        300.0
+      ],
+      "blenderRotationQuaternionWXYZ": [
+        1.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "projection": "ORTHO",
+      "orthographicScale": 213.0
+    }
+  ],
+  "notes": [
+    "Presentation collection and all lights/cameras are excluded from FBX.",
+    "Material colors are Principled BSDF base-color values in linear color space.",
+    "Text and curves are converted to mesh only in the export session.",
+    "Map objects remain individually named for later interactions.",
+    "Unity ModelImporter should use globalScale=1 and useFileScale=true; validate imported bounds."
+  ]
+}
