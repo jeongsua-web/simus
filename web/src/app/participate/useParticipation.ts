@@ -62,6 +62,12 @@ export function useParticipation() {
       }
       const current = (await currentResponse.json()) as { session: Session | null };
       const own = (await meResponse.json()) as { latest_session: LatestSession | null; history: LatestSession[] };
+      if (current.session?.status === "RUNNING") {
+        const joined = await fetch(`/api/sessions/${current.session.id}/join`, { method: "POST", signal });
+        // A lifecycle transition between current-state and join is normal; refresh next poll.
+        if (!joined.ok && joined.status !== 409)
+          throw new Error(await errorMessage(joined, "회차에 입장하지 못했습니다."));
+      }
       const targetId = current.session?.id ?? own.latest_session?.id;
       let records: Array<{ situation_id: string; choice_id: string }> = [];
       if (targetId) {

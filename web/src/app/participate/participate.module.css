@@ -30,3 +30,8 @@
 .textLink { color:#176a43; font-weight:800; text-decoration:underline; }
 @media (max-width:420px) { .page { padding-left:14px; padding-right:14px; } .card,.stateCard { border-radius:18px; } }
 @media (prefers-reduced-motion:reduce) { .choice { transition:none; } }
+
+.departmentLabel { display:block; margin:16px 0 8px; font-weight:700; }
+.departmentSelect { width:100%; min-height:48px; padding:10px; border:1px solid #94b4a0; border-radius:10px; background:#fff; color:#17251f; font:inherit; }
+.departmentSelect:focus-visible { outline:3px solid #ecad2c; outline-offset:3px; }
+.departmentSelect:disabled { background:#eef3ef; opacity:1; color:#4d6157; }

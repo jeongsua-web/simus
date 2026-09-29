@@ -1,6 +1,6 @@
 # SIM:US PostgreSQL 스키마
 
-시연용 새 DB에는 `001_initial_schema.sql` → `002_session_lifecycle.sql` → `003_session_creation.sql` → `seed_demo.sql` 또는 `seed_neighborhood.sql`을 적용한다.
+시연용 새 DB에는 `001_initial_schema.sql` → `002_session_lifecycle.sql` → `003_session_creation.sql` → `004_participant_npcs.sql` → `005_participant_departments.sql` → `seed_demo.sql` 또는 `seed_neighborhood.sql`을 적용한다.
 `seed_demo.sql`은 관리자 화면에서 시작할 DRAFT를 준비한다. 기존 `seed_development.sql`은 즉시 RUNNING으로
 전환하는 개발용이므로 같은 DB에 혼용하지 않는다. 운영 DB에는 어느 seed도 적용하지 않는다.
 구체적인 명령과 데이터 분리는 [시연·배포 가이드](../docs/demo-deployment.md)에 있다.
@@ -87,3 +87,13 @@ psql -d simus -v ON_ERROR_STOP=1 -f db/verify_schema.sql
 관리자 UI에서 복사한 DRAFT를 시작할 때 예정 종료 시각이 실제 시작 기준으로 계산된다.
 `seed_neighborhood.sql`은 원본 PostgreSQL 시제품의 WASTE 1개 상황을 이식한 선택 가능한 시연 seed다.
 Python 사본의 SQL은 본 스키마에 적용하지 않는다. [통합 안내](../docs/stage4-8-integration.md).
+
+## 3A NPC 마이그레이션
+
+기존 DB에는 003 다음에 `004_participant_npcs.sql`을 한 번 적용한다. 회차 가입 행에 고정 NPC ID와 경로 스냅샷을 추가한다. 기존 선택·결과는 보존한다. [API·좌표·시간 계약](../docs/participant-npc-api.md).
+
+## 3C 학과 저장 추가
+
+004 적용 후 `psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f db/005_participant_departments.sql`을 한 번 실행한다.
+005는 45개 학과 항목과 회차별 `department_id`를 추가한다. 기존 가입자의 소속은 `none`으로 보존한다.
+첫 유효 선택 후 변경을 DB에서도 차단한다. [API 및 검증](../docs/participant-departments.md).

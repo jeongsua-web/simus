@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
+import DepartmentSelector from "./DepartmentSelector";
 import { LiveCityStats } from "../components/CityStats";
 import SituationCard from "./SituationCard";
 import { useParticipation } from "./useParticipation";
@@ -8,6 +10,7 @@ import styles from "./participate.module.css";
 
 export default function ParticipatePage() {
   const state = useParticipation();
+  const [savingDepartment, setSavingDepartment] = useState(false);
   const history = state.history.length > 0 && <section className={styles.stateCard}><h2>지난 회차 결과</h2>{state.history.map(item => <p key={item.id}><Link href={`/result/${item.id}`}>{item.name} 결과 보기</Link></p>)}</section>;
   const pendingNotice = state.pending && state.pending.session_id !== state.session?.id && <section className={styles.stateCard}>
     <h2>이전 회차 제출 확인</h2><p>확인하지 못한 선택이 있습니다. 원래 회차와 요청 번호로 다시 확인합니다.</p>
@@ -50,6 +53,9 @@ export default function ParticipatePage() {
       <LiveCityStats sessionId={state.session.id}/>
       <p>입력 마감 {state.session.auto_cutoff_at ? new Date(state.session.auto_cutoff_at).toLocaleString("ko-KR") : "확인 중"} · 종료 예정 {state.session.scheduled_end_at ? new Date(state.session.scheduled_end_at).toLocaleString("ko-KR") : "확인 중"}</p>
       {pendingNotice}
+      <DepartmentSelector key={state.session.id} sessionId={state.session.id}
+        answered={answeredCount > 0} disabled={!state.session.accepting_choices || state.submitting !== null || state.pending !== null}
+        onSaving={setSavingDepartment}/>
       {complete && <section className={styles.notice} role="status"><strong>응답 완료</strong><span>결과는 회차가 끝나고 확정된 뒤 공개됩니다.</span></section>}
       {!state.session.accepting_choices && <section className={styles.closedNotice} role="status">
         <strong>{state.session.status === "FINALIZED" ? "결과 확정" : state.session.status === "CLOSING" ? "결과 준비 중" : "접수 마감"}</strong>
@@ -58,7 +64,7 @@ export default function ParticipatePage() {
       {state.session.situations.map(situation => (
         <SituationCard key={situation.id} situation={situation} selectedChoiceId={state.selected[situation.id]}
           done={Boolean(state.answered[situation.id])} acceptingChoices={state.session!.accepting_choices}
-          submitting={state.submitting === situation.id} submissionInProgress={state.submitting !== null}
+          submitting={state.submitting === situation.id} submissionInProgress={state.submitting !== null || savingDepartment}
           retrying={state.pending?.session_id === state.session!.id && state.pending?.situation_id === situation.id} hasPendingSubmission={state.pending !== null}
           message={state.messages[situation.id] ?? ""} onSelect={choiceId => state.selectChoice(situation.id, choiceId)}
           onSubmit={() => void state.submit(situation)} />

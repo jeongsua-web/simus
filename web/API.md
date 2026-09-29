@@ -173,3 +173,12 @@ curl -X POST -H "Authorization: Bearer $SESSION_JOB_TOKEN" \
 - `GET /api/sessions/{id}/result`: 확정된 해당 회차 `city_state` 추가. 본인 result 계약 유지.
 
 요청/응답 상세와 마이그레이션: [통합 안내](../docs/stage4-8-integration.md).
+
+## 3A 회차 입장·NPC API
+
+`POST /api/sessions/{id}/join`, `GET /api/sessions/{id}/npc`(본인 인증), `GET /api/sessions/{id}/npcs`(공개 익명 NPC). 필드·좌표·보간·종료 동결·오류는 [공유 계약](../docs/participant-npc-api.md)을 따른다. DB 004 적용이 필요하다.
+
+## 3C 회차별 학과 API
+
+`GET /api/sessions/{id}/department`(본인 소속·목록·잠금), `PUT /api/sessions/{id}/department`(첫 선택 전 수정).
+본인 쿠키 인증과 DB 005가 필요하다. [필드·오류·동시성·4A 연결 계약](../docs/participant-departments.md).

@@ -39,6 +39,8 @@ services:
       - ./db/001_initial_schema.sql:/docker-entrypoint-initdb.d/001_initial_schema.sql:ro
       - ./db/002_session_lifecycle.sql:/docker-entrypoint-initdb.d/002_session_lifecycle.sql:ro
       - ./db/003_session_creation.sql:/docker-entrypoint-initdb.d/003_session_creation.sql:ro
+      - ./db/004_participant_npcs.sql:/docker-entrypoint-initdb.d/004_participant_npcs.sql:ro
+      - ./db/005_participant_departments.sql:/docker-entrypoint-initdb.d/005_participant_departments.sql:ro
       - ./db:/schema:ro
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U simus -d simus"]
