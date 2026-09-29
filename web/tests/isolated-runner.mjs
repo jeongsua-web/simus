@@ -7,12 +7,13 @@ import { spawn } from 'node:child_process';
 import { once } from 'node:events';
 import { generateKeyPair, exportJWK, SignJWT } from 'jose';
 import pg from 'pg';
+import { runStageIntegration } from './stage-integration.mjs';
 import { runFlow } from './isolated-flow.mjs';
 import assert from 'node:assert/strict';
 import net from 'node:net';
 
 const web = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const bin = process.env.TEST_PG_BIN ?? 'C:/Program Files/PostgreSQL/18/bin';
+const bin = process.env.TEST_PG_BIN ?? (process.platform === 'win32' ? 'C:/Program Files/PostgreSQL/18/bin' : '/opt/homebrew/opt/postgresql@18/bin');
 const pgPort = 55439, port = 3117;
 // Refuse occupied ports before creating a cluster or sending any HTTP request.
 for (const testPort of [pgPort, port]) {
@@ -68,13 +69,13 @@ async function startServer() {
 }
 try {
   console.log('Isolated cluster directory:', root);
-  await command(path.join(bin, 'initdb.exe'), ['-D', data, '-U', 'postgres', '-A', 'trust', '--encoding=UTF8', '--locale=C']);
-  await command(path.join(bin, 'pg_ctl.exe'), ['-D', data, '-l', path.join(root, 'postgres.log'), '-o', `-h 127.0.0.1 -p ${pgPort}`, '-w', 'start']);
+  await command(path.join(bin, process.platform === 'win32' ? 'initdb.exe' : 'initdb'), ['-D', data, '-U', 'postgres', '-A', 'trust', '--encoding=UTF8', '--locale=C']);
+  await command(path.join(bin, process.platform === 'win32' ? 'pg_ctl.exe' : 'pg_ctl'), ['-D', data, '-l', path.join(root, 'postgres.log'), '-o', `-h 127.0.0.1 -p ${pgPort}`, '-w', 'start']);
   running = true;
   const admin = new pg.Client({ connectionString: `postgresql://postgres@127.0.0.1:${pgPort}/postgres` });
   await admin.connect(); await admin.query('CREATE DATABASE simus_integration'); await admin.end();
   pool = new pg.Pool({ connectionString: env.DATABASE_URL });
-  for (const name of ['001_initial_schema.sql','002_session_lifecycle.sql']) await pool.query(await readFile(path.join(web, '../db', name), 'utf8'));
+  for (const name of ['001_initial_schema.sql','002_session_lifecycle.sql','003_session_creation.sql']) await pool.query(await readFile(path.join(web, '../db', name), 'utf8'));
   await startServer();
   console.log(await command(process.execPath, ['tests/session-lifecycle.integration.mjs'], env));
   await runFlow({ pool, env, stopServer, startServer });
@@ -94,6 +95,16 @@ try {
     });
     assert.equal(result.status, 200, await result.text());
   }
+  await pool.query(await readFile(path.join(web, '../db/seed_neighborhood.sql'), 'utf8'));
+  const neighborhoodId = '15000000-0000-0000-0000-000000000001';
+  const neighborhoodList = await (await fetch(env.TEST_API_URL + '/api/admin/sessions', { headers: demoHeaders })).json();
+  assert.equal(neighborhoodList.sessions.find(s => s.id === neighborhoodId).can_start, true);
+  const content = await pool.query(`SELECT label,alignment_dx,alignment_dy,happiness_base::float8,cleanliness_base::float8
+    FROM simus.session_choices WHERE session_id=$1 ORDER BY display_order`, [neighborhoodId]);
+  assert.deepEqual(content.rows.map(c => [c.alignment_dx,c.alignment_dy,c.happiness_base,c.cleanliness_base]), [[1,1,3,5],[0,0,0,0]]);
+  assert.equal((await pool.query('SELECT impact_scale::float8 FROM simus.simulation_sessions WHERE id=$1', [neighborhoodId])).rows[0].impact_scale, 0.1);
+  console.log('PASS: migrated neighborhood WASTE seed/readiness and original scoring');
+  await runStageIntegration({ pool, env, token: demoToken, demoId });
   const originProbe = await fetch(env.TEST_API_URL + '/api/city-state', { headers: { Origin: 'https://different-origin.invalid' } });
   assert.equal(originProbe.status, 200);
   assert.equal(originProbe.headers.get('access-control-allow-origin'), null);
@@ -101,11 +112,11 @@ try {
   console.log('PASS: demo DRAFT seed readiness/start/end; city API has no cross-origin CORS grant');
   await pool.end(); pool = null;
   const beforeOutage = await (await fetch(env.TEST_API_URL + '/api/city-state')).json();
-  await command(path.join(bin, 'pg_ctl.exe'), ['-D', data, '-m', 'fast', '-w', 'stop']);
+  await command(path.join(bin, process.platform === 'win32' ? 'pg_ctl.exe' : 'pg_ctl'), ['-D', data, '-m', 'fast', '-w', 'stop']);
   running = false;
   const unavailable = await fetch(env.TEST_API_URL + '/api/health');
   assert.equal(unavailable.status, 503);
-  await command(path.join(bin, 'pg_ctl.exe'), ['-D', data, '-l', path.join(root, 'postgres.log'), '-o', `-h 127.0.0.1 -p ${pgPort}`, '-w', 'start']);
+  await command(path.join(bin, process.platform === 'win32' ? 'pg_ctl.exe' : 'pg_ctl'), ['-D', data, '-l', path.join(root, 'postgres.log'), '-o', `-h 127.0.0.1 -p ${pgPort}`, '-w', 'start']);
   running = true;
   assert.equal((await fetch(env.TEST_API_URL + '/api/health')).status, 200);
   const afterOutage = await (await fetch(env.TEST_API_URL + '/api/city-state')).json();
@@ -114,6 +125,6 @@ try {
   console.log('PASS isolated suite. No development connection or data mutation.');
 } finally {
   await stopServer(); if (pool) await pool.end();
-  if (running) await command(path.join(bin, 'pg_ctl.exe'), ['-D', data, '-m', 'fast', '-w', 'stop']);
+  if (running) await command(path.join(bin, process.platform === 'win32' ? 'pg_ctl.exe' : 'pg_ctl'), ['-D', data, '-m', 'fast', '-w', 'stop']);
   console.log('Owned services stopped; isolated test files retained at:', root);
 }

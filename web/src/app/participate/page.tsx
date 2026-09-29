@@ -1,12 +1,18 @@
 "use client";
 
 import Link from "next/link";
+import { LiveCityStats } from "../components/CityStats";
 import SituationCard from "./SituationCard";
 import { useParticipation } from "./useParticipation";
 import styles from "./participate.module.css";
 
 export default function ParticipatePage() {
   const state = useParticipation();
+  const history = state.history.length > 0 && <section className={styles.stateCard}><h2>지난 회차 결과</h2>{state.history.map(item => <p key={item.id}><Link href={`/result/${item.id}`}>{item.name} 결과 보기</Link></p>)}</section>;
+  const pendingNotice = state.pending && state.pending.session_id !== state.session?.id && <section className={styles.stateCard}>
+    <h2>이전 회차 제출 확인</h2><p>확인하지 못한 선택이 있습니다. 원래 회차와 요청 번호로 다시 확인합니다.</p>
+    <p role="status">{state.messages[state.pending.situation_id]}</p><button className={styles.button} disabled={state.submitting !== null} onClick={()=>void state.retryPending()}>이전 제출 다시 확인</button>
+  </section>;
   if (state.loading) return <main className={styles.page}><div className={styles.stateCard} role="status">참여 정보를 불러오는 중이에요…</div></main>;
   if (state.loadError) return (
     <main className={styles.page}><div className={styles.stateCard}>
@@ -25,7 +31,7 @@ export default function ParticipatePage() {
         <p>{previous ? previous.name : "새 회차가 열리면 이 화면에서 바로 참여할 수 있습니다."}</p>
         {previous && <Link className={styles.buttonLink} href={`/result/${previous.id}`}>내 결과 확인</Link>}
         <button className={styles.secondaryButton} onClick={state.retryLoad}>상태 새로고침</button>
-      </div></main>
+      </div>{pendingNotice}{history}</main>
     );
   }
   const answeredCount = Object.values(state.answered).filter(Boolean).length;
@@ -41,6 +47,9 @@ export default function ParticipatePage() {
           <progress value={answeredCount} max={Math.max(1, state.session.situations.length)} />
         </div>
       </header>
+      <LiveCityStats sessionId={state.session.id}/>
+      <p>입력 마감 {state.session.auto_cutoff_at ? new Date(state.session.auto_cutoff_at).toLocaleString("ko-KR") : "확인 중"} · 종료 예정 {state.session.scheduled_end_at ? new Date(state.session.scheduled_end_at).toLocaleString("ko-KR") : "확인 중"}</p>
+      {pendingNotice}
       {complete && <section className={styles.notice} role="status"><strong>응답 완료</strong><span>결과는 회차가 끝나고 확정된 뒤 공개됩니다.</span></section>}
       {!state.session.accepting_choices && <section className={styles.closedNotice} role="status">
         <strong>{state.session.status === "FINALIZED" ? "결과 확정" : state.session.status === "CLOSING" ? "결과 준비 중" : "접수 마감"}</strong>
@@ -50,11 +59,12 @@ export default function ParticipatePage() {
         <SituationCard key={situation.id} situation={situation} selectedChoiceId={state.selected[situation.id]}
           done={Boolean(state.answered[situation.id])} acceptingChoices={state.session!.accepting_choices}
           submitting={state.submitting === situation.id} submissionInProgress={state.submitting !== null}
-          retrying={state.pending?.situation_id === situation.id} hasPendingSubmission={state.pending !== null}
+          retrying={state.pending?.session_id === state.session!.id && state.pending?.situation_id === situation.id} hasPendingSubmission={state.pending !== null}
           message={state.messages[situation.id] ?? ""} onSelect={choiceId => state.selectChoice(situation.id, choiceId)}
           onSubmit={() => void state.submit(situation)} />
       ))}
       {(complete || !state.session.accepting_choices) && <Link className={styles.buttonLink} href={`/result/${state.session.id}`}>결과 상태 확인</Link>}
+      {history}
     </main>
   );
 }

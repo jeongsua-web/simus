@@ -37,6 +37,8 @@ services:
     volumes:
       - simus_postgres_data:/var/lib/postgresql/data
       - ./db/001_initial_schema.sql:/docker-entrypoint-initdb.d/001_initial_schema.sql:ro
+      - ./db/002_session_lifecycle.sql:/docker-entrypoint-initdb.d/002_session_lifecycle.sql:ro
+      - ./db/003_session_creation.sql:/docker-entrypoint-initdb.d/003_session_creation.sql:ro
       - ./db:/schema:ro
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U simus -d simus"]

@@ -4,6 +4,9 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/NeighborhoodLive.unity
+    guid: f23daf1ab3aa246cb84b23eb84daedfc
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

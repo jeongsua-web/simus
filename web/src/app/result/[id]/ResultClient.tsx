@@ -1,5 +1,6 @@
 "use client";
 
+import { CityStats, type City } from "../../components/CityStats";
 import Link from "next/link";
 import { useCallback, useEffect, useState } from "react";
 import styles from "./result.module.css";
@@ -13,6 +14,7 @@ const names: Record<string, string> = {
 };
 
 export default function ResultClient({ sessionId }: { sessionId: string }) {
+  const [city,setCity]=useState<City|null>(null);
   const [session,setSession]=useState<SessionInfo|null>(null);
   const [responseCount,setResponseCount]=useState(0);
   const [result,setResult]=useState<Result|null>(null);
@@ -28,7 +30,8 @@ export default function ResultClient({ sessionId }: { sessionId: string }) {
       if(own.session.status==="FINALIZED"){
         const resultResponse=await fetch(`/api/sessions/${sessionId}/result`,{cache:"no-store"});
         if(!resultResponse.ok){ const body=await resultResponse.json(); throw new Error(body.error?.message??"결과를 불러오지 못했습니다."); }
-        setResult(((await resultResponse.json()) as {result:Result|null}).result);
+        const data = await resultResponse.json() as {result:Result|null;city_state:City|null};
+        setResult(data.result); setCity(data.city_state);
       } else setResult(null);
     } catch(e){ setError(e instanceof Error?e.message:"결과를 불러오지 못했습니다."); }
     finally{ setLoading(false); }
@@ -47,6 +50,7 @@ export default function ResultClient({ sessionId }: { sessionId: string }) {
       <dl><div><dt>응답 수</dt><dd>{result.response_count}</dd></div><div><dt>질서 축</dt><dd>{result.x_score}</dd></div><div><dt>도덕 축</dt><dd>{result.y_score}</dd></div></dl>
     </div>}
     {finalized && !result && <div className={styles.pending}><div><strong>확정된 개인 결과가 없습니다</strong><p>이 회차에 반영된 응답이 없거나, 무응답 제외 규칙이 적용되었습니다. 확인된 응답 수: {responseCount}개</p></div></div>}
+    {finalized && city && <CityStats city={city} title="이 회차의 최종 도시"/>}
     <div className={styles.actions}>{!finalized&&<button onClick={()=>void load()}>상태 새로고침</button>}<Link href="/participate">참여 화면으로</Link></div>
   </section></main>;
 }

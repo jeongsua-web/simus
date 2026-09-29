@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 
 export async function GET(request: NextRequest) {
   return handle(async () => {
-    const latestSession = await transaction(async db => {
+    const payload = await transaction(async db => {
       const participantId = await authenticate(db, request);
       if (!participantId) throw new ApiError(401, "UNAUTHORIZED", "참여 인증이 만료되었거나 유효하지 않습니다.");
       const latest = await db.query(`SELECT s.id, s.name, s.status, s.starts_at, s.scheduled_end_at,
@@ -17,10 +17,10 @@ export async function GET(request: NextRequest) {
         LEFT JOIN simus.choice_records r ON r.session_id=ps.session_id AND r.participant_id=ps.participant_id
         WHERE ps.participant_id=$1
         GROUP BY s.id, ps.joined_at
-        ORDER BY ps.joined_at DESC LIMIT 1`, [participantId]);
-      return latest.rows[0] ?? null;
+        ORDER BY ps.joined_at DESC, s.id`, [participantId]);
+      return { latest_session: latest.rows[0] ?? null, history: latest.rows.filter(row => row.status === "FINALIZED") };
     });
-    return json({ latest_session: latestSession });
+    return json(payload);
   });
 }
 

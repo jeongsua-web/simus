@@ -1,4 +1,4 @@
-﻿# 시연·배포 준비 가이드
+# 시연·배포 준비 가이드
 
 기준일: 2026-09-18. 외부 공개 배포는 수행하지 않았다.
 
@@ -28,6 +28,7 @@ $pgBin = 'C:/Program Files/PostgreSQL/18/bin'
 & "$pgBin/createdb.exe" -h localhost -U postgres simus_demo
 & "$pgBin/psql.exe" -h localhost -U postgres -d simus_demo -v ON_ERROR_STOP=1 -f db/001_initial_schema.sql
 & "$pgBin/psql.exe" -h localhost -U postgres -d simus_demo -v ON_ERROR_STOP=1 -f db/002_session_lifecycle.sql
+& "$pgBin/psql.exe" -h localhost -U postgres -d simus_demo -v ON_ERROR_STOP=1 -f db/003_session_creation.sql
 & "$pgBin/psql.exe" -h localhost -U postgres -d simus_demo -v ON_ERROR_STOP=1 -f db/seed_demo.sql
 ```
 
@@ -43,11 +44,12 @@ docker compose up -d db
 docker compose exec db createdb -U simus simus_demo
 docker compose exec db psql -U simus -d simus_demo -v ON_ERROR_STOP=1 -f /schema/001_initial_schema.sql
 docker compose exec db psql -U simus -d simus_demo -v ON_ERROR_STOP=1 -f /schema/002_session_lifecycle.sql
+docker compose exec db psql -U simus -d simus_demo -v ON_ERROR_STOP=1 -f /schema/003_session_creation.sql
 docker compose exec db psql -U simus -d simus_demo -v ON_ERROR_STOP=1 -f /schema/seed_demo.sql
 ```
 
-기존 Compose 기본 DB `simus`는 빈 볼륨의 첫 기동에 001만 자동 적용한다. 기존 DB에는 001을 다시 실행하지 않는다.
-002는 배포 이력과 DB 적용 여부를 확인하고 한 번 적용한다. 자동 마이그레이션/이력 관리 도구는 없다.
+기존 Compose 기본 DB `simus`는 빈 볼륨의 첫 기동에 001~003을 자동 적용한다. 기존 DB에는 001을 다시 실행하지 않는다.
+002/003은 배포 이력과 DB 적용 여부를 확인하고 각각 한 번 적용한다. 자동 마이그레이션/이력 관리 도구는 없다.
 운영 마이그레이션 전에는 백업과 복원 시험을 수행하고 버전·적용일을 별도 기록한다.
 `docker compose stop`은 데이터를 보존한다. `down -v`는 데이터 삭제이므로 시연 종료 명령으로 쓰지 않는다.
 
@@ -56,7 +58,7 @@ docker compose exec db psql -U simus -d simus_demo -v ON_ERROR_STOP=1 -f /schema
 `seed_demo.sql`은 dev-admin, DRAFT 1개, 중앙 지역 1개, 쓰레기 상황 1개와 선택지 2개를 만든다.
 도시/지역 런타임 상태와 시작은 관리자 API가 생성한다. `seed_development.sql`과 같은 DB에 적용하지 않는다.
 고정 회차 ID는 `10000000-0000-0000-0000-000000000001`이다. 종료한 회차는 재사용하지 않는다.
-다음 시연은 새 이름의 빈 DB를 만들고 001 → 002 → demo seed를 적용한 뒤 DATABASE_URL을 변경한다.
+다음 회차는 관리자 화면의 다음 회차 준비로 콘텐츠를 복사해 시작한다. 새 DB를 만드는 경우 001 → 002 → 003 → demo seed 순서다.
 기존 DB는 보존한다. seed를 재실행해도 종료 상태나 종료 시각이 초기화되지 않는다.
 
 ## 3. 관리자 설정과 Next.js 실행
@@ -145,14 +147,12 @@ Bearer에는 서버 전용 `SESSION_JOB_TOKEN`(무작위 32자 이상)을 사용
 
 ## 5. Unity 준비·빌드·실행
 
-1. Unity Hub에서 사용할 Editor 버전을 선택·설치한다. 해당 버전의 Windows 빌드 지원도 준비한다.
-2. 같은 Editor로 빈 3D Core 프로젝트를 만들고 Editor를 닫은 뒤 ProjectSettings를 `unity/`로 복사한다.
-   실제 ProjectVersion을 기록하고 `unity/`를 연다. Library/Temp/Logs는 복사하지 않는다.
-3. Packages 복원을 기다리고 Console 컴파일 오류를 해결한다. Editor 버전·패키지 잠금·생성된 `.meta`를 기록한다.
-4. 빈 장면에서 `SIMUS > Create City Client`를 실행한다. Preview 오브젝트는 제거한다.
-   Poller의 Server Base Url을 설정하고 `Assets/Scenes/City.unity`로 저장한다.
+1. Unity Hub에서 Unity 6000.3.24f1과 필요한 Windows 빌드 지원을 준비한다.
+2. 저장소의 `unity/`를 연다. 기존 ProjectSettings를 사용한다.
+3. Packages 복원을 기다리고 Console 컴파일 오류를 확인한다.
+4. `Assets/Scenes/NeighborhoodLive.unity`를 열고 `SIMUS Connected Neighborhood`의 Poller Server Base Url을 설정한다.
 5. EditMode Test Runner에서 Run All, Play Mode에서 실제 API 수신과 도시 변화를 확인한다.
-6. Build Profiles/Build Settings에서 Windows 데스크톱을 선택하고 City 장면을 빌드 목록에 포함한다.
+6. Build Profiles/Build Settings에서 Windows 데스크톱을 선택하고 NeighborhoodLive 장면을 빌드 목록에 포함한다.
    출력은 Git 제외 폴더 `unity/Builds/Windows/`로 지정한다. Build And Run 후 생성된 exe와 함께
    생성된 Data 폴더·DLL 등 전체 산출물을 배포 단위로 보관한다.
 7. 새 컴퓨터에서 전체 산출물을 복사해 exe를 실행한다. Server Base Url이 빌드에 저장되므로

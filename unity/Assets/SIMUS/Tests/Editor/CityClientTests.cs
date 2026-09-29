@@ -60,6 +60,22 @@ namespace Simus.City.Tests
         }
 
         [Test]
+        public void RejectsRetiredSessionsAndFinalizedMutation()
+        {
+            var store = new CityStateStore();
+            store.Apply(CityStateJson.Parse(Json(SessionA, "RUNNING", "1")), 1, out _);
+            store.Apply(CityStateJson.Parse(Json(SessionB, "RUNNING", "0")), 2, out _);
+            Assert.That(store.Apply(CityStateJson.Parse(Json(SessionA, "RUNNING", "9")), 3, out _), Is.False);
+            Assert.That(store.Apply(CityStateJson.Parse(Json(SessionB, "CLOSING", "0")), 4, out _), Is.True);
+            Assert.That(store.Apply(CityStateJson.Parse(Json(SessionB, "RUNNING", "0")), 5, out _), Is.False);
+            Assert.That(store.Apply(CityStateJson.Parse(Json(SessionB, "FINALIZED", "0")), 6, out _), Is.True);
+            Assert.That(store.Apply(CityStateJson.Parse(Json(SessionB, "FINALIZED", "1")), 7, out _), Is.False);
+            Assert.That(store.Apply(CityStateJson.Parse(Json(SessionB, "FINALIZED", "0")), 8, out _), Is.True);
+            store.Reset(9);
+            Assert.That(store.Apply(CityStateJson.Parse(Json(SessionA, "RUNNING", "0")), 10, out _), Is.True);
+        }
+
+        [Test]
         public void FailureRetainsLastGoodStateAndNullClearsIt()
         {
             var store = new CityStateStore();

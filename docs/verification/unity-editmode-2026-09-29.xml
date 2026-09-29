@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="10" result="Passed" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-09-29 03:06:28Z" end-time="2026-09-29 03:06:28Z" duration="0.0467932">
+  <test-suite type="TestSuite" id="1000" name="unity" fullname="unity" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-09-29 03:06:28Z" end-time="2026-09-29 03:06:28Z" duration="0.046793" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1012" name="SIMUS.City.Tests.dll" fullname="/Users/jeongsua/dev/02_SIMUS/unity/Library/ScriptAssemblies/SIMUS.City.Tests.dll" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-09-29 03:06:28Z" end-time="2026-09-29 03:06:28Z" duration="0.042652" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="6292" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1013" name="Simus" fullname="Simus" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-09-29 03:06:28Z" end-time="2026-09-29 03:06:28Z" duration="0.042539" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1014" name="City" fullname="Simus.City" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-09-29 03:06:28Z" end-time="2026-09-29 03:06:28Z" duration="0.042493" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1015" name="Tests" fullname="Simus.City.Tests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-09-29 03:06:28Z" end-time="2026-09-29 03:06:28Z" duration="0.042430" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1001" name="CityClientTests" fullname="Simus.City.Tests.CityClientTests" classname="Simus.City.Tests.CityClientTests" runstate="Runnable" testcasecount="10" result="Passed" start-time="2026-09-29 03:06:28Z" end-time="2026-09-29 03:06:28Z" duration="0.041999" total="10" passed="10" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1006" name="AcceptsNewSessionWithLowerVersionAndRejectsSameSessionRegression" fullname="Simus.City.Tests.CityClientTests.AcceptsNewSessionWithLowerVersionAndRejectsSameSessionRegression" methodname="AcceptsNewSessionWithLowerVersionAndRejectsSameSessionRegression" classname="Simus.City.Tests.CityClientTests" runstate="Runnable" seed="734696295" result="Passed" start-time="2026-09-29 03:06:28Z" end-time="2026-09-29 03:06:28Z" duration="0.030343" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1005" name="DetectsStatusChangeAtSameVersion" fullname="Simus.City.Tests.CityClientTests.DetectsStatusChangeAtSameVersion" methodname="DetectsStatusChangeAtSameVersion" classname="Simus.City.Tests.CityClientTests" runstate="Runnable" seed="1091052457" result="Passed" start-time="2026-09-29 03:06:28Z" end-time="2026-09-29 03:06:28Z" duration="0.000229" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1008" name="FailureRetainsLastGoodStateAndNullClearsIt" fullname="Simus.City.Tests.CityClientTests.FailureRetainsLastGoodStateAndNullClearsIt" methodname="FailureRetainsLastGoodStateAndNullClearsIt" classname="Simus.City.Tests.CityClientTests" runstate="Runnable" seed="2028546911" result="Passed" start-time="2026-09-29 03:06:28Z" end-time="2026-09-29 03:06:28Z" duration="0.000809" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1002" name="ParsesNullSeparatelyFromAnError" fullname="Simus.City.Tests.CityClientTests.ParsesNullSeparatelyFromAnError" methodname="ParsesNullSeparatelyFromAnError" classname="Simus.City.Tests.CityClientTests" runstate="Runnable" seed="886770065" result="Passed" start-time="2026-09-29 03:06:28Z" end-time="2026-09-29 03:06:28Z" duration="0.000056" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1003" name="PreservesAndDistinguishesLargeBigintVersions" fullname="Simus.City.Tests.CityClientTests.PreservesAndDistinguishesLargeBigintVersions" methodname="PreservesAndDistinguishesLargeBigintVersions" classname="Simus.City.Tests.CityClientTests" runstate="Runnable" seed="1468374322" result="Passed" start-time="2026-09-29 03:06:28Z" end-time="2026-09-29 03:06:28Z" duration="0.001544" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1004" name="RejectsNumericVersionAndInvalidRequiredValues" fullname="Simus.City.Tests.CityClientTests.RejectsNumericVersionAndInvalidRequiredValues" methodname="RejectsNumericVersionAndInvalidRequiredValues" classname="Simus.City.Tests.CityClientTests" runstate="Runnable" seed="1868605600" result="Passed" start-time="2026-09-29 03:06:28Z" end-time="2026-09-29 03:06:28Z" duration="0.000853" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1007" name="RejectsRetiredSessionsAndFinalizedMutation" fullname="Simus.City.Tests.CityClientTests.RejectsRetiredSessionsAndFinalizedMutation" methodname="RejectsRetiredSessionsAndFinalizedMutation" classname="Simus.City.Tests.CityClientTests" runstate="Runnable" seed="1116220302" result="Passed" start-time="2026-09-29 03:06:28Z" end-time="2026-09-29 03:06:28Z" duration="0.000511" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1009" name="RetryDelayUsesExponentialCapAndRetryAfter" fullname="Simus.City.Tests.CityClientTests.RetryDelayUsesExponentialCapAndRetryAfter" methodname="RetryDelayUsesExponentialCapAndRetryAfter" classname="Simus.City.Tests.CityClientTests" runstate="Runnable" seed="717036460" result="Passed" start-time="2026-09-29 03:06:28Z" end-time="2026-09-29 03:06:28Z" duration="0.000502" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1010" name="VisualMappingUsesStableRegionCodeAndPollutionBands" fullname="Simus.City.Tests.CityClientTests.VisualMappingUsesStableRegionCodeAndPollutionBands" methodname="VisualMappingUsesStableRegionCodeAndPollutionBands" classname="Simus.City.Tests.CityClientTests" runstate="Runnable" seed="1130180423" result="Passed" start-time="2026-09-29 03:06:28Z" end-time="2026-09-29 03:06:28Z" duration="0.001019" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1011" name="VisualStatusLabelsDistinguishRoundLifecycle" fullname="Simus.City.Tests.CityClientTests.VisualStatusLabelsDistinguishRoundLifecycle" methodname="VisualStatusLabelsDistinguishRoundLifecycle" classname="Simus.City.Tests.CityClientTests" runstate="Runnable" seed="1434088338" result="Passed" start-time="2026-09-29 03:06:28Z" end-time="2026-09-29 03:06:28Z" duration="0.000114" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: /private/tmp/simus-unity-editmode.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

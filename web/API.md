@@ -164,3 +164,12 @@ curl -X POST -H "Authorization: Bearer $SESSION_JOB_TOKEN" \
 시작·종료 API와 같은 관리자 Bearer JWT 및 활성 관리자 DB 검증이 필요합니다. 전체 회차, 참여자·응답 수,
 수명 주기 시각, 서버에서 판단한 시작 전 검증 실패 원인을 반환합니다. `can_start`는 화면 표시용이며 실제
 시작 요청에서도 회차를 잠근 뒤 독립적으로 다시 검증합니다.
+
+## 2026-09-29 통합 추가
+
+- `POST /api/admin/sessions`: JWT 관리자만 DRAFT/FINALIZED 회차 콘텐츠를 복제해 다음 DRAFT 생성. 이름·진행 시간·영향 배율·request_key 지정. 동일 요청 재전송은 같은 회차 반환.
+- `GET /api/admin/sessions`: 복제 회차의 `duration_seconds` 추가. 시작 시점부터 적용.
+- `GET /api/participants`: 본인의 종료된 회차 `history` 추가.
+- `GET /api/sessions/{id}/result`: 확정된 해당 회차 `city_state` 추가. 본인 result 계약 유지.
+
+요청/응답 상세와 마이그레이션: [통합 안내](../docs/stage4-8-integration.md).

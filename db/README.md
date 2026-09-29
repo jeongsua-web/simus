@@ -1,6 +1,6 @@
 # SIM:US PostgreSQL 스키마
 
-시연용 새 DB에는 `001_initial_schema.sql` → `002_session_lifecycle.sql` → `seed_demo.sql`을 적용한다.
+시연용 새 DB에는 `001_initial_schema.sql` → `002_session_lifecycle.sql` → `003_session_creation.sql` → `seed_demo.sql` 또는 `seed_neighborhood.sql`을 적용한다.
 `seed_demo.sql`은 관리자 화면에서 시작할 DRAFT를 준비한다. 기존 `seed_development.sql`은 즉시 RUNNING으로
 전환하는 개발용이므로 같은 DB에 혼용하지 않는다. 운영 DB에는 어느 seed도 적용하지 않는다.
 구체적인 명령과 데이터 분리는 [시연·배포 가이드](../docs/demo-deployment.md)에 있다.
@@ -13,6 +13,7 @@
 
 ```sh
 psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f db/002_session_lifecycle.sql
+psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f db/003_session_creation.sql
 ```
 
 `002_session_lifecycle.sql`은 허용 상태 전이, 시작 후 설정 고정, 회차 상태·원장·결과 쓰기 범위,
@@ -79,3 +80,10 @@ psql -d simus -v ON_ERROR_STOP=1 -f db/verify_schema.sql
 
 전체 오염 뷰는 존재하는 지역 상태를 집계하므로 시작 시 지역마다 상태 행을 반드시 생성한다.
 도시와 지역을 API로 반환할 때는 단일 쿼리 또는 일관된 읽기 트랜잭션을 사용한다.
+
+## 4~8단계 통합 추가
+
+003은 콘텐츠 복제 요청의 멱등 키·원본 회차·시작 기준 진행 시간을 보존한다. 기존 데이터는 수정하지 않는다.
+관리자 UI에서 복사한 DRAFT를 시작할 때 예정 종료 시각이 실제 시작 기준으로 계산된다.
+`seed_neighborhood.sql`은 원본 PostgreSQL 시제품의 WASTE 1개 상황을 이식한 선택 가능한 시연 seed다.
+Python 사본의 SQL은 본 스키마에 적용하지 않는다. [통합 안내](../docs/stage4-8-integration.md).

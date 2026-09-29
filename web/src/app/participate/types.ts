@@ -3,7 +3,7 @@ export type Choice = { id: string; label: string };
 export type Situation = { id: string; code?: string; title: string; body: string; choices: Choice[] };
 export type Session = {
   id: string; name: string; status: SessionStatus; accepting_choices: boolean;
-  starts_at?: string | null; scheduled_end_at?: string | null; finalized_at?: string | null;
+  auto_cutoff_at?: string | null; starts_at?: string | null; scheduled_end_at?: string | null; finalized_at?: string | null;
   situations: Situation[];
 };
 export type LatestSession = Omit<Session, "accepting_choices" | "situations"> & {

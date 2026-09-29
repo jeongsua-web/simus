@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace Simus.City
 {
@@ -18,6 +19,7 @@ namespace Simus.City
         public event Action<CityChange> Changed;
         public event Action ConnectionChanged;
         private double startedAt;
+        private readonly HashSet<string> retiredSessions = new HashSet<string>();
 
         public void Begin(double now)
         {
@@ -35,6 +37,22 @@ namespace Simus.City
                 error = "Version decreased within the same session; snapshot rejected.";
                 return false;
             }
+            if (next != null && retiredSessions.Contains(next.SessionId))
+            {
+                error = "Retired session snapshot rejected.";
+                return false;
+            }
+            if (previous != null && next != null && previous.SessionId == next.SessionId)
+            {
+                if ((previous.Status == "FINALIZED" && next.SnapshotJson != previous.SnapshotJson) ||
+                    (previous.Status == "CLOSING" && next.Status == "RUNNING"))
+                {
+                    error = "Lifecycle regression or changed final snapshot rejected.";
+                    return false;
+                }
+            }
+            if (previous != null && next != null && previous.SessionId != next.SessionId)
+                retiredSessions.Add(previous.SessionId);
             var change = CityChange.None;
             if (next == null)
             {
@@ -66,6 +84,7 @@ namespace Simus.City
         // Explicit operator action after a confirmed DB restore. Ordinary reconnect never clears data.
         public void Reset(double now)
         {
+            retiredSessions.Clear();
             Current = null; LastSuccessAt = null; HasReceivedResponse = false; LastError = "";
             startedAt = now; LastChange = CityChange.Cleared;
             SetConnection(CityConnection.Waiting); Changed?.Invoke(CityChange.Cleared);

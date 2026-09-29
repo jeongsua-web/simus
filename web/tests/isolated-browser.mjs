@@ -55,7 +55,7 @@ export async function runBrowserFlow({ env, pool, round, token, call }) {
     await contexts[1].setOffline(true);
     await a.getByRole('heading', { name: '정보를 불러오지 못했습니다' }).waitFor({ timeout: 15000 });
     await contexts[1].setOffline(false);
-    await a.getByRole('button', { name: '다시 불러오기', exact: true }).click();
+    // The online event now restores state automatically; a retry button may disappear before click.
     await a.getByRole('button', { name: '응답 완료', exact: true }).waitFor();
     await pool.query('UPDATE simus.simulation_sessions SET admission_closed_at=clock_timestamp() WHERE id=$1', [r.sid]);
     await a.reload();

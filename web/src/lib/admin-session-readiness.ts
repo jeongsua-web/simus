@@ -16,7 +16,9 @@ export async function inspectSessionReadiness(db: PoolClient, sessionId: string)
       EXISTS(SELECT 1 FROM simus.choice_records WHERE session_id=s.id) AS has_records,
       EXISTS(SELECT 1 FROM simus.city_states WHERE session_id=s.id) OR
         EXISTS(SELECT 1 FROM simus.region_states WHERE session_id=s.id) AS has_state,
-      s.scheduled_end_at<=clock_timestamp()+s.admission_buffer AS invalid_time,
+      CASE WHEN EXISTS(SELECT 1 FROM simus.session_creation_requests cr WHERE cr.session_id=s.id)
+        THEN (SELECT duration_seconds*interval '1 second'<=s.admission_buffer FROM simus.session_creation_requests WHERE session_id=s.id)
+        ELSE s.scheduled_end_at<=clock_timestamp()+s.admission_buffer END AS invalid_time,
       EXISTS(SELECT 1 FROM simus.simulation_sessions active
         WHERE active.id<>s.id AND active.status IN ('RUNNING','CLOSING')) AS another_active
     FROM simus.simulation_sessions s WHERE s.id=$1`, [sessionId]);

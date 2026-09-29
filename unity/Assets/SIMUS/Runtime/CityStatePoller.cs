@@ -8,7 +8,7 @@ namespace Simus.City
     {
         [Header("API")]
         [SerializeField] private string serverBaseUrl = "http://localhost:3000";
-        [SerializeField, Min(0.1f)] private float pollingSeconds = 2f;
+        [SerializeField, Min(0.1f)] private float pollingSeconds = 0.5f;
         [SerializeField, Min(1)] private int timeoutSeconds = 10;
         [SerializeField, Min(1f)] private float disconnectedAfterSeconds = 15f;
 

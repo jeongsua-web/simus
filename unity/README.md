@@ -1,18 +1,16 @@
 # SIM:US Unity client
 
-2026-09-24: Unity 6000.3.24f1로 만든 별도 [동네 맵 시제품](../docs/unity-neighborhood/README.md)을
-`Assets/Scenes/Neighborhood.unity`에 병합했다. 이 장면은 정적 맵과 카메라 조작을 보여주며
-현재 도시 상태 API와 연결되지 않는다. 기존 빈 장면용 도시 상태 클라이언트는 그대로 유지한다.
-아래 2026-09-16~18 기록과 시연·배포 가이드의 당시 상태 설명은 병합 전 기록이다.
+2026-09-29 통합 장면은 `Assets/Scenes/NeighborhoodLive.unity`입니다.
+Unity 6000.3.24f1에서 본 서버 `/api/city-state`를 읽는 폴러·HUD와 동네 맵·NPC 미리보기·임시 도시 연출을 연결합니다.
+원본 `Neighborhood.unity`는 정적 맵으로 보존합니다.
 
-시연 대상·장면 저장·Windows 빌드·WebGL 출처 검증 절차는 [시연·배포 가이드](../docs/demo-deployment.md#5-unity-준비빌드실행)를 따른다.
-2026-09-18 재확인: Editor/ProjectSettings/실행 장면이 없어 실제 빌드 대상은 아직 미확정이다.
-Windows 데스크톱을 준비 기준으로 삼았으며 실행·빌드 성공을 의미하지 않는다.
+[통합 실행 안내](../docs/stage4-8-integration.md) · [통합 검증](../docs/stage4-8-validation.md)
 
-City visualization behavior, value mapping, preview data, and scene instructions are documented in [VISUALIZATION.md](VISUALIZATION.md).
+통합 장면의 `SIMUS Connected Neighborhood`에서 Server Base Url을 설정하세요.
+`SIMUS > Build Connected Neighborhood`는 원본 맵에서 파생 장면을 재생성합니다.
+기본 빌드 목록은 NeighborhoodLive입니다. Windows/WebGL 실제 빌드 검증은 별도입니다.
 
-`docs/unity-integration.md` 계약에 맞춘 최소 도시 상태 클라이언트다. Next.js와 PostgreSQL에는
-변경을 요구하지 않으며 Unity는 `GET /api/city-state`만 호출한다.
+빈 장면용 기존 클라이언트와 [도시 표현 규칙](VISUALIZATION.md)도 유지합니다.
 
 ## 2026-09-16 당시 프로젝트 상태
 
@@ -27,7 +25,7 @@ Unity Editor와 등록된 Unity 프로젝트는 각각 0개였다. 따라서 특
 - `Core/CityStateDto.cs`: 외부에 노출하는 불변 응답 스냅샷
 - `Core/CityStateJson.cs`: 필수 필드·타입·범위·UUID·시각·bigint 문자열 검증
 - `CityStateApiClient.cs`: 한 번에 하나의 `UnityWebRequest`, 10초 기본 타임아웃과 취소
-- `CityStatePoller.cs`: 2초 폴링, 2/4/8/16/30초 재시도와 지터, 생명주기 및 늦은 응답 차단
+- `CityStatePoller.cs`: 0.5초 폴링, 2/4/8/16/30초 재시도와 지터, 생명주기 및 늦은 응답 차단
 - `Core/CityStateStore.cs`: 마지막 정상 상태, null 상태, 연결 상태, 회차·version·status 변화
 - `CityStateDebugView.cs`: 연결 상태와 도시·지역 수치를 표시하는 최소 IMGUI 화면
 
@@ -39,7 +37,7 @@ Unity Editor와 등록된 Unity 프로젝트는 각각 0개였다. 따라서 특
 
 1. Unity 6000.3.24f1에서 `unity/` 폴더를 연다. 다른 버전으로 열기 전에 장면 호환성을 확인한다.
 2. Package Manager가 manifest의 Newtonsoft 패키지를 복원할 때까지 기다린다.
-3. `Assets/Scenes/Neighborhood.unity`를 열면 정적 맵 시제품을 확인할 수 있다. 조작법은 [동네 맵 안내](../docs/unity-neighborhood/README.md)를 따른다.
+3. `Assets/Scenes/NeighborhoodLive.unity`를 열면 통합 장면을 확인할 수 있다. `Neighborhood.unity`는 정적 원본이다. 조작법은 [동네 맵 안내](../docs/unity-neighborhood/README.md)를 따른다.
 4. 기존 API 연동 기능을 확인하려면 새 빈 장면을 만들고 Play를 누른다. runtime bootstrap이 폴러와 도시 시각화를 자동 생성한다.
 5. 서버 주소나 폴링 주기를 바꾸려면 Play 전에 `SIMUS > Create City Client`를 실행하고,
    생성된 오브젝트의 `City State Poller`에서 `Server Base Url`, `Polling Seconds`, `Timeout Seconds`를 설정한다.

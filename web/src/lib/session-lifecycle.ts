@@ -35,6 +35,11 @@ export async function startSession(adminId: string, sessionId: string, requestKe
     if (action.outcome !== "PENDING") throw new ApiError(409, "ACTION_NOT_RETRYABLE", "완료할 수 없는 관리자 작업입니다.");
     if (session.rows[0].status !== "DRAFT") throw new ApiError(409, "INVALID_SESSION_STATE", "DRAFT 회차만 시작할 수 있습니다.");
 
+    // Set the duration relative to the actual start, even if the draft was created days ago.
+    await db.query(`UPDATE simus.simulation_sessions s
+      SET scheduled_end_at=clock_timestamp()+r.duration_seconds*interval '1 second'
+      FROM simus.session_creation_requests r WHERE s.id=$1 AND r.session_id=s.id`, [sessionId]);
+
     const regions = await db.query(`SELECT code FROM simus.session_regions WHERE session_id=$1 ORDER BY code`, [sessionId]);
     if (!regions.rowCount) throw new ApiError(409, "SESSION_NOT_READY", "지역이 하나 이상 필요합니다.");
     const rules = validateRules(session.rows[0].rules_snapshot, regions.rows.map(r => r.code));
