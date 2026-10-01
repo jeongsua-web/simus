@@ -33,7 +33,7 @@
 | 미구현 | 본 제품 실행 경로에 기능이 없음. 제안·모의 실험은 제품 구현으로 계산하지 않음 |
 | 검증 필요 | 구현/설정은 있으나 요구하는 환경 또는 종단 흐름의 증거가 부족함 |
 
-한 항목에 여러 판정이 있으면 구현과 운영 검증 범위를 각각 표시한 것이다. 기존 검증은 [9/29 통합 기록](stage4-8-validation.md), [9/17 통합 기록](integration-report.md), [9/18 시연 기록](demo-validation.md)을 구분해 사용한다.
+한 항목에 여러 판정이 있으면 구현과 운영 검증 범위를 각각 표시한 것이다. 기존 검증은 [9/29 통합 기록](../verification/stage4-8-validation.md), [9/17 통합 기록](../verification/integration-report.md), [9/18 시연 기록](../verification/demo-validation.md)을 구분해 사용한다.
 
 ## 3. 두 구현 비교
 
@@ -55,7 +55,7 @@
 | Unity API/HUD | `/api/city-state`, version 문자열 검증, 역행/이전 회차 차단, 0.5초 폴링 | `/api/state`, round 구조의 CityLiveClient | **구현 완료**, 실제 종료→Unity 종단 **검증 필요**. `unity/Assets/SIMUS/Runtime/{CityStatePoller.cs,Core/CityStateStore.cs}`, 사본 `Assets/Scripts/CityLiveClient.cs` |
 | NPC·도시 연출 | 캡슐 3개·로컬 elapsed 이동, CLOSING/FINALIZED 정지, 임시 임계값 | 미리보기 이동, 모의 서버+Canvas 본인 추적 실험 | 연출 **부분 구현**, 실제 참여자 NPC **미구현**. `NeighborhoodLife.cs`, `NeighborhoodIntegration.cs`, `사본/prototype/integration/npc_lab.py`, `client/lab/index.html` |
 | 학과·외부 알림·오염 확산 | 제품 API/테이블/처리 없음 | contracts/API.md 제안, 확산 없음 | **미구현**. 본 API/스키마 목록, `사본/prototype/contracts/API.md`, `진행상태.md` |
-| 배포 | 개발 Compose·환경 예제·운영 안내 | 로컬 실행 스크립트·프록시 | **검증 필요**. `compose.yaml`, `docs/demo-deployment.md`, `사본/시제품_테스트.command`. 실제 공개 서비스 배포 증거 없음 |
+| 배포 | 개발 Compose·환경 예제·운영 안내 | 로컬 실행 스크립트·프록시 | **검증 필요**. `compose.yaml`, `docs/operations/demo-deployment.md`, `사본/시제품_테스트.command`. 실제 공개 서비스 배포 증거 없음 |
 
 ## 4. 요구사항별 완료 상태
 
@@ -63,7 +63,7 @@
 
 | ID | 현재 판정 | 근거와 남은 인수 조건 |
 |---|---|---|
-| F01 QR 참여 | 검증 필요 | 참여 URL 있음. 실제 HTTPS QR·휴대폰은 미검증 (`docs/stage4-8-validation.md`) |
+| F01 QR 참여 | 검증 필요 | 참여 URL 있음. 실제 HTTPS QR·휴대폰은 미검증 (`docs/verification/stage4-8-validation.md`) |
 | F02 개인 구분·유지 | 구현 완료 | 쿠키 인증·분리·복원 기록 (`web/src/app/api/participants/route.ts`, `web/tests/isolated-browser.mjs`). 쿠키 분실 복구는 미지원 |
 | F03 상황·선택지 | 구현 완료 | WASTE 1개/2선택 기준 (`db/seed_neighborhood.sql`, `web/src/app/participate/SituationCard.tsx`). 전시 콘텐츠 수량 별도 |
 | F04 선택 제출 | 구현 완료 | 안내·제출 UI/API (`SituationCard.tsx`, `web/src/app/api/choices/route.ts`) |
@@ -72,8 +72,8 @@
 | F07 개인 점수·비공개 | 구현 완료 | 서버 계산, 공개 응답에서 점수 제외 (`choices/route.ts`, `web/src/app/api/sessions/current/route.ts`) |
 | F08 최종 성향·해석 | 구현 완료 | 규칙 스냅샷·본인 결과 (`web/src/lib/session-rules.ts`, `session-lifecycle.ts`, `web/src/app/result/[id]/ResultClient.tsx`) |
 | F09 도시·지역 계산 | 구현 완료 | 배율·0~100 clamp·원장 (`choices/route.ts`, `web/tests/isolated-flow.mjs`) |
-| F10 동시 누적 | 구현 완료 | 격리 8명 동시 검증. 운영 규모는 검증 필요 (`docs/stage4-8-validation.md`) |
-| F11 Unity 수신 | 구현 완료 | 실제 Next/PostgreSQL HTTP Play 기록 (`docs/stage4-8-validation.md`, `CityStatePoller.cs`) |
+| F10 동시 누적 | 구현 완료 | 격리 8명 동시 검증. 운영 규모는 검증 필요 (`docs/verification/stage4-8-validation.md`) |
+| F11 Unity 수신 | 구현 완료 | 실제 Next/PostgreSQL HTTP Play 기록 (`docs/verification/stage4-8-validation.md`, `CityStatePoller.cs`) |
 | F12 Unity 수치 표시 | 구현 완료 | HUD·도시/지역 표시 (`unity/Assets/SIMUS/Runtime/CityStateDebugView.cs`, 같은 검증 기록) |
 | F13 자동·수동 종료 | 부분 구현 | DRAIN API 통과, 원문 미완료 취소와 차이·운영 스케줄러 미설치 (`session-lifecycle.ts`, D03) |
 | F14 연결 복구 | 부분 구현 | 브라우저/DB 복구 기록·Unity 재시도 코드. 전시 LAN 단절/복귀 실증 필요 (`web/tests/isolated-browser.mjs`, `CityStatePoller.cs`) |
@@ -86,7 +86,7 @@
 | F21 새 회차 | 구현 완료 | 콘텐츠 복사·초기화·기록 격리 (`session-creation.ts`, `web/tests/stage-integration.mjs`) |
 | F22 현재·과거 구분 | 구현 완료 | 본인 history·확정 스냅샷·Unity 회차 보호 (`participants/route.ts`, `result/route.ts`, `Core/CityStateStore.cs`) |
 | F23 학과 선택 | 미구현 | 목록/회차별 소속/첫 선택 후 고정 없음 (본 DB/API, 사본 `contracts/API.md` 제안) |
-| F24 학과 통계 | 미구현 | 분모·종료 후 공개·5명 제한 제안만 있음 (`docs/requirements.md` §4.1) |
+| F24 학과 통계 | 미구현 | 분모·종료 후 공개·5명 제한 제안만 있음 (`docs/planning/requirements.md` §4.1) |
 | F25 본인 NPC 추적 | 미구현 | 모의 Canvas 실험만 있음. 본 서버 바인딩·공유 경로 없음 (사본 `contracts/NPC_제공방식_검토.md`) |
 | F26 도시 위 선택 패널 | 미구현 | 현재 참여 화면은 수치·선택 카드. 실제 추적 도시 위 패널 없음 (`web/src/app/participate/page.tsx`) |
 | F27 같은 도시·NPC | 부분 구현 | 도시 회차/수치는 공유, 참여자 NPC 식별·시간/위치 공유 없음 (`CityStatePoller.cs`, `NeighborhoodLife.cs`) |
@@ -105,7 +105,7 @@
 | 관리자 회차 | GET/POST `/api/admin/sessions`, POST `/{id}/start`, `/{id}/end` | `/api/admin/start`, `/api/admin/finish` |
 | 자동 종료·복구 | POST `/api/internal/sessions/reconcile` | 프로세스 tick |
 
-본 서버의 UUID `session_id`와 request_key, `{error:{code,message}}`, bigint 문자열 version, no-store, 본인 쿠키/JWT 권한 경계를 유지한다. 기존 클라이언트에 사본 round 응답을 그대로 연결하지 않는다. 신규 NPC·학과·알림 API는 미구현 계약으로 별도 설계한다. 상세는 [web/API.md](../web/API.md) 및 [통합 안내](stage4-8-integration.md).
+본 서버의 UUID `session_id`와 request_key, `{error:{code,message}}`, bigint 문자열 version, no-store, 본인 쿠키/JWT 권한 경계를 유지한다. 기존 클라이언트에 사본 round 응답을 그대로 연결하지 않는다. 신규 NPC·학과·알림 API는 미구현 계약으로 별도 설계한다. 상세는 [web/API.md](../../web/API.md) 및 [통합 안내](../operations/stage4-8-integration.md).
 
 ### DRAIN의 실제 의미와 요구사항 차이
 
@@ -169,13 +169,13 @@
 
 ## 9. 검증 증거와 문서 충돌
 
-- 9/29 기록: lint/build, 격리 API·Chromium·생성 API·복원·DB stop/start 통과. Unity 실제 API 수신과 EditMode 10/10. [XML](verification/unity-editmode-2026-09-29.xml)에서 passed=10, failed/skipped=0을 이번에 직접 확인했다.
+- 9/29 기록: lint/build, 격리 API·Chromium·생성 API·복원·DB stop/start 통과. Unity 실제 API 수신과 EditMode 10/10. [XML](../verification/unity-editmode-2026-09-29.xml)에서 passed=10, failed/skipped=0을 이번에 직접 확인했다.
 - Unity 종료 정지는 FINALIZED 스냅샷 주입 검사다. 실제 관리자/자동 종료가 Unity 화면에 반영되는 전체 검사와 구분한다. `/tmp` 로그 경로는 당시 기록이며 현재 영구 보관된 원본으로 간주하지 않는다.
 - 사본 9/24 기록: 서버 12/12, 2인 HTTP·모바일 390px·Unity Play·로컬 지연. 본 API 계약의 통과 증거를 대신하지 않는다.
 - 실제 휴대폰·현장 QR/LAN·전시 빌드·운영 스케줄러·HTTPS·운영 규모 부하는 미검증이다. 전체 전시 완료율을 산출하지 않는다.
 - `project-schedule-2026-10-20.md` 초기 현황의 ‘미통합·미추적·최신 b7ac890’은 과거 기록이다. 현재 통합 커밋과 Git 상태를 우선한다.
-- `session-lifecycle.md` 본문 일부의 ‘관리자/결과 미구현·DB 전이 보호 없음’은 상단 갱신 이전 설계 설명이다. 002 SQL과 현재 서버가 이미 구현한다. 재개발 작업으로 잡지 않는다.
-- `web/API.md`의 reconcile ‘최소 1분’과 `demo-deployment.md`의 ‘예: 1초’, 후자의 폴링 ‘약 2초’는 정합화 필요. 현재 Unity 기본/장면 폴링은 0.5초다. 운영 스케줄러 주기는 아직 없다.
+- `docs/contracts/session-lifecycle.md` 본문 일부의 ‘관리자/결과 미구현·DB 전이 보호 없음’은 상단 갱신 이전 설계 설명이다. 002 SQL과 현재 서버가 이미 구현한다. 재개발 작업으로 잡지 않는다.
+- `web/API.md`의 reconcile ‘최소 1분’과 `docs/operations/demo-deployment.md`의 ‘예: 1초’, 후자의 폴링 ‘약 2초’는 정합화 필요. 현재 Unity 기본/장면 폴링은 0.5초다. 운영 스케줄러 주기는 아직 없다.
 - `unity/README.md`, 과거 검증 문서의 Editor/장면 부재는 당시 기록이다. 현재 존재 및 9/29 검증과 구분한다.
 
 이번 조사 완료 조건은 비교·근거·결정 대장 작성이다. 최종 제품 범위·인력·지원 환경의 확정 완료 조건은 D01~D10 기록과 실명 배정이며, 아직 충족되지 않았다.

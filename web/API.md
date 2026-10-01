@@ -70,7 +70,7 @@ RUNNING 또는 CLOSING 회차를 반환합니다. 없으면 `session: null`입�
 ## GET /api/city-state
 
 Unity의 `UnityWebRequest`에서 인증·참여자 쿠키 없이 조회할 수 있습니다.
-후속 클라이언트 구현은 [Unity 연동 규격](../docs/unity-integration.md)의 필드 타입,
+후속 클라이언트 구현은 [Unity 연동 규격](../docs/contracts/unity-integration.md)의 필드 타입,
 null 처리, 버전 비교, 폴링 및 회차 전환 기준을 따릅니다.
 
 ```json
@@ -172,13 +172,21 @@ curl -X POST -H "Authorization: Bearer $SESSION_JOB_TOKEN" \
 - `GET /api/participants`: 본인의 종료된 회차 `history` 추가.
 - `GET /api/sessions/{id}/result`: 확정된 해당 회차 `city_state` 추가. 본인 result 계약 유지.
 
-요청/응답 상세와 마이그레이션: [통합 안내](../docs/stage4-8-integration.md).
+요청/응답 상세와 마이그레이션: [통합 안내](../docs/operations/stage4-8-integration.md).
 
 ## 3A 회차 입장·NPC API
 
-`POST /api/sessions/{id}/join`, `GET /api/sessions/{id}/npc`(본인 인증), `GET /api/sessions/{id}/npcs`(공개 익명 NPC). 필드·좌표·보간·종료 동결·오류는 [공유 계약](../docs/participant-npc-api.md)을 따른다. DB 004 적용이 필요하다.
+`POST /api/sessions/{id}/join`, `GET /api/sessions/{id}/npc`(본인 인증), `GET /api/sessions/{id}/npcs`(공개 익명 NPC). 필드·좌표·보간·종료 동결·오류는 [공유 계약](../docs/contracts/participant-npc-api.md)을 따른다. DB 004 적용이 필요하다.
 
 ## 3C 회차별 학과 API
 
 `GET /api/sessions/{id}/department`(본인 소속·목록·잠금), `PUT /api/sessions/{id}/department`(첫 선택 전 수정).
-본인 쿠키 인증과 DB 005가 필요하다. [필드·오류·동시성·4A 연결 계약](../docs/participant-departments.md).
+본인 쿠키 인증과 DB 005가 필요하다. [필드·오류·동시성·4A 연결 계약](../docs/contracts/participant-departments.md).
+
+## 4A 학과 통계 API
+
+`GET /api/sessions/{id}/department-statistics`는 공개 회차별 집계다. 상황별 선택 비율은 해당 상황 응답자를 분모로 하고, 5명 미만의 선택지·성향 상세를 감춘다. 성향 분포는 회차 확정 후에만 반환한다. [공개 계약과 검증](../docs/contracts/department-statistics.md).
+
+## 4B 결과 링크와 웹 푸시
+
+본인 쿠키로 `POST /api/sessions/{id}/result-link`를 호출하면 30일 동안 유효한 읽기 전용 결과 자격을 발급한다. `POST /api/shared-result`는 그 자격으로 확정된 결과를 조회한다. 회차별 푸시 동의는 `POST`/`DELETE /api/sessions/{id}/push-subscription`으로 관리하고, `GET /api/push/config`에서 공개 VAPID 키를 조회한다. 결과 확정 후 발송 작업은 인증된 reconcile 호출에서 처리한다. [구현·인수 범위](../docs/contracts/result-notification-4b.md).

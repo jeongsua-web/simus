@@ -2,7 +2,7 @@
 
 조사 기준: 2026-09-16, 저장소의 DB 정의와 서버 코드. 운영 DB에 접속해 실제 배포 상태를 확인한 문서는 아니다.
 
-구현 갱신: `db/002_session_lifecycle.sql`과 회차 운영 API가 이 문서의 제안을 구현했다. 적용된 제품 규칙은 규칙 스냅샷 v1에 명시하도록 했으며, 축 방향·9종 해석·초기값·무응답 포함 여부가 빠진 회차는 시작하지 않는다. 종료 중인 선택은 `completion_policy: DRAIN`에 따라 회차 잠금 앞에서 완료 또는 롤백될 때까지 기다린 뒤 확정한다. 상세 API와 자동 종료 실행법은 [API 문서](../web/API.md)를 따른다.
+구현 갱신: `db/002_session_lifecycle.sql`과 회차 운영 API가 이 문서의 제안을 구현했다. 적용된 제품 규칙은 규칙 스냅샷 v1에 명시하도록 했으며, 축 방향·9종 해석·초기값·무응답 포함 여부가 빠진 회차는 시작하지 않는다. 종료 중인 선택은 `completion_policy: DRAIN`에 따라 회차 잠금 앞에서 완료 또는 롤백될 때까지 기다린 뒤 확정한다. 상세 API와 자동 종료 실행법은 [API 문서](../../web/API.md)를 따른다.
 
 이 문서의 **현재 구현**은 코드·DB 제약으로 확인한 동작, **기존 설계**는 저장소 문서에 명시됐지만 서버 구현이 없는 요구사항, **구현 제안**은 이를 연결하기 위한 처리 방식이다. **결정 필요**는 제품 규칙 또는 운영 보장 수준을 추가로 확정해야 하는 항목이다.
 
@@ -10,15 +10,15 @@
 
 | 근거 | 확인 내용 |
 | --- | --- |
-| [DB 스키마](../db/001_initial_schema.sql) | 18개 테이블, 상태·결과 구조, 제약·트리거·뷰 |
-| [DB 설명](../db/README.md) | 시작 검증, 종료 조정, 성향 경계, 결과 보존 등 후속 요구사항 |
-| [개발 seed](../db/seed_development.sql) | 초기 상태와 개발 회차 시작 예시. 운영 시작 로직이 아님 |
-| [API 설명](../web/API.md) | 공개 API 계약과 미구현 범위 |
-| [공통 API 함수](../web/src/lib/api.ts) | 인증, 트랜잭션, 접수 가능 여부 검사 |
-| [선택 API](../web/src/app/api/choices/route.ts) | 잠금, 멱등성, 점수·상태·원장 갱신 |
-| [참여자 API](../web/src/app/api/participants/route.ts) | 익명 자격 발급·재사용 |
-| [현재 회차 API](../web/src/app/api/sessions/current/route.ts), [도시 API](../web/src/app/api/city-state/route.ts) | 공개 조회 범위 |
-| [DB 검증](../db/verify_schema.sql), [API 통합 테스트](../web/tests/api.integration.mjs) | 현재 검증 코드의 범위. 이번 조사에서 실행하지 않음 |
+| [DB 스키마](../../db/001_initial_schema.sql) | 18개 테이블, 상태·결과 구조, 제약·트리거·뷰 |
+| [DB 설명](../../db/README.md) | 시작 검증, 종료 조정, 성향 경계, 결과 보존 등 후속 요구사항 |
+| [개발 seed](../../db/seed_development.sql) | 초기 상태와 개발 회차 시작 예시. 운영 시작 로직이 아님 |
+| [API 설명](../../web/API.md) | 공개 API 계약과 미구현 범위 |
+| [공통 API 함수](../../web/src/lib/api.ts) | 인증, 트랜잭션, 접수 가능 여부 검사 |
+| [선택 API](../../web/src/app/api/choices/route.ts) | 잠금, 멱등성, 점수·상태·원장 갱신 |
+| [참여자 API](../../web/src/app/api/participants/route.ts) | 익명 자격 발급·재사용 |
+| [현재 회차 API](../../web/src/app/api/sessions/current/route.ts), [도시 API](../../web/src/app/api/city-state/route.ts) | 공개 조회 범위 |
+| [DB 검증](../../db/verify_schema.sql), [API 통합 테스트](../../web/tests/api.integration.mjs) | 현재 검증 코드의 범위. 이번 조사에서 실행하지 않음 |
 
 | 기능 | 현재 상태 |
 | --- | --- |
@@ -157,7 +157,7 @@ DB 설명은 미완료 트랜잭션 취소 조정을 후속 필수 사항으로 
 
 - 개인 점수는 성공적으로 반영된 선택의 `alignment_dx`, `alignment_dy` 합이다. `response_count`는 해당 원장 수다. `impact_scale`은 개인 점수에 곱하지 않는다.
 - 개인 점수는 `bigint`이며 0~100 제한·평균화·응답 수 보정이 없다. 계산·API 직렬화 시 JavaScript `number`로 무손실 처리할 수 있다고 가정하지 않는다.
-- [DB 설명](../db/README.md)에 각 축 **-3 이하 / -2~2 / 3 이상**의 경계가 명시되어 있다. seed에도 -3, 3이 있다. DB 자체에는 이 판정 함수나 점수-코드 일치 제약이 없다.
+- [DB 설명](../../db/README.md)에 각 축 **-3 이하 / -2~2 / 3 이상**의 경계가 명시되어 있다. seed에도 -3, 3이 있다. DB 자체에는 이 판정 함수나 점수-코드 일치 제약이 없다.
 - 판정은 최종 합계를 대상으로 한다. 경계를 바꾸거나 응답 수로 정규화하는 것은 기존 설계 변경이다.
 
 **결정 필요:** X/Y 중 어떤 축이 질서/혼돈, 선/악인지와 각 부호의 방향. seed의 분리배출 선택이 `(+1,+1)`인 것만으로 축 의미를 확정할 수 없다.

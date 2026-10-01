@@ -1,7 +1,7 @@
 # SIM:US 요구사항 보고서
 
 > GPT 작업 폴더에서 옮긴 요구사항 원문입니다. 구현 단계와 미완료 항목은 작성 당시 기준이며,
-> 현재 구현·검증 상태는 저장소의 `README.md`와 `docs/demo-validation.md`를 함께 확인하세요.
+> 현재 구현·검증 상태는 저장소의 `README.md`와 `docs/verification/demo-validation.md`를 함께 확인하세요.
 
 ## 1. 프로젝트 목적과 핵심 경험
 

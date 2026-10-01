@@ -19,12 +19,12 @@
 5. During a running round, choose **수동 종료**. The confirmation names the round and states that admission closes immediately and finalization starts. Confirm with **대상 회차 종료**.
 6. Buttons remain disabled while a mutation is running. The request uses a fresh idempotency key, surfaces server errors, and reloads the server state. `CLOSING` rounds poll every three seconds until `FINALIZED`.
 
-The **다음 회차 준비** form clones a DRAFT or FINALIZED content snapshot with a name, duration, and impact scale. It does not copy responses or results. Duration starts at the actual start action. Individual content editing remains unavailable. See [the integration guide](../docs/stage4-8-integration.md).
+The **다음 회차 준비** form clones a DRAFT or FINALIZED content snapshot with a name, duration, and impact scale. It does not copy responses or results. Duration starts at the actual start action. Individual content editing remains unavailable. See [the integration guide](../docs/operations/stage4-8-integration.md).
 
 ## Local validation
 
 For a fresh isolated PostgreSQL cluster, concurrent API flows, server/database recovery,
-and optional Chromium UI tests, see [the integration report](../docs/integration-report.md).
+and optional Chromium UI tests, see [the integration report](../docs/verification/integration-report.md).
 After building, `npm run test:integration` creates its own test database and stops its
 owned services at the end; it does not use the development database.
 

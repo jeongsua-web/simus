@@ -4,7 +4,7 @@
 Unity 6000.3.24f1에서 본 서버 `/api/city-state`를 읽는 폴러·HUD와 동네 맵·NPC 미리보기·임시 도시 연출을 연결합니다.
 원본 `Neighborhood.unity`는 정적 맵으로 보존합니다.
 
-[통합 실행 안내](../docs/stage4-8-integration.md) · [통합 검증](../docs/stage4-8-validation.md)
+[통합 실행 안내](../docs/operations/stage4-8-integration.md) · [통합 검증](../docs/verification/stage4-8-validation.md)
 
 통합 장면의 `SIMUS Connected Neighborhood`에서 Server Base Url을 설정하세요.
 `SIMUS > Build Connected Neighborhood`는 원본 맵에서 파생 장면을 재생성합니다.

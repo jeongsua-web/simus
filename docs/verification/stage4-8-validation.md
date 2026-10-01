@@ -13,7 +13,7 @@
 - Unity 컴파일·통합 장면 생성: `NeighborhoodIntegration.Build` 성공. 원본 맵 위 NPC 경로 34개 지점 raycast 통과.
 - Unity 실제 Play/HTTP: 동일한 격리 PostgreSQL을 사용하는 Next.js API에서 회차·버전·행복도·청결도를 받아 예상 응답과 일치함. RUNNING에서 미리보기 NPC 이동 확인. 이후 **테스트에서 FINALIZED 스냅샷을 주입**해 이동 정지와 RUNNING 역행 거부 확인. 이 종료 검사는 실제 관리자 종료의 Unity 화면 반영을 대체하지 않음.
 - 이식한 WASTE 시연 SQL: 별도 격리 재실행에서 실제 적용·can_start=true·원본 선택 점수(1,1,3,5)/(0,0,0,0)·배율 0.1 확인 통과. 이 재실행은 브라우저/Unity를 SKIP했으며 앞선 전체 실행의 해당 검증 결과와 구분한다.
-- Unity EditMode: **10/10 통과**, 실패·skip 0. [원본 XML](verification/unity-editmode-2026-09-29.xml).
+- Unity EditMode: **10/10 통과**, 실패·skip 0. [원본 XML](unity-editmode-2026-09-29.xml).
 
 전체 격리 실행은 exit 0, `PASS isolated suite. No development connection or data mutation.`으로 종료했다.
 주요 실행 DB: 임시 `simus-integration-qGfdNp`. 시연 SQL 추가 확인 DB: `simus-integration-tcIUJ8`. 테스트가 만든 DB·웹 프로세스는 종료했다.
@@ -29,7 +29,7 @@ Unity HTTP 로그: 임시 `simus-unity-http-zwd7hc/unity.log`의 `SIMUS_INTEGRAT
 
 이번 검증은 새 임시 DB만 사용했다. 기존 개발/운영 DB, Python 사본의 DB, 외부 배포는 변경하지 않았다.
 실제 휴대폰·전시 LAN·QR, 운영 스케줄러·HTTPS 배포, Windows/WebGL 빌드·성능 측정은 수행하지 않았다.
-NPC는 참여자 연동 기능이 아닌 미리보기다. 최종 이미지·학과·외부 알림 등 미구현 범위는 [통합 안내](stage4-8-integration.md)에 기록했다.
+NPC는 참여자 연동 기능이 아닌 미리보기다. 최종 이미지·학과·외부 알림 등 미구현 범위는 [통합 안내](../operations/stage4-8-integration.md)에 기록했다.
 
 ## 재현
 

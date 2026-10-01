@@ -1,9 +1,9 @@
 # SIM:US PostgreSQL 스키마
 
-시연용 새 DB에는 `001_initial_schema.sql` → `002_session_lifecycle.sql` → `003_session_creation.sql` → `004_participant_npcs.sql` → `005_participant_departments.sql` → `seed_demo.sql` 또는 `seed_neighborhood.sql`을 적용한다.
+시연용 새 DB에는 `001_initial_schema.sql` → `002_session_lifecycle.sql` → `003_session_creation.sql` → `004_participant_npcs.sql` → `005_participant_departments.sql` → `006_content_score_range.sql` → `007_result_links.sql` → `008_web_push.sql` → `seed_demo.sql` 또는 `seed_neighborhood.sql`을 적용한다.
 `seed_demo.sql`은 관리자 화면에서 시작할 DRAFT를 준비한다. 기존 `seed_development.sql`은 즉시 RUNNING으로
 전환하는 개발용이므로 같은 DB에 혼용하지 않는다. 운영 DB에는 어느 seed도 적용하지 않는다.
-구체적인 명령과 데이터 분리는 [시연·배포 가이드](../docs/demo-deployment.md)에 있다.
+구체적인 명령과 데이터 분리는 [시연·배포 가이드](../docs/operations/demo-deployment.md)에 있다.
 
 `001_initial_schema.sql`은 DB 초안 v0.1의 **이번 연결 시제품** 범위를 구현한다.
 기존 PostgreSQL 데이터베이스 안에 `simus` 스키마와 테이블 18개를 생성한다.
@@ -34,7 +34,7 @@ Next.js 서버 쿼리에서는 `simus.city_states`처럼 스키마를 명시한�
 
 Unity 도시 시각화 클라이언트와 브라우저에는 DB 접속 정보나 자격 증명을 제공하지 않는다.
 PostgreSQL 접근은 Next.js 서버가 담당하며 Unity는 `GET /api/city-state`만 조회한다.
-필드 타입과 null 처리, bigint 버전 비교는 [Unity 연동 규격](../docs/unity-integration.md)을 따른다.
+필드 타입과 null 처리, bigint 버전 비교는 [Unity 연동 규격](../docs/contracts/unity-integration.md)을 따른다.
 
 생성 후 핵심 제약조건을 검증할 수 있다. 검증 데이터는 롤백되어 남지 않는다.
 
@@ -61,7 +61,7 @@ psql -d simus -v ON_ERROR_STOP=1 -f db/verify_schema.sql
 
 아래 목록은 스키마만으로 완성되지 않는 책임의 목록이다. 현재 Next.js에는 인증·시작 검증·선택 트랜잭션·
 종료/결과 확정이 구현돼 있다. 현재 구현/검증 상태는 [README](../README.md)와
-[통합 검증 보고서](../docs/integration-report.md)를 기준으로 본다. 운영 계정 분리·스케줄러 배포는 남아 있다.
+[통합 검증 보고서](../docs/verification/integration-report.md)를 기준으로 본다. 운영 계정 분리·스케줄러 배포는 남아 있다.
 
 이 SQL은 스키마 생성이며 다음 동작을 구현한 완성 서버가 아니다.
 
@@ -86,14 +86,18 @@ psql -d simus -v ON_ERROR_STOP=1 -f db/verify_schema.sql
 003은 콘텐츠 복제 요청의 멱등 키·원본 회차·시작 기준 진행 시간을 보존한다. 기존 데이터는 수정하지 않는다.
 관리자 UI에서 복사한 DRAFT를 시작할 때 예정 종료 시각이 실제 시작 기준으로 계산된다.
 `seed_neighborhood.sql`은 원본 PostgreSQL 시제품의 WASTE 1개 상황을 이식한 선택 가능한 시연 seed다.
-Python 사본의 SQL은 본 스키마에 적용하지 않는다. [통합 안내](../docs/stage4-8-integration.md).
+Python 사본의 SQL은 본 스키마에 적용하지 않는다. [통합 안내](../docs/operations/stage4-8-integration.md).
 
 ## 3A NPC 마이그레이션
 
-기존 DB에는 003 다음에 `004_participant_npcs.sql`을 한 번 적용한다. 회차 가입 행에 고정 NPC ID와 경로 스냅샷을 추가한다. 기존 선택·결과는 보존한다. [API·좌표·시간 계약](../docs/participant-npc-api.md).
+기존 DB에는 003 다음에 `004_participant_npcs.sql`을 한 번 적용한다. 회차 가입 행에 고정 NPC ID와 경로 스냅샷을 추가한다. 기존 선택·결과는 보존한다. [API·좌표·시간 계약](../docs/contracts/participant-npc-api.md).
 
 ## 3C 학과 저장 추가
 
 004 적용 후 `psql "$DATABASE_URL" -v ON_ERROR_STOP=1 -f db/005_participant_departments.sql`을 한 번 실행한다.
 005는 45개 학과 항목과 회차별 `department_id`를 추가한다. 기존 가입자의 소속은 `none`으로 보존한다.
-첫 유효 선택 후 변경을 DB에서도 차단한다. [API 및 검증](../docs/participant-departments.md).
+첫 유효 선택 후 변경을 DB에서도 차단한다. [API 및 검증](../docs/contracts/participant-departments.md).
+
+## 5A 전시 콘텐츠 초안
+
+005 뒤에 `006_content_score_range.sql`을 적용하면 신규 선택의 개인 점수 -4~+3을 원문 그대로 저장할 수 있다. 기존 회차의 규칙과 결과는 변경하지 않는다. 개발·검증 DB에서 `seed_demo.sql`을 적용한 뒤 `seed_exhibition.sql`을 적용하면 전시 30상황·91선택지 DRAFT가 추가된다. 운영 DB에 시드를 적용하지 않는다. 원문 동기화와 지역/자산의 미확정 범위는 [콘텐츠 인계 문서](../docs/content/exhibition-data.md)를 참고한다.

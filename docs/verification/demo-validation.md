@@ -58,4 +58,4 @@ TEST_PLAYWRIGHT_MODULE이 없으면 브라우저 검증은 SKIP되므로 HTTP �
 3. WebGL을 선택한다면 동일 출처 산출물 로딩·MIME/압축/TLS를 실제 브라우저에서 검증한다.
 4. 실제 서버가 정해지면 HTTPS 프록시의 Origin/Host, Secure 쿠키, 스케줄러, DB 최소 권한·백업 복구를 검증한다.
 
-실행·운영 절차와 체크리스트: [시연·배포 가이드](demo-deployment.md).
+실행·운영 절차와 체크리스트: [시연·배포 가이드](../operations/demo-deployment.md).

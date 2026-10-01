@@ -2,6 +2,8 @@
 
 기준일: 2026-09-18. 외부 공개 배포는 수행하지 않았다.
 
+아래 시연 절차의 DB 적용 순서는 현재 파일 기준 001~008로 갱신했다. Unity 환경과 과거 검증 결과에 관한 설명은 기준일 당시의 기록이다. 마이그레이션별 상세는 [DB 안내](../../db/README.md)를 따른다.
+
 ## 1. 먼저 확인한 실행 대상과 기존 설정
 
 - `unity/`에는 Assets와 Packages만 있고 ProjectVersion, EditorBuildSettings, `.unity` 장면이 없다.
@@ -29,6 +31,11 @@ $pgBin = 'C:/Program Files/PostgreSQL/18/bin'
 & "$pgBin/psql.exe" -h localhost -U postgres -d simus_demo -v ON_ERROR_STOP=1 -f db/001_initial_schema.sql
 & "$pgBin/psql.exe" -h localhost -U postgres -d simus_demo -v ON_ERROR_STOP=1 -f db/002_session_lifecycle.sql
 & "$pgBin/psql.exe" -h localhost -U postgres -d simus_demo -v ON_ERROR_STOP=1 -f db/003_session_creation.sql
+& "$pgBin/psql.exe" -h localhost -U postgres -d simus_demo -v ON_ERROR_STOP=1 -f db/004_participant_npcs.sql
+& "$pgBin/psql.exe" -h localhost -U postgres -d simus_demo -v ON_ERROR_STOP=1 -f db/005_participant_departments.sql
+& "$pgBin/psql.exe" -h localhost -U postgres -d simus_demo -v ON_ERROR_STOP=1 -f db/006_content_score_range.sql
+& "$pgBin/psql.exe" -h localhost -U postgres -d simus_demo -v ON_ERROR_STOP=1 -f db/007_result_links.sql
+& "$pgBin/psql.exe" -h localhost -U postgres -d simus_demo -v ON_ERROR_STOP=1 -f db/008_web_push.sql
 & "$pgBin/psql.exe" -h localhost -U postgres -d simus_demo -v ON_ERROR_STOP=1 -f db/seed_demo.sql
 ```
 
@@ -45,11 +52,16 @@ docker compose exec db createdb -U simus simus_demo
 docker compose exec db psql -U simus -d simus_demo -v ON_ERROR_STOP=1 -f /schema/001_initial_schema.sql
 docker compose exec db psql -U simus -d simus_demo -v ON_ERROR_STOP=1 -f /schema/002_session_lifecycle.sql
 docker compose exec db psql -U simus -d simus_demo -v ON_ERROR_STOP=1 -f /schema/003_session_creation.sql
+docker compose exec db psql -U simus -d simus_demo -v ON_ERROR_STOP=1 -f /schema/004_participant_npcs.sql
+docker compose exec db psql -U simus -d simus_demo -v ON_ERROR_STOP=1 -f /schema/005_participant_departments.sql
+docker compose exec db psql -U simus -d simus_demo -v ON_ERROR_STOP=1 -f /schema/006_content_score_range.sql
+docker compose exec db psql -U simus -d simus_demo -v ON_ERROR_STOP=1 -f /schema/007_result_links.sql
+docker compose exec db psql -U simus -d simus_demo -v ON_ERROR_STOP=1 -f /schema/008_web_push.sql
 docker compose exec db psql -U simus -d simus_demo -v ON_ERROR_STOP=1 -f /schema/seed_demo.sql
 ```
 
-기존 Compose 기본 DB `simus`는 빈 볼륨의 첫 기동에 001~003을 자동 적용한다. 기존 DB에는 001을 다시 실행하지 않는다.
-002/003은 배포 이력과 DB 적용 여부를 확인하고 각각 한 번 적용한다. 자동 마이그레이션/이력 관리 도구는 없다.
+Compose 기본 DB `simus`는 빈 볼륨의 첫 기동에 001~008을 자동 적용한다. 기존 DB에는 001을 다시 실행하지 않는다.
+기존 볼륨에는 새 SQL이 자동 적용되지 않는다. 배포 이력과 DB 적용 여부를 확인하고 누락된 후속 파일만 번호 순서대로 한 번씩 적용한다. 자동 마이그레이션/이력 관리 도구는 없다.
 운영 마이그레이션 전에는 백업과 복원 시험을 수행하고 버전·적용일을 별도 기록한다.
 `docker compose stop`은 데이터를 보존한다. `down -v`는 데이터 삭제이므로 시연 종료 명령으로 쓰지 않는다.
 
@@ -58,7 +70,7 @@ docker compose exec db psql -U simus -d simus_demo -v ON_ERROR_STOP=1 -f /schema
 `seed_demo.sql`은 dev-admin, DRAFT 1개, 중앙 지역 1개, 쓰레기 상황 1개와 선택지 2개를 만든다.
 도시/지역 런타임 상태와 시작은 관리자 API가 생성한다. `seed_development.sql`과 같은 DB에 적용하지 않는다.
 고정 회차 ID는 `10000000-0000-0000-0000-000000000001`이다. 종료한 회차는 재사용하지 않는다.
-다음 회차는 관리자 화면의 다음 회차 준비로 콘텐츠를 복사해 시작한다. 새 DB를 만드는 경우 001 → 002 → 003 → demo seed 순서다.
+다음 회차는 관리자 화면의 다음 회차 준비로 콘텐츠를 복사해 시작한다. 새 DB를 만드는 경우 001 → 002 → 003 → 004 → 005 → 006 → 007 → 008 → demo seed 순서다. 전시 30상황 초안을 시험할 때는 demo seed 다음에 `seed_exhibition.sql`을 선택 적용한다.
 기존 DB는 보존한다. seed를 재실행해도 종료 상태나 종료 시각이 초기화되지 않는다.
 
 ## 3. 관리자 설정과 Next.js 실행

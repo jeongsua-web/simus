@@ -6,7 +6,7 @@
 
 ## 범위와 환경
 
-- 확인 문서: `README.md`, `web/API.md`, `web/OPERATIONS.md`, `docs/session-lifecycle.md`, `docs/unity-integration.md`, `unity/README.md`. 과거 문서의 설계 제안·미구현 표기는 현재 코드와 구분했다.
+- 확인 문서: `README.md`, `web/API.md`, `web/OPERATIONS.md`, `docs/contracts/session-lifecycle.md`, `docs/contracts/unity-integration.md`, `unity/README.md`. 과거 문서의 설계 제안·미구현 표기는 현재 코드와 구분했다.
 - Windows, Node.js 24.18.0, Next.js 16.3.5 프로덕션 빌드, PostgreSQL 18.4.
 - `tests/isolated-runner.mjs`가 매 실행마다 `%TEMP%/simus-integration-*`에 **새 PostgreSQL 클러스터**를 생성한다. 개발용 Compose, `.env.local`의 DB 주소, 기존 DB 볼륨을 사용하지 않는다.
 - 전용 DB `simus_integration`, PostgreSQL `127.0.0.1:55439`, Next.js `127.0.0.1:3117`. 시작 전 포트 점유 검사를 한다. `DATABASE_URL`은 실행기가 전용 주소로 덮어쓴다.

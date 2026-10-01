@@ -184,9 +184,9 @@ Next.js로 전달하는 리버스 프록시를 별도로 구성한다. 이는 �
 
 ## 6. 확인한 저장소 근거
 
-- [개발 환경](../README.md), [DB 설명](../db/README.md), [API 설명](../web/API.md)
-- [도시 조회 SQL과 응답](../web/src/app/api/city-state/route.ts)
-- [선택 트랜잭션과 version 증가](../web/src/app/api/choices/route.ts)
-- [JSON·오류·출처 공통 처리](../web/src/lib/api.ts)
-- [DB 스키마·제약·집계 뷰](../db/001_initial_schema.sql)
-- [Next.js 설정](../web/next.config.ts), [Compose 주소와 포트](../compose.yaml)
+- [개발 환경](../../README.md), [DB 설명](../../db/README.md), [API 설명](../../web/API.md)
+- [도시 조회 SQL과 응답](../../web/src/app/api/city-state/route.ts)
+- [선택 트랜잭션과 version 증가](../../web/src/app/api/choices/route.ts)
+- [JSON·오류·출처 공통 처리](../../web/src/lib/api.ts)
+- [DB 스키마·제약·집계 뷰](../../db/001_initial_schema.sql)
+- [Next.js 설정](../../web/next.config.ts), [Compose 주소와 포트](../../compose.yaml)
