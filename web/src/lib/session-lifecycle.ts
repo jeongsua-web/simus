@@ -113,6 +113,9 @@ export async function finalizeClosingSession(sessionId: string) {
         VALUES($1,$2,$3,$4,$5,$6,$7,$8)`, [sessionId, person.participant_id, person.x_score, person.y_score, person.response_count, code, rules.interpretations[code], at]);
     }
     await db.query(`UPDATE simus.simulation_sessions SET status='FINALIZED',actual_ended_at=$2,finalized_at=$2 WHERE id=$1`, [sessionId, at]);
+    await db.query(`INSERT INTO simus.push_jobs(session_id,subscription_id)
+      SELECT session_id,id FROM simus.push_subscriptions
+      WHERE session_id=$1 AND revoked_at IS NULL ON CONFLICT DO NOTHING`, [sessionId]);
     await db.query(`UPDATE simus.admin_actions SET outcome='SUCCEEDED',approved_at=COALESCE(approved_at,$2)
       WHERE session_id=$1 AND action='END' AND outcome='PENDING'`, [sessionId, at]);
     return { session_id: sessionId, status: "FINALIZED", finalized_at: at, replayed: false };

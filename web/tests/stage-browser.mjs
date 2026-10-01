@@ -37,6 +37,17 @@ export async function runStageBrowser({ env, pool, token, templateId }) {
     const first = await create('브라우저 통합 첫 회차');
     await mobile.goto(env.TEST_API_URL + '/participate');
     await mobile.getByRole('region', { name: '함께 만든 도시' }).waitFor();
+    await mobile.getByRole('region', { name: '도시와 선택' }).waitFor();
+    await mobile.locator('canvas[aria-hidden="true"]').waitFor();
+    await mobile.getByRole('status').filter({ hasText: 'NPC ' }).waitFor();
+    const firstNpc = await mobile.getByRole('status').filter({ hasText: 'NPC ' }).innerText();
+    const peer = await browser.newPage({ viewport: { width: 390, height: 844 } });
+    peer.on('pageerror', error => errors.push(error.message));
+    await peer.goto(env.TEST_API_URL + '/participate');
+    await peer.getByRole('status').filter({ hasText: 'NPC ' }).waitFor();
+    const secondNpc = await peer.getByRole('status').filter({ hasText: 'NPC ' }).innerText();
+    assert.notEqual(firstNpc.match(/NPC ([0-9a-f]{8})/)?.[1], secondNpc.match(/NPC ([0-9a-f]{8})/)?.[1]);
+    assert.ok(await mobile.getByText('도시에서 선택하기', { exact: false }).isVisible());
     await mobile.getByRole('radio').first().check();
     let payload;
     await mobile.route('**/api/choices', async route => { payload = route.request().postDataJSON(); await route.abort('connectionfailed'); });

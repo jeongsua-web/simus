@@ -8,6 +8,9 @@ import { once } from 'node:events';
 import { generateKeyPair, exportJWK, SignJWT } from 'jose';
 import pg from 'pg';
 import { runDepartmentIntegration } from './departments.integration.mjs';
+import { runDepartmentStatisticsIntegration } from './department-statistics.integration.mjs';
+import { runResultLinksIntegration } from './result-links.integration.mjs';
+import { runExhibitionContentIntegration } from './exhibition-content.integration.mjs';
 import { runStageIntegration } from './stage-integration.mjs';
 import { runFlow } from './isolated-flow.mjs';
 import assert from 'node:assert/strict';
@@ -15,7 +18,8 @@ import net from 'node:net';
 
 const web = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const bin = process.env.TEST_PG_BIN ?? (process.platform === 'win32' ? 'C:/Program Files/PostgreSQL/18/bin' : '/opt/homebrew/opt/postgresql@18/bin');
-const pgPort = 55439, port = 3117;
+const pgPort = Number(process.env.TEST_PG_PORT ?? 55439);
+const port = Number(process.env.TEST_WEB_PORT ?? 3117);
 // Refuse occupied ports before creating a cluster or sending any HTTP request.
 for (const testPort of [pgPort, port]) {
   await new Promise((resolve, reject) => {
@@ -76,12 +80,13 @@ try {
   const admin = new pg.Client({ connectionString: `postgresql://postgres@127.0.0.1:${pgPort}/postgres` });
   await admin.connect(); await admin.query('CREATE DATABASE simus_integration'); await admin.end();
   pool = new pg.Pool({ connectionString: env.DATABASE_URL });
-  for (const name of ['001_initial_schema.sql','002_session_lifecycle.sql','003_session_creation.sql','004_participant_npcs.sql','005_participant_departments.sql']) await pool.query(await readFile(path.join(web, '../db', name), 'utf8'));
+  for (const name of ['001_initial_schema.sql','002_session_lifecycle.sql','003_session_creation.sql','004_participant_npcs.sql','005_participant_departments.sql','006_content_score_range.sql','007_result_links.sql','008_web_push.sql']) await pool.query(await readFile(path.join(web, '../db', name), 'utf8'));
   await startServer();
   console.log(await command(process.execPath, ['tests/session-lifecycle.integration.mjs'], env));
   await runFlow({ pool, env, stopServer, startServer });
   // Exercise the documented DRAFT demo seed through the real lifecycle API.
   await pool.query(await readFile(path.join(web, '../db/seed_demo.sql'), 'utf8'));
+  await pool.query(await readFile(path.join(web, '../db/seed_exhibition.sql'), 'utf8'));
   const demoToken = await new SignJWT({}).setProtectedHeader({ alg: 'RS256', kid: publicJwk.kid })
     .setIssuer(env.ADMIN_TOKEN_ISSUER).setAudience(env.ADMIN_TOKEN_AUDIENCE)
     .setSubject('dev-admin').setIssuedAt().setExpirationTime('5m').sign(privateKey);
@@ -106,7 +111,10 @@ try {
   assert.equal((await pool.query('SELECT impact_scale::float8 FROM simus.simulation_sessions WHERE id=$1', [neighborhoodId])).rows[0].impact_scale, 0.1);
   console.log('PASS: migrated neighborhood WASTE seed/readiness and original scoring');
   await runDepartmentIntegration({ pool, env, token: demoToken, templateId: demoId });
+  await runDepartmentStatisticsIntegration({ env, token: demoToken, templateId: demoId });
+  await runResultLinksIntegration({ pool, env, token: demoToken, templateId: demoId });
   await runStageIntegration({ pool, env, token: demoToken, demoId });
+  await runExhibitionContentIntegration({ pool, env, token: demoToken });
   const originProbe = await fetch(env.TEST_API_URL + '/api/city-state', { headers: { Origin: 'https://different-origin.invalid' } });
   assert.equal(originProbe.status, 200);
   assert.equal(originProbe.headers.get('access-control-allow-origin'), null);
