@@ -21,6 +21,12 @@
 
 The **다음 회차 준비** form clones a DRAFT or FINALIZED content snapshot with a name, duration, and impact scale. It does not copy responses or results. Duration starts at the actual start action. Individual content editing remains unavailable. See [the integration guide](../docs/operations/stage4-8-integration.md).
 
+## Result links and web push (4B candidate)
+
+Apply DB migrations `007_result_links.sql` and `008_web_push.sql` after 006. Configure stable `VAPID_PUBLIC_KEY`, `VAPID_PRIVATE_KEY`, and `VAPID_SUBJECT` (a real `mailto:` or HTTPS contact). Generate the key pair once with `npx web-push generate-vapid-keys --json` and keep the private key in server secrets. Web push needs HTTPS in deployment. The existing authenticated reconcile scheduler must continue calling `POST /api/internal/sessions/reconcile` after finalization to dispatch queued notifications. Each call processes at most 20 jobs; inspect `simus.push_jobs` for failures and measure throughput at the planned audience size. Do not put VAPID secrets in `NEXT_PUBLIC_` variables.
+
+Participant result links are 30-day, read-only bearer credentials. The user creates one from their finalized result screen and can copy it to another device. A new link replaces the old one. The shared result API should have ingress-level request throttling before external release. iPhone web push requires the Home Screen web app; a Safari tab and Home Screen app may have separate participant storage, so same-person linking remains an acceptance blocker. See [4B status](../docs/contracts/result-notification-4b.md).
+
 ## Local validation
 
 For a fresh isolated PostgreSQL cluster, concurrent API flows, server/database recovery,

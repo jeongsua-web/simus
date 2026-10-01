@@ -11,6 +11,7 @@
 - [상황과 선택지 원본](content/situations-and-choices.md)
 - [전시 콘텐츠 데이터와 자산 인계](content/exhibition-data.md)
 - [새 맵과 Blender 자산 인계](content/new-map-handoff-5a.md)
+- [전시용 에셋 목록과 납품 상태](../assets/README.md)
 
 ## 기능 계약
 

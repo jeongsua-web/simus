@@ -1,0 +1,24 @@
+asset_key,category,status,source_file,exchange_file,source_sha256,exchange_sha256,map_version,owner,notes
+map_exhibition,map,planned,,,,,,,새 전시용 맵; 식별자와 파일명 미확정
+building_department_store_v2,building,received,unity/Assets/department_store_v2/SIMUS_Department_Store_v2.blend,unity/Assets/department_store_v2/SIMUS_Department_Store_v2.glb,f46360ef1bd0d85c3aeba167244d37f15ac60e9353bd95ad8a9b2d6be2f7dd59,c7b500d3e4f3fd09b38bafa0849db5be82913ae5a314aa1605db9e2e6e39c96d,,,백화점 후보; 새 맵 배치·축 변환·성능 미승인
+character_LAWFUL_GOOD,character,planned,,,,,,,전방 +Z; 발바닥 원점; 목표 키 1.7m
+character_LAWFUL_NEUTRAL,character,planned,,,,,,,전방 +Z; 발바닥 원점; 목표 키 1.7m
+character_LAWFUL_EVIL,character,planned,,,,,,,전방 +Z; 발바닥 원점; 목표 키 1.7m
+character_NEUTRAL_GOOD,character,planned,,,,,,,전방 +Z; 발바닥 원점; 목표 키 1.7m
+character_TRUE_NEUTRAL,character,planned,,,,,,,전방 +Z; 발바닥 원점; 목표 키 1.7m
+character_NEUTRAL_EVIL,character,planned,,,,,,,전방 +Z; 발바닥 원점; 목표 키 1.7m
+character_CHAOTIC_GOOD,character,planned,,,,,,,전방 +Z; 발바닥 원점; 목표 키 1.7m
+character_CHAOTIC_NEUTRAL,character,planned,,,,,,,전방 +Z; 발바닥 원점; 목표 키 1.7m
+character_CHAOTIC_EVIL,character,planned,,,,,,,전방 +Z; 발바닥 원점; 목표 키 1.7m
+city_happiness_low,city_state,planned,,,,,,,행복 낮음; 상태 간 원점·크기 일치
+city_happiness_base,city_state,planned,,,,,,,행복 기본; 상태 간 원점·크기 일치
+city_happiness_high,city_state,planned,,,,,,,행복 높음; 상태 간 원점·크기 일치
+city_safety_low,city_state,planned,,,,,,,치안 낮음; 상태 간 원점·크기 일치
+city_safety_base,city_state,planned,,,,,,,치안 기본; 상태 간 원점·크기 일치
+city_safety_high,city_state,planned,,,,,,,치안 높음; 상태 간 원점·크기 일치
+city_cleanliness_low,city_state,planned,,,,,,,청결 낮음; 상태 간 원점·크기 일치
+city_cleanliness_base,city_state,planned,,,,,,,청결 기본; 상태 간 원점·크기 일치
+city_cleanliness_high,city_state,planned,,,,,,,청결 높음; 상태 간 원점·크기 일치
+city_pollution_low,city_state,planned,,,,,,,오염 낮음; 상태 간 원점·크기 일치
+city_pollution_base,city_state,planned,,,,,,,오염 기본; 상태 간 원점·크기 일치
+city_pollution_high,city_state,planned,,,,,,,오염 높음; 상태 간 원점·크기 일치
