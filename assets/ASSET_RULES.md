@@ -45,7 +45,7 @@ web/public/                         # 웹이 실제 배포하는 파일만
 - 맵은 `unity/Assets/SIMUS/Art/maps/university_v003/`에 둔다.
 - 건물·도로·소품·식생·캐릭터는 `SIMUS/Art/{buildings,roads,props,vegetation,characters}/`로 나눈다.
 - 추적 테스트는 `unity/Assets/SIMUS/Scenes/npc_follow_test/`다. 편집기 코드와 빌드 설정도 이 경로를 사용한다.
-- 캐릭터는 `npc_16`, `modular_v001`, `modular_hairfix_v001`로 구분한다. 현재 추적 테스트는 HairFix의 `models/`를 사용한다. 다른 버전은 사용 여부가 미확정이므로 유지한다.
+- Unity 캐릭터는 `modular_hairfix_v001`만 유지한다. 현재 추적 테스트는 HairFix의 `models/`를 사용한다. `npc_16`, `modular_v001`의 Unity 사본은 2026-10-08 사용자 요청으로 삭제했으며 Git 이력에서 복원한다.
 - 미리보기·보고서는 `assets/library/characters/<key>/`와 `assets/library/maps/university_v003/`에 둔다. 백업은 `assets/archive/backups/`, 중첩 프로젝트 자료는 `assets/archive/nested_projects/`에 보관한다.
 - 기존 묶음의 `.blend`는 현재 FBX와 함께 둔다. 원본의 외부 참조와 Unity GUID를 보존하기 위한 예외이며, library에 원본을 복제하지 않는다. 신규 자산은 2절 구조를 따른다.
 - `unity/Assets/department_store_v2/`와 이전 시제품 `Art/Neighborhood.fbx`, `Materials/`, `Scenes/Neighborhood*.unity`는 이번 요청 범위 밖이므로 기존 경로를 유지한다.

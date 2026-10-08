@@ -2763,8 +2763,8 @@
       "path": "unity/Assets/Editor/CompletedMapFollowSetup.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 8537,
-      "sha256": "1010a3a3d31524cc7993d34da96afc1d2f4404d4b93c2b4729245316a8d30ef8"
+      "bytes": 8720,
+      "sha256": "853f729cdb897c86b46f23d9b54237101a17c4bc4c7b5c601b6ba564136ed9a8"
     },
     {
       "path": "unity/Assets/Editor/CompletedMapFollowSetup.cs.meta",
@@ -3264,6 +3264,13 @@
       "sha256": "cd5ffd40fbd5deaf81dadce5f9a2e5adc764d2dd61e82d7588f52bdd043c227b"
     },
     {
+      "path": "unity/Assets/SIMUS/Art/README.md.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 158,
+      "sha256": "8502a301bcd86f63fd5a745fb9d0d6da23c552d2ea7fc5667e367e3c1f03fc8a"
+    },
+    {
       "path": "unity/Assets/SIMUS/Art/buildings.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
@@ -3288,8 +3295,8 @@
       "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/Layout_and_Validation.json.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
-      "bytes": 59,
-      "sha256": "f8ce5a68b781ff26a890b975fc9ce3437fc91e0bc5128affd065c064a7bede52"
+      "bytes": 158,
+      "sha256": "9667f43e0b5491d317f84f83def87b8efa34a4e3692f7b4ce005b7d76b0788a0"
     },
     {
       "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/Preview_Isometric.png",
@@ -3330,8 +3337,8 @@
       "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/README.txt.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
-      "bytes": 59,
-      "sha256": "e88d1ae458c5903120a96a673f3d32d1a7286c92cc4732f6cacd956a469cb876"
+      "bytes": 158,
+      "sha256": "5b8b3245f211e7bb01d162eb7110b1d695422e9c54f7d8227952f32f62411f51"
     },
     {
       "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/SIMUS_Apartment_Complex.blend",
@@ -3358,8 +3365,8 @@
       "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/SIMUS_Apartment_Complex.fbx.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
-      "bytes": 59,
-      "sha256": "d927c5ee2059d07dde2188da564bb232d94406dafe2f1c683dee12f1fd74a13c"
+      "bytes": 2891,
+      "sha256": "92e605811380a68edfc8aeb61f19feb470736ebc75950dffc64fd2622a71697f"
     },
     {
       "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/SIMUS_Apartment_Complex.glb",
@@ -3407,8 +3414,8 @@
       "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/Layout_and_Validation.json.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
-      "bytes": 59,
-      "sha256": "a156a4af772c45ef50a6f397eb283dfa3e0ae70e085dac8836319489f462f5f1"
+      "bytes": 158,
+      "sha256": "7cd9467045dacd68e78609b5e55b1110e09f2e971f1958ad8efdf28b605b418b"
     },
     {
       "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/Preview_Isometric.png",
@@ -3449,8 +3456,8 @@
       "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/README.txt.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
-      "bytes": 59,
-      "sha256": "26eeea38bd316cc8079979efea76235e6a6c5e5a875168e5a7e299b618c892c9"
+      "bytes": 158,
+      "sha256": "6d21a485d04cfe1d8c9f9739863b6a1fccfba09a6b41e064df3b0a95982f3f6b"
     },
     {
       "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/SIMUS_Apartment_Complex.blend",
@@ -3463,8 +3470,8 @@
       "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/SIMUS_Apartment_Complex.blend.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
-      "bytes": 59,
-      "sha256": "969f2fd1d0878c0d387f51d5088ad57e6ad2c3d82ce9a74d71a5308907abc700"
+      "bytes": 2891,
+      "sha256": "4e61c0cb0dd761ff5d18dc53ec46bdcc6311f797b15cf5a1b1d79bc974687258"
     },
     {
       "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/SIMUS_Apartment_Complex.fbx",
@@ -3519,8 +3526,8 @@
       "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/source_inspection.json.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
-      "bytes": 59,
-      "sha256": "82425be676efdf8ab2eb8f633331d836228c96358f91daab91677da99b6141d2"
+      "bytes": 158,
+      "sha256": "cc5725f2c4fa2ebec730e7e202ed104ec584fe033f2eb7cd72d05aaa1d3f042a"
     },
     {
       "path": "unity/Assets/SIMUS/Art/buildings/apartments.meta",
@@ -3722,8 +3729,8 @@
       "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.blend.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
-      "bytes": 59,
-      "sha256": "11c800eb9b8cec394e0b0dc3d34edcc2717c4afb244c8f6d2b1c9b6e936c897d"
+      "bytes": 2891,
+      "sha256": "b536d09d0dac959a3582150d2aebfcd7c078e915492f9718636a1f96ffa7df79"
     },
     {
       "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx",
@@ -3964,20 +3971,6 @@
       "sha256": "c5d4c4300dbf1fd961caa765efac6583784f3e342999adf946c608a676594c36"
     },
     {
-      "path": "unity/Assets/SIMUS/Art/characters/File_Manifest.json",
-      "role": "support",
-      "location": "unity_existing",
-      "bytes": 47514,
-      "sha256": "8d969093ef7e05cf22e07f49121c67c92eb1f34532213e4cef03670dccccacb1"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/File_Manifest.json.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 59,
-      "sha256": "28825fb1463936ef276edc1f15681c2efa67dab8f6f2276659b27a06de2ad67c"
-    },
-    {
       "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
@@ -4020,587 +4013,6 @@
       "sha256": "7233e20618228f6aecba33523d9b25ac37bae4cc1c0d0d7daaf4bb10b1bd070b"
     },
     {
-      "path": "unity/Assets/SIMUS/Art/characters/modular_v001.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 172,
-      "sha256": "31e6e870759c30e1fa8c8b942bd23366565763cded0d4905e38d4fa006626b26"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/modular_v001/models.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 172,
-      "sha256": "20605da216e76b17765605c1abfe4ee8609d11b60554f1bb75faf06fe2d2c6a8"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/modular_v001/models/SIMUS_Modular_Character_Unity.blend",
-      "role": "source",
-      "location": "unity_existing",
-      "bytes": 501254,
-      "sha256": "6824e792c3faefd6ba10e28b16b5b2b823fee696832caa16e680789d7df592dd"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/modular_v001/models/SIMUS_Modular_Character_Unity.blend.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2891,
-      "sha256": "0d845a1830dfa72ac41d4bad8e7ae91cb3bfc7535b9f30898a4514c58734003d"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/modular_v001/models/SIMUS_Modular_Character_Unity.fbx",
-      "role": "export",
-      "location": "unity_existing",
-      "bytes": 1804428,
-      "sha256": "1cca0697b73e263cc3876b31c1899ebe1a444ca4cd3ba6e249fc46031d54a9cb"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/modular_v001/models/SIMUS_Modular_Character_Unity.fbx.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2891,
-      "sha256": "171454b8532da2fa66744bbe2167487015d8c478c532ed6df2281364cc96613a"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 172,
-      "sha256": "4db14998ae1ebc188200b7bbbaa55b6bf38ede6ba5ad75b469c2339e274cab7f"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 172,
-      "sha256": "eb95806c9362a1cee675ceda386a16235041583d48c09ba43a882a52b8f4df1e"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 172,
-      "sha256": "79ca5b95c058da37354d55a9eed4476d8ee637ff91401ed4e8ad4edec6096ed1"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_01.fbx",
-      "role": "export",
-      "location": "unity_existing",
-      "bytes": 197484,
-      "sha256": "0ed7d2a32418c17f4cb826ca09f16a4b089293429d131ae7aa5ff7dd84b2c8a6"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_01.fbx.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2922,
-      "sha256": "c1ba4552668a3fe7f9523d889ec6053bc045b19e5062ce797bb8427c53b6dbc1"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_02.fbx",
-      "role": "export",
-      "location": "unity_existing",
-      "bytes": 193292,
-      "sha256": "dcce7992ec42ec98d9f21ce220d3a475500028e09c0c8a5f61fbf7c68331733f"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_02.fbx.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2922,
-      "sha256": "491d545f9031f9e6898cc0e9f6c594f518de4dacc21c4a4e794da359aad6e361"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_03.fbx",
-      "role": "export",
-      "location": "unity_existing",
-      "bytes": 196204,
-      "sha256": "7a621645d9aae3a32dec26b6840a570afe483049d7aa72d7bb801d05d4cfd482"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_03.fbx.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2922,
-      "sha256": "a1797270eca4def9e200f90b31bfd8106bbcfd07421d4c61aaec38dffa04ae93"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_04.fbx",
-      "role": "export",
-      "location": "unity_existing",
-      "bytes": 197612,
-      "sha256": "e780aa945fe47cdb8d71c295b8b56f0d874af99edadfaf4eb786434d236d60cf"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_04.fbx.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2922,
-      "sha256": "ca6e5a5edf2af0d38ceb202a11ecab68f516a6bc92d2bc8e2e290bf098dfd184"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_05.fbx",
-      "role": "export",
-      "location": "unity_existing",
-      "bytes": 193436,
-      "sha256": "2fa592e32f83f271324a34c806b827efa5669e65b183eec51101cb385e5ec3d3"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_05.fbx.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2922,
-      "sha256": "d77b392f86a8855ca50a12fb133f8d0f04131f30c94b37c446763553bc847925"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_06.fbx",
-      "role": "export",
-      "location": "unity_existing",
-      "bytes": 195628,
-      "sha256": "686f0b3721bfce937604a2e99262ee64fbf96b0856d65c677db9cb718e67f01a"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_06.fbx.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2922,
-      "sha256": "002c6b1bc70a493c473209e59fadefd7f1a2ce9de24b52fec02fcf0b49e67ec0"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_07.fbx",
-      "role": "export",
-      "location": "unity_existing",
-      "bytes": 197596,
-      "sha256": "e0dd2b4d98f3fbc5313c1596571cda8d37877511e3e166c15fb58bcd419572a5"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_07.fbx.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2922,
-      "sha256": "6dd8899d84549b27b93d2c988212c36d6ab1fde22fa1e77f8a91cf3495b525b9"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_08.fbx",
-      "role": "export",
-      "location": "unity_existing",
-      "bytes": 199020,
-      "sha256": "d0ef3715fcb4e01483f664be9cfd3cc0e62bb5b4819d7bf6d193c2c22fe3881a"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_08.fbx.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2922,
-      "sha256": "e22be818ee99f1f8b6e5f923550f2530e74956ecf44634b2760da004a2192493"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_09.fbx",
-      "role": "export",
-      "location": "unity_existing",
-      "bytes": 194716,
-      "sha256": "6e6c34dde42bc7b6566ed259dedf3e474f35353ce13c37896895436047b6d95f"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_09.fbx.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 59,
-      "sha256": "5dac318a7bfbeefd8b07bdef1c9722e63ed988dd11c2418741c9979a060857e5"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_10.fbx",
-      "role": "export",
-      "location": "unity_existing",
-      "bytes": 197980,
-      "sha256": "319129ffee2b9b9f80476efa7887503e6ce5edb82b651f6fdd1358c496dfface"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_10.fbx.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2922,
-      "sha256": "da9cbe01597cb761a05a511dfc0b342b64ce6f5e43f3c61d6d6a0cb358b51371"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_11.fbx",
-      "role": "export",
-      "location": "unity_existing",
-      "bytes": 196780,
-      "sha256": "9f2c294fece04e73a84db731eb713e29852e40f33d78f3bbda61b3fef3b5c845"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_11.fbx.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2922,
-      "sha256": "7e3bb5f40a8913b11dfc47183e8a4b22432489d75cc85d87c63afa03fb8d8ab3"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_12.fbx",
-      "role": "export",
-      "location": "unity_existing",
-      "bytes": 195804,
-      "sha256": "93c3610e1af1a9185c3c5d2c75f8965420d9618eb92ae09872b425f5c27e7ac9"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_12.fbx.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2922,
-      "sha256": "b5796c1de2d4255f482336f516d0a284e2ef7a48f60d47a0a7bed854be4f5cf7"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_13.fbx",
-      "role": "export",
-      "location": "unity_existing",
-      "bytes": 195452,
-      "sha256": "4b2407511283587ede4be71488f2cd6156090571451330c019f3f8879f172cb1"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_13.fbx.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 59,
-      "sha256": "348eca520077d71662a352b5c0a843d301be74718a9d962fc8cc0e6a12bbd3e7"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_14.fbx",
-      "role": "export",
-      "location": "unity_existing",
-      "bytes": 193356,
-      "sha256": "63d8ee4b872a62b01a4b259fb399a73088262fd9ed6b92e39eb6de6f6e18bae0"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_14.fbx.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2922,
-      "sha256": "0ef10b7730628baff5b57276352cdc5689b23a292575f2328650510260e53cda"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_15.fbx",
-      "role": "export",
-      "location": "unity_existing",
-      "bytes": 193580,
-      "sha256": "ba7127642f5cdb662d895726f54ac80acda0ba10068f646fd708cb1f000bd672"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_15.fbx.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2922,
-      "sha256": "b0859df42f4ea96c0e086c94efc8c1f2f19183c46c81fb56e9b0b67b2bc87b33"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_16.fbx",
-      "role": "export",
-      "location": "unity_existing",
-      "bytes": 195324,
-      "sha256": "e721e3c34f1c30aa55d2295e5dad1f3e6d58778e26078638cd4b5839272b848b"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Individual_Models/NPC_STYLE_16.fbx.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2922,
-      "sha256": "d78230fe4db33726eb7d9245f43cf0c37cca1856a78691bf300b7f36d381ae44"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Previews.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 172,
-      "sha256": "7b969fb6d4fa4bd85a15c563f0280f7b765ccbb225c32f246d1ee0a51d0bbc29"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Previews/SIMUS_NPC_16_Isometric.png",
-      "role": "image",
-      "location": "unity_existing",
-      "bytes": 3287695,
-      "sha256": "bcfc6fa59e0695bdefdb33aabffd6464a01a8ea32cfcf0f6072914fb4137a485"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Previews/SIMUS_NPC_16_Isometric.png.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2652,
-      "sha256": "40c5642fdfc28c175cc410ecdb7ed39e003555c3d0c9fe25c738e01777bd7bbf"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Previews/SIMUS_NPC_16_Preview.png",
-      "role": "image",
-      "location": "unity_existing",
-      "bytes": 3985775,
-      "sha256": "58a97e3607461d3bb2dd7b826e849c2f8e0170023a2ef37f6f2d3d583085f078"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Previews/SIMUS_NPC_16_Preview.png.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2652,
-      "sha256": "307b4fdc48b7210cee1d63ffab40e5abe292dc8fd9178b76ccd5fb79b882854c"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/SIMUS_NPC_16_Unity_Clean.fbx",
-      "role": "export",
-      "location": "unity_existing",
-      "bytes": 3352028,
-      "sha256": "8dbe4c4be4a12f0a59adf3e8f487841b7cc2cd2567fc8ff7004a6a04ff74f42f"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/SIMUS_NPC_16_Unity_Clean.fbx.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2922,
-      "sha256": "3a2e5d3edcdf3776132e93d95497d95573fdb59ad9249f968e01761ed05950ce"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/SIMUS_NPC_Animations.fbx",
-      "role": "export",
-      "location": "unity_existing",
-      "bytes": 776156,
-      "sha256": "ec6e7c77b033ac6ec7102937b7de8f22d43a80c2febfd932d75016f63f9e6b88"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/SIMUS_NPC_Animations.fbx.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2891,
-      "sha256": "8689ecad36268384cc001cb565760a503c6fdb2a947c446b8353b8f083787248"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/SIMUS_NPC_Base_16_Unity.blend",
-      "role": "source",
-      "location": "unity_existing",
-      "bytes": 1110263,
-      "sha256": "5ae35a6a1f764455ade2205421534ba1430022ed9bbc9e9c3a3e14cdad92f867"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/SIMUS_NPC_Base_16_Unity.blend.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2891,
-      "sha256": "6a2d31be29109e5d4c668466014af592b51dc98baee3c5c65738d2651d1a02ad"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/SIMUS_NPC_Base_16_Unity_Clean.blend",
-      "role": "source",
-      "location": "unity_existing",
-      "bytes": 1970464,
-      "sha256": "eaaa18f64e3109e5c73c342aae9bf935a670fee72ec8b878e07b92f31bc3dcc1"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/SIMUS_NPC_Base_16_Unity_Clean.blend.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2891,
-      "sha256": "cd68b305138f2d3f0d14e7023527cce211c1a8af9e79ea772dd1885187026196"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/SIMUS_NPC_Characters.fbx",
-      "role": "export",
-      "location": "unity_existing",
-      "bytes": 2923660,
-      "sha256": "c5312fbb53984d7a88f9ed19863ca68aa0997b7b01059bda2de3855058bbb212"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/SIMUS_NPC_Characters.fbx.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2922,
-      "sha256": "9941852512fa564dad362fde18fa8e5b8c6684fca73624b3285ed0381fc9b73a"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/SIMUS_NPC_README.md",
-      "role": "support",
-      "location": "unity_existing",
-      "bytes": 4741,
-      "sha256": "f2be5bee7d80aeae93ce92f24e9d2eac51a1fa55c750ac9d7637732c1716d70f"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/SIMUS_NPC_README.md.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 59,
-      "sha256": "944a11c2b4694c06332dfbe70f91b54d2c0a72d7af7ff3b181bff436c27c41a7"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Unity.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 172,
-      "sha256": "c870c3226bb2670fa6523b2664c2f736a246d6caeddb3d2217e4791ec2692e25"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Unity/SIMUS_NPC_Unity.unitypackage",
-      "role": "support",
-      "location": "unity_existing",
-      "bytes": 1843015,
-      "sha256": "89bf8b1ac4f6e148fe8b94e41941fcb537a049a5c31b27a9bdf2ebcc00445a19"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/Unity/SIMUS_NPC_Unity.unitypackage.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 155,
-      "sha256": "06705129c59eb11e9c7ef4892850fedf79abd5953c6ce576d452925da4b9e368"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/UnityIntegration.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 172,
-      "sha256": "9b292c836f0717bbaa984b5e552728fd65c33b306ae5744b71fbb115dade338e"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/UnityIntegration/Editor.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 172,
-      "sha256": "a6f2a41179bf11129739633b48d293c6e6a1e04a37ca8806830689cbe110c610"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/UnityIntegration/Editor/SimusNPCBuild.cs",
-      "role": "code",
-      "location": "unity_existing",
-      "bytes": 11031,
-      "sha256": "8d6b74b33e5cdc91a174a33cc039e502b12d15934dec047f3b2bcba8328872db"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/UnityIntegration/Editor/SimusNPCBuild.cs.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 59,
-      "sha256": "33060b9a976e57a0b9196cce2c5f580dbf653481ce99ce48ea3594d893d96082"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/UnityIntegration/OptionalURP.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 172,
-      "sha256": "68736ce96bbad5b1d6d1d0bd14194642e8f789737bc4447c6700c0d0d6aded5e"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/UnityIntegration/OptionalURP/NPCVertexMaskURP.shader",
-      "role": "code",
-      "location": "unity_existing",
-      "bytes": 4021,
-      "sha256": "8ef2f278ce4871cec46e27401291fc2f90a6308de55c6956a928739df4d780d5"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/UnityIntegration/OptionalURP/NPCVertexMaskURP.shader.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 204,
-      "sha256": "31851eae2a32d6c4713a4da96af4046da0e4fbf28f1175074437977c0ecd6324"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/UnityIntegration/Runtime.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 172,
-      "sha256": "2198265138ea975d8c627b7cb1cbd90d6aa172f50373a29aaaf281d72af44a22"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/UnityIntegration/Runtime/SimusNPCAppearance.cs",
-      "role": "code",
-      "location": "unity_existing",
-      "bytes": 1923,
-      "sha256": "b841023ccf427c906017c0f29937673ce9cd1ce9cb3f5927b9c54de36a914c0f"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/UnityIntegration/Runtime/SimusNPCAppearance.cs.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 59,
-      "sha256": "144583338b9997f052a234581490ce06b231936ac99874b504bc3d6373718e91"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/UnityIntegration/Runtime/SimusNPCData.cs",
-      "role": "code",
-      "location": "unity_existing",
-      "bytes": 845,
-      "sha256": "0d9c38163e038f354be7130b6de895ea00d41c4c89711d76b3da76b99c0e2363"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/UnityIntegration/Runtime/SimusNPCData.cs.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 59,
-      "sha256": "d378bad17ddc558a25443c942417fcfd60417adeedf59054036746b393774849"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/UnityIntegration/Shaders.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 172,
-      "sha256": "e3979f9064f839c37b9c53c0dd235c20b92d545805bcca360d5c5152a20189be"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/UnityIntegration/Shaders/NPCVertexMask.shader",
-      "role": "code",
-      "location": "unity_existing",
-      "bytes": 1505,
-      "sha256": "381dde079b61ceb2b12d84ca477c9de85dda04e849e7da9fd908d86cbd3b5b08"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/Earlier_Versions/UnityIntegration/Shaders/NPCVertexMask.shader.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 204,
-      "sha256": "f86adbddcd69439dd1d0013e0d2915d110ee131c6ff0983b8417260bfa00e84b"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/models.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 172,
-      "sha256": "d8810624d658e1b21ca0e57406fafc1a6dd6fe965eebefaab2e5689a696d2214"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/models/SIMUS_NPC_16_Unity_Clean_Neck.fbx",
-      "role": "export",
-      "location": "unity_existing",
-      "bytes": 3351356,
-      "sha256": "aeec53b37d0f0754213cab3f907da329ea3bc873c6ec1c233e2dc5db14e5589b"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/models/SIMUS_NPC_16_Unity_Clean_Neck.fbx.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 2922,
-      "sha256": "042f9d207739e2792571977052feb75711e4b85c8d3d0f5e561c57276763ec68"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/models/SIMUS_NPC_Base_16_Unity_Clean_Neck.blend",
-      "role": "source",
-      "location": "unity_existing",
-      "bytes": 2092302,
-      "sha256": "4a853498f8eeb93d8662ab9c8c80ebb2746065d612cb7ac86ec9e702ea113918"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/npc_16/models/SIMUS_NPC_Base_16_Unity_Clean_Neck.blend.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 59,
-      "sha256": "e375d1e0e721b9269b062cb76dea55213c0fcd9449f8872cbefc14c7945b04b3"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/먼저_읽어주세요.txt",
-      "role": "support",
-      "location": "unity_existing",
-      "bytes": 1146,
-      "sha256": "41b6ede39e9f6a3555149483683667f6d512e4ae224ae930abf293d38aebd8b0"
-    },
-    {
-      "path": "unity/Assets/SIMUS/Art/characters/먼저_읽어주세요.txt.meta",
-      "role": "unity_metadata",
-      "location": "unity_existing",
-      "bytes": 59,
-      "sha256": "5b5ff8ab24a061e7a8abbc9d129fe007ef7979f452b11b8fb5bb103093933114"
-    },
-    {
       "path": "unity/Assets/SIMUS/Art/environment.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
@@ -4613,6 +4025,13 @@
       "location": "unity_existing",
       "bytes": 199,
       "sha256": "01f19066cff03683f88f0bd8b060e41ad88bf18474c066bf5b10885b9d54e531"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/environment/README.md.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 158,
+      "sha256": "459490cdbb99f2c11048177152a574ec6eae4a9fb53a295b5b57035f34b82ec1"
     },
     {
       "path": "unity/Assets/SIMUS/Art/maps.meta",
@@ -5003,8 +4422,8 @@
       "path": "unity/Assets/SIMUS/Art/vegetation/parks/ECO_RAIN_GARDEN.blend.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
-      "bytes": 59,
-      "sha256": "1ad265ebc4cd24ccec9d9edbb67fdd4e53e26c08319237803596ed00be268b45"
+      "bytes": 2891,
+      "sha256": "f4eff39e11ff3191ec3149e40106f04b673bf1be06afaecb039a749cf6f6ce7b"
     },
     {
       "path": "unity/Assets/SIMUS/Art/vegetation/parks/ECO_RAIN_GARDEN.fbx",
@@ -5101,8 +4520,8 @@
       "path": "unity/Assets/SIMUS/Art/vegetation/parks/ZEN_GARDEN_PARK.fbx.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
-      "bytes": 59,
-      "sha256": "3e5cbf1be19417b51d8f926f68059a263f206d2e862b42ee66e1a400c42bee10"
+      "bytes": 2891,
+      "sha256": "68c781c1f9d3d77387acd75bf96e213b5ca2e9575b03649bf8bdd3851d7595c0"
     },
     {
       "path": "unity/Assets/SIMUS/Editor.meta",
@@ -5381,8 +4800,8 @@
       "path": "unity/Assets/SIMUS/Scenes/npc_follow_test/CompletedMapNpcFollow.unity",
       "role": "scene",
       "location": "unity_existing",
-      "bytes": 21666,
-      "sha256": "fe5bd967683f6d7867367bab7a03f6fbce041d7c99f191182d4ace612014078c"
+      "bytes": 21821,
+      "sha256": "262dc8500166db2c03aac39d92c4fa303571d0a9ce1726d0989e219fe724230a"
     },
     {
       "path": "unity/Assets/SIMUS/Scenes/npc_follow_test/CompletedMapNpcFollow.unity.meta",
@@ -5395,15 +4814,15 @@
       "path": "unity/Assets/SIMUS/Scenes/npc_follow_test/README.md",
       "role": "support",
       "location": "unity_existing",
-      "bytes": 2550,
-      "sha256": "572b8b80a83882dad5729a1a1602e0628c34fbcdfa9d67aef2ca6bc84d5f3037"
+      "bytes": 3736,
+      "sha256": "b361a5848b9250e9fc9fd9de8092fdf8a68ab5041fe9604cd59ecca99697eb77"
     },
     {
       "path": "unity/Assets/SIMUS/Scenes/npc_follow_test/README.md.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
-      "bytes": 59,
-      "sha256": "e11251bc23ab41fb14619c4f24f5bd1bee55e28f0c61f9787dcaa9cbbdc146a3"
+      "bytes": 158,
+      "sha256": "76ede5978d69fec4d078a2a830f8e80fed5c1fae8c5caa3331052467d5b54e54"
     },
     {
       "path": "unity/Assets/SIMUS/Scenes/npc_follow_test/TestNpcWalk.controller",
@@ -5507,8 +4926,8 @@
       "path": "unity/Assets/Scripts/CityPreviewCamera.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 6664,
-      "sha256": "b5319bd355ca0c9ed017add9690e959e3f20eb7905993c0ef311a79fb3e72f73"
+      "bytes": 7296,
+      "sha256": "abcf5fd8a289a873dc358020ca23a642171437cbd22202ce0b89221187172b92"
     },
     {
       "path": "unity/Assets/Scripts/CityPreviewCamera.cs.meta",
@@ -5516,6 +4935,20 @@
       "location": "unity_existing",
       "bytes": 59,
       "sha256": "e0424c1d5811cddc7befbbbb470253ac87e4879c9f694fbb2dbe52426c32eb68"
+    },
+    {
+      "path": "unity/Assets/Scripts/NpcOcclusionReveal.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 2900,
+      "sha256": "05068eea43d532e89b83eb09ea26f23299accb5e31187385ed1457e39ecbc5ff"
+    },
+    {
+      "path": "unity/Assets/Scripts/NpcOcclusionReveal.cs.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 60,
+      "sha256": "dc99725979623bd6b59af2a5baddf529f85e1076668336e44696ebfb24288f60"
     },
     {
       "path": "unity/Assets/Scripts/TestNpcPatrol.cs",
@@ -5551,6 +4984,20 @@
       "location": "unity_existing",
       "bytes": 204,
       "sha256": "ed0ce948efc10779623e4eedc82b21e95a9fe63c8d07d612268d520d5e11882f"
+    },
+    {
+      "path": "unity/Assets/Shaders/NpcReveal.shader",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 2237,
+      "sha256": "ce9db1b0c453583a0270e1af0153381fc9cccec10b2a69d666e0bd65f87a90c7"
+    },
+    {
+      "path": "unity/Assets/Shaders/NpcReveal.shader.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 148,
+      "sha256": "9e1fa5cee9f3ae16b45bd985d2adb36f8d15cb607f08186acd48672b500af309"
     },
     {
       "path": "unity/Assets/department_store_v2.meta",
@@ -5626,8 +5073,8 @@
       "path": "unity/Assets/department_store_v2/사용안내.md.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
-      "bytes": 59,
-      "sha256": "c77410a475e786021fa91d29a6efe302e71a23ba1f55250eb4ba738e6a801b40"
+      "bytes": 158,
+      "sha256": "7a0d955e1722b71560cb58915d72a4c062845a0d700abeee79ab7cbf4e326122"
     },
     {
       "path": "web/public/file.svg",
@@ -5672,13 +5119,5 @@
       "sha256": "644768c4aaeb4767bce293344eeb0c125fb804a94d801440424072202d85e3a1"
     }
   ],
-  "identical_content_groups": [
-    {
-      "sha256": "6824e792c3faefd6ba10e28b16b5b2b823fee696832caa16e680789d7df592dd",
-      "paths": [
-        "assets/archive/backups/modular_hairfix_v001/SIMUS_Modular_Character_Unity_ORIGINAL_BACKUP.blend",
-        "unity/Assets/SIMUS/Art/characters/modular_v001/models/SIMUS_Modular_Character_Unity.blend"
-      ]
-    }
-  ]
+  "identical_content_groups": []
 }

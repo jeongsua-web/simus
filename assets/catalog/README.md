@@ -23,7 +23,7 @@
 | 개별 건물·소품·공원 | [건물](../../unity/Assets/SIMUS/Art/buildings), [소품](../../unity/Assets/SIMUS/Art/props), [식생](../../unity/Assets/SIMUS/Art/vegetation), [도로](../../unity/Assets/SIMUS/Art/roads) | 제작 묶음, 개별 채택 미확인 |
 | 제작 미리보기·검증 | [맵 제작 보고서](../../assets/library/maps/university_v003/reports) | 제작 당시 자료 |
 | 아파트 묶음 | [아파트 v001](../../unity/Assets/SIMUS/Art/buildings/apartment_complex_v001), [통합 아파트 v001](../../unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001) | 두 버전 유지, 대체 여부 미확인 |
-| 캐릭터 | [캐릭터 버전별 폴더](../../unity/Assets/SIMUS/Art/characters) | 이전 NPC·모듈형·HairFix 버전 보유 |
+| 캐릭터 | [HairFix v001](../../unity/Assets/SIMUS/Art/characters/modular_hairfix_v001) | HairFix만 유지. 이전 NPC 16종·모듈형 v001은 2026-10-08 삭제(Git 이력 참조) |
 | 추적 테스트 장면 | [NPC 추적 테스트](../../unity/Assets/SIMUS/Scenes/npc_follow_test) | 현재 활성 빌드 장면. HairFix FBX 사용 |
 | 백화점 v2 | [department_store_v2](../../unity/Assets/department_store_v2) | manifest에 received로 등록, 전시 채택 미정 |
 | 이전 시제품 | [Neighborhood.fbx](../../unity/Assets/Art/Neighborhood.fbx), [Scenes](../../unity/Assets/Scenes), [Materials](../../unity/Assets/Materials) | 새 맵 배치 근거로 사용하지 않음 |
