@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { pathToFileURL } from 'node:url';
+import { enterCity } from './participant-entry.mjs';
 
 export async function runStageBrowser({ env, pool, token, templateId }) {
   if (!env.TEST_PLAYWRIGHT_MODULE) { console.log('SKIP: integrated browser additions'); return; }
@@ -36,6 +37,7 @@ export async function runStageBrowser({ env, pool, token, templateId }) {
     }
     const first = await create('브라우저 통합 첫 회차');
     await mobile.goto(env.TEST_API_URL + '/participate');
+    await enterCity(mobile);
     await mobile.getByRole('region', { name: '함께 만든 도시' }).waitFor();
     await mobile.getByRole('region', { name: '도시와 선택' }).waitFor();
     await mobile.locator('canvas[aria-hidden="true"]').waitFor();
@@ -44,6 +46,7 @@ export async function runStageBrowser({ env, pool, token, templateId }) {
     const peer = await browser.newPage({ viewport: { width: 390, height: 844 } });
     peer.on('pageerror', error => errors.push(error.message));
     await peer.goto(env.TEST_API_URL + '/participate');
+    await enterCity(peer, { nickname: '옆자리시민' });
     await peer.getByRole('status').filter({ hasText: 'NPC ' }).waitFor();
     const secondNpc = await peer.getByRole('status').filter({ hasText: 'NPC ' }).innerText();
     assert.notEqual(firstNpc.match(/NPC ([0-9a-f]{8})/)?.[1], secondNpc.match(/NPC ([0-9a-f]{8})/)?.[1]);
@@ -70,6 +73,9 @@ export async function runStageBrowser({ env, pool, token, templateId }) {
     const second = await create('브라우저 통합 다음 회차');
     await mobile.evaluate(value => localStorage.setItem('simus_pending_choice_v1', JSON.stringify(value)), payload);
     await mobile.goto(env.TEST_API_URL + '/participate');
+    // The previous-round retry stays reachable before and after the entry form.
+    await mobile.getByRole('heading', { name: '이전 회차 제출 확인' }).waitFor();
+    await enterCity(mobile);
     await mobile.getByRole('heading', { name: '이전 회차 제출 확인' }).waitFor();
     await mobile.getByRole('link', { name: '브라우저 통합 첫 회차 결과 보기' }).waitFor();
     assert.ok(await mobile.getByRole('button', { name: '선택 제출', exact: true }).isDisabled());

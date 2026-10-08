@@ -21,6 +21,7 @@
 - [참여자 NPC API와 좌표](contracts/participant-npc-api.md)
 - [모바일·Unity NPC 표시 진행 기록](contracts/participant-npc-display-3b.md)
 - [참여자 학과 선택](contracts/participant-departments.md)
+- [입장 프로필(닉네임·학과·MBTI)](contracts/participant-profiles.md)
 - [학과 통계](contracts/department-statistics.md)
 - [결과 링크와 웹 푸시 진행 기록](contracts/result-notification-4b.md)
 - [웹 API 전체](../web/API.md)

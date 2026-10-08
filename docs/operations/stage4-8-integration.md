@@ -24,7 +24,7 @@ Python API/프록시를 추가 실행하지 않는다. 원본 개발 사본은 2
 
 ## 실행
 
-1. 새 DB는 `001_initial_schema.sql`부터 `008_web_push.sql`까지 번호 순서대로 적용한다. 기존 DB는 적용 이력을 확인하고 누락된 후속 마이그레이션만 순서대로 적용한다.
+1. 새 DB는 `001_initial_schema.sql`부터 `009_participant_profiles.sql`까지 번호 순서대로 적용한다. 기존 DB는 적용 이력을 확인하고 누락된 후속 마이그레이션만 순서대로 적용한다.
 2. 새 개발/시연 DB는 `db/seed_demo.sql` 또는 `db/seed_neighborhood.sql`로 최초 DRAFT 콘텐츠를 준비한다. 전시 30상황 초안은 demo seed 다음에 `db/seed_exhibition.sql`을 선택 적용한다. 운영 DB에는 시드를 실행하지 않는다.
 3. `web/`의 환경 설정을 준비하고 `npm ci`, `npm run build`, `npm start`를 실행한다. 관리자 JWT 설정은 기존 `docs/operations/demo-deployment.md`를 따른다.
 4. `/admin`에서 인증한다. 기존 준비 회차를 시작하거나, 복사할 회차·이름·진행 시간·배율을 설정해 새 회차를 준비한 뒤 시작한다.
@@ -33,7 +33,7 @@ Python API/프록시를 추가 실행하지 않는다. 원본 개발 사본은 2
 
 Unity 장면 재생성: `SIMUS > Build Connected Neighborhood`. 원본 `Neighborhood.unity`에서 파생 장면을 만들며 원본을 덮어쓰지 않는다. 파생 장면을 직접 편집했다면 재생성 전에 별도로 보관한다.
 
-Compose는 **새 볼륨에 001~008을 적용**한다. 이미 생성된 볼륨에는 새 SQL이 자동 적용되지 않으므로 적용 이력을 확인한 뒤 누락된 후속 마이그레이션을 별도 적용한다. 볼륨을 삭제해서 마이그레이션하지 않는다.
+Compose는 **새 볼륨에 001~009를 적용**한다. 이미 생성된 볼륨에는 새 SQL이 자동 적용되지 않으므로 적용 이력을 확인한 뒤 누락된 후속 마이그레이션을 별도 적용한다. 볼륨을 삭제해서 마이그레이션하지 않는다.
 
 자동 종료는 기존 인증된 reconcile API를 호출하는 스케줄러가 필요하다. Python 서버의 tick 루프를 운영용으로 함께 실행하지 않는다.
 

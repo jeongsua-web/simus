@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import DepartmentSelector from "./DepartmentSelector";
 import { LiveCityStats } from "../components/CityStats";
+import ProfileEntry from "./ProfileEntry";
 import SituationCard from "./SituationCard";
 import CityTrack from "./CityTrack";
 import PushOptIn from "./PushOptIn";
@@ -12,7 +12,7 @@ import styles from "./participate.module.css";
 
 export default function ParticipatePage() {
   const state = useParticipation();
-  const [savingDepartment, setSavingDepartment] = useState(false);
+  const [enteringSession, setEnteringSession] = useState<string | null>(null);
   const [selection, setSelection] = useState({ sessionId: "", index: 0 });
   const history = state.history.length > 0 && <section className={styles.stateCard}><h2>지난 회차 결과</h2>{state.history.map(item => <p key={item.id}><Link href={`/result/${item.id}`}>{item.name} 결과 보기</Link></p>)}</section>;
   const pendingNotice = state.pending && state.pending.session_id !== state.session?.id && <section className={styles.stateCard}>
@@ -40,6 +40,23 @@ export default function ParticipatePage() {
       </div>{pendingNotice}{history}</main>
     );
   }
+  const sessionId = state.session.id;
+  if (!state.profile || enteringSession === sessionId) {
+    if (!state.session.accepting_choices && enteringSession !== sessionId) return (
+      <main className={styles.page}><div className={styles.stateCard}>
+        <p className={styles.eyebrow}>SIM:US 시민 등록</p>
+        <h1>{state.session.status === "RUNNING" ? "이번 회차 입장이 마감되었습니다" : "이번 회차가 끝났습니다"}</h1>
+        <p>{state.session.name}</p>
+        {state.joined && <Link className={styles.buttonLink} href={`/result/${sessionId}`}>내 결과 확인</Link>}
+        <button className={styles.secondaryButton} onClick={state.retryLoad}>상태 새로고침</button>
+      </div>{pendingNotice}{history}</main>
+    );
+    return <ProfileEntry key={sessionId} session={state.session} departments={state.departments}
+      onSaved={() => setEnteringSession(sessionId)}
+      onEntered={profile => { state.completeProfile(profile); setEnteringSession(null); }}
+      onStale={state.refresh}>{pendingNotice}</ProfileEntry>;
+  }
+  const profile = state.profile;
   const answeredCount = Object.values(state.answered).filter(Boolean).length;
   const complete = answeredCount >= state.session.situations.length && state.session.situations.length > 0;
   const activeIndex = selection.sessionId === state.session.id ? Math.min(selection.index, state.session.situations.length - 1) : 0;
@@ -50,6 +67,10 @@ export default function ParticipatePage() {
         <p className={styles.eyebrow}>우리의 선택이 만드는 도시</p>
         <h1 className={styles.title}>SIM:US</h1>
         <p className={styles.sessionName}>{state.session.name}</p>
+        <p className={styles.citizen} aria-label="내 시민증">
+          <span>No. {profile.citizen_no}</span><strong>{profile.nickname}</strong>
+          <span>{profile.department_name}</span><span>{profile.mbti}</span>
+        </p>
         <div className={styles.progress} aria-label={`전체 ${state.session.situations.length}개 중 ${answeredCount}개 응답 완료`}>
           <span>{answeredCount} / {state.session.situations.length} 응답</span>
           <progress value={answeredCount} max={Math.max(1, state.session.situations.length)} />
@@ -58,9 +79,6 @@ export default function ParticipatePage() {
       <LiveCityStats sessionId={state.session.id}/>
       <p>입력 마감 {state.session.auto_cutoff_at ? new Date(state.session.auto_cutoff_at).toLocaleString("ko-KR") : "확인 중"} · 종료 예정 {state.session.scheduled_end_at ? new Date(state.session.scheduled_end_at).toLocaleString("ko-KR") : "확인 중"}</p>
       {pendingNotice}
-      <DepartmentSelector key={state.session.id} sessionId={state.session.id}
-        answered={answeredCount > 0} disabled={!state.session.accepting_choices || state.submitting !== null || state.pending !== null}
-        onSaving={setSavingDepartment}/>
       <PushOptIn key={state.session.id} sessionId={state.session.id}/>
       {complete && <section className={styles.notice} role="status"><strong>응답 완료</strong><span>결과는 회차가 끝나고 확정된 뒤 공개됩니다.</span></section>}
       {!state.session.accepting_choices && <section className={styles.closedNotice} role="status">
@@ -81,7 +99,7 @@ export default function ParticipatePage() {
             </nav>
             {activeSituation && <SituationCard key={activeSituation.id} situation={activeSituation} selectedChoiceId={state.selected[activeSituation.id]}
               done={Boolean(state.answered[activeSituation.id])} acceptingChoices={state.session.accepting_choices}
-              submitting={state.submitting === activeSituation.id} submissionInProgress={state.submitting !== null || savingDepartment}
+              submitting={state.submitting === activeSituation.id} submissionInProgress={state.submitting !== null}
               retrying={state.pending?.session_id === state.session.id && state.pending?.situation_id === activeSituation.id} hasPendingSubmission={state.pending !== null}
               message={state.messages[activeSituation.id] ?? ""} onSelect={choiceId => state.selectChoice(activeSituation.id, choiceId)}
               onSubmit={() => void state.submit(activeSituation)} />}

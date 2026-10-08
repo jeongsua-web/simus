@@ -8,6 +8,7 @@ import { once } from 'node:events';
 import { generateKeyPair, exportJWK, SignJWT } from 'jose';
 import pg from 'pg';
 import { runDepartmentIntegration } from './departments.integration.mjs';
+import { runProfileIntegration } from './profiles.integration.mjs';
 import { runDepartmentStatisticsIntegration } from './department-statistics.integration.mjs';
 import { runResultLinksIntegration } from './result-links.integration.mjs';
 import { runExhibitionContentIntegration } from './exhibition-content.integration.mjs';
@@ -80,7 +81,7 @@ try {
   const admin = new pg.Client({ connectionString: `postgresql://postgres@127.0.0.1:${pgPort}/postgres` });
   await admin.connect(); await admin.query('CREATE DATABASE simus_integration'); await admin.end();
   pool = new pg.Pool({ connectionString: env.DATABASE_URL });
-  for (const name of ['001_initial_schema.sql','002_session_lifecycle.sql','003_session_creation.sql','004_participant_npcs.sql','005_participant_departments.sql','006_content_score_range.sql','007_result_links.sql','008_web_push.sql']) await pool.query(await readFile(path.join(web, '../db', name), 'utf8'));
+  for (const name of ['001_initial_schema.sql','002_session_lifecycle.sql','003_session_creation.sql','004_participant_npcs.sql','005_participant_departments.sql','006_content_score_range.sql','007_result_links.sql','008_web_push.sql','009_participant_profiles.sql']) await pool.query(await readFile(path.join(web, '../db', name), 'utf8'));
   await startServer();
   console.log(await command(process.execPath, ['tests/session-lifecycle.integration.mjs'], env));
   await runFlow({ pool, env, stopServer, startServer });
@@ -111,6 +112,7 @@ try {
   assert.equal((await pool.query('SELECT impact_scale::float8 FROM simus.simulation_sessions WHERE id=$1', [neighborhoodId])).rows[0].impact_scale, 0.1);
   console.log('PASS: migrated neighborhood WASTE seed/readiness and original scoring');
   await runDepartmentIntegration({ pool, env, token: demoToken, templateId: demoId });
+  await runProfileIntegration({ pool, env, token: demoToken, templateId: demoId });
   await runDepartmentStatisticsIntegration({ env, token: demoToken, templateId: demoId });
   await runResultLinksIntegration({ pool, env, token: demoToken, templateId: demoId });
   await runStageIntegration({ pool, env, token: demoToken, demoId });

@@ -308,7 +308,11 @@ MonoBehaviour:
   followNpcId: 
   npcSource: {fileID: 0}
   followSmoothTime: 0.25
-  followSize: 7
+  followSize: 12.75089
+  followPitch: 28.85
+  followYaw: -131.64
+  occlusionShader: {fileID: 4800000, guid: 61918c329cc44fa389c04d030ebc3eb9, type: 3}
+  revealRadius: 3.5
   followOffset: {x: 0, y: 1, z: 0}
 --- !u!20 &1338556910
 Camera:

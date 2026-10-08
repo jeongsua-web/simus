@@ -115,11 +115,13 @@ public static class CompletedMapFollowSetup
         camera.clearFlags = CameraClearFlags.SolidColor; camera.backgroundColor = new Color(0.56f, 0.70f, 0.78f);
         var follow = cameraObject.AddComponent<CityPreviewCamera>();
         follow.followTarget = npc.transform; follow.followNpcId = "";
-        follow.followSize = 7f; follow.followSmoothTime = 0.25f;
+        follow.followSize = 12.75089f;
+        follow.followPitch = 28.85f; follow.followYaw = -131.64f;
+        follow.occlusionShader = Shader.Find("SIMUS/NPC Reveal"); follow.followSmoothTime = 0.25f;
         follow.previewSubtitle = "COMPLETED MAP 03 | TEST NPC 01";
         follow.target = start + follow.followOffset;
-        camera.orthographic = true; camera.orthographicSize = 7f;
-        cameraObject.transform.rotation = Quaternion.Euler(55, -36, 0);
+        camera.orthographic = true; camera.orthographicSize = follow.followSize;
+        cameraObject.transform.rotation = Quaternion.Euler(follow.followPitch, follow.followYaw, 0);
         cameraObject.transform.position = follow.target - cameraObject.transform.forward * 360f;
         var light = new GameObject("Sun").AddComponent<Light>(); light.type = LightType.Directional;
         light.intensity = 1.2f; light.transform.rotation = Quaternion.Euler(50, -30, 0);

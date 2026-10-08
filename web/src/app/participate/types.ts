@@ -11,4 +11,6 @@ export type LatestSession = Omit<Session, "accepting_choices" | "situations"> & 
 };
 export type OwnResponse = { situation_id: string; choice_id: string; received_at: string };
 export type Submission = { session_id: string; situation_id: string; choice_id: string; request_key: string };
+export type Department = { id: string; faculty: string; name: string };
+export type Profile = { nickname: string; department_id: string; department_name: string; mbti: string; citizen_no: string };
 export type ApiError = { error?: { code?: string; message?: string } };

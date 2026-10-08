@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { pendingKey, readPending } from "./pending";
-import type { ApiError, LatestSession, Session, Situation, Submission } from "./types";
+import type { ApiError, Department, LatestSession, Profile, Session, Situation, Submission } from "./types";
 
 async function errorMessage(response: Response, fallback: string) {
   try { return ((await response.json()) as ApiError).error?.message ?? fallback; }
@@ -21,6 +21,9 @@ export function useParticipation() {
   const [messages, setMessages] = useState<Record<string, string>>({});
   const [submitting, setSubmitting] = useState<string | null>(null);
   const [pending, setPending] = useState<Submission | null>(null);
+  const [profile, setProfile] = useState<Profile | null>(null);
+  const [joined, setJoined] = useState(false);
+  const [departments, setDepartments] = useState<Department[]>([]);
   const busy = useRef(false);
   const loadingState = useRef(false);
   const activeSession = useRef<string | null>(null);
@@ -62,11 +65,16 @@ export function useParticipation() {
       }
       const current = (await currentResponse.json()) as { session: Session | null };
       const own = (await meResponse.json()) as { latest_session: LatestSession | null; history: LatestSession[] };
-      if (current.session?.status === "RUNNING") {
-        const joined = await fetch(`/api/sessions/${current.session.id}/join`, { method: "POST", signal });
-        // A lifecycle transition between current-state and join is normal; refresh next poll.
-        if (!joined.ok && joined.status !== 409)
-          throw new Error(await errorMessage(joined, "회차에 입장하지 못했습니다."));
+      // Joining happens only when the entry profile is submitted.
+      let entry: { joined: boolean; profile: Profile | null; departments: Department[] } | null = null;
+      if (current.session) {
+        const profileResponse = await fetch(`/api/sessions/${current.session.id}/profile`, { cache: "no-store", signal });
+        if (profileResponse.status === 401) {
+          setAuthExpired(true);
+          throw new Error("참여 인증이 만료되었습니다.");
+        }
+        if (!profileResponse.ok) throw new Error(await errorMessage(profileResponse, "입장 정보를 확인하지 못했습니다."));
+        entry = await profileResponse.json();
       }
       const targetId = current.session?.id ?? own.latest_session?.id;
       let records: Array<{ situation_id: string; choice_id: string }> = [];
@@ -97,6 +105,9 @@ export function useParticipation() {
         ...(retry && retry.session_id === targetId ? { [retry.situation_id]: retry.choice_id } : {}),
         ...Object.fromEntries(records.map(item => [item.situation_id, item.choice_id])) }));
       setSession(current.session);
+      setProfile(entry?.profile ?? null);
+      setJoined(entry?.joined ?? false);
+      if (entry) setDepartments(entry.departments);
       setLatestSession(own.latest_session);
       setHistory(own.history ?? []);
       setAuthExpired(false);
@@ -160,7 +171,9 @@ export function useParticipation() {
 
   return {
     session, latestSession, history, loading, loadError, authExpired, selected, answered, messages,
-    submitting, pending, selectChoice: (situationId: string, choiceId: string) =>
+    submitting, pending, profile, joined, departments,
+    completeProfile: (value: Profile) => { setProfile(value); setJoined(true); },
+    refresh: () => void loadState(false), selectChoice: (situationId: string, choiceId: string) =>
       setSelected(previous => ({ ...previous, [situationId]: choiceId })),
     submit, retryPending: () => {
       const saved = pendingRequest.current;

@@ -2,7 +2,7 @@
 
 기준일: 2026-09-18. 외부 공개 배포는 수행하지 않았다.
 
-아래 시연 절차의 DB 적용 순서는 현재 파일 기준 001~008로 갱신했다. Unity 환경과 과거 검증 결과에 관한 설명은 기준일 당시의 기록이다. 마이그레이션별 상세는 [DB 안내](../../db/README.md)를 따른다.
+아래 시연 절차의 DB 적용 순서는 현재 파일 기준 001~009로 갱신했다. Unity 환경과 과거 검증 결과에 관한 설명은 기준일 당시의 기록이다. 마이그레이션별 상세는 [DB 안내](../../db/README.md)를 따른다.
 
 ## 1. 먼저 확인한 실행 대상과 기존 설정
 
@@ -36,6 +36,7 @@ $pgBin = 'C:/Program Files/PostgreSQL/18/bin'
 & "$pgBin/psql.exe" -h localhost -U postgres -d simus_demo -v ON_ERROR_STOP=1 -f db/006_content_score_range.sql
 & "$pgBin/psql.exe" -h localhost -U postgres -d simus_demo -v ON_ERROR_STOP=1 -f db/007_result_links.sql
 & "$pgBin/psql.exe" -h localhost -U postgres -d simus_demo -v ON_ERROR_STOP=1 -f db/008_web_push.sql
+& "$pgBin/psql.exe" -h localhost -U postgres -d simus_demo -v ON_ERROR_STOP=1 -f db/009_participant_profiles.sql
 & "$pgBin/psql.exe" -h localhost -U postgres -d simus_demo -v ON_ERROR_STOP=1 -f db/seed_demo.sql
 ```
 
@@ -57,10 +58,11 @@ docker compose exec db psql -U simus -d simus_demo -v ON_ERROR_STOP=1 -f /schema
 docker compose exec db psql -U simus -d simus_demo -v ON_ERROR_STOP=1 -f /schema/006_content_score_range.sql
 docker compose exec db psql -U simus -d simus_demo -v ON_ERROR_STOP=1 -f /schema/007_result_links.sql
 docker compose exec db psql -U simus -d simus_demo -v ON_ERROR_STOP=1 -f /schema/008_web_push.sql
+docker compose exec db psql -U simus -d simus_demo -v ON_ERROR_STOP=1 -f /schema/009_participant_profiles.sql
 docker compose exec db psql -U simus -d simus_demo -v ON_ERROR_STOP=1 -f /schema/seed_demo.sql
 ```
 
-Compose 기본 DB `simus`는 빈 볼륨의 첫 기동에 001~008을 자동 적용한다. 기존 DB에는 001을 다시 실행하지 않는다.
+Compose 기본 DB `simus`는 빈 볼륨의 첫 기동에 001~009를 자동 적용한다. 기존 DB에는 001을 다시 실행하지 않는다.
 기존 볼륨에는 새 SQL이 자동 적용되지 않는다. 배포 이력과 DB 적용 여부를 확인하고 누락된 후속 파일만 번호 순서대로 한 번씩 적용한다. 자동 마이그레이션/이력 관리 도구는 없다.
 운영 마이그레이션 전에는 백업과 복원 시험을 수행하고 버전·적용일을 별도 기록한다.
 `docker compose stop`은 데이터를 보존한다. `down -v`는 데이터 삭제이므로 시연 종료 명령으로 쓰지 않는다.

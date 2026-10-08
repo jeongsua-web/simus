@@ -44,6 +44,7 @@ services:
       - ./db/006_content_score_range.sql:/docker-entrypoint-initdb.d/006_content_score_range.sql:ro
       - ./db/007_result_links.sql:/docker-entrypoint-initdb.d/007_result_links.sql:ro
       - ./db/008_web_push.sql:/docker-entrypoint-initdb.d/008_web_push.sql:ro
+      - ./db/009_participant_profiles.sql:/docker-entrypoint-initdb.d/009_participant_profiles.sql:ro
       - ./db:/schema:ro
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U simus -d simus"]

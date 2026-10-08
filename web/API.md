@@ -183,6 +183,11 @@ curl -X POST -H "Authorization: Bearer $SESSION_JOB_TOKEN" \
 `GET /api/sessions/{id}/department`(본인 소속·목록·잠금), `PUT /api/sessions/{id}/department`(첫 선택 전 수정).
 본인 쿠키 인증과 DB 005가 필요하다. [필드·오류·동시성·4A 연결 계약](../docs/contracts/participant-departments.md).
 
+## 입장 프로필 API
+
+`GET /api/sessions/{id}/profile`(본인 입장·프로필·시민증 번호·학과 목록), `POST /api/sessions/{id}/profile`(닉네임·학과·MBTI 저장과 회차 입장, 이후 변경 불가).
+본인 쿠키 인증과 DB 009가 필요하다. 완료 후에는 3C 학과 수정도 거부된다. [필드·오류·번호 계약](../docs/contracts/participant-profiles.md).
+
 ## 4A 학과 통계 API
 
 `GET /api/sessions/{id}/department-statistics`는 공개 회차별 집계다. 상황별 선택 비율은 해당 상황 응답자를 분모로 하고, 5명 미만의 선택지·성향 상세를 감춘다. 성향 분포는 회차 확정 후에만 반환한다. [공개 계약과 검증](../docs/contracts/department-statistics.md).

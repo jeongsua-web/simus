@@ -1,6 +1,6 @@
 # SIM:US PostgreSQL 스키마
 
-시연용 새 DB에는 `001_initial_schema.sql` → `002_session_lifecycle.sql` → `003_session_creation.sql` → `004_participant_npcs.sql` → `005_participant_departments.sql` → `006_content_score_range.sql` → `007_result_links.sql` → `008_web_push.sql` → `seed_demo.sql` 또는 `seed_neighborhood.sql`을 적용한다.
+시연용 새 DB에는 `001_initial_schema.sql` → `002_session_lifecycle.sql` → `003_session_creation.sql` → `004_participant_npcs.sql` → `005_participant_departments.sql` → `006_content_score_range.sql` → `007_result_links.sql` → `008_web_push.sql` → `009_participant_profiles.sql` → `seed_demo.sql` 또는 `seed_neighborhood.sql`을 적용한다.
 `seed_demo.sql`은 관리자 화면에서 시작할 DRAFT를 준비한다. 기존 `seed_development.sql`은 즉시 RUNNING으로
 전환하는 개발용이므로 같은 DB에 혼용하지 않는다. 운영 DB에는 어느 seed도 적용하지 않는다.
 구체적인 명령과 데이터 분리는 [시연·배포 가이드](../docs/operations/demo-deployment.md)에 있다.

@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
+import { enterCity } from './participant-entry.mjs';
 
 export async function runDepartmentIntegration({ pool, env, token, templateId }) {
   async function call(path, { method = 'GET', data, cookie, admin = false, origin } = {}) {
@@ -69,23 +70,18 @@ export async function runDepartmentIntegration({ pool, env, token, templateId })
       const errors = [];
       page.on('pageerror', error => errors.push(error.message));
       await page.goto(env.TEST_API_URL + '/participate');
-      const selector = page.getByLabel('소속 학과', { exact: true });
-      await page.waitForFunction(() => document.querySelector('#department')?.disabled === false);
-      const saved = page.waitForResponse(r => r.url().endsWith('/department') && r.request().method() === 'PUT');
-      await selector.selectOption('dept-42');
-      assert.equal((await saved).status(), 200);
-      await page.reload();
-      await page.waitForFunction(() => document.querySelector('#department')?.value === 'dept-42');
+      await enterCity(page, { faculty: '기타', department: '자율전공학과' });
+      const cookie = (await page.context().cookies()).find(c => c.name === 'simus_participant');
+      const stored = await call(path, { cookie: `${cookie.name}=${cookie.value}` });
+      assert.deepEqual([stored.body.department_id, stored.body.locked], ['dept-42', true]);
       await page.getByRole('radio').first().check();
       await page.getByRole('button', { name: '선택 제출', exact: true }).first().click();
       await page.getByRole('button', { name: '응답 완료', exact: true }).first().waitFor();
-      assert.equal(await selector.isDisabled(), true);
       await page.reload();
-      await page.waitForFunction(() => document.querySelector('#department')?.value === 'dept-42');
-      assert.equal(await selector.isDisabled(), true);
+      assert.match(await page.getByLabel('내 시민증').innerText(), /자율전공학과/);
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
       assert.deepEqual(errors, []);
-      console.log('PASS: 3C mobile browser department save/reload/first-choice lock/no overflow');
+      console.log('PASS: 3C mobile browser department chosen at entry, stored/locked, kept after first choice and reload, no overflow');
     } finally { await browser.close(); }
   } else console.log('SKIP: 3C browser (set TEST_PLAYWRIGHT_MODULE)');
   await end(sid);

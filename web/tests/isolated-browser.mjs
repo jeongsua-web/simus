@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { pathToFileURL } from 'node:url';
+import { enterCity } from './participant-entry.mjs';
 
 // Optional: use an explicitly supplied Playwright installation, without installing browsers.
 export async function runBrowserFlow({ env, pool, round, token, call }) {
@@ -26,6 +27,7 @@ export async function runBrowserFlow({ env, pool, round, token, call }) {
     assert.equal(started.status(), 200, await started.text());
     await card.getByRole('button', { name: '수동 종료', exact: true }).waitFor();
     await Promise.all([a, b, stranger].map(p => p.goto(env.TEST_API_URL + '/participate')));
+    await Promise.all([a, b, stranger].map((p, i) => enterCity(p, { nickname: `참여자${i + 1}` })));
     await Promise.all([a, b, stranger].map(p => p.getByRole('radio', { name: 'A', exact: true }).waitFor()));
     const identities = await Promise.all(contexts.slice(1).map(c => c.cookies()));
     assert.equal(new Set(identities.map(c => c.find(x => x.name === 'simus_participant')?.value)).size, 3);
@@ -70,10 +72,11 @@ export async function runBrowserFlow({ env, pool, round, token, call }) {
     await Promise.all([a, b].map(p => p.getByRole('heading', { name: '완전 중립' }).waitFor()));
     assert.equal(await a.locator('dl > div').filter({ hasText: '질서 축' }).locator('dd').textContent(), '1');
     assert.equal(await b.locator('dl > div').filter({ hasText: '질서 축' }).locator('dd').textContent(), '-1');
-    await stranger.getByText('확정된 개인 결과가 없습니다', { exact: true }).waitFor();
+    await stranger.getByText('참여한 선택 없음', { exact: true }).waitFor();
     const next = await round();
     assert.equal((await call(`/api/admin/sessions/${next.sid}/start`, { auth: token, data: { request_key: crypto.randomUUID() } })).status, 200);
     await a.goto(env.TEST_API_URL + '/participate');
+    await enterCity(a, { nickname: '다음회차' });
     await a.getByRole('button', { name: '선택 제출', exact: true }).waitFor();
     assert.equal(await a.getByRole('radio', { name: 'A', exact: true }).isChecked(), false);
     assert.equal(await a.getByRole('radio', { name: 'A', exact: true }).isDisabled(), false);

@@ -15,6 +15,11 @@ namespace Simus
         public Simus.City.NeighborhoodLife npcSource;
         [Min(0.01f)] public float followSmoothTime = 0.25f;
         [Min(1f)] public float followSize = 18f;
+        public float followPitch = 28.85f;
+        public float followYaw = -131.64f;
+        public Shader occlusionShader;
+        [Min(0.1f)] public float revealRadius = 3.5f;
+        private NpcOcclusionReveal reveal;
         public Vector3 followOffset = new Vector3(0f, 1f, 0f);
         private Vector3 followVelocity;
         private Transform activeTarget;
@@ -35,6 +40,11 @@ namespace Simus
 
         private void Start()
         {
+            if (occlusionShader != null)
+            {
+                reveal = gameObject.AddComponent<NpcOcclusionReveal>();
+                reveal.Initialize(occlusionShader);
+            }
             Follow();
         }
 
@@ -55,6 +65,9 @@ namespace Simus
         public void Follow()
         {
             followEnabled = true;
+            pitch = followPitch;
+            yaw = followYaw;
+            size = followSize;
             activeTarget = null;
             followVelocity = Vector3.zero;
         }
@@ -138,6 +151,7 @@ namespace Simus
                 }
             }
             ApplyPose();
+            if (reveal != null) reveal.SetTarget(followEnabled ? activeTarget : null, revealRadius);
         }
 
         private void ApplyPose()
@@ -146,7 +160,7 @@ namespace Simus
             transform.rotation = Quaternion.Euler(pitch, yaw, 0f);
             transform.position = target - transform.forward * 360f;
             // Preserve a useful overview when the Game window becomes narrow.
-            view.orthographicSize = size * Mathf.Max(1f, 1.25f / view.aspect);
+            view.orthographicSize = size * (followEnabled ? 1f : Mathf.Max(1f, 1.25f / view.aspect));
         }
 
         private void OnGUI()

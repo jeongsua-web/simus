@@ -7,7 +7,7 @@
 - 대상: `Test NPC - HairFix 01` (01번 헤어, 안경 없음, 높이 1.7m)
 - Main Camera → City Preview Camera → Follow Target에 위 NPC가 저장되어 있습니다.
 - 게임 시작 시 NPC에 맞춘 뒤 LateUpdate의 SmoothDamp로 이동을 추적합니다.
-- Follow Smooth Time: 0.25초 / Follow Size: 7 / Follow Offset: (0, 1, 0)
+- Follow Smooth Time: 0.25초 / Follow Size: 12.75089 / Follow Offset: (0, 1, 0)
 - 이동: Test Npc Patrol의 Speed 1.4m/s, Start–End 왕복. Walk 애니메이션 반복, 루트 모션 꺼짐.
 - F: 추적 복귀 / 1 또는 R: 전체 보기 / 2: 상단 보기 / 우클릭 드래그: 추적 해제 후 이동.
 
@@ -30,3 +30,11 @@ Start (-197.75, 0.20, -5), End (-197.75, 0.20, 15); 보도 표면 41점 레이�
 - FBX에 기존 자기 교차 폴리곤 임포트 경고가 있습니다. NavMesh/장애물 회피 및 빌드 검증은 포함하지 않습니다.
 
 검증 로그와 렌더 이미지: 프로젝트 `Logs/CompletedMapFollow-PlayMode.log`, `Logs/CompletedMapFollow.png`.
+
+## 2026-10-08 카메라·가림 처리
+
+- 사용자 지정 추적 각도: Pitch 28.85°, Yaw -131.64°, Roll 0°. 직교 Size 12.75089. F로 이 구도에 복귀합니다. 위치는 NPC를 따라 이동합니다.
+- Main Camera의 City Preview Camera에서 Follow Pitch/Yaw/Size 및 Reveal Radius(기본 3.5m)를 조절합니다.
+- NPC 앞을 가리는 맵 표면만 원형으로 잘라 내부 NPC를 보입니다. 지면과 NPC 뒤 표면은 유지하며, 건물 외 식생 등 맵 내부 가림 물체에도 적용됩니다. 중앙은 투명하게 열고, 가장자리는 반경의 40% 폭으로 smoothstep과 화면 픽셀 디더링을 적용해 부드럽게 복원합니다. 반투명 유리 표현이 아닌 투명 구멍 방식입니다.
+- 런타임 재질 복사본만 사용하며 원본 FBX/재질은 변경하지 않습니다. 전체 보기에서는 효과를 끄고, 추적 대상이 없거나 재생 종료 시 복원합니다.
+- 현재 컴퓨터 Unity Editor에서 새 스크립트·셰이더 가져오기 및 Play 실행, 건물 뒤 NPC가 원형 영역을 통해 보이는 것을 확인했습니다. WebGL·휴대폰 성능은 아직 검증하지 않았습니다.
