@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { pathToFileURL } from 'node:url';
+import { checkMobilePanel } from './mobile-panel.mjs';
 import { enterCity } from './participant-entry.mjs';
 
 // Optional: use an explicitly supplied Playwright installation, without installing browsers.
@@ -31,22 +32,27 @@ export async function runBrowserFlow({ env, pool, round, token, call }) {
     await Promise.all([a, b, stranger].map(p => p.getByRole('radio', { name: 'A', exact: true }).waitFor()));
     const identities = await Promise.all(contexts.slice(1).map(c => c.cookies()));
     assert.equal(new Set(identities.map(c => c.find(x => x.name === 'simus_participant')?.value)).size, 3);
+    await checkMobilePanel(a);
     await a.getByRole('radio', { name: 'A', exact: true }).check();
     await b.getByRole('radio', { name: 'B', exact: true }).check();
     // Commit the first submission, then lose its response at the browser boundary.
     let lost = false;
+    let choiceRequests = 0;
     await a.route('**/api/choices', async route => {
+      choiceRequests++;
       if (lost) return route.continue();
       lost = true;
       const response = await route.fetch();
       assert.equal(response.status(), 201);
       await route.abort('connectionfailed');
     });
-    await Promise.all([a, b].map(p => p.getByRole('button', { name: '선택 제출', exact: true }).click()));
+    await a.getByRole('button', { name: '선택 제출', exact: true }).evaluate(button => { for (let i = 0; i < 8; i++) button.click(); });
+    await b.getByRole('button', { name: '선택 제출', exact: true }).click();
     await b.getByRole('button', { name: '응답 완료', exact: true }).waitFor();
     // Polling may restore the committed answer before the explicit retry; both are valid recovery.
     const retry = a.getByRole('button', { name: '같은 선택으로 다시 확인', exact: true });
     await a.getByRole('button', { name: /같은 선택으로 다시 확인|응답 완료/ }).waitFor();
+    assert.equal(choiceRequests, 1, 'rapid clicks send only one request');
     if (await retry.isVisible()) await retry.click();
     await a.getByRole('button', { name: '응답 완료', exact: true }).waitFor();
     await a.reload();

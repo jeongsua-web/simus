@@ -1,0 +1,34 @@
+import assert from 'node:assert/strict';
+import { pathToFileURL } from 'node:url';
+if (!process.env.TEST_PLAYWRIGHT_MODULE) throw Error('Set TEST_PLAYWRIGHT_MODULE to playwright/index.mjs');
+const { chromium } = await import(pathToFileURL(process.env.TEST_PLAYWRIGHT_MODULE).href);
+const browser = await chromium.launch({headless:true, args:['--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const errors=[];
+try {
+  const page = await browser.newPage({viewport:{width:390,height:844}});
+  page.on('pageerror',error=>errors.push(error.message));
+  page.on('console',message=>{if(message.type()==='error') console.log('Browser console:',message.text());});
+  await page.goto(process.env.TEST_BRIDGE_URL || 'http://127.0.0.1:4175');
+  await page.waitForFunction(()=>messages.some(m=>m.type==='BOUND'),null,{timeout:120000});
+  const initial=await page.evaluate(()=>messages);
+  assert.equal(initial[0].type,'READY');
+  assert.equal(initial[0].map_version,'test-only-bridge-v1');
+  assert.equal(initial.find(m=>m.type==='BOUND').npc_id,'20000000-0000-0000-0000-000000000001');
+  await page.getByRole('button',{name:'중복 INIT',exact:true}).click();
+  await page.waitForFunction(()=>messages.filter(m=>m.type==='BOUND').length===2);
+  await page.getByRole('button',{name:'숨김',exact:true}).click();
+  await page.getByRole('button',{name:'복귀',exact:true}).click();
+  await page.getByRole('button',{name:'동결',exact:true}).click();
+  await page.waitForTimeout(2500);
+  await page.screenshot({path:process.env.TEST_BRIDGE_SCREENSHOT || '/tmp/simus_bridge_browser.png'});
+  assert.equal((await page.evaluate(()=>messages)).filter(m=>m.type==='ERROR').length,0);
+  await page.getByRole('button',{name:'지도 불일치',exact:true}).click();
+  await page.waitForFunction(()=>messages.some(m=>m.type==='ERROR'));
+  const before=await page.evaluate(()=>messages.filter(m=>m.type==='BOUND').length);
+  await page.getByRole('button',{name:'재연결',exact:true}).click();
+  await page.waitForFunction(n=>messages.filter(m=>m.type==='BOUND').length>n,before,{timeout:120000});
+  await page.getByRole('button',{name:'종료',exact:true}).click();
+  await page.waitForTimeout(1000);
+  assert.deepEqual(errors,[]);
+  console.log('PASS actual WebGL: READY/BOUND, duplicate INIT, visibility, freeze snapshot accepted, map ERROR, retry, DISPOSE; no page errors.');
+} finally {await browser.close();}

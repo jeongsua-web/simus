@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>SIM:US Unity bridge test</title>
+<style>html,body,canvas{margin:0;width:100%;height:100%;display:block;background:#18252d}#label{position:absolute;top:8px;left:8px;color:white;font:12px sans-serif;pointer-events:none}</style></head>
+<body><canvas id="unity-canvas" tabindex="-1"></canvas><div id="label">TEST ONLY · 전시 지도 아님</div>
+<script src="bridge.js"></script><script>
+const canvas = document.getElementById('unity-canvas');
+window.simusBridge = createSimusBridge(window, canvas);
+if (simusBridge.valid) {
+  const script = document.createElement('script');
+  script.src = 'Build/{{{ LOADER_FILENAME }}}';
+  script.onerror = () => simusBridge.error('LOADER_FAILED');
+  script.onload = () => createUnityInstance(canvas, {
+    dataUrl: 'Build/{{{ DATA_FILENAME }}}', frameworkUrl: 'Build/{{{ FRAMEWORK_FILENAME }}}', codeUrl: 'Build/{{{ CODE_FILENAME }}}',
+    streamingAssetsUrl: 'StreamingAssets', companyName: 'SIMUS', productName: 'SIMUS bridge test', productVersion: '1',
+    devicePixelRatio: Math.min(window.devicePixelRatio || 1, 1.5),
+    showBanner: (_, type) => { if (type === 'error') simusBridge.error('UNITY_LOADER_ERROR'); },
+    onQuit: () => simusBridge.error('UNEXPECTED_QUIT')
+  }).then(value => simusBridge.attach(value)).catch(() => simusBridge.error('LOAD_FAILED'));
+  document.body.appendChild(script);
+}
+</script></body></html>

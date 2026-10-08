@@ -19,3 +19,5 @@ npm run start -- --hostname 127.0.0.1 --port 3000
 기존 개발/운영 DB에 테스트를 실행하지 않는다.
 
 [API 계약](API.md) · [운영 화면](OPERATIONS.md) · [검증 결과](../docs/verification/demo-validation.md)
+
+모바일 도시 호스트와 Unity 빌드 연결: [웹–Unity 메시지 계약](../docs/contracts/web-unity-bridge.md). `/city/build.json` 및 계약을 구현한 `/city/index.html` 배포 전에는 도시 준비 안내를 표시한다.

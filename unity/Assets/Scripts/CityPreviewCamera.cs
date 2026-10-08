@@ -5,6 +5,7 @@ namespace Simus
     [RequireComponent(typeof(Camera))]
     public sealed class CityPreviewCamera : MonoBehaviour
     {
+        public bool previewControls = true;
         public Vector3 target = Vector3.zero;
         public float overviewSize = 132f;
         public string previewSubtitle = "STAGE 02    |    200 x 200 m";
@@ -94,6 +95,7 @@ namespace Simus
 
         private void Update()
         {
+            if (!previewControls) return;
             if (Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.R)) Overview();
             if (Input.GetKeyDown(KeyCode.Alpha2)) TopView();
             if (Input.GetKeyDown(KeyCode.F)) Follow();
@@ -165,6 +167,7 @@ namespace Simus
 
         private void OnGUI()
         {
+            if (!previewControls) return;
             if (titleStyle == null)
             {
                 titleStyle = new GUIStyle(GUI.skin.label) { fontSize = 22, fontStyle = FontStyle.Bold };
