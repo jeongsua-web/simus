@@ -5,7 +5,7 @@ Next.js 참여·관리자 화면, PostgreSQL 회차·선택·결과 저장, Unit
 
 **전시용 맵은 새로 제작합니다.** 현재 `unity/`의 Neighborhood 장면과 기존 GLB/FBX는 시제품 검증용이며, 새 맵의 좌표·동선·최종 자산으로 확정하지 않았습니다. [새 맵 인계](docs/content/new-map-handoff-5a.md)를 참조하세요.
 
-실행 기준은 `web/` + `db/` + `unity/`입니다. `simus-stage4-8/`는 원본 보관용이며 Python 서버·프록시를 함께 실행하지 않습니다.
+실행 기준은 `web/` + `db/` + `unity/`입니다. 옛 시제품 `simus-stage4-8/`는 2026-10-08 삭제했으며, 원본은 Git 이력에서 확인할 수 있습니다. Python 서버·프록시를 함께 실행하지 않습니다.
 
 ## 시작하기
 

@@ -3438,6 +3438,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Simus.CityPreviewCamera
   target: {x: 0, y: 0, z: 0}
   overviewSize: 132
+  followTarget: {fileID: 35868122}
+  followNpcId:
+  npcSource: {fileID: 839431064}
+  followSmoothTime: 0.25
+  followSize: 18
+  followOffset: {x: 0, y: 1, z: 0}
 --- !u!81 &892732058
 AudioListener:
   m_ObjectHideFlags: 0

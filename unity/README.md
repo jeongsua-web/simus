@@ -1,5 +1,30 @@
 # SIM:US Unity client
 
+## NPC 추적 카메라
+
+Main Camera의 `CityPreviewCamera`에서 `Follow Target`에 NPC Transform을 지정하면
+시작 시 해당 NPC에 카메라를 맞추고, 이후 `LateUpdate`에서 부드럽게 추적합니다.
+`Follow Smooth Time`은 기본 0.25초이며 값이 작을수록 빠르게 따라갑니다.
+`Follow Size`는 추적 화면 범위, `Follow Offset`은 NPC 기준 시선 중심입니다.
+
+서버에서 생성되는 참여자는 `Npc Source`에 `NeighborhoodLife`를 연결하고
+`Follow Npc Id`에 전체 NPC ID를 지정합니다. ID가 설정되면 Transform보다 우선하며,
+해당 NPC가 생성될 때까지 기다립니다. 코드에서는 `SetFollowNpcId(id)` 또는
+`SetFollowTarget(transform)`으로 변경할 수 있습니다. 대상이 사라지거나 비활성화되면
+마지막 화면을 유지하며 임의의 다른 참여자를 선택하지 않습니다.
+
+새 맵 테스트 장면은 `Assets/SIMUS/Scenes/npc_follow_test/CompletedMapNpcFollow.unity`입니다.
+장면을 열고 Play를 누르면 `Test NPC - HairFix 01`이 보도 구간을 왕복하고 Main Camera가 즉시 추적합니다.
+`SIMUS/Art/characters/modular_hairfix_v001/models`의 캐릭터를 사용하며,
+01번 헤어만 표시하고 Walk 애니메이션을 반복합니다. 기본 추적 크기는 7, 평활 시간은 0.25초입니다.
+`Camera test segment`의 Start/End로 테스트 구간을 조정할 수 있습니다.
+이 구간은 새 맵 FBX의 보도 표면을 검사해 만든 로컬 테스트이며 전시 회차·서버 경로와 무관합니다.
+서버 없이 실행되며 기본 빌드 장면도 이 장면으로 설정됩니다.
+`SIMUS > Build Completed Map NPC Follow Test`로 테스트 장면을 재생성할 수 있습니다(장면 내 수동 설정은 재생성됩니다).
+기존 `NeighborhoodLive`의 시제품 연결은 보존합니다.
+Overview/Top view/우클릭 이동은 추적을 해제하고, 화면의 Follow NPC 버튼 또는 F 키로 복귀합니다.
+웹 빌드 및 휴대폰 실기기 검증은 별도입니다.
+
 2026-09-29 통합 장면은 `Assets/Scenes/NeighborhoodLive.unity`입니다.
 Unity 6000.3.24f1에서 본 서버 `/api/city-state`를 읽는 폴러·HUD와 동네 맵·NPC 미리보기·임시 도시 연출을 연결합니다.
 원본 `Neighborhood.unity`는 정적 맵으로 보존합니다.
@@ -8,7 +33,7 @@ Unity 6000.3.24f1에서 본 서버 `/api/city-state`를 읽는 폴러·HUD와 �
 
 통합 장면의 `SIMUS Connected Neighborhood`에서 Server Base Url을 설정하세요.
 `SIMUS > Build Connected Neighborhood`는 원본 맵에서 파생 장면을 재생성합니다.
-기본 빌드 목록은 NeighborhoodLive입니다. Windows/WebGL 실제 빌드 검증은 별도입니다.
+당시 기본 빌드 장면은 NeighborhoodLive였으며, 현재는 위 새 맵 추적 테스트 장면입니다. Windows/WebGL 실제 빌드 검증은 별도입니다.
 
 빈 장면용 기존 클라이언트와 [도시 표현 규칙](VISUALIZATION.md)도 유지합니다.
 

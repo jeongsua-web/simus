@@ -1,0 +1,16 @@
+{
+  "moved_files": 1442,
+  "hashes_verified_at_move": true,
+  "scene_controller_external_guids": 5,
+  "missing_guids": [],
+  "scene_path": "unity/Assets/SIMUS/Scenes/npc_follow_test/CompletedMapNpcFollow.unity",
+  "guid_targets": {
+    "0fa844b1469ae42758e41283c85a8ff7": "unity/Assets/Scripts/TestNpcPatrol.cs.meta",
+    "19a44ef6ec9a347fba80d7baec448459": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Unity_HairFix.fbx.meta",
+    "51203a64d6c944cf38a4623cf3b35e34": "unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Dense_Realistic_University_Map_03.fbx.meta",
+    "861ac948181764e66a600ba5d2cb4997": "unity/Assets/SIMUS/Scenes/npc_follow_test/TestNpcWalk.controller.meta",
+    "c23ae79a8389140a89904cfbd55a0288": "unity/Assets/Scripts/CityPreviewCamera.cs.meta"
+  },
+  "unity_playmode": "not_completed: batch validation stopped after more than five minutes in large .blend conversion",
+  "unity_import": "new scene, map FBX and HairFix FBX recognized at relocated paths"
+}

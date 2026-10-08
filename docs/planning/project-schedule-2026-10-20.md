@@ -4,7 +4,7 @@
 
 사용자 결정: F01~F27 모두 필수. 정수아 총괄·운영(주 5시간), 손민경 Blender 제작(가용 시간 미정). Android/iOS 웹, PostgreSQL 유지, 회차당 약 500명 계획. [상세 결정 기록](project-decisions-2026-09-29.md). 추가 결정: 웹 푸시·타기기 결과 조회 필수, 콘텐츠 30상황/91선택지, 전시 3일에 하루 1회차(각 1~2시간). 이메일·사용자 결과 다운로드는 선택 범위. 입장/미응답 결과·점수 범위·선마감 제거 마이그레이션을 구현 범위에 포함한다. 아래 일정은 남은 인력·운영값 확인 전 목표이며 완료 가능성을 확약하지 않는다.
 
-> 9/29 통합 후 재점검: `6df8684`에서 코드 통합, 현재 HEAD `9552aca`에서 사본 231개 파일의 Git 보관을 확인했습니다. 기준은 `web/` + `db/` + `unity/`입니다. 최신 항목별 상태·두 구현 비교·담당 배정안·결정 대장은 [10/20 완료 기준](project-baseline-2026-10-20.md)을 따릅니다. 아래 초기 현황 및 통합 문제는 통합 전 기록으로 보존하며 신규 작업으로 다시 배정하지 않습니다. 실기기·배포·미구현 기능 일정은 가용 인력 확인 전 목표 일정입니다.
+> 9/29 통합 후 재점검: `6df8684`에서 코드 통합, 당시 HEAD `9552aca`에서 사본 231개 파일의 Git 보관을 확인했습니다. 기준은 `web/` + `db/` + `unity/`입니다. 최신 항목별 상태·두 구현 비교·담당 배정안·결정 대장은 [10/20 완료 기준](project-baseline-2026-10-20.md)을 따릅니다. 아래 초기 현황 및 통합 문제는 통합 전 기록으로 보존하며 신규 작업으로 다시 배정하지 않습니다. 실기기·배포·미구현 기능 일정은 가용 인력 확인 전 목표 일정입니다.
 
 ## 초기 판단과 계획 전제 (통합 전 기록)
 
@@ -32,7 +32,7 @@
 ### 당시 통합 문제 (9/29 통합·보관 완료, 아래는 과거 기록)
 
 - `web/` + `db/` + `unity/`와 `simus-stage4-8/prototype/`는 별도 구현이다. 본 서버는 `/api/city-state`, 사본 서버는 `/api/state`를 사용하므로 사본의 테스트 통과가 본 프로젝트 전체 통과를 뜻하지 않는다.
-- `simus-stage4-8/` 전체가 현재 Git에서 미추적 상태다. 필요한 소스·자산·검증 자료를 선별하고 캐시·비밀값·빌드를 제외한 뒤 버전 관리해야 한다.
+- 초기 조사 당시 `simus-stage4-8/`는 미추적 상태였으나 이후 231개 파일을 Git에 보관했다. 2026-10-08 시제품 폴더를 삭제했으며 원본은 Git 이력에서 확인한다.
 - 루트 README의 Unity Editor/ProjectSettings/장면 부재 설명은 현재 파일 상태와 맞지 않는다. 통합 기준을 정한 후 문서를 최신화해야 한다.
 - 제안: 본 저장소 Next.js/PostgreSQL을 기준으로 사본의 검증된 화면·Unity 연출을 이식한다. 9/30까지 실제 이식 비용을 확인하고 최종 기준을 확정한다.
 
@@ -114,12 +114,12 @@
 - [전체 요구사항](requirements.md)
 - [본 저장소 통합 검증](../verification/integration-report.md), [시연 검증](../verification/demo-validation.md)
 - [Unity 원본 검증과 병합 한계](../unity-neighborhood/verification.md)
-- [4~8단계 진행 상태](../../simus-stage4-8/prototype/진행상태.md)
-- [4~8단계 통합 검증](../../simus-stage4-8/prototype/integration/검증결과.md)
-- [4~8단계 Unity 검증](../../simus-stage4-8/prototype/unity/Verification/검증결과.md)
-- [모바일 NPC 방식 검토](../../simus-stage4-8/prototype/contracts/NPC_제공방식_검토.md)
+- 4~8단계 진행 상태: 삭제 전 Git 이력의 `simus-stage4-8/prototype/진행상태.md`
+- 4~8단계 통합 검증: 삭제 전 Git 이력의 `simus-stage4-8/prototype/integration/검증결과.md`
+- 4~8단계 Unity 검증: 삭제 전 Git 이력의 `simus-stage4-8/prototype/unity/Verification/검증결과.md`
+- 모바일 NPC 방식 검토: 삭제 전 Git 이력의 `simus-stage4-8/prototype/contracts/NPC_제공방식_검토.md`
 
-초기 조사 당시 소스: `web/src/app/api/`, `unity/Assets/SIMUS/Runtime/CityStatePoller.cs`, `unity/ProjectSettings/ProjectVersion.txt`, `simus-stage4-8/prototype/server.py`. 당시 HEAD는 `b7ac890`이었다. 통합 후 재점검 HEAD는 `9552aca`이며 사본도 Git에 보관되어 있다. 최신 비교 근거는 [완료 기준](project-baseline-2026-10-20.md)을 확인한다.
+초기 조사 당시 소스: `web/src/app/api/`, `unity/Assets/SIMUS/Runtime/CityStatePoller.cs`, `unity/ProjectSettings/ProjectVersion.txt`, `simus-stage4-8/prototype/server.py`. 당시 HEAD는 `b7ac890`이었다. 통합 후 재점검 HEAD는 `9552aca`이며 사본도 당시 Git에 보관했다. 2026-10-08 폴더 삭제 전 자료는 커밋 `e0be15016992a46025b5a38b870734a4683006c1`에서 확인한다. 최신 비교 근거는 [완료 기준](project-baseline-2026-10-20.md)을 확인한다.
 
 ## 3A 착수·서버 구현 기록 — 2026-09-29
 

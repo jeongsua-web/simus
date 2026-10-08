@@ -1,0 +1,1575 @@
+{
+  "name": "SIMUS Garden Apartment Complex",
+  "site_m": [
+    180,
+    164
+  ],
+  "tower_count": 7,
+  "parking_bays": 64,
+  "source_assets": [
+    "Apartments/APARTMENT_A_MIDRISE",
+    "Parks/POCKET_PLAY_PARK",
+    "Parks/MODERN_MINIMAL_PARK",
+    "Props/STREET_TREE",
+    "Props/REUSED_BENCH",
+    "Props/WALK_LAMP",
+    "Props/PLANTER"
+  ],
+  "placements": [
+    {
+      "name": "Tower_101_Type_A",
+      "source": "APARTMENT_A_MIDRISE",
+      "position": [
+        -47,
+        47,
+        0.29
+      ],
+      "rotation_degrees": 90.0,
+      "scale": 1
+    },
+    {
+      "name": "Entrance planter",
+      "source": "PLANTER",
+      "position": [
+        -61,
+        38,
+        0.29
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Entrance planter",
+      "source": "PLANTER",
+      "position": [
+        -33,
+        38,
+        0.29
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Tower_102_Type_A",
+      "source": "APARTMENT_A_MIDRISE",
+      "position": [
+        0,
+        47,
+        0.29
+      ],
+      "rotation_degrees": 90.0,
+      "scale": 1
+    },
+    {
+      "name": "Entrance planter",
+      "source": "PLANTER",
+      "position": [
+        -14,
+        38,
+        0.29
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Entrance planter",
+      "source": "PLANTER",
+      "position": [
+        14,
+        38,
+        0.29
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Tower_103_Type_A",
+      "source": "APARTMENT_A_MIDRISE",
+      "position": [
+        47,
+        47,
+        0.29
+      ],
+      "rotation_degrees": 90.0,
+      "scale": 1
+    },
+    {
+      "name": "Entrance planter",
+      "source": "PLANTER",
+      "position": [
+        33,
+        38,
+        0.29
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Entrance planter",
+      "source": "PLANTER",
+      "position": [
+        61,
+        38,
+        0.29
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Tower_104_Type_A",
+      "source": "APARTMENT_A_MIDRISE",
+      "position": [
+        -50,
+        2,
+        0.29
+      ],
+      "rotation_degrees": 90.0,
+      "scale": 1
+    },
+    {
+      "name": "Entrance planter",
+      "source": "PLANTER",
+      "position": [
+        -64,
+        -7,
+        0.29
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Entrance planter",
+      "source": "PLANTER",
+      "position": [
+        -36,
+        -7,
+        0.29
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Tower_105_Type_A",
+      "source": "APARTMENT_A_MIDRISE",
+      "position": [
+        50,
+        2,
+        0.29
+      ],
+      "rotation_degrees": 90.0,
+      "scale": 1
+    },
+    {
+      "name": "Entrance planter",
+      "source": "PLANTER",
+      "position": [
+        36,
+        -7,
+        0.29
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Entrance planter",
+      "source": "PLANTER",
+      "position": [
+        64,
+        -7,
+        0.29
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Tower_106_Type_A",
+      "source": "APARTMENT_A_MIDRISE",
+      "position": [
+        -37,
+        -46,
+        0.29
+      ],
+      "rotation_degrees": 90.0,
+      "scale": 1
+    },
+    {
+      "name": "Entrance planter",
+      "source": "PLANTER",
+      "position": [
+        -51,
+        -55,
+        0.29
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Entrance planter",
+      "source": "PLANTER",
+      "position": [
+        -23,
+        -55,
+        0.29
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Tower_107_Type_A",
+      "source": "APARTMENT_A_MIDRISE",
+      "position": [
+        37,
+        -46,
+        0.29
+      ],
+      "rotation_degrees": 90.0,
+      "scale": 1
+    },
+    {
+      "name": "Entrance planter",
+      "source": "PLANTER",
+      "position": [
+        23,
+        -55,
+        0.29
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Entrance planter",
+      "source": "PLANTER",
+      "position": [
+        51,
+        -55,
+        0.29
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Children playground",
+      "source": "POCKET_PLAY_PARK",
+      "position": [
+        -56,
+        -29,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Quiet residents garden",
+      "source": "MODERN_MINIMAL_PARK",
+      "position": [
+        56,
+        29,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Central terrace bench",
+      "source": "REUSED_BENCH",
+      "position": [
+        -6,
+        -13,
+        0.2
+      ],
+      "rotation_degrees": 90.0,
+      "scale": 1
+    },
+    {
+      "name": "Central terrace bench",
+      "source": "REUSED_BENCH",
+      "position": [
+        6,
+        -13,
+        0.2
+      ],
+      "rotation_degrees": 90.0,
+      "scale": 1
+    },
+    {
+      "name": "Park bench",
+      "source": "REUSED_BENCH",
+      "position": [
+        -13,
+        -23,
+        0.3
+      ],
+      "rotation_degrees": 180.0,
+      "scale": 1
+    },
+    {
+      "name": "Park bench",
+      "source": "REUSED_BENCH",
+      "position": [
+        13,
+        -23,
+        0.3
+      ],
+      "rotation_degrees": 180.0,
+      "scale": 1
+    },
+    {
+      "name": "Park bench",
+      "source": "REUSED_BENCH",
+      "position": [
+        -13,
+        22,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Park bench",
+      "source": "REUSED_BENCH",
+      "position": [
+        13,
+        22,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Park avenue tree",
+      "source": "STREET_TREE",
+      "position": [
+        -31,
+        -22,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Park avenue tree",
+      "source": "STREET_TREE",
+      "position": [
+        -31,
+        -12,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Park avenue tree",
+      "source": "STREET_TREE",
+      "position": [
+        -31,
+        0,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Park avenue tree",
+      "source": "STREET_TREE",
+      "position": [
+        -31,
+        12,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Park avenue tree",
+      "source": "STREET_TREE",
+      "position": [
+        -31,
+        23,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Park avenue tree",
+      "source": "STREET_TREE",
+      "position": [
+        31,
+        -22,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Park avenue tree",
+      "source": "STREET_TREE",
+      "position": [
+        31,
+        -12,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Park avenue tree",
+      "source": "STREET_TREE",
+      "position": [
+        31,
+        0,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Park avenue tree",
+      "source": "STREET_TREE",
+      "position": [
+        31,
+        12,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Park avenue tree",
+      "source": "STREET_TREE",
+      "position": [
+        31,
+        23,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Arrival avenue tree",
+      "source": "STREET_TREE",
+      "position": [
+        -9,
+        -60,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.2
+    },
+    {
+      "name": "Arrival avenue tree",
+      "source": "STREET_TREE",
+      "position": [
+        -9,
+        -53,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.2
+    },
+    {
+      "name": "Arrival avenue tree",
+      "source": "STREET_TREE",
+      "position": [
+        -9,
+        -46,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.2
+    },
+    {
+      "name": "Arrival avenue tree",
+      "source": "STREET_TREE",
+      "position": [
+        9,
+        -60,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.2
+    },
+    {
+      "name": "Arrival avenue tree",
+      "source": "STREET_TREE",
+      "position": [
+        9,
+        -53,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.2
+    },
+    {
+      "name": "Arrival avenue tree",
+      "source": "STREET_TREE",
+      "position": [
+        9,
+        -46,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.2
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -70,
+        -57,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -70,
+        -50,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -70,
+        -43,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -70,
+        -36,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -70,
+        -29,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -70,
+        -22,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -70,
+        -15,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -70,
+        -8,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -70,
+        -1,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -70,
+        6,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -70,
+        13,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -70,
+        20,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -70,
+        27,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -70,
+        34,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -70,
+        41,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -70,
+        48,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -70,
+        55,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        70,
+        -57,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        70,
+        -50,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        70,
+        -43,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        70,
+        -36,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        70,
+        -29,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        70,
+        -22,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        70,
+        -15,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        70,
+        -8,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        70,
+        -1,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        70,
+        6,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        70,
+        13,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        70,
+        20,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        70,
+        27,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        70,
+        34,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        70,
+        41,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        70,
+        48,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        70,
+        55,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.3
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -63,
+        -61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -56,
+        -61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -49,
+        -61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -42,
+        -61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -35,
+        -61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -28,
+        -61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -21,
+        -61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -14,
+        -61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        14,
+        -61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        21,
+        -61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        28,
+        -61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        35,
+        -61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        42,
+        -61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        49,
+        -61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        56,
+        -61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        63,
+        -61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -63,
+        61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -56,
+        61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -49,
+        61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -42,
+        61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -35,
+        61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -28,
+        61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -21,
+        61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        -14,
+        61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        14,
+        61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        21,
+        61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        28,
+        61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        35,
+        61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        42,
+        61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        49,
+        61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        56,
+        61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Boundary tree",
+      "source": "STREET_TREE",
+      "position": [
+        63,
+        61,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.25
+    },
+    {
+      "name": "Building garden tree",
+      "source": "STREET_TREE",
+      "position": [
+        -65,
+        -20,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.15
+    },
+    {
+      "name": "Building garden tree",
+      "source": "STREET_TREE",
+      "position": [
+        -44,
+        -20,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.15
+    },
+    {
+      "name": "Building garden tree",
+      "source": "STREET_TREE",
+      "position": [
+        44,
+        -20,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.15
+    },
+    {
+      "name": "Building garden tree",
+      "source": "STREET_TREE",
+      "position": [
+        65,
+        -20,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.15
+    },
+    {
+      "name": "Building garden tree",
+      "source": "STREET_TREE",
+      "position": [
+        -65,
+        21,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.15
+    },
+    {
+      "name": "Building garden tree",
+      "source": "STREET_TREE",
+      "position": [
+        -44,
+        21,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.15
+    },
+    {
+      "name": "Building garden tree",
+      "source": "STREET_TREE",
+      "position": [
+        44,
+        21,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.15
+    },
+    {
+      "name": "Building garden tree",
+      "source": "STREET_TREE",
+      "position": [
+        65,
+        21,
+        0.17
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1.15
+    },
+    {
+      "name": "Park lamp",
+      "source": "WALK_LAMP",
+      "position": [
+        -25,
+        -23,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Park lamp",
+      "source": "WALK_LAMP",
+      "position": [
+        -25,
+        -7,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Park lamp",
+      "source": "WALK_LAMP",
+      "position": [
+        -25,
+        9,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Park lamp",
+      "source": "WALK_LAMP",
+      "position": [
+        -25,
+        25,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Park lamp",
+      "source": "WALK_LAMP",
+      "position": [
+        25,
+        -23,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Park lamp",
+      "source": "WALK_LAMP",
+      "position": [
+        25,
+        -7,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Park lamp",
+      "source": "WALK_LAMP",
+      "position": [
+        25,
+        9,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Park lamp",
+      "source": "WALK_LAMP",
+      "position": [
+        25,
+        25,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Arrival lamp",
+      "source": "WALK_LAMP",
+      "position": [
+        -5,
+        -57,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Arrival lamp",
+      "source": "WALK_LAMP",
+      "position": [
+        5,
+        -57,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Arrival lamp",
+      "source": "WALK_LAMP",
+      "position": [
+        -5,
+        -44,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Arrival lamp",
+      "source": "WALK_LAMP",
+      "position": [
+        5,
+        -44,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Arrival lamp",
+      "source": "WALK_LAMP",
+      "position": [
+        -5,
+        -31,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Arrival lamp",
+      "source": "WALK_LAMP",
+      "position": [
+        5,
+        -31,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Boundary lamp",
+      "source": "WALK_LAMP",
+      "position": [
+        -72,
+        -50,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Boundary lamp",
+      "source": "WALK_LAMP",
+      "position": [
+        -72,
+        -24,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Boundary lamp",
+      "source": "WALK_LAMP",
+      "position": [
+        -72,
+        24,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Boundary lamp",
+      "source": "WALK_LAMP",
+      "position": [
+        -72,
+        50,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Boundary lamp",
+      "source": "WALK_LAMP",
+      "position": [
+        72,
+        -50,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Boundary lamp",
+      "source": "WALK_LAMP",
+      "position": [
+        72,
+        -24,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Boundary lamp",
+      "source": "WALK_LAMP",
+      "position": [
+        72,
+        24,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    },
+    {
+      "name": "Boundary lamp",
+      "source": "WALK_LAMP",
+      "position": [
+        72,
+        50,
+        0.3
+      ],
+      "rotation_degrees": 0.0,
+      "scale": 1
+    }
+  ],
+  "exchange_exports_exclude_presentation": true,
+  "unity_import_verified": false,
+  "navigation_or_colliders_generated": false,
+  "tower_bounds_overlap": false
+}

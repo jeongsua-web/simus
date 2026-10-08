@@ -12,6 +12,7 @@ namespace Simus.City {
   float elapsed; string round="";
   void Awake(){if(npcClient==null){npcClient=GetComponent<NpcCrowdPoller>();if(npcClient==null)npcClient=gameObject.AddComponent<NpcCrowdPoller>();npcClient.city=client;}}
   public float Elapsed=>elapsed;
+  public Transform FindNpc(string npcId){return !string.IsNullOrEmpty(npcId)&&liveNpcs.TryGetValue(npcId,out var npc)?npc:null;}
   void Update(){if(client==null||client.Store.Current==null)return;var state=client.Store.Current;if(round!=state.SessionId){round=state.SessionId;elapsed=0;}if(client.Store.Connection!=CityConnection.Connected)return;if(state.Status!="FINALIZED"&&state.Status!="CLOSING")elapsed+=Time.deltaTime; RenderNpcs(state.SessionId);RenderSettings.fog=(float)(state.OverallPollution ?? 0)>=pollutionThreshold;RenderSettings.fogMode=FogMode.Exponential;RenderSettings.fogDensity=.001f+(float)(state.OverallPollution ?? 0)*.00004f;RenderSettings.fogColor=new Color(.48f,.47f,.42f); Set(moodBeacon,state.Happiness>=highHappinessThreshold?Color.green:Color.gray);Set(cleanlinessBeacon,state.Cleanliness<lowCleanlinessThreshold?new Color(.6f,.3f,.08f):Color.cyan);Set(safetyBeacon,state.Safety<lowSafetyThreshold?Color.red:Color.blue);}
   void RenderNpcs(string sessionId){
    var crowd=npcClient!=null?npcClient.Current:null;

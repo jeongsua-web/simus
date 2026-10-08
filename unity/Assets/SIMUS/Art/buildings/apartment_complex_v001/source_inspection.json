@@ -1,0 +1,317 @@
+{
+  "Apartments/APARTMENT_A_MIDRISE": {
+    "collections": [
+      [
+        "ASSET_PARTS_APARTMENT_A_MIDRISE",
+        838
+      ]
+    ],
+    "sample_meshes": [
+      "ASSET_APARTMENT_A_MIDRISE__R02_VARIANT_FIX_A_Floor_0",
+      "ASSET_APARTMENT_A_MIDRISE__R02_VARIANT_FIX_A_Floor_1",
+      "ASSET_APARTMENT_A_MIDRISE__R02_VARIANT_FIX_A_Floor_12",
+      "ASSET_APARTMENT_A_MIDRISE__R02_VARIANT_FIX_A_Floor_13",
+      "ASSET_APARTMENT_A_MIDRISE__R02_VARIANT_FIX_A_Floor_14",
+      "ASSET_APARTMENT_A_MIDRISE__R02_VARIANT_FIX_A_Floor_15",
+      "ASSET_APARTMENT_A_MIDRISE__R02_VARIANT_FIX_A_Floor_16",
+      "ASSET_APARTMENT_A_MIDRISE__R02_VARIANT_FIX_A_Floor_17",
+      "ASSET_APARTMENT_A_MIDRISE__R02_VARIANT_FIX_A_Floor_18",
+      "ASSET_APARTMENT_A_MIDRISE__R02_VARIANT_FIX_A_Floor_19",
+      "ASSET_APARTMENT_A_MIDRISE__R02_VARIANT_FIX_A_Floor_20",
+      "ASSET_APARTMENT_A_MIDRISE__R02_VARIANT_FIX_A_Floor_21"
+    ],
+    "bounds": [
+      [
+        -7.470005035400391,
+        7.469993591308594
+      ],
+      [
+        -17.09000015258789,
+        17.09000015258789
+      ],
+      [
+        0.0,
+        43.47999954223633
+      ]
+    ],
+    "images": []
+  },
+  "Apartments/APARTMENT_B_MIDRISE": {
+    "collections": [
+      [
+        "ASSET_PARTS_APARTMENT_B_MIDRISE",
+        856
+      ]
+    ],
+    "sample_meshes": [
+      "ASSET_APARTMENT_B_MIDRISE__R02_VARIANT_FIX_B_Floor_0",
+      "ASSET_APARTMENT_B_MIDRISE__R02_VARIANT_FIX_B_Floor_1",
+      "ASSET_APARTMENT_B_MIDRISE__R02_VARIANT_FIX_B_Floor_14",
+      "ASSET_APARTMENT_B_MIDRISE__R02_VARIANT_FIX_B_Floor_15",
+      "ASSET_APARTMENT_B_MIDRISE__R02_VARIANT_FIX_B_Floor_16",
+      "ASSET_APARTMENT_B_MIDRISE__R02_VARIANT_FIX_B_Floor_17",
+      "ASSET_APARTMENT_B_MIDRISE__R02_VARIANT_FIX_B_Floor_18",
+      "ASSET_APARTMENT_B_MIDRISE__R02_VARIANT_FIX_B_Floor_19",
+      "ASSET_APARTMENT_B_MIDRISE__R02_VARIANT_FIX_B_Floor_20",
+      "ASSET_APARTMENT_B_MIDRISE__R02_VARIANT_FIX_B_Floor_21",
+      "ASSET_APARTMENT_B_MIDRISE__R02_VARIANT_FIX_B_Floor_22",
+      "ASSET_APARTMENT_B_MIDRISE__R02_VARIANT_FIX_B_Floor_23"
+    ],
+    "bounds": [
+      [
+        -11.09000015258789,
+        11.09000015258789
+      ],
+      [
+        -11.444997787475586,
+        11.445003509521484
+      ],
+      [
+        0.0,
+        49.60000228881836
+      ]
+    ],
+    "images": []
+  },
+  "Apartments/APARTMENT_C_MIDRISE": {
+    "collections": [
+      [
+        "ASSET_PARTS_APARTMENT_C_MIDRISE",
+        486
+      ]
+    ],
+    "sample_meshes": [
+      "ASSET_APARTMENT_C_MIDRISE__R02_VARIANT_FIX_C_Floor_0",
+      "ASSET_APARTMENT_C_MIDRISE__R02_VARIANT_FIX_C_Floor_1",
+      "ASSET_APARTMENT_C_MIDRISE__R02_VARIANT_FIX_C_Floor_10",
+      "ASSET_APARTMENT_C_MIDRISE__R02_VARIANT_FIX_C_Floor_11",
+      "ASSET_APARTMENT_C_MIDRISE__R02_VARIANT_FIX_C_Floor_12",
+      "ASSET_APARTMENT_C_MIDRISE__R02_VARIANT_FIX_C_Floor_13",
+      "ASSET_APARTMENT_C_MIDRISE__R02_VARIANT_FIX_C_Floor_14",
+      "ASSET_APARTMENT_C_MIDRISE__R02_VARIANT_FIX_C_Floor_15",
+      "ASSET_APARTMENT_C_MIDRISE__R02_VARIANT_FIX_C_Floor_16",
+      "ASSET_APARTMENT_C_MIDRISE__R02_VARIANT_FIX_C_Floor_17",
+      "ASSET_APARTMENT_C_MIDRISE__R02_VARIANT_FIX_C_Floor_18",
+      "ASSET_APARTMENT_C_MIDRISE__R02_VARIANT_FIX_C_Floor_19"
+    ],
+    "bounds": [
+      [
+        -10.09000015258789,
+        10.09000015258789
+      ],
+      [
+        -15.044998168945312,
+        15.045001983642578
+      ],
+      [
+        0.0,
+        37.599998474121094
+      ]
+    ],
+    "images": []
+  },
+  "Parks/POCKET_PLAY_PARK": {
+    "collections": [
+      [
+        "ASSET_PARTS_POCKET_PLAY_PARK",
+        150
+      ]
+    ],
+    "sample_meshes": [
+      "ASSET_POCKET_PLAY_PARK__R02_SOURCE_POCKET_PLAY_PARK_Site",
+      "ASSET_POCKET_PLAY_PARK__R02_SOURCE_POCKET_PLAY_PARK_Play_Zone",
+      "ASSET_POCKET_PLAY_PARK__R02_SOURCE_POCKET_PLAY_PARK_Accessible_Entry",
+      "ASSET_POCKET_PLAY_PARK__R02_SOURCE_POCKET_PLAY_PARK_Shade_Tree_1_Trunk",
+      "ASSET_POCKET_PLAY_PARK__R02_SOURCE_POCKET_PLAY_PARK_Shade_Tree_1_Branch_0",
+      "ASSET_POCKET_PLAY_PARK__R02_SOURCE_POCKET_PLAY_PARK_Shade_Tree_1_Canopy_0",
+      "ASSET_POCKET_PLAY_PARK__R02_SOURCE_POCKET_PLAY_PARK_Shade_Tree_1_Branch_1",
+      "ASSET_POCKET_PLAY_PARK__R02_SOURCE_POCKET_PLAY_PARK_Shade_Tree_1_Canopy_1",
+      "ASSET_POCKET_PLAY_PARK__R02_SOURCE_POCKET_PLAY_PARK_Shade_Tree_1_Branch_2",
+      "ASSET_POCKET_PLAY_PARK__R02_SOURCE_POCKET_PLAY_PARK_Shade_Tree_1_Canopy_2",
+      "ASSET_POCKET_PLAY_PARK__R02_SOURCE_POCKET_PLAY_PARK_Shade_Tree_1_Branch_3",
+      "ASSET_POCKET_PLAY_PARK__R02_SOURCE_POCKET_PLAY_PARK_Shade_Tree_1_Canopy_3"
+    ],
+    "bounds": [
+      [
+        -6.0,
+        6.0
+      ],
+      [
+        -6.0,
+        6.0
+      ],
+      [
+        0.0,
+        4.231047630310059
+      ]
+    ],
+    "images": []
+  },
+  "Parks/MODERN_MINIMAL_PARK": {
+    "collections": [
+      [
+        "ASSET_PARTS_MODERN_MINIMAL_PARK",
+        94
+      ]
+    ],
+    "sample_meshes": [
+      "ASSET_MODERN_MINIMAL_PARK__R02_SOURCE_MODERN_MINIMAL_PARK_Site",
+      "ASSET_MODERN_MINIMAL_PARK__R02_SOURCE_MODERN_MINIMAL_PARK_Paving_Joint_-5",
+      "ASSET_MODERN_MINIMAL_PARK__R02_SOURCE_MODERN_MINIMAL_PARK_Paving_Joint_-3",
+      "ASSET_MODERN_MINIMAL_PARK__R02_SOURCE_MODERN_MINIMAL_PARK_Paving_Joint_-1",
+      "ASSET_MODERN_MINIMAL_PARK__R02_SOURCE_MODERN_MINIMAL_PARK_Paving_Joint_1",
+      "ASSET_MODERN_MINIMAL_PARK__R02_SOURCE_MODERN_MINIMAL_PARK_Paving_Joint_3",
+      "ASSET_MODERN_MINIMAL_PARK__R02_SOURCE_MODERN_MINIMAL_PARK_Paving_Joint_5",
+      "ASSET_MODERN_MINIMAL_PARK__R02_SOURCE_MODERN_MINIMAL_PARK_Main_Promenade",
+      "ASSET_MODERN_MINIMAL_PARK__R02_SOURCE_MODERN_MINIMAL_PARK_Long_Lawn_Bed",
+      "ASSET_MODERN_MINIMAL_PARK__R02_SOURCE_MODERN_MINIMAL_PARK_Ornamental_Tree_1_Trunk",
+      "ASSET_MODERN_MINIMAL_PARK__R02_SOURCE_MODERN_MINIMAL_PARK_Ornamental_Tree_1_Branch_0",
+      "ASSET_MODERN_MINIMAL_PARK__R02_SOURCE_MODERN_MINIMAL_PARK_Ornamental_Tree_1_Canopy_0"
+    ],
+    "bounds": [
+      [
+        -6.0,
+        6.0
+      ],
+      [
+        -6.0,
+        6.0
+      ],
+      [
+        0.0,
+        3.830845355987549
+      ]
+    ],
+    "images": []
+  },
+  "Props/STREET_TREE": {
+    "collections": [
+      [
+        "ASSET_PARTS_STREET_TREE",
+        3
+      ]
+    ],
+    "sample_meshes": [
+      "ASSET_STREET_TREE__R02_SOURCE_Tree crown.002",
+      "ASSET_STREET_TREE__R02_SOURCE_Tree trunk.106"
+    ],
+    "bounds": [
+      [
+        -1.3607906103134155,
+        1.3607906103134155
+      ],
+      [
+        -1.2941757440567017,
+        1.2941757440567017
+      ],
+      [
+        7.99632360326541e-08,
+        4.754418849945068
+      ]
+    ],
+    "images": []
+  },
+  "Props/REUSED_BENCH": {
+    "collections": [
+      [
+        "ASSET_PARTS_REUSED_BENCH",
+        16
+      ]
+    ],
+    "sample_meshes": [
+      "ASSET_REUSED_BENCH__D03_PROP_SOURCE_REUSED_BENCH_R02_SOURCE_ECO_RAIN_GARDEN_Recycled_Bench_01_SeatSlat_0",
+      "ASSET_REUSED_BENCH__D03_PROP_SOURCE_REUSED_BENCH_R02_SOURCE_ECO_RAIN_GARDEN_Recycled_Bench_01_SeatSlat_1",
+      "ASSET_REUSED_BENCH__D03_PROP_SOURCE_REUSED_BENCH_R02_SOURCE_ECO_RAIN_GARDEN_Recycled_Bench_01_SeatSlat_2",
+      "ASSET_REUSED_BENCH__D03_PROP_SOURCE_REUSED_BENCH_R02_SOURCE_ECO_RAIN_GARDEN_Recycled_Bench_01_SeatSlat_3",
+      "ASSET_REUSED_BENCH__D03_PROP_SOURCE_REUSED_BENCH_R02_SOURCE_ECO_RAIN_GARDEN_Recycled_Bench_01_BackSlat_0",
+      "ASSET_REUSED_BENCH__D03_PROP_SOURCE_REUSED_BENCH_R02_SOURCE_ECO_RAIN_GARDEN_Recycled_Bench_01_BackSlat_1",
+      "ASSET_REUSED_BENCH__D03_PROP_SOURCE_REUSED_BENCH_R02_SOURCE_ECO_RAIN_GARDEN_Recycled_Bench_01_BackSlat_2",
+      "ASSET_REUSED_BENCH__D03_PROP_SOURCE_REUSED_BENCH_R02_SOURCE_ECO_RAIN_GARDEN_Recycled_Bench_01_Leg_00",
+      "ASSET_REUSED_BENCH__D03_PROP_SOURCE_REUSED_BENCH_R02_SOURCE_ECO_RAIN_GARDEN_Recycled_Bench_01_Leg_01",
+      "ASSET_REUSED_BENCH__D03_PROP_SOURCE_REUSED_BENCH_R02_SOURCE_ECO_RAIN_GARDEN_Recycled_Bench_01_BackUpright_0",
+      "ASSET_REUSED_BENCH__D03_PROP_SOURCE_REUSED_BENCH_R02_SOURCE_ECO_RAIN_GARDEN_Recycled_Bench_01_Arm_0",
+      "ASSET_REUSED_BENCH__D03_PROP_SOURCE_REUSED_BENCH_R02_SOURCE_ECO_RAIN_GARDEN_Recycled_Bench_01_Leg_10"
+    ],
+    "bounds": [
+      [
+        -0.9000015258789062,
+        0.899993896484375
+      ],
+      [
+        -0.2837495803833008,
+        0.2837505340576172
+      ],
+      [
+        0.0,
+        0.9725000262260437
+      ]
+    ],
+    "images": []
+  },
+  "Props/WALK_LAMP": {
+    "collections": [
+      [
+        "ASSET_PARTS_WALK_LAMP",
+        5
+      ]
+    ],
+    "sample_meshes": [
+      "ASSET_WALK_LAMP__D03_PROP_SOURCE_WALK_LAMP_R02_SOURCE_COZY_NEIGHBORHOOD_PARK_Warm_Walk_Lamp_01_Base",
+      "ASSET_WALK_LAMP__D03_PROP_SOURCE_WALK_LAMP_R02_SOURCE_COZY_NEIGHBORHOOD_PARK_Warm_Walk_Lamp_01_Post",
+      "ASSET_WALK_LAMP__D03_PROP_SOURCE_WALK_LAMP_R02_SOURCE_COZY_NEIGHBORHOOD_PARK_Warm_Walk_Lamp_01_Lantern",
+      "ASSET_WALK_LAMP__D03_PROP_SOURCE_WALK_LAMP_R02_SOURCE_COZY_NEIGHBORHOOD_PARK_Warm_Walk_Lamp_01_Cap"
+    ],
+    "bounds": [
+      [
+        -0.20999908447265625,
+        0.2100067138671875
+      ],
+      [
+        -0.21000003814697266,
+        0.21000003814697266
+      ],
+      [
+        0.0,
+        2.4200000762939453
+      ]
+    ],
+    "images": []
+  },
+  "Props/PLANTER": {
+    "collections": [
+      [
+        "ASSET_PARTS_PLANTER",
+        15
+      ]
+    ],
+    "sample_meshes": [
+      "ASSET_PLANTER__D03_PROP_SOURCE_PLANTER_R02_SOURCE_MINI_PLAZA_PARK_Square_Planter_0",
+      "ASSET_PLANTER__D03_PROP_SOURCE_PLANTER_R02_SOURCE_MINI_PLAZA_PARK_Planter_Soil_0",
+      "ASSET_PLANTER__D03_PROP_SOURCE_PLANTER_R02_SOURCE_MINI_PLAZA_PARK_Planter_Tree_1_Trunk",
+      "ASSET_PLANTER__D03_PROP_SOURCE_PLANTER_R02_SOURCE_MINI_PLAZA_PARK_Planter_Tree_1_Branch_0",
+      "ASSET_PLANTER__D03_PROP_SOURCE_PLANTER_R02_SOURCE_MINI_PLAZA_PARK_Planter_Tree_1_Canopy_0",
+      "ASSET_PLANTER__D03_PROP_SOURCE_PLANTER_R02_SOURCE_MINI_PLAZA_PARK_Planter_Tree_1_Branch_1",
+      "ASSET_PLANTER__D03_PROP_SOURCE_PLANTER_R02_SOURCE_MINI_PLAZA_PARK_Planter_Tree_1_Canopy_1",
+      "ASSET_PLANTER__D03_PROP_SOURCE_PLANTER_R02_SOURCE_MINI_PLAZA_PARK_Planter_Tree_1_Branch_2",
+      "ASSET_PLANTER__D03_PROP_SOURCE_PLANTER_R02_SOURCE_MINI_PLAZA_PARK_Planter_Tree_1_Canopy_2",
+      "ASSET_PLANTER__D03_PROP_SOURCE_PLANTER_R02_SOURCE_MINI_PLAZA_PARK_Planter_Tree_1_Branch_3",
+      "ASSET_PLANTER__D03_PROP_SOURCE_PLANTER_R02_SOURCE_MINI_PLAZA_PARK_Planter_Tree_1_Canopy_3",
+      "ASSET_PLANTER__D03_PROP_SOURCE_PLANTER_R02_SOURCE_MINI_PLAZA_PARK_Planter_Tree_1_Branch_4"
+    ],
+    "bounds": [
+      [
+        -0.9437942504882812,
+        0.94378662109375
+      ],
+      [
+        -0.9189958572387695,
+        0.9189958572387695
+      ],
+      [
+        0.0,
+        4.3275957107543945
+      ]
+    ],
+    "images": []
+  }
+}

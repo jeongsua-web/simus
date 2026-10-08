@@ -2,6 +2,8 @@
 
 참여 `/participate`, 관리자 `/admin`, 본인 결과 `/result/{session_id}`와 API를 제공한다.
 
+모바일의 목표, 화면별 역할, 구현 순서와 완료 기준은 [모바일 경험과 구현 계획](../docs/planning/mobile-experience.md)을 참고한다.
+
 전체 실행 순서, DB 마이그레이션, 로컬 관리자 토큰 생성, 프로덕션 빌드·실행, 주소와 비밀 관리:
 [시연·배포 가이드](../docs/operations/demo-deployment.md).
 

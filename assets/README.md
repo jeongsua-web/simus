@@ -1,5 +1,7 @@
 # 전시용 에셋 관리
 
+에셋 작업 전 [정리 규칙](ASSET_RULES.md)을 읽는다. [탐색 목록](catalog/README.md)에서 원본·교환본·Unity 사용 위치를 찾고, [전체 파일 목록](catalog/inventory.json)은 `python3 scripts/assets/catalog.py`로 갱신한다. 기존 `assets/assets/`는 `library/`와 `archive/`로 정리했다.
+
 전시용 새 맵과 모델의 납품 상태는 [`manifest.csv`](manifest.csv)에서 관리한다. 이 목록의 `planned`는 필요한 항목을 뜻하며, 제작 완료나 규격 승인을 뜻하지 않는다. 새 맵의 `map_version`, 30개 상황 위치, 경로와 지역 경계는 [5A 인계](../docs/content/new-map-handoff-5a.md)에서 확정하기 전까지 비워 둔다.
 
 ## 현재 보유한 시제품 자산
@@ -7,10 +9,8 @@
 | 파일 | 크기 | SHA-256 | 용도 |
 |---|---:|---|---|
 | `unity/Assets/Art/Neighborhood.fbx` | 3,496,540 B | `ccd3d127fabe4d3a225e057cadda9775e2674336b8e09f452d2b68d8856513e8` | 기존 Unity 시제품 맵 |
-| `simus-stage4-8/prototype/unity/SIMUSPrototype/Assets/Art/Neighborhood.fbx` | 3,496,540 B | 위 FBX와 동일 | 시제품 사본 |
-| `simus-stage4-8/prototype/web/assets/neighborhood.glb` | 5,656,404 B | `23f4b04e336294479e72b6ad78ea0593a276dbc2c78d0fd13e6703e1939d787f` | 기존 웹 시제품 맵 |
 
-이 파일과 `unity/Assets/Materials`, `unity/Assets/Scenes/Neighborhood*.unity`는 시제품용이다. 새 전시용 맵의 위치, 동선, 최종 에셋으로 승인하지 않는다. `docs/unity-neighborhood`와 `simus-stage4-8/prototype/unity/Verification`의 같은 이름 PNG는 각각 바이트가 동일한 시제품 검증 이미지다. 파일을 옮기거나 삭제하지 않고 현 위치에서 출처를 보존한다.
+이 파일과 `unity/Assets/Materials`, `unity/Assets/Scenes/Neighborhood*.unity`는 시제품용이다. 새 전시용 맵의 위치, 동선, 최종 에셋으로 승인하지 않는다. 시제품 검증 이미지는 `docs/unity-neighborhood`에 남아 있다. 중복 FBX·검증 이미지와 기존 웹 GLB가 있던 `simus-stage4-8/`는 2026-10-08 삭제했다. 삭제한 자료는 Git 커밋 `e0be15016992a46025b5a38b870734a4683006c1`에서 확인할 수 있다.
 
 ## 접수한 새 건물 후보
 

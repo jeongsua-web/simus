@@ -5,6 +5,7 @@
 ## 기획과 콘텐츠
 
 - [전체 요구사항](planning/requirements.md)
+- [모바일 경험과 구현 계획](planning/mobile-experience.md)
 - [9/29 구현 조사와 10월 20일 완료 기준](planning/project-baseline-2026-10-20.md)
 - [확정 결정](planning/project-decisions-2026-09-29.md)
 - [진행 일정](planning/project-schedule-2026-10-20.md)
