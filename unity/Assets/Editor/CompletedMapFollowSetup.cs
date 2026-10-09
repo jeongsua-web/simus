@@ -85,6 +85,9 @@ public static class CompletedMapFollowSetup
         bodyBounds = renderers[0].bounds;
         foreach (var renderer in renderers) bodyBounds.Encapsulate(renderer.bounds);
         model.transform.position += new Vector3(start.x - bodyBounds.center.x, start.y - bodyBounds.min.y, start.z - bodyBounds.center.z);
+        // Humanoid clips use Unity Y-up; do not retain the imported FBX root tilt.
+        // Keep the rest-pose scale measurement above, then orient the animated model.
+        model.transform.localRotation = Quaternion.identity;
         var walk = AssetDatabase.LoadAllAssetsAtPath(CharacterPath).OfType<AnimationClip>()
             .FirstOrDefault(c => c.name == "NEUTRAL_WALK");
         if (walk == null) throw new InvalidOperationException("NEUTRAL_WALK clip is missing.");
