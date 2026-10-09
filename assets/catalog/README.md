@@ -23,8 +23,8 @@
 | 개별 건물·소품·공원 | [건물](../../unity/Assets/SIMUS/Art/buildings), [소품](../../unity/Assets/SIMUS/Art/props), [식생](../../unity/Assets/SIMUS/Art/vegetation), [도로](../../unity/Assets/SIMUS/Art/roads) | 제작 묶음, 개별 채택 미확인 |
 | 제작 미리보기·검증 | [맵 제작 보고서](../../assets/library/maps/university_v003/reports) | 제작 당시 자료 |
 | 아파트 묶음 | [아파트 v001](../../unity/Assets/SIMUS/Art/buildings/apartment_complex_v001), [통합 아파트 v001](../../unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001) | 두 버전 유지, 대체 여부 미확인 |
-| 캐릭터 | [HairFix v001](../../unity/Assets/SIMUS/Art/characters/modular_hairfix_v001) | HairFix만 유지. 이전 NPC 16종·모듈형 v001은 2026-10-08 삭제(Git 이력 참조) |
-| 추적 테스트 장면 | [NPC 추적 테스트](../../unity/Assets/SIMUS/Scenes/npc_follow_test) | 현재 활성 빌드 장면. HairFix FBX 사용 |
+| 캐릭터 | [HairFix v001](../../unity/Assets/SIMUS/Art/characters/modular_hairfix_v001) | Happiness_Animations 사용, CapFix 원본 및 역할 NPC 유지. HairFix 구버전·옛 백업은 2026-10-09 정리 |
+| 추적 테스트 장면 | [NPC 추적 테스트](../../unity/Assets/SIMUS/Scenes/npc_follow_test) | 현재 활성 빌드 장면. Happiness_Animations FBX / NEUTRAL_WALK 사용 |
 | 백화점 v2 | [department_store_v2](../../unity/Assets/department_store_v2) | manifest에 received로 등록, 전시 채택 미정 |
 | 이전 시제품 | [Neighborhood.fbx](../../unity/Assets/Art/Neighborhood.fbx), [Scenes](../../unity/Assets/Scenes), [Materials](../../unity/Assets/Materials) | 새 맵 배치 근거로 사용하지 않음 |
 
@@ -52,3 +52,11 @@
 ## 2026-10-09 환경 상태 및 역할 NPC
 
 [맵 업데이트](../library/maps/university_v003/Environment_States_v3.md) · [역할 NPC](../library/characters/role_variants_v001/README.md). 환경 상태 원본 교체 및 FBX 추가, 경찰·미화원·범죄자 추가. 기존 HairFix 및 기본 맵 FBX 연결 유지. Unity 재가져오기/Play Mode 미실행.
+
+## CapFix 행복도 애니메이션
+
+[결과 및 경로](../library/characters/modular_hairfix_v001/reports/happiness_animations/결과보고.md). 기존 캐릭터 models 폴더에 CapFix 원본과 행복도 수정본/FBX/검증된 Humanoid 메타 추가. 기존 HairFix 유지.
+
+## 2026-10-09 캐릭터 구버전 삭제 및 실행 연결 교체
+
+사용자 요청으로 이전 백업 모델 6개, HairFix 모델 2개 및 대응 메타, 옛 중첩 npc_follow_test 설정 폴더를 정리했습니다. [삭제 목록 및 해시](character-cleanup-2026-10-09.json), [재생 검사](character-follow-validation-2026-10-09.json). 현재 장면과 걷기 컨트롤러는 Happiness_Animations를 사용하며 CapFix 원본과 역할 NPC는 보존합니다. 기존 제작 보고서의 HairFix 경로는 제작 당시 기록입니다.

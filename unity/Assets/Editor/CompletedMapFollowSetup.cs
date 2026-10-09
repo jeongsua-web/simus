@@ -13,21 +13,15 @@ public static class CompletedMapFollowSetup
     public const string Output = Root + "Scenes/npc_follow_test";
     public const string ScenePath = Output + "/CompletedMapNpcFollow.unity";
     private const string MapPath = Root + "Art/maps/university_v003/SIMUS_Dense_Realistic_University_Map_03.fbx";
-    private const string CharacterPath = Root + "Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Unity_HairFix.fbx";
+    private const string CharacterPath = Root + "Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Happiness_Animations.fbx";
 
     [MenuItem("SIMUS/Build Completed Map NPC Follow Test")]
     public static void Build()
     {
         if (!Application.isBatchMode && !EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()) return;
         var importer = (ModelImporter)AssetImporter.GetAtPath(CharacterPath);
-        importer.animationType = ModelImporterAnimationType.Generic;
-        importer.avatarSetup = ModelImporterAvatarSetup.CreateFromThisModel;
-        importer.importAnimation = true;
-        var clips = importer.defaultClipAnimations;
-        foreach (var clip in clips)
-            if (clip.name.IndexOf("Walk", StringComparison.OrdinalIgnoreCase) >= 0) clip.loopTime = true;
-        importer.clipAnimations = clips;
-        importer.SaveAndReimport();
+        if (importer == null || importer.animationType != ModelImporterAnimationType.Human)
+            throw new InvalidOperationException("Happiness character must retain its validated Humanoid import settings.");
         var mapAsset = AssetDatabase.LoadAssetAtPath<GameObject>(MapPath);
         var characterAsset = AssetDatabase.LoadAssetAtPath<GameObject>(CharacterPath);
         if (mapAsset == null || characterAsset == null) throw new InvalidOperationException("Completed map/character FBX is not imported.");
@@ -74,7 +68,7 @@ public static class CompletedMapFollowSetup
         var route = new GameObject("Camera test segment (not exhibition NPC route)");
         var a = new GameObject("Start").transform; a.SetParent(route.transform); a.position = start;
         var b = new GameObject("End").transform; b.SetParent(route.transform); b.position = end;
-        var npc = new GameObject("Test NPC - HairFix 01");
+        var npc = new GameObject("Test NPC - Happiness 01");
         npc.transform.position = start;
         var model = (GameObject)PrefabUtility.InstantiatePrefab(characterAsset);
         model.transform.SetParent(npc.transform, false);
@@ -92,7 +86,8 @@ public static class CompletedMapFollowSetup
         foreach (var renderer in renderers) bodyBounds.Encapsulate(renderer.bounds);
         model.transform.position += new Vector3(start.x - bodyBounds.center.x, start.y - bodyBounds.min.y, start.z - bodyBounds.center.z);
         var walk = AssetDatabase.LoadAllAssetsAtPath(CharacterPath).OfType<AnimationClip>()
-            .FirstOrDefault(c => c.name.IndexOf("Walk", StringComparison.OrdinalIgnoreCase) >= 0 && !c.name.StartsWith("__preview__"));
+            .FirstOrDefault(c => c.name == "NEUTRAL_WALK");
+        if (walk == null) throw new InvalidOperationException("NEUTRAL_WALK clip is missing.");
         if (walk != null)
         {
             string controllerPath = Output + "/TestNpcWalk.controller";
@@ -101,7 +96,7 @@ public static class CompletedMapFollowSetup
             if (controller.layers.Length == 0) controller.AddLayer("Base Layer");
             var machine = controller.layers[0].stateMachine;
             var state = machine.states.Length == 0 ? machine.AddState("Walk") : machine.states[0].state;
-            state.motion = walk; machine.defaultState = state;
+            state.name = "NEUTRAL_WALK"; state.motion = walk; machine.defaultState = state;
             EditorUtility.SetDirty(controller);
             var animator = model.GetComponent<Animator>();
             if (animator == null) animator = model.AddComponent<Animator>();
