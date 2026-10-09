@@ -4027,6 +4027,34 @@
       "sha256": "7233e20618228f6aecba33523d9b25ac37bae4cc1c0d0d7daaf4bb10b1bd070b"
     },
     {
+      "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/README.md",
+      "role": "support",
+      "location": "unity_existing",
+      "bytes": 1776,
+      "sha256": "7b85de62a3c85a72f31a6f7dd44d8a6ec9a17692be4d1a36b0e0671375fc671d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/models/SIMUS_NPC_Cleaner.fbx",
+      "role": "export",
+      "location": "unity_existing",
+      "bytes": 1468636,
+      "sha256": "603b89e33112c69ad989c5878ead9d0d704f3b1c6e746a080d98ade1bf2fac6d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/models/SIMUS_NPC_Criminal.fbx",
+      "role": "export",
+      "location": "unity_existing",
+      "bytes": 1353372,
+      "sha256": "5cd418a3ae0fd730dd29fb5c1a05b7bac6c7d91e627edf75275b8a2630040184"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/models/SIMUS_NPC_Police.fbx",
+      "role": "export",
+      "location": "unity_existing",
+      "bytes": 1524828,
+      "sha256": "63e8ebc0445ec05982bd8f1df0bdb57d3b3be135b9c027ea2db09f50fdbd6371"
+    },
+    {
       "path": "unity/Assets/SIMUS/Art/environment.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
@@ -4062,11 +4090,18 @@
       "sha256": "388ae7fadb1b2af12171104d3939143e979ba368218faebedeb61bf90840ec32"
     },
     {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Environment_States_v3.md",
+      "role": "support",
+      "location": "unity_existing",
+      "bytes": 1776,
+      "sha256": "7b85de62a3c85a72f31a6f7dd44d8a6ec9a17692be4d1a36b0e0671375fc671d"
+    },
+    {
       "path": "unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Dense_Realistic_University_Map_03.blend",
       "role": "source",
       "location": "unity_existing",
-      "bytes": 33687407,
-      "sha256": "efb3e4101abb72103c2df91e5a96f8bc064c232c89f9ee45fc51c33a2bbb54ac"
+      "bytes": 33887325,
+      "sha256": "95c73300f7116fb8d3fa0468c9b7b16fa93788780597b2eb347ac723deb1dee5"
     },
     {
       "path": "unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Dense_Realistic_University_Map_03.blend.meta",
@@ -4088,6 +4123,13 @@
       "location": "unity_existing",
       "bytes": 2891,
       "sha256": "3d5c5ea4b98998e7d960e425d60f5a17b13e1a1ef3630a1d259901424c9a568f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Environmental_State_Assets_v3.fbx",
+      "role": "export",
+      "location": "unity_existing",
+      "bytes": 5687164,
+      "sha256": "00d916f2c92c07c0f39321e1c64fed98c5411f34daa7374fa03679dd34a5f548"
     },
     {
       "path": "unity/Assets/SIMUS/Art/maps/university_v003/Textures.meta",

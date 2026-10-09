@@ -1,0 +1,357 @@
+{
+  "changes": [
+    {
+      "old": "C:\\Project\\simus\\unity\\Assets\\SIMUS\\Art\\maps\\university_v003\\SIMUS_Dense_Realistic_University_Map_03.blend",
+      "backup": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\Project_Update_Backup_2026-10-09\\unity\\Assets\\SIMUS\\Art\\maps\\university_v003\\SIMUS_Dense_Realistic_University_Map_03.blend",
+      "old_sha256": "efb3e4101abb72103c2df91e5a96f8bc064c232c89f9ee45fc51c33a2bbb54ac"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\SIMUS_Map_Environmental_States_v3.blend",
+      "target": "C:\\Project\\simus\\unity\\Assets\\SIMUS\\Art\\maps\\university_v003\\SIMUS_Dense_Realistic_University_Map_03.blend",
+      "sha256": "95c73300f7116fb8d3fa0468c9b7b16fa93788780597b2eb347ac723deb1dee5"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\SIMUS_Environmental_State_Assets_v3.fbx",
+      "target": "C:\\Project\\simus\\unity\\Assets\\SIMUS\\Art\\maps\\university_v003\\SIMUS_Environmental_State_Assets_v3.fbx",
+      "sha256": "00d916f2c92c07c0f39321e1c64fed98c5411f34daa7374fa03679dd34a5f548"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\SIMUS_NPC_Role_Variants.blend",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\source\\SIMUS_NPC_Role_Variants.blend",
+      "sha256": "53391e7ac0616eb8a1f982e06f093a21c4929efe646b38195a41ebe18ac1d007"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\SIMUS_NPC_Police.fbx",
+      "target": "C:\\Project\\simus\\unity\\Assets\\SIMUS\\Art\\characters\\role_variants_v001\\models\\SIMUS_NPC_Police.fbx",
+      "sha256": "63e8ebc0445ec05982bd8f1df0bdb57d3b3be135b9c027ea2db09f50fdbd6371"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\SIMUS_NPC_Cleaner.fbx",
+      "target": "C:\\Project\\simus\\unity\\Assets\\SIMUS\\Art\\characters\\role_variants_v001\\models\\SIMUS_NPC_Cleaner.fbx",
+      "sha256": "603b89e33112c69ad989c5878ead9d0d704f3b1c6e746a080d98ade1bf2fac6d"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\SIMUS_NPC_Criminal.fbx",
+      "target": "C:\\Project\\simus\\unity\\Assets\\SIMUS\\Art\\characters\\role_variants_v001\\models\\SIMUS_NPC_Criminal.fbx",
+      "sha256": "5cd418a3ae0fd730dd29fb5c1a05b7bac6c7d91e627edf75275b8a2630040184"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\Asset_Blockout.png",
+      "target": "C:\\Project\\simus\\assets\\library\\maps\\university_v003\\previews\\environment_states_v3\\Asset_Blockout.png",
+      "sha256": "90b39fabd11ef8669d58dbcd33ba56a4fc4668643283d2adbe10530b724b27e6"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\Before_Map.png",
+      "target": "C:\\Project\\simus\\assets\\library\\maps\\university_v003\\previews\\environment_states_v3\\Before_Map.png",
+      "sha256": "83c70651677e37a838e2dc5a0e4cba879c49d3aa17e9ecfd9bb47d4780d029ee"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\Before_Viewport.png",
+      "target": "C:\\Project\\simus\\assets\\library\\maps\\university_v003\\previews\\environment_states_v3\\Before_Viewport.png",
+      "sha256": "53c612424a134bc47c5182be2b8523b803a774f03f909629b6036002e6b03e07"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\Campus_Happiness_Good.png",
+      "target": "C:\\Project\\simus\\assets\\library\\maps\\university_v003\\previews\\environment_states_v3\\Campus_Happiness_Good.png",
+      "sha256": "da634599cb6ec0442760588a9b8627308b22eac9ed7ae0bed3c0ba15239d32f1"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\CLEANER_Pose_Checksheet.jpg",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\CLEANER_Pose_Checksheet.jpg",
+      "sha256": "dd83ab990f1a9c820d488d8c6dee42b123382730a496a5a71722d929882160ca"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\CRIMINAL_Pose_Checksheet.jpg",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\CRIMINAL_Pose_Checksheet.jpg",
+      "sha256": "9f6bb63197dc09d794ff851495da88dd3c00dd10b1e9fc91da7b1c246dd82936"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\Environmental_Final_Bad.png",
+      "target": "C:\\Project\\simus\\assets\\library\\maps\\university_v003\\previews\\environment_states_v3\\Environmental_Final_Bad.png",
+      "sha256": "5514465421db7b37b3933d517805d945cc8c4a5b21a83e99e3313bf78fa50cac"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\Environmental_Final_Good.png",
+      "target": "C:\\Project\\simus\\assets\\library\\maps\\university_v003\\previews\\environment_states_v3\\Environmental_Final_Good.png",
+      "sha256": "6dca88c4fd7bc419394d3d2938d46a7b890acece7dacea70452c73f5e90fec65"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\Graffiti_On_Existing_Wall.png",
+      "target": "C:\\Project\\simus\\assets\\library\\maps\\university_v003\\previews\\environment_states_v3\\Graffiti_On_Existing_Wall.png",
+      "sha256": "3cf33c13d0f39c18af7b45d4c495fcccc8c15fe4d6a6bcd328ec89e4523e9a29"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CLEANER_ArmsDown_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CLEANER_ArmsDown_ThreeQuarter.png",
+      "sha256": "6ae2864f3e385bdf2879cfaade16a203fecab8372df85ba9db422f286fe1d9e0"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CLEANER_ArmsForward_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CLEANER_ArmsForward_ThreeQuarter.png",
+      "sha256": "3aaa89dddad710cae9069f9f8ca013c15a7236c199d997034a723c7ccf59e51f"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CLEANER_ArmsSide_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CLEANER_ArmsSide_ThreeQuarter.png",
+      "sha256": "60328a801fb74cf6356dacb7a477419eb75612883c4304f5ea8378e5bb5902ed"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CLEANER_Front.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CLEANER_Front.png",
+      "sha256": "532c33804e64d2f0431da8b9f55f5cbcb31b16a656ae724ccd4f8657b2cfac94"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CLEANER_Idle_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CLEANER_Idle_ThreeQuarter.png",
+      "sha256": "9fdf277fbf7ec33e2c62d14d13f487cc353170b6558936dfbb0836f606c47578"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CLEANER_Interact_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CLEANER_Interact_ThreeQuarter.png",
+      "sha256": "f282552b73835baf9e46115cad8968b1583aa3733c7504bad32591fabd2fbe5a"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CLEANER_KneesBent_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CLEANER_KneesBent_ThreeQuarter.png",
+      "sha256": "6c2f828e1fce6e32367c3d35496f2ebce3e1ed48c25dc330a762f5b55f656ba3"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CLEANER_Rest_Back.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CLEANER_Rest_Back.png",
+      "sha256": "99beab86c6a121cd4a8363dd66c1fb88b70bcc2d82a30953e599fa584ed21e68"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CLEANER_Rest_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CLEANER_Rest_ThreeQuarter.png",
+      "sha256": "7207aac785882ffe1734727cfbf39ce9129a98c946b051e3413e8e81b824b9ca"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CLEANER_TorsoLean_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CLEANER_TorsoLean_ThreeQuarter.png",
+      "sha256": "335fbd6bbf310a8ff75fa7fe4adaff15fc7596cfb5a0bf6eea73a7fa7550e020"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CLEANER_Walk_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CLEANER_Walk_ThreeQuarter.png",
+      "sha256": "949ce2b0559022eb81e6c7e72b9e731a48f5b0d78ba5bdf06cc6f0f0048b60e6"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CLEANER_Wave_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CLEANER_Wave_ThreeQuarter.png",
+      "sha256": "f4332210ca5dbda059a0d98636820ecd873732faec47e16d7ba4c3416cae6124"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CRIMINAL_ArmsDown_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CRIMINAL_ArmsDown_ThreeQuarter.png",
+      "sha256": "386eb5ee4db41969ac73e301e2f9e8cc2708e9742401356163056cb4ceb394c2"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CRIMINAL_ArmsForward_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CRIMINAL_ArmsForward_ThreeQuarter.png",
+      "sha256": "db6c0bf80490f53514e59cda4d328145ebfd842a84aadb766211a6652e7b601c"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CRIMINAL_ArmsSide_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CRIMINAL_ArmsSide_ThreeQuarter.png",
+      "sha256": "39c60c08ab10dc140413ddbdc597d3ca0edf92b9a796f691937e70b66fc9db55"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CRIMINAL_Front.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CRIMINAL_Front.png",
+      "sha256": "7627f00a940e0ff157a24254938207f7c5dd3da7871145b11e0eaf2895709b48"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CRIMINAL_Idle_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CRIMINAL_Idle_ThreeQuarter.png",
+      "sha256": "2e18130054248215867984327ba86be218fd1c09a2a84a4dafdda8852a9f5fa0"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CRIMINAL_Interact_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CRIMINAL_Interact_ThreeQuarter.png",
+      "sha256": "16290ee8da9c8f337e9c99712e95c71fa7fe1003eaabec9d67e21b7a7a6fd871"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CRIMINAL_KneesBent_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CRIMINAL_KneesBent_ThreeQuarter.png",
+      "sha256": "6d95b12aca22647df77f3ade3847f90e301f9dc6dd7de65d7473603692f586aa"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CRIMINAL_Rest_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CRIMINAL_Rest_ThreeQuarter.png",
+      "sha256": "9d73ce86181186103381560aa0bb02a9a10ec046faee8bc56f0e8043d401a47f"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CRIMINAL_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CRIMINAL_ThreeQuarter.png",
+      "sha256": "4eca6a5959fcb994527ed48dd2cb0a79e21b61707f0bd0aed658e47a25078a1b"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CRIMINAL_TorsoLean_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CRIMINAL_TorsoLean_ThreeQuarter.png",
+      "sha256": "9d738dfe472f37642604a4c0fe824b5ebd8b005fea48fb66cef5912b025c86d4"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CRIMINAL_Walk_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CRIMINAL_Walk_ThreeQuarter.png",
+      "sha256": "4ae1f8ef59b15078e1fb6f5ffb5cea32ea033085f252d3d0a83514c940d5b619"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_CRIMINAL_Wave_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_CRIMINAL_Wave_ThreeQuarter.png",
+      "sha256": "d569fa2fa91677822ffdd5c310db928467f1a0817babaa8723bee9944a1cbb5b"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_POLICE_ArmsDown_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_POLICE_ArmsDown_ThreeQuarter.png",
+      "sha256": "459d1572141069d344198e73e3b9f21fe160b9c31b400a211be4428071806b6f"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_POLICE_ArmsForward_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_POLICE_ArmsForward_ThreeQuarter.png",
+      "sha256": "d2eb08a3d725898fba2b15e2f0e2c5f21e26c66bc1f3b21cd5052a8b6a48d719"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_POLICE_ArmsSide_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_POLICE_ArmsSide_ThreeQuarter.png",
+      "sha256": "a8a5170b7172e2610726984e8ee495a0172aad0d7ea08b62a15ef1ce9baf5df9"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_POLICE_Front.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_POLICE_Front.png",
+      "sha256": "ce008570c0a17a3e00adc0c9d0d891a866ce3fd14028ae1ff79ad3d7aa3fa81c"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_POLICE_Idle_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_POLICE_Idle_ThreeQuarter.png",
+      "sha256": "16a08f088a1761c7ef70206c31bc4a0e76ece8d31ddb638761bdef9234027efc"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_POLICE_Interact_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_POLICE_Interact_ThreeQuarter.png",
+      "sha256": "bbef53cbbae2c4426ffc30275b5a8b4a5011edc053a9e7fdde32d974b85f3172"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_POLICE_KneesBent_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_POLICE_KneesBent_ThreeQuarter.png",
+      "sha256": "bc025b0b265be1ecbf1eb33968c8932b0d4eabe9b582510f16a8070b13fe672e"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_POLICE_Rest_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_POLICE_Rest_ThreeQuarter.png",
+      "sha256": "f22d1e84db9469faa10ebad414f14bc617e90d53a6bcfeaedb024bb4b1e2b769"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_POLICE_TorsoLean_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_POLICE_TorsoLean_ThreeQuarter.png",
+      "sha256": "c6b4ce4de81552e4cffc807b0b5ea8be76ec858af4db19197f9417e96dc29f1a"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_POLICE_Walk_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_POLICE_Walk_ThreeQuarter.png",
+      "sha256": "0c5cea33515aaf79ae34807bc82ebf8d0c7ad98e3e0989cfb7bcd7d8744283bb"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_POLICE_Wave_ThreeQuarter.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_POLICE_Wave_ThreeQuarter.png",
+      "sha256": "4af2c06eb9dceec6a4210b881ac78eaf953a3c968fd7aad58854e34a5c975906"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\NPC_Role_Lineup.png",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\NPC_Role_Lineup.png",
+      "sha256": "3d1f5f54787ddeefff2cf9209ed6c1398e6f6722be72f713f7a540410d041dbd"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\POLICE_Pose_Checksheet.jpg",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\previews\\environment_states_v3\\POLICE_Pose_Checksheet.jpg",
+      "sha256": "6b65e09cec933b0309f124bc3ea4000efb6f6eb03f231efa2a0f9b7251861a4f"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\Safety_Asset_Review.png",
+      "target": "C:\\Project\\simus\\assets\\library\\maps\\university_v003\\previews\\environment_states_v3\\Safety_Asset_Review.png",
+      "sha256": "74743d7580c17c3d29f2b5a9d2606c8fb0e303fbf91def7993ffb96aac5cb10c"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Previews\\Waste_Bad.png",
+      "target": "C:\\Project\\simus\\assets\\library\\maps\\university_v003\\previews\\environment_states_v3\\Waste_Bad.png",
+      "sha256": "7d1300f0ed79c3204f69f1e39f09997f39742ae43163d0e60dc1cbbe93cef25f"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Reports\\CLEANER_Export_Manifest.json",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\reports\\environment_states_v3\\CLEANER_Export_Manifest.json",
+      "sha256": "d80ba8f06c283d6dafcabb8c50e4d0a3eb8449dfb634719e19e003c70b947044"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Reports\\Cleaner_Tool_Clearance.json",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\reports\\environment_states_v3\\Cleaner_Tool_Clearance.json",
+      "sha256": "7e0e9cbc6f11b8b1b250825e1052fc1ef4815a020e34b507f1073e8a6d16d9f4"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Reports\\CRIMINAL_Export_Manifest.json",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\reports\\environment_states_v3\\CRIMINAL_Export_Manifest.json",
+      "sha256": "3bf5b97c3ff75bd11e3a73dc66c5b4bb8fda3ee6bdf2ffe12925b4804745b408"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Reports\\Delivery_File_Manifest.json",
+      "target": "C:\\Project\\simus\\assets\\library\\maps\\university_v003\\reports\\environment_states_v3\\Delivery_File_Manifest.json",
+      "sha256": "090de69930bd39e12828c34ad69c4f70e5b288dbf579d08cc7120bac4eb7a418"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Reports\\Environment_Audit.json",
+      "target": "C:\\Project\\simus\\assets\\library\\maps\\university_v003\\reports\\environment_states_v3\\Environment_Audit.json",
+      "sha256": "421e63c796c6225b8a807af35463abcbab48bba87a64fa272b7d66cd8e8fc162"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Reports\\Environment_Placement_Audit.json",
+      "target": "C:\\Project\\simus\\assets\\library\\maps\\university_v003\\reports\\environment_states_v3\\Environment_Placement_Audit.json",
+      "sha256": "73e45ca872063e53d9fbc0e17c504e2f8d3376ddc298ac9772da51c89cb56766"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Reports\\ENV_Export_Manifest.json",
+      "target": "C:\\Project\\simus\\assets\\library\\maps\\university_v003\\reports\\environment_states_v3\\ENV_Export_Manifest.json",
+      "sha256": "982b91b4f0969fa2dfcaba50f8070dda9dc6e1c4f1134706b6f85cea5e0b196c"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Reports\\FBX_Roundtrip_Audit.json",
+      "target": "C:\\Project\\simus\\assets\\library\\maps\\university_v003\\reports\\environment_states_v3\\FBX_Roundtrip_Audit.json",
+      "sha256": "3ce147db1f2d78953092729d38f0d0bb47d6ad8fb200131a13e004dd0afa45a5"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Reports\\Map_Instances.json",
+      "target": "C:\\Project\\simus\\assets\\library\\maps\\university_v003\\reports\\environment_states_v3\\Map_Instances.json",
+      "sha256": "c4a5a4f86f51e441dc83ebae4cf2667d889e7f1a6bd5d0b049ad00591e0876f6"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Reports\\NPC_Source_Snapshot.json",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\reports\\environment_states_v3\\NPC_Source_Snapshot.json",
+      "sha256": "cefae91999902c0759ccf205efc912229134ef21a076b016dc6211920ccef4b8"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Reports\\NPC_Structural_Motion_Audit.json",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\reports\\environment_states_v3\\NPC_Structural_Motion_Audit.json",
+      "sha256": "c3074fb0d700245764c43df2af51ddebf320d757aea81e519fe8f3e13ee6c2a0"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Reports\\Original_Object_Snapshot.json",
+      "target": "C:\\Project\\simus\\assets\\library\\maps\\university_v003\\reports\\environment_states_v3\\Original_Object_Snapshot.json",
+      "sha256": "fb057fa490ff429f9e09b716af5de48995ccaf19eda23e9adb9de35d1133621a"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Reports\\POLICE_Export_Manifest.json",
+      "target": "C:\\Project\\simus\\assets\\library\\characters\\role_variants_v001\\reports\\environment_states_v3\\POLICE_Export_Manifest.json",
+      "sha256": "bbd3f2ca455a965230ee0cc476bad91ad76d32f4732bf31601d59dc6ced84b16"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\Reports\\Replacement_Mapping.json",
+      "target": "C:\\Project\\simus\\assets\\library\\maps\\university_v003\\reports\\environment_states_v3\\Replacement_Mapping.json",
+      "sha256": "b1531b5866c9159cca8f21eae568dba7f34c7f7ca80ccb44202df8e1b6cf3c70"
+    },
+    {
+      "source": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\SIMUS_Environmental_States_v3\\README_작업결과.md",
+      "target": "C:\\Project\\simus\\assets\\library\\maps\\university_v003\\reports\\environment_states_v3\\Supplier_Report.md",
+      "sha256": "0efe4f2e16bf3346b3d1e0e30960823ca0b8e5bd1b7a1eb68876838e5150f637"
+    }
+  ],
+  "base_map_fbx_preserved": true,
+  "map_blend_meta_preserved": true,
+  "backup": "C:\\Users\\sonmi\\Documents\\Codex\\2026-09-22\\higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6\\Project_Update_Backup_2026-10-09"
+}
