@@ -2788,6 +2788,13 @@
       "sha256": "60023f1193012640ba7e03aa2aedb1b5546e74a858db02ba088d2df8917e7b11"
     },
     {
+      "path": "unity/Assets/Editor/WebBridgeTestBuild.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 2904,
+      "sha256": "05f7d43d89599d9fa3f2717930e8bc9e2fdd5057f07a4d09b8b45fbdb94b7493"
+    },
+    {
       "path": "unity/Assets/Materials.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
@@ -3241,6 +3248,13 @@
       "location": "unity_existing",
       "bytes": 188,
       "sha256": "7beff19f4c6ae6fdf7e3176b7ee919f30e22eb16e7dd8213278b5d45af899694"
+    },
+    {
+      "path": "unity/Assets/Plugins/WebGL/simus_bridge.jslib",
+      "role": "support",
+      "location": "unity_existing",
+      "bytes": 157,
+      "sha256": "bc9d52fe1986ecd9647444edafd1e8ce21dd1a055b8ff222f12cb2b720d96c08"
     },
     {
       "path": "unity/Assets/SIMUS.meta",
@@ -4597,8 +4611,8 @@
       "path": "unity/Assets/SIMUS/Runtime/CityClientBootstrap.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 1006,
-      "sha256": "d03e7848a7cc9794194d70aad65139b99173f1bc3646d67944a36a2864fa239b"
+      "bytes": 1064,
+      "sha256": "475c633fb5622b82e0333ea6206fd1aec7a03daf071574c08639bad835c97c32"
     },
     {
       "path": "unity/Assets/SIMUS/Runtime/CityClientBootstrap.cs.meta",
@@ -4741,6 +4755,13 @@
       "sha256": "b8c8dcef25c9df5ca2efef132ea0e052057fe185690f02fcbb27ef4c15e0387e"
     },
     {
+      "path": "unity/Assets/SIMUS/Runtime/Core/WebBridgeState.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 5953,
+      "sha256": "129aa6e266f366a5d7dcfcd7b4a42611ea914fc8135fd70b1831ec69f9c03106"
+    },
+    {
       "path": "unity/Assets/SIMUS/Runtime/NeighborhoodLife.cs",
       "role": "code",
       "location": "unity_existing",
@@ -4870,8 +4891,8 @@
       "path": "unity/Assets/SIMUS/Tests/Editor/SIMUS.City.Tests.asmdef",
       "role": "support",
       "location": "unity_existing",
-      "bytes": 246,
-      "sha256": "65d1ce84383a246daf7f57092eb2293eccfd016caa7debe55560acf4204926ce"
+      "bytes": 363,
+      "sha256": "b67c3f2d0e9db6c61176ee97627cf966850e95e2961f754731c816fcff9b899f"
     },
     {
       "path": "unity/Assets/SIMUS/Tests/Editor/SIMUS.City.Tests.asmdef.meta",
@@ -4879,6 +4900,13 @@
       "location": "unity_existing",
       "bytes": 166,
       "sha256": "ad420f35b3f93e3cbaecc23a7b9147e4501e57d6c71b951cd044e929e26b16c9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/WebBridgeStateTests.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 3602,
+      "sha256": "93f57f399c8a47f661033b73a44770bdf38a231b0531c54b490595dc9b208924"
     },
     {
       "path": "unity/Assets/Scenes.meta",
@@ -4926,8 +4954,8 @@
       "path": "unity/Assets/Scripts/CityPreviewCamera.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 7296,
-      "sha256": "abcf5fd8a289a873dc358020ca23a642171437cbd22202ce0b89221187172b92"
+      "bytes": 7424,
+      "sha256": "684e18cad07d1202a66ec560da84fa91e78d65bacfe2f3995029985589a095ea"
     },
     {
       "path": "unity/Assets/Scripts/CityPreviewCamera.cs.meta",
@@ -4965,6 +4993,13 @@
       "sha256": "a44d9b8f94a3cb5c6f045cb7f207a831cb4563802e071550295d4a5a35747ebd"
     },
     {
+      "path": "unity/Assets/Scripts/WebCityBridge.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 7867,
+      "sha256": "3d2eb4e1940c79bf639bf97e364c7339cc61cb1162302898fdf15aab18b74d37"
+    },
+    {
       "path": "unity/Assets/Shaders.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
@@ -4998,6 +5033,20 @@
       "location": "unity_existing",
       "bytes": 148,
       "sha256": "9e1fa5cee9f3ae16b45bd985d2adb36f8d15cb607f08186acd48672b500af309"
+    },
+    {
+      "path": "unity/Assets/WebGLTemplates/simus_city/bridge.js",
+      "role": "support",
+      "location": "unity_existing",
+      "bytes": 3512,
+      "sha256": "0f3b72662cc12879951e99d3a23ee22c26eb7b981c5b694115a7f8a01044521c"
+    },
+    {
+      "path": "unity/Assets/WebGLTemplates/simus_city/index.html",
+      "role": "support",
+      "location": "unity_existing",
+      "bytes": 1519,
+      "sha256": "0d2c190b7a12e0ad62ca3424cb3cb6863d6de9a676e3d1a84443105f4dd47586"
     },
     {
       "path": "unity/Assets/department_store_v2.meta",

@@ -5,7 +5,7 @@ import { useState } from "react";
 import { LiveCityStats } from "../components/CityStats";
 import ProfileEntry from "./ProfileEntry";
 import SituationCard from "./SituationCard";
-import UnityCity from "./UnityCity";
+import CityTrack from "./CityTrack";
 import PushOptIn from "./PushOptIn";
 import { useParticipation } from "./useParticipation";
 import styles from "./participate.module.css";
@@ -17,7 +17,7 @@ export default function ParticipatePage() {
   const history = state.history.length > 0 && <section className={styles.stateCard}><h2>지난 회차 결과</h2>{state.history.map(item => <p key={item.id}><Link href={`/result/${item.id}`}>{item.name} 결과 보기</Link></p>)}</section>;
   const pendingNotice = state.pending && state.pending.session_id !== state.session?.id && <section className={styles.stateCard}>
     <h2>이전 회차 제출 확인</h2><p>확인하지 못한 선택이 있습니다. 원래 회차와 요청 번호로 다시 확인합니다.</p>
-    <p role="status">{state.pendingMessage}</p><button className={styles.button} disabled={state.submitting !== null} onClick={()=>void state.retryPending()}>이전 제출 다시 확인</button>
+    <p role="status">{state.messages[state.pending.situation_id]}</p><button className={styles.button} disabled={state.submitting !== null} onClick={()=>void state.retryPending()}>이전 제출 다시 확인</button>
   </section>;
   if (state.loading) return <main className={styles.page}><div className={styles.stateCard} role="status">참여 정보를 불러오는 중이에요…</div></main>;
   if (state.loadError) return (
@@ -59,7 +59,7 @@ export default function ParticipatePage() {
   const profile = state.profile;
   const answeredCount = Object.values(state.answered).filter(Boolean).length;
   const complete = answeredCount >= state.session.situations.length && state.session.situations.length > 0;
-  const activeIndex = selection.sessionId === state.session.id ? Math.max(0, Math.min(selection.index, state.session.situations.length - 1)) : 0;
+  const activeIndex = selection.sessionId === state.session.id ? Math.min(selection.index, state.session.situations.length - 1) : 0;
   const activeSituation = state.session.situations[activeIndex];
   return (
     <main className={styles.page}>
@@ -86,19 +86,18 @@ export default function ParticipatePage() {
         <span>{state.session.status === "FINALIZED" ? "내 결과를 확인할 수 있습니다." : state.session.status === "CLOSING" ? "서버가 최종 결과를 확정하고 있습니다." : "회차 종료 시각까지 기다려 주세요."}</span>
       </section>}
       <section className={styles.cityExperience} aria-label="도시와 선택">
-        <UnityCity key={state.session.id} sessionId={state.session.id} />
+        <CityTrack key={state.session.id} sessionId={state.session.id} />
         <details className={styles.choicePanel} open>
           <summary>도시에서 선택하기 · 남은 상황 {Math.max(0, state.session.situations.length - answeredCount)}개</summary>
           <div className={styles.choicePanelBody}>
-            {activeSituation && <nav className={styles.situationNav} aria-label="상황 이동">
+            <nav className={styles.situationNav} aria-label="상황 이동">
               <button type="button" className={styles.secondaryButton} disabled={activeIndex <= 0}
                 onClick={() => setSelection({ sessionId: state.session!.id, index: activeIndex - 1 })}>이전</button>
               <span>{activeIndex + 1} / {state.session.situations.length}</span>
               <button type="button" className={styles.secondaryButton} disabled={activeIndex >= state.session.situations.length - 1}
                 onClick={() => setSelection({ sessionId: state.session!.id, index: activeIndex + 1 })}>다음</button>
-            </nav>}
-            {!activeSituation && <section className={styles.notice} role="status"><strong>등록된 상황이 없습니다</strong><span>상황이 준비되면 표시됩니다. 잠시 후 상태를 확인해 주세요.</span><button className={styles.secondaryButton} onClick={state.retryLoad}>상태 새로고침</button></section>}
-            {activeSituation && <SituationCard key={`${sessionId}:${activeSituation.id}`} situation={activeSituation} selectedChoiceId={state.selected[activeSituation.id]}
+            </nav>
+            {activeSituation && <SituationCard key={activeSituation.id} situation={activeSituation} selectedChoiceId={state.selected[activeSituation.id]}
               done={Boolean(state.answered[activeSituation.id])} acceptingChoices={state.session.accepting_choices}
               submitting={state.submitting === activeSituation.id} submissionInProgress={state.submitting !== null}
               retrying={state.pending?.session_id === state.session.id && state.pending?.situation_id === activeSituation.id} hasPendingSubmission={state.pending !== null}

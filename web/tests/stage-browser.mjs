@@ -1,7 +1,6 @@
 import assert from 'node:assert/strict';
 import { pathToFileURL } from 'node:url';
 import { enterCity } from './participant-entry.mjs';
-import { installUnityFixture } from './unity-fixture.mjs';
 
 export async function runStageBrowser({ env, pool, token, templateId }) {
   if (!env.TEST_PLAYWRIGHT_MODULE) { console.log('SKIP: integrated browser additions'); return; }
@@ -37,31 +36,20 @@ export async function runStageBrowser({ env, pool, token, templateId }) {
       assert.equal((await ended).status(), 200);
     }
     const first = await create('브라우저 통합 첫 회차');
-    await installUnityFixture(mobile);
     await mobile.goto(env.TEST_API_URL + '/participate');
     await enterCity(mobile);
     await mobile.getByRole('region', { name: '함께 만든 도시' }).waitFor();
     await mobile.getByRole('region', { name: '도시와 선택' }).waitFor();
-    await mobile.getByRole('status').filter({ hasText: '내 캐릭터를 따라가는 중' }).waitFor();
-    const firstNpc = await mobile.frameLocator('iframe').locator('#npc').innerText();
+    await mobile.locator('canvas[aria-hidden="true"]').waitFor();
+    await mobile.getByRole('status').filter({ hasText: 'NPC ' }).waitFor();
+    const firstNpc = await mobile.getByRole('status').filter({ hasText: 'NPC ' }).innerText();
     const peer = await browser.newPage({ viewport: { width: 390, height: 844 } });
     peer.on('pageerror', error => errors.push(error.message));
-    await installUnityFixture(peer);
     await peer.goto(env.TEST_API_URL + '/participate');
     await enterCity(peer, { nickname: '옆자리시민' });
-    await peer.getByRole('status').filter({ hasText: '내 캐릭터를 따라가는 중' }).waitFor();
-    const secondNpc = await peer.frameLocator('iframe').locator('#npc').innerText();
-    assert.notEqual(firstNpc, secondNpc);
-    // Wrong build map must never become a visible city; retry creates a fresh bridge.
-    await mobile.route('**/city/build.json', route => route.fulfill({ json: { protocol_version: 1, map_version: 'wrong-test-map' } }));
-    await mobile.reload();
-    await mobile.getByRole('alert').filter({ hasText: '도시 버전이 맞지 않습니다' }).waitFor();
-    assert.equal(await mobile.locator('iframe').count(), 0);
-    await mobile.unroute('**/city/build.json');
-    await installUnityFixture(mobile);
-    await mobile.getByRole('button', { name: '도시 다시 연결' }).click();
-    await mobile.getByRole('status').filter({ hasText: '내 캐릭터를 따라가는 중' }).waitFor();
-    assert.equal(await mobile.frameLocator('iframe').locator('#npc').innerText(), firstNpc);
+    await peer.getByRole('status').filter({ hasText: 'NPC ' }).waitFor();
+    const secondNpc = await peer.getByRole('status').filter({ hasText: 'NPC ' }).innerText();
+    assert.notEqual(firstNpc.match(/NPC ([0-9a-f]{8})/)?.[1], secondNpc.match(/NPC ([0-9a-f]{8})/)?.[1]);
     assert.ok(await mobile.getByText('도시에서 선택하기', { exact: false }).isVisible());
     await mobile.getByRole('radio').first().check();
     let payload;

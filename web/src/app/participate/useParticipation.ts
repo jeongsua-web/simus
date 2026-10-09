@@ -19,7 +19,6 @@ export function useParticipation() {
   const [selected, setSelected] = useState<Record<string, string>>({});
   const [answered, setAnswered] = useState<Record<string, boolean>>({});
   const [messages, setMessages] = useState<Record<string, string>>({});
-  const [pendingMessage, setPendingMessage] = useState("");
   const [submitting, setSubmitting] = useState<string | null>(null);
   const [pending, setPending] = useState<Submission | null>(null);
   const [profile, setProfile] = useState<Profile | null>(null);
@@ -45,7 +44,6 @@ export function useParticipation() {
     loadingState.current = true;
     const abort = new AbortController();
     controller.current = abort;
-    const timeout = window.setTimeout(() => abort.abort(), 15_000);
     const signal = abort.signal;
     try {
       if (initial) {
@@ -115,8 +113,8 @@ export function useParticipation() {
       setAuthExpired(false);
       setLoadError("");
     } catch (error) {
-      if (mounted.current) setLoadError(signal.aborted ? "연결 시간이 초과되었습니다. 다시 불러와 주세요." : error instanceof Error ? error.message : "참여 정보를 불러오지 못했습니다.");
-    } finally { window.clearTimeout(timeout); loadingState.current = false; if (mounted.current) setLoading(false); }
+      if (!signal.aborted && mounted.current) setLoadError(error instanceof Error ? error.message : "참여 정보를 불러오지 못했습니다.");
+    } finally { loadingState.current = false; if (mounted.current) setLoading(false); }
   }, []);
 
   useEffect(() => {
@@ -129,10 +127,10 @@ export function useParticipation() {
     return () => { mounted.current = false; controller.current?.abort(); window.clearTimeout(first); window.clearInterval(timer); window.removeEventListener("online", refresh); document.removeEventListener("visibilitychange", refresh); };
   }, [loadState]);
 
-  async function submit(situation: Situation, restoring = false) {
+  async function submit(situation: Situation) {
     if (authExpired || busy.current || loadingState.current) return;
     const retry = pendingRequest.current;
-    if (retry && (retry.situation_id !== situation.id || (!restoring && retry.session_id !== session?.id))) return;
+    if (retry && retry.situation_id !== situation.id) return;
     if (!retry && (!session || !session.accepting_choices || answered[situation.id])) return;
     const payload: Submission = retry ?? {
       session_id: session!.id, situation_id: situation.id,
@@ -143,22 +141,16 @@ export function useParticipation() {
     catch { setLoadError("브라우저 저장소에 제출 정보를 보관할 수 없습니다. 저장소 설정을 확인해주세요."); return; }
     busy.current = true;
     setSubmitting(situation.id);
-    const report = (message: string) => {
-      setPendingMessage(message);
-      if (activeSession.current === payload.session_id) setMessages(previous => ({ ...previous, [situation.id]: message }));
-    };
-    report("제출하고 있어요…");
-    const submissionAbort = new AbortController();
-    const submissionTimeout = window.setTimeout(() => submissionAbort.abort(), 15_000);
+    setMessages(previous => ({ ...previous, [situation.id]: "제출하고 있어요…" }));
     try {
       const response = await fetch("/api/choices", {
-        method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload), signal: submissionAbort.signal,
+        method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload),
       });
       const result = await response.json() as ApiError;
       if (response.ok || result.error?.code === "ALREADY_ANSWERED") {
-        if (activeSession.current === payload.session_id) setAnswered(previous => ({ ...previous, [situation.id]: true }));
+        setAnswered(previous => ({ ...previous, [situation.id]: true }));
         rememberPending(null);
-        report("응답이 완료되었습니다.");
+        setMessages(previous => ({ ...previous, [situation.id]: "응답이 완료되었습니다." }));
         await loadState(false);
         return;
       }
@@ -172,19 +164,20 @@ export function useParticipation() {
       } else if (response.status < 500 && ![408, 429].includes(response.status)) rememberPending(null);
       throw new Error(result.error?.message ?? "선택을 제출하지 못했습니다.");
     } catch (error) {
-      report(`${submissionAbort.signal.aborted ? "제출 확인 시간이 초과되었습니다." : error instanceof Error ? error.message : "제출 결과를 확인하지 못했습니다."}${pendingRequest.current ? " 접수 여부가 확인되지 않았습니다. 같은 선택으로 다시 확인해 주세요." : ""}`);
-    } finally { window.clearTimeout(submissionTimeout); busy.current = false; setSubmitting(null); }
+      setMessages(previous => ({ ...previous, [situation.id]:
+        `${error instanceof Error ? error.message : "제출 결과를 확인하지 못했습니다."}${pendingRequest.current ? " 같은 선택으로 다시 시도해 주세요." : ""}` }));
+    } finally { busy.current = false; setSubmitting(null); }
   }
 
   return {
     session, latestSession, history, loading, loadError, authExpired, selected, answered, messages,
-    submitting, pending, pendingMessage, profile, joined, departments,
+    submitting, pending, profile, joined, departments,
     completeProfile: (value: Profile) => { setProfile(value); setJoined(true); },
     refresh: () => void loadState(false), selectChoice: (situationId: string, choiceId: string) =>
       setSelected(previous => ({ ...previous, [situationId]: choiceId })),
     submit, retryPending: () => {
       const saved = pendingRequest.current;
-      if (saved) return submit({ id: saved.situation_id, title: "", body: "", choices: [] }, true);
+      if (saved) return submit({ id: saved.situation_id, title: "", body: "", choices: [] });
     }, retryLoad: () => { setLoading(true); void loadState(true); },
   };
 }
