@@ -48,3 +48,7 @@
 - Unity 실행 검증: Unity 6000.3.24f1이 새 경로의 테스트 장면·맵 FBX·HairFix FBX를 인식하고 재가져왔다. 이후 대형 .blend 변환이 5분 이상 지연되어 이번 배치 프로세스를 종료했다. Play Mode 완료는 미확인이다. 모델의 재질 슬롯/자기 교차 폴리곤 경고가 출력됐다. 새 맵 전시 승인이나 상황 좌표 확정과는 별개다.
 
 - [정적 검증 결과](unity-reorganization-verification.json): 장면·컨트롤러 외부 GUID 5개 모두 해석, 누락 0개.
+
+## 2026-10-09 환경 상태 및 역할 NPC
+
+[맵 업데이트](../library/maps/university_v003/Environment_States_v3.md) · [역할 NPC](../library/characters/role_variants_v001/README.md). 환경 상태 원본 교체 및 FBX 추가, 경찰·미화원·범죄자 추가. 기존 HairFix 및 기본 맵 FBX 연결 유지. Unity 재가져오기/Play Mode 미실행.
