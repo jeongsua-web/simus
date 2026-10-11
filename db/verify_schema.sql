@@ -1,4 +1,4 @@
--- 001_initial_schema.sql 실행 후 핵심 제약조건을 검증한다.
+-- 001~010 마이그레이션 실행 후 핵심 제약조건을 검증한다.
 -- 테스트 데이터는 마지막에 ROLLBACK하므로 DB에 남지 않는다.
 \set ON_ERROR_STOP on
 BEGIN;
@@ -23,8 +23,8 @@ BEGIN
   SELECT count(*) INTO actual_count
   FROM information_schema.tables
   WHERE table_schema='simus' AND table_type='BASE TABLE';
-  IF actual_count <> 18 THEN
-    RAISE EXCEPTION 'Expected 18 tables, found %', actual_count;
+  IF actual_count <> 23 THEN
+    RAISE EXCEPTION 'Expected 23 tables, found %', actual_count;
   END IF;
 
   IF NOT EXISTS (
@@ -61,7 +61,7 @@ BEGIN
       '잘못된 회차의 선택지'
     );
     RAISE EXCEPTION 'Cross-session choice unexpectedly succeeded';
-  EXCEPTION WHEN foreign_key_violation THEN
+  EXCEPTION WHEN foreign_key_violation OR restrict_violation THEN
     NULL;
   END;
 END $$;
@@ -93,7 +93,7 @@ BEGIN
     DELETE FROM participants
     WHERE id='00000000-0000-0000-0000-000000000031';
     RAISE EXCEPTION 'Referenced participant unexpectedly deleted';
-  EXCEPTION WHEN foreign_key_violation THEN
+  EXCEPTION WHEN foreign_key_violation OR restrict_violation THEN
     NULL;
   END;
 END $$;
@@ -111,6 +111,34 @@ BEGIN
   IF after_update <= before_update THEN
     RAISE EXCEPTION 'updated_at trigger did not advance the timestamp';
   END IF;
+END $$;
+
+-- Synthetic coordinates below are test fixtures only, never session/region seeds.
+DO $$
+DECLARE valid jsonb := '{"map_version":"unit-test","path_version":"unit-test","points":[[0,0,0],[1,0,0]],"speed_mps":1,"loop":true}';
+BEGIN
+  IF NOT simus.valid_npc_motion(valid)
+    OR simus.valid_npc_motion(valid - 'loop')
+    OR simus.valid_npc_motion(jsonb_set(valid, '{points}', '[[0,0,0],[0,0,0]]'))
+    OR simus.valid_npc_motion(jsonb_set(valid, '{points}', '[[0,0,0],[1,"bad",0]]')) THEN
+    RAISE EXCEPTION 'NPC route validation failed';
+  END IF;
+  BEGIN
+    INSERT INTO simus.participant_sessions (session_id, participant_id, npc_motion)
+    VALUES ('00000000-0000-0000-0000-000000000011', '00000000-0000-0000-0000-000000000031', valid);
+    RAISE EXCEPTION 'Unconfigured NPC membership unexpectedly succeeded';
+  EXCEPTION WHEN check_violation THEN NULL;
+  END;
+  UPDATE simus.simulation_sessions SET npc_motion=valid
+    WHERE id='00000000-0000-0000-0000-000000000011';
+  INSERT INTO simus.participant_sessions (session_id, participant_id, npc_motion)
+    VALUES ('00000000-0000-0000-0000-000000000011', '00000000-0000-0000-0000-000000000031', valid);
+  BEGIN
+    UPDATE simus.participant_sessions SET npc_motion=jsonb_set(valid, '{speed_mps}', '2')
+      WHERE session_id='00000000-0000-0000-0000-000000000011';
+    RAISE EXCEPTION 'NPC snapshot mutation unexpectedly succeeded';
+  EXCEPTION WHEN check_violation THEN NULL;
+  END;
 END $$;
 
 ROLLBACK;

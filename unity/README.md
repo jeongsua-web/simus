@@ -98,3 +98,35 @@ curl -i http://localhost:3000/api/city-state
 Unity 공식 문서: [UnityWebRequest](https://docs.unity3d.com/ScriptReference/Networking.UnityWebRequest.html),
 [WebGL networking](https://docs.unity3d.com/Manual/webgl-networking.html),
 [Newtonsoft Json package](https://docs.unity3d.com/Packages/com.unity.nuget.newtonsoft-json@3.0/manual/index.html).
+
+## Map-scoped NPC movement and camera tracking (2026-10-11)
+
+`NpcCrowdPoller` now consumes `GET /api/sessions/{id}/npc-positions?map_version=...`.
+Set its `mapVersion` to the **approved scene's actual map version** before enabling live NPCs;
+the default is empty and deliberately makes no requests. New exhibition routes and coordinates
+are not supplied by this implementation. Configure the matching session route on the server first.
+The endpoint returns immutable `epoch` / `motion`, server time and freeze deadline, and canonical
+positions. Unity rejects cross-map data and route/position disagreement (over 5 cm), samples the
+same closed-loop or endpoint-clamped polyline in meters, and never adds implicit lane offsets.
+The canonical snapshot and route share one response, avoiding races between two polling streams.
+
+In an existing or new scene, attach `NeighborhoodLife` to a controller, assign its `client` to the
+`CityStatePoller`, and assign an `NpcCrowdPoller` with the matching map version. Optionally assign
+`npcPrefab`; otherwise capsules are created. The visual prefab should not independently drive its
+root transform (for example via animation root motion). Motion follows server time, turns toward
+the route tangent, smooths corrections, and stops at the server freeze deadline. Disconnection or
+stale NPC responses hold the last rendered pose. Session/map changes clear old avatars; 4xx scope
+or configuration errors clear the rejected snapshot. `LastError` exposes synchronization failures.
+Local `path` / `previewNpcs` only run when `enablePrototypePreview` is explicitly enabled.
+
+For tracking, assign `CityPreviewCamera.npcSource` and call `SetFollowNpcId(fullNpcId)` (or assign
+`followTarget` / call `SetFollowTarget`). It reacquires recreated avatars, snaps once on acquisition,
+then smooths in LateUpdate using unscaled time. `Overview` and `TopView` use `overviewTarget`;
+set `overviewSize` / `topViewSize` for the actual scene. Optional `clampPanToBounds` uses the
+configured `panMinimum` / `panMaximum`, with no invented exhibition boundary. Existing scenes,
+models and scene GUIDs are preserved. The new configuration must be wired in the target scene
+once that map and session route are confirmed.
+
+`NpcMovementTests` covers meters-per-second route sampling, pre-epoch clamp, closed-loop closure,
+non-loop completion, zero-length segments, nonfinite rejection, freeze timing, canonical position
+parity and cross-map/invalid-payload rejection. Run alongside existing EditMode tests.

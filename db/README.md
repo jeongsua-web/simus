@@ -101,3 +101,20 @@ Python 사본의 SQL은 본 스키마에 적용하지 않는다. [통합 안내]
 ## 5A 전시 콘텐츠 초안
 
 005 뒤에 `006_content_score_range.sql`을 적용하면 신규 선택의 개인 점수 -4~+3을 원문 그대로 저장할 수 있다. 기존 회차의 규칙과 결과는 변경하지 않는다. 개발·검증 DB에서 `seed_demo.sql`을 적용한 뒤 `seed_exhibition.sql`을 적용하면 전시 30상황·91선택지 DRAFT가 추가된다. 운영 DB에 시드를 적용하지 않는다. 원문 동기화와 지역/자산의 미확정 범위는 [콘텐츠 인계 문서](../docs/content/exhibition-data.md)를 참고한다.
+
+## NPC 이동 경로 설정 (010)
+
+`009_participant_profiles.sql` 다음에 `010_session_npc_motion.sql`을 한 번 적용한다.
+`simus.simulation_sessions.npc_motion`은 nullable JSONB이며 초기값은 NULL이다.
+승인된 새 맵 경로가 정해지면 DRAFT 회차에만 설정한다. 기존 Neighborhood 경로를 복사하거나 자동 채우지 않는다.
+필드는 `map_version`, `path_version`(영문·숫자로 시작하는 1~128자의 영문·숫자·점·밑줄·하이픈), `points`(2~2048개의 `[x,y,z]`),
+`speed_mps`(0 이상 100 이하), `loop`(boolean)이다. 좌표 절댓값은 1,000,000 이하이고 경로 길이는 0보다 커야 한다.
+좌표는 Unity 월드 미터 단위이며 값은 승인된 맵 자산에서 가져온다.
+
+새 가입은 회차 행을 잠근 뒤 설정된 `npc_motion`을 `simus.participant_sessions.npc_motion`에 명시적으로 복사한다.
+미설정 회차의 새 가입은 API에서 HTTP 409 `NPC_MOTION_NOT_CONFIGURED`로 거절한다.
+DB도 미설정 경로 및 회차 설정과 다른 스냅샷을 거절하며 기존 가입의 NPC ID·경로는 계속 불변이다.
+이미 적용된 004의 과거 스냅샷은 보존하지만 신규 가입에 사용되던 기본 경로는 제거한다.
+회차 복제 시 승인된 경로를 유지할지는 서버에서 명시적으로 결정하고, 미설정 경로를 임의로 생성하지 않는다.
+
+이미 실행 중인 미설정 회차에서도 기존 가입은 조회할 수 있지만 신규 가입은 409로 거절한다. 경로 설정은 DRAFT에서만 가능하므로 승인된 경로를 설정한 새 초안 회차를 사용한다.

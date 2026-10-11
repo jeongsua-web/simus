@@ -8,6 +8,7 @@ import { once } from 'node:events';
 import { generateKeyPair, exportJWK, SignJWT } from 'jose';
 import pg from 'pg';
 import { runDepartmentIntegration } from './departments.integration.mjs';
+import { runNpcPositionIntegration } from './npc-positions.integration.mjs';
 import { runProfileIntegration } from './profiles.integration.mjs';
 import { runDepartmentStatisticsIntegration } from './department-statistics.integration.mjs';
 import { runResultLinksIntegration } from './result-links.integration.mjs';
@@ -81,7 +82,11 @@ try {
   const admin = new pg.Client({ connectionString: `postgresql://postgres@127.0.0.1:${pgPort}/postgres` });
   await admin.connect(); await admin.query('CREATE DATABASE simus_integration'); await admin.end();
   pool = new pg.Pool({ connectionString: env.DATABASE_URL });
-  for (const name of ['001_initial_schema.sql','002_session_lifecycle.sql','003_session_creation.sql','004_participant_npcs.sql','005_participant_departments.sql','006_content_score_range.sql','007_result_links.sql','008_web_push.sql','009_participant_profiles.sql']) await pool.query(await readFile(path.join(web, '../db', name), 'utf8'));
+  for (const name of ['001_initial_schema.sql','002_session_lifecycle.sql','003_session_creation.sql','004_participant_npcs.sql','005_participant_departments.sql','006_content_score_range.sql','007_result_links.sql','008_web_push.sql','009_participant_profiles.sql','010_session_npc_motion.sql']) await pool.query(await readFile(path.join(web, '../db', name), 'utf8'));
+  // Synthetic geometry belongs only to this disposable test cluster. Production has no route default.
+  await pool.query(`CREATE FUNCTION simus.test_fixture_npc_motion() RETURNS trigger LANGUAGE plpgsql AS $$
+    BEGIN IF NEW.npc_motion IS NULL THEN NEW.npc_motion := '{"map_version":"test-fixture-v1","path_version":"test-path-v1","points":[[0,0,0],[0,0,20]],"speed_mps":1.4,"loop":true}'::jsonb; END IF; RETURN NEW; END $$;
+    CREATE TRIGGER test_fixture_npc_motion BEFORE INSERT ON simus.simulation_sessions FOR EACH ROW EXECUTE FUNCTION simus.test_fixture_npc_motion()`);
   await startServer();
   console.log(await command(process.execPath, ['tests/session-lifecycle.integration.mjs'], env));
   await runFlow({ pool, env, stopServer, startServer });
@@ -112,6 +117,7 @@ try {
   assert.equal((await pool.query('SELECT impact_scale::float8 FROM simus.simulation_sessions WHERE id=$1', [neighborhoodId])).rows[0].impact_scale, 0.1);
   console.log('PASS: migrated neighborhood WASTE seed/readiness and original scoring');
   await runDepartmentIntegration({ pool, env, token: demoToken, templateId: demoId });
+  await runNpcPositionIntegration({ pool, env, token: demoToken, templateId: demoId });
   await runProfileIntegration({ pool, env, token: demoToken, templateId: demoId });
   await runDepartmentStatisticsIntegration({ env, token: demoToken, templateId: demoId });
   await runResultLinksIntegration({ pool, env, token: demoToken, templateId: demoId });

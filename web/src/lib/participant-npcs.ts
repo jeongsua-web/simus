@@ -6,11 +6,12 @@ export async function joinSession(db: PoolClient, sessionId: string, participant
   const prior = await db.query(`SELECT npc_id FROM simus.participant_sessions
     WHERE session_id=$1 AND participant_id=$2`, [sessionId, participantId]);
   if (prior.rowCount) return false;
-  const open = await db.query(`SELECT 1 FROM simus.simulation_sessions WHERE id=$1
+  const open = await db.query(`SELECT npc_motion FROM simus.simulation_sessions WHERE id=$1
     AND status='RUNNING' AND starts_at<=clock_timestamp() AND clock_timestamp()<scheduled_end_at`, [sessionId]);
   if (!open.rowCount) throw new ApiError(409, "SESSION_CLOSED", "회차 입장이 종료되었거나 아직 시작되지 않았습니다.");
-  await db.query(`INSERT INTO simus.participant_sessions(session_id,participant_id,joined_at)
-    VALUES($1,$2,clock_timestamp())`, [sessionId, participantId]);
+  if (!open.rows[0].npc_motion) throw new ApiError(409, "NPC_MOTION_NOT_CONFIGURED", "회차의 NPC 경로가 아직 설정되지 않았습니다.");
+  await db.query(`INSERT INTO simus.participant_sessions(session_id,participant_id,joined_at,npc_motion)
+    VALUES($1,$2,clock_timestamp(),$3)`, [sessionId, participantId, open.rows[0].npc_motion]);
   await db.query(`INSERT INTO simus.participant_alignments(session_id,participant_id)
     VALUES($1,$2) ON CONFLICT DO NOTHING`, [sessionId, participantId]);
   // A request that crosses the scheduled deadline must roll back its membership.
@@ -27,6 +28,8 @@ export async function readNpcs(db: PoolClient, sessionId: string, participantId?
       LEAST(s.scheduled_end_at,s.end_requested_at) AS freeze_at
     FROM simus.simulation_sessions s WHERE id=$1 AND status<>'DRAFT'
   ) SELECT s.id AS session_id,s.status,s.server_time,s.freeze_at,
+    COALESCE(s.npc_motion->>'map_version',(SELECT p.npc_motion->>'map_version' FROM simus.participant_sessions p WHERE p.session_id=s.id ORDER BY p.npc_id LIMIT 1)) AS map_version,
+    COALESCE(s.npc_motion->>'path_version',(SELECT p.npc_motion->>'path_version' FROM simus.participant_sessions p WHERE p.session_id=s.id ORDER BY p.npc_id LIMIT 1)) AS path_version,
     LEAST(s.server_time,s.freeze_at) AS motion_time,
     s.server_time>=s.freeze_at AS frozen,
     COALESCE((SELECT jsonb_agg(jsonb_build_object(

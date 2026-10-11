@@ -195,3 +195,11 @@ curl -X POST -H "Authorization: Bearer $SESSION_JOB_TOKEN" \
 ## 4B 결과 링크와 웹 푸시
 
 본인 쿠키로 `POST /api/sessions/{id}/result-link`를 호출하면 30일 동안 유효한 읽기 전용 결과 자격을 발급한다. `POST /api/shared-result`는 그 자격으로 확정된 결과를 조회한다. 회차별 푸시 동의는 `POST`/`DELETE /api/sessions/{id}/push-subscription`으로 관리하고, `GET /api/push/config`에서 공개 VAPID 키를 조회한다. 결과 확정 후 발송 작업은 인증된 reconcile 호출에서 처리한다. [구현·인수 범위](../docs/contracts/result-notification-4b.md).
+
+### NPC 경로 설정 및 위치 동기화 (DB 010)
+
+- `PUT /api/admin/sessions/{id}/npc-motion`: 관리자 JWT/활성 관리자/동일 출처, DRAFT 전용. 본문 `{map_version,path_version,points,speed_mps,loop}`, 반환 `{session_id,motion}`. 새 회차 경로는 자동 생성·복사하지 않는다.
+- `GET /api/sessions/{id}/npc-positions?map_version=...&path_version=...`: 공개 익명 스냅샷. `map_version` 필수, `path_version` 선택. 기존 NPC `epoch/motion`과 서버 시각 기준 `position`, `forward`를 함께 반환한다. 지도 불일치 409, 미설정 409, DRAFT 404.
+- 미설정 신규 가입·첫 선택은 `409 NPC_MOTION_NOT_CONFIGURED`. 기존 회원·조회는 보존한다. 새 맵 경로는 확정 자료를 받은 뒤 DRAFT에서 명시 설정한다.
+
+검증 범위·제한·좌표·동결 및 오류 상세는 [NPC 계약](../docs/contracts/participant-npc-api.md#2026-10-npc-위치-동기화-010-이후)을 따른다. 경로 중심선 위치를 사용하며 예전 암묵적 X 차선 간격은 제거했다.

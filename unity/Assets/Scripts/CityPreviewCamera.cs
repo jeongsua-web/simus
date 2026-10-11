@@ -8,6 +8,12 @@ namespace Simus
         public bool previewControls = true;
         public Vector3 target = Vector3.zero;
         public float overviewSize = 132f;
+        public Vector3 overviewTarget = Vector3.zero;
+        public float topViewSize = 112f;
+        public bool clampPanToBounds;
+        public Vector2 panMinimum;
+        public Vector2 panMaximum;
+        public bool IsFollowing => followEnabled && activeTarget != null;
         public string previewSubtitle = "STAGE 02    |    200 x 200 m";
         [Header("NPC follow")]
         public Transform followTarget;
@@ -76,7 +82,7 @@ namespace Simus
         public void Overview()
         {
             followEnabled = false;
-            target = Vector3.zero;
+            target = overviewTarget;
             yaw = -36f;
             pitch = 55f;
             size = overviewSize;
@@ -86,10 +92,10 @@ namespace Simus
         public void TopView()
         {
             followEnabled = false;
-            target = Vector3.zero;
+            target = overviewTarget;
             yaw = 0f;
             pitch = 90f;
-            size = 112f;
+            size = topViewSize;
             ApplyPose();
         }
 
@@ -113,8 +119,11 @@ namespace Simus
                     Vector3 right = transform.right;
                     Vector3 forward = Vector3.Cross(right, Vector3.up).normalized;
                     target -= (right * Input.GetAxis("Mouse X") + forward * Input.GetAxis("Mouse Y")) * size * 0.02f;
-                    target.x = Mathf.Clamp(target.x, -130f, 130f);
-                    target.z = Mathf.Clamp(target.z, -130f, 130f);
+                    if (clampPanToBounds)
+                    {
+                        target.x = Mathf.Clamp(target.x, panMinimum.x, panMaximum.x);
+                        target.z = Mathf.Clamp(target.z, panMinimum.y, panMaximum.y);
+                    }
                 }
                 size = Mathf.Clamp(size * (1f - Input.mouseScrollDelta.y * 0.07f), 1f, 170f);
             }
@@ -143,7 +152,7 @@ namespace Simus
                     }
                     else
                         target = Vector3.SmoothDamp(target, destination, ref followVelocity,
-                            Mathf.Max(0.01f, followSmoothTime), Mathf.Infinity, Time.deltaTime);
+                            Mathf.Max(0.01f, followSmoothTime), Mathf.Infinity, Time.unscaledDeltaTime);
                     activeTarget = next;
                 }
                 else

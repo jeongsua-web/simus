@@ -34,7 +34,7 @@ export function npcPosition(npc: Npc, at: number): [number, number, number] | nu
       const q = points[(i + 1) % points.length];
       return Math.hypot(p[0] - q[0], p[1] - q[1], p[2] - q[2]);
     });
-    geometry = { segments, total: segments.reduce((a, b) => a + b, 0), offset: laneOffset(npc.npc_id) };
+    geometry = { segments, total: segments.reduce((a, b) => a + b, 0), offset: 0 };
     lengthsByNpc.set(npc, geometry);
   }
   const lengths = geometry.segments;

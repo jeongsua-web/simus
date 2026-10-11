@@ -1,0 +1,23 @@
+[agents]
+enabled = true
+max_threads = 5
+
+[agents.blender]
+description = "Blender 3D 모델링 및 에셋 최적화"
+config_file = "agents/blender.toml"
+
+[agents.unity]
+description = "Unity 씬, NPC, 카메라 시스템 개발"
+config_file = "agents/unity.toml"
+
+[agents.backend]
+description = "Next.js API 및 서버 개발"
+config_file = "agents/backend.toml"
+
+[agents.database]
+description = "PostgreSQL 데이터베이스 설계"
+config_file = "agents/database.toml"
+
+[agents.qa]
+description = "코드 검토 및 테스트"
+config_file = "agents/qa.toml"

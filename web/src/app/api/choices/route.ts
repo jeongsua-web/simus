@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
 import { ApiError, authenticate, body, checkOrigin, handle, json, requireOpen, transaction, uuid } from "@/lib/api";
+import { joinSession } from "@/lib/participant-npcs";
 export const runtime = "nodejs";
 export async function POST(request: NextRequest) {
   return handle(async () => {
@@ -36,7 +37,7 @@ export async function POST(request: NextRequest) {
         AND NOT EXISTS (SELECT 1 FROM simus.session_regions r LEFT JOIN simus.region_states rs
         ON rs.session_id=r.session_id AND rs.region_id=r.id WHERE r.session_id=$1 AND rs.region_id IS NULL)`, [sid]);
       if (!ready.rowCount) throw new ApiError(409, "STATE_NOT_READY", "도시 또는 지역 초기 상태가 준비되지 않았습니다.");
-      await db.query("INSERT INTO simus.participant_sessions(session_id,participant_id) VALUES ($1,$2) ON CONFLICT DO NOTHING", [sid,pid]);
+      await joinSession(db, sid, pid);
       await db.query("INSERT INTO simus.participant_alignments(session_id,participant_id) VALUES ($1,$2) ON CONFLICT DO NOTHING", [sid,pid]);
       const record = await db.query(`WITH effects AS (
         SELECT c.*,s.impact_scale,clock_timestamp() AS received_at,
