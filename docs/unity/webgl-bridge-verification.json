@@ -1,0 +1,84 @@
+{
+  "map_version": "test-only-bridge-v1",
+  "protocol_version": 1,
+  "editor": "6000.3.24f1",
+  "build_result": "Success",
+  "development": true,
+  "compression": "Disabled",
+  "build_directory": "unity/Builds/bridge_test/city",
+  "build_files": [
+    {
+      "path": "Build/city.data",
+      "bytes": 6290331,
+      "sha256": "b33e75303b214b5c177aa819feda57d805182d991cb5de224919c5fad88e04b9"
+    },
+    {
+      "path": "Build/city.framework.js",
+      "bytes": 764335,
+      "sha256": "e26856b7b6425535718a035aa39d11aa9696e484bd453e22517b513a7ae9050d"
+    },
+    {
+      "path": "Build/city.loader.js",
+      "bytes": 58343,
+      "sha256": "b2b17aa612ceb1809e709e6f8dd59ebad7cfa76a7d061cf8501919081761a52a"
+    },
+    {
+      "path": "Build/city.wasm",
+      "bytes": 43704391,
+      "sha256": "8bb7dbe2587f44b7ccea6cf583d9be631438292affe88da61fcbfdeb76846b32"
+    },
+    {
+      "path": "bridge.js",
+      "bytes": 3512,
+      "sha256": "0f3b72662cc12879951e99d3a23ee22c26eb7b981c5b694115a7f8a01044521c"
+    },
+    {
+      "path": "build.json",
+      "bytes": 59,
+      "sha256": "e6456a9e5d0b4de44c0955834d45a82ee971e2c05c78d8ef0113d2ee0f436abb"
+    },
+    {
+      "path": "index.html",
+      "bytes": 1548,
+      "sha256": "d482ca6f0d0e80432b9d5ef2c2c872c8b1da6b326ea8ada8f12b466f28d9ed2a"
+    }
+  ],
+  "edit_mode": {
+    "total": "14",
+    "passed": "14",
+    "failed": "0",
+    "skipped": "0"
+  },
+  "javascript_tests": {
+    "adapter": 4,
+    "web_contract": 2,
+    "failed": 0
+  },
+  "actual_webgl_browser": {
+    "engine": "Chromium headless / SwiftShader",
+    "viewport": "390x844",
+    "result": "Passed",
+    "checks": [
+      "READY then BOUND",
+      "duplicate INIT returns BOUND",
+      "old bridge_id ignored",
+      "VISIBILITY hide/resume",
+      "freeze snapshot accepted",
+      "map mismatch ERROR",
+      "retry binds again",
+      "session mismatch ERROR",
+      "DISPOSE",
+      "no page or console errors"
+    ]
+  },
+  "not_verified": [
+    "real mobile browser/GPU, screen lock, heat and memory",
+    "HTTPS production headers and atomic deployment",
+    "real authenticated participant API and multi-device movement synchronization",
+    "exhibition map, paths, assets and region placement"
+  ],
+  "catalog": {
+    "result": "Blocked",
+    "reason": "Three existing role NPC manifest entries reference missing assets/library/characters/role_variants_v001/source/SIMUS_NPC_Role_Variants.blend; inventory writer refuses updates while manifest has errors."
+  }
+}

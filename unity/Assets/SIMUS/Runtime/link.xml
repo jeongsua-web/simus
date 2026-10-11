@@ -1,0 +1,7 @@
+<linker>
+  <!-- GameObject.CreatePrimitive(Capsule) needs this type even though the bridge
+       removes the collider immediately. WebGL otherwise strips its constructor. -->
+  <assembly fullname="UnityEngine.PhysicsModule">
+    <type fullname="UnityEngine.CapsuleCollider" preserve="all" />
+  </assembly>
+</linker>

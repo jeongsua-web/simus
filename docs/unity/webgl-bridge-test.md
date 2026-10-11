@@ -51,3 +51,13 @@ TEST_PLAYWRIGHT_MODULE=/absolute/path/to/playwright/index.mjs \
 ## 검증 기록
 
 아래 결과는 합성 데이터 시험이며 휴대폰 성능·전시 승인을 뜻하지 않는다.
+
+- Unity 6000.3.24f1의 WebGL Build Support 설치 후, 별도 `/tmp/simus_bridge_validation` 프로젝트에서 실제 Development WebGL 빌드 성공. 기존 대형 맵을 가져오지 않고 저장소의 Runtime/Tests/Scripts, 브리지 템플릿·플러그인 및 시험 빌더를 복사해 검증했다. 생성된 시험 장면과 신규 `.meta`는 저장소에 보존했다.
+- C# 컴파일 및 EditMode 14/14 통과. JS 어댑터 4건 + 기존 웹 계약 2건 통과.
+- 실제 WebGL을 Chromium/SwiftShader, 390×844 뷰포트에서 로드하여 READY → INIT → BOUND, 중복 INIT, 이전 bridge_id 무시, 숨김/복귀, freeze snapshot 수신, 지도/회차 불일치 ERROR, 재시도, DISPOSE 확인. 최종 페이지 오류·콘솔 오류 0건. 이 검사는 모바일 **크기의 데스크톱 브라우저** 검사다.
+- 초기 빌드의 CapsuleCollider stripping 오류를 실제 콘솔에서 발견하여 `Runtime/link.xml`에 해당 타입을 보존하고 재빌드·재검사했다.
+- 동결 위치 수학 검증은 EditMode에서 수행했다. 브라우저 검사는 freeze snapshot 수신과 표시까지 확인했으며, 두 실제 기기의 위치 일치 측정은 하지 않았다.
+- 에셋 `catalog.py` 및 `--check` 실행: 기존 `npc_role_police_v001`, `npc_role_cleaner_v001`, `npc_role_criminal_v001` 3개 manifest 항목의 `assets/library/characters/role_variants_v001/source/SIMUS_NPC_Role_Variants.blend` 누락으로 실패. 스크립트가 오류 시 inventory 쓰기를 막으므로 inventory 최신 여부도 통과하지 못했다. 관련 manifest·원본을 임의 변경하지 않았다.
+- 미검증: 실제 휴대폰/GPU·잠금 복귀·발열/메모리·느린 네트워크, 실제 쿠키 인증 서버 연결과 다기기 동기화, HTTPS 배포 MIME/캐시/원자적 교체, 전시 지도·경로·지역 연출. Development 무압축 빌드는 배포 성능 기준이 아니다.
+
+상세 결과와 빌드 SHA-256: [webgl-bridge-verification.json](webgl-bridge-verification.json). 실제 브라우저 화면: [시험 스크린샷](webgl-bridge-test.png).
