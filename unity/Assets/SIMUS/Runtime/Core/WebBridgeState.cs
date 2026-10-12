@@ -69,12 +69,30 @@ namespace Simus.City
                     foreach (var v in xyz) Number(v);
                 }
             }
-            var parsed = NpcCrowdSnapshot.Parse(root.ToString(Formatting.None), receivedAt);
-            foreach (var npc in parsed.Npcs)
+            // The iframe bridge uses the immutable /npcs motion contract. The separately
+            // polled /npc-positions contract additionally requires canonical positions.
+            var parsed = new NpcCrowdSnapshot {
+                SessionId = session, MapVersion = MapVersion, ServerTimeMs = server,
+                FreezeAtMs = freeze, MotionTimeMs = motionTime, ReceivedRealtime = receivedAt
+            };
+            foreach (var item in npcs)
             {
-                if (float.IsNaN(npc.TotalLength) || float.IsInfinity(npc.TotalLength)) throw new FormatException("PATH_LENGTH");
-                npc.LaneOffset = 0;
-            } // Old Neighborhood ±2m rule is not a new-map rule.
+                var motion = item["motion"];
+                var points = (JArray)motion["points"];
+                var npc = new NpcMotion {
+                    Id = Uuid(item, "npc_id"), EpochMs = Timestamp(item, "epoch"),
+                    Speed = Number(motion["speed_mps"]), Loop = (bool)motion["loop"],
+                    Points = new UnityEngine.Vector3[points.Count], PrecisePoints = new double[points.Count][]
+                };
+                for (var i = 0; i < points.Count; i++) {
+                    var p = points[i];
+                    npc.PrecisePoints[i] = new[] { Number(p[0]), Number(p[1]), Number(p[2]) };
+                    npc.Points[i] = new UnityEngine.Vector3((float)npc.PrecisePoints[i][0], (float)npc.PrecisePoints[i][1], (float)npc.PrecisePoints[i][2]);
+                }
+                npc.Prepare();
+                if (double.IsNaN(npc.TotalLength) || double.IsInfinity(npc.TotalLength)) throw new FormatException("PATH_LENGTH");
+                parsed.Npcs.Add(npc);
+            } // NpcMotion follows canonical route coordinates without prototype lane offsets.
             return parsed;
         }
         private static string Text(JToken obj, string key)

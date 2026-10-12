@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>SIM:US NPC 추적 테스트</title>
+<style>html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#18252d}canvas{width:100%;height:100%;display:block}#status{position:absolute;top:12px;left:12px;color:white;background:#18252ddd;padding:8px 12px;border-radius:8px;font:14px sans-serif}#status:empty{display:none}</style></head>
+<body><canvas id="unity-canvas" tabindex="0" aria-label="Unity NPC 추적 테스트"></canvas><div id="status" role="status">Unity 로딩 중…</div>
+<script>
+const canvas = document.getElementById('unity-canvas');
+const status = document.getElementById('status');
+let instance, disposed = false;
+function report(type, extra = {}) {
+  if (window.parent !== window) window.parent.postMessage({channel:'simus-unity-preview',type,...extra}, location.origin);
+}
+function fail(message) { status.textContent = message; report('ERROR'); }
+const script = document.createElement('script');
+script.src = 'Build/{{{ LOADER_FILENAME }}}';
+script.onerror = () => fail('Unity 로더를 불러오지 못했습니다.');
+script.onload = () => createUnityInstance(canvas, {
+  dataUrl:'Build/{{{ DATA_FILENAME }}}', frameworkUrl:'Build/{{{ FRAMEWORK_FILENAME }}}', codeUrl:'Build/{{{ CODE_FILENAME }}}',
+  streamingAssetsUrl:'StreamingAssets', companyName:'SIMUS', productName:'NPC follow preview', productVersion:'1',
+  devicePixelRatio:Math.min(window.devicePixelRatio || 1, 1.5),
+  showBanner:(message,type) => { if (type === 'error') fail(message); }
+}, progress => { status.textContent = 'Unity 로딩 중… ' + Math.round(progress * 100) + '%'; report('PROGRESS',{progress}); })
+  .then(value => { if (disposed) { value.Quit(); return; } instance = value; status.textContent=''; report('READY'); canvas.focus(); })
+  .catch(() => fail('Unity를 시작하지 못했습니다. 페이지를 새로고침해 주세요.'));
+document.body.appendChild(script);
+canvas.addEventListener('webglcontextlost', () => fail('그래픽 연결이 끊겼습니다. 페이지를 새로고침해 주세요.'));
+window.addEventListener('pagehide', () => { disposed = true; if (instance) instance.Quit().catch(() => {}); });
+</script></body></html>

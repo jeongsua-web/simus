@@ -1,5 +1,30 @@
 # SIM:US Unity client
 
+## 웹 NPC 추적 프리뷰
+
+`NpcFollowWebGLBuild.Build`는 기존 `CompletedMapNpcFollow.unity`를 수정하거나 재생성하지 않고
+독립 WebGL 프리뷰로 내보냅니다. 기본 산출물은 `Builds/npc_follow_preview`이며
+`SIMUS_PREVIEW_OUTPUT` 환경 변수로 출력 위치를 바꿀 수 있습니다.
+Unity 메뉴 `SIMUS > WebGL > Build NPC follow preview` 또는 아래 batchmode 명령을 사용합니다.
+
+```sh
+Unity -batchmode -nographics -quit -projectPath /absolute/path/to/unity \
+  -executeMethod NpcFollowWebGLBuild.Build -logFile /tmp/simus-preview-build.log
+cd web
+npm run unity:deploy
+```
+
+웹 `/unity`는 `/unity-preview/index.html`의 실제 Unity 런타임을 띄웁니다.
+프리뷰는 NPC 보도 왕복·Walk 애니메이션·추적 카메라를 보여 주는 로컬 테스트입니다.
+참여자 회차·NPC API와 연결되지 않으며 전시 좌표·map_version을 확정하지 않습니다.
+`build.json`의 `map_version`은 null이고 `exhibition_ready`는 false입니다.
+참여자용 `/city` 브리지와 별도로 배포합니다.
+
+브라우저에서 별도 압축 응답 헤더 없이 제공하도록 빌드는 무압축 WebGL을 사용합니다.
+템플릿 `simus_preview`는 로딩률·완료·오류를 동일 출처 부모 창에
+`simus-unity-preview` 채널의 `PROGRESS`, `READY`, `ERROR` 메시지로 전달합니다.
+부모 창은 메시지 출처와 iframe 창을 검증해야 합니다.
+
 ## NPC 추적 카메라
 
 Main Camera의 `CityPreviewCamera`에서 `Follow Target`에 NPC Transform을 지정하면
@@ -14,16 +39,16 @@ Main Camera의 `CityPreviewCamera`에서 `Follow Target`에 NPC Transform을 지
 마지막 화면을 유지하며 임의의 다른 참여자를 선택하지 않습니다.
 
 새 맵 테스트 장면은 `Assets/SIMUS/Scenes/npc_follow_test/CompletedMapNpcFollow.unity`입니다.
-장면을 열고 Play를 누르면 `Test NPC - HairFix 01`이 보도 구간을 왕복하고 Main Camera가 즉시 추적합니다.
-`SIMUS/Art/characters/modular_hairfix_v001/models`의 캐릭터를 사용하며,
-01번 헤어만 표시하고 Walk 애니메이션을 반복합니다. 기본 추적 크기는 7, 평활 시간은 0.25초입니다.
+장면을 열고 Play를 누르면 `Test NPC - Happiness 01`이 보도 구간을 왕복하고 Main Camera가 즉시 추적합니다.
+`Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Happiness_Animations.fbx`를 사용하며,
+01번 헤어만 표시하고 NEUTRAL_WALK 애니메이션을 반복합니다. 현재 장면의 추적 크기는 12.75089, 평활 시간은 0.25초입니다.
 `Camera test segment`의 Start/End로 테스트 구간을 조정할 수 있습니다.
 이 구간은 새 맵 FBX의 보도 표면을 검사해 만든 로컬 테스트이며 전시 회차·서버 경로와 무관합니다.
 서버 없이 실행되며 기본 빌드 장면도 이 장면으로 설정됩니다.
 `SIMUS > Build Completed Map NPC Follow Test`로 테스트 장면을 재생성할 수 있습니다(장면 내 수동 설정은 재생성됩니다).
 기존 `NeighborhoodLive`의 시제품 연결은 보존합니다.
 Overview/Top view/우클릭 이동은 추적을 해제하고, 화면의 Follow NPC 버튼 또는 F 키로 복귀합니다.
-웹 빌드 및 휴대폰 실기기 검증은 별도입니다.
+이 장면의 WebGL 빌드와 데스크톱 Chromium 390px/1280px 프리뷰 검증은 [2026-10-12 기록](../docs/verification/unity-webgl-2026-10-12.md)을 참조합니다. 휴대폰 실기기 검증은 남아 있습니다.
 
 2026-09-29 통합 장면은 `Assets/Scenes/NeighborhoodLive.unity`입니다.
 Unity 6000.3.24f1에서 본 서버 `/api/city-state`를 읽는 폴러·HUD와 동네 맵·NPC 미리보기·임시 도시 연출을 연결합니다.
@@ -33,7 +58,7 @@ Unity 6000.3.24f1에서 본 서버 `/api/city-state`를 읽는 폴러·HUD와 �
 
 통합 장면의 `SIMUS Connected Neighborhood`에서 Server Base Url을 설정하세요.
 `SIMUS > Build Connected Neighborhood`는 원본 맵에서 파생 장면을 재생성합니다.
-당시 기본 빌드 장면은 NeighborhoodLive였으며, 현재는 위 새 맵 추적 테스트 장면입니다. Windows/WebGL 실제 빌드 검증은 별도입니다.
+당시 기본 빌드 장면은 NeighborhoodLive였으며, 현재는 위 새 맵 추적 테스트 장면입니다. NeighborhoodLive 자체의 Windows/WebGL 빌드 검증은 위 NPC 추적 프리뷰 및 합성 브리지 시험과 별개입니다.
 
 빈 장면용 기존 클라이언트와 [도시 표현 규칙](VISUALIZATION.md)도 유지합니다.
 
@@ -62,7 +87,7 @@ Unity Editor와 등록된 Unity 프로젝트는 각각 0개였다. 따라서 특
 
 1. Unity 6000.3.24f1에서 `unity/` 폴더를 연다. 다른 버전으로 열기 전에 장면 호환성을 확인한다.
 2. Package Manager가 manifest의 Newtonsoft 패키지를 복원할 때까지 기다린다.
-3. `Assets/Scenes/NeighborhoodLive.unity`를 열면 통합 장면을 확인할 수 있다. `Neighborhood.unity`는 정적 원본이다. 조작법은 [동네 맵 안내](../docs/unity-neighborhood/README.md)를 따른다.
+3. 현재 기본 장면은 `Assets/SIMUS/Scenes/npc_follow_test/CompletedMapNpcFollow.unity`다. 기존 서버 연동 시제품은 `Assets/Scenes/NeighborhoodLive.unity`에서 확인할 수 있다. `Neighborhood.unity`는 정적 원본이다. 조작법은 [동네 맵 안내](../docs/unity-neighborhood/README.md)를 따른다.
 4. 기존 API 연동 기능을 확인하려면 새 빈 장면을 만들고 Play를 누른다. runtime bootstrap이 폴러와 도시 시각화를 자동 생성한다.
 5. 서버 주소나 폴링 주기를 바꾸려면 Play 전에 `SIMUS > Create City Client`를 실행하고,
    생성된 오브젝트의 `City State Poller`에서 `Server Base Url`, `Polling Seconds`, `Timeout Seconds`를 설정한다.
@@ -84,9 +109,9 @@ curl -i http://localhost:3000/api/city-state
 ```
 
 2026-09-16 실제 로컬 서버에서 HTTP 200, `Cache-Control: no-store`, RUNNING 회차,
-문자열 version, 도시 수치와 지역 배열을 확인했다. Unity Editor가 설치되어 있지 않아 이번
-환경에서는 C# 컴파일, EditMode 테스트, Play Mode의 `UnityWebRequest`, 요청 취소 및 WebGL
-동일 출처 동작은 실행 검증하지 못했다. 위 절차로 Editor를 준비한 후 Console 컴파일 오류가
+문자열 version, 도시 수치와 지역 배열을 확인했다. 당시에는 Unity Editor가 설치되어 있지 않아 해당
+검증에서는 C# 컴파일, EditMode 테스트, Play Mode의 `UnityWebRequest`, 요청 취소 및 WebGL
+동일 출처 동작은 실행 검증하지 못했다. 현재 Editor 설치·WebGL 시험 결과는 위 최신 검증 기록을 참고한다. 수동 확인 시 Console 컴파일 오류가
 없는지 확인하고 Test Runner를 실행한 다음, Play 화면에서 다음을 확인한다.
 
 - 서버 정상: `Connected`, 회차 ID·status·version·도시 및 지역 수치 표시

@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "unity:deploy": "node scripts/deploy-unity.mjs",
     "test:integration": "node tests/isolated-runner.mjs"
   },
   "dependencies": {

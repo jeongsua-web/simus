@@ -1,6 +1,6 @@
 # SIM:US PostgreSQL 스키마
 
-시연용 새 DB에는 `001_initial_schema.sql` → `002_session_lifecycle.sql` → `003_session_creation.sql` → `004_participant_npcs.sql` → `005_participant_departments.sql` → `006_content_score_range.sql` → `007_result_links.sql` → `008_web_push.sql` → `009_participant_profiles.sql` → `seed_demo.sql` 또는 `seed_neighborhood.sql`을 적용한다.
+시연용 새 DB에는 `001_initial_schema.sql` → `002_session_lifecycle.sql` → `003_session_creation.sql` → `004_participant_npcs.sql` → `005_participant_departments.sql` → `006_content_score_range.sql` → `007_result_links.sql` → `008_web_push.sql` → `009_participant_profiles.sql` → `010_session_npc_motion.sql` → `seed_demo.sql` 또는 `seed_neighborhood.sql`을 적용한다.
 `seed_demo.sql`은 관리자 화면에서 시작할 DRAFT를 준비한다. 기존 `seed_development.sql`은 즉시 RUNNING으로
 전환하는 개발용이므로 같은 DB에 혼용하지 않는다. 운영 DB에는 어느 seed도 적용하지 않는다.
 구체적인 명령과 데이터 분리는 [시연·배포 가이드](../docs/operations/demo-deployment.md)에 있다.
@@ -33,7 +33,7 @@ psql -d simus -v ON_ERROR_STOP=1 -f db/001_initial_schema.sql
 Next.js 서버 쿼리에서는 `simus.city_states`처럼 스키마를 명시한다.
 
 Unity 도시 시각화 클라이언트와 브라우저에는 DB 접속 정보나 자격 증명을 제공하지 않는다.
-PostgreSQL 접근은 Next.js 서버가 담당하며 Unity는 `GET /api/city-state`만 조회한다.
+PostgreSQL 접근은 Next.js 서버가 담당하며 Unity는 공개 `GET /api/city-state`와 회차별 NPC API를 조회한다. 본인 NPC 인증은 웹 호스트가 담당한다.
 필드 타입과 null 처리, bigint 버전 비교는 [Unity 연동 규격](../docs/contracts/unity-integration.md)을 따른다.
 
 생성 후 핵심 제약조건을 검증할 수 있다. 검증 데이터는 롤백되어 남지 않는다.
@@ -115,6 +115,6 @@ Python 사본의 SQL은 본 스키마에 적용하지 않는다. [통합 안내]
 미설정 회차의 새 가입은 API에서 HTTP 409 `NPC_MOTION_NOT_CONFIGURED`로 거절한다.
 DB도 미설정 경로 및 회차 설정과 다른 스냅샷을 거절하며 기존 가입의 NPC ID·경로는 계속 불변이다.
 이미 적용된 004의 과거 스냅샷은 보존하지만 신규 가입에 사용되던 기본 경로는 제거한다.
-회차 복제 시 승인된 경로를 유지할지는 서버에서 명시적으로 결정하고, 미설정 경로를 임의로 생성하지 않는다.
+현재 서버의 회차 복제(`web/src/lib/session-creation.ts`)는 `npc_motion`을 복사하지 않는다. 새 DRAFT에 승인된 경로를 별도로 설정해야 하며, seed도 새 전시 맵 경로를 자동으로 채우지 않는다.
 
 이미 실행 중인 미설정 회차에서도 기존 가입은 조회할 수 있지만 신규 가입은 409로 거절한다. 경로 설정은 DRAFT에서만 가능하므로 승인된 경로를 설정한 새 초안 회차를 사용한다.

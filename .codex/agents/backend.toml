@@ -15,6 +15,7 @@ Responsibilities:
 Rules:
 - Read web/AGENTS.md first. This Next.js version has breaking changes; check node_modules/next/dist/docs/ before writing code.
 - Do not modify Unity, Blender, or asset files.
+- Do not modify client pages, CSS modules, or browser UI; request presentation changes from the web-ui agent.
 - Do not change DB schema directly; request schema changes from the database agent as new numbered migrations.
 - Never expose DB credentials or secrets to the browser or Unity client.
 - Do not break existing API contracts (field types, null handling, bigint versions) without updating docs/contracts and notifying the unity agent.

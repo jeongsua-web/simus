@@ -9,11 +9,11 @@ Next.js 참여·관리자 화면, PostgreSQL 회차·선택·결과 저장, Unit
 
 ## 시작하기
 
-1. 새 DB에 `db/001_initial_schema.sql`부터 `009_participant_profiles.sql`까지 번호 순서대로 적용합니다. 기존 DB에는 적용 이력을 확인한 뒤 누락된 후속 마이그레이션만 순서대로 적용합니다.
+1. 새 DB에 `db/001_initial_schema.sql`부터 `010_session_npc_motion.sql`까지 번호 순서대로 적용합니다. 기존 DB에는 적용 이력을 확인한 뒤 누락된 후속 마이그레이션만 순서대로 적용합니다.
 2. 새 개발·시연 DB에 `db/seed_demo.sql` 또는 `db/seed_neighborhood.sql`로 최초 콘텐츠를 준비합니다. 전시 30상황 초안을 시험할 때는 `seed_demo.sql` 다음에 `seed_exhibition.sql`을 적용합니다. 운영 DB에는 seed를 실행하지 않습니다.
 3. `web/`에서 환경 설정 후 `npm ci`, `npm run build`, `npm start`를 실행합니다.
-4. `/admin`에서 관리자 JWT로 접속해 회차를 준비·시작하고 `/participate`에서 참여합니다.
-5. Unity 6000.3.24f1로 `unity/`를 열고 `Assets/Scenes/NeighborhoodLive.unity`를 실행합니다. 폴러 주소는 기본 `http://localhost:3000`입니다.
+4. `/admin`에서 관리자 JWT로 접속해 DRAFT 회차를 준비합니다. 참여 시험 전에 승인된 맵의 `npc_motion`을 설정한 뒤 시작하고 `/participate`에서 참여합니다. seed와 회차 복제는 새 맵 경로를 자동 설정하지 않으며, 미설정 회차의 신규 입장·첫 선택은 `409 NPC_MOTION_NOT_CONFIGURED`로 거절됩니다. 설정 규격은 [DB 안내](db/README.md#npc-이동-경로-설정-010)를 따릅니다.
+5. Unity 6000.3.24f1로 `unity/`를 열고 기본 장면 `Assets/SIMUS/Scenes/npc_follow_test/CompletedMapNpcFollow.unity`에서 로컬 NPC 추적을 확인합니다. 웹 `/unity` 프리뷰 빌드·배포는 [Unity 안내](unity/README.md)를 따릅니다. 기존 서버 연동 시제품은 `Assets/Scenes/NeighborhoodLive.unity`이며, 폴러 주소는 기본 `http://localhost:3000`입니다.
 
 상세: [DB 적용 순서](db/README.md) · [통합 실행 안내](docs/operations/stage4-8-integration.md) · [인증·배포 안내](docs/operations/demo-deployment.md)
 
@@ -35,14 +35,14 @@ Next.js 참여·관리자 화면, PostgreSQL 회차·선택·결과 저장, Unit
 
 [9/29 구현 비교·10/20 완료 기준과 결정 대장](docs/planning/project-baseline-2026-10-20.md)은 당시 조사 기록입니다. 현재 구현 요약은 이 README와 각 기능 기록을 기준으로 확인합니다.
 
-참여자 NPC·학과 기능은 코드와 자동 검증 기록이 있으나, 모바일·Unity 동기화와 실기기 화면·성능 인수는 남아 있습니다. Unity는 실제 NPC 목록을 받기 전에는 기존 미리보기를 표시합니다. 도시 연출 임계값도 임시값입니다.
+참여자 NPC·학과 기능은 코드와 자동 검증 기록이 있으나, 모바일·Unity 동기화와 실기기 화면·성능 인수는 남아 있습니다. 서버 연동 NPC는 승인된 `mapVersion`과 회차 경로 설정이 필요합니다. 기존 로컬 NPC 미리보기는 `enablePrototypePreview`를 명시적으로 켠 경우에만 실행됩니다. 도시 연출 임계값도 임시값입니다.
 웹 푸시의 실제 기기 수신과 운영용 VAPID 설정은 아직 검증이 필요합니다. 최종 캐릭터/도시 이미지, 오염 확산은 후속 구현입니다.
 
-공개 배포와 운영 스케줄러 설치, 실기기·전시 LAN, Windows/WebGL 빌드 검증은 별도입니다.
-Compose는 개발용이고 새 볼륨에 001~009를 초기화합니다. 기존 볼륨에는 새 SQL이 자동 적용되지 않으므로 적용 이력을 확인하고 누락된 마이그레이션을 별도 적용해야 합니다.
+합성 WebGL 브리지 시험과 `/unity` NPC 추적 프리뷰의 실제 WebGL 빌드·데스크톱 Chromium 검증 기록이 있습니다. [브리지 시험](docs/unity/webgl-bridge-test.md) · [10/12 프리뷰 검증](docs/verification/unity-webgl-2026-10-12.md). 공개 배포와 운영 스케줄러 설치, 휴대폰 실기기·전시 LAN, Windows 빌드 및 전시 맵 통합 검증은 남아 있습니다.
+Compose는 개발용이고 새 볼륨에 001~010을 초기화합니다. 기존 볼륨에는 새 SQL이 자동 적용되지 않으므로 적용 이력을 확인하고 누락된 마이그레이션을 별도 적용해야 합니다.
 관리자 화면은 기존 콘텐츠 복사를 지원하며 개별 상황·선택지 편집은 지원하지 않습니다.
 
 운영 DB에는 테스트를 실행하지 않습니다. 비밀값은 서버 설정으로 주입하고 Git·브라우저 번들·Unity 자산에 넣지 않습니다.
-Unity는 공개 `GET /api/city-state`와 회차별 공개 NPC 목록을 읽습니다. 종료 정책은 기존 DRAIN을 유지합니다.
+Unity는 공개 `GET /api/city-state`와 회차별 공개 NPC API를 읽습니다. `NpcCrowdPoller`는 `npc-positions?map_version=...`, 시험용 `WebCityBridge`는 `npcs`를 사용합니다. 종료 정책은 기존 DRAIN을 유지합니다.
 
 추가 문서: [문서 목차](docs/README.md) · [API](web/API.md) · [운영 화면](web/OPERATIONS.md) · [DB](db/README.md) · [Unity](unity/README.md)

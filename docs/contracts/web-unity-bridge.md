@@ -1,6 +1,8 @@
 # 모바일 웹–Unity WebGL 메시지 계약 v1
 
-2026-10-09. 웹 호스트 구현 완료, Unity 수신기·WebGL 빌드·실기기 연결은 미완료.
+2026-10-12 현재: 웹 호스트와 Unity 수신기·WebGL 어댑터가 구현되어 있으며, 합성 데이터 기반 실제 WebGL 시험 기록이 있다. 실제 쿠키 인증 서버·전시 맵 통합 및 휴대폰 실기기 검증은 남아 있다.
+[브리지 시험 기록](../unity/webgl-bridge-test.md)과 [10/12 검증 기록](../verification/unity-webgl-2026-10-12.md)을 구분해 참고한다. 10/12 브리지 소스 수정은 EditMode로 검증했으며, 기존 WebGL 시험 빌드에 반영된 결과로 간주하지 않는다.
+별도 `/unity` NPC 추적 프리뷰는 참여 회차 API와 연결되지 않으며 이 `/city` 계약의 전시 통합을 대신하지 않는다.
 새 맵 버전·좌표·경로를 확정하는 문서가 아니다.
 
 ## 역할과 배포
@@ -41,11 +43,11 @@
 
 Unity는 INIT를 멱등 처리한다. 중복 INIT로 캐릭터를 추가 생성하지 않고 BOUND를 다시 보낸다. 다른 회차/bridge_id의 메시지를 기존 장면에 섞지 않는다. SNAPSHOT은 초기 바인딩 후에만 적용한다. 웹은 올바른 BOUND를 받은 뒤 iframe을 표시한다. 준비부터 바인딩까지 60초를 넘으면 iframe을 제거한다. 일시적 NPC 조회 오류는 연결 확인 안내와 주기 재시도로 처리하며, Unity는 마지막 상태와 freeze_at을 유지한다.
 
-## Unity 구현자가 할 일
+## Unity 구현 구조와 계약
 
 1. WebGL HTML 템플릿 어댑터에서 쿼리의 bridge_id를 읽고 parent 메시지 listener를 설치한다.
 2. Unity 수신 GameObject/메서드를 준비한 후 READY를 보낸다. `createUnityInstance` 성공만으로 NPC 바인딩 완료라고 판단하지 않는다.
-3. 검증한 INIT/SNAPSHOT을 JSON 문자열로 변환하여 Unity `SendMessage` 수신기에 전달한다. 구체적인 GameObject/메서드 이름은 Unity 구현에서 정하고 어댑터와 함께 배포한다.
+3. 검증한 INIT/SNAPSHOT을 JSON 문자열로 변환하여 Unity `SendMessage` 수신기에 전달한다. 현재 `WebCityBridge.cs`의 `SIMUS Web Bridge` GameObject가 `Receive`, `SetVisibility`, `DisposeBridge`를 제공한다. `simus_city/bridge.js` 및 `simus_bridge.jslib`와 함께 배포한다.
 4. Unity에서 회차·map_version·own_npc_id를 검사하고 본인 추적을 연결한 뒤 JS로 BOUND를 전달한다.
 5. 군중 `/api/sessions/{id}/npcs`와 도시 `/api/city-state`는 공개 API로 조회한다. 응답 session_id가 INIT와 같을 때만 적용하고, NPC의 map_version도 확인한다. city-state는 최신 회차 API이므로 다음 회차가 시작되면 이전 회차에 적용하지 않는다. 과거 결과 도시 렌더링은 별도 후속 작업이다.
 6. 서버 시각과 단조 시계로 이동을 보간하고 freeze_at에서 멈춘다. 기존 ±2m 차선 보정은 시제품 규칙이며 새 맵에 무조건 적용하지 않는다.
@@ -54,15 +56,15 @@ Unity는 INIT를 멱등 처리한다. 중복 INIT로 캐릭터를 추가 생성�
 ## 검증과 병행 작업
 
 웹 프로토콜 검사: `cd web && node --test tests/unity-bridge.test.mjs`.
-실제 빌드 인수: READY → INIT → BOUND, 다른 지도/회차 거절, 재시도 후 이전 메시지 무시, 화면 잠금 복귀, 종료 동결, 모바일 로딩·발열·메모리 검증이 필요하다.
+합성 시험 빌드에서 READY → INIT → BOUND, 지도/회차 거절, 이전 bridge_id 무시, 숨김/복귀, freeze snapshot 수신과 DISPOSE를 검증한 기록이 있다. 최신 브리지 소스를 반영한 실제 쿠키 인증 서버 연결, 다기기 위치 동기화, 휴대폰 잠금 복귀·로딩·발열·메모리 검증은 남아 있다.
 
 독립적으로 진행 가능한 작업:
 
-- Unity 담당: 위 어댑터·수신기·카메라 바인딩 및 시험용 빌드 제작. 새 맵 확정 전 시험 데이터는 분리한다.
+- Unity 담당: 구현된 어댑터·수신기·카메라 바인딩을 승인된 전시 장면에 연결하고 최신 소스로 재빌드해 실제 서버와 검증한다. 새 맵 확정 전 시험 데이터는 분리한다.
 - 맵 담당: 새 map_version, 상황 30개 위치, 지역 경계, path_version 인계표 완성.
 - 웹 UI: 360/390/430px 선택 패널, 긴 문장, 글자 확대, 키보드 및 상태 안내 검증.
 - 결과: 결과 화면 구성, 링크 발급 중 연타·네트워크 오류 처리, 미응답자 동선 개선.
-- 운영: HTTPS 시험 환경, DB 001~009 적용, 자동 종료/푸시 스케줄러·VAPID 구성, 로그와 부하 측정 준비.
+- 운영: HTTPS 시험 환경, DB 001~010 적용, 자동 종료/푸시 스케줄러·VAPID 구성, 로그와 부하 측정 준비.
 
 상황 위치에 따른 자동 노출, 새 맵 좌표 주입, 최종 도시 연출은 각각 노출 정책·맵 인계·표현 자산 확정 후 연결한다.
 

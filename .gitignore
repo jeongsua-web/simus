@@ -10,6 +10,9 @@
 !**/.env.example
 /web/.demo/
 /web/public/city/
+/web/public/unity-preview/
+/web/public/.unity-preview-*/
+/web/.unity-deploy-backups/
 *.pem
 *.p12
 *.pfx

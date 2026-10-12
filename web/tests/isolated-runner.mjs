@@ -55,7 +55,9 @@ const env = { ...process.env, NODE_ENV: 'production', NEXT_TELEMETRY_DISABLED: '
   TEST_API_URL: `http://127.0.0.1:${port}`, ADMIN_TOKEN_ISSUER: 'simus-isolated-test',
   ADMIN_TOKEN_AUDIENCE: 'simus-isolated-test', ADMIN_JWKS_JSON: JSON.stringify({ keys: [publicJwk] }),
   TEST_ADMIN_PRIVATE_JWK: JSON.stringify(privateJwk), SESSION_JOB_TOKEN: 'isolated-test-job-token-never-production-2026' };
-delete env.ADMIN_JWKS_URL;
+// An absent variable is filled again by Next from .env.local. Explicitly
+// disable the remote resolver so this disposable test uses only its own JWK.
+env.ADMIN_JWKS_URL = '';
 env.TEST_DATABASE_URL = env.DATABASE_URL;
 let server, running = false, pool;
 async function stopServer() {

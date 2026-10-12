@@ -1,6 +1,6 @@
 [agents]
 enabled = true
-max_threads = 5
+max_threads = 6
 
 [agents.blender]
 description = "Blender 3D 모델링 및 에셋 최적화"
@@ -13,6 +13,10 @@ config_file = "agents/unity.toml"
 [agents.backend]
 description = "Next.js API 및 서버 개발"
 config_file = "agents/backend.toml"
+
+[agents.web-ui]
+description = "참여·결과·관리자 화면 UI 개발"
+config_file = "agents/web-ui.toml"
 
 [agents.database]
 description = "PostgreSQL 데이터베이스 설계"

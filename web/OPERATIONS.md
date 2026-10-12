@@ -27,7 +27,46 @@ Apply DB migrations `007_result_links.sql` and `008_web_push.sql` after 006. Con
 
 Participant result links are 30-day, read-only bearer credentials. The user creates one from their finalized result screen and can copy it to another device. A new link replaces the old one. The shared result API should have ingress-level request throttling before external release. iPhone web push requires the Home Screen web app; a Safari tab and Home Screen app may have separate participant storage, so same-person linking remains an acceptance blocker. See [4B status](../docs/contracts/result-notification-4b.md).
 
-## Local validation
+## Unity WebGL preview
+
+`/unity` embeds the actual `CompletedMapNpcFollow` scene from `/unity-preview/index.html`.
+The home page links to it. This standalone preview uses the candidate university map
+and a test character; it does not identify the authenticated participant or change session data.
+`/participate` keeps the separate `/city` bridge and its map/NPC validation. A confirmed
+map version and participant paths are required before connecting that production flow.
+
+Build with Unity's **SIMUS → WebGL → Build NPC follow preview** menu (or
+`NpcFollowWebGLBuild.Build` in batch mode), then deploy from `web/`:
+
+```sh
+npm run unity:deploy -- ../unity/Builds/npc_follow_preview
+npm run build
+npm run start
+```
+
+The deploy command accepts only an uncompressed standalone preview with its `build.json`,
+loader, framework, wasm and data files. It stages the complete directory before switching
+it into `public/unity-preview`, preserves previous builds in `.unity-deploy-backups`, and
+never deploys to `/city`. Include the generated public directory with the website deployment.
+The preview manifest records `map_version: null` and `exhibition_ready: false`; it does not
+establish a final exhibition map. Runtime progress/errors and a three-minute loading timeout
+provide loading and retry states. Next serves preview assets with cache revalidation.
+
+Actual runtime browser check (requires a deployed preview and a running web server):
+
+```sh
+TEST_API_URL=http://127.0.0.1:3124 TEST_PLAYWRIGHT_MODULE=/path/to/playwright/index.mjs node tests/unity-preview.mjs
+```
+
+2026-10-12 verification: the actual uncompressed Unity build was deployed and tested
+in Chromium at 390px and 1280px. Canvas rendering, runtime READY, reload, missing-build
+error/retry, cache revalidation and absence of page errors passed. Screenshots after the
+startup splash confirmed buildings and the followed test NPC. The existing Unity debug
+HUD has clipped control text on the narrow viewport; phone hardware performance and
+exhibition UI acceptance remain untested. Deploy before starting Next, or restart it after
+adding new public files so the server includes them in its static file inventory.
+
+## Local validation commands
 
 For a fresh isolated PostgreSQL cluster, concurrent API flows, server/database recovery,
 and optional Chromium UI tests, see [the integration report](../docs/verification/integration-report.md).

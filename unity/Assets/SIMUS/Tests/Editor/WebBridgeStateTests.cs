@@ -23,7 +23,7 @@ namespace Simus.City.Tests
             Assert.IsTrue(state.Apply(m, 105)); Assert.AreSame(original, state.Own);
             Assert.AreEqual(15, state.Own.Npcs[0].PositionAt(state.Own.MotionTime(105)).x, .001);
             Assert.AreEqual(20, state.Own.Npcs[0].PositionAt(state.Own.MotionTime(1000)).x, .001);
-            Assert.AreEqual(0, state.Own.Npcs[0].LaneOffset);
+            Assert.AreEqual(0, state.Own.Npcs[0].PositionAt(state.Own.MotionTime(105)).z, .001);
         }
         [Test] public void RejectsUnboundSnapshotAndBindingChanges()
         {
