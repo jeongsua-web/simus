@@ -37,9 +37,18 @@ export function checkOrigin(request: NextRequest) {
   const origin = request.headers.get("origin");
   // Next.js may normalize loopback URLs or use the server bind hostname.
   // The browser's destination is Host, not that internal URL hostname.
+  // A TLS-terminating tunnel (cloudflared) keeps the public host and https
+  // in forwarded headers while the app itself receives plain HTTP.
   const destination = new URL(request.url);
-  const host = request.headers.get("host");
-  if (host) destination.host = host;
+  const forwardedHost = request.headers.get("x-forwarded-host")?.split(",")[0]?.trim();
+  const host = forwardedHost || request.headers.get("host");
+  if (host) {
+    destination.host = host;
+    // The dev server's listen port must not stay on a public tunnel host.
+    if (!host.includes(":")) destination.port = "";
+  }
+  const forwardedProto = request.headers.get("x-forwarded-proto")?.split(",")[0]?.trim();
+  if (forwardedProto === "http" || forwardedProto === "https") destination.protocol = `${forwardedProto}:`;
   if (request.headers.get("sec-fetch-site") === "cross-site" || (origin && origin !== destination.origin)) {
     throw new ApiError(403, "INVALID_ORIGIN", "같은 사이트에서 요청해주세요.");
   }
