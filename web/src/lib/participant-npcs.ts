@@ -35,7 +35,7 @@ export async function readNpcs(db: PoolClient, sessionId: string, participantId?
     LEAST(s.server_time,s.freeze_at) AS motion_time,
     s.server_time>=s.freeze_at AS frozen,
     COALESCE((SELECT jsonb_agg(jsonb_build_object(
-      'npc_id',p.npc_id,'epoch',p.joined_at,'motion',p.npc_motion) ORDER BY p.npc_id)
+      'npc_id',p.npc_id,'character_id',p.character_id,'glasses_id',p.glasses_id,'epoch',p.joined_at,'motion',p.npc_motion) ORDER BY p.npc_id)
       FROM simus.participant_sessions p WHERE p.session_id=s.id
       AND ($2::uuid IS NULL OR p.participant_id=$2)), '[]'::jsonb) AS npcs
     FROM snapshot s`, [sessionId, participantId ?? null]);

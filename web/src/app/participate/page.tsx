@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { LiveCityStats } from "../components/CityStats";
+import CitizenCard from "./CitizenCard";
 import ProfileEntry from "./ProfileEntry";
 import SituationCard from "./SituationCard";
 import UnityCity from "./UnityCity";
@@ -69,8 +70,7 @@ export default function ParticipatePage() {
         <details className={styles.menu}>
           <summary aria-label="시민증과 회차 메뉴">시민증 <span aria-hidden="true">☰</span></summary>
           <div className={styles.menuBody}>
-            <p className={styles.eyebrow}>SIM:US 시민증</p>
-            <p className={styles.citizen}><span>No. {profile.citizen_no}</span><strong>{profile.nickname}</strong><span>{profile.department_name}</span><span>{profile.mbti}</span></p>
+            <CitizenCard characterId={profile.character_id} glassesId={profile.glasses_id} nickname={profile.nickname} department={profile.department_name} mbti={profile.mbti} citizenNo={profile.citizen_no} status="issued" />
             <h2>{state.session.name}</h2>
             <p className={styles.schedule}>입력 마감 {state.session.auto_cutoff_at ? new Date(state.session.auto_cutoff_at).toLocaleString("ko-KR") : "확인 중"}<br />종료 예정 {state.session.scheduled_end_at ? new Date(state.session.scheduled_end_at).toLocaleString("ko-KR") : "확인 중"}</p>
             <LiveCityStats sessionId={state.session.id}/>

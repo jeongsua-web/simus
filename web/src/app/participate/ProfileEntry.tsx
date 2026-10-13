@@ -2,6 +2,8 @@
 
 import { Black_Han_Sans, IBM_Plex_Mono } from "next/font/google";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import CitizenCard from "./CitizenCard";
+import { CITIZEN_CHARACTERS, CITIZEN_GLASSES, getCitizenCharacter, type CitizenGlassesId } from "@/lib/citizen-characters";
 import type { ApiError, Department, Profile, Session } from "./types";
 import styles from "./ProfileEntry.module.css";
 
@@ -43,6 +45,8 @@ export default function ProfileEntry({ session, departments, onSaved, onEntered,
   const [faculty, setFaculty] = useState(0);
   const [departmentId, setDepartmentId] = useState<string | null>(null);
   const [mbti, setMbti] = useState<Array<string | null>>([null, null, null, null]);
+  const [characterId, setCharacterId] = useState<string | null>(null);
+  const [glassesId, setGlassesId] = useState<CitizenGlassesId>("none");
   const [saving, setSaving] = useState(false);
   const [failure, setFailure] = useState("");
   const [entered, setEntered] = useState<Profile | null>(null);
@@ -63,7 +67,7 @@ export default function ProfileEntry({ session, departments, onSaved, onEntered,
   const error = nicknameError(nickname);
   const department = departments.find(item => item.id === departmentId);
   const mbtiText = mbti.map(value => value ?? "?").join("");
-  const ready = !error && Boolean(department) && mbti.every(Boolean);
+  const ready = !error && Boolean(department) && mbti.every(Boolean) && Boolean(characterId);
   const shownError = touched && error;
 
   async function enter() {
@@ -72,7 +76,7 @@ export default function ProfileEntry({ session, departments, onSaved, onEntered,
     try {
       const response = await fetch(`/api/sessions/${session.id}/profile`, {
         method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nickname, department_id: departmentId, mbti: mbti.join("") }),
+        body: JSON.stringify({ nickname, department_id: departmentId, mbti: mbti.join(""), character_id: characterId, glasses_id: glassesId }),
       });
       const data = await response.json() as ApiError & { profile?: Profile };
       if (!response.ok || !data.profile) {
@@ -114,34 +118,46 @@ export default function ProfileEntry({ session, departments, onSaved, onEntered,
           <h1>시민증 만들기</h1>
         </section>
 
-        <article ref={cardRef} className={styles.card} aria-label="시민증 미리보기">
-          <div className={styles.cardHead}>
-            <span>SIM:US 시민증</span>
-            <span className={styles.mono}>No. {stamped && entered ? entered.citizen_no : "··-····"}</span>
-          </div>
-          <div className={styles.cardBody}>
-            <div className={styles.portrait} aria-hidden="true">
-              <svg viewBox="0 0 40 72" fill="none" stroke="#A3B0AE" strokeWidth="2">
-                <circle cx="20" cy="12" r="8" />
-                <path d="M8 34c0-7 5-12 12-12s12 5 12 12v14H8z" />
-                <path d="M13 48v20M27 48v20" />
-              </svg>
-            </div>
-            <div className={styles.fields}>
-              <div><div className={styles.fieldLabel}>이름</div>
-                <div className={`${styles.cardName} ${shownName ? "" : styles.empty}`}>{shownName || "닉네임"}</div></div>
-              <div><div className={styles.fieldLabel}>소속</div>
-                <div className={`${styles.cardValue} ${shownDepartment ? "" : styles.empty}`}>{shownDepartment ?? "학과 미선택"}</div></div>
-              <div><div className={styles.fieldLabel}>MBTI</div>
-                <div className={`${styles.cardMbti} ${mbti.every(Boolean) ? "" : styles.empty}`}>{mbtiText}</div></div>
-            </div>
-            <div className={`${styles.stamp} ${stamped ? styles.stampDone : ready ? styles.stampReady : ""}`}>
-              입주<br />{stamped ? "완료" : ready ? "준비" : "대기"}
-            </div>
-          </div>
-        </article>
+        <CitizenCard cardRef={cardRef} nickname={shownName} department={shownDepartment}
+          characterId={entered?.character_id ?? characterId} glassesId={entered?.glasses_id ?? glassesId} mbti={entered?.mbti ?? mbtiText} citizenNo={stamped ? entered?.citizen_no : undefined}
+          status={stamped ? "issued" : ready ? "ready" : "waiting"} />
 
         <form className={styles.form} noValidate onSubmit={event => { event.preventDefault(); void enter(); }}>
+          <fieldset className={styles.fieldset} disabled={saving}>
+            <legend className={styles.characterLegend}>헤어 <span>필수</span></legend>
+            <p id="character-hint" className={styles.hint}>16가지 헤어 중 하나를 고르고 안경을 더해 보세요. 꾸민 모습이 시민증과 도시에 함께 나타나요.</p>
+            <div className={styles.characters} aria-describedby="character-hint">
+              {CITIZEN_CHARACTERS.map(character => <label key={character.id} className={styles.character}>
+                <input type="radio" name="character" value={character.id} checked={characterId === character.id}
+                  onChange={() => setCharacterId(character.id)} aria-label={character.label} />
+                <span className={styles.characterTile}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={getCitizenCharacter(character.id, "none")?.portrait} alt="" width={160} height={200} />
+                  <span className={styles.characterName}>{character.label}</span>
+                  <span className={styles.characterCheck} aria-hidden="true">✓</span>
+                </span>
+              </label>)}
+            </div>
+            <p className={styles.hint} aria-live="polite">{characterId ? `${CITIZEN_CHARACTERS.find(item => item.id === characterId)?.label} 선택됨` : "헤어를 선택하면 시민증 사진을 미리 볼 수 있어요."}</p>
+          </fieldset>
+          <fieldset className={styles.fieldset} disabled={saving}>
+            <legend className={styles.characterLegend}>안경 <span>선택</span></legend>
+            <div className={styles.glasses}>
+              {CITIZEN_GLASSES.map(glasses => <label key={glasses.id} className={styles.character}>
+                <input type="radio" name="glasses" value={glasses.id} checked={glassesId === glasses.id}
+                  onChange={() => setGlassesId(glasses.id)} aria-label={glasses.label} />
+                <span className={styles.characterTile}>
+                  {characterId ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={getCitizenCharacter(characterId, glasses.id)?.portrait} alt="" width={160} height={200} />
+                  ) : <span className={styles.glassesSymbol} aria-hidden="true">{glasses.id === "none" ? "—" : glasses.id === "square" ? "▢—▢" : "○—○"}</span>}
+                  <span className={styles.characterName}>{glasses.label}</span>
+                  <span className={styles.characterCheck} aria-hidden="true">✓</span>
+                </span>
+              </label>)}
+            </div>
+            <p className={styles.hint} aria-live="polite">{CITIZEN_GLASSES.find(item => item.id === glassesId)?.label} 선택됨 · 헤어를 바꿔도 안경은 유지돼요.</p>
+          </fieldset>
           <div className={styles.fieldset}>
             <div className={styles.question}><label htmlFor="nickname">닉네임</label><small>필수</small></div>
             <div className={`${styles.input} ${shownError ? styles.inputInvalid : ""}`}>
@@ -187,7 +203,7 @@ export default function ProfileEntry({ session, departments, onSaved, onEntered,
           <button type="button" className={styles.cta} disabled={!ready || saving} onClick={() => void enter()}>
             {saving && !entered ? "등록하는 중…" : <>도시에 입장하기 <span className={styles.arrow} aria-hidden="true">→</span></>}
           </button>
-          <p className={styles.note}>입장한 뒤에는 닉네임·학과·MBTI를 바꿀 수 없어요.</p>
+          <p className={styles.note}>입장한 뒤에는 헤어·안경·닉네임·학과·MBTI를 바꿀 수 없어요.</p>
         </div>
       </div>
 

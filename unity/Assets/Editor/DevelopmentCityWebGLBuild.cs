@@ -12,16 +12,30 @@ public static class DevelopmentCityWebGLBuild
     public static void Build()
     {
         EditorSceneManager.OpenScene(CompletedMapFollowSetup.ScenePath);
+        GameObject npcTemplate = null;
         foreach (var patrol in UnityEngine.Object.FindObjectsByType<TestNpcPatrol>(FindObjectsSortMode.None))
-            UnityEngine.Object.DestroyImmediate(patrol.gameObject);
+        {
+            if (npcTemplate == null)
+            {
+                npcTemplate = patrol.gameObject;
+                UnityEngine.Object.DestroyImmediate(patrol);
+                npcTemplate.name = "SIMUS Animated NPC Template";
+                npcTemplate.transform.position = Vector3.zero;
+                npcTemplate.transform.rotation = Quaternion.identity;
+                npcTemplate.SetActive(false);
+            }
+            else UnityEngine.Object.DestroyImmediate(patrol.gameObject);
+        }
+        if (npcTemplate == null) throw new InvalidOperationException("Animated character template missing");
         var camera = UnityEngine.Object.FindFirstObjectByType<CityPreviewCamera>();
         if (camera == null) throw new InvalidOperationException("Follow camera missing");
         camera.followTarget = null;
         camera.previewControls = false;
-        camera.followSize = 12;
+        camera.followSize = 5;
         var bridge = new GameObject("SIMUS Web Bridge").AddComponent<WebCityBridge>();
         bridge.mapVersion = "dev-synthetic-v1";
         bridge.followCamera = camera;
+        bridge.npcTemplate = npcTemplate;
         // Existing development round snapshots use this synthetic square; do not edit them.
         var floor = GameObject.CreatePrimitive(PrimitiveType.Plane);
         floor.name = "Development route floor - not exhibition placement";

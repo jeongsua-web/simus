@@ -12,7 +12,7 @@ try {
   await page.waitForFunction(()=>messages.some(m=>m.type==='BOUND'),null,{timeout:120000});
   const initial=await page.evaluate(()=>messages);
   assert.equal(initial[0].type,'READY');
-  assert.equal(initial[0].map_version,'test-only-bridge-v1');
+  assert.equal(initial[0].map_version,process.env.TEST_MAP_VERSION || 'test-only-bridge-v1');
   assert.equal(initial.find(m=>m.type==='BOUND').npc_id,'20000000-0000-0000-0000-000000000001');
   await page.evaluate(async () => {
     const s=await fetch('/fixture/own').then(r=>r.json());

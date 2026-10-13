@@ -87,6 +87,9 @@ try {
   await admin.connect(); await admin.query('CREATE DATABASE simus_integration'); await admin.end();
   pool = new pg.Pool({ connectionString: env.DATABASE_URL });
   for (const name of ['001_initial_schema.sql','002_session_lifecycle.sql','003_session_creation.sql','004_participant_npcs.sql','005_participant_departments.sql','006_content_score_range.sql','007_result_links.sql','008_web_push.sql','009_participant_profiles.sql','010_session_npc_motion.sql','011_npc_events.sql']) await pool.query(await readFile(path.join(web, '../db', name), 'utf8'));
+  await pool.query(await readFile(path.join(web, '../db/012_running_common_events.sql'), 'utf8'));
+  await pool.query(await readFile(path.join(web, '../db/013_participant_characters.sql'), 'utf8'));
+  await pool.query(await readFile(path.join(web, '../db/014_participant_glasses.sql'), 'utf8'));
   await pool.query((await readFile(path.join(web, '../db/verify_schema.sql'), 'utf8')).replace(/^\\set.*$/gm, ''));
   // Synthetic geometry belongs only to this disposable test cluster. Production has no route default.
   await pool.query(`CREATE FUNCTION simus.test_fixture_npc_motion() RETURNS trigger LANGUAGE plpgsql AS $$
@@ -111,6 +114,31 @@ try {
       body: JSON.stringify({ request_key: crypto.randomUUID() }),
     });
     assert.equal(result.status, 200, await result.text());
+    if (action === 'start') {
+      // Reproduce a pre-event RUNNING session without any fallback content.
+      await pool.query(`BEGIN;
+        ALTER TABLE simus.session_situations DISABLE TRIGGER draft_content;
+        ALTER TABLE simus.session_choices DISABLE TRIGGER draft_content;
+        DELETE FROM simus.session_choices WHERE session_id='${demoId}' AND situation_id IN
+          (SELECT id FROM simus.session_situations WHERE session_id='${demoId}' AND is_generic);
+        DELETE FROM simus.session_situations WHERE session_id='${demoId}' AND is_generic;
+        ALTER TABLE simus.session_situations ENABLE TRIGGER draft_content;
+        ALTER TABLE simus.session_choices ENABLE TRIGGER draft_content;
+        COMMIT;`);
+      const upgrade = await readFile(path.join(web, '../db/012_running_common_events.sql'), 'utf8');
+      await pool.query(upgrade);
+      await pool.query(upgrade);
+      const fallback = await pool.query(`SELECT t.id FROM simus.session_situations t
+        WHERE session_id=$1 AND is_generic AND event_location IS NULL`, [demoId]);
+      assert.equal(fallback.rowCount, 1, 'upgrade is idempotent for legacy running sessions');
+      const choices = await pool.query(`SELECT happiness_base::float8,safety_base::float8,
+        cleanliness_base::float8,alignment_dx,alignment_dy FROM simus.session_choices
+        WHERE session_id=$1 AND situation_id=$2`, [demoId, fallback.rows[0].id]);
+      assert.equal(choices.rowCount, 2);
+      assert.ok(choices.rows.every(c => Object.values(c).every(v => v === 0)), 'fallback has neutral scores');
+      await assert.rejects(pool.query(`UPDATE simus.session_situations SET title=title WHERE session_id=$1`, [demoId]), /Content requires a DRAFT session/);
+      console.log('PASS: legacy RUNNING common-event upgrade, neutral choices, idempotence and content guard restored');
+    }
   }
   await pool.query(await readFile(path.join(web, '../db/seed_neighborhood.sql'), 'utf8'));
   const neighborhoodId = '15000000-0000-0000-0000-000000000001';

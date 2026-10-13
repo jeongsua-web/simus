@@ -57,7 +57,7 @@ export async function runStageIntegration({ pool, env, token, demoId }) {
   const crowd = (await call(`/api/sessions/${sid}/npcs`, { auth: false })).body;
   assert.equal(crowd.npcs.length, 2);
   assert.equal(crowd.frozen, false);
-  assert.deepEqual(Object.keys(crowd.npcs[0]).sort(), ['epoch', 'motion', 'npc_id']);
+  assert.deepEqual(Object.keys(crowd.npcs[0]).sort(), ['character_id', 'epoch', 'glasses_id', 'motion', 'npc_id']);
   assert.deepEqual((await call(`/api/sessions/${sid}/npc`, { cookie })).body.npcs, [ownNpc]);
   assert.equal((await pool.query('SELECT count(*) FROM simus.choice_records WHERE session_id=$1', [sid])).rows[0].count, '0');
   await assert.rejects(pool.query("UPDATE simus.participant_sessions SET npc_id=gen_random_uuid() WHERE session_id=$1", [sid]), /immutable/);

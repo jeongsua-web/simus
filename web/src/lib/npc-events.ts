@@ -1,4 +1,5 @@
 import type { PoolClient } from "pg";
+import { randomInt } from "node:crypto";
 import { ApiError, transaction } from "./api";
 import { npcPosition, type Npc } from "@/app/participate/npc-motion";
 
@@ -36,6 +37,9 @@ type Transition = {
 };
 const distance = (a: Point, b: Point) => Math.hypot(...a.map((n, i) => n - b[i]));
 const timestamp = (value: Date | string) => new Date(value).getTime();
+const pick = <T,>(items: T[]): T | undefined => items.length ? items[randomInt(items.length)] : undefined;
+const isPlaceholder = (t: Situation) =>
+  t.code === "SIMUS_COMMON_ENCOUNTER" || t.code === "SIMUS_COMMON_ENCOUNTER_UPGRADE";
 function isOpen(s: Session) {
   const buffer = s.admission_buffer;
   const cutoff = timestamp(s.scheduled_end_at) -
@@ -89,10 +93,15 @@ function transitionFor(world: World, p: Member): Transition | null {
   const point = p.guidance_point ? guidedPoint(p, p.npc_motion.speed_mps, now) :
     npcPosition(npc, now - Number(p.paused_ms));
   const eligible = fresh.filter(t => t.event_location?.map_version === p.npc_motion.map_version);
-  let selected = eligible.find(t => point && distance(t.event_location!.point, point) <= t.event_location!.radius_m);
+  let selected = pick(eligible.filter(t => point && distance(t.event_location!.point, point) <= t.event_location!.radius_m));
   let trigger_kind = now - timestamp(p.waiting_since) >= 90000 ? "DEADLINE" : "LOCATION";
   if (!selected && now - timestamp(p.waiting_since) >= 90000) {
-    selected = fresh.find(t => t.is_generic) ?? world.situations.find(t => t.is_generic);
+    // Until map placement is authored, unlocated content participates in the
+    // timed cycle. Never invent coordinates or use a different map's locations.
+    // The generated greeting is only for sessions without authored content.
+    const hasAuthoredContent = world.situations.some(t => !isPlaceholder(t));
+    selected = pick(fresh.filter(t => t.event_location === null &&
+      (!hasAuthoredContent || !isPlaceholder(t))));
     trigger_kind = "DEADLINE";
   }
   if (selected) return {

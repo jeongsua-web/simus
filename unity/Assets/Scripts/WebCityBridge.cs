@@ -17,11 +17,13 @@ namespace Simus
         public CityStateStore City { get; } = new CityStateStore();
         private WebBridgeState state;
         private readonly Dictionary<string, GameObject> actors = new Dictionary<string, GameObject>();
+        private readonly Dictionary<string, string> actorCharacters = new Dictionary<string, string>();
         private NpcCrowdSnapshot crowd;
         private Coroutine polling;
         private UnityWebRequest request;
         private bool disposed, visible = true;
-        private Material ownMaterial, crowdMaterial;
+        [Tooltip("Configured animated SIMUS character template; kept inactive in the scene.")]
+        public GameObject npcTemplate;
 #if UNITY_WEBGL && !UNITY_EDITOR
         [DllImport("__Internal")] private static extern void SimusBridgeEmit(string json);
 #endif
@@ -38,8 +40,8 @@ namespace Simus
             try
             {
                 var bound = state.Apply(json, Time.realtimeSinceStartupAsDouble);
-                var own = GetActor(state.OwnNpcId, true);
-                own.transform.position = state.Own.Npcs[0].PositionAt(state.Own.MotionTime(Time.realtimeSinceStartupAsDouble));
+                var own = GetActor(state.OwnNpcId, true, state.Own.Npcs[0].CharacterId, state.Own.Npcs[0].GlassesId);
+                MoveActor(own, state.Own.Npcs[0].PositionAt(state.Own.MotionTime(Time.realtimeSinceStartupAsDouble)));
                 if (followCamera == null) throw new InvalidOperationException("CAMERA_MISSING");
                 if (followCamera.followTarget != own.transform) followCamera.SetFollowTarget(own.transform);
                 if (visible && polling == null) polling = StartCoroutine(Poll());
@@ -47,32 +49,45 @@ namespace Simus
             }
             catch (Exception) { Fail("INVALID_BINDING_OR_SNAPSHOT"); }
         }
-        private GameObject GetActor(string id, bool own)
+        private GameObject GetActor(string id, bool own, string characterId, string glassesId)
         {
-            if (actors.TryGetValue(id, out var actor)) return actor;
-            actor = GameObject.CreatePrimitive(PrimitiveType.Capsule);
-            actor.name = own ? "Own NPC" : "Public NPC";
-            actor.transform.SetParent(transform);
-            var material = own ? ownMaterial : crowdMaterial;
-            if (material == null)
+            if (actors.TryGetValue(id, out var actor))
             {
-                material = new Material(Shader.Find("Standard"));
-                material.color = own ? new Color(1f, .75f, .1f) : new Color(.25f, .65f, .8f);
-                if (own) ownMaterial = material; else crowdMaterial = material;
+                if (actorCharacters[id] != characterId + ":" + glassesId)
+                {
+                    CitizenCharacterAppearance.Apply(actor, characterId, glassesId);
+                    actorCharacters[id] = characterId + ":" + glassesId;
+                }
+                return actor;
             }
-            actor.GetComponent<Renderer>().sharedMaterial = material;
-            Destroy(actor.GetComponent<Collider>());
+            if (npcTemplate == null) throw new InvalidOperationException("NPC_CHARACTER_MISSING");
+            actor = Instantiate(npcTemplate, transform);
+            actor.name = own ? "Own NPC - SIMUS Character" : "Public NPC - SIMUS Character";
+            CitizenCharacterAppearance.Apply(actor, characterId, glassesId);
+            actor.SetActive(true);
+            if (actor.GetComponent<NpcGrounding>() == null) actor.AddComponent<NpcGrounding>();
+            foreach (var collider in actor.GetComponentsInChildren<Collider>()) Destroy(collider);
             actors.Add(id, actor);
+            actorCharacters.Add(id, characterId + ":" + glassesId);
             return actor;
         }
         private void Update()
         {
             if (disposed || !visible || state?.Own == null) return;
             var now = Time.realtimeSinceStartupAsDouble;
-            actors[state.OwnNpcId].transform.position = state.Own.Npcs[0].PositionAt(state.Own.MotionTime(now));
+            MoveActor(actors[state.OwnNpcId], state.Own.Npcs[0].PositionAt(state.Own.MotionTime(now)));
             if (crowd == null) return;
             foreach (var npc in crowd.Npcs)
-                if (npc.Id != state.OwnNpcId) GetActor(npc.Id, false).transform.position = npc.PositionAt(Math.Min(state.Own.FreezeAtMs, crowd.MotionTime(now)));
+                if (npc.Id != state.OwnNpcId) MoveActor(GetActor(npc.Id, false, npc.CharacterId, npc.GlassesId), npc.PositionAt(Math.Min(state.Own.FreezeAtMs, crowd.MotionTime(now))));
+        }
+        private static void MoveActor(GameObject actor, Vector3 position)
+        {
+            var direction = position - actor.transform.position;
+            direction.y = 0;
+            var moving = direction.sqrMagnitude > 0.000001f;
+            if (moving) actor.transform.rotation = Quaternion.LookRotation(direction);
+            actor.transform.position = actor.GetComponent<NpcGrounding>().Project(position);
+            foreach (var animator in actor.GetComponentsInChildren<Animator>()) animator.speed = moving ? 1f : 0f;
         }
         private IEnumerator Poll()
         {
@@ -116,7 +131,7 @@ namespace Simus
                             var keep = new HashSet<string> { state.OwnNpcId };
                             foreach (var npc in crowd.Npcs) keep.Add(npc.Id);
                             foreach (var id in new List<string>(actors.Keys))
-                                if (!keep.Contains(id)) { Destroy(actors[id]); actors.Remove(id); }
+                                if (!keep.Contains(id)) { Destroy(actors[id]); actors.Remove(id); actorCharacters.Remove(id); }
                         }
                     }
                 }
@@ -146,9 +161,8 @@ namespace Simus
             disposed = true; StopPolling(); City.Pause();
             if (followCamera != null) followCamera.SetFollowTarget(null);
             foreach (var actor in actors.Values) Destroy(actor);
-            actors.Clear();
-            if (ownMaterial != null) Destroy(ownMaterial);
-            if (crowdMaterial != null) Destroy(crowdMaterial);
+            actors.Clear(); actorCharacters.Clear();
+
         }
         private void OnDestroy() { DisposeBridge(); }
         private void Fail(string code) { Emit(new JObject { ["type"] = "ERROR", ["code"] = code }); DisposeBridge(); }

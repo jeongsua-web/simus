@@ -1,7 +1,8 @@
 import type { PoolClient } from "pg";
 import { ApiError } from "./api";
+import { isCitizenCharacterId, isCitizenGlassesId, defaultCitizenGlasses } from "./citizen-characters";
 
-export type ProfileInput = { nickname: string; department_id: string; mbti: string };
+export type ProfileInput = { nickname: string; department_id: string; mbti: string; character_id: string; glasses_id: string };
 
 export function parseProfile(input: Record<string, unknown>): ProfileInput {
   if (typeof input.nickname !== "string") throw new ApiError(400, "INVALID_NICKNAME", "닉네임을 입력하세요.");
@@ -11,12 +12,16 @@ export function parseProfile(input: Record<string, unknown>): ProfileInput {
   if (!/^[\p{L}\p{N} _.-]+$/u.test(nickname)) throw new ApiError(400, "INVALID_NICKNAME", "닉네임에는 글자, 숫자, 공백, _ . -만 쓸 수 있어요.");
   if (typeof input.department_id !== "string" || input.department_id === "none") throw new ApiError(400, "INVALID_DEPARTMENT", "목록에서 학과를 선택하세요.");
   if (typeof input.mbti !== "string" || !/^[EI][SN][TF][JP]$/.test(input.mbti)) throw new ApiError(400, "INVALID_MBTI", "MBTI 네 글자를 모두 선택하세요.");
-  return { nickname, department_id: input.department_id, mbti: input.mbti };
+  const characterId = input.character_id === undefined ? "npc_01" : input.character_id;
+  if (!isCitizenCharacterId(characterId)) throw new ApiError(400, "INVALID_CHARACTER", "목록에서 캐릭터를 선택하세요.");
+  const glassesId = input.glasses_id === undefined ? defaultCitizenGlasses(characterId) : input.glasses_id;
+  if (!isCitizenGlassesId(glassesId)) throw new ApiError(400, "INVALID_GLASSES", "목록에서 안경을 선택하세요.");
+  return { nickname, department_id: input.department_id, mbti: input.mbti, character_id: characterId, glasses_id: glassesId };
 }
 
 // Session ordinal counts every started session, including rehearsals in the same database.
 export async function readProfile(db: PoolClient, sessionId: string, participantId: string) {
-  const result = await db.query(`SELECT p.profile_completed_at IS NOT NULL AS completed, p.nickname, p.mbti,
+  const result = await db.query(`SELECT p.profile_completed_at IS NOT NULL AS completed, p.nickname, p.mbti, p.character_id, p.glasses_id,
       p.department_id, d.name AS department_name,
       lpad((SELECT count(*) FROM simus.simulation_sessions o WHERE o.starts_at IS NOT NULL
         AND (o.starts_at,o.id) <= (s.starts_at,s.id))::text, 2, '0') || '-' ||
@@ -31,7 +36,7 @@ export async function readProfile(db: PoolClient, sessionId: string, participant
   const row = result.rows[0];
   if (!row.completed) return { joined: true, profile: null };
   return { joined: true, profile: {
-    nickname: row.nickname as string, mbti: row.mbti as string, department_id: row.department_id as string,
+    character_id: row.character_id as string, glasses_id: row.glasses_id as string, nickname: row.nickname as string, mbti: row.mbti as string, department_id: row.department_id as string,
     department_name: row.department_name as string, citizen_no: row.citizen_no as string,
   } };
 }

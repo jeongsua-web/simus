@@ -11,16 +11,23 @@ namespace Simus
         [Min(0f)] public float turnSpeed = 360f;
         private bool headingToEnd = true;
 
+        private void Awake()
+        {
+            if (GetComponent<NpcGrounding>() == null) gameObject.AddComponent<NpcGrounding>();
+        }
+
         private void Update()
         {
             if (startPoint == null || endPoint == null) return;
             Vector3 destination = headingToEnd ? endPoint.position : startPoint.position;
             Vector3 direction = destination - transform.position;
+            direction.y = 0f;
             if (direction.sqrMagnitude < 0.0025f)
             {
                 headingToEnd = !headingToEnd;
                 return;
             }
+            destination.y = transform.position.y;
             transform.position = Vector3.MoveTowards(transform.position, destination, speed * Time.deltaTime);
             direction.y = 0f;
             if (direction.sqrMagnitude > 0.0001f)

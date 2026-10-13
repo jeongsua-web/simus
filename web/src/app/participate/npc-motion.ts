@@ -1,5 +1,7 @@
 export type Npc = {
   npc_id: string;
+  character_id?: string;
+  glasses_id?: string;
   epoch: string;
   motion: { map_version: string; path_version: string; points: number[][]; speed_mps: number; loop: boolean };
 };

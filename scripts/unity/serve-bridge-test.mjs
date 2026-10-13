@@ -4,13 +4,14 @@ import { readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 const directory = path.resolve(process.argv[2] || 'unity/Builds/bridge_test/city');
 const port = Number(process.env.PORT || 4175);
+const mapVersion = process.env.TEST_MAP_VERSION || 'test-only-bridge-v1';
 const session = '10000000-0000-0000-0000-000000000001';
 const npc = '20000000-0000-0000-0000-000000000001';
 const epoch = Date.now();
 let freeze = epoch + 600000;
 function snapshot(crowd = false) {
   const now = Date.now();
-  const actor = id => ({ npc_id: id, epoch: new Date(epoch).toISOString(), motion: { map_version: 'test-only-bridge-v1', path_version: 'test-only-square-v1', points: [[-8,1,-8],[8,1,-8],[8,1,8],[-8,1,8]], speed_mps: 1.4, loop: true } });
+  const actor = id => ({ npc_id: id, character_id: id.endsWith('1') ? 'npc_16' : 'npc_04', glasses_id: id.endsWith('1') ? 'round' : 'none', epoch: new Date(epoch).toISOString(), motion: { map_version: mapVersion, path_version: 'test-only-square-v1', points: [[-8,1,-8],[8,1,-8],[8,1,8],[-8,1,8]], speed_mps: 1.4, loop: true } });
   return { session_id: session, status: now >= freeze ? 'CLOSING' : 'RUNNING', server_time: new Date(now).toISOString(), freeze_at: new Date(freeze).toISOString(), motion_time: new Date(Math.min(now,freeze)).toISOString(), frozen: now >= freeze, npcs: crowd ? [actor(npc),actor('40000000-0000-0000-0000-000000000001')] : [actor(npc)] };
 }
 const html = `<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Unity bridge synthetic test</title>

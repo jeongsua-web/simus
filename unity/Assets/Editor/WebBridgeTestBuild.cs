@@ -27,6 +27,28 @@ public static class WebBridgeTestBuild
         floor.transform.localScale = new Vector3(4, 1, 4);
         var bridge = new GameObject("SIMUS Web Bridge").AddComponent<WebCityBridge>();
         bridge.followCamera = camera;
+        var model = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Happiness_Animations.fbx");
+        if (model == null) throw new InvalidOperationException("SIMUS character missing");
+        var template = new GameObject("SIMUS Animated NPC Template");
+        var character = UnityEngine.Object.Instantiate(model, template.transform);
+        foreach (var t in character.GetComponentsInChildren<Transform>(true))
+        {
+            if (t.name.StartsWith("HAIR_") && t.name != "HAIR_ROOT") t.gameObject.SetActive(t.name == "HAIR_01_PARTED_SHORT");
+            if (t.name.StartsWith("GLASSES_")) t.gameObject.SetActive(false);
+        }
+        var renderers = character.GetComponentsInChildren<Renderer>();
+        var bounds = renderers[0].bounds;
+        foreach (var r in renderers) bounds.Encapsulate(r.bounds);
+        character.transform.localScale *= 1.7f / bounds.size.y;
+        bounds = renderers[0].bounds;
+        foreach (var r in renderers) bounds.Encapsulate(r.bounds);
+        character.transform.position -= new Vector3(bounds.center.x, bounds.min.y, bounds.center.z);
+        character.transform.localRotation = Quaternion.identity;
+        var animator = character.GetComponent<Animator>();
+        animator.runtimeAnimatorController = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>(CompletedMapFollowSetup.Output + "/TestNpcWalk.controller");
+        animator.applyRootMotion = false;
+        template.SetActive(false);
+        bridge.npcTemplate = template;
         Directory.CreateDirectory("Assets/SIMUS/Scenes/bridge_test");
         EditorSceneManager.SaveScene(scene, "Assets/SIMUS/Scenes/bridge_test/simus_bridge_test.unity");
     }

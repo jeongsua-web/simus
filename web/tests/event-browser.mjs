@@ -22,6 +22,13 @@ export async function runEventBrowser({ pool, env, token, templateId }) {
     await pool.query('UPDATE simus.session_situations SET event_location=NULL,is_generic=false WHERE session_id=$1', [sid]);
     const generic = (await pool.query('SELECT id FROM simus.session_situations WHERE session_id=$1 ORDER BY display_order,id LIMIT 1', [sid])).rows[0].id;
     await pool.query('UPDATE simus.session_situations SET is_generic=true WHERE session_id=$1 AND id=$2', [sid,generic]);
+    await pool.query(`WITH added AS (
+      INSERT INTO simus.session_situations(session_id,code,title,body,display_order)
+      SELECT $1,'BROWSER_VARIETY_'||n,'다른 상황 '||n,'다음 행동을 선택해주세요.',100+n
+      FROM generate_series(1,2) n RETURNING id
+    ) INSERT INTO simus.session_choices(session_id,situation_id,label,display_order,importance)
+      SELECT $1,a.id,c.label,c.n,'NORMAL' FROM added a
+      CROSS JOIN (VALUES ('도와준다.',1),('지나간다.',2)) c(label,n)`,[sid]);
     await admin(`/api/admin/sessions/${sid}/start`, { request_key: randomUUID() });
     started = true;
     const context = await browser.newContext({ viewport: { width: 390, height: 740 } });
@@ -52,7 +59,13 @@ export async function runEventBrowser({ pool, env, token, templateId }) {
       assert.deepEqual(payload, firstPayload, 'retry preserves event and request UUID');
       await route.continue();
     });
-    await page.getByRole('button', { name: '선택 제출', exact: true }).click();
+    // The UI ignores clicks while its background refresh is in flight.
+    // Wait for a real request instead of assuming one click submitted it.
+    for (let n=0;n<20 && !firstPayload;n++) {
+      await page.getByRole('button', { name: '선택 제출', exact: true }).click();
+      await page.waitForTimeout(100);
+    }
+    assert.ok(firstPayload,'The selected choice must be submitted');
     const retry = page.getByRole('button', { name: '같은 선택으로 다시 확인', exact: true });
     await retry.waitFor();
     assert.equal(await page.evaluate(() => JSON.parse(localStorage.getItem('simus_pending_choice_v1')).event_id), fixture.event.id);
@@ -67,10 +80,10 @@ export async function runEventBrowser({ pool, env, token, templateId }) {
     assert.equal(await page.getByRole('radio').count(), 0);
     await advance();
     await page.getByRole('radio').first().waitFor();
-    assert.equal(await page.getByRole('radio').first().isChecked(), false, 'reused generic situation is a fresh choice');
+    assert.equal(await page.getByRole('radio').first().isChecked(), false, 'a different situation starts with no choice selected');
     const second = await page.evaluate(async id => (await fetch(`/api/sessions/${id}/event`)).json(), sid);
     assert.notEqual(second.event.id, fixture.event.id);
-    assert.equal(second.event.situation_id, generic);
+    assert.notEqual(second.event.situation_id, fixture.event.situation_id);
     await checkMobilePanel(page, second);
     await page.reload();
     await page.getByRole('radio').first().waitFor();
@@ -95,7 +108,7 @@ export async function runEventBrowser({ pool, env, token, templateId }) {
     await page.getByRole('heading', { name: '정보를 불러오지 못했습니다' }).waitFor();
     assert.equal(await page.getByRole('radio').count(), 0);
     assert.deepEqual(failures, []);
-    console.log('PASS: event Chromium mobile join/wait/active/submit/reset/reload; same generic new event clears selection; request-preserving retry and committed response-loss recovery; fail-closed refresh; mobile long-content geometry');
+    console.log('PASS: event Chromium mobile join/wait/active/submit/reset/reload; different situations without repeats; request-preserving retry and committed response-loss recovery; fail-closed refresh; mobile long-content geometry');
   } finally {
     await browser.close();
     if (sid && started) await admin(`/api/admin/sessions/${sid}/end`, { request_key: randomUUID() });

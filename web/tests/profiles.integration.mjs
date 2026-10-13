@@ -22,7 +22,7 @@ export async function runProfileIntegration({ pool, env, token, templateId }) {
     return sid;
   }
   const end = async sid => assert.equal((await call(`/api/admin/sessions/${sid}/end`, { method: 'POST', admin: true, data: { request_key: randomUUID() } })).status, 200);
-  const valid = { nickname: '새벽산책러', department_id: 'dept-23', mbti: 'INFP' };
+  const valid = { nickname: '새벽산책러', department_id: 'dept-23', mbti: 'INFP', character_id: 'npc_16', glasses_id: 'round' };
 
   const sid = await create('프로필 입장 검증');
   const path = `/api/sessions/${sid}/profile`;
@@ -39,6 +39,8 @@ export async function runProfileIntegration({ pool, env, token, templateId }) {
     [{ ...valid, nickname: '수' }, 'INVALID_NICKNAME'], [{ ...valid, nickname: '열한글자가넘는닉네임이' }, 'INVALID_NICKNAME'],
     [{ ...valid, nickname: '별⭐️' }, 'INVALID_NICKNAME'], [{ ...valid, nickname: 7 }, 'INVALID_NICKNAME'],
     [{ ...valid, department_id: 'none' }, 'INVALID_DEPARTMENT'], [{ ...valid, department_id: 'dept-99' }, 'INVALID_DEPARTMENT'],
+    [{ ...valid, glasses_id: 'star' }, 'INVALID_GLASSES'], [{ ...valid, glasses_id: null }, 'INVALID_GLASSES'],
+    [{ ...valid, character_id: 'npc_17' }, 'INVALID_CHARACTER'], [{ ...valid, character_id: null }, 'INVALID_CHARACTER'],
     [{ ...valid, mbti: 'INF' }, 'INVALID_MBTI'], [{ ...valid, mbti: 'XNFP' }, 'INVALID_MBTI'],
   ]) {
     const rejected = await enter(a, data);
@@ -53,6 +55,12 @@ export async function runProfileIntegration({ pool, env, token, templateId }) {
   const first = await enter(a, { ...valid, nickname: '  새벽   산책러 ' });
   assert.equal(first.status, 201, JSON.stringify(first.body));
   assert.equal(first.body.profile.nickname, '새벽 산책러');
+  assert.equal(first.body.profile.character_id, 'npc_16');
+  assert.equal(first.body.profile.glasses_id, 'round');
+  assert.equal((await call(`/api/sessions/${sid}/npc`, { cookie: a.cookie })).body.npcs[0].glasses_id, 'round');
+  assert.equal((await enter(a, { ...valid, nickname: '새벽 산책러', glasses_id: 'none' })).body.error.code, 'PROFILE_LOCKED');
+  assert.equal((await call(`/api/sessions/${sid}/npc`, { cookie: a.cookie })).body.npcs[0].character_id, 'npc_16');
+  assert.equal((await enter(a, { ...valid, nickname: '새벽 산책러', character_id: 'npc_01' })).body.error.code, 'PROFILE_LOCKED');
   assert.equal(first.body.profile.department_name, '게임콘텐츠과');
   assert.match(first.body.profile.citizen_no, /^\d{2}-0001$/);
   const replay = await enter(a, { ...valid, nickname: '새벽 산책러' });
@@ -73,7 +81,7 @@ export async function runProfileIntegration({ pool, env, token, templateId }) {
   assert.equal((await call(departmentPath, { cookie: a.cookie })).body.locked, true);
   const departmentEdit = await call(departmentPath, { method: 'PUT', cookie: a.cookie, data: { department_id: 'dept-01' } });
   assert.equal(departmentEdit.body.error.code, 'DEPARTMENT_LOCKED');
-  for (const [column, value] of [['nickname', '바꿈'], ['mbti', 'ESTJ'], ['department_id', 'dept-01']]) {
+  for (const [column, value] of [['nickname', '바꿈'], ['mbti', 'ESTJ'], ['department_id', 'dept-01'], ['character_id', 'npc_01'], ['glasses_id', 'none']]) {
     await assert.rejects(pool.query(`UPDATE simus.participant_sessions SET ${column}=$3 WHERE session_id=$1 AND participant_id=$2`,
       [sid, a.body.participant_id, value]), error => error.code === '23514');
   }
@@ -111,7 +119,13 @@ export async function runProfileIntegration({ pool, env, token, templateId }) {
       await cta.waitFor();
       assert.equal(await cta.isDisabled(), true);
       await page.getByRole('heading', { name: '시민증 만들기' }).waitFor();
-      await page.getByText('입장한 뒤에는 닉네임·학과·MBTI를 바꿀 수 없어요.', { exact: true }).waitFor();
+      assert.equal(await page.locator('input[name=character]').count(), 16);
+      assert.equal(await page.locator('input[name=glasses]').count(), 3);
+      await page.locator('input[name=character][value=npc_16]').check();
+      await page.locator('article img[src="/characters/custom/npc_16_none.png"]').waitFor();
+      await page.locator('input[name=glasses][value=round]').check();
+      await page.locator('article img[src="/characters/custom/npc_16_round.png"]').waitFor();
+      await page.getByText('입장한 뒤에는 헤어·안경·닉네임·학과·MBTI를 바꿀 수 없어요.', { exact: true }).waitFor();
       await page.getByLabel('닉네임', { exact: true }).fill('브라우저시민');
       assert.equal(await cta.isDisabled(), true);
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
@@ -119,10 +133,13 @@ export async function runProfileIntegration({ pool, env, token, templateId }) {
       const summary = page.getByLabel('시민증과 회차 메뉴');
       await summary.click();
       const citizen = page.locator('details').filter({ has: summary });
+      assert.equal(await citizen.locator('img').getAttribute('src'), '/characters/custom/npc_16_none.png');
       assert.match(await citizen.innerText(), /브라우저시민[\s\S]*게임콘텐츠과[\s\S]*INFP/);
       await page.reload();
       await page.getByRole('region', { name: '도시와 선택' }).waitFor();
       assert.equal(await page.getByLabel('닉네임', { exact: true }).count(), 0);
+      await page.getByLabel('시민증과 회차 메뉴').click();
+      assert.equal(await page.locator('article img').getAttribute('src'), '/characters/custom/npc_16_none.png');
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
       assert.deepEqual(errors, []);
       console.log('PASS: 390px profile entry gating, live missing-field note, entry transition, citizen header, reload keeps entry, no overflow/JS errors');

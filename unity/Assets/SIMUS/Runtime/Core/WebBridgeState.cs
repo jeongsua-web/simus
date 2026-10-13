@@ -90,7 +90,10 @@ namespace Simus.City
                 var motion = item["motion"];
                 var points = (JArray)motion["points"];
                 var npc = new NpcMotion {
-                    Id = Uuid(item, "npc_id"), EpochMs = Timestamp(item, "epoch"),
+                    Id = Uuid(item, "npc_id"),
+                    CharacterId = CitizenCharacterAppearance.Normalize(item.Value<string>("character_id")),
+                    GlassesId = CitizenCharacterAppearance.NormalizeGlasses(item.Value<string>("glasses_id"), CitizenCharacterAppearance.Normalize(item.Value<string>("character_id"))),
+                    EpochMs = Timestamp(item, "epoch"),
                     Speed = Number(motion["speed_mps"]), Loop = (bool)motion["loop"],
                     Revision = NpcCrowdSnapshot.ParseRevision(motion), FreezeAtMs = NpcCrowdSnapshot.ParseFreeze(motion),
                     Points = new UnityEngine.Vector3[points.Count], PrecisePoints = new double[points.Count][]

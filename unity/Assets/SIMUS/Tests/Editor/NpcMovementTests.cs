@@ -6,6 +6,31 @@ namespace Simus.City.Tests
 {
     public class NpcMovementTests
     {
+        [Test] public void GroundingUsesActualSurfaceAndIgnoresTriggersAndActorColliders() {
+            var type = Type.GetType("Simus.NpcGrounding, Assembly-CSharp", true);
+            var actor = new GameObject("grounding-test");
+            var floor = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            var trigger = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            try {
+                floor.transform.position = new Vector3(0, .25f, 0);
+                floor.transform.localScale = new Vector3(10, .5f, 10);
+                trigger.transform.position = new Vector3(0, 1, 0);
+                trigger.GetComponent<Collider>().isTrigger = true;
+                actor.AddComponent<BoxCollider>();
+                var grounding = actor.AddComponent(type);
+                Physics.SyncTransforms();
+                var projected = (Vector3)type.GetMethod("Project").Invoke(grounding, new object[] { Vector3.zero });
+                Assert.That(projected.y, Is.EqualTo(.52f).Within(.001f));
+                Assert.That(projected.x, Is.Zero);
+                Assert.That(projected.z, Is.Zero);
+                var unsupported = new Vector3(30, 7, 30);
+                Assert.That(type.GetMethod("Project").Invoke(grounding, new object[] { unsupported }), Is.EqualTo(unsupported));
+            } finally {
+                UnityEngine.Object.DestroyImmediate(actor);
+                UnityEngine.Object.DestroyImmediate(floor);
+                UnityEngine.Object.DestroyImmediate(trigger);
+            }
+        }
         static NpcMotion Route(bool loop) {
             var route = new NpcMotion { Id = "ffff-test", Points = new[] { Vector3.zero, new Vector3(10, 0, 0), new Vector3(10, 0, 10) }, Speed = 2, Loop = loop, EpochMs = 1000 };
             route.Prepare(); return route;

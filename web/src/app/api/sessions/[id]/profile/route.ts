@@ -35,16 +35,16 @@ export async function POST(request: NextRequest, context: Context) {
       const prior = await readProfile(db, sid, pid);
       if (prior.profile) {
         const same = prior.profile.nickname === input.nickname && prior.profile.mbti === input.mbti
-          && prior.profile.department_id === input.department_id;
-        if (!same) throw new ApiError(409, "PROFILE_LOCKED", "입장한 뒤에는 닉네임·학과·MBTI를 바꿀 수 없습니다.");
+          && prior.profile.department_id === input.department_id && prior.profile.character_id === input.character_id && prior.profile.glasses_id === input.glasses_id;
+        if (!same) throw new ApiError(409, "PROFILE_LOCKED", "입장한 뒤에는 닉네임·학과·MBTI·캐릭터를 바꿀 수 없습니다.");
         return { session_id: sid, profile: prior.profile, replayed: true };
       }
       await requireOpen(db, sid);
       const valid = await db.query("SELECT id FROM simus.departments WHERE id=$1 AND id<>'none'", [input.department_id]);
       if (!valid.rowCount) throw new ApiError(400, "INVALID_DEPARTMENT", "목록에서 학과를 선택하세요.");
-      await db.query(`UPDATE simus.participant_sessions SET nickname=$3, mbti=$4, department_id=$5,
+      await db.query(`UPDATE simus.participant_sessions SET nickname=$3, mbti=$4, department_id=$5, character_id=$6, glasses_id=$7,
         profile_completed_at=clock_timestamp() WHERE session_id=$1 AND participant_id=$2`,
-        [sid, pid, input.nickname, input.mbti, input.department_id]);
+        [sid, pid, input.nickname, input.mbti, input.department_id, input.character_id, input.glasses_id]);
       await requireOpen(db, sid);
       return { session_id: sid, profile: (await readProfile(db, sid, pid)).profile, replayed: false };
     });

@@ -1,0 +1,25 @@
+.card { position:relative; isolation:isolate; width:100%; min-height:238px;  display:flex; flex-direction:column; overflow:hidden; border:1px solid #bac6bf; border-radius:14px; color:#233c35; background:linear-gradient(115deg,#f9faf3,#edf2e7 60%,#e1ebe1); box-shadow:0 2px 3px #203c3510,0 16px 30px -18px #203c3555; font-family:Arial,"Apple SD Gothic Neo","Noto Sans KR",sans-serif; }
+.card::before { content:""; position:absolute; z-index:-1; inset:0; opacity:.3; background:repeating-radial-gradient(ellipse at 88% 75%,transparent 0 7px,#9bb2a1 8px,transparent 9px 13px); mask-image:linear-gradient(90deg,transparent 25%,#000); }
+.header { display:flex; align-items:center; gap:9px; padding:16px 18px 10px; }
+.header h2 { margin:0; font-size:23px; line-height:1.15; font-weight:800; letter-spacing:.14em; }
+.header p { margin:4px 0 0; font-size:8px; letter-spacing:.14em; font-weight:700; }
+.emblem { width:31px; height:35px; display:grid; place-items:center; border:1px solid #6a8778; border-radius:50% 50% 44% 44%; font-family:Georgia,serif; font-size:23px; }
+.brand { margin-left:auto; font-size:11px; letter-spacing:.07em; font-weight:800; }
+.body { display:grid; grid-template-columns:76px minmax(0,1fr); gap:16px; padding:3px 18px 12px; flex:1; }
+.portrait { align-self:start; overflow:hidden; height:100px; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; border:1px solid #b6c7bd; border-radius:3px; color:#769183; background:linear-gradient(145deg,#dce7dd,#c9d8cc); }
+.portrait svg { width:65px; height:79px; }
+.portrait span { width:100%; padding:4px 0; text-align:center; color:#405c4e; background:#ecf1e9; font-size:8px; letter-spacing:.09em; }
+.fields { margin:0; display:grid; align-content:start; gap:8px; min-width:0; }
+.fields dt { font-size:8px; color:#62786c; letter-spacing:.06em; font-weight:600; }
+.fields dd { margin:3px 0 0; font-size:12px; line-height:1.3; font-weight:600; overflow-wrap:anywhere; }
+.fields .name { font-size:21px; font-weight:800; letter-spacing:.03em; }
+.fields .empty { color:#788b7e; }
+.meta { display:flex; flex-wrap:wrap; gap:8px 20px; }
+.fields .number { font-family:ui-monospace,monospace; font-size:11px; letter-spacing:.03em; }
+.footer { flex-shrink:0; display:flex; align-items:center; justify-content:space-between; gap:8px; margin:0 18px; padding:9px 0 12px; border-top:1px solid #adbfad; }
+.footer strong { display:block; font-size:10px; letter-spacing:.06em; }
+.footer div > span { display:block; margin-top:3px; font-size:8px; color:#65796b; }
+.seal { flex:none; border:1px solid #849b8b; border-radius:3px; padding:5px 8px; font-size:10px; letter-spacing:.05em; color:#617669; }
+.issued { color:#9e5146; border-color:#ac6e60; box-shadow:inset 0 0 0 2px #edf2e7,inset 0 0 0 3px #ac6e6070; }
+@media(min-width:420px) { .card { min-height:268px; } .header { padding-top:19px; } .body { grid-template-columns:84px minmax(0,1fr); gap:20px; } .portrait { height:110px; } .fields { gap:10px; } .fields .name { font-size:24px; } }
+.portrait img { display:block; width:100%; min-height:0; flex:1; object-fit:cover; object-position:center; }

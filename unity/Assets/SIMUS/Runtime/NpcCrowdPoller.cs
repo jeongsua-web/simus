@@ -10,6 +10,8 @@ namespace Simus.City
     public sealed class NpcMotion
     {
         public string Id;
+        public string CharacterId;
+        public string GlassesId;
         public double EpochMs;
         public long Revision;
         public double FreezeAtMs = double.PositiveInfinity;
@@ -104,6 +106,8 @@ namespace Simus.City
                     throw new FormatException("NPC motion is missing or belongs to another map.");
                 var npc = new NpcMotion {
                     Id = item.Value<string>("npc_id"),
+                    CharacterId = CitizenCharacterAppearance.Normalize(item.Value<string>("character_id")),
+                    GlassesId = CitizenCharacterAppearance.NormalizeGlasses(item.Value<string>("glasses_id"), CitizenCharacterAppearance.Normalize(item.Value<string>("character_id"))),
                     EpochMs = DateTimeOffset.Parse(item.Value<string>("epoch")).ToUnixTimeMilliseconds(),
                     Speed = motion.Value<double>("speed_mps"),
                     Revision = ParseRevision(motion),

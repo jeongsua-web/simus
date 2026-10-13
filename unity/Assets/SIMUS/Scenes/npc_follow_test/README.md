@@ -46,3 +46,11 @@ CapFix 기반 행복도 캐릭터로 교체하고 기본 걷기를 NEUTRAL_WALK�
 ## 2026-10-10 캐릭터 방향 수정
 
 Humanoid 재생 모델의 루트 X=-90도 배치 회전을 0도로 수정했습니다. 13개 동작의 실제 재생 렌더 및 정면/측면 걷기를 확인했습니다. 장면 재생성 코드도 수정했으며 모델/리그/클립/맵/카메라/경로는 유지했습니다. 검증 자료: `assets/library/characters/modular_hairfix_v001/reports/upright_fix/`.
+
+## 2026-10-13 참여 도시 캐릭터 연결
+
+`DevelopmentCityWebGLBuild`는 추적 장면의 Happiness_Animations 캐릭터와 NEUTRAL_WALK 컨트롤러를 비활성 템플릿으로 보존하고 `WebCityBridge.npcTemplate`에 연결한다. 내 NPC와 공개 NPC 모두 이 모델을 복제하며, 서버 위치의 이동 방향을 바라보고 정지·동결 시 애니메이션을 멈춘다. 참여 화면 카메라 직교 크기는 5로 조정했다. 기본 캡슐 생성은 제거했다. 개발 회차의 `dev-synthetic-v1` 좌표 계약을 유지하며 전시 맵/경로 확정을 의미하지 않는다.
+
+검증: Unity 6000.3.24f1 격리 프로젝트에서 DevelopmentCity WebGL 빌드 성공 후 `web/public/city`에 배포했다. 실제 Chromium WebGL 렌더에서 제작한 사람형 캐릭터를 확인했으며 READY/BOUND, 중복 INIT, 숨김/복귀, 동결, 지도·회차 오류, 재연결, DISPOSE 검사를 통과했다(브라우저 오류 0). 검증 캡처 `/tmp/simus-character-bridge.png`, 빌드 로그 `/tmp/simus-citizen-npc-build.log`. 기존 웹 빌드는 `web/.unity-deploy-backups/city-before-character-1791867226314699000`에 보존했다.
+
+에셋 카탈로그 갱신/검사는 기존 manifest의 역할 NPC 원본 누락 3건 및 Happiness_Animations.blend 원본 해시 불일치로 실패했다. 이 작업은 원본 FBX·Blender 파일과 승인 상태를 변경하지 않았다. manifest 오류 때문에 스크립트가 inventory 갱신을 거부하며, 최신 상태 검사는 미통과다.

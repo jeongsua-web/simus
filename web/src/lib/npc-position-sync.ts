@@ -1,3 +1,4 @@
+import { defaultCitizenGlasses } from "./citizen-characters";
 import { ApiError } from "./api";
 import { npcPosition, type Npc, type NpcSnapshot } from "@/app/participate/npc-motion";
 
@@ -32,7 +33,7 @@ export function positionSnapshot(snapshot: NpcSnapshot, map: string, path?: stri
     let delta = after.map((n, i) => n - point[i]);
     if (!Math.hypot(...delta)) delta = point.map((n, i) => n - before[i]);
     const length = Math.hypot(...delta);
-    return { npc_id: npc.npc_id, epoch: npc.epoch, motion, path_version: motion.path_version,
+    return { npc_id: npc.npc_id, character_id: npc.character_id ?? "npc_01", glasses_id: npc.glasses_id ?? defaultCitizenGlasses(npc.character_id ?? "npc_01"), epoch: npc.epoch, motion, path_version: motion.path_version,
       position: { x: point[0], y: point[1], z: point[2] },
       forward: { x: length ? delta[0] / length : 0, y: length ? delta[1] / length : 0, z: length ? delta[2] / length : 0 } };
   });
