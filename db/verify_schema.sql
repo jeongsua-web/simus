@@ -1,4 +1,4 @@
--- 001~010 마이그레이션 실행 후 핵심 제약조건을 검증한다.
+-- 001~011 마이그레이션 실행 후 핵심 제약조건을 검증한다.
 -- 테스트 데이터는 마지막에 ROLLBACK하므로 DB에 남지 않는다.
 \set ON_ERROR_STOP on
 BEGIN;
@@ -23,8 +23,8 @@ BEGIN
   SELECT count(*) INTO actual_count
   FROM information_schema.tables
   WHERE table_schema='simus' AND table_type='BASE TABLE';
-  IF actual_count <> 23 THEN
-    RAISE EXCEPTION 'Expected 23 tables, found %', actual_count;
+  IF actual_count <> 25 THEN
+    RAISE EXCEPTION 'Expected 25 tables, found %', actual_count;
   END IF;
 
   IF NOT EXISTS (
@@ -141,5 +141,36 @@ BEGIN
   END;
 END $$;
 
+DO $$
+DECLARE event_id uuid;
+BEGIN
+  IF NOT simus.valid_event_location('{"map_version":"unit-test","point":[0,0,0],"radius_m":2}')
+    OR simus.valid_event_location('{"map_version":"unit-test","point":[0,0,0],"radius_m":0}')
+    OR simus.valid_event_point('[0,"bad",0]') THEN
+    RAISE EXCEPTION 'Event location validation failed';
+  END IF;
+  INSERT INTO simus.npc_event_states(session_id,participant_id)
+    VALUES ('00000000-0000-0000-0000-000000000011','00000000-0000-0000-0000-000000000031');
+  INSERT INTO simus.npc_events(session_id,participant_id,situation_id,trigger_kind)
+    VALUES ('00000000-0000-0000-0000-000000000011','00000000-0000-0000-0000-000000000031',
+      '00000000-0000-0000-0000-000000000021','DEADLINE') RETURNING id INTO event_id;
+  BEGIN
+    INSERT INTO simus.npc_events(session_id,participant_id,situation_id,trigger_kind)
+      VALUES ('00000000-0000-0000-0000-000000000011','00000000-0000-0000-0000-000000000031',
+        '00000000-0000-0000-0000-000000000021','LOCATION');
+    RAISE EXCEPTION 'Concurrent active event unexpectedly succeeded';
+  EXCEPTION WHEN unique_violation THEN NULL;
+  END;
+  UPDATE simus.npc_events SET status='COMPLETED',completed_at=clock_timestamp() WHERE id=event_id;
+  INSERT INTO simus.npc_events(session_id,participant_id,situation_id,trigger_kind)
+    VALUES ('00000000-0000-0000-0000-000000000011','00000000-0000-0000-0000-000000000031',
+      '00000000-0000-0000-0000-000000000021','DEADLINE');
+  BEGIN
+    UPDATE simus.npc_event_states SET guidance_point='[0,0,0]'
+      WHERE session_id='00000000-0000-0000-0000-000000000011';
+    RAISE EXCEPTION 'Incomplete guidance unexpectedly succeeded';
+  EXCEPTION WHEN check_violation THEN NULL;
+  END;
+END $$;
 ROLLBACK;
 SELECT 'schema verification passed' AS result;

@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { pendingKey, readPending } from "./pending";
-import type { ApiError, Department, LatestSession, Profile, Session, Situation, Submission } from "./types";
+import type { ApiError, Department, LatestSession, Profile, Session, Situation, Submission, EventState, OwnResponse } from "./types";
 
 async function errorMessage(response: Response, fallback: string) {
   try { return ((await response.json()) as ApiError).error?.message ?? fallback; }
@@ -11,6 +11,8 @@ async function errorMessage(response: Response, fallback: string) {
 
 export function useParticipation() {
   const [session, setSession] = useState<Session | null>(null);
+  const [eventState, setEventState] = useState<EventState | null>(null);
+  const [responseCount, setResponseCount] = useState(0);
   const [latestSession, setLatestSession] = useState<LatestSession | null>(null);
   const [history, setHistory] = useState<LatestSession[]>([]);
   const [loading, setLoading] = useState(true);
@@ -77,7 +79,7 @@ export function useParticipation() {
         entry = await profileResponse.json();
       }
       const targetId = current.session?.id ?? own.latest_session?.id;
-      let records: Array<{ situation_id: string; choice_id: string }> = [];
+      let records: OwnResponse[] = [];
       if (targetId) {
         const responses = await fetch(`/api/sessions/${targetId}/responses`, { cache: "no-store", signal });
         if (responses.status === 401) {
@@ -90,6 +92,18 @@ export function useParticipation() {
         // Use the more recent server lifecycle; never infer CLOSING from admission alone.
         if (current.session) current.session = { ...current.session, ...data.session };
       }
+      let nextEvent: EventState | null = null;
+      if (current.session && entry?.joined) {
+        const response = await fetch(`/api/sessions/${current.session.id}/event`, { cache: "no-store", signal });
+        if (!response.ok) {
+          if (response.status === 401) setAuthExpired(true);
+          throw new Error(await errorMessage(response, "도시 이벤트를 확인하지 못했습니다."));
+        }
+        nextEvent = await response.json() as EventState;
+        if (!["WAITING", "GUIDING", "ACTIVE", "CLOSED"].includes(nextEvent.phase) ||
+            (nextEvent.phase === "ACTIVE" && (!nextEvent.event?.id || !Array.isArray(nextEvent.event.situation?.choices))))
+          throw new Error("도시 이벤트 정보를 확인하지 못했습니다.");
+      }
       if (!mounted.current || signal.aborted) return;
       const changed = activeSession.current !== (current.session?.id ?? null);
       activeSession.current = current.session?.id ?? null;
@@ -97,13 +111,15 @@ export function useParticipation() {
         setMessages({});
       }
       const retry = pendingRequest.current;
-      if (retry && retry.session_id === targetId && records.some(item => item.situation_id === retry.situation_id)) {
+      if (retry && retry.session_id === targetId && records.some(item => retry.event_id ? item.event_id === retry.event_id : item.request_key === retry.request_key)) {
         rememberPending(null);
       }
-      setAnswered(Object.fromEntries(records.map(item => [item.situation_id, true])));
+      setAnswered(Object.fromEntries(records.map(item => [item.event_id ?? item.request_key ?? item.situation_id, true])));
+      setResponseCount(records.length);
+      setEventState(nextEvent);
       setSelected(previous => ({ ...(changed ? {} : previous),
-        ...(retry && retry.session_id === targetId ? { [retry.situation_id]: retry.choice_id } : {}),
-        ...Object.fromEntries(records.map(item => [item.situation_id, item.choice_id])) }));
+        ...(retry && retry.session_id === targetId ? { [retry.event_id ?? retry.request_key]: retry.choice_id } : {}),
+        ...Object.fromEntries(records.map(item => [item.event_id ?? item.request_key ?? item.situation_id, item.choice_id])) }));
       setSession(current.session);
       setProfile(entry?.profile ?? null);
       setJoined(entry?.joined ?? false);
@@ -113,7 +129,7 @@ export function useParticipation() {
       setAuthExpired(false);
       setLoadError("");
     } catch (error) {
-      if (!signal.aborted && mounted.current) setLoadError(error instanceof Error ? error.message : "참여 정보를 불러오지 못했습니다.");
+      if (!signal.aborted && mounted.current) { setEventState(null); setLoadError(error instanceof Error ? error.message : "참여 정보를 불러오지 못했습니다."); }
     } finally { loadingState.current = false; if (mounted.current) setLoading(false); }
   }, []);
 
@@ -123,7 +139,7 @@ export function useParticipation() {
     const refresh = () => { if (storageReady.current && !document.hidden && !busy.current) void loadState(false); };
     window.addEventListener("online", refresh);
     document.addEventListener("visibilitychange", refresh);
-    const timer = window.setInterval(() => { if (storageReady.current && !busy.current) void loadState(false); }, 5_000);
+    const timer = window.setInterval(() => { if (storageReady.current && !document.hidden && !busy.current) void loadState(false); }, 2_500);
     return () => { mounted.current = false; controller.current?.abort(); window.clearTimeout(first); window.clearInterval(timer); window.removeEventListener("online", refresh); document.removeEventListener("visibilitychange", refresh); };
   }, [loadState]);
 
@@ -131,26 +147,30 @@ export function useParticipation() {
     if (authExpired || busy.current || loadingState.current) return;
     const retry = pendingRequest.current;
     if (retry && retry.situation_id !== situation.id) return;
-    if (!retry && (!session || !session.accepting_choices || answered[situation.id])) return;
+    const activeEvent = eventState?.phase === "ACTIVE" ? eventState.event : null;
+    if (!retry && (loadError || !session?.accepting_choices || !activeEvent ||
+        activeEvent.situation_id !== situation.id || answered[activeEvent.id])) return;
+    const occurrenceKey = retry?.event_id ?? retry?.request_key ?? activeEvent!.id;
     const payload: Submission = retry ?? {
-      session_id: session!.id, situation_id: situation.id,
-      choice_id: selected[situation.id], request_key: crypto.randomUUID(),
+      event_id: activeEvent!.id, session_id: session!.id, situation_id: situation.id,
+      choice_id: selected[activeEvent!.id], request_key: crypto.randomUUID(),
     };
     if (!payload.choice_id) return;
     try { rememberPending(payload); }
     catch { setLoadError("브라우저 저장소에 제출 정보를 보관할 수 없습니다. 저장소 설정을 확인해주세요."); return; }
     busy.current = true;
-    setSubmitting(situation.id);
-    setMessages(previous => ({ ...previous, [situation.id]: "제출하고 있어요…" }));
+    setSubmitting(occurrenceKey);
+    setMessages(previous => ({ ...previous, [occurrenceKey]: "제출하고 있어요…" }));
     try {
       const response = await fetch("/api/choices", {
         method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload),
       });
       const result = await response.json() as ApiError;
       if (response.ok || result.error?.code === "ALREADY_ANSWERED") {
-        setAnswered(previous => ({ ...previous, [situation.id]: true }));
+        setAnswered(previous => ({ ...previous, [occurrenceKey]: true }));
         rememberPending(null);
-        setMessages(previous => ({ ...previous, [situation.id]: "응답이 완료되었습니다." }));
+        setMessages(previous => ({ ...previous, [occurrenceKey]: "응답이 완료되었습니다." }));
+        setEventState(null);
         await loadState(false);
         return;
       }
@@ -161,18 +181,22 @@ export function useParticipation() {
       if (result.error?.code === "SESSION_CLOSED") {
         setSession(previous => previous?.id === payload.session_id ? { ...previous, accepting_choices: false } : previous);
         rememberPending(null);
-      } else if (response.status < 500 && ![408, 429].includes(response.status)) rememberPending(null);
+      } else if (response.status < 500 && ![408, 429].includes(response.status)) {
+        rememberPending(null);
+        setEventState(null);
+        await loadState(false);
+      }
       throw new Error(result.error?.message ?? "선택을 제출하지 못했습니다.");
     } catch (error) {
-      setMessages(previous => ({ ...previous, [situation.id]:
+      setMessages(previous => ({ ...previous, [occurrenceKey]:
         `${error instanceof Error ? error.message : "제출 결과를 확인하지 못했습니다."}${pendingRequest.current ? " 같은 선택으로 다시 시도해 주세요." : ""}` }));
     } finally { busy.current = false; setSubmitting(null); }
   }
 
   return {
-    session, latestSession, history, loading, loadError, authExpired, selected, answered, messages,
+    session, eventState, responseCount, latestSession, history, loading, loadError, authExpired, selected, answered, messages,
     submitting, pending, profile, joined, departments,
-    completeProfile: (value: Profile) => { setProfile(value); setJoined(true); },
+    completeProfile: (value: Profile) => { setProfile(value); setJoined(true); void loadState(false); },
     refresh: () => void loadState(false), selectChoice: (situationId: string, choiceId: string) =>
       setSelected(previous => ({ ...previous, [situationId]: choiceId })),
     submit, retryPending: () => {

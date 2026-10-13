@@ -40,8 +40,8 @@ export async function createSession(subject: string, input: Record<string, unkno
     // Composite keys allow stable content IDs across sessions; no runtime rows are copied.
     await db.query(`INSERT INTO simus.session_regions(session_id,id,code,name,aggregation_weight,map_metadata)
       SELECT $1,id,code,name,aggregation_weight,map_metadata FROM simus.session_regions WHERE session_id=$2`, [id, templateId]);
-    await db.query(`INSERT INTO simus.session_situations(session_id,id,code,title,body,display_order)
-      SELECT $1,id,code,title,body,display_order FROM simus.session_situations WHERE session_id=$2`, [id, templateId]);
+    await db.query(`INSERT INTO simus.session_situations(session_id,id,code,title,body,display_order,event_location,is_generic)
+      SELECT $1,id,code,title,body,display_order,event_location,is_generic FROM simus.session_situations WHERE session_id=$2`, [id, templateId]);
     await db.query(`INSERT INTO simus.session_choices(session_id,situation_id,id,label,display_order,importance,
         alignment_dx,alignment_dy,happiness_base,safety_base,cleanliness_base)
       SELECT $1,situation_id,id,label,display_order,importance,alignment_dx,alignment_dy,happiness_base,safety_base,cleanliness_base

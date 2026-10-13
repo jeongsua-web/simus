@@ -1,8 +1,10 @@
+import { prepareChoice, fixtureSituation } from './event-fixture.mjs';
 import assert from 'node:assert/strict';
 import { randomUUID, createHash } from 'node:crypto';
 
 export async function runResultLinksIntegration({ pool, env, token: adminToken, templateId }) {
   async function call(path, { method = 'GET', data, cookie, admin = false, origin } = {}) {
+    if (path === '/api/choices' && data) await prepareChoice(pool, env, cookie, data);
     const response = await fetch(env.TEST_API_URL + path, {
       method, headers: { ...(cookie ? { cookie } : {}), ...(admin ? { authorization: `Bearer ${adminToken}` } : {}),
         ...(data ? { 'content-type': 'application/json' } : {}), ...(origin ? { origin } : {}) },
@@ -42,7 +44,7 @@ export async function runResultLinksIntegration({ pool, env, token: adminToken, 
   const current = (await call('/api/sessions/current')).body.session;
   assert.equal((await call('/api/choices', { method: 'POST', cookie: scored.cookie, data: {
     session_id: sid, situation_id: current.situations[0].id,
-    choice_id: current.situations[0].choices[0].id, request_key: randomUUID(),
+    choice_id: (await fixtureSituation(pool, sid)).choices[0].id, request_key: randomUUID(),
   } })).status, 201);
   assert.equal((await call(`/api/admin/sessions/${sid}/end`, { method: 'POST', admin: true,
     data: { request_key: randomUUID() } })).status, 200);

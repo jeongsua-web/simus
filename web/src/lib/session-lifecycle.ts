@@ -1,6 +1,7 @@
 import type { PoolClient } from "pg";
 import { ApiError, transaction } from "./api";
 import { classifyAlignment, validateRules } from "./session-rules";
+import { ensureCommonEvent } from "./common-event";
 
 type Action = "START" | "END";
 
@@ -58,6 +59,8 @@ export async function startSession(adminId: string, sessionId: string, requestKe
       throw new ApiError(409, "SESSION_NOT_READY", "상황·선택지·영향값 또는 기존 상태가 시작 조건을 충족하지 않습니다.");
 
     const city = rules.initial_city_state;
+    // Content remains DRAFT until the fallback is authored and initial state exists.
+    await ensureCommonEvent(db, sessionId);
     await db.query(`INSERT INTO simus.city_states(session_id,happiness,safety,cleanliness)
       VALUES($1,$2,$3,$4)`, [sessionId, city.happiness, city.safety, city.cleanliness]);
     await db.query(`INSERT INTO simus.region_states(session_id,region_id,pollution)

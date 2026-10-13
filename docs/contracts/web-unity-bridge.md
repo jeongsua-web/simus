@@ -69,3 +69,8 @@ Unity는 INIT를 멱등 처리한다. 중복 INIT로 캐릭터를 추가 생성�
 상황 위치에 따른 자동 노출, 새 맵 좌표 주입, 최종 도시 연출은 각각 노출 정책·맵 인계·표현 자산 확정 후 연결한다.
 
 2026-10-09 검증: lint·production build·프로토콜 단위 검사 2건·격리 PostgreSQL/Chromium 통합 검사 통과. 390px 시험 iframe에서 서로 다른 참여자의 NPC 바인딩, 지도 버전 불일치 차단, 재시도 후 같은 본인 NPC 복구 확인. 실제 Unity Play/WebGL·휴대폰 검증은 미실행. 에셋 카탈로그 갱신/검사 0 errors.
+
+
+### 011 이벤트 이동 계약
+
+브리지 메시지 버전은 1을 유지한다. `snapshot.npcs[].motion.revision`이 증가한 응답만 유도·정지·재개 경로 교체를 허용한다. revision이 같은 응답은 경로가 동일해야 하며 늦은 server_time·revision 역행은 적용하지 않는다. `motion.freeze_at`으로 개별 NPC를 멈추고, 완료 후 증가한 revision의 이동 경로로 기존 본인 NPC 카메라 추적을 이어간다. 이벤트 위치·시각 결정과 선택 권한 검증은 서버에서만 한다.

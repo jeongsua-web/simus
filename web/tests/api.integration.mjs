@@ -1,3 +1,4 @@
+import { prepareChoice } from './event-fixture.mjs';
 // Run only against a disposable database initialized with db/*.sql (schema + development seed).
 import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
@@ -9,6 +10,7 @@ const sid = '10000000-0000-0000-0000-000000000001';
 const tid = '30000000-0000-0000-0000-000000000001';
 const cid = '40000000-0000-0000-0000-000000000001';
 async function call(path, data, cookie, method) {
+  if (path === '/api/choices' && data && cookie) await prepareChoice(db, { ...process.env, TEST_API_URL: base }, cookie, data);
   const response = await fetch(base + path, { method: method ?? (data ? 'POST' : 'GET'),
     headers: { ...(data ? {'Content-Type':'application/json'} : {}), ...(cookie ? {cookie} : {}) },
     body: data ? JSON.stringify(data) : undefined });
@@ -17,7 +19,7 @@ async function call(path, data, cookie, method) {
 try {
   const current = await call('/api/sessions/current');
   assert.equal(current.body.session.id, sid);
-  assert.equal(current.body.session.situations[0].choices.length, 2);
+  assert.equal(current.body.session.situations[0].choices.length, 0);
   assert.ok(!JSON.stringify(current.body).includes('alignment_dx'));
   const person = await call('/api/participants', null, null, 'POST');
   assert.equal(person.status, 201);
@@ -51,12 +53,12 @@ try {
   assert.equal(scores.x_score,'1'); assert.equal(scores.y_score,'1'); assert.equal(scores.response_count,'1');
   const p2 = await call('/api/participants',null,null,'POST');
   await db.query('UPDATE simus.city_states SET happiness=99,cleanliness=99 WHERE session_id=$1',[sid]);
-  assert.equal((await call('/api/choices',{...payload,request_key:randomUUID()},p2.cookie)).status,201);
+  assert.equal((await call('/api/choices',{...payload,event_id:undefined,request_key:randomUUID()},p2.cookie)).status,201);
   const clamped = (await call('/api/city-state')).body.city_state;
   assert.equal(clamped.happiness,100); assert.equal(clamped.cleanliness,100);
   const p3 = await call('/api/participants',null,null,'POST');
   await db.query("UPDATE simus.simulation_sessions SET admission_closed_at=clock_timestamp() WHERE id=$1",[sid]);
-  assert.equal((await call('/api/choices',{...payload,request_key:randomUUID()},p3.cookie)).status,409);
+  assert.equal((await call('/api/choices',{...payload,event_id:undefined,request_key:randomUUID()},p3.cookie)).status,409);
   assert.equal((await call('/api/choices',payload,person.cookie)).status,200);
   assert.equal((await call('/api/sessions/current')).body.session.accepting_choices,false);
   assert.equal((await db.query('SELECT count(*) FROM simus.choice_records WHERE session_id=$1',[sid])).rows[0].count,'2');

@@ -11,6 +11,8 @@ namespace Simus.City
     {
         public string Id;
         public double EpochMs;
+        public long Revision;
+        public double FreezeAtMs = double.PositiveInfinity;
         public Vector3[] Points;
         public double Speed;
         public bool Loop;
@@ -54,7 +56,7 @@ namespace Simus.City
         {
             if (Points == null || Points.Length < 2) return Vector3.zero;
             if (TotalLength <= Mathf.Epsilon) return Points[0];
-            var traveled = Math.Max(0, (atMs - EpochMs) / 1000) * Speed;
+            var traveled = Math.Max(0, (Math.Min(atMs, FreezeAtMs) - EpochMs) / 1000) * Speed;
             var distance = Loop ? (traveled % TotalLength) : Math.Min(TotalLength, traveled);
             for (var i = 0; i < SegmentLengths.Length; i++)
             {
@@ -79,7 +81,8 @@ namespace Simus.City
 
         public static NpcCrowdSnapshot Parse(string json, double receivedRealtime)
         {
-            var root = JObject.Parse(json);
+            var root = Newtonsoft.Json.JsonConvert.DeserializeObject<JObject>(json,
+                new Newtonsoft.Json.JsonSerializerSettings { DateParseHandling = Newtonsoft.Json.DateParseHandling.None });
             var result = new NpcCrowdSnapshot {
                 SessionId = root.Value<string>("session_id"),
                 MapVersion = root.Value<string>("map_version"),
@@ -103,6 +106,8 @@ namespace Simus.City
                     Id = item.Value<string>("npc_id"),
                     EpochMs = DateTimeOffset.Parse(item.Value<string>("epoch")).ToUnixTimeMilliseconds(),
                     Speed = motion.Value<double>("speed_mps"),
+                    Revision = ParseRevision(motion),
+                    FreezeAtMs = ParseFreeze(motion),
                     Loop = motion.Value<bool>("loop")
                 };
                 var points = (JArray)motion["points"];
@@ -129,6 +134,25 @@ namespace Simus.City
                 result.Npcs.Add(npc);
             }
             return result;
+        }
+        internal static long ParseRevision(JToken motion)
+        {
+            var token = motion["revision"];
+            if (token == null) return 0; // Existing immutable routes remain compatible.
+            if (token.Type != JTokenType.Integer || !long.TryParse(token.ToString(), out var revision) ||
+                revision < 0 || revision > 9007199254740991L) throw new FormatException("NPC motion revision is invalid.");
+            return revision;
+        }
+        internal static double ParseFreeze(JToken motion)
+        {
+            var token = motion["freeze_at"];
+            if (token == null || token.Type == JTokenType.Null) return double.PositiveInfinity;
+            if (token.Type != JTokenType.String ||
+                !System.Text.RegularExpressions.Regex.IsMatch((string)token, @"(Z|[+-]\d\d:\d\d)$") ||
+                !DateTimeOffset.TryParse((string)token, System.Globalization.CultureInfo.InvariantCulture,
+                    System.Globalization.DateTimeStyles.None, out var date))
+                throw new FormatException("NPC motion freeze_at is invalid.");
+            return date.ToUnixTimeMilliseconds();
         }
         private static bool Numeric(JToken value) => value != null && (value.Type == JTokenType.Integer || value.Type == JTokenType.Float);
     }

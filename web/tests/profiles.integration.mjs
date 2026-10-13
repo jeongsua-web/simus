@@ -116,7 +116,9 @@ export async function runProfileIntegration({ pool, env, token, templateId }) {
       assert.equal(await cta.isDisabled(), true);
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
       await enterCity(page, { nickname: '브라우저시민' });
-      const citizen = page.getByLabel('내 시민증');
+      const summary = page.getByLabel('시민증과 회차 메뉴');
+      await summary.click();
+      const citizen = page.locator('details').filter({ has: summary });
       assert.match(await citizen.innerText(), /브라우저시민[\s\S]*게임콘텐츠과[\s\S]*INFP/);
       await page.reload();
       await page.getByRole('region', { name: '도시와 선택' }).waitFor();

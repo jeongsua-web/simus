@@ -1,8 +1,10 @@
+import { prepareChoice, fixtureSituation } from './event-fixture.mjs';
 import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
 
-export async function runDepartmentStatisticsIntegration({ env, token, templateId }) {
+export async function runDepartmentStatisticsIntegration({ pool, env, token, templateId }) {
   async function call(path, { method = 'GET', data, cookie, admin = false } = {}) {
+    if (path === '/api/choices' && data) await prepareChoice(pool, env, cookie, data);
     const response = await fetch(env.TEST_API_URL + path, {
       method,
       headers: { ...(cookie ? { cookie } : {}), ...(admin ? { authorization: `Bearer ${token}` } : {}),
@@ -22,7 +24,8 @@ export async function runDepartmentStatisticsIntegration({ env, token, templateI
   assert.equal((await call(`/api/admin/sessions/${sid}/start`, { method: 'POST', admin: true,
     data: { request_key: randomUUID() } })).status, 200);
   const current = (await call('/api/sessions/current')).body.session;
-  const situation = current.situations[0];
+  assert.ok(current.situations.every(t => t.choices.length === 0));
+  const situation = await fixtureSituation(pool, sid);
   const people = [];
   for (let i = 0; i < 6; i++) {
     const person = await call('/api/participants', { method: 'POST' });

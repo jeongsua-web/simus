@@ -1,3 +1,4 @@
+import { prepareChoice, fixtureSituation } from './event-fixture.mjs';
 import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
@@ -5,6 +6,7 @@ import { enterCity } from './participant-entry.mjs';
 
 export async function runDepartmentIntegration({ pool, env, token, templateId }) {
   async function call(path, { method = 'GET', data, cookie, admin = false, origin } = {}) {
+    if (path === '/api/choices' && data) await prepareChoice(pool, env, cookie, data);
     const response = await fetch(env.TEST_API_URL + path, {
       method, headers: { ...(cookie ? { cookie } : {}), ...(admin ? { authorization: `Bearer ${token}` } : {}),
         ...(data ? { 'content-type': 'application/json' } : {}), ...(origin ? { origin } : {}) },
@@ -44,7 +46,8 @@ export async function runDepartmentIntegration({ pool, env, token, templateId })
   assert.equal((await read()).body.department_id, 'dept-01');
   assert.equal((await call(path, { cookie: b.cookie })).body.department_id, 'none');
   const session = (await call('/api/sessions/current')).body.session;
-  const situation = session.situations[0];
+  assert.ok(session.situations.every(t => t.choices.length === 0));
+  const situation = await fixtureSituation(pool, sid);
   const choice = { session_id: sid, situation_id: situation.id, choice_id: situation.choices[0].id, request_key: randomUUID() };
   assert.equal((await call('/api/choices', { method: 'POST', cookie: a.cookie, data: { ...choice, choice_id: randomUUID() } })).status, 400);
   assert.equal((await read()).body.locked, false);
@@ -74,11 +77,15 @@ export async function runDepartmentIntegration({ pool, env, token, templateId })
       const cookie = (await page.context().cookies()).find(c => c.name === 'simus_participant');
       const stored = await call(path, { cookie: `${cookie.name}=${cookie.value}` });
       assert.deepEqual([stored.body.department_id, stored.body.locked], ['dept-42', true]);
+      await pool.query("UPDATE simus.npc_event_states SET waiting_since=clock_timestamp()-interval '91 seconds' WHERE session_id=$1",[sid]);
+      await page.getByRole('radio').first().waitFor();
       await page.getByRole('radio').first().check();
       await page.getByRole('button', { name: '선택 제출', exact: true }).first().click();
-      await page.getByRole('button', { name: '응답 완료', exact: true }).first().waitFor();
+      await page.getByText('1회 응답', { exact: true }).waitFor();
       await page.reload();
-      assert.match(await page.getByLabel('내 시민증').innerText(), /자율전공학과/);
+      const summary=page.locator('summary[aria-label="시민증과 회차 메뉴"]');
+      await summary.waitFor(); await summary.click();
+      assert.match(await page.locator('details').filter({has:summary}).innerText(), /자율전공학과/);
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
       assert.deepEqual(errors, []);
       console.log('PASS: 3C mobile browser department chosen at entry, stored/locked, kept after first choice and reload, no overflow');

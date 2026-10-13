@@ -1,3 +1,4 @@
+import { prepareChoice } from './event-fixture.mjs';
 // Run against a disposable database initialized with db/001 and db/002.
 import assert from 'node:assert/strict';
 import { SignJWT } from 'jose';
@@ -18,6 +19,7 @@ const token = await new SignJWT({}).setProtectedHeader({ alg:'RS256', kid:privat
   .setIssuer(issuer).setAudience(audience).setSubject('lifecycle-admin').setIssuedAt().setExpirationTime('5m').sign(key);
 
 async function call(path, { data, cookie, auth, method } = {}) {
+  if (path === '/api/choices' && data) await prepareChoice(db, process.env, cookie, data);
   const response = await fetch(base + path, { method: method ?? (data ? 'POST' : 'GET'), headers: {
     ...(data ? {'Content-Type':'application/json'} : {}), ...(cookie ? {cookie} : {}), ...(auth ? {authorization:`Bearer ${auth}`} : {})
   }, body:data ? JSON.stringify(data) : undefined });

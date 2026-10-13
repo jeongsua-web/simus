@@ -1,4 +1,6 @@
 import type { PoolClient } from "pg";
+import { npcPosition, type Npc } from "@/app/participate/npc-motion";
+import { guidedPoint } from "./npc-events";
 import { ApiError } from "./api";
 
 // Caller holds the session row lock, shared with choices and lifecycle transitions.
@@ -40,5 +42,22 @@ export async function readNpcs(db: PoolClient, sessionId: string, participantId?
   if (!result.rowCount) throw new ApiError(404, "SESSION_NOT_FOUND", "공개된 회차를 찾을 수 없습니다.");
   if (participantId && result.rows[0].npcs.length === 0)
     throw new ApiError(404, "NOT_JOINED", "이 회차에 입장한 기록이 없습니다.");
-  return result.rows[0];
+  const snapshot=result.rows[0];
+  const states=await db.query(`SELECT p.npc_id,st.*,e.started_at FROM simus.participant_sessions p JOIN simus.npc_event_states st ON st.session_id=p.session_id AND st.participant_id=p.participant_id LEFT JOIN simus.npc_events e ON e.session_id=p.session_id AND e.participant_id=p.participant_id AND e.status='ACTIVE' WHERE p.session_id=$1`,[sessionId]);
+  snapshot.npcs=snapshot.npcs.map((npc: Npc)=>{
+    const st=states.rows.find(r=>r.npc_id===npc.npc_id);
+    if(!st) return npc;
+    npc={...npc,motion:st.resume_motion??npc.motion};
+    const at=new Date(st.started_at??snapshot.motion_time).getTime();
+    const epoch=new Date(new Date(st.motion_epoch).getTime()+Number(st.paused_ms)).toISOString();
+    const revision=Number(st.motion_revision);
+    let projected={...npc,epoch,motion:{...npc.motion,revision}};
+    if(st.guidance_point) projected={...projected,epoch:new Date(st.guidance_started_at).toISOString(),motion:{...projected.motion,points:[st.guidance_origin,st.guidance_point],loop:false}};
+    if(st.started_at) {
+      const point=st.guidance_point?guidedPoint(st,npc.motion.speed_mps,at):npcPosition(projected as Parameters<typeof npcPosition>[0],at);
+      if(point) return {...projected,epoch:new Date(st.started_at).toISOString(),motion:{...projected.motion,points:[point,point],speed_mps:0,freeze_at:new Date(st.started_at).toISOString()}};
+    }
+    return projected;
+  });
+  return snapshot;
 }

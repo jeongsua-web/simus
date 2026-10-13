@@ -11,5 +11,8 @@ export function readPending(): Submission | null {
   const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
   if (!value || typeof value !== "object" || fields.some(field => !(field in value) || (typeof (value as Record<string, unknown>)[field] !== "string" || !uuid.test((value as Record<string, string>)[field]))))
     throw new Error("저장된 제출 정보를 읽지 못했습니다. 브라우저 저장소를 확인해주세요.");
+  const eventId = (value as Record<string, unknown>).event_id;
+  if (eventId !== undefined && (typeof eventId !== "string" || !uuid.test(eventId)))
+    throw new Error("저장된 이벤트 정보를 읽지 못했습니다. 현장 운영자에게 문의해 주세요.");
   return value as Submission;
 }

@@ -203,3 +203,18 @@ curl -X POST -H "Authorization: Bearer $SESSION_JOB_TOKEN" \
 - 미설정 신규 가입·첫 선택은 `409 NPC_MOTION_NOT_CONFIGURED`. 기존 회원·조회는 보존한다. 새 맵 경로는 확정 자료를 받은 뒤 DRAFT에서 명시 설정한다.
 
 검증 범위·제한·좌표·동결 및 오류 상세는 [NPC 계약](../docs/contracts/participant-npc-api.md#2026-10-npc-위치-동기화-010-이후)을 따른다. 경로 중심선 위치를 사용하며 예전 암묵적 X 차선 간격은 제거했다.
+
+### NPC event cycle
+
+`GET /api/sessions/:id/event` requires participant cookie and prior membership. Returns `phase` (`WAITING`, `GUIDING`, `ACTIVE`, `CLOSED`), `server_time`, `waiting_since`, `deadline_at`, and `event`. Only ACTIVE exposes `event.situation.choices`; `/sessions/current` retains metadata with empty choices. Event includes `id`, `situation_id`, `trigger_kind` (`LOCATION` or `DEADLINE`), and `started_at`.
+
+`POST /api/choices` requires `event_id`. Ownership, situation, active occurrence and open admission are checked under the session lock. Request-key replay must match event, situation and choice; legacy records without an event ID remain replayable. Stats apply once and completion restarts the waiting timer atomically. Fresh mapped situations fire inside their configured radius. At 60 seconds the NPC is guided toward the nearest compatible mapped situation; at 90 seconds an explicit generic situation is selected, reusable after fresh situations are exhausted.
+
+Node instrumentation reconciles all running participants every 250 milliseconds independently of polling. Each pass reads membership, content and response history in batches per session, then writes only transitions. Processes serialize through session locks. Hosting must keep a Node process alive; suspending serverless hosting requires a persistent worker invoking authorized `POST /api/internal/sessions/reconcile`. Processing delays/outages delay visible delivery; durable deadlines recover on the next tick. Browser coordinates and clocks never authorize an event.
+
+NPC projections include monotonic `motion.revision` (safe nonnegative integer) and optional ISO `motion.freeze_at`. Consumers accept newer revisions and clamp extrapolation at freeze_at. Guidance and event pause project from immutable membership routes.
+
+
+`PUT /api/admin/sessions/{id}/event-locations`: 관리자 JWT, 활성 관리자와 동일 출처 검증; DRAFT 전용. 본문은 `{situation_id,is_generic,event_location}`. 위치 이벤트는 `{map_version,point:[x,y,z],radius_m}`와 회차 NPC 경로의 동일 map_version이 필요하다. 공통 이벤트는 `is_generic:true,event_location:null`이다. 400 INVALID_EVENT_LOCATION, 409 NPC_MAP_MISMATCH, 409 EVENT_LOCATION_LOCKED, 404 SITUATION_NOT_FOUND를 반환한다.
+
+회차 시작 전 명시적인 공통 이벤트가 없으면 장소에 관계없는 '이웃의 인사' 상황과 중립 선택지 2개를 DRAFT 상태에서 추가한다. 두 선택지의 개인·도시 영향은 0이며 운영자가 DRAFT 콘텐츠에서 별도 공통 이벤트를 지정하면 그 콘텐츠를 사용한다. 기존 장소별 콘텐츠는 임의로 공통 이벤트로 변환하지 않는다.

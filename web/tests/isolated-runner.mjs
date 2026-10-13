@@ -1,3 +1,5 @@
+import { runEventBrowser } from './event-browser.mjs';
+import { runNpcEventIntegration } from './npc-events.integration.mjs';
 // Creates a NEW cluster. Never reads DATABASE_URL or connects to a development DB.
 import { mkdtemp, readFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
@@ -84,7 +86,8 @@ try {
   const admin = new pg.Client({ connectionString: `postgresql://postgres@127.0.0.1:${pgPort}/postgres` });
   await admin.connect(); await admin.query('CREATE DATABASE simus_integration'); await admin.end();
   pool = new pg.Pool({ connectionString: env.DATABASE_URL });
-  for (const name of ['001_initial_schema.sql','002_session_lifecycle.sql','003_session_creation.sql','004_participant_npcs.sql','005_participant_departments.sql','006_content_score_range.sql','007_result_links.sql','008_web_push.sql','009_participant_profiles.sql','010_session_npc_motion.sql']) await pool.query(await readFile(path.join(web, '../db', name), 'utf8'));
+  for (const name of ['001_initial_schema.sql','002_session_lifecycle.sql','003_session_creation.sql','004_participant_npcs.sql','005_participant_departments.sql','006_content_score_range.sql','007_result_links.sql','008_web_push.sql','009_participant_profiles.sql','010_session_npc_motion.sql','011_npc_events.sql']) await pool.query(await readFile(path.join(web, '../db', name), 'utf8'));
+  await pool.query((await readFile(path.join(web, '../db/verify_schema.sql'), 'utf8')).replace(/^\\set.*$/gm, ''));
   // Synthetic geometry belongs only to this disposable test cluster. Production has no route default.
   await pool.query(`CREATE FUNCTION simus.test_fixture_npc_motion() RETURNS trigger LANGUAGE plpgsql AS $$
     BEGIN IF NEW.npc_motion IS NULL THEN NEW.npc_motion := '{"map_version":"test-fixture-v1","path_version":"test-path-v1","points":[[0,0,0],[0,0,20]],"speed_mps":1.4,"loop":true}'::jsonb; END IF; RETURN NEW; END $$;
@@ -121,10 +124,12 @@ try {
   await runDepartmentIntegration({ pool, env, token: demoToken, templateId: demoId });
   await runNpcPositionIntegration({ pool, env, token: demoToken, templateId: demoId });
   await runProfileIntegration({ pool, env, token: demoToken, templateId: demoId });
-  await runDepartmentStatisticsIntegration({ env, token: demoToken, templateId: demoId });
+  await runDepartmentStatisticsIntegration({ pool, env, token: demoToken, templateId: demoId });
   await runResultLinksIntegration({ pool, env, token: demoToken, templateId: demoId });
   await runStageIntegration({ pool, env, token: demoToken, demoId });
   await runExhibitionContentIntegration({ pool, env, token: demoToken });
+  await runNpcEventIntegration({ pool, env, token: demoToken, templateId: demoId, stopServer, startServer });
+  await runEventBrowser({ pool, env, token: demoToken, templateId: demoId });
   const originProbe = await fetch(env.TEST_API_URL + '/api/city-state', { headers: { Origin: 'https://different-origin.invalid' } });
   assert.equal(originProbe.status, 200);
   assert.equal(originProbe.headers.get('access-control-allow-origin'), null);

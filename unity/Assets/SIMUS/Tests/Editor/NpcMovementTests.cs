@@ -34,6 +34,12 @@ namespace Simus.City.Tests
             Assert.That(snapshot.MotionTime(100), Is.EqualTo(5000));
             Assert.That(snapshot.MotionTime(9), Is.EqualTo(1000));
         }
+        [Test] public void EventPauseClampsOnlyItsNpcAndPreservesCanonicalPosition() {
+            var snapshot = NpcCrowdSnapshot.Parse(Snapshot.Replace("\"speed_mps\":1", "\"revision\":1760000000000,\"freeze_at\":\"2026-01-01T00:00:02Z\",\"speed_mps\":1"), 10);
+            Assert.That(snapshot.Npcs[0].Revision, Is.EqualTo(1760000000000L));
+            Assert.That(snapshot.Npcs[0].PositionAt(snapshot.MotionTime(100)), Is.EqualTo(new Vector3(2, 0, 0)));
+            Assert.That(NpcCrowdSnapshot.Parse(Snapshot, 10).Npcs[0].PositionAt(1767225603000), Is.EqualTo(new Vector3(3, 0, 0)));
+        }
         [Test] public void CameraAcquiresTargetAndUsesConfiguredOverviewCenter() {
             // Camera lives in Assembly-CSharp; reflection keeps the runtime test asmdef independent.
             var type = Type.GetType("Simus.CityPreviewCamera, Assembly-CSharp", true);

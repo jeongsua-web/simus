@@ -1,3 +1,4 @@
+import { prepareChoice, fixtureSituation } from './event-fixture.mjs';
 import { runStageBrowser } from './stage-browser.mjs';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
@@ -9,6 +10,7 @@ import { randomUUID } from 'node:crypto';
 
 export async function runStageIntegration({ pool, env, token, demoId }) {
   async function call(path, { data, cookie, auth = true } = {}) {
+    if (path === '/api/choices' && data) await prepareChoice(pool, env, cookie, data);
     const response = await fetch(env.TEST_API_URL + path, {
       method: data ? 'POST' : 'GET', headers: {
         ...(auth ? { authorization: `Bearer ${token}` } : {}), ...(cookie ? { cookie } : {}),
@@ -59,7 +61,7 @@ export async function runStageIntegration({ pool, env, token, demoId }) {
   assert.deepEqual((await call(`/api/sessions/${sid}/npc`, { cookie })).body.npcs, [ownNpc]);
   assert.equal((await pool.query('SELECT count(*) FROM simus.choice_records WHERE session_id=$1', [sid])).rows[0].count, '0');
   await assert.rejects(pool.query("UPDATE simus.participant_sessions SET npc_id=gen_random_uuid() WHERE session_id=$1", [sid]), /immutable/);
-  const situation = session.situations[0];
+  const situation = await fixtureSituation(pool, sid);
   const choice = { session_id: sid, situation_id: situation.id, choice_id: situation.choices[0].id, request_key: randomUUID() };
   assert.equal((await call('/api/choices', { data: choice, cookie })).status, 201);
   const city = (await call('/api/city-state')).body.city_state;
@@ -79,7 +81,11 @@ export async function runStageIntegration({ pool, env, token, demoId }) {
   assert.equal((await call(`/api/admin/sessions/${sid}/end`, { data: { request_key: randomUUID() } })).status, 200);
   const frozen = (await call(`/api/sessions/${sid}/npcs`)).body;
   assert.equal(frozen.frozen, true);
-  assert.deepEqual(frozen.npcs.find(n => n.npc_id === ownNpc.npc_id), ownNpc);
+  const frozenOwn = frozen.npcs.find(n => n.npc_id === ownNpc.npc_id);
+  assert.equal(frozenOwn.npc_id, ownNpc.npc_id);
+  assert.equal(frozenOwn.motion.map_version, ownNpc.motion.map_version);
+  assert.equal(frozenOwn.motion.path_version, ownNpc.motion.path_version);
+  assert.deepEqual((await call(`/api/sessions/${sid}/npcs`)).body.npcs, frozen.npcs);
   assert.equal((await call(joinUrl, { data: {}, cookie })).status, 200);
   const lateParticipant = await fetch(env.TEST_API_URL + '/api/participants', { method: 'POST' });
   const lateCookie = lateParticipant.headers.get('set-cookie').split(';')[0];

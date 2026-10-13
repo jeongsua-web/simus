@@ -31,7 +31,17 @@ namespace Simus.City
             var next = ParseSnapshot(root, session, now);
             if (next.Npcs.Count != 1 || next.Npcs[0].Id != own) throw new FormatException("OWN_NPC");
             var signature = new JObject { ["epoch"] = root["npcs"][0]["epoch"], ["motion"] = root["npcs"][0]["motion"] };
-            if (ownMotion != null && !JToken.DeepEquals(ownMotion, signature)) throw new FormatException("MOTION_CHANGED");
+            if (Own != null)
+            {
+                // Polling and choice responses may arrive out of order. A newer server
+                // projection is allowed to guide, stop, and resume the same bound NPC.
+                if (next.ServerTimeMs <= Own.ServerTimeMs) return type == "INIT";
+                var previousRevision = Own.Npcs[0].Revision;
+                var nextRevision = next.Npcs[0].Revision;
+                if (nextRevision < previousRevision) throw new FormatException("STALE_MOTION");
+                if (nextRevision == previousRevision && !JToken.DeepEquals(ownMotion, signature))
+                    throw new FormatException("MOTION_CHANGED_WITHOUT_REVISION");
+            }
             if (Own != null) Own.FreezeAtMs = Math.Min(Own.FreezeAtMs, next.FreezeAtMs);
             if (Own == null || next.ServerTimeMs > Own.ServerTimeMs)
             {
@@ -69,7 +79,7 @@ namespace Simus.City
                     foreach (var v in xyz) Number(v);
                 }
             }
-            // The iframe bridge uses the immutable /npcs motion contract. The separately
+            // The iframe bridge uses versioned server projections in /npcs. The separately
             // polled /npc-positions contract additionally requires canonical positions.
             var parsed = new NpcCrowdSnapshot {
                 SessionId = session, MapVersion = MapVersion, ServerTimeMs = server,
@@ -82,6 +92,7 @@ namespace Simus.City
                 var npc = new NpcMotion {
                     Id = Uuid(item, "npc_id"), EpochMs = Timestamp(item, "epoch"),
                     Speed = Number(motion["speed_mps"]), Loop = (bool)motion["loop"],
+                    Revision = NpcCrowdSnapshot.ParseRevision(motion), FreezeAtMs = NpcCrowdSnapshot.ParseFreeze(motion),
                     Points = new UnityEngine.Vector3[points.Count], PrecisePoints = new double[points.Count][]
                 };
                 for (var i = 0; i < points.Count; i++) {

@@ -16,7 +16,7 @@ export async function GET(request: NextRequest, context: { params: Promise<{ id:
           (SELECT count(*)::int FROM simus.session_situations WHERE session_id=$1) AS situation_count
         FROM simus.simulation_sessions WHERE id=$1`, [sessionId]);
       if (!session.rowCount) throw new ApiError(404, "SESSION_NOT_FOUND", "회차를 찾을 수 없습니다.");
-      const responses = await db.query(`SELECT situation_id,choice_id,received_at
+      const responses = await db.query(`SELECT situation_id,choice_id,event_id,request_key,received_at
         FROM simus.choice_records WHERE session_id=$1 AND participant_id=$2 ORDER BY received_at,id`,
         [sessionId, participantId]);
       return { session: session.rows[0], responses: responses.rows };

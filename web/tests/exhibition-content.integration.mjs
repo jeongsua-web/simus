@@ -1,3 +1,4 @@
+import { prepareChoice } from './event-fixture.mjs';
 import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
 
@@ -17,10 +18,11 @@ export async function runExhibitionContentIntegration({ pool, env, token }) {
   const person = await fetch(`${env.TEST_API_URL}/api/participants`, { method: 'POST' });
   assert.equal(person.status, 201);
   const cookie = person.headers.get('set-cookie').split(';')[0];
+  const payload = { session_id: sid, situation_id: '30000000-0000-0000-0000-000000000026', choice_id: '40000000-0000-0000-0000-000000000263', request_key: randomUUID() };
+  await prepareChoice(pool, env, cookie, payload);
   const selected = await fetch(`${env.TEST_API_URL}/api/choices`, {
     method: 'POST', headers: { cookie, 'content-type': 'application/json' },
-    body: JSON.stringify({ session_id: sid, situation_id: '30000000-0000-0000-0000-000000000026',
-      choice_id: '40000000-0000-0000-0000-000000000263', request_key: randomUUID() }),
+    body: JSON.stringify(payload),
   });
   assert.equal(selected.status, 201, await selected.text());
   const ledger = await pool.query(`SELECT alignment_dx,alignment_dy,safety_delta_requested::float8

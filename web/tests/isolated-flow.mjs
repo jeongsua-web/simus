@@ -1,3 +1,4 @@
+import { prepareChoice } from './event-fixture.mjs';
 import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
 import { importJWK, SignJWT } from 'jose';
@@ -8,6 +9,7 @@ export async function runFlow({ pool, env, stopServer, startServer }) {
   const token = await new SignJWT({}).setProtectedHeader({ alg:'RS256', kid:'isolated-test' })
     .setIssuer(env.ADMIN_TOKEN_ISSUER).setAudience(env.ADMIN_TOKEN_AUDIENCE).setSubject('flow-admin').setIssuedAt().setExpirationTime('10m').sign(key);
   async function call(url, { data, cookie, auth, method, headers = {} } = {}) {
+    if (url === '/api/choices' && data) await prepareChoice(pool, env, cookie, data);
     const response = await fetch(env.TEST_API_URL + url, { method: method ?? (data ? 'POST' : 'GET'),
       headers: { ...(data ? { 'Content-Type':'application/json' } : {}), ...(cookie ? {cookie} : {}), ...(auth ? {authorization:`Bearer ${auth}`} : {}), ...headers }, body: data ? JSON.stringify(data) : undefined });
     return { status:response.status, body:await response.json(), cookie:response.headers.get('set-cookie')?.split(';')[0] };
@@ -50,10 +52,10 @@ export async function runFlow({ pool, env, stopServer, startServer }) {
   assert.ok(scores.rows.every(x=>x.x_score==='1'&&x.y_score==='1'&&x.response_count==='1'));
   const ledger=await pool.query('SELECT sum(delta_applied)::float8 AS applied FROM simus.choice_record_region_effects WHERE session_id=$1',[r.sid]);
   assert.equal(ledger.rows[0].applied,28);
-  assert.equal((await call('/api/choices',{cookie:people[0].cookie,data:{...payloads[0],request_key:randomUUID()}})).body.error.code,'ALREADY_ANSWERED');
+  assert.equal((await call('/api/choices',{cookie:people[0].cookie,data:{...payloads[0],request_key:randomUUID()}})).body.error.code,'EVENT_NOT_ACTIVE');
   assert.equal((await call('/api/choices',{cookie:people[0].cookie,data:{...payloads[0],choice_id:r.b}})).body.error.code,'REQUEST_KEY_CONFLICT');
   const restored=await call(`/api/sessions/${r.sid}/responses`,{cookie:people[0].cookie});
-  assert.deepEqual(Object.keys(restored.body.responses[0]).sort(),['choice_id','received_at','situation_id']);
+  assert.deepEqual(Object.keys(restored.body.responses[0]).sort(),['choice_id','event_id','received_at','request_key','situation_id']);
   assert.equal(restored.body.responses[0].choice_id,r.a);
   assert.equal((await call(`/api/sessions/${r.sid}/result`,{cookie:people[0].cookie})).status,409);
   console.log('PASS: 8 independent HTTP cookie identities, 16 concurrent submissions, exactly 8 ledger entries; city/people/weighted regions/clamping, own-response restoration, hidden pre-result');
