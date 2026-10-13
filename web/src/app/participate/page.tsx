@@ -92,7 +92,6 @@ export default function ParticipatePage() {
           <div className={styles.choicePanelBody}>
             {!activeSituation && <div className={styles.emptySituation} role="status" aria-live="polite">
               <h2>{!state.session.accepting_choices || state.eventState?.phase === "CLOSED" ? "이벤트 접수가 마감되었습니다" : state.eventState?.phase === "GUIDING" ? "새로운 상황을 만나러 이동 중이에요" : "도시를 둘러보고 있어요"}</h2>
-              <p>{state.session.accepting_choices && state.eventState?.phase !== "CLOSED" ? "캐릭터가 상황을 만나면 선택지가 나타나요. 다음 이벤트까지 최대 90초 기다립니다." : "결과 상태를 확인해 주세요."}</p>
             </div>}
             {activeEvent && activeSituation && <SituationCard key={activeEvent.id} situation={activeSituation} selectedChoiceId={state.selected[activeEvent.id]}
               done={Boolean(state.answered[activeEvent.id])} acceptingChoices={state.session.accepting_choices}
