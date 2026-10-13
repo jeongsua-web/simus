@@ -64,3 +64,11 @@
 ## 2026-10-13 실제 맵 도시 스탯 배치
 
 [사용 방법](../library/maps/university_v003/City_State_Usage.md) · [보고서](../library/maps/university_v003/reports/city_state_v001/Delivery_Report.md). 실제 맵 FBX에 독립 상태 318개, 쓰레기 슬롯 80개와 FX Anchor 18개를 통합했습니다. 57개 개별 에셋, 625 조합 및 6 Play Mode 조합 검사 완료. 기존 지도 GUID/캐릭터 연결은 유지하며 상태는 received입니다. 이전 환경 전용 FBX는 외부 백업 후 통합본으로 대체했습니다. 기존 기록은 당시 상태입니다.
+
+## 2026-10-14 독립 공용화장실
+
+[공용화장실 v001](../library/props/public_toilet_v001/README.md). 원본·FBX·공용 재질 9종·교체형 픽토그램·배치용 프리팹. received이며 맵에는 배치하지 않았습니다.
+
+## 2026-10-14 독립 시내버스·택시
+
+[시내버스 v001](../library/props/city_bus_v001/README.md) · [택시 v001](../library/props/taxi_v001/README.md). Blender 원본, FBX, 재질·텍스처, 바퀴·문·등화 제어 프리팹 및 LOD0/1을 제작했습니다. received이며 기존 맵에는 배치하지 않았습니다.
