@@ -60,3 +60,7 @@
 ## 2026-10-09 캐릭터 구버전 삭제 및 실행 연결 교체
 
 사용자 요청으로 이전 백업 모델 6개, HairFix 모델 2개 및 대응 메타, 옛 중첩 npc_follow_test 설정 폴더를 정리했습니다. [삭제 목록 및 해시](character-cleanup-2026-10-09.json), [재생 검사](character-follow-validation-2026-10-09.json). 현재 장면과 걷기 컨트롤러는 Happiness_Animations를 사용하며 CapFix 원본과 역할 NPC는 보존합니다. 기존 제작 보고서의 HairFix 경로는 제작 당시 기록입니다.
+
+## 2026-10-13 실제 맵 도시 스탯 배치
+
+[사용 방법](../library/maps/university_v003/City_State_Usage.md) · [보고서](../library/maps/university_v003/reports/city_state_v001/Delivery_Report.md). 실제 맵 FBX에 독립 상태 318개, 쓰레기 슬롯 80개와 FX Anchor 18개를 통합했습니다. 57개 개별 에셋, 625 조합 및 6 Play Mode 조합 검사 완료. 기존 지도 GUID/캐릭터 연결은 유지하며 상태는 received입니다. 이전 환경 전용 FBX는 외부 백업 후 통합본으로 대체했습니다. 기존 기록은 당시 상태입니다.

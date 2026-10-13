@@ -23,6 +23,12 @@ namespace Simus
             foreach (var renderer in map.GetComponentsInChildren<Renderer>(true))
             {
                 var source = renderer.sharedMaterials;
+                // State props, transparent decals and animated pond materials must keep their shaders.
+                bool preserveStateMaterial = renderer.name.StartsWith("PLACED_", System.StringComparison.Ordinal);
+                foreach (var material in source)
+                    if (material != null && (material.renderQueue >= 3000 || material.name.ToLowerInvariant().Contains("water")))
+                        preserveStateMaterial = true;
+                if (preserveStateMaterial) continue;
                 originals.Add(renderer, source);
                 var replacement = (Material[])source.Clone();
                 for (int i = 0; i < source.Length; i++)
@@ -64,3 +70,4 @@ namespace Simus
         }
     }
 }
+
