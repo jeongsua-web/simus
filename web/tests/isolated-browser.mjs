@@ -61,7 +61,7 @@ export async function runBrowserFlow({ env, pool, round, token, call }) {
     await a.getByRole('button', { name: '응답 완료', exact: true }).waitFor();
     await pool.query('UPDATE simus.simulation_sessions SET admission_closed_at=clock_timestamp() WHERE id=$1', [r.sid]);
     await a.reload();
-    await a.getByText('회차 종료 시각까지 기다려 주세요.', { exact: true }).waitFor();
+    await a.getByText('도시를 둘러보며 결과를 기다려 주세요.', { exact: true }).waitFor();
     await card.getByRole('button', { name: '수동 종료', exact: true }).click();
     const endResponse = admin.waitForResponse(response => response.url().endsWith(`/api/admin/sessions/${r.sid}/end`));
     await card.getByRole('button', { name: '대상 회차 종료', exact: true }).click();

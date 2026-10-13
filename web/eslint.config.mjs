@@ -12,6 +12,10 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    ".demo/**",
+    ".unity-deploy-backups/**",
+    "public/city/**",
+    "public/unity-preview/**",
   ]),
 ]);
 

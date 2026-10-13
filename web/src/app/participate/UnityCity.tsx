@@ -27,7 +27,7 @@ export default function UnityCity({ sessionId }: { sessionId: string }) {
       // Removing the iframe also disposes a failed WebGL runtime.
       setView({ phase: "error", message });
     };
-    const deadline = window.setTimeout(() => fail("도시 연결에 시간이 오래 걸리고 있습니다. 다시 시도해 주세요."), 60_000);
+    const deadline = window.setTimeout(() => fail("도시 연결에 시간이 오래 걸리고 있습니다. 다시 시도해 주세요."), 180_000);
     async function sync() {
       if (disposed || failed || busy || !ready || document.hidden) return;
       busy = true;

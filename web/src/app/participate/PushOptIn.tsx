@@ -42,8 +42,8 @@ export default function PushOptIn({sessionId}:{sessionId:string}) {
     finally{setBusy(false);}
   }
   if(!key) return null;
-  return <section className={styles.card}><h2>종료 후 결과 알림</h2><p>알림은 선택 사항입니다. iPhone은 홈 화면에 추가한 뒤 그 앱에서 신청할 수 있습니다.</p>
-    <button className={styles.button} disabled={busy} onClick={()=>void (active?revoke():subscribe())}>{active?"알림 동의 철회":"이 기기에서 알림 받기"}</button>
+  return <section className={styles.card}><h2>종료 후 결과 알림</h2><p>원할 때 결과 알림을 받으세요. iPhone은 홈 화면 앱에서 신청할 수 있어요.</p>
+    <button className={styles.button} disabled={busy} onClick={()=>void (active?revoke():subscribe())}>{active?"알림 동의 철회":"결과 알림 받기"}</button>
     {message && <p role="status">{message}</p>}
   </section>;
 }

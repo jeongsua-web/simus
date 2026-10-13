@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { CityStats, type City } from "../components/CityStats";
 import Link from "next/link";
 import { resultRequest, ResultRequestError } from "../result/request";
+import { alignmentNames } from "../result/alignment-names";
 import styles from "../result/[id]/result.module.css";
 
 type Shared = { session:{id:string;name:string}; result_kind:string; response_count:number;
@@ -43,9 +44,9 @@ export default function SharedResultPage() {
   return <main className={styles.page}><meta name="referrer" content="no-referrer"/><section className={styles.card}>
     <p className={styles.eyebrow}>SIM:US 공유 결과</p>
     {error ? <><h1>{pending?"결과 준비 중":"결과를 불러오지 못했습니다"}</h1><p role={pending?"status":"alert"}>{pending?"개인 점수와 성향은 회차가 종료되고 결과가 확정된 뒤 공개됩니다.":error}</p>{retryable && <button disabled={loading} onClick={()=>void load()}>{pending?"결과 다시 확인":"다시 시도"}</button>}</> : !data ? <p role="status">결과를 확인하는 중이에요…</p> : <>
-      <h1>{data.session.name}</h1>
+      <p className={styles.sessionName}>{data.session.name}</p><h1 className={styles.cardTitle}>나의 시민 카드</h1>
       {data.result_kind==="NO_RESPONSE" && <div className={styles.pending}>참여한 선택 없음 · 개인 성향 점수는 표시하지 않습니다.</div>}
-      {data.result_kind==="SCORED" && data.result && <div className={styles.result}><p>나의 도시 성향</p><h2>{data.result.alignment_code}</h2><p className={styles.interpretation}>{data.result.interpretation}</p><p>응답 {data.response_count}개 · 질서 축 {data.result.x_score} · 도덕 축 {data.result.y_score}</p></div>}
+      {data.result_kind==="SCORED" && data.result && <div className={styles.result}><p>나의 도시 성향</p><h2>{alignmentNames[data.result.alignment_code]??data.result.alignment_code}</h2><p className={styles.interpretation}>{data.result.interpretation}</p><p className={styles.responseBadge}>도시에 남긴 선택 {data.response_count}개</p><details className={styles.scoreDetails}><summary>성향 자세히 보기</summary><dl><div><dt>질서 축</dt><dd>{data.result.x_score}</dd></div><div><dt>도덕 축</dt><dd>{data.result.y_score}</dd></div></dl><p>이번 체험에서 선택한 행동의 경향입니다.</p></details></div>}
       {data.result_kind==="NOT_JOINED" && <div className={styles.pending}>이 회차의 참여 기록이 없습니다. 참여했던 기기에서 확인해 주세요.</div>}
       {data.city_state && <CityStats city={data.city_state} title="이 회차의 최종 도시"/>}
     </>}
