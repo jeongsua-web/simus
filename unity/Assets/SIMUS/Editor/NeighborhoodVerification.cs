@@ -26,6 +26,8 @@ public static class NeighborhoodVerification
 
     public static void Run()
     {
+        if (!System.IO.File.Exists(NeighborhoodIntegration.ScenePath))
+            throw new InvalidOperationException("Neighborhood prototype map was retired on 2026-10-13. Use the current SIMUS map tests.");
         EditorSceneManager.OpenScene(NeighborhoodIntegration.ScenePath);
         var target = UnityEngine.Object.FindFirstObjectByType<CityStatePoller>();
         var settings = new SerializedObject(target);

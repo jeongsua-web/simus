@@ -13,6 +13,8 @@ public static class NeighborhoodIntegration
     [MenuItem("SIMUS/Build Connected Neighborhood")]
     public static void Build()
     {
+        if (!System.IO.File.Exists("Assets/Scenes/Neighborhood.unity"))
+            throw new InvalidOperationException("Neighborhood prototype map was retired on 2026-10-13. Use the current SIMUS map tests.");
         if (!Application.isBatchMode && !EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()) return;
         EditorSceneManager.OpenScene("Assets/Scenes/Neighborhood.unity");
         var root = new GameObject("SIMUS Connected Neighborhood");

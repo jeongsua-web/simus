@@ -2,6 +2,10 @@
 
 [정리 규칙](../ASSET_RULES.md) · [납품·승인 목록](../manifest.csv) · [전체 파일 목록](inventory.json) · [2026-10-08 이동 이력](moves-2026-10-08.json)
 
+## 2026-10-13 도로·구역 리빌드 초안
+
+[수정용 복제 씬](../../unity/Assets/SIMUS/Scenes/map_rebuild_draft/map_rebuild_draft.unity)과 [배치 원본](../../unity/Assets/SIMUS/Scenes/map_rebuild_draft/layout.json)은 Unity 기준의 임시 도로·학교·상가·주거·공원 배치다. [전용 생성기](../../unity/Assets/Editor/MapRebuildDraftSetup.cs)가 배치 원본을 읽는다. 기존 활성 씬과 전시 데이터의 대체본이나 승인된 맵이 아니다. [Blender 실측 조사](../../docs/verification/map-rebuild-blender-2026-10-13.md)와 [Unity 작업·검증 기록](../../docs/verification/map-rebuild-unity-2026-10-13.md)을 함께 확인한다.
+
 ## 제작 라이브러리
 
 | 분류 | 제작 묶음 |
@@ -26,7 +30,7 @@
 | 캐릭터 | [HairFix v001](../../unity/Assets/SIMUS/Art/characters/modular_hairfix_v001) | Happiness_Animations 사용, CapFix 원본 및 역할 NPC 유지. HairFix 구버전·옛 백업은 2026-10-09 정리 |
 | 추적 테스트 장면 | [NPC 추적 테스트](../../unity/Assets/SIMUS/Scenes/npc_follow_test) | 현재 활성 빌드 장면. Happiness_Animations FBX / NEUTRAL_WALK 사용 |
 | 백화점 v2 | [department_store_v2](../../unity/Assets/department_store_v2) | manifest에 received로 등록, 전시 채택 미정 |
-| 이전 시제품 | [Neighborhood.fbx](../../unity/Assets/Art/Neighborhood.fbx), [Scenes](../../unity/Assets/Scenes), [Materials](../../unity/Assets/Materials) | 새 맵 배치 근거로 사용하지 않음 |
+| 이전 시제품 | Neighborhood 모델·장면은 2026-10-13 사용자 요청으로 삭제 | [삭제 기록](neighborhood-cleanup-2026-10-13.json), Git 이력에서 복원 가능 |
 
 현재 사용 근거는 `unity/Assets/Editor/CompletedMapFollowSetup.cs`의 MapPath/CharacterPath 및 `unity/ProjectSettings/EditorBuildSettings.asset`다. Unity 실행 검증 결과는 아래 후속 기록에서 확인한다. 범용 캐릭터 파일이 있다고 API 9성향의 최종 캐릭터가 납품된 것으로 처리하지 않는다.
 

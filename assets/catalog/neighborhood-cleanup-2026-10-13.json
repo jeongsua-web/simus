@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-13",
+  "reason": "사용자 요청으로 이전 시제품 Neighborhood 맵과 종속 장면 삭제; Git 이력에서 복원 가능",
+  "files": [
+    {
+      "path": "unity/Assets/Art/Neighborhood.fbx",
+      "sha256": "ccd3d127fabe4d3a225e057cadda9775e2674336b8e09f452d2b68d8856513e8",
+      "bytes": 3496540
+    },
+    {
+      "path": "unity/Assets/Art/Neighborhood.fbx.meta",
+      "sha256": "3ce8803b90d16cc4b1ca3ad81b08d1316de838540e4bddeebd12acb41cc85846",
+      "bytes": 8646
+    },
+    {
+      "path": "unity/Assets/Scenes/Neighborhood.unity",
+      "sha256": "db466f4aae7ce689f14e9e78bcfde258e922f67b610d62f6e25779d8f691b451",
+      "bytes": 139679
+    },
+    {
+      "path": "unity/Assets/Scenes/Neighborhood.unity.meta",
+      "sha256": "1e8ec87d830c56fa3f7dee958d6478b8fbffabd54770015c8e54a1024ffb10cc",
+      "bytes": 155
+    },
+    {
+      "path": "unity/Assets/Scenes/NeighborhoodLive.unity",
+      "sha256": "7949d810645a54568b369204eabcf7ed6ba6087c16323dcf3e65e17ffdc19592",
+      "bytes": 161290
+    },
+    {
+      "path": "unity/Assets/Scenes/NeighborhoodLive.unity.meta",
+      "sha256": "3dd1f3d01d0dd1fab9c29ac3375d67021b0ffbebec066d1dd12cd8db7e4e83ad",
+      "bytes": 152
+    }
+  ]
+}

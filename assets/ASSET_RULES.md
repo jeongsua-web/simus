@@ -48,7 +48,7 @@ web/public/                         # 웹이 실제 배포하는 파일만
 - Unity 모듈형 캐릭터는 `modular_hairfix_v001/models/`의 Happiness_Animations FBX를 추적 테스트에 사용한다. CapFix 편집 원본과 역할 NPC 3종도 유지한다. HairFix 구버전은 2026-10-09 최신 모델 연결 검증 후 삭제했다. `npc_16`, `modular_v001`의 Unity 사본은 2026-10-08 사용자 요청으로 삭제했으며 Git 이력에서 복원한다.
 - 미리보기·보고서는 `assets/library/characters/<key>/`와 `assets/library/maps/university_v003/`에 둔다. 백업은 `assets/archive/backups/`, 중첩 프로젝트 자료는 `assets/archive/nested_projects/`에 보관한다.
 - 기존 묶음의 `.blend`는 현재 FBX와 함께 둔다. 원본의 외부 참조와 Unity GUID를 보존하기 위한 예외이며, library에 원본을 복제하지 않는다. 신규 자산은 2절 구조를 따른다.
-- `unity/Assets/department_store_v2/`와 이전 시제품 `Art/Neighborhood.fbx`, `Materials/`, `Scenes/Neighborhood*.unity`는 이번 요청 범위 밖이므로 기존 경로를 유지한다.
+- `unity/Assets/department_store_v2/`와 `Materials/`는 기존 경로를 유지한다. 이전 시제품 `Art/Neighborhood.fbx`와 `Scenes/Neighborhood*.unity`는 2026-10-13 사용자 요청으로 삭제했다. 삭제 기록은 `assets/catalog/neighborhood-cleanup-2026-10-13.json`에 있으며 Git 이력에서 복원한다.
 - 기존 Scripts/Shaders/Editor 코드는 에셋 분류만을 위해 이동하지 않는다.
 
 앞으로 Unity 이동은 실행 중인 편집기 확인 → 사용처 조사 → 원본/폴더와 `.meta` 함께 이동 → 코드·빌드 설정·문서 갱신 → 재가져오기와 장면 검증 순서를 따른다. 잠금 파일 존재만으로 실행 중이라고 단정하지 않는다. `.meta` 재생성이나 GUID 변경으로 정리하지 않는다. Resources/StreamingAssets/Addressables의 경로 계약도 확인한다.

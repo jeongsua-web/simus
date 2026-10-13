@@ -1,0 +1,4515 @@
+{
+  "status": "provisional_road_and_zone_draft_not_exhibition",
+  "roadWidth": 8,
+  "sidewalkWidth": 3,
+  "npcHeightReference": 1.7,
+  "materials": [
+    {
+      "key": "ground",
+      "path": "Assets/SIMUS/Scenes/map_rebuild_draft/ground.mat",
+      "guid": "a537fa5c573358fb93d99979261af0cc"
+    },
+    {
+      "key": "school",
+      "path": "Assets/SIMUS/Scenes/map_rebuild_draft/school.mat",
+      "guid": "67727172b02f5fa892197fe7647ee8ef"
+    },
+    {
+      "key": "commercial",
+      "path": "Assets/SIMUS/Scenes/map_rebuild_draft/commercial.mat",
+      "guid": "20f325c06e005f0e9897a24a5ab5fe8e"
+    },
+    {
+      "key": "residential",
+      "path": "Assets/SIMUS/Scenes/map_rebuild_draft/residential.mat",
+      "guid": "15fccabeb1f35db0ba288304441eb52d"
+    },
+    {
+      "key": "park",
+      "path": "Assets/SIMUS/Scenes/map_rebuild_draft/park.mat",
+      "guid": "be0a9b5c9b8454fa82e0875978d60164"
+    },
+    {
+      "key": "road",
+      "path": "Assets/SIMUS/Scenes/map_rebuild_draft/road.mat",
+      "guid": "d1b27fe0c2a756d8bae784642f76017a"
+    },
+    {
+      "key": "walk",
+      "path": "Assets/SIMUS/Scenes/map_rebuild_draft/walk.mat",
+      "guid": "a304232b69755682b11a731709553804"
+    },
+    {
+      "key": "clearance",
+      "path": "Assets/SIMUS/Scenes/map_rebuild_draft/clearance.mat",
+      "guid": "8a260852ffd55460b79c3298b5aa6203"
+    },
+    {
+      "key": "mark",
+      "path": "Assets/SIMUS/Scenes/map_rebuild_draft/mark.mat",
+      "guid": "0fd1c55048f8576aad41c57a9508a2e6"
+    },
+    {
+      "key": "proxy",
+      "path": "Assets/SIMUS/Scenes/map_rebuild_draft/proxy.mat",
+      "guid": "27751faf97eb528c81d6df7ded5e9c4c"
+    }
+  ],
+  "items": [
+    {
+      "name": "Ground - provisional 202m extent",
+      "position": {
+        "x": 0,
+        "y": -0.15,
+        "z": 0
+      },
+      "size": {
+        "x": 202,
+        "y": 0.2,
+        "z": 202
+      },
+      "material": "ground",
+      "modelPath": ""
+    },
+    {
+      "name": "School - provisional 80m block",
+      "position": {
+        "x": -47,
+        "y": 0.04,
+        "z": 47
+      },
+      "size": {
+        "x": 80,
+        "y": 0.08,
+        "z": 80
+      },
+      "material": "school",
+      "modelPath": ""
+    },
+    {
+      "name": "Commercial - provisional 80m block",
+      "position": {
+        "x": 47,
+        "y": 0.04,
+        "z": 47
+      },
+      "size": {
+        "x": 80,
+        "y": 0.08,
+        "z": 80
+      },
+      "material": "commercial",
+      "modelPath": ""
+    },
+    {
+      "name": "Residential - provisional 80m block",
+      "position": {
+        "x": -47,
+        "y": 0.04,
+        "z": -47
+      },
+      "size": {
+        "x": 80,
+        "y": 0.08,
+        "z": 80
+      },
+      "material": "residential",
+      "modelPath": ""
+    },
+    {
+      "name": "Park - provisional 80m block",
+      "position": {
+        "x": 47,
+        "y": 0.04,
+        "z": -47
+      },
+      "size": {
+        "x": 80,
+        "y": 0.08,
+        "z": 80
+      },
+      "material": "park",
+      "modelPath": ""
+    },
+    {
+      "name": "Road EW -94",
+      "position": {
+        "x": 0,
+        "y": 0.05,
+        "z": -94
+      },
+      "size": {
+        "x": 202,
+        "y": 0.1,
+        "z": 8
+      },
+      "material": "road",
+      "modelPath": ""
+    },
+    {
+      "name": "Road NS -94",
+      "position": {
+        "x": -94,
+        "y": 0.052,
+        "z": 0
+      },
+      "size": {
+        "x": 8,
+        "y": 0.1,
+        "z": 202
+      },
+      "material": "road",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk EW (-94, -1, -47)",
+      "position": {
+        "x": -47,
+        "y": 0.14,
+        "z": -99.5
+      },
+      "size": {
+        "x": 80,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk NS (-94, -1, -47)",
+      "position": {
+        "x": -99.5,
+        "y": 0.14,
+        "z": -47
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 80
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk EW (-94, -1, 47)",
+      "position": {
+        "x": 47,
+        "y": 0.14,
+        "z": -99.5
+      },
+      "size": {
+        "x": 80,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk NS (-94, -1, 47)",
+      "position": {
+        "x": -99.5,
+        "y": 0.14,
+        "z": 47
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 80
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk EW (-94, 1, -47)",
+      "position": {
+        "x": -47,
+        "y": 0.14,
+        "z": -88.5
+      },
+      "size": {
+        "x": 80,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk NS (-94, 1, -47)",
+      "position": {
+        "x": -88.5,
+        "y": 0.14,
+        "z": -47
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 80
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk EW (-94, 1, 47)",
+      "position": {
+        "x": 47,
+        "y": 0.14,
+        "z": -88.5
+      },
+      "size": {
+        "x": 80,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk NS (-94, 1, 47)",
+      "position": {
+        "x": -88.5,
+        "y": 0.14,
+        "z": 47
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 80
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Road EW 0",
+      "position": {
+        "x": 0,
+        "y": 0.05,
+        "z": 0
+      },
+      "size": {
+        "x": 202,
+        "y": 0.1,
+        "z": 8
+      },
+      "material": "road",
+      "modelPath": ""
+    },
+    {
+      "name": "Road NS 0",
+      "position": {
+        "x": 0,
+        "y": 0.052,
+        "z": 0
+      },
+      "size": {
+        "x": 8,
+        "y": 0.1,
+        "z": 202
+      },
+      "material": "road",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk EW (0, -1, -47)",
+      "position": {
+        "x": -47,
+        "y": 0.14,
+        "z": -5.5
+      },
+      "size": {
+        "x": 80,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk NS (0, -1, -47)",
+      "position": {
+        "x": -5.5,
+        "y": 0.14,
+        "z": -47
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 80
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk EW (0, -1, 47)",
+      "position": {
+        "x": 47,
+        "y": 0.14,
+        "z": -5.5
+      },
+      "size": {
+        "x": 80,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk NS (0, -1, 47)",
+      "position": {
+        "x": -5.5,
+        "y": 0.14,
+        "z": 47
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 80
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk EW (0, 1, -47)",
+      "position": {
+        "x": -47,
+        "y": 0.14,
+        "z": 5.5
+      },
+      "size": {
+        "x": 80,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk NS (0, 1, -47)",
+      "position": {
+        "x": 5.5,
+        "y": 0.14,
+        "z": -47
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 80
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk EW (0, 1, 47)",
+      "position": {
+        "x": 47,
+        "y": 0.14,
+        "z": 5.5
+      },
+      "size": {
+        "x": 80,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk NS (0, 1, 47)",
+      "position": {
+        "x": 5.5,
+        "y": 0.14,
+        "z": 47
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 80
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Road EW 94",
+      "position": {
+        "x": 0,
+        "y": 0.05,
+        "z": 94
+      },
+      "size": {
+        "x": 202,
+        "y": 0.1,
+        "z": 8
+      },
+      "material": "road",
+      "modelPath": ""
+    },
+    {
+      "name": "Road NS 94",
+      "position": {
+        "x": 94,
+        "y": 0.052,
+        "z": 0
+      },
+      "size": {
+        "x": 8,
+        "y": 0.1,
+        "z": 202
+      },
+      "material": "road",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk EW (94, -1, -47)",
+      "position": {
+        "x": -47,
+        "y": 0.14,
+        "z": 88.5
+      },
+      "size": {
+        "x": 80,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk NS (94, -1, -47)",
+      "position": {
+        "x": 88.5,
+        "y": 0.14,
+        "z": -47
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 80
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk EW (94, -1, 47)",
+      "position": {
+        "x": 47,
+        "y": 0.14,
+        "z": 88.5
+      },
+      "size": {
+        "x": 80,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk NS (94, -1, 47)",
+      "position": {
+        "x": 88.5,
+        "y": 0.14,
+        "z": 47
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 80
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk EW (94, 1, -47)",
+      "position": {
+        "x": -47,
+        "y": 0.14,
+        "z": 99.5
+      },
+      "size": {
+        "x": 80,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk NS (94, 1, -47)",
+      "position": {
+        "x": 99.5,
+        "y": 0.14,
+        "z": -47
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 80
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk EW (94, 1, 47)",
+      "position": {
+        "x": 47,
+        "y": 0.14,
+        "z": 99.5
+      },
+      "size": {
+        "x": 80,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Sidewalk NS (94, 1, 47)",
+      "position": {
+        "x": 99.5,
+        "y": 0.14,
+        "z": 47
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 80
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (-94, -94, -1, -1)",
+      "position": {
+        "x": -99.5,
+        "y": 0.14,
+        "z": -99.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (-94, -94, -1, 1)",
+      "position": {
+        "x": -99.5,
+        "y": 0.14,
+        "z": -88.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (-94, -94, 1, -1)",
+      "position": {
+        "x": -88.5,
+        "y": 0.14,
+        "z": -99.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (-94, -94, 1, 1)",
+      "position": {
+        "x": -88.5,
+        "y": 0.14,
+        "z": -88.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, -94, -1, 0)",
+      "position": {
+        "x": -97.2,
+        "y": 0.112,
+        "z": -99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, -94, -1, 0)",
+      "position": {
+        "x": -99.5,
+        "y": 0.114,
+        "z": -97.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, -94, -1, 1)",
+      "position": {
+        "x": -95.92,
+        "y": 0.112,
+        "z": -99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, -94, -1, 1)",
+      "position": {
+        "x": -99.5,
+        "y": 0.114,
+        "z": -95.92
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, -94, -1, 2)",
+      "position": {
+        "x": -94.64,
+        "y": 0.112,
+        "z": -99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, -94, -1, 2)",
+      "position": {
+        "x": -99.5,
+        "y": 0.114,
+        "z": -94.64
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, -94, -1, 3)",
+      "position": {
+        "x": -93.36,
+        "y": 0.112,
+        "z": -99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, -94, -1, 3)",
+      "position": {
+        "x": -99.5,
+        "y": 0.114,
+        "z": -93.36
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, -94, -1, 4)",
+      "position": {
+        "x": -92.08,
+        "y": 0.112,
+        "z": -99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, -94, -1, 4)",
+      "position": {
+        "x": -99.5,
+        "y": 0.114,
+        "z": -92.08
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, -94, -1, 5)",
+      "position": {
+        "x": -90.8,
+        "y": 0.112,
+        "z": -99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, -94, -1, 5)",
+      "position": {
+        "x": -99.5,
+        "y": 0.114,
+        "z": -90.8
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, -94, 1, 0)",
+      "position": {
+        "x": -97.2,
+        "y": 0.112,
+        "z": -88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, -94, 1, 0)",
+      "position": {
+        "x": -88.5,
+        "y": 0.114,
+        "z": -97.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, -94, 1, 1)",
+      "position": {
+        "x": -95.92,
+        "y": 0.112,
+        "z": -88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, -94, 1, 1)",
+      "position": {
+        "x": -88.5,
+        "y": 0.114,
+        "z": -95.92
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, -94, 1, 2)",
+      "position": {
+        "x": -94.64,
+        "y": 0.112,
+        "z": -88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, -94, 1, 2)",
+      "position": {
+        "x": -88.5,
+        "y": 0.114,
+        "z": -94.64
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, -94, 1, 3)",
+      "position": {
+        "x": -93.36,
+        "y": 0.112,
+        "z": -88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, -94, 1, 3)",
+      "position": {
+        "x": -88.5,
+        "y": 0.114,
+        "z": -93.36
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, -94, 1, 4)",
+      "position": {
+        "x": -92.08,
+        "y": 0.112,
+        "z": -88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, -94, 1, 4)",
+      "position": {
+        "x": -88.5,
+        "y": 0.114,
+        "z": -92.08
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, -94, 1, 5)",
+      "position": {
+        "x": -90.8,
+        "y": 0.112,
+        "z": -88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, -94, 1, 5)",
+      "position": {
+        "x": -88.5,
+        "y": 0.114,
+        "z": -90.8
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (-94, 0, -1, -1)",
+      "position": {
+        "x": -99.5,
+        "y": 0.14,
+        "z": -5.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (-94, 0, -1, 1)",
+      "position": {
+        "x": -99.5,
+        "y": 0.14,
+        "z": 5.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (-94, 0, 1, -1)",
+      "position": {
+        "x": -88.5,
+        "y": 0.14,
+        "z": -5.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (-94, 0, 1, 1)",
+      "position": {
+        "x": -88.5,
+        "y": 0.14,
+        "z": 5.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 0, -1, 0)",
+      "position": {
+        "x": -97.2,
+        "y": 0.112,
+        "z": -5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 0, -1, 0)",
+      "position": {
+        "x": -99.5,
+        "y": 0.114,
+        "z": -3.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 0, -1, 1)",
+      "position": {
+        "x": -95.92,
+        "y": 0.112,
+        "z": -5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 0, -1, 1)",
+      "position": {
+        "x": -99.5,
+        "y": 0.114,
+        "z": -1.9200000000000002
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 0, -1, 2)",
+      "position": {
+        "x": -94.64,
+        "y": 0.112,
+        "z": -5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 0, -1, 2)",
+      "position": {
+        "x": -99.5,
+        "y": 0.114,
+        "z": -0.6400000000000001
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 0, -1, 3)",
+      "position": {
+        "x": -93.36,
+        "y": 0.112,
+        "z": -5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 0, -1, 3)",
+      "position": {
+        "x": -99.5,
+        "y": 0.114,
+        "z": 0.6399999999999997
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 0, -1, 4)",
+      "position": {
+        "x": -92.08,
+        "y": 0.112,
+        "z": -5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 0, -1, 4)",
+      "position": {
+        "x": -99.5,
+        "y": 0.114,
+        "z": 1.92
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 0, -1, 5)",
+      "position": {
+        "x": -90.8,
+        "y": 0.112,
+        "z": -5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 0, -1, 5)",
+      "position": {
+        "x": -99.5,
+        "y": 0.114,
+        "z": 3.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 0, 1, 0)",
+      "position": {
+        "x": -97.2,
+        "y": 0.112,
+        "z": 5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 0, 1, 0)",
+      "position": {
+        "x": -88.5,
+        "y": 0.114,
+        "z": -3.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 0, 1, 1)",
+      "position": {
+        "x": -95.92,
+        "y": 0.112,
+        "z": 5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 0, 1, 1)",
+      "position": {
+        "x": -88.5,
+        "y": 0.114,
+        "z": -1.9200000000000002
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 0, 1, 2)",
+      "position": {
+        "x": -94.64,
+        "y": 0.112,
+        "z": 5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 0, 1, 2)",
+      "position": {
+        "x": -88.5,
+        "y": 0.114,
+        "z": -0.6400000000000001
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 0, 1, 3)",
+      "position": {
+        "x": -93.36,
+        "y": 0.112,
+        "z": 5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 0, 1, 3)",
+      "position": {
+        "x": -88.5,
+        "y": 0.114,
+        "z": 0.6399999999999997
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 0, 1, 4)",
+      "position": {
+        "x": -92.08,
+        "y": 0.112,
+        "z": 5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 0, 1, 4)",
+      "position": {
+        "x": -88.5,
+        "y": 0.114,
+        "z": 1.92
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 0, 1, 5)",
+      "position": {
+        "x": -90.8,
+        "y": 0.112,
+        "z": 5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 0, 1, 5)",
+      "position": {
+        "x": -88.5,
+        "y": 0.114,
+        "z": 3.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (-94, 94, -1, -1)",
+      "position": {
+        "x": -99.5,
+        "y": 0.14,
+        "z": 88.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (-94, 94, -1, 1)",
+      "position": {
+        "x": -99.5,
+        "y": 0.14,
+        "z": 99.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (-94, 94, 1, -1)",
+      "position": {
+        "x": -88.5,
+        "y": 0.14,
+        "z": 88.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (-94, 94, 1, 1)",
+      "position": {
+        "x": -88.5,
+        "y": 0.14,
+        "z": 99.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 94, -1, 0)",
+      "position": {
+        "x": -97.2,
+        "y": 0.112,
+        "z": 88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 94, -1, 0)",
+      "position": {
+        "x": -99.5,
+        "y": 0.114,
+        "z": 90.8
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 94, -1, 1)",
+      "position": {
+        "x": -95.92,
+        "y": 0.112,
+        "z": 88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 94, -1, 1)",
+      "position": {
+        "x": -99.5,
+        "y": 0.114,
+        "z": 92.08
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 94, -1, 2)",
+      "position": {
+        "x": -94.64,
+        "y": 0.112,
+        "z": 88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 94, -1, 2)",
+      "position": {
+        "x": -99.5,
+        "y": 0.114,
+        "z": 93.36
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 94, -1, 3)",
+      "position": {
+        "x": -93.36,
+        "y": 0.112,
+        "z": 88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 94, -1, 3)",
+      "position": {
+        "x": -99.5,
+        "y": 0.114,
+        "z": 94.64
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 94, -1, 4)",
+      "position": {
+        "x": -92.08,
+        "y": 0.112,
+        "z": 88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 94, -1, 4)",
+      "position": {
+        "x": -99.5,
+        "y": 0.114,
+        "z": 95.92
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 94, -1, 5)",
+      "position": {
+        "x": -90.8,
+        "y": 0.112,
+        "z": 88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 94, -1, 5)",
+      "position": {
+        "x": -99.5,
+        "y": 0.114,
+        "z": 97.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 94, 1, 0)",
+      "position": {
+        "x": -97.2,
+        "y": 0.112,
+        "z": 99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 94, 1, 0)",
+      "position": {
+        "x": -88.5,
+        "y": 0.114,
+        "z": 90.8
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 94, 1, 1)",
+      "position": {
+        "x": -95.92,
+        "y": 0.112,
+        "z": 99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 94, 1, 1)",
+      "position": {
+        "x": -88.5,
+        "y": 0.114,
+        "z": 92.08
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 94, 1, 2)",
+      "position": {
+        "x": -94.64,
+        "y": 0.112,
+        "z": 99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 94, 1, 2)",
+      "position": {
+        "x": -88.5,
+        "y": 0.114,
+        "z": 93.36
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 94, 1, 3)",
+      "position": {
+        "x": -93.36,
+        "y": 0.112,
+        "z": 99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 94, 1, 3)",
+      "position": {
+        "x": -88.5,
+        "y": 0.114,
+        "z": 94.64
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 94, 1, 4)",
+      "position": {
+        "x": -92.08,
+        "y": 0.112,
+        "z": 99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 94, 1, 4)",
+      "position": {
+        "x": -88.5,
+        "y": 0.114,
+        "z": 95.92
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (-94, 94, 1, 5)",
+      "position": {
+        "x": -90.8,
+        "y": 0.112,
+        "z": 99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (-94, 94, 1, 5)",
+      "position": {
+        "x": -88.5,
+        "y": 0.114,
+        "z": 97.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (0, -94, -1, -1)",
+      "position": {
+        "x": -5.5,
+        "y": 0.14,
+        "z": -99.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (0, -94, -1, 1)",
+      "position": {
+        "x": -5.5,
+        "y": 0.14,
+        "z": -88.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (0, -94, 1, -1)",
+      "position": {
+        "x": 5.5,
+        "y": 0.14,
+        "z": -99.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (0, -94, 1, 1)",
+      "position": {
+        "x": 5.5,
+        "y": 0.14,
+        "z": -88.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, -94, -1, 0)",
+      "position": {
+        "x": -3.2,
+        "y": 0.112,
+        "z": -99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, -94, -1, 0)",
+      "position": {
+        "x": -5.5,
+        "y": 0.114,
+        "z": -97.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, -94, -1, 1)",
+      "position": {
+        "x": -1.9200000000000002,
+        "y": 0.112,
+        "z": -99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, -94, -1, 1)",
+      "position": {
+        "x": -5.5,
+        "y": 0.114,
+        "z": -95.92
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, -94, -1, 2)",
+      "position": {
+        "x": -0.6400000000000001,
+        "y": 0.112,
+        "z": -99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, -94, -1, 2)",
+      "position": {
+        "x": -5.5,
+        "y": 0.114,
+        "z": -94.64
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, -94, -1, 3)",
+      "position": {
+        "x": 0.6399999999999997,
+        "y": 0.112,
+        "z": -99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, -94, -1, 3)",
+      "position": {
+        "x": -5.5,
+        "y": 0.114,
+        "z": -93.36
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, -94, -1, 4)",
+      "position": {
+        "x": 1.92,
+        "y": 0.112,
+        "z": -99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, -94, -1, 4)",
+      "position": {
+        "x": -5.5,
+        "y": 0.114,
+        "z": -92.08
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, -94, -1, 5)",
+      "position": {
+        "x": 3.2,
+        "y": 0.112,
+        "z": -99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, -94, -1, 5)",
+      "position": {
+        "x": -5.5,
+        "y": 0.114,
+        "z": -90.8
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, -94, 1, 0)",
+      "position": {
+        "x": -3.2,
+        "y": 0.112,
+        "z": -88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, -94, 1, 0)",
+      "position": {
+        "x": 5.5,
+        "y": 0.114,
+        "z": -97.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, -94, 1, 1)",
+      "position": {
+        "x": -1.9200000000000002,
+        "y": 0.112,
+        "z": -88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, -94, 1, 1)",
+      "position": {
+        "x": 5.5,
+        "y": 0.114,
+        "z": -95.92
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, -94, 1, 2)",
+      "position": {
+        "x": -0.6400000000000001,
+        "y": 0.112,
+        "z": -88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, -94, 1, 2)",
+      "position": {
+        "x": 5.5,
+        "y": 0.114,
+        "z": -94.64
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, -94, 1, 3)",
+      "position": {
+        "x": 0.6399999999999997,
+        "y": 0.112,
+        "z": -88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, -94, 1, 3)",
+      "position": {
+        "x": 5.5,
+        "y": 0.114,
+        "z": -93.36
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, -94, 1, 4)",
+      "position": {
+        "x": 1.92,
+        "y": 0.112,
+        "z": -88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, -94, 1, 4)",
+      "position": {
+        "x": 5.5,
+        "y": 0.114,
+        "z": -92.08
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, -94, 1, 5)",
+      "position": {
+        "x": 3.2,
+        "y": 0.112,
+        "z": -88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, -94, 1, 5)",
+      "position": {
+        "x": 5.5,
+        "y": 0.114,
+        "z": -90.8
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (0, 0, -1, -1)",
+      "position": {
+        "x": -5.5,
+        "y": 0.14,
+        "z": -5.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (0, 0, -1, 1)",
+      "position": {
+        "x": -5.5,
+        "y": 0.14,
+        "z": 5.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (0, 0, 1, -1)",
+      "position": {
+        "x": 5.5,
+        "y": 0.14,
+        "z": -5.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (0, 0, 1, 1)",
+      "position": {
+        "x": 5.5,
+        "y": 0.14,
+        "z": 5.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 0, -1, 0)",
+      "position": {
+        "x": -3.2,
+        "y": 0.112,
+        "z": -5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 0, -1, 0)",
+      "position": {
+        "x": -5.5,
+        "y": 0.114,
+        "z": -3.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 0, -1, 1)",
+      "position": {
+        "x": -1.9200000000000002,
+        "y": 0.112,
+        "z": -5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 0, -1, 1)",
+      "position": {
+        "x": -5.5,
+        "y": 0.114,
+        "z": -1.9200000000000002
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 0, -1, 2)",
+      "position": {
+        "x": -0.6400000000000001,
+        "y": 0.112,
+        "z": -5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 0, -1, 2)",
+      "position": {
+        "x": -5.5,
+        "y": 0.114,
+        "z": -0.6400000000000001
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 0, -1, 3)",
+      "position": {
+        "x": 0.6399999999999997,
+        "y": 0.112,
+        "z": -5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 0, -1, 3)",
+      "position": {
+        "x": -5.5,
+        "y": 0.114,
+        "z": 0.6399999999999997
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 0, -1, 4)",
+      "position": {
+        "x": 1.92,
+        "y": 0.112,
+        "z": -5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 0, -1, 4)",
+      "position": {
+        "x": -5.5,
+        "y": 0.114,
+        "z": 1.92
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 0, -1, 5)",
+      "position": {
+        "x": 3.2,
+        "y": 0.112,
+        "z": -5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 0, -1, 5)",
+      "position": {
+        "x": -5.5,
+        "y": 0.114,
+        "z": 3.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 0, 1, 0)",
+      "position": {
+        "x": -3.2,
+        "y": 0.112,
+        "z": 5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 0, 1, 0)",
+      "position": {
+        "x": 5.5,
+        "y": 0.114,
+        "z": -3.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 0, 1, 1)",
+      "position": {
+        "x": -1.9200000000000002,
+        "y": 0.112,
+        "z": 5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 0, 1, 1)",
+      "position": {
+        "x": 5.5,
+        "y": 0.114,
+        "z": -1.9200000000000002
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 0, 1, 2)",
+      "position": {
+        "x": -0.6400000000000001,
+        "y": 0.112,
+        "z": 5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 0, 1, 2)",
+      "position": {
+        "x": 5.5,
+        "y": 0.114,
+        "z": -0.6400000000000001
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 0, 1, 3)",
+      "position": {
+        "x": 0.6399999999999997,
+        "y": 0.112,
+        "z": 5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 0, 1, 3)",
+      "position": {
+        "x": 5.5,
+        "y": 0.114,
+        "z": 0.6399999999999997
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 0, 1, 4)",
+      "position": {
+        "x": 1.92,
+        "y": 0.112,
+        "z": 5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 0, 1, 4)",
+      "position": {
+        "x": 5.5,
+        "y": 0.114,
+        "z": 1.92
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 0, 1, 5)",
+      "position": {
+        "x": 3.2,
+        "y": 0.112,
+        "z": 5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 0, 1, 5)",
+      "position": {
+        "x": 5.5,
+        "y": 0.114,
+        "z": 3.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (0, 94, -1, -1)",
+      "position": {
+        "x": -5.5,
+        "y": 0.14,
+        "z": 88.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (0, 94, -1, 1)",
+      "position": {
+        "x": -5.5,
+        "y": 0.14,
+        "z": 99.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (0, 94, 1, -1)",
+      "position": {
+        "x": 5.5,
+        "y": 0.14,
+        "z": 88.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (0, 94, 1, 1)",
+      "position": {
+        "x": 5.5,
+        "y": 0.14,
+        "z": 99.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 94, -1, 0)",
+      "position": {
+        "x": -3.2,
+        "y": 0.112,
+        "z": 88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 94, -1, 0)",
+      "position": {
+        "x": -5.5,
+        "y": 0.114,
+        "z": 90.8
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 94, -1, 1)",
+      "position": {
+        "x": -1.9200000000000002,
+        "y": 0.112,
+        "z": 88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 94, -1, 1)",
+      "position": {
+        "x": -5.5,
+        "y": 0.114,
+        "z": 92.08
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 94, -1, 2)",
+      "position": {
+        "x": -0.6400000000000001,
+        "y": 0.112,
+        "z": 88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 94, -1, 2)",
+      "position": {
+        "x": -5.5,
+        "y": 0.114,
+        "z": 93.36
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 94, -1, 3)",
+      "position": {
+        "x": 0.6399999999999997,
+        "y": 0.112,
+        "z": 88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 94, -1, 3)",
+      "position": {
+        "x": -5.5,
+        "y": 0.114,
+        "z": 94.64
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 94, -1, 4)",
+      "position": {
+        "x": 1.92,
+        "y": 0.112,
+        "z": 88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 94, -1, 4)",
+      "position": {
+        "x": -5.5,
+        "y": 0.114,
+        "z": 95.92
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 94, -1, 5)",
+      "position": {
+        "x": 3.2,
+        "y": 0.112,
+        "z": 88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 94, -1, 5)",
+      "position": {
+        "x": -5.5,
+        "y": 0.114,
+        "z": 97.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 94, 1, 0)",
+      "position": {
+        "x": -3.2,
+        "y": 0.112,
+        "z": 99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 94, 1, 0)",
+      "position": {
+        "x": 5.5,
+        "y": 0.114,
+        "z": 90.8
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 94, 1, 1)",
+      "position": {
+        "x": -1.9200000000000002,
+        "y": 0.112,
+        "z": 99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 94, 1, 1)",
+      "position": {
+        "x": 5.5,
+        "y": 0.114,
+        "z": 92.08
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 94, 1, 2)",
+      "position": {
+        "x": -0.6400000000000001,
+        "y": 0.112,
+        "z": 99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 94, 1, 2)",
+      "position": {
+        "x": 5.5,
+        "y": 0.114,
+        "z": 93.36
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 94, 1, 3)",
+      "position": {
+        "x": 0.6399999999999997,
+        "y": 0.112,
+        "z": 99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 94, 1, 3)",
+      "position": {
+        "x": 5.5,
+        "y": 0.114,
+        "z": 94.64
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 94, 1, 4)",
+      "position": {
+        "x": 1.92,
+        "y": 0.112,
+        "z": 99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 94, 1, 4)",
+      "position": {
+        "x": 5.5,
+        "y": 0.114,
+        "z": 95.92
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (0, 94, 1, 5)",
+      "position": {
+        "x": 3.2,
+        "y": 0.112,
+        "z": 99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (0, 94, 1, 5)",
+      "position": {
+        "x": 5.5,
+        "y": 0.114,
+        "z": 97.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (94, -94, -1, -1)",
+      "position": {
+        "x": 88.5,
+        "y": 0.14,
+        "z": -99.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (94, -94, -1, 1)",
+      "position": {
+        "x": 88.5,
+        "y": 0.14,
+        "z": -88.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (94, -94, 1, -1)",
+      "position": {
+        "x": 99.5,
+        "y": 0.14,
+        "z": -99.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (94, -94, 1, 1)",
+      "position": {
+        "x": 99.5,
+        "y": 0.14,
+        "z": -88.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, -94, -1, 0)",
+      "position": {
+        "x": 90.8,
+        "y": 0.112,
+        "z": -99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, -94, -1, 0)",
+      "position": {
+        "x": 88.5,
+        "y": 0.114,
+        "z": -97.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, -94, -1, 1)",
+      "position": {
+        "x": 92.08,
+        "y": 0.112,
+        "z": -99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, -94, -1, 1)",
+      "position": {
+        "x": 88.5,
+        "y": 0.114,
+        "z": -95.92
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, -94, -1, 2)",
+      "position": {
+        "x": 93.36,
+        "y": 0.112,
+        "z": -99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, -94, -1, 2)",
+      "position": {
+        "x": 88.5,
+        "y": 0.114,
+        "z": -94.64
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, -94, -1, 3)",
+      "position": {
+        "x": 94.64,
+        "y": 0.112,
+        "z": -99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, -94, -1, 3)",
+      "position": {
+        "x": 88.5,
+        "y": 0.114,
+        "z": -93.36
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, -94, -1, 4)",
+      "position": {
+        "x": 95.92,
+        "y": 0.112,
+        "z": -99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, -94, -1, 4)",
+      "position": {
+        "x": 88.5,
+        "y": 0.114,
+        "z": -92.08
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, -94, -1, 5)",
+      "position": {
+        "x": 97.2,
+        "y": 0.112,
+        "z": -99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, -94, -1, 5)",
+      "position": {
+        "x": 88.5,
+        "y": 0.114,
+        "z": -90.8
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, -94, 1, 0)",
+      "position": {
+        "x": 90.8,
+        "y": 0.112,
+        "z": -88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, -94, 1, 0)",
+      "position": {
+        "x": 99.5,
+        "y": 0.114,
+        "z": -97.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, -94, 1, 1)",
+      "position": {
+        "x": 92.08,
+        "y": 0.112,
+        "z": -88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, -94, 1, 1)",
+      "position": {
+        "x": 99.5,
+        "y": 0.114,
+        "z": -95.92
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, -94, 1, 2)",
+      "position": {
+        "x": 93.36,
+        "y": 0.112,
+        "z": -88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, -94, 1, 2)",
+      "position": {
+        "x": 99.5,
+        "y": 0.114,
+        "z": -94.64
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, -94, 1, 3)",
+      "position": {
+        "x": 94.64,
+        "y": 0.112,
+        "z": -88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, -94, 1, 3)",
+      "position": {
+        "x": 99.5,
+        "y": 0.114,
+        "z": -93.36
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, -94, 1, 4)",
+      "position": {
+        "x": 95.92,
+        "y": 0.112,
+        "z": -88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, -94, 1, 4)",
+      "position": {
+        "x": 99.5,
+        "y": 0.114,
+        "z": -92.08
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, -94, 1, 5)",
+      "position": {
+        "x": 97.2,
+        "y": 0.112,
+        "z": -88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, -94, 1, 5)",
+      "position": {
+        "x": 99.5,
+        "y": 0.114,
+        "z": -90.8
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (94, 0, -1, -1)",
+      "position": {
+        "x": 88.5,
+        "y": 0.14,
+        "z": -5.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (94, 0, -1, 1)",
+      "position": {
+        "x": 88.5,
+        "y": 0.14,
+        "z": 5.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (94, 0, 1, -1)",
+      "position": {
+        "x": 99.5,
+        "y": 0.14,
+        "z": -5.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (94, 0, 1, 1)",
+      "position": {
+        "x": 99.5,
+        "y": 0.14,
+        "z": 5.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 0, -1, 0)",
+      "position": {
+        "x": 90.8,
+        "y": 0.112,
+        "z": -5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 0, -1, 0)",
+      "position": {
+        "x": 88.5,
+        "y": 0.114,
+        "z": -3.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 0, -1, 1)",
+      "position": {
+        "x": 92.08,
+        "y": 0.112,
+        "z": -5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 0, -1, 1)",
+      "position": {
+        "x": 88.5,
+        "y": 0.114,
+        "z": -1.9200000000000002
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 0, -1, 2)",
+      "position": {
+        "x": 93.36,
+        "y": 0.112,
+        "z": -5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 0, -1, 2)",
+      "position": {
+        "x": 88.5,
+        "y": 0.114,
+        "z": -0.6400000000000001
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 0, -1, 3)",
+      "position": {
+        "x": 94.64,
+        "y": 0.112,
+        "z": -5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 0, -1, 3)",
+      "position": {
+        "x": 88.5,
+        "y": 0.114,
+        "z": 0.6399999999999997
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 0, -1, 4)",
+      "position": {
+        "x": 95.92,
+        "y": 0.112,
+        "z": -5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 0, -1, 4)",
+      "position": {
+        "x": 88.5,
+        "y": 0.114,
+        "z": 1.92
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 0, -1, 5)",
+      "position": {
+        "x": 97.2,
+        "y": 0.112,
+        "z": -5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 0, -1, 5)",
+      "position": {
+        "x": 88.5,
+        "y": 0.114,
+        "z": 3.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 0, 1, 0)",
+      "position": {
+        "x": 90.8,
+        "y": 0.112,
+        "z": 5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 0, 1, 0)",
+      "position": {
+        "x": 99.5,
+        "y": 0.114,
+        "z": -3.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 0, 1, 1)",
+      "position": {
+        "x": 92.08,
+        "y": 0.112,
+        "z": 5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 0, 1, 1)",
+      "position": {
+        "x": 99.5,
+        "y": 0.114,
+        "z": -1.9200000000000002
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 0, 1, 2)",
+      "position": {
+        "x": 93.36,
+        "y": 0.112,
+        "z": 5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 0, 1, 2)",
+      "position": {
+        "x": 99.5,
+        "y": 0.114,
+        "z": -0.6400000000000001
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 0, 1, 3)",
+      "position": {
+        "x": 94.64,
+        "y": 0.112,
+        "z": 5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 0, 1, 3)",
+      "position": {
+        "x": 99.5,
+        "y": 0.114,
+        "z": 0.6399999999999997
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 0, 1, 4)",
+      "position": {
+        "x": 95.92,
+        "y": 0.112,
+        "z": 5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 0, 1, 4)",
+      "position": {
+        "x": 99.5,
+        "y": 0.114,
+        "z": 1.92
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 0, 1, 5)",
+      "position": {
+        "x": 97.2,
+        "y": 0.112,
+        "z": 5.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 0, 1, 5)",
+      "position": {
+        "x": 99.5,
+        "y": 0.114,
+        "z": 3.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (94, 94, -1, -1)",
+      "position": {
+        "x": 88.5,
+        "y": 0.14,
+        "z": 88.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (94, 94, -1, 1)",
+      "position": {
+        "x": 88.5,
+        "y": 0.14,
+        "z": 99.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (94, 94, 1, -1)",
+      "position": {
+        "x": 99.5,
+        "y": 0.14,
+        "z": 88.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Corner (94, 94, 1, 1)",
+      "position": {
+        "x": 99.5,
+        "y": 0.14,
+        "z": 99.5
+      },
+      "size": {
+        "x": 3,
+        "y": 0.2,
+        "z": 3
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 94, -1, 0)",
+      "position": {
+        "x": 90.8,
+        "y": 0.112,
+        "z": 88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 94, -1, 0)",
+      "position": {
+        "x": 88.5,
+        "y": 0.114,
+        "z": 90.8
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 94, -1, 1)",
+      "position": {
+        "x": 92.08,
+        "y": 0.112,
+        "z": 88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 94, -1, 1)",
+      "position": {
+        "x": 88.5,
+        "y": 0.114,
+        "z": 92.08
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 94, -1, 2)",
+      "position": {
+        "x": 93.36,
+        "y": 0.112,
+        "z": 88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 94, -1, 2)",
+      "position": {
+        "x": 88.5,
+        "y": 0.114,
+        "z": 93.36
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 94, -1, 3)",
+      "position": {
+        "x": 94.64,
+        "y": 0.112,
+        "z": 88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 94, -1, 3)",
+      "position": {
+        "x": 88.5,
+        "y": 0.114,
+        "z": 94.64
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 94, -1, 4)",
+      "position": {
+        "x": 95.92,
+        "y": 0.112,
+        "z": 88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 94, -1, 4)",
+      "position": {
+        "x": 88.5,
+        "y": 0.114,
+        "z": 95.92
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 94, -1, 5)",
+      "position": {
+        "x": 97.2,
+        "y": 0.112,
+        "z": 88.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 94, -1, 5)",
+      "position": {
+        "x": 88.5,
+        "y": 0.114,
+        "z": 97.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 94, 1, 0)",
+      "position": {
+        "x": 90.8,
+        "y": 0.112,
+        "z": 99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 94, 1, 0)",
+      "position": {
+        "x": 99.5,
+        "y": 0.114,
+        "z": 90.8
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 94, 1, 1)",
+      "position": {
+        "x": 92.08,
+        "y": 0.112,
+        "z": 99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 94, 1, 1)",
+      "position": {
+        "x": 99.5,
+        "y": 0.114,
+        "z": 92.08
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 94, 1, 2)",
+      "position": {
+        "x": 93.36,
+        "y": 0.112,
+        "z": 99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 94, 1, 2)",
+      "position": {
+        "x": 99.5,
+        "y": 0.114,
+        "z": 93.36
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 94, 1, 3)",
+      "position": {
+        "x": 94.64,
+        "y": 0.112,
+        "z": 99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 94, 1, 3)",
+      "position": {
+        "x": 99.5,
+        "y": 0.114,
+        "z": 94.64
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 94, 1, 4)",
+      "position": {
+        "x": 95.92,
+        "y": 0.112,
+        "z": 99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 94, 1, 4)",
+      "position": {
+        "x": 99.5,
+        "y": 0.114,
+        "z": 95.92
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing EW (94, 94, 1, 5)",
+      "position": {
+        "x": 97.2,
+        "y": 0.112,
+        "z": 99.5
+      },
+      "size": {
+        "x": 0.64,
+        "y": 0.02,
+        "z": 3
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "Crossing NS (94, 94, 1, 5)",
+      "position": {
+        "x": 99.5,
+        "y": 0.114,
+        "z": 97.2
+      },
+      "size": {
+        "x": 3,
+        "y": 0.02,
+        "z": 0.64
+      },
+      "material": "mark",
+      "modelPath": ""
+    },
+    {
+      "name": "School pedestrian spine 4m",
+      "position": {
+        "x": -47,
+        "y": 0.14,
+        "z": 47
+      },
+      "size": {
+        "x": 4,
+        "y": 0.2,
+        "z": 80
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "School pedestrian crosswalk 4m",
+      "position": {
+        "x": -47,
+        "y": 0.14,
+        "z": 47
+      },
+      "size": {
+        "x": 80,
+        "y": 0.2,
+        "z": 4
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "School future building envelope - NOT campus bundle",
+      "position": {
+        "x": -67,
+        "y": 0.34,
+        "z": 68
+      },
+      "size": {
+        "x": 28,
+        "y": 0.4,
+        "z": 26
+      },
+      "material": "proxy",
+      "modelPath": ""
+    },
+    {
+      "name": "School entrance reserve 6m",
+      "position": {
+        "x": -67,
+        "y": 0.145,
+        "z": 51.5
+      },
+      "size": {
+        "x": 6,
+        "y": 0.21,
+        "z": 7
+      },
+      "material": "clearance",
+      "modelPath": ""
+    },
+    {
+      "name": "Commercial measured scale sample",
+      "position": {
+        "x": 47,
+        "y": 8.484,
+        "z": 24
+      },
+      "size": {
+        "x": 12.6,
+        "y": 16.488,
+        "z": 17.1
+      },
+      "material": "proxy",
+      "modelPath": "Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx"
+    },
+    {
+      "name": "Commercial entrance reserve 6m",
+      "position": {
+        "x": 47,
+        "y": 0.145,
+        "z": 10.95
+      },
+      "size": {
+        "x": 6,
+        "y": 0.21,
+        "z": 8.9
+      },
+      "material": "clearance",
+      "modelPath": ""
+    },
+    {
+      "name": "Residential measured scale sample",
+      "position": {
+        "x": -47,
+        "y": 5.1175,
+        "z": -24
+      },
+      "size": {
+        "x": 11.45,
+        "y": 9.755,
+        "z": 15.4
+      },
+      "material": "proxy",
+      "modelPath": "Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx"
+    },
+    {
+      "name": "Residential entrance reserve 6m",
+      "position": {
+        "x": -47,
+        "y": 0.145,
+        "z": -11.65
+      },
+      "size": {
+        "x": 6,
+        "y": 0.21,
+        "z": 10.3
+      },
+      "material": "clearance",
+      "modelPath": ""
+    },
+    {
+      "name": "Park walking axis EW",
+      "position": {
+        "x": 47,
+        "y": 0.14,
+        "z": -47
+      },
+      "size": {
+        "x": 80,
+        "y": 0.2,
+        "z": 4
+      },
+      "material": "walk",
+      "modelPath": ""
+    },
+    {
+      "name": "Park walking axis NS",
+      "position": {
+        "x": 47,
+        "y": 0.14,
+        "z": -47
+      },
+      "size": {
+        "x": 4,
+        "y": 0.2,
+        "z": 80
+      },
+      "material": "walk",
+      "modelPath": ""
+    }
+  ]
+}
