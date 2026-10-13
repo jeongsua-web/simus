@@ -9,6 +9,7 @@
 - [9/29 구현 조사와 10월 20일 완료 기준](planning/project-baseline-2026-10-20.md)
 - [확정 결정](planning/project-decisions-2026-09-29.md)
 - [진행 일정](planning/project-schedule-2026-10-20.md)
+- [도시 스탯별 시각 변화와 제작 체크리스트](planning/city-stat-visuals.md)
 - [상황과 선택지 원본](content/situations-and-choices.md)
 - [전시 콘텐츠 데이터와 자산 인계](content/exhibition-data.md)
 - [새 맵과 Blender 자산 인계](content/new-map-handoff-5a.md)
