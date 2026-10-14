@@ -51,8 +51,12 @@ godot/builds/
 *.temp
 *.log
 
-# Archived prototype development caches and generated binaries
+# Archived prototype development caches and generated binaries.
+# core.ignorecase treats Library and library as the same name, so the
+# asset source tree has to be un-ignored explicitly.
 **/Library/
+!/assets/library/
+!/assets/library/**
 **/Temp/
 **/Obj/
 **/Logs/
