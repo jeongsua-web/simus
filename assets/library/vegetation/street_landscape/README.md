@@ -1,0 +1,27 @@
+# street_landscape
+
+접수한 제작 후보이며 전시 승인을 뜻하지 않습니다.
+
+- [SIMUS_Bench.fbx](exports/SIMUS_Bench.fbx)
+- [SIMUS_Bench.glb](exports/SIMUS_Bench.glb)
+- [SIMUS_Cherry.fbx](exports/SIMUS_Cherry.fbx)
+- [SIMUS_Cherry.glb](exports/SIMUS_Cherry.glb)
+- [SIMUS_Flowerbed.fbx](exports/SIMUS_Flowerbed.fbx)
+- [SIMUS_Flowerbed.glb](exports/SIMUS_Flowerbed.glb)
+- [SIMUS_FringeTree.fbx](exports/SIMUS_FringeTree.fbx)
+- [SIMUS_FringeTree.glb](exports/SIMUS_FringeTree.glb)
+- [SIMUS_Ginkgo_Autumn.fbx](exports/SIMUS_Ginkgo_Autumn.fbx)
+- [SIMUS_Ginkgo_Autumn.glb](exports/SIMUS_Ginkgo_Autumn.glb)
+- [SIMUS_Ginkgo_Green.fbx](exports/SIMUS_Ginkgo_Green.fbx)
+- [SIMUS_Ginkgo_Green.glb](exports/SIMUS_Ginkgo_Green.glb)
+- [SIMUS_Metasequoia.fbx](exports/SIMUS_Metasequoia.fbx)
+- [SIMUS_Metasequoia.glb](exports/SIMUS_Metasequoia.glb)
+- [SIMUS_Street_Furniture_Preview.png](previews/SIMUS_Street_Furniture_Preview.png)
+- [SIMUS_Street_Landscape_Collection.blend](source/SIMUS_Street_Landscape_Collection.blend)
+- [SIMUS_TrashBin.fbx](exports/SIMUS_TrashBin.fbx)
+- [SIMUS_TrashBin.glb](exports/SIMUS_TrashBin.glb)
+- [SIMUS_Trees_Preview.png](previews/SIMUS_Trees_Preview.png)
+- [SIMUS_Zelkova.fbx](exports/SIMUS_Zelkova.fbx)
+- [SIMUS_Zelkova.glb](exports/SIMUS_Zelkova.glb)
+- [validation.json](reports/validation.json)
+- [사용안내.md](사용안내.md)

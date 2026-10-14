@@ -1,0 +1,3985 @@
+{
+  "scope": "Before implementation Phase1-3: existing Unity originals, metadata, scripts, project settings, web, approved v002 planning",
+  "files": [
+    {
+      "path": "docs/planning/city_rebuild_v002/README.md",
+      "sha256": "4ee02d2e580ccd16d772a04af810b5bcd693aa9f1ce65d99b94932f3bccfdf53"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/__pycache__/build_plan.cpython-313.pyc",
+      "sha256": "d8aca9c88e6b03931c4136f168181379bebf899a280ec54580eb15f897ada96c"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/__pycache__/check_plan.cpython-313.pyc",
+      "sha256": "f0aa86d956cba725cfe16b763ff88d0a62402ad52e265dc0a878c667b1a49a37"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/__pycache__/qa-check.cpython-313.pyc",
+      "sha256": "1757acb51774a57e649fe7de1a20cbca7435297f469cd0247de50e43f12453e3"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/__pycache__/render_plan.cpython-313.pyc",
+      "sha256": "750669ec3d20c6b67261691e8e87c684146faf7eb719c231595dc89f0f05aaae"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/asset-preservation-check.json",
+      "sha256": "2cbd36a351d6e03df6cce2a0ca8f02402bbd625e43bb2833d5e25c0488528a9f"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/asset_measurements.json",
+      "sha256": "7f00ccc1b13acb5fa71082280b68077265445d51dea14d4ee1026320247149a6"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/blender-reuse.md",
+      "sha256": "f2456bc4e4e2f05e22451e0f19c4d0eb46e3344671f3fa6f3586d0ef3052d312"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/build_plan.py",
+      "sha256": "e99f1d0e50128c62c019661082c802bd8994cef053ddf39d9fb1bf5ceed78093"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/buildings.csv",
+      "sha256": "dbbfc28a6aa9864b3d8b82116f6326468822554749151e35e1461cd99a7a7fed"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/campus-components.csv",
+      "sha256": "76d4b6e364240b68ed585f7e0c01448cb18a62725ee8d58d83ebf3cd7e263fc0"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/campus-detail.png",
+      "sha256": "2f6178895e3b6becdc6e395e46786d319e237e390a36920b57d4f63eb63167c1"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/campus-detail.svg",
+      "sha256": "b012a18651e97640b454f0f8f2da179adf3d729622ef7802839fe69495ed96a3"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/campus-footprint-evidence.json",
+      "sha256": "117a28201b19b42e5cb2948dcd9c398ce774d5b6c76ff9009ab713ac6dd3d9dd"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/campus-placements.csv",
+      "sha256": "931ef993ca6e6aaa1006fe7fceb83553c4f7cc72373c4e5f46e25b0dcb18451e"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/check_plan.py",
+      "sha256": "e0b2a6a570517675e8b93668a5ef3a4a3adf11271618a94d7f5883ffa9aa1918"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/crossings.csv",
+      "sha256": "0695d0d6e07b658e45815f095bccddab5b4638228b20fdcdda4d62a6a83d562f"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/density.csv",
+      "sha256": "706a541d1cfec0c94d858014e31164ffd3db0043b50cb08f1058e7404d539c16"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/layout.json",
+      "sha256": "3e98ea485bd92dc9c2528d0420b5999a0336f700270c0f73f7630aa214fbd105"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/pedestrian-network.png",
+      "sha256": "8bfd25b2ff391157fbb64b7d24ddd494f1d8347900da9de3f83aab591f527d81"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/pedestrian-network.svg",
+      "sha256": "1c31e502a9fc7d5b7944d323ebb86199a6825d2e30fd2fd3933ab4f8be54a25d"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/pedestrian_edges.csv",
+      "sha256": "0bf502e2cb7cc9855dc85e8dbf0634de987f85554c4547cf41f14caa083ba6d5"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/pedestrian_nodes.csv",
+      "sha256": "40239ad30fe33a339f6a97ff30a95122bcb3acb0fed9a6b95483334b4bf2d606"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/qa-check.py",
+      "sha256": "04ad6e2b71a8f0f024c20b416e29aed594540acfc1c2abc1f72a871669a809a3"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/qa-protected-baseline.json",
+      "sha256": "3cd0e60b242a43d81fb69b0a00eadc917127c60cb40e9a4bba857fc97ea5a853"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/qa-results.json",
+      "sha256": "9e63c0e6273d2b44c230e86039c02a9c9e6d556abd32428ea95bd8e70c8c0632"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/qa-review.md",
+      "sha256": "f32037c488f7c3a6139fde8579f34955e6dd7dfb1ff317d62db3f550d37e5435"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/qa-revision-history.json",
+      "sha256": "2806ffa4b499e19d77ddcb27f220d62e126c7537f50e8a60599d7baef11ea8f6"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/reference-notes.md",
+      "sha256": "32dd8d9f084c610f0b03e9280fc91f02e320567015e3c68d51ae957fa9ed4070"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/render-manifest.json",
+      "sha256": "68127a0784b939bba2c0b9fe29bc0e1a0c05c37b6088a44389bbbe8c5c3760da"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/render_plan.py",
+      "sha256": "93cfd3ab98d73ef52c4a92f1b7c9950cd2a39b22d9437547fcb9d8305a0c7025"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/roads.csv",
+      "sha256": "3bb86dab8a7bed690acb5b76460dacbfe8928965f3cae6e0de399666a163ecef"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/static-checks.json",
+      "sha256": "71926670f15868be85144f42c7f5fa210f487e0018d4d51974d9eda28f3a07c4"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/top-view.png",
+      "sha256": "98eeb047fb7b32c699f4fe683abc3aa95659e5931d95dbddc0b4ac295217e694"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/top-view.svg",
+      "sha256": "f75cb7d01116efaae5bafa04c88130fc1faa603840acc70fca63009c3c754e14"
+    },
+    {
+      "path": "docs/planning/city_rebuild_v002/unity-plan.md",
+      "sha256": "51f3148412d5307a1ef394c3a86e0439e8bb81f2406bd61c8b0e04a0e6cc4269"
+    },
+    {
+      "path": "unity/Assets/Art.meta",
+      "sha256": "722697a64c0dfab8d4e6007648484a198eadc4b44ee7f3151dd3f0852892a6b8"
+    },
+    {
+      "path": "unity/Assets/Editor/CityStateAssetImporter.cs",
+      "sha256": "9aaac2f974e6ec752c0c1e67ca7e5e2cc0ff62d14fcbfa321b3dc8ed18516215"
+    },
+    {
+      "path": "unity/Assets/Editor/CityStateAssetImporter.cs.meta",
+      "sha256": "cec33f7be10ce06305bd57568969ccaa1f1ba71f42c3249ec6253b834eb670a6"
+    },
+    {
+      "path": "unity/Assets/Editor/CompletedMapFollowSetup.cs",
+      "sha256": "9659881e1616bf5d40e161b3ec2e11689b32e8813bb1a2a8e9b3cda66c9aa61f"
+    },
+    {
+      "path": "unity/Assets/Editor/CompletedMapFollowSetup.cs.meta",
+      "sha256": "1f92b28eecece43535f407e7de24a0c73f7729269de99b3473ce225394cd0e86"
+    },
+    {
+      "path": "unity/Assets/Editor/CompletedMapFollowVerification.cs",
+      "sha256": "ac42280251778c97fd616cd39b5584fd0a76965c0b98f3f1f811a29f860bea0b"
+    },
+    {
+      "path": "unity/Assets/Editor/CompletedMapFollowVerification.cs.meta",
+      "sha256": "60023f1193012640ba7e03aa2aedb1b5546e74a858db02ba088d2df8917e7b11"
+    },
+    {
+      "path": "unity/Assets/Editor/DevelopmentCityWebGLBuild.cs",
+      "sha256": "dff913355fd57030e9aa2776b310a090d2a537b832931129a3f55d4e7176bc3f"
+    },
+    {
+      "path": "unity/Assets/Editor/DevelopmentCityWebGLBuild.cs.meta",
+      "sha256": "44a5d0301bf759309b2e2b35df7a641864b0fd22daf730d17b12ce7cdf4a964b"
+    },
+    {
+      "path": "unity/Assets/Editor/MapRebuildDraftSetup.cs",
+      "sha256": "71815afa87524e5c1452998062a772c7156b3a5c2ee705bec56ff20af3902bb5"
+    },
+    {
+      "path": "unity/Assets/Editor/MapRebuildDraftSetup.cs.meta",
+      "sha256": "92120150e27924f5287e5353f538ccf15c33461e9a85b454c4e8bf1efeac11ea"
+    },
+    {
+      "path": "unity/Assets/Editor/NpcFollowWebGLBuild.cs",
+      "sha256": "33388081e3b330c16f7d903dc4f1c9c1678ac15a31828fc9ec677167eea3fe68"
+    },
+    {
+      "path": "unity/Assets/Editor/NpcFollowWebGLBuild.cs.meta",
+      "sha256": "f0ceaf7a0494c5497bab833c4ef4f1c1a2ef8bdf266f9aa8afbd9ba7f2abde48"
+    },
+    {
+      "path": "unity/Assets/Editor/PublicToiletAssetSetup.cs",
+      "sha256": "8c5ab8f47a7cbbf1079e0d9c93f50a2aeefa9542c0de7173f004d4158cf7a2d6"
+    },
+    {
+      "path": "unity/Assets/Editor/PublicToiletAssetSetup.cs.meta",
+      "sha256": "c8aea705850aedfa31d40c8cfa63f950476570596faef8b30420c2a85429e0b7"
+    },
+    {
+      "path": "unity/Assets/Editor/TransitAssetSetup.cs",
+      "sha256": "ff830c2cba4b9445514e6f997b1d8c1cf641f0e85ec00ab12987c8fd8f187f05"
+    },
+    {
+      "path": "unity/Assets/Editor/TransitAssetSetup.cs.meta",
+      "sha256": "eb63744c9f37e70ee9b73c2e8414294abbf77bdfd3f326003583742c0d3ecb30"
+    },
+    {
+      "path": "unity/Assets/Editor/WebBridgeTestBuild.cs",
+      "sha256": "93d83a198d56e0f88bedc7cc962497564ff527374d41d65fc15f1bb4aa4de31e"
+    },
+    {
+      "path": "unity/Assets/Editor/WebBridgeTestBuild.cs.meta",
+      "sha256": "7975f0c8b3b9e6a50b303d5b2ec4a0eeee3ddac89e59090c233289c4ec7655fd"
+    },
+    {
+      "path": "unity/Assets/Editor.meta",
+      "sha256": "3558e81a70cfd54d14d3514e94656fa5c014746008a77c49d19da5603b781910"
+    },
+    {
+      "path": "unity/Assets/Materials/Court_60F6A4163E.mat.meta",
+      "sha256": "c9d81ce558693c9947e8269a823e31a6c15a3f54d8f4334438352040b52a2d6a"
+    },
+    {
+      "path": "unity/Assets/Materials/Field_F45FC1DFDC.mat.meta",
+      "sha256": "894cad5d252ea875ceb5edd45a8f8aadc75a5179f8c6ffabaaca97a4e5e50ba3"
+    },
+    {
+      "path": "unity/Assets/Materials/Glass_82C268188C.mat.meta",
+      "sha256": "7c1248ab219d16b90ee56c60ffe3a7b32f464d4c175e3bb7e8f11de1371b89dd"
+    },
+    {
+      "path": "unity/Assets/Materials/Grass_84573C57CC.mat.meta",
+      "sha256": "208130b099800b12b8bc924904c7ab015d0de1abe3a1cd4ef69cfa986438711a"
+    },
+    {
+      "path": "unity/Assets/Materials/Ground_151BF49394.mat.meta",
+      "sha256": "12af00d83c85fed78ea2cd6794454d01d2f6a6e5006e8af512a01d28da22020c"
+    },
+    {
+      "path": "unity/Assets/Materials/Ivory_F3ADB67E92.mat.meta",
+      "sha256": "8da48f53f509883a8922c97641074a174a1cb5e6d337226325b2ee43e7631745"
+    },
+    {
+      "path": "unity/Assets/Materials/Road_A22E0B1FC3.mat.meta",
+      "sha256": "44f4fc57685e466adf78dc6147446c530a33a1a7e884254951f14e27ca1cb239"
+    },
+    {
+      "path": "unity/Assets/Materials/Roof_C2F6A4D9EC.mat.meta",
+      "sha256": "a287c77b47e359b595a2947180a12528a4d04cd25b7f12689344e0cb70891461"
+    },
+    {
+      "path": "unity/Assets/Materials/Tree_B85F5FABF9.mat.meta",
+      "sha256": "14d6dc947113db232d94724a18e3c9020f7b4a574627c7c171061904a7e37881"
+    },
+    {
+      "path": "unity/Assets/Materials/Trunk_10C81E7CF2.mat.meta",
+      "sha256": "60ca110997d5ca98351114a8d68961b55fc78736e6cc91055d4fb76c25eb011c"
+    },
+    {
+      "path": "unity/Assets/Materials/Walk_08EE52AE12.mat.meta",
+      "sha256": "c2eb0fd40071a81d9b5b461c0c26cab46cd6b0a324fe271c6554c3eb934f3a0e"
+    },
+    {
+      "path": "unity/Assets/Materials/White_3495E75785.mat.meta",
+      "sha256": "21201a4a64ccd8a706e8c7f5cc9742c2cd7aad4608edfadb3e54dd2b2872fb1e"
+    },
+    {
+      "path": "unity/Assets/Materials/academy_E6F933F762.mat.meta",
+      "sha256": "7850e354dd5421497310e7a5a9a4281ecc26216217138498a160dc415cd80ea1"
+    },
+    {
+      "path": "unity/Assets/Materials/base_CAE662172F.mat.meta",
+      "sha256": "0411892f495317744d882f8d318e65db3cc53488ffdca01501cc940e0501c006"
+    },
+    {
+      "path": "unity/Assets/Materials/brick_C762830741.mat.meta",
+      "sha256": "017ddd081b29ab629588a5f57b084c4f62be7f2ed2bc35d363cf4d2e1cc7e3c1"
+    },
+    {
+      "path": "unity/Assets/Materials/cream_F3A22C1CE8.mat.meta",
+      "sha256": "ac2167b257e38075d5fc132d6b441998bd07c63117903f4a4b14cbd919fd7c5a"
+    },
+    {
+      "path": "unity/Assets/Materials/firm_3F62550731.mat.meta",
+      "sha256": "fc791ad8f0084985b5850e5fa3beda8de745bc5a7b2b05bf4846cba3b6275187"
+    },
+    {
+      "path": "unity/Assets/Materials/glass_132A1A391C.mat.meta",
+      "sha256": "30d232482ce39aafc93c95903b5586b0fe38ed1f7b71d10801ece5fb1a88d153"
+    },
+    {
+      "path": "unity/Assets/Materials/gold_24D7F03D8D.mat.meta",
+      "sha256": "85622c0404f2f7f0515ce4e68be4326dd9db4b9c194c84f36ad0bbc6ae67726d"
+    },
+    {
+      "path": "unity/Assets/Materials/ground_DBB3B50E59.mat.meta",
+      "sha256": "ae4efc4d192d182e282c24355791eec622eb424447fbcd9ee5fc7369f9328ef2"
+    },
+    {
+      "path": "unity/Assets/Materials/home_4EA1405881.mat.meta",
+      "sha256": "f2173c34c25c01a3b0b4cec3edb7d943ce25114d219938c860ec650d6dc6cb4d"
+    },
+    {
+      "path": "unity/Assets/Materials/lawn_8B3E27A4D4.mat.meta",
+      "sha256": "d0d280b1549c731020a4afddf3cbec1385bf43b6142194fe4cbe84c01dd12295"
+    },
+    {
+      "path": "unity/Assets/Materials/park_4D3971DE62.mat.meta",
+      "sha256": "982df8bf26d46f046eac2c9fa0a5ed3424806f3fcbd0300a228c6226d8049822"
+    },
+    {
+      "path": "unity/Assets/Materials/restaurant_EE275D64DA.mat.meta",
+      "sha256": "23e56479af1b816192a636c4a242f39834309f847c6b92c2411c6d37ca2664af"
+    },
+    {
+      "path": "unity/Assets/Materials/road_362A284952.mat.meta",
+      "sha256": "605d48e16fdda723230116137b28e29289effe4d928f411ef2f2965ec360539e"
+    },
+    {
+      "path": "unity/Assets/Materials/roof_D1A0D6F470.mat.meta",
+      "sha256": "64de7eddd6e2ad109612870ecc98daed13992334c915ab1aec80bd56647f264e"
+    },
+    {
+      "path": "unity/Assets/Materials/shopping_1180412AF4.mat.meta",
+      "sha256": "f643b8ebf09930d10e235a14bf4abc181884caad3128b4301c688be4c075f177"
+    },
+    {
+      "path": "unity/Assets/Materials/tree_DC9C5EDB8B.mat.meta",
+      "sha256": "7c1397cb6632b3cf595c25cf57c25f770f7b58f9e02cc9a14f898485df804e52"
+    },
+    {
+      "path": "unity/Assets/Materials/trunk_3E341D2D9C.mat.meta",
+      "sha256": "d8490d6560dff09e8c9191c485cd9613db630cc59cb5b0ad854f5a886ffb2afe"
+    },
+    {
+      "path": "unity/Assets/Materials/walk_7A6C4FAC6C.mat.meta",
+      "sha256": "b498e5fd7e013c4b4e732ad2e41055a9f8fa233fe28f47c612d43b3deb98d183"
+    },
+    {
+      "path": "unity/Assets/Materials/water_0F4168490E.mat.meta",
+      "sha256": "f7905e371ff1c92722a7f4c9992a6c2f2ef2f8343e0ab2e02b45cd2ddfb2a374"
+    },
+    {
+      "path": "unity/Assets/Materials/white_018FA96A44.mat.meta",
+      "sha256": "7beff19f4c6ae6fdf7e3176b7ee919f30e22eb16e7dd8213278b5d45af899694"
+    },
+    {
+      "path": "unity/Assets/Materials.meta",
+      "sha256": "40d191534b21f0ada57d0e5daad73367904f37db77a6b86c96f37c53c8baef5c"
+    },
+    {
+      "path": "unity/Assets/Plugins/WebGL/simus_bridge.jslib.meta",
+      "sha256": "094ce24a7e7e8ba25bd0020e2275f7bae2794f1277ff87a5a6b78044fac95003"
+    },
+    {
+      "path": "unity/Assets/Plugins/WebGL.meta",
+      "sha256": "5e689b729196c0df9b9b447d0d5ed9d01fe50403b9e1ff6caca6ea77e7eb2577"
+    },
+    {
+      "path": "unity/Assets/Plugins.meta",
+      "sha256": "4acddaeb3a5f1fcac8d9d08118da3d191b8bb114b9dacf33a2327b9a1c7d9556"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/README.md.meta",
+      "sha256": "8502a301bcd86f63fd5a745fb9d0d6da23c552d2ea7fc5667e367e3c1f03fc8a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/Layout_and_Validation.json.meta",
+      "sha256": "9667f43e0b5491d317f84f83def87b8efa34a4e3692f7b4ce005b7d76b0788a0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/Preview_Isometric.png.meta",
+      "sha256": "1f8feeba451aa12e80b768e32c29815523438af7d3a48365961332a25a02dd06"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/Preview_Top.png.meta",
+      "sha256": "d77af0241ea795049a8fe21af4568efea3e16ff45218e2067496c29dcd800957"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/README.txt.meta",
+      "sha256": "5b8b3245f211e7bb01d162eb7110b1d695422e9c54f7d8227952f32f62411f51"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/SIMUS_Apartment_Complex.blend",
+      "sha256": "8800918e0ccc6426011601f1c5b6b059e90f6d9f6aba02a54088a887dafc756f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/SIMUS_Apartment_Complex.blend.meta",
+      "sha256": "c8f2decde04fba7b8f7c8c249525a5ea8218c716c6e1f1691077a69e448e4db6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/SIMUS_Apartment_Complex.fbx",
+      "sha256": "d40551194a6f0845b7839bf32925ff78647bed7749218685bee1db7270c76fec"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/SIMUS_Apartment_Complex.fbx.meta",
+      "sha256": "92e605811380a68edfc8aeb61f19feb470736ebc75950dffc64fd2622a71697f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/SIMUS_Apartment_Complex.glb.meta",
+      "sha256": "e3bc8885270cac6ec593f1711e483d9f58ac7caa1b7780d324c724061dc51ffd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/build_complex.py.meta",
+      "sha256": "a1ef4700ed5c5f9bdf0f57a5820bc9b39431e9149b8c07ababf368d279c55448"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001.meta",
+      "sha256": "bfa68db133953b85be9f4e4c185059789b88b205f3e9f64832dbcd1657e0f520"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/Layout_and_Validation.json.meta",
+      "sha256": "7cd9467045dacd68e78609b5e55b1110e09f2e971f1958ad8efdf28b605b418b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/Preview_Isometric.png.meta",
+      "sha256": "3fb0d23d305130da9c4f3db4c55c43bd51197d54747a9c93bd4ba2bad49a3204"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/Preview_Top.png.meta",
+      "sha256": "92da17133a15fabf4b903dbe8dd53ab6cb460fea67d700a76002220eac144c60"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/README.txt.meta",
+      "sha256": "6d21a485d04cfe1d8c9f9739863b6a1fccfba09a6b41e064df3b0a95982f3f6b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/SIMUS_Apartment_Complex.blend",
+      "sha256": "476130322a0ef45151568cd9b98cab513610eed6377833da731ded473a16030c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/SIMUS_Apartment_Complex.blend.meta",
+      "sha256": "4e61c0cb0dd761ff5d18dc53ec46bdcc6311f797b15cf5a1b1d79bc974687258"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/SIMUS_Apartment_Complex.fbx",
+      "sha256": "1d752a87ba6689a03c0b323bb02f42570aaf3c48cfa2399b55ab175501aaf711"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/SIMUS_Apartment_Complex.fbx.meta",
+      "sha256": "94f02b6dd4936f72aa1d7e20e5d1ce7e9a348f49abf49083c5ccaf2a37dcd8b3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/SIMUS_Apartment_Complex.glb.meta",
+      "sha256": "ef6785c5e6fe62f70ba57b801eaad891dfb745a1bba0ccd9367c172f09ae517f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/build_complex.py.meta",
+      "sha256": "b709513aacf585ae39bea173a092e5830f9b2e4a563e5de8f70c6b586e266159"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/source_inspection.json.meta",
+      "sha256": "cc5725f2c4fa2ebec730e7e202ed104ec584fe033f2eb7cd72d05aaa1d3f042a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001.meta",
+      "sha256": "505aafc2d9886330f4a7bc19c581333b6f26aa6b40902bde1e518832ec4a6df3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_A_MIDRISE.blend",
+      "sha256": "6238ce305407a8f3dbdf4628ff2febc2fa056a8236d9abbc948f9fc7f7824f12"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_A_MIDRISE.blend.meta",
+      "sha256": "451c7a4ac7ef3e757dcbf96d6f0b8d57fad5d68738e55b704ecdaaf65901a67d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_A_MIDRISE.fbx",
+      "sha256": "12537f53d5defe04a4c93cd8395780f759a205b1358b41950fc9dc9f450040e5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_A_MIDRISE.fbx.meta",
+      "sha256": "1ecca2f4b30ef21c3b38725dfa65f884e7e2e22a07534f37c3c1d470b076aea2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_B_MIDRISE.blend",
+      "sha256": "842dbd9cd80c3ff440ea9a88e371cc45c1d48583790f87f919d23e3f1c089fa5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_B_MIDRISE.blend.meta",
+      "sha256": "34384b7cadc564634226b8d1bded2be473e365d89b8ffacb746db5fe8435488f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_B_MIDRISE.fbx",
+      "sha256": "cd0386c38331d5c7c515d0916fa160eb83ec59fda4f2cbc4b2c5ac2148e682c6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_B_MIDRISE.fbx.meta",
+      "sha256": "882c3e644d0d2d36ab29882296a8ddd187bc49e4a768359b1fdb6d231ba780c6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_C_MIDRISE.blend",
+      "sha256": "eceb39e842884155caea6b99ccf0413adb31e270e9860c9a64b18cccc4c2c1f4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_C_MIDRISE.blend.meta",
+      "sha256": "46b9a4f8be2cff7d97e7cadd05d872f5ebdb79418cfea8fcca06ef2c59d1b44a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_C_MIDRISE.fbx",
+      "sha256": "dc42968bec87d27fa922ef5535d23902b127594186a94ec442a8d1cdd0859816"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_C_MIDRISE.fbx.meta",
+      "sha256": "02c31620096c80595c4858664c342146a25bda980a91f5b910338737278de211"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments.meta",
+      "sha256": "45929637ff5b91db7e88c65a86bd08a7b5c77ac1d0588d8f7ebac6e1605f9cef"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/campus/Campus.blend",
+      "sha256": "c99bc316cffb670ae564aebc92ecdff80f98651a15c7558fb167cf8fb21e7456"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/campus/Campus.blend.meta",
+      "sha256": "3efc230d38360cb6b86ffc38499a307f4a3c17f0d3c44359a023ea6b8898de80"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+      "sha256": "a424e0e33dcc7d3a2d0a3da918d064414bbf141f3f9c4e9da803a8f2c80f5d96"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx.meta",
+      "sha256": "fa8bf0d0082d6be8f6935bc2e1b7eb11a7f6710eea3042ee51f1334dfb5e4c19"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/campus.meta",
+      "sha256": "17994fb0a0eecc0197f5e2a527c91f99b03e8a93881391b278525d345e1d0261"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.blend",
+      "sha256": "5f006182397eb92b6e17ecf9e4878e1ab3bacc733d16086a9b9d636545563dd0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.blend.meta",
+      "sha256": "9cb252a20bf3d1829b6f9f4addb7e19872c094587c94c10de3c9cacb7ce691ae"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx",
+      "sha256": "dc4e0d842bd4e0e1ca224ab42ddda094c9c1fc81b7d9bc6a8e8add8de98aac06"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx.meta",
+      "sha256": "a978a76e6fdaaa30b864e00144103b4301db39b6df293d3cc12564804b2bd856"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_02_NEIGHBORHOOD_CENTER.blend",
+      "sha256": "daa269a28e7495ac0690afc3da7ac52a9269af2a8a13107d357de7033ff7ad30"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_02_NEIGHBORHOOD_CENTER.blend.meta",
+      "sha256": "7b09efee99989d7e99f37ee0aecb7a1a94bd106aab3e5119a65768a7ec2ca97c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_02_NEIGHBORHOOD_CENTER.fbx",
+      "sha256": "a62574005414ccb75b884b9da044f6833618ba40ddcaa526dae7914255165472"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_02_NEIGHBORHOOD_CENTER.fbx.meta",
+      "sha256": "7835976a8abdcf981619007d94fe9910192fd94f8545c182e7d82d7653cb3d1a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.blend",
+      "sha256": "8e66eafbd405eac73c60b13f290cd42049e87073d5c419acb9a0dbe044a0b411"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.blend.meta",
+      "sha256": "b536d09d0dac959a3582150d2aebfcd7c078e915492f9718636a1f96ffa7df79"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx",
+      "sha256": "30ddd89e46c9134b96ec9de93850584f825a2d0b9894469bd797c261cfd9ec93"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx.meta",
+      "sha256": "31240f4c86022df80c28b265ec90f829c7fa458f6c819875f4f33dbaad7aca9f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial.meta",
+      "sha256": "6521d37520aa02eddc35e27bec02a5e7222cdc6c595e518dd6fbf7a0f7842730"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/department_store/DEPARTMENT.blend",
+      "sha256": "63f41143e2b1e716fc4d2a494555346115f1d5dd67ba84182957821dc5633ac3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/department_store/DEPARTMENT.blend.meta",
+      "sha256": "5a015228e9f36af4bdb1978c6381bf5533cc61dab57315780861fb54e0dfe31b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/department_store/DEPARTMENT.fbx",
+      "sha256": "548356718cefd78fa5065fee83339bf3a02112b31827563b736ee4ad97a7f4e7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/department_store/DEPARTMENT.fbx.meta",
+      "sha256": "3744fdce62d82c10c7a40a880fb286439347b8fd78e5df4813c70606df50fab0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/department_store.meta",
+      "sha256": "cfd6b3350ada5a69aec4dcb27f0054137e8a99046ae9f12a5486cf654320538b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.blend",
+      "sha256": "0f55bda83224b668b67c22976bb3b9fde25c5217826a628464345c679418c6eb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.blend.meta",
+      "sha256": "f8d7b0c4ff484fce3cc72262abce1cd181b78e8ff75601ebc898c3e1e782112f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx",
+      "sha256": "40f37e299f6a047facc69973de312c8c7566a92ff6be2430a0d547a3426160eb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx.meta",
+      "sha256": "15150e1ba6594bebd45db0ef031fc9f5e22151d694684fc00d31d9b9e9cacf2a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.blend",
+      "sha256": "f5a6882376285c2b030480eb313c4f086dd769caadd1b6fab6750b99c3eeb7af"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.blend.meta",
+      "sha256": "a85a550e44d52203ac0d6d87750ded8432703642840505c20e09c3db98597cb5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx",
+      "sha256": "66c9f21a9c087cdbdd224c2387eee85ffbe7b154b22d23573eb244035e61aabe"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx.meta",
+      "sha256": "169417214bc490357719f5c800009d5dc4c821498bb839f5daefe1d697940021"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.blend",
+      "sha256": "7104a4b3304aa9e9f9e98c383c21868b8801987aa83642b8dc69e4972e2a40c4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.blend.meta",
+      "sha256": "6c51c494807500787ee23b3195130ff92a1056548e5ac5295b6a35b7caa77d7f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.fbx",
+      "sha256": "e39bcb769d024c20a5be16a32707344a82c042b05a06f7235115b9e72a672dfa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.fbx.meta",
+      "sha256": "efe982e47251c16ca4f3d893e7f90b86c1ad5fd453a13025cf8c5960fe09a73d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses.meta",
+      "sha256": "ff8ac05fc5b414090e92ecce8441e28672088d7f25a06414954d1d2f0fbfbf26"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.blend",
+      "sha256": "2102aad849d295c047ec395073a7c8532898d86bb7bc564c503d93540217d90d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.blend.meta",
+      "sha256": "18bc23e56cbb95d7e44d6b4c94985173bd8ba83732ee32eebd4a6f703979ae20"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx",
+      "sha256": "65601c83435281e1b1bf4851b3ed65d1e8f1b50c7f82bfaf0c772c8b275ff5a1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx.meta",
+      "sha256": "6add2e16df95795e4439db397779e63b313b882d1b6a3b933e23450ace57f0f2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.blend",
+      "sha256": "247eb4e45bab8d6f738700157e68fddc43db3343999d902757b4a9b358c91661"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.blend.meta",
+      "sha256": "50b1c229a7cfd590423a0cb2ce90c835c3db042388ff1c439ab8eaa150f8f87b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.fbx",
+      "sha256": "b6dc05e3f4b6764d0059f386e83cd23883b149f15a52fbecb4a2e1ae6322af76"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.fbx.meta",
+      "sha256": "ad47aa3c0be134f8c821a4de73cba6fbb97c8482c0e4c529c1f0b5d8f33a069b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.blend",
+      "sha256": "0f4b0e6927ac9738d5c74d7077d9f8212451525c959c09f18eafa2b51d380963"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.blend.meta",
+      "sha256": "4a6dd6dd614b9289f6d4d0a27b49ca51d3707a6de08f4bb03e99cd1c12008758"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx",
+      "sha256": "a035520c65fb1adbae7e7cb79720bffdafde936e9595f2e8ed50f3a2af4e9c1b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx.meta",
+      "sha256": "81336402c7d22ecee30b71fa7320f75695774783092a9ea399e2a759e1adf843"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas.meta",
+      "sha256": "57c0f446ecdde1ced8e57367df6bd7e9c9532628e7bbf4df313d079988c3f041"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings.meta",
+      "sha256": "426dd406290a9fa7a1a4c46337d8d0d2015e8fabdcbeaac12fcb559e3fc98e4b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/Happiness_Animations_README.md.meta",
+      "sha256": "cc908f93351e290bcae64608223bd343a0c713a47e6f9bb3e020fcaf91d6b74d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Happiness_Animations.blend",
+      "sha256": "c7ca09cb7b2a70fcea347efe602b39fc152f1a757b57ea4eafb3c38a7ea75506"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Happiness_Animations.blend.meta",
+      "sha256": "fd6cbeaab76a6786aa61edec5b1800ea2167c90461cf7fefeeaf6f78aeb235d7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Happiness_Animations.blend1.meta",
+      "sha256": "590c7571aee731d0b9eb5af39ca8d41d32804267f3225829c413e0eb9c55371f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Happiness_Animations.fbx",
+      "sha256": "a81da78cc3eaf0b44e21ef322b046e5d27f9b3a9637829917929d93af2851fb3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Happiness_Animations.fbx.meta",
+      "sha256": "eab2624af4ba5b45bb52e5cdabfe9ffec63efbb9a92d916cabe8d8900d44d7d2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Unity_CapFix.blend",
+      "sha256": "014afec72a951de25d5069d7b75e484450e8e8826a0063c7c433223b416411e7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Unity_CapFix.blend.meta",
+      "sha256": "7b227ad849c6c7a6c928cf74809da8ca5a6664aa31a9484e202ed85af802fad4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models.meta",
+      "sha256": "340b864eeb3b993f93ee9253610cfc4087e8cb1ffcb64e4632756cf2cb2e7e8a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001.meta",
+      "sha256": "26d115da1384f88ff5790d3fba1411de9358777da2624e8e68985c0a1a539d50"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/README.md.meta",
+      "sha256": "b980e150a97640ec3f7122ff52aaf4134fc7f7aeeec8c5de4fc1d6663a42dd5e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/models/SIMUS_NPC_Cleaner.fbx",
+      "sha256": "603b89e33112c69ad989c5878ead9d0d704f3b1c6e746a080d98ade1bf2fac6d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/models/SIMUS_NPC_Cleaner.fbx.meta",
+      "sha256": "528d6522255b63408bdc9c03313169da9a5d13bb76e2267cce35b22bf112fc70"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/models/SIMUS_NPC_Criminal.fbx",
+      "sha256": "5cd418a3ae0fd730dd29fb5c1a05b7bac6c7d91e627edf75275b8a2630040184"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/models/SIMUS_NPC_Criminal.fbx.meta",
+      "sha256": "98b8655a0888fa67cf3e0269e66ef1a358a338792d758ddf0d0b24deb7682fdb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/models/SIMUS_NPC_Police.fbx",
+      "sha256": "63e8ebc0445ec05982bd8f1df0bdb57d3b3be135b9c027ea2db09f50fdbd6371"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/models/SIMUS_NPC_Police.fbx.meta",
+      "sha256": "ca62015bdbe600e91111e9c180910e805f2d91379698d71f982d4c3772694cbf"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/models.meta",
+      "sha256": "17f1909dfb100bd6d876d1404d1672a64384d14d1a4360c31cf6500d5d03e327"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001.meta",
+      "sha256": "a1d8ea01a57317fe8cc48cc8e0a76baad48ce9d0db2d959f5270dc5f3d199384"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters.meta",
+      "sha256": "c5d4c4300dbf1fd961caa765efac6583784f3e342999adf946c608a676594c36"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/environment/README.md.meta",
+      "sha256": "459490cdbb99f2c11048177152a574ec6eae4a9fb53a295b5b57035f34b82ec1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/environment.meta",
+      "sha256": "d2db9524241c3140c01ee8ae3e6b31d82ebd46bfc433659250057fa963634245"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/CityStateBindings.json.meta",
+      "sha256": "22e132e5e97d421d1906596e074f539b47e054d69b8425cb33895187e2cc1550"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Environment_States_v3.md.meta",
+      "sha256": "985b188b62d54ae1440e8abb0f86189029c521a8cb4b420ba4648f778d9ab7d3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/R02_UNITY_TEX_STONE_BEIGE.mat.meta",
+      "sha256": "7ab30aba9f5fd481635fe32ab9f40a554f5c08a11bcbbf2347884acb40a89117"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/R02_UNITY_TEX_STONE_GRAY.mat.meta",
+      "sha256": "7c29d5fd61407f4fed5edf59d97340d384b3be91e25f13a60e247c830127eba2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/R02_UNITY_TEX_TILE_OFFWHITE.mat.meta",
+      "sha256": "b1c10bf0f0d1c19f8be32fec8f48da46cdb515c314b400f68e724c7c97aa7be7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_Bin_Green.mat.meta",
+      "sha256": "f1c988f79be0bcff56e611d21f90db0ddcedc89c5b87e6e1564cdc1ccac70d12"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_Bin_Inside.mat.meta",
+      "sha256": "2690005494d8ea05a341d8c96667b20f9c26f91014b96d79167620fde7634ec5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_Festival_Bulb.mat.meta",
+      "sha256": "c1f64ee4c407f535c838a167d8682db477f31d1fd199d1d035f70ef8b95792f4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_PublicSafety_Blue.mat.meta",
+      "sha256": "e813ed5762a45c9a0d43184b9bdae67f77fb66ad4eb82bcbeb3209da368bb2c2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_Reuse_SP_Glow.mat.meta",
+      "sha256": "cc23a1d44fd2e2dac2079ac09bdf2a5c0e21df80d20a969165ddfaabc5ce6372"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_Reuse_SP_Metal.mat.meta",
+      "sha256": "6f210ce93c7ae5101995e9c68285628321261d28cc145cd00b4b0cac26743da3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_Reuse_SP_Reclaimed.mat.meta",
+      "sha256": "223f44b51d39b2435c4b32021d773666c94179fe3147ac867513ed73a78326fd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_Reuse_tree.mat.meta",
+      "sha256": "56dbb172fc13b5e38157f93954b08f85d328d4a7a35de4be672dcf2a6e6075e7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_Reuse_trunk.mat.meta",
+      "sha256": "c1d3310cf8495e5906938845049e87b581bba41a98b041e9189c70968ab9153f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_bag.mat.meta",
+      "sha256": "c622de3eee9a68b4faa9beb85b88707bbf05ab331ba0ca6257eda082f2c85b22"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_blue.mat.meta",
+      "sha256": "0744f7b090c8013fe85eeaac27cb124a57d137e20bb2c0941f413e68626f6453"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_dead.mat.meta",
+      "sha256": "41f6ca31311235448f216cccc8d99143de8d488c23a1684c6cd528f1d616cf5c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_gold.mat.meta",
+      "sha256": "d40c1e9cfc8061af9f0edb134c8b51aaf41f514f37e9ee385c2d45cd024a462c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_green.mat.meta",
+      "sha256": "6c28e3a8adeb0357ccb9ba68b47640a3018fe3bde98c441508c760ab4114d046"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_kraft.mat.meta",
+      "sha256": "3514bfe8e26aa1a8981f207a82e07de6b6dedba8538f057012162f74a8ea89ca"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_lens.mat.meta",
+      "sha256": "cc668879d521104f247c62175936e3db36d1f4bf861e799c9d26a7631274ee5f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_metal.mat.meta",
+      "sha256": "2318b9a0ba8a786e0d4e1c9f79e0ae3adedb9349dc985ed26b0235547b73ddce"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_pink.mat.meta",
+      "sha256": "15f89460ff7e107707422dfb642e38c7f8cafde8a5a0c24ccbdb19e22fd20822"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_red.mat.meta",
+      "sha256": "058f59846a7ee98de977e1eae96c25f806cd8ca82c1456a9c642b80ec32251c3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_rubber.mat.meta",
+      "sha256": "6dbd45a871d0e9d99241e6c120ad9da8546e97e97c54622d2cf814230d3ce072"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_soil.mat.meta",
+      "sha256": "23dfa9c0161edc5e8e6e10a708f3498ff5b15d65f16f44d7275a970e8f758d18"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_stain.mat.meta",
+      "sha256": "9a0e458366242cfc85a3926fb3e48ac5a5d2533eb76992bf11ecd2e75ced9cb0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_white.mat.meta",
+      "sha256": "107e700df1c3ad77c20570e7c65112590a34d60cb6966ca2e74bc95921fbaed5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-ENV3_wood.mat.meta",
+      "sha256": "29afcaed4cf12487f6b231752c256591bac851c5f34c4a48b9ee2730be407e01"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-Ivory.mat.meta",
+      "sha256": "cc6807e525e773755378b37e61a5162407e342fa38190ffd7062fff315aaeb3c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-MAT_CLN_DRAIN_STAIN_01.mat.meta",
+      "sha256": "0131db613fd8baba3e122be8b0ad98ba53386b09a5209b278afa9e69c5036c98"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-MAT_CLN_GROUND_STAIN_DARK_01.mat.meta",
+      "sha256": "ee68723285f8f6bff5bcfb51b484302ba6a3955c2749c9d80e275f031b4a6ab5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-MAT_CLN_GROUND_STAIN_DUST_01.mat.meta",
+      "sha256": "0b2ca716cbf821dffdeb0fd5ff6f345469b71d87c404faf6a4ff19c5d1e1e6ad"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-MAT_CLN_GROUND_STAIN_SPILL_01.mat.meta",
+      "sha256": "1a1052a6764953f5b978652ca96ba45725a9458ba39349284f5988109efa561d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-MAT_HAP_BANNER_ACTIVE_01.mat.meta",
+      "sha256": "8d60064957027f0ddc1856efd785e4c8224fd994a6c18e565aed4c2cb934eadd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-MAT_HAP_BANNER_FADED_01.mat.meta",
+      "sha256": "bfbe8b34bdf20c6906815cd08a24f50ac6c2dbe02d649bff7dfcaab7b38de4a5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-MAT_HAP_SIGN_CLOSED_01.mat.meta",
+      "sha256": "7e6d9a4a200f990249eb24ab359cefb708d12fb66639126203199283a920360c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-MAT_HAP_SIGN_TEMPORARY_CLOSED_01.mat.meta",
+      "sha256": "b3897db695826efd8f99bc23948abd579e981059ef4924090583c74dc9f33b01"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-MAT_SAF_BROKEN_GLASS_DECAL_01.mat.meta",
+      "sha256": "cab3ea2204c3f3b58037edd8b18df54d4d44d68c82990c90612b520852b75d08"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-MAT_SAF_BROKEN_GLASS_DECAL_02.mat.meta",
+      "sha256": "81f52b47115a84f3ed53b03253dc2ff544d52dee3eeb0099607053d1ee6bf00e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-MAT_SAF_BROKEN_GLASS_DECAL_03.mat.meta",
+      "sha256": "1b050edfd89a338103df19fc947db64d2584101d3b8128b46b31300103d2e811"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-MAT_SAF_GRAFFITI_DECAL_01.mat.meta",
+      "sha256": "9674a4a385ea62c4362b303b2efce43007dd2d72bb853bab2c2d9082cd0c56f7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-MAT_SAF_GRAFFITI_DECAL_02.mat.meta",
+      "sha256": "fb9f98786c2bb4b78bdbcaa999888e2591c01b3077887886deaf2275f6c99ce1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-MAT_SAF_GRAFFITI_DECAL_03.mat.meta",
+      "sha256": "25bfb957c51ef5d561ce565a09a1183c446abb67ddc00b7363ed3c6ae0f6835f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-MAT_SAF_GRAFFITI_DECAL_04.mat.meta",
+      "sha256": "dd99d1fb9daa6b9b089cfda89a8b697adfa2d44fb369e9979dca98d5f38e6d8b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_Collider.mat.meta",
+      "sha256": "215d526fa6619ab2f1b8860cd2a47b41d32ce2613fcc6b721ced8f93714730e5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_Base.mat.meta",
+      "sha256": "0e40bd9ed44d3e9d96a7daf40a9b4c454bee72896ee3cc69929a5e7671b398d2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_Court.mat.meta",
+      "sha256": "2cd30ac1071631f1ea39a3fb3e271d111ccd31e548725c99dc52b6aab3367ac8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_FIX_Beige.mat.meta",
+      "sha256": "bd7cfe4629df8d420e822a7f9a3699c950b1f41974603f7ad9afa0c6284b54f8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_FIX_Charcoal.mat.meta",
+      "sha256": "a59767eb1fadeb8a9c4c51e6a5d00cb46bf50991a1786988ef9243c2c0a27c7b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_FIX_Concrete.mat.meta",
+      "sha256": "ea3a9dd3040c3a437cb1faac9004fd99ef50ece21c28582f74b22dce00bf752d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_FIX_Frame.mat.meta",
+      "sha256": "b4c3d57803a4ec558ad8058f73875dbf90a36c60a9a08798462864d51e23bcfe"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_FIX_Glass.mat.meta",
+      "sha256": "e7e3c37f3f978305b66106011e4676a0f44be1740cac70cb5902ad5a99c77055"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_FIX_LightGray.mat.meta",
+      "sha256": "dbb9f319a8f8b0a470a8fc84be7944fa531f80991a9177d69b44f655f80f0203"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_FIX_Metal.mat.meta",
+      "sha256": "40f144ff734b840016d178cb7ce5259225ffeed7352e9a5bdcf8a26824a932cb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_FIX_Pavers.mat.meta",
+      "sha256": "2c43889a378880dfe19a57552169aacec5466d0449906b447d4c0a646aaf6281"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_FIX_RailGlass.mat.meta",
+      "sha256": "8be8ffe2466279abb07ef3fa1107e7c041432498064c049d69c95ed6999a1e0e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_FIX_WarmWhite.mat.meta",
+      "sha256": "80b0873c6e137c9b676780b25132a06e2edd286baca09e3bee27e80040a7e253"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_FIX_White.mat.meta",
+      "sha256": "61525bbf103383bd301cfde1f12266c930eb66240f7552347b1e112b7656af8f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_Field.mat.meta",
+      "sha256": "fadcc3cb132e90187f7697b4a1fecedec67016f587c992ed666cee1051b04266"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_Glass.mat.meta",
+      "sha256": "b7c2d4d9d7250dbbe1eacc28c1958c0b399c86169bcb131801e430add8965425"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_Grass.mat.meta",
+      "sha256": "60fb5efecac915a7fdeec9cacb6a9c1ffe7e1bb99c13be2b4087fce87bc23b2f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_Ground.mat.meta",
+      "sha256": "d4df5316ffdefbf895908d2e407dd5a8313144406fae99c669f2a51a76036ddc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_Ivory.mat.meta",
+      "sha256": "cda9308cc83b26e269b9a9f87633f3a417605a575e0d9750c42f9c78f4b6a511"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_KH_Asphalt.mat.meta",
+      "sha256": "59113a2341cd919f79fffad6a4c54f3fd55f5125ad059558c5e5cd3d944bcc4d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_KH_BeigeBrick.mat.meta",
+      "sha256": "64e3b06a88b35ec9059b250727c676119296ba8000759ef86350ae179b24ef0c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_KH_BlueMetal.mat.meta",
+      "sha256": "d2ec6334118b7943afa4de1efe87da4f2e9097371f1e49dadf877f7f9c8657a1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_KH_Concrete.mat.meta",
+      "sha256": "34953bd3a360e266cbe0868eb3041d8ee774f59155e97bb0b1633a7f4790ba5b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_KH_Cream.mat.meta",
+      "sha256": "6347032be007aa7eecddba22d19f9d4f08356e498f0ebfa4d4ed921ba4b11c12"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_KH_DarkBrick.mat.meta",
+      "sha256": "ba195aa50963d058ab7b0e79b7f5958a0b51f0b2598e232fee28a9b3e959649b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_KH_Frosted.mat.meta",
+      "sha256": "80d32668361dccb19db0c280ee592dfe7286c6863ac1df29b191f3f632d3f450"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_KH_Glass.mat.meta",
+      "sha256": "22e837155240f32dbf318912b219ad19c984a3011ebda85de48326b742a2cb9c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_KH_GrayBrick.mat.meta",
+      "sha256": "c6e844248ec55aab2f98d2a74b20531382339d6cf96fea23905fab1888cd43a5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_KH_Lamp.mat.meta",
+      "sha256": "a5407a5bcd951553cecaaf4109576d58f8729f86a27fb0a61e785b45144f4446"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_KH_Leaf.mat.meta",
+      "sha256": "ce181d7b2596182f489804b3ec072ee45b2c4159e922a1f1ed027d593cd9f29e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_KH_Metal.mat.meta",
+      "sha256": "df789a1b7c514b293d2d1ba37fdc7ec3b2464c46d556b3f454ff28425ff4fd2b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_KH_Pavers.mat.meta",
+      "sha256": "5e457687328d339f1bd8ff335cda337ed8268928a994d240e02852e053cfada6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_KH_RedBrick.mat.meta",
+      "sha256": "8e2f94ce2b75a22cfcfdb87156076680f1fdd46e4923a1bf85c24fb9688d6f2a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_KH_Roof.mat.meta",
+      "sha256": "cd6a79bb7d57775f9de195d07da014b033ac37d259bfe5a0c766fb4c427da979"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_KH_Soil.mat.meta",
+      "sha256": "d7a4c69dbcf7d0c7dc9ec5c841aa0928b017590d65a528c772166e052b4b2b87"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_KH_Stone.mat.meta",
+      "sha256": "49561a647c7eb6795025fc4e002099147cfaf5de31e1937d9dcdebf4cc4e4b7c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_KH_Stucco.mat.meta",
+      "sha256": "7d28b899a686aacf3efc3d11d90720ca9d0be60892c2538b8323885fd532401f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_KH_WhiteFrame.mat.meta",
+      "sha256": "3f8069d3a4abd23613a1402e08b940edf736a0285064d7f5dd15a121138fa88d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_KH_Wood.mat.meta",
+      "sha256": "61ae39ababcb06f23e08b3975fe58dee791550d111d9d80b75680ca445d5d233"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_MAT_AC_UNIT.mat.meta",
+      "sha256": "3d212d1668c1e76bd7157b1a3f49dfb3dd341beebe6089935b4cac4e65225e22"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_MAT_CONCRETE.mat.meta",
+      "sha256": "781879a1a39cfd11a5e636feb27d0ccd177acd9809108943783c75c94fa1527c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_MAT_GLASS_NEUTRAL.mat.meta",
+      "sha256": "326b02075d84635363e56b03e5d741f2f74cef29d82d71143f1dd1802e7d6502"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_MAT_METAL_LIGHT.mat.meta",
+      "sha256": "12a497b8c5c59143483d167c3e66a82c479edf81ea13b364bb1d337e3c377817"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_MAT_ROOF.mat.meta",
+      "sha256": "03df22e2719a68061a4c1b3a11cb538d74c704aea7806b2e67321ce0645e9c42"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_MAT_SIGN_BLUE.mat.meta",
+      "sha256": "5bfd9b7ee44bd6851852a8bdab7f6e26b9bdee55905313e1d6a95a1a08014acf"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_MAT_SIGN_DARK.mat.meta",
+      "sha256": "268601391d87311589530495a21390eaceffb07651dff8d24201311abe1039b0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_MAT_SIGN_GREEN.mat.meta",
+      "sha256": "28b6e5d32cf025c372e2b63b9bc9339f1e279034e55dc70980d775d07c42c5c0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_MAT_SIGN_RED.mat.meta",
+      "sha256": "e048de5046ca093ef5e0c062f013136f3ce6e2174007342424f5924af39905b1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_MAT_SIGN_WHITE.mat.meta",
+      "sha256": "2b8ee82113250374cee110980d79028b63ee649d6e56d7137a4cb5fb0d18f9f5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_MAT_WINDOW_FRAME.mat.meta",
+      "sha256": "8e19eed99840f9f7a9dd760864f347d26233d2e7431ff3a1f60eb06db4e3485d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_R02_Asphalt.mat.meta",
+      "sha256": "de2a90a6dc1ffdad3c4f030b5a51490fc36e54b7b4e824608c767442ec6bbffb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_R02_CampusEntryGlass.mat.meta",
+      "sha256": "74fc6467859fae95c881fb978c846c0b93bc440047c64de30f6e030da0ab1a1e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_R02_CampusFrames.mat.meta",
+      "sha256": "0fe8da72e2b08ad1e1162a40c1588d24ac7afbdcaf4b33d55b629ec85e387847"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_R02_CampusTrim.mat.meta",
+      "sha256": "05536d4861bf531e68cf8788d9f9e5f1572a75cd2599a3b57449910f6325cd39"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_R02_DenseGround.mat.meta",
+      "sha256": "4b6e5325522e745069a6e2209e235d452d6f290d41db1644489a0fdd3e85c5c6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_R02_Foundation.mat.meta",
+      "sha256": "5c277402cef7e30d82dcf66fd7e9535ac3852316005fe4ebebef1e2aa6a1c380"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_R02_Iron.mat.meta",
+      "sha256": "bde6f984ddc946dad41a9405edf2d21f2da80d5aa7476fa22bee9dee79cfb465"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_R02_Road_White.mat.meta",
+      "sha256": "42142a06a0d14a1a8313972f2ebebd85886a79f2a77de311f8688e56e441c6f4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_R02_Shelter_Glass.mat.meta",
+      "sha256": "a88392f00a5473b44b72a257243b460b8c4ce96c731e2809dbf834702875109e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_R02_Shelter_Roof.mat.meta",
+      "sha256": "77f1461e0a7bfc6bbe74df41ba90a931aa152eda6478110f58fff2ad659a9678"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_R02_Sidewalk.mat.meta",
+      "sha256": "b53bc63589db831b0844a30ed17078640643e2d12e2fa0b7c8872384b97aca91"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_R02_Street_Metal.mat.meta",
+      "sha256": "c85de3350dbe035209ff299c8d3de9b32c066961fd7ba838ae8463ee838906a2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_Road.mat.meta",
+      "sha256": "24c83bd996b195a8e8bd75d1bc78370e1bb9e4bd336b9a1074ba30b604eafac2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_Roof.mat.meta",
+      "sha256": "2386d94767b3302c5b3940061604767e913280e245f96ddd46f9d7d052fb971c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_SP_Bark.mat.meta",
+      "sha256": "4397e93faee3252984e994f281ffed6f5a8cbdc527e0fec405ceb0ee486d4721"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_SP_Blue.mat.meta",
+      "sha256": "bc3e537a6eb929c4e9e6b839949ffdad72a851edad3f9bc34b900dd4f50ade0b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_SP_Concrete.mat.meta",
+      "sha256": "71722514e7bee1c1b1090b71855ee27946578bac6b78891171a99f0517f30db5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_SP_Coral.mat.meta",
+      "sha256": "8d1a721d49b712656aee6fb1e3a642eac4cbabbd75336aea465f8bcc4249c871"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_SP_Glow.mat.meta",
+      "sha256": "fe329f0a9327902b19a34083a7fe53a8de1fe683c080beee10f3194f4dea75c2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_SP_Grass.mat.meta",
+      "sha256": "1ad01c7500847b142a7c61b72f9191a3adc5eb4feeca10b651241f41b531543f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_SP_Gravel.mat.meta",
+      "sha256": "ff3036ef5a1dae2cdb42a3339f72be63069b236dec75bb86d6f8ee81f4c69250"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_SP_Green0.mat.meta",
+      "sha256": "aa58540388038576f1c4bb0d9a5056f3e8893ea2d752888b767925e4163937a8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_SP_Green1.mat.meta",
+      "sha256": "ad24ee3c37d6b6f49f734f83aa786d8b3d68ee8d121b54c67f28d9def9561779"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_SP_Green2.mat.meta",
+      "sha256": "cd0351d5807a160adb48b27c0a9a7a768c221d5561ce5f4c7ac4592681b048f0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_SP_Lawn.mat.meta",
+      "sha256": "04890495c37e8e6c93c93dd72fbc6df375d51e609cce52cca0709048ba6aeb35"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_SP_Maple.mat.meta",
+      "sha256": "021f5e1160782f0a083b22f8146cbe7be43889c06e7774f7c2d1099e0ba3b5a0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_SP_Metal.mat.meta",
+      "sha256": "f5d4e13a40f61c9909afeea3023769a1ece9b86513ce7e21f1d81eb5f7cdfac7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_SP_Pink.mat.meta",
+      "sha256": "7097f4bf0c7ed55f65f14f0890c590533d8faf69610f71fc1ac7e83a086018eb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_SP_Purple.mat.meta",
+      "sha256": "7486fbf8c15bc63453c1a4773220067172c1b4944eb55b2e5304adf8758cb634"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_SP_Reclaimed.mat.meta",
+      "sha256": "670a66504badf750e0f5356be338af0d7c38c4babb5d88f8782a9773a8b6d987"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_SP_Rubber.mat.meta",
+      "sha256": "a13fb5b2fd97a158faf5ca2f5831413a4c0f301f61552e6a9fc3d168fc93759a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_SP_SandRubber.mat.meta",
+      "sha256": "1ed4112720089071c280a7d6c93bf1355408c6347d766238489d36a6d3380eb5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_SP_Soil.mat.meta",
+      "sha256": "fd518032b75ccfd9cad326443d7c2013b39f75ed3604382e355431e56ee07efa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_SP_Stone.mat.meta",
+      "sha256": "4aa892534f6832afc51bff61391637b86e1b3198c76f759c0791503eac1a521e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_SP_Water.mat.meta",
+      "sha256": "770a9f7987cbc5fc1aa1d4f996e67bb66a91f6451583235ba953192e54a97d9a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_SP_Wood.mat.meta",
+      "sha256": "f66a9347316441fa6879a87c8ca0e78bfb7da1babf2d66bad5285bbb21bd3e46"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_SP_Yellow.mat.meta",
+      "sha256": "58414c981785242937d9302402890f77aaaf80e9ed5314850341a4e22d08e8b1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_Tree.mat.meta",
+      "sha256": "cc8036afc630d77015963206509cec0d84d8530966bef909ba942f19e5b9e982"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_Walk.mat.meta",
+      "sha256": "5595e12816570a67727bb313233a31d038930d65e499d203fa8746cea691ca6c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_White.mat.meta",
+      "sha256": "27b09d21f359cb7f3cd38bdd73a11e605c694f0d7faf010acd5421cbe2bcc882"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_blue_teal_curtain_glass.mat.meta",
+      "sha256": "309192da3712afabc69098c83212ee19d5b1fa7859e1702227eb5b0d41a1f372"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_deep_teal_entrance_glass.mat.meta",
+      "sha256": "33c40135acaae80c084633c8909e9c138c2df5fd94e9acea0d1d30545ebeba12"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_light_limestone_trim.mat.meta",
+      "sha256": "8fbfb2a86c0bc3c4607c2ac8d863e8a9883a5ac7a7b782bb1fddaf1f679f268d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_pale_silver_mullions.mat.meta",
+      "sha256": "01639892d10bfd1a80d59a46540722308a19d7c95f39d46cf427f3c83ee5b035"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_planter_foliage.mat.meta",
+      "sha256": "7f1c83f17bd9f7277ed150890355e0d206d55b8ebba285b05f967eadcc0b00f3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_planter_soil.mat.meta",
+      "sha256": "0e516f5f1e31ba7fe02968bd8a317a54bd2b6af3cc6016f52f51c1b224ac12aa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_poster_blue.mat.meta",
+      "sha256": "6cb9f79ef7c06e1c157653bd04587b043bb2830ac1113f20419c5028a4099983"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_sign_lettering.mat.meta",
+      "sha256": "444c75e5ba169fbdb170fdbc207ad9410dc6d759a16d8acc8e854607572c866a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_stone_recesses.mat.meta",
+      "sha256": "7046a21a5b8edca78cffe841eb23515905baf98d470f12ff12707049d1624209"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_subtle_limestone_joints.mat.meta",
+      "sha256": "e7af152dd12a21fc461f18c5d2f60ef43adf30eb458f0fb3f4e6e352b41913e6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_trunk.mat.meta",
+      "sha256": "0936e0bbe45436561ac6cfd6a836e8fbcffdfdb5a3a2422311b6ab99bd9b967b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_upper_blue_glass.mat.meta",
+      "sha256": "4d112617c94845742ef9d2b9159c42a0bf01a4e236a1a0788ce841d1eaee18fa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_warm_architectural_lights.mat.meta",
+      "sha256": "543a189029ad4e55c65deed84a18d98916d4b1772c2b03e162b38dc7a27a070c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_warm_bronze.mat.meta",
+      "sha256": "55787a7ebc2b8135fb181cee9252ed6a3bab1831e3b27a8a4fda7c8496657ed5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials/SIMUS_Dense_Realistic_University_Map_03-R02_UNITY_warm_ivory_limestone.mat.meta",
+      "sha256": "a38ac3b45fccdfa55d4d0e6e504cb49cbb4f599eed9d4b34e3b536cbc903b8cb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Materials.meta",
+      "sha256": "7d0c3676d7568b859d27be4faea1567458106e236eb40b673b1d393f52d59cdd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Dense_Realistic_University_Map_03.blend",
+      "sha256": "b9f91053f9f16f7a635716a2c21425901842f4a8ee79328b377a22f0946049fa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Dense_Realistic_University_Map_03.blend.meta",
+      "sha256": "88bc9eb37558d6b2c030d715812a5ad6b2cecb9d324c6659e88e38ff08688bf7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Dense_Realistic_University_Map_03.fbx",
+      "sha256": "464f334610cd28c760219742a10d3d239069185b4f9e9786daa1c14d75ac4c1c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Dense_Realistic_University_Map_03.fbx.meta",
+      "sha256": "3d5c5ea4b98998e7d960e425d60f5a17b13e1a1ef3630a1d259901424c9a568f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Textures/R02_UNITY_TEX_STONE_BEIGE.png.meta",
+      "sha256": "c8dfe434dd136f8f5702c6ab38314ea6e0be772f873234d35e66b6855ea932b5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Textures/R02_UNITY_TEX_STONE_GRAY.png.meta",
+      "sha256": "c914ee1163f5fd3e8ac677fe6632d3158fcf1d90857a876543b2e34bd947dc0d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Textures/R02_UNITY_TEX_TILE_OFFWHITE.png.meta",
+      "sha256": "57e1f3d26b12a427ccd4750cb58e276547a0124c4eba27359775892f2428a3f3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Textures.meta",
+      "sha256": "fd98acb9654d623dfefdad6847a701429abce9a38ebd7990bebab342b6f0e8dc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/UnityEditor/SIMUSDenseMap03Importer.cs",
+      "sha256": "0736a6b210bb5e997446f8723f7c780103e50d238b6e74402179a71e67ae3078"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/UnityEditor/SIMUSDenseMap03Importer.cs.meta",
+      "sha256": "9abd87785df606538da69667d8615e5924ce3b6ecaef89ca43c2a0458ef4fa2e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/UnityEditor.meta",
+      "sha256": "8f618b4649da439cddf521113307ca2eaea152877a0819bf20df616d8f4d6df5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003.meta",
+      "sha256": "388ae7fadb1b2af12171104d3939143e979ba368218faebedeb61bf90840ec32"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps.meta",
+      "sha256": "3eb6d79d95354513f26cafec1370b8b365cbc0c65d468740819baf73493c1149"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_bus_v001/materials/BUS_Accent.mat.meta",
+      "sha256": "d5fa1edde31dd78c8c5e5e8a2b0efaa930b238133fe914e05115e4b0c0dde00b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_bus_v001/materials/BUS_Display.mat.meta",
+      "sha256": "76f809417da551642f473154b85f3629a9734af57565c5d2241370a847cbc507"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_bus_v001/materials/BUS_Glass.mat.meta",
+      "sha256": "008ede1a0dabe442cfa9a07a81d687118aec465865be522e48089c6874acedf9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_bus_v001/materials/BUS_Headlight.mat.meta",
+      "sha256": "ee47ec9b9cc378011275b345fe274e466285fbeaa5f70c3fe81f64415c79ebfa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_bus_v001/materials/BUS_Indicator.mat.meta",
+      "sha256": "e93f14437447985580309c02839cbd64b535faee6389a8efc6ed833555a6594e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_bus_v001/materials/BUS_Interior.mat.meta",
+      "sha256": "af6c5cc576422c86511fa9775048f1bb33638519c7debfdfa2f85863866185df"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_bus_v001/materials/BUS_Metal.mat.meta",
+      "sha256": "f37475ebc544d9396c4808a73f3b1b3303e25b00b2fb94d24e1a0c83c7f1d368"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_bus_v001/materials/BUS_Paint.mat.meta",
+      "sha256": "77156695163d55a78a3bd504a747fa460ef78866ee1f82d9055e770420ab6013"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_bus_v001/materials/BUS_Rubber.mat.meta",
+      "sha256": "b4aab325e9aed7baf4c80eeb1de9f0f76b4547d581fb44afced492d256154896"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_bus_v001/materials/BUS_Taillight.mat.meta",
+      "sha256": "701378d418488c8ca7de3948d22c1068fa37b0622294557c16e11f8fa8a417aa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_bus_v001/materials/BUS_Trim.mat.meta",
+      "sha256": "b45b0d2315c536f06ef484a4a5fad729061c137c56949eda875137597fbad634"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_bus_v001/materials.meta",
+      "sha256": "f7590c14c3734ed36bf885e149b64d95d53f27eae8e1b04ce4c6b237cdc243ee"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_bus_v001/models/SIMUS_City_Bus.fbx",
+      "sha256": "4d102ce7d21bbf189cb8dc8e5a4e67d96681ea5c079195bdf0011858f75cefd6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_bus_v001/models/SIMUS_City_Bus.fbx.meta",
+      "sha256": "2a93778e802ac8aa889c156445f8fd2627e473d7f1e9061c5b41c1821b05e2d4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_bus_v001/models.meta",
+      "sha256": "e7e987267dc74502bb65d6601f5df740de25e3b6d4502ac7727aba65b5d485b3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_bus_v001/textures/BUS_Route_Atlas.png.meta",
+      "sha256": "4fad65c21ea70222774f6abb2df5571022a36213126770239c99d3720b35ef51"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_bus_v001/textures.meta",
+      "sha256": "c2f325a0cd8675190c3d722826fdc4d452cfdfb4321e850af206a516fab7cfdb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_bus_v001.meta",
+      "sha256": "869de2a22119253c5200fc94182c834587a063ce92552621e8925c86811e1c29"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_CLN_DRAIN_STAIN_01.mat.meta",
+      "sha256": "dfb530b2be68859e01623f286a8cd5f8f9c84e77da73f608a78dc6bbe3aca856"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_CLN_GROUND_STAIN_DARK_01.mat.meta",
+      "sha256": "014946801d0f38b5d030ebb5ca9daec917874f6b337ecbc22ab403fac682df11"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_CLN_GROUND_STAIN_DUST_01.mat.meta",
+      "sha256": "cab31fea0545e0eed2f3bd2c30d9a21829b3c036630f1cfa7499230af83a70a5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_CLN_GROUND_STAIN_SPILL_01.mat.meta",
+      "sha256": "7c4d89acdd6461f751d40334f062f6381f18164adb5b4be04e2f0b7a2f97cd7c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_HAP_BANNER_ACTIVE_01.mat.meta",
+      "sha256": "cabaa38fca0e403e9a1d7868c664218febd0acda8225c9c0a6a4e482cab98904"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_HAP_BANNER_FADED_01.mat.meta",
+      "sha256": "7035adb5d9b68dbee582a1714c3221aec556e0f0bf4468e98f2d9bf3d4ba6857"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_HAP_SIGN_CLOSED_01.mat.meta",
+      "sha256": "6f421951232dd47b5e615b8e99c1a37386ff96affe61db150b15287808338030"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_HAP_SIGN_TEMPORARY_CLOSED_01.mat.meta",
+      "sha256": "6d423ed38e176f9a45fd642e693773730d469eb9bb6a80b5e355366f553baec7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_SAF_BROKEN_GLASS_DECAL_01.mat.meta",
+      "sha256": "2e1278a8f832f29617cb6ddac75e62523dedac8db4b0308af7c161b26bd07da2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_SAF_BROKEN_GLASS_DECAL_02.mat.meta",
+      "sha256": "7917bb5bd9169e07e5fa5e785f38524f1639e95229a7e4431c532fed2f3d680e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_SAF_BROKEN_GLASS_DECAL_03.mat.meta",
+      "sha256": "3d1e92b3b8e0aa01210f218d2abe5158bd392fc16c15ca190eea04a31496749d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_SAF_GRAFFITI_DECAL_01.mat.meta",
+      "sha256": "50e07b5e79cf876aac00ce5e66d39dd1258841cba0f2b8866a1b7c49e8a29e22"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_SAF_GRAFFITI_DECAL_02.mat.meta",
+      "sha256": "b0b43f1a53648a4924fe2d0d3b56c40cc5cbcead6bc0e5844337dc29ca2c93bc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_SAF_GRAFFITI_DECAL_03.mat.meta",
+      "sha256": "6b8c30cab118918c97808eb4f4458a8149398d379a53efc83c400be9bc172bca"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_SAF_GRAFFITI_DECAL_04.mat.meta",
+      "sha256": "0fa89714556f122bafbbfa0aec669f0ce76082f9c1ca5b0d70dc8cd5ce1c7c08"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials.meta",
+      "sha256": "eb4c46ecb5a104a2f37199551513c8b4b454314324b3a16d239d8a3d189986c2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_HALF_01.fbx",
+      "sha256": "d938b74cca316d96d161435a78c526217c4da13b42df4c938f6c57e7c8161156"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_HALF_01.fbx.meta",
+      "sha256": "ea1eb45fe2999b18418db2c51e8dfd8e36d19b68ef0f7486d167161d9d68b976"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_NORMAL_01.fbx",
+      "sha256": "ddc1b880820a0af4211fc79f0626ff602df2b341f06a28aaaf97075ad5039349"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_NORMAL_01.fbx.meta",
+      "sha256": "40109bf08cb8362b83035568999fba39fac9fe5c51db0d483918923d90c06761"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_OVERFLOW_01.fbx",
+      "sha256": "6e35e6cdbfe220c7e71cea190ef8f576197905b315ffdc4b8798b7db2ed493b2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_OVERFLOW_01.fbx.meta",
+      "sha256": "52393d1218ec45d152e40de8b0fc7357daa28c593911d0f12f326e8fc0fad225"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_SPILL_01.fbx",
+      "sha256": "97f4873db3c299297b6e85a9a01279b64b6e2636126376026beeefda4df85108"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_SPILL_01.fbx.meta",
+      "sha256": "8b3705403b0c9e754df922e48e4b4a2e3bd6471259144277d67b70a5f69684de"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_CARDBOARD_01.fbx",
+      "sha256": "65bbe66cd6d2d5e6b2d5df857c6b796c8352bc0607c21d10b8045569d7ce78eb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_CARDBOARD_01.fbx.meta",
+      "sha256": "09f20dcc9f4b2c6d045ddec61dd2bde83dcfcea629def1e81bb5b0c29f726681"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_DRAIN_STAIN_01.fbx",
+      "sha256": "b5e5c132866ed927843f2a82c27a6a4444be9e625d141f746f15af01921242c1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_DRAIN_STAIN_01.fbx.meta",
+      "sha256": "e2bc10f5ca12bbc05ab1495c94e2ee814e7a0805ac35f4d3f751089e36f0c3a1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GARBAGE_BAG_01.fbx",
+      "sha256": "abb3b299fff03455608aed3cff1b5ea7948d9fd7c789dbfbccba6bf965e237d4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GARBAGE_BAG_01.fbx.meta",
+      "sha256": "8a5520bf63a7c408c92a1a2e54f63218261e456d83898505d0cb0ac61d20c3bd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GARBAGE_BAG_02.fbx",
+      "sha256": "fe3302c2f0b4a8b8922dc610557baec01bac833490b4cb29da3ebbe8ed177904"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GARBAGE_BAG_02.fbx.meta",
+      "sha256": "900561db9d747a9c2b817661015b2a1f4c549499a700cbe823e2d77561b83284"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GARBAGE_BAG_GROUP_01.fbx",
+      "sha256": "2ed993e9abf195f3f07af681e618cf8475b7be48916d25badf3b7fdc98426c83"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GARBAGE_BAG_GROUP_01.fbx.meta",
+      "sha256": "812c703cdb60eb7ce1cec849eaccdd6e5b51bbf1693c4be09ab8adf1af2ea64e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GROUND_STAIN_DARK_01.fbx",
+      "sha256": "f9dcb7eedea85075ddfe8f8d840a5e642cef0ada645093675ec6e49f454e6e4d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GROUND_STAIN_DARK_01.fbx.meta",
+      "sha256": "e0406f89d490d822eb7997377463be81519b80daf194b8f365b9a1f7b5b58e05"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GROUND_STAIN_DUST_01.fbx",
+      "sha256": "f6011c9c7f1427a525f1d1508fc9671eb7b65a84c0f7cae416a3291202c9e8a1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GROUND_STAIN_DUST_01.fbx.meta",
+      "sha256": "4ba41fb7815759d29c71ddc41e7e64d7736aa846fd421dc5b9994af3fbdd468d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GROUND_STAIN_SPILL_01.fbx",
+      "sha256": "11513fa513f6e0050cbedf525e30c108a3a5a37fe589608c52b1a5852db59dbc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GROUND_STAIN_SPILL_01.fbx.meta",
+      "sha256": "07714ee8523bfdc5b37c44e776537652ee162e15737626106adc27a4d68f5c51"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_BOTTLE_01.fbx",
+      "sha256": "f17a02f10614201f5d18644c884f73b5c948c1ec3a68f390847a88576283daad"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_BOTTLE_01.fbx.meta",
+      "sha256": "5de38557dbafffc3dfafe3d7dc615ffae91922b6e110d060a5917a4350330ae6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_CAN_01.fbx",
+      "sha256": "5c3d8c3be8412f79fc8f58e236308a5715f7cb52cf28bc4922c1c932710e2770"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_CAN_01.fbx.meta",
+      "sha256": "ce1305eb4cfbe03e3de2111c12cd85df8825fce6abe88fc966103e964ea1c46d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_CUP_01.fbx",
+      "sha256": "e26f7fab091a061b0a8c31755c12b7023febdad5a3857659ba7cbfbfb67302b5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_CUP_01.fbx.meta",
+      "sha256": "a0b421ac404bb0ba167b0bc46e981d74ed157fd17426b43795f3da33cdcc0905"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PAPER_01.fbx",
+      "sha256": "8ba0e2f74c68fe1b99081e6f891b4271784ca9f65df011687b116c5262b660c8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PAPER_01.fbx.meta",
+      "sha256": "1f86501f17546bbf888163bd1f4bb4c29b0fe97bcd3ee9d8517bb8807e181750"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PILE_LARGE_01.fbx",
+      "sha256": "29b5ebcfc91b40d08d23e558f5f2f8d706a4993ece59a7347b30e314728db3e4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PILE_LARGE_01.fbx.meta",
+      "sha256": "19614cc131777f49ef4a38ee044d4b531fefff43213ab54350a9971c1951264f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PILE_MEDIUM_01.fbx",
+      "sha256": "b79c228ae9023d4371102e9e633765ddb1e570e179746e139c48ef128316e894"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PILE_MEDIUM_01.fbx.meta",
+      "sha256": "e8a208506e954521c2b54ee201bdbd294a7503c58ce1992ab00a0236c7860c57"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PILE_SMALL_01.fbx",
+      "sha256": "acbc77c686d16cc404e4fcad02ff73c5a8facfc8e53177daec8be09c2e08aed4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PILE_SMALL_01.fbx.meta",
+      "sha256": "f0a46c41c2047674a9d3a00b7436b13d520a19cc7a553043fe8b2850e8b3c4ca"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PLASTIC_BAG_01.fbx",
+      "sha256": "0b13ec99295db00f74f7fa769c56588e0034c9a9843a29883bfb7c912f1f6814"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PLASTIC_BAG_01.fbx.meta",
+      "sha256": "42c687bffa310a35426787987dc35b3129e51b1d763aa0d31923e002b69610ff"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_WRAPPER_01.fbx",
+      "sha256": "e5132cabadce68e9dde9ac51c743525cb1b9b7cd0c2aa5ce0d7a5c96bb2b8963"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_WRAPPER_01.fbx.meta",
+      "sha256": "0a6e3fc4b3e0398c60fd1aefedf108b0699f7a30ea1999d221228979971ba8e7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_BANNER_ACTIVE_01.fbx",
+      "sha256": "228c58047ba0dff386d48b867a308ba2e564b88d02877526ce040e0e82d44f1c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_BANNER_ACTIVE_01.fbx.meta",
+      "sha256": "9d85a41cc146ac86ed8f198ad49baf423d77d5f870b2a74eb381f1d87d56c910"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_BANNER_FADED_01.fbx",
+      "sha256": "c56b2e48036f22e3fdf4050211867c594d4cedae8f86c9c1d39e3c687864ef13"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_BANNER_FADED_01.fbx.meta",
+      "sha256": "1ab3c9124f97f350406fdbd8f2a1ac8b4c690e9c88509414f3156f7c7e0a1a7e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_DECOR_LIGHTS_01.fbx",
+      "sha256": "f705119f601375d30ee94f8bf25d10ab9f7bc9d4c3cac0eb835ceac1df35ba86"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_DECOR_LIGHTS_01.fbx.meta",
+      "sha256": "4138da8e6e8058e5298f4b1b97a133572a41090a4894b8a537e2884f09bdc7dd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_FLAGS_01.fbx",
+      "sha256": "9c3230b99df19beddb5739fdd98b4d97aba5d65df8c94a0a6a9ae6198877cfa7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_FLAGS_01.fbx.meta",
+      "sha256": "9e633e81d3a0b072080eb66268af1cdf7cd5ddbc9235d559afd65d0abb53f2a4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_PLANTER_EMPTY_01.fbx",
+      "sha256": "e56802096aebbded1c93ca03bbdc61e6bef71f724eb8864b66e58fcfada61803"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_PLANTER_EMPTY_01.fbx.meta",
+      "sha256": "8d69a90582b94d85cacc9f3c394d14c540074f08e8ac9f96de45cc7aab9ce151"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_PLANTER_HEALTHY_01.fbx",
+      "sha256": "33c3a5fae5150ca2b2ecb56128547539e830c773968afe6cc6535a1fb5db474e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_PLANTER_HEALTHY_01.fbx.meta",
+      "sha256": "5f33c39076fd67ef56bbc8bcb47f7a6800b1f4ef0003012823f25eaf15dba457"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_PLANTER_WITHERED_01.fbx",
+      "sha256": "50337fc1f3c5430a9bede196f76d074beee6ef41c4626c3092e633a21ac7b52e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_PLANTER_WITHERED_01.fbx.meta",
+      "sha256": "b1254bf29257f7fd4e1510ca97f84fac2c3578ef881afec661a6fffc6a48e259"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_SIGN_CLOSED_01.fbx",
+      "sha256": "5d47916c74976e107015b88a28c9ed35587bde6bf5914ef017347d5104f5b5a2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_SIGN_CLOSED_01.fbx.meta",
+      "sha256": "5afc794e56d2431511cf439079b5fd46114486655edf93097bb0ffb5b266b019"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_SIGN_TEMPORARY_CLOSED_01.fbx",
+      "sha256": "ddecce8164776759ff30193acec199d2051d8f902e8cc228edd93df7b4dbda40"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_SIGN_TEMPORARY_CLOSED_01.fbx.meta",
+      "sha256": "4005b21b5a80c661deaacbc75dae2bc6246026e93792df06abb3f9ac3160c1ac"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_GRASS_BROWN_01.fbx",
+      "sha256": "c5ebe61c086e0c45afa8373400fe1126322d8e4366c611c51a9d86aa4f4cc312"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_GRASS_BROWN_01.fbx.meta",
+      "sha256": "645ebab44d15d64e5333ff94a2a14b0939249d43fa47735a3c6dcfc8493a6d1a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_GRASS_HEALTHY_01.fbx",
+      "sha256": "7fa8332b00079f63d73c7492db060f02d8cde52360b666e4b7ccba1a3a9c0fbc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_GRASS_HEALTHY_01.fbx.meta",
+      "sha256": "ce6ebd87aeaf659bc26ac1f750f65f6601f9f4c3c5e826bf6d01da2e50ac604b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_ROOFTOP_VENT_01.fbx",
+      "sha256": "44f1db449096acd604f9141653b06db9d447380d8edbe1c843b2901b157b39f7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_ROOFTOP_VENT_01.fbx.meta",
+      "sha256": "9f1c82dfede281bb811dfc09bca850528fea794597d1b1f28118051c6f3a9fdc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_TREE_DEAD_01.fbx",
+      "sha256": "6fc54381bc01543fb8fc1260894821c306397339567d75407d003f030b57e749"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_TREE_DEAD_01.fbx.meta",
+      "sha256": "ab637c3b2607001239390657ce324f1e5fe88ecfe4ba464a8c4f0c4a2b9b15cc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_TREE_HEALTHY_01.fbx",
+      "sha256": "40d155ab52c2e4d39d548e0275ec93af07f3ce4ed2b3ea3130e970f184a88deb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_TREE_HEALTHY_01.fbx.meta",
+      "sha256": "0fe715beaf59f2825fe56b1b8ee16fe2953725dc894c54176f96370e20f04f92"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_TREE_WITHERED_01.fbx",
+      "sha256": "8a1cf857cf288b80bb3f4d5511f143479682382ffe326c1bfa85459084671930"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_TREE_WITHERED_01.fbx.meta",
+      "sha256": "a681313c04f8b6dcd919c5d0badc7b74852ca4eabb83d1608155ed09908552aa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BENCH_BROKEN_01.fbx",
+      "sha256": "befe95e48811fc6fead2d24f30ae52760e91701acb3a79190cc2ea6cea63133f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BENCH_BROKEN_01.fbx.meta",
+      "sha256": "1a8982618d0e0844bf9a606f3877d270533f05b8f5aac48026f8a6a1b78b312e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BENCH_NORMAL_01.fbx",
+      "sha256": "c3069095374c24611fa67fa9b7edcb7628625b395d2daa07cca1329c86c00238"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BENCH_NORMAL_01.fbx.meta",
+      "sha256": "4a3afebb014cc8ae1b169d97d21b80863d37f6e237c820acd95c4658072b713a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BROKEN_GLASS_DECAL_01.fbx",
+      "sha256": "336ccca70e60c227131ab5a354aa9cd1c5e7764c58771ea6ef95adaeef207b56"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BROKEN_GLASS_DECAL_01.fbx.meta",
+      "sha256": "dc7d03b977cfc53bc82d45771011d8d4c50eee1e94353be6a7ddbc0962a92be9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BROKEN_GLASS_DECAL_02.fbx",
+      "sha256": "4aebd167e4c6dfc6ead107314fc53a97d415395206e0dfb96a2ce0e78244f9ae"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BROKEN_GLASS_DECAL_02.fbx.meta",
+      "sha256": "ebda2c53ff2b295b475111606bddfd708b627166d9d66e51299a345b8212ff8f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BROKEN_GLASS_DECAL_03.fbx",
+      "sha256": "0156ad85a3b98ca2fe2108807da75c42c4f28531cba04963114101e24761fbf0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BROKEN_GLASS_DECAL_03.fbx.meta",
+      "sha256": "f1da2874ff6fc2603f10061b0050bf2c176d96c30cd365bac5be520e4161f284"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_CAR_NORMAL_01.fbx",
+      "sha256": "7f9dea131c95252e55b6d118fb0a9acf3d26ebd9888d6d4dc341c1efe7d6f26c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_CAR_NORMAL_01.fbx.meta",
+      "sha256": "8b42c979b4a856f051c2df819e563b8a8beb3f3b39b4f52a06d78f9a45976c66"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_CCTV_01.fbx",
+      "sha256": "bc83cb88eeebedd4131708c8bf6af3f60c0963083dc1f8d1fd6efcb5dc36a66a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_CCTV_01.fbx.meta",
+      "sha256": "df7e2936dbdba558dfc952c0291def988623c61ded5d30d707bf499bb0ef1b37"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_DAMAGED_CAR_01.fbx",
+      "sha256": "af4a70d97cf6c2e3b8b998771529c4888c87508608b96a9acb12806b0b9f475e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_DAMAGED_CAR_01.fbx.meta",
+      "sha256": "c91b5eb0f65d6216e575d4611161770a8b25bc1e83de530d388dbc9bede5493c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_DAMAGED_CAR_02.fbx",
+      "sha256": "c6eccb45d4c3799b35c094f68cd82918901e275b41016ad824a6443331c4111d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_DAMAGED_CAR_02.fbx.meta",
+      "sha256": "2e2676d4044d19b9403dba4f4dfe2e23649cadea4160edf97376083d2530103f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_EMERGENCY_BELL_01.fbx",
+      "sha256": "92f8e6ad80512cd1d6df3478b1d8d878d005c8186df9abb6e8333d18827a635e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_EMERGENCY_BELL_01.fbx.meta",
+      "sha256": "532f03c63f19d91cec6b8a7ded35ef8503771cf72325c849fbcd2563f38b05ec"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_FALLEN_BICYCLE_01.fbx",
+      "sha256": "e680b2f938250f9c25f115cbba0e3e39cb5cfdc2b5e2e0fe5c902a50da1a9732"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_FALLEN_BICYCLE_01.fbx.meta",
+      "sha256": "7a99cf6a8b1e72544c76d2e6ead339b5df7897953ef6a51b006a9b47ce7a2d78"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_FENCE_BROKEN_01.fbx",
+      "sha256": "39ff3cc6d87b43e23075e358d2d5004ec3a6c24b0f6b38e21e98c67ed11ff4c1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_FENCE_BROKEN_01.fbx.meta",
+      "sha256": "1abeccef283c1f69e46db614b86b7d5d4b49ad60b28d44853cae05fe6f4eb0e7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_FENCE_NORMAL_01.fbx",
+      "sha256": "b51733da102038fd3dc5bf4a86fb403333682cec7312467ecfa17b3fecec6d81"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_FENCE_NORMAL_01.fbx.meta",
+      "sha256": "047edbb8fb7cf7a8b4f86242fad5c0304df89ca64ef30548190573856acad602"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_GRAFFITI_DECAL_01.fbx",
+      "sha256": "0d1e45d94b6f235f6de6d35baefa526f7d5820ac5254c16b44ec95b3eec1cb56"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_GRAFFITI_DECAL_01.fbx.meta",
+      "sha256": "e04de981ce3016ff32c26f4e23d4abf1bba593be6820802b4c42578bf43985d3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_GRAFFITI_DECAL_02.fbx",
+      "sha256": "e8102b5341b6c1db3be1548a33d717430df84fa11600ca8205ce44fee876e11e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_GRAFFITI_DECAL_02.fbx.meta",
+      "sha256": "969a8e2336c03f0a8de599adb27474156cf2aa5af14c9a45e81028fde0d9769d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_GRAFFITI_DECAL_03.fbx",
+      "sha256": "cf97b7496cf6ad1e51437d14f4ae74e3c416807ee0137a8cbce952b98ceb7558"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_GRAFFITI_DECAL_03.fbx.meta",
+      "sha256": "6f66899d7b6a4e0bb0dae42db923d54c36d57bb7ca9750468661659a3ac0f6cf"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_GRAFFITI_DECAL_04.fbx",
+      "sha256": "2a6fe7d0b11756958b2bb280e99dd4ea1c9491881fcf6ac8df424e79f49cf00c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_GRAFFITI_DECAL_04.fbx.meta",
+      "sha256": "00863c91df0fdacddc769f4f40f62b1694d1c9ce6c0ce8f18ec0a5fd9561f506"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_LAMP_BROKEN_01.fbx",
+      "sha256": "b64f6f78a94c30805cd558cf22626822499062978e7a7f490ba0fdcba6419213"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_LAMP_BROKEN_01.fbx.meta",
+      "sha256": "07eb0033f3cf45181323a4ede2a66003dde6969f033884a534bebab4537a714b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_LAMP_NORMAL_01.fbx",
+      "sha256": "c955263f2ca331cbcd8fd7dd2e105fa070c1fcd6573c7fa079386b3d62a9bf4e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_LAMP_NORMAL_01.fbx.meta",
+      "sha256": "e86117b6dd23caa2b85f934a285941e2cfaf04023a0ebbd5962cae46389128b9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_POLICE_CAR_01.fbx",
+      "sha256": "4adc90023e4e04adbded72d5e44603debeff494c688b5c2762d3460dfe91b73b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_POLICE_CAR_01.fbx.meta",
+      "sha256": "545a6286465c8b601158976e82eee747c55f2ce447e73f65d83354624287ff3f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_POLICE_LIGHTBAR_01.fbx",
+      "sha256": "37ae8d4f3ee4e7afeda641bd05401f58d028b8634c1fdff8b71af58532c24dbc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_POLICE_LIGHTBAR_01.fbx.meta",
+      "sha256": "8252a6af4103a6895efd762374e9cbd18616bede71ca99c955e411c012cfbd37"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models.meta",
+      "sha256": "c434556da2092898fffe870d82ffd1cc48e7aa93c3bd7533cfb040a2fd281ad4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/CLN_DRAIN_STAIN_01.png.meta",
+      "sha256": "fb9e1a01024b95db3b87e22cc74c874a070c38b74ccd133f7baf0f0ab6c82b21"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/CLN_GROUND_STAIN_DARK_01.png.meta",
+      "sha256": "16d6d557975ac473ebb5b89c48ea933591ef6b90b82f0ea27257b1ab215b7378"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/CLN_GROUND_STAIN_DUST_01.png.meta",
+      "sha256": "248a95083253e8c83da861ebd94d3bdb20fe606d726c4bb8e8e7446b11861280"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/CLN_GROUND_STAIN_SPILL_01.png.meta",
+      "sha256": "457e15b08f0feb284fe0b6f4a0d7bba28bd5f3db7fd45839588a3c297f79c764"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/HAP_BANNER_ACTIVE_01.png.meta",
+      "sha256": "c2fe824d7e7a84f57914250d374f7d37c421f997ccd5453c60e2ee34c35151bc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/HAP_BANNER_FADED_01.png.meta",
+      "sha256": "b6c3fd99bfbf29d2980ae8260a475e080e800bd3e9e23393ad2b7f85e86b361a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/HAP_SIGN_CLOSED_01.png.meta",
+      "sha256": "50cf033a7585ce5a0cecf8f2c1564deaa3d6921747040605ef48e33fbc7e1eb4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/HAP_SIGN_TEMPORARY_CLOSED_01.png.meta",
+      "sha256": "2427d0f8c0d81ac00397cfcdc11dfa9b944abf6f586b0340820607dfe3e56da7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/SAF_BROKEN_GLASS_DECAL_01.png.meta",
+      "sha256": "cc880e84eb629306bacf08e3a490209a9ea7c1efa3791f985e8ab51f96ae175a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/SAF_BROKEN_GLASS_DECAL_02.png.meta",
+      "sha256": "1f5ec18842b36ea75f20b50ffab1e955a12bd1c1953e7653a030e319d35e2347"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/SAF_BROKEN_GLASS_DECAL_03.png.meta",
+      "sha256": "5c094a2d6cee804fde79f37af0c6941ec8639056fe380ba5842f064d0514fbc7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/SAF_GRAFFITI_DECAL_01.png.meta",
+      "sha256": "205cd289912bcbefbcfd13ee1b48410abb5a0820656da8f1d2f0f2fd0e28697b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/SAF_GRAFFITI_DECAL_02.png.meta",
+      "sha256": "e62b1234e7ad856cb4ea70681d1c2e85a7ff8ca9d5d1a785c2b6579a50586933"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/SAF_GRAFFITI_DECAL_03.png.meta",
+      "sha256": "2002b05822fd20875f5415906b4dbeb8ec4568cfc47b4c52a9e42f6b859180ec"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/SAF_GRAFFITI_DECAL_04.png.meta",
+      "sha256": "e0ce42794f14dbd692a07bb046147d8de6951721aee81a0f7b2e7f6739ae35d9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures.meta",
+      "sha256": "d41f9ca7e473be4a4e4c485a7498773d520df6ddafc5a5ae13caec0644677219"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001.meta",
+      "sha256": "1f81ce03eb87b1678b3012c6689b17e9f47806da73bf1f0c5b5ff0e98be48f0d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/BICYCLE.blend",
+      "sha256": "47d15e9f00a289cd3fc5551d424c7dbc7c39700fa0aab07d9cb97b8ec77588fd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/BICYCLE.blend.meta",
+      "sha256": "3515fa7d1bef522f4caea89fef91dae340aad5d3e239a2ca5a4cc2700bf1282b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/BICYCLE.fbx",
+      "sha256": "bff46303eea5f2ddca56e0743a574418a84fdd27fefdf178134363087f8f16ab"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/BICYCLE.fbx.meta",
+      "sha256": "8e0d600b8f25ed85c49e8754812e58c6b0a1b5477ed7b0f68989c317955d5ca3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/PLANTER.blend",
+      "sha256": "39a4bfa0a327984b510a9c1579f1d5cc9431b7af902cad29efb29a504b643ac5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/PLANTER.blend.meta",
+      "sha256": "dedd56f2bcd4e587795c67d3acb1ee6eca777da27125d69fce5c65c3e5a80f13"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/PLANTER.fbx",
+      "sha256": "0b81532f0afe15e235195b6d4d338b16349a90dde69a62f8c70fb4e973c975d3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/PLANTER.fbx.meta",
+      "sha256": "7118d26af1fe9cc7fbb55202bb616f79c8017df07470a2d96200158b13a1bc62"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/RECYCLE.blend",
+      "sha256": "00e8f6f67c02821204fbd0ef5fba92d82c634d0fd96515cab0406ff230d70f32"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/RECYCLE.blend.meta",
+      "sha256": "60c71075a143bb9dbc58df4fbe492a1ec6f7a797f22dc37dbab8e961a8b7221e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/RECYCLE.fbx",
+      "sha256": "f6a8409a12ad43e1f9e34e364c0d7be8029f6ffeec35eee3f38812c0209fe406"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/RECYCLE.fbx.meta",
+      "sha256": "a396683a5c85a14f368efca6381eef96938b8ab975f166ce25eb22d7c90bf71c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/REUSED_BENCH.blend",
+      "sha256": "27364a3b22b02f7bf1490a97c468042f486a11abf0a3ab2f8f4ab0f0ebca57b2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/REUSED_BENCH.blend.meta",
+      "sha256": "cad5315661e39611705154ca78fec45b2a77ba16ec8afd0f26ca3e806faec0b0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/REUSED_BENCH.fbx",
+      "sha256": "7c0a9c5ef0d532c782e8e4b4f34390da534f577eae9f35f2e573b073b451b3cb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/REUSED_BENCH.fbx.meta",
+      "sha256": "7f43417f2a83ccfbc93903813b43c10b3deaf374292cb48384edcac17d2e8f92"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/STREET_TREE.blend",
+      "sha256": "2b588a9e9d99ffe7f1eb98b7b0142ebe7d68599847065e1f2a9372c45a9a04e1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/STREET_TREE.blend.meta",
+      "sha256": "221ced620e721fc110c172d9d93ab522d15549b6278fba7eb931d420284122a5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/STREET_TREE.fbx",
+      "sha256": "1fe983174c830fc869b774e86cafd474aaa64bdabcd167ab47c77bfba0b2a75e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/STREET_TREE.fbx.meta",
+      "sha256": "44ddc1b657143cbfb69c97882057a769d8b8dbb442cc7dc1fc851d883fd3f3bb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/WALK_LAMP.blend",
+      "sha256": "0baafbc6a3b48d95e4611582f362d11ae8594b648db95fb040c7351618dac4e0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/WALK_LAMP.blend.meta",
+      "sha256": "967fb2a7fe3626bb3115a5027c5a278b38130d21a70463ace8c070c4f304ad0b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/WALK_LAMP.fbx",
+      "sha256": "b3594009176c886590869181adfdfedc5f2669023cecf77995cf3561d64b192c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/WALK_LAMP.fbx.meta",
+      "sha256": "5c28cbea66e62f914355ba3dbddc0981d877b040ddfefaf5fd9eec9fb2807ec3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props.meta",
+      "sha256": "75733493d7c7ebe99b336cd5612aa3b6be4d793c4eb26cf19fc66cebd86e8b0c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/public_toilet_v001/materials/PRT_Door.mat.meta",
+      "sha256": "eec095cd787f015275d08e9bcd5fb5ccf843032f075484fbd05d4880102fe813"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/public_toilet_v001/materials/PRT_Emission.mat.meta",
+      "sha256": "8d1ab44113e31948d3fb1cb802bf03fc25e03763e996df28f2fc7ad42890da5e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/public_toilet_v001/materials/PRT_Glass.mat.meta",
+      "sha256": "65387e057a5d8b780e8a2722271c95c35ed7aff015a79c52bcb48424695c84ce"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/public_toilet_v001/materials/PRT_Interior.mat.meta",
+      "sha256": "6bd0735df9bfa2d2beedae85af76b7883f2bff2f3b4f04943733adc272a9db84"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/public_toilet_v001/materials/PRT_Metal.mat.meta",
+      "sha256": "3e239a0b703bbb0cc373835fae2c40d0b0b15f6f7d988f22c7fbd9bd93755d0f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/public_toilet_v001/materials/PRT_Roof.mat.meta",
+      "sha256": "7f472468ddef7adabdcd6ba4cbffebf7b31ae2ef6df39bda72c16f834035e6b7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/public_toilet_v001/materials/PRT_Sign.mat.meta",
+      "sha256": "c05caa33ae6d46e49d533d406b64740eab54413a14b032dc09bb151c0e90cea2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/public_toilet_v001/materials/PRT_Stone.mat.meta",
+      "sha256": "1067b3273cf46f4f99225951827722d17971c66169b0d47f49e868c94d023516"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/public_toilet_v001/materials/PRT_Wall.mat.meta",
+      "sha256": "ecd82698493b3a2a1565b1bc4ef03c01cfbb01492ac17a3a2daa9c915e4b39a8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/public_toilet_v001/materials.meta",
+      "sha256": "a72cea017e44217b54b582726fad0b3e43ef68006396a46f2546850a8b5139dc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/public_toilet_v001/models/SIMUS_Public_Toilet.fbx",
+      "sha256": "f8414ff12990481245b0838ce418863a381593d1857bf107dca59d8f6c632d3f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/public_toilet_v001/models/SIMUS_Public_Toilet.fbx.meta",
+      "sha256": "d32c077ebc1afe9c7811960601a0927a9b492aa36b68ee81d28f601c2ba9d3ae"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/public_toilet_v001/models.meta",
+      "sha256": "ff33266d298c932c46222be0cea76726bff1b93c9882c0d9d4567927d3f9c4d6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/public_toilet_v001/textures/PRT_Sign_Atlas.png.meta",
+      "sha256": "f1f770edab0a3a5bdcd1b5b70a047638ed71613884aa812bada10c83ab0930a3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/public_toilet_v001/textures.meta",
+      "sha256": "a60213cfc82be46b767680a6839557be006422c675feba152e35b389450dd889"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/public_toilet_v001.meta",
+      "sha256": "2c22da4e6748541ea7396ec1c8b32483a5fadfca24f124f134e69caa841df308"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/taxi_v001/materials/TAXI_Accent.mat.meta",
+      "sha256": "6c3fd39f66faf7d808ddf91002a357e486ced4b2353574a8bf007a0a297e4c78"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/taxi_v001/materials/TAXI_Display.mat.meta",
+      "sha256": "79c46e16b4b3faa91b91c0f55d9baaee555a6457f3f5e6782b82dd698ef822b9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/taxi_v001/materials/TAXI_Glass.mat.meta",
+      "sha256": "b759205a76b47d25aa635e6a21af79ce7c7b4bc91612b54df2d035e33ca3149b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/taxi_v001/materials/TAXI_Headlight.mat.meta",
+      "sha256": "d76c0d4167f032167b6b4546fb11429bdbf7aff6250fc77ada54ed564c11b9f3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/taxi_v001/materials/TAXI_Indicator.mat.meta",
+      "sha256": "59ba6cd6763fc8f8b678f6d1697da7f09418dbae749cc647b2d4095814d03a90"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/taxi_v001/materials/TAXI_Interior.mat.meta",
+      "sha256": "67dfb703598bd16f0f20dfb94d72608e3c2b18d765f4a7f588ed764be48bd0d3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/taxi_v001/materials/TAXI_Metal.mat.meta",
+      "sha256": "e6c9946ecdca79c88d69dd575e01a56537e2bbe918074f61a432b4d22dadb9d9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/taxi_v001/materials/TAXI_Paint.mat.meta",
+      "sha256": "f41f90b9ef20e1051dc43cf4ec658837d55005d4f52734508dcb95bc1441b599"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/taxi_v001/materials/TAXI_RoofSign.mat.meta",
+      "sha256": "4b5ef2c9fe68769ccfce8b9b61f6acf616c4b81ec50573382b0c43dc41659223"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/taxi_v001/materials/TAXI_Rubber.mat.meta",
+      "sha256": "8553f1627b703ab17925230cc5773e4d2e66991a89533b03cd47064eea35a1ac"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/taxi_v001/materials/TAXI_StatusSign.mat.meta",
+      "sha256": "07cf60bd0db9df747383e5d457c32d7f8b9d99cbe1dae6230ee481f969390a4b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/taxi_v001/materials/TAXI_Taillight.mat.meta",
+      "sha256": "e7b79a6495d70e67ac3775f036d3f448543d7047e625f0168b80cd61c0fc8a36"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/taxi_v001/materials/TAXI_Trim.mat.meta",
+      "sha256": "14e31d976411b641b60a607cf76c76e5f75b3cebb92908ff39de82878c13088e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/taxi_v001/materials.meta",
+      "sha256": "968204bf431116d182d61a4ebdc7c9498d92c4fef242b0532a3e7645c6e3da96"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/taxi_v001/models/SIMUS_Taxi.fbx",
+      "sha256": "24f33c0d93f8bd6bfd294e700781a262fd7cc1a119c5809be5ffc6c22c77ae6e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/taxi_v001/models/SIMUS_Taxi.fbx.meta",
+      "sha256": "67de4253b3d05dd27e7deb75dcadc3f45c0c583fb89aa93e20fa1d947aabe0bb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/taxi_v001/models.meta",
+      "sha256": "d7afab95fb7c2cc8eae77e153835facaafd58323f6027b666c924ae13ec68743"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/taxi_v001/textures/TAXI_Service_Atlas.png.meta",
+      "sha256": "9b555b6ddf19252fcda7e983318f9994445411e658b81bc38a20b50ef3794961"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/taxi_v001/textures/TAXI_Service_Atlas_Occupied.png.meta",
+      "sha256": "90a0a9ef5946b875f798e41144f07754e5e7fa92ec19a8b7b002b4e2e8bbc2f4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/taxi_v001/textures.meta",
+      "sha256": "28ba2bc3f5cf7491335f8fd9deb294f431be56ff5075d292f0be6f6022a82927"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/taxi_v001.meta",
+      "sha256": "fc8b5d43419f0824dcfd8c2f4e2150e189d56b7493aca5515ee53c882b2271aa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props.meta",
+      "sha256": "e9db422695a28515190e925e7c4318cd344d792d631d5a4286cfd6b6d12421c3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/city_infrastructure/City_Infrastructure.blend",
+      "sha256": "ae2c43831d3aefb5bc0b49e86471ece4bf4d772efff1155249a177da6dfc8465"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/city_infrastructure/City_Infrastructure.blend.meta",
+      "sha256": "1847d30889bce4c3a178f92f6a5061fcac3f6b75c3e722fb3fe97c3c3924bc0e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/city_infrastructure/City_Infrastructure.fbx",
+      "sha256": "f1f8fcdcdb2987869e766bde19b6305b26f7a34f6d3d121ba093d4849f2cac4e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/city_infrastructure/City_Infrastructure.fbx.meta",
+      "sha256": "cb3d81e668d967a7f07cd4a20d4e4c1adaa0b977917159ed39cb36160884d9fa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/city_infrastructure.meta",
+      "sha256": "fff91674bdff9e97897413c8d1d9ca84565fb80ef9e2464bbb9db6f33ca734db"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads.meta",
+      "sha256": "5dd40936a5a40593cad5f4b75175381b8b2435f4131be1744f32184cab90dd14"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/COZY_NEIGHBORHOOD_PARK.blend",
+      "sha256": "1f465417d7abd45092ac970f40191d3cd8878cf4be9d2034b080717b82289384"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/COZY_NEIGHBORHOOD_PARK.blend.meta",
+      "sha256": "ac71585f13f6bb7905dc312f7610913d4ab80ec9d0ce79c96550a8fc1e8e8dec"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/COZY_NEIGHBORHOOD_PARK.fbx",
+      "sha256": "7b0290b9d91ba9eb771b4fb641ab843c81e6795d530693481135e341a55ad057"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/COZY_NEIGHBORHOOD_PARK.fbx.meta",
+      "sha256": "39dd4d88c6f777b26063b0a92889422da82841e2611c4e7e2adb9529e3226f2b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/ECO_RAIN_GARDEN.blend",
+      "sha256": "414cdbee0b214ebe9f9011c6598af6d307a6fb89b0b5cc2a3ad8fd114728e77f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/ECO_RAIN_GARDEN.blend.meta",
+      "sha256": "f4eff39e11ff3191ec3149e40106f04b673bf1be06afaecb039a749cf6f6ce7b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/ECO_RAIN_GARDEN.fbx",
+      "sha256": "48fb41ea01ff1437ebf5deaaeecc2287831b6a463cb43159be4ee1527996106b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/ECO_RAIN_GARDEN.fbx.meta",
+      "sha256": "83a8bbe657b82e77db06c295792a898a1843691db659d33f558f0758401244a4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/MODERN_MINIMAL_PARK.blend",
+      "sha256": "a7c2d73e017e8969dd4f7338c5ac991ca259f51ea6b1fa86793b2bb26e1c88cb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/MODERN_MINIMAL_PARK.blend.meta",
+      "sha256": "f4e4119ce8723ef80fe14f654c30fefd7891b491178c20db32316f3884a547c8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/MODERN_MINIMAL_PARK.fbx",
+      "sha256": "310d3617f9e8ea83bc075f75ff54cfdb80a25e840fe66480e65040b863dd989e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/MODERN_MINIMAL_PARK.fbx.meta",
+      "sha256": "853a510c7de539bdb1f87fc0241b4cb5f2ee070de78dea906d29e87d017b49ad"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/POCKET_PLAY_PARK.blend",
+      "sha256": "5ed8e12a7261ef83cad59fb733d0f189828cd16fd1695d0c98ac890a83509bad"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/POCKET_PLAY_PARK.blend.meta",
+      "sha256": "0c1ed2cdf323683852a12acf2ecea20ffbb3a1cdb15d9ca292e407a4a7334c7b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/POCKET_PLAY_PARK.fbx",
+      "sha256": "855460ddcf250fb9aa3a2371e424f3102dcf2a8cb9432404b92efd0545e00ccd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/POCKET_PLAY_PARK.fbx.meta",
+      "sha256": "01def9b89ec27155e88025374b2b6f353657e8309bf25ab0e7401a6e0f5a0a7d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/ZEN_GARDEN_PARK.blend",
+      "sha256": "335de24e6d5137f12086c03cc705df5b34aabf00fb2ea7413ed76da568b50c4a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/ZEN_GARDEN_PARK.blend.meta",
+      "sha256": "f80f90a234a8d5fc0010d420acde611729d2fd54c55beb1d46b8dac9f41d1812"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/ZEN_GARDEN_PARK.fbx",
+      "sha256": "251cfd17d1c5aed8d2c4eedc657e38172090ec5175f62872eee06a871b18faf9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/ZEN_GARDEN_PARK.fbx.meta",
+      "sha256": "68c781c1f9d3d77387acd75bf96e213b5ca2e9575b03649bf8bdd3851d7595c0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks.meta",
+      "sha256": "8224447569efd176b80a013b3cf343ca0c305d6f3fbb1c92ee3d721e75477c76"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation.meta",
+      "sha256": "a8096775e9e17bb493a6111a6fa963f3ad384776eaa8eb88e3089e4bcd2bb03a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art.meta",
+      "sha256": "dd8eb2fd08de17b53c1e5aa5a5a30e5e54fe379481e88f87b3e8bea2cdf5f2fc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Editor/NeighborhoodIntegration.cs",
+      "sha256": "31e755d0a148bf6663217474283b5c519faacf8466e69b103e12d005a0849ed2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Editor/NeighborhoodIntegration.cs.meta",
+      "sha256": "f48bc519e96df35e14736efc7897f7854b38b89ff77e30c73acf7e1ac3674717"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Editor/NeighborhoodVerification.cs",
+      "sha256": "51243d26e7a05bfeb27952fa4fc20527df8ca412c116f9b26c5563a68023f4cb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Editor/NeighborhoodVerification.cs.meta",
+      "sha256": "839371f786afa105094775ef997d30a1d8ca70a24a45892226c6a24b7ca0e702"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Editor/SIMUS.City.Editor.asmdef.meta",
+      "sha256": "66d4c9925651d627baf5e9b6a4d9e95a9c8c0fd49404465c05139f99d97e504d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Editor/SimusCityClientMenu.cs",
+      "sha256": "1a63503cd4b181632ba31ec049b0b98b8788cedd4bc2eaacd7499cbe3859d46e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Editor/SimusCityClientMenu.cs.meta",
+      "sha256": "8425c709e920491701b7f8f235e0c4884cd880a232908054662185a3e280180c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Editor.meta",
+      "sha256": "44883b15db2cd55c16358dbf38b756145c2e85ad33cb4fd5127d102f62cd412d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/props/city_bus_v001/SIMUS_City_Bus.prefab",
+      "sha256": "396a5bc812ccac60ad94f3bbf2d1a38aa347e4c899c781df06d04766e6d5a2f5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/props/city_bus_v001/SIMUS_City_Bus.prefab.meta",
+      "sha256": "23d96a2d348e62937516897f1fa03fd0f70e76d7f73c89e87073f04a68501c8e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/props/city_bus_v001.meta",
+      "sha256": "cba08bad09db147af1e3400929485622b2e1e3b0ac426b2676594dc1926b6092"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/props/public_toilet_v001/SIMUS_Public_Toilet.prefab",
+      "sha256": "065ffa46bf72465089e82525dc15c2bde34e332ef4819f875c4349e85ceea7b9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/props/public_toilet_v001/SIMUS_Public_Toilet.prefab.meta",
+      "sha256": "01d0fad92447ca7f3ab0d1440fdd4832b7376d3491276373aea7bd94ac72d9ee"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/props/public_toilet_v001.meta",
+      "sha256": "959435a57ad04aac88c7ce735589757d0ba3055539eef1bdf769d063379c2a1d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/props/taxi_v001/SIMUS_Taxi.prefab",
+      "sha256": "8d8323c417550968a9d8527d1a805c0e7ca14960f23e9aa4606ad1118683e423"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/props/taxi_v001/SIMUS_Taxi.prefab.meta",
+      "sha256": "2fa4dc76460999538358094728ca858501cf69ccd7485aeaa0aa979e52291fd6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/props/taxi_v001.meta",
+      "sha256": "5443a9defb3778a2f2d914142b4a981d9d28a89482c8cd935b74d81760f16f15"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/props.meta",
+      "sha256": "f3d1dab8801c3ba1c6fd84038770458dbe8be3cf4d9f0ef13aafc307f7550a80"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs.meta",
+      "sha256": "56fd3b782772c4d83f08dbeb389b75d57623b263bcf643bab40de53c1c69ee39"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CitizenCharacterAppearance.cs",
+      "sha256": "14e4ce6efdab1538b085fea64e7293f89864917ad258f8fa866d583f56a997e6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CitizenCharacterAppearance.cs.meta",
+      "sha256": "51c8dfef3857eb196f591f03edc2cacf0f159b00d44c9051b0ee015e1bec3bf1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityClientBootstrap.cs",
+      "sha256": "025087d0ac688ad622a11a1b09474a4734bf02571a27bba8ffd916a0faaf6344"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityClientBootstrap.cs.meta",
+      "sha256": "d64722161bde0d475e4db999d2212daf132d6f5de523d874214eae89797d5325"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityStateAnchor.cs",
+      "sha256": "26bde24e2fd2fcc354026cfcf892ee024f0cb584306c2b66513553ee257b5ca2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityStateAnchor.cs.meta",
+      "sha256": "1bd0727790489c0b47ea211e593bee58959e567dfaef8cb701b4ba02be89e8d3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityStateApiClient.cs",
+      "sha256": "3d56d971e8b8b1143b8958477f6a5707b931414d91a2fcc221df1f86baa3d0ef"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityStateApiClient.cs.meta",
+      "sha256": "0fea0fca5249943c09d54a9d2adad52cc3807c8c8a2e8465d0100f9100055d78"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityStateAssets.cs",
+      "sha256": "d311e62644ff269b7e6c961245afe476b4d9383f4bdbda800ea9906da1db6f35"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityStateAssets.cs.meta",
+      "sha256": "39ea851858cdb66e8d459206015f04a60f742be0640c6b7ca149667c7666d0f4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityStateDebugView.cs",
+      "sha256": "aaa48c064e11bf336883c819bf0eebbea41e51474eedb0176fdb8a150831a0d3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityStateDebugView.cs.meta",
+      "sha256": "607c68cae4b167fb692e481fb7b2e02a4356b9a0875e5be3ee300c421718fda2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityStatePoller.cs",
+      "sha256": "2c0eca7b62e0f1aaeb11d1c28c7dbbcbacd9d3a6d3af22d326ee978644df2ea5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityStatePoller.cs.meta",
+      "sha256": "20e51ecc7cab1eab00ecfaff70cbc47426985bcd739bc511e6cade404490a1e7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityVisualization.cs",
+      "sha256": "b94938ee1516581f3a4cd1a303e873077b334f9055aef115b8d7ca5972cea740"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityVisualization.cs.meta",
+      "sha256": "d3a2c2a4b773c57c1a46b1f78c33155ad57770c44c00d53e88620dcba3af9213"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/CityPollingPolicy.cs",
+      "sha256": "74c6a9f39a5710a97010ede75c2f4b9631bbac24b3f107314ed4ee995bce4842"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/CityPollingPolicy.cs.meta",
+      "sha256": "3c0cd0e920c23cfbf22f9565c4e2d6e42c6492a680113090299dcf6205903cee"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/CityStateDto.cs",
+      "sha256": "736c0290b8e178d6c623d30c1798f84502d74178599270ac1b969dc71ea71368"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/CityStateDto.cs.meta",
+      "sha256": "0be6b3eebe3146fc4d86d9f4f1559e84f562c6f567e80a36d858f8df4971a4da"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/CityStateJson.cs",
+      "sha256": "e8b7c4ea6a8c90c974a2d5420b06823a06c57aef8ca1f1925bb0c4e16bdd4d5b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/CityStateJson.cs.meta",
+      "sha256": "d958aef21a5aefb55ab546ec8d12f38d5de4b111180ddaea8976e348e44217c9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/CityStateStore.cs",
+      "sha256": "3fbdceece5c0e1d244cbf636a9dc4a27aa0a55159b56aa63b2e05a21e1fdd9f3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/CityStateStore.cs.meta",
+      "sha256": "40c9a21f8ccfed1eb5d36b05fee786b6b065d4556e6fb6abd2d50144ef96bc5e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/CityVisualMapping.cs",
+      "sha256": "9bff8ba0cdef8b3edba34e5eaeca2da0291ec3668385b2e3d2ca2f2425996a2a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/CityVisualMapping.cs.meta",
+      "sha256": "b8c8dcef25c9df5ca2efef132ea0e052057fe185690f02fcbb27ef4c15e0387e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/WebBridgeState.cs",
+      "sha256": "eeaa03d301ed37a538886a8861180a7c812187f76133e59a3b7c6a989282ba57"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/WebBridgeState.cs.meta",
+      "sha256": "945213ecc5759984b63d7483edf2dc782224e09277812346a46012b97317dfd4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core.meta",
+      "sha256": "812a8aa763c2cced04ae5de9988b1da5a4990248c1ca4074f94d9fc64e4bfdfd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/NeighborhoodLife.cs",
+      "sha256": "36afe608f08663adc9afb7018eee94d08b818afe0500cce6b273ef7e9a156b6d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/NeighborhoodLife.cs.meta",
+      "sha256": "f055816550ef642a0e2fb82d84316789538ac657f749d11fbcb4969aed95558f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/NpcCrowdPoller.cs",
+      "sha256": "3e5fdad808e4d77cbcae6f89a88d4167964d3897a025023217e346458297ac6c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/NpcCrowdPoller.cs.meta",
+      "sha256": "78129259aa590a7c636de1e33e6b21a890b4c24486910b91144aaee2f0d5a3d7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/SIMUS.City.Runtime.asmdef.meta",
+      "sha256": "0af6bff46d417d763e3e8c6b0c538a193a3d67debbc7b8eeb7c8bc474e09cf02"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/TransitVehicleRig.cs",
+      "sha256": "e29a0c0196fbdcde12ace90ab226649d70ffa8a221e747385427885ab8578b1f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/TransitVehicleRig.cs.meta",
+      "sha256": "49b02323c74a0b3efedcd25f232d7c77aa93b994eb7bb4e6395990fe68d20af8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/link.xml.meta",
+      "sha256": "591fb77b1d498aa984a7a985c1a016544f90b31b142fb22848a9ef28cfeb6e74"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime.meta",
+      "sha256": "8a106f982918eaf8194423d95409174e60f948c709b0c17e5758530d5d47b8bf"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/bridge_test/simus_bridge_test.unity",
+      "sha256": "ed55614d1a80b465f9d166fc35fc7fbd3514e87a9824345816bc5264d8f4a7de"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/bridge_test/simus_bridge_test.unity.meta",
+      "sha256": "841fb95b305c7ff49d7614145a6cc19b6738c7f6808f568ab5bd4cf138778d0b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/bridge_test.meta",
+      "sha256": "27a21b3d97bc8ca8f61b7c6a8aca5a3f9a0dd90c1db518f03288cb726babcffb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/clearance.mat.meta",
+      "sha256": "753aa5feceb0424e6fd58cb8c7c5b63bc5303cfbe4bdbe22f2022f465a39e33d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/commercial.mat.meta",
+      "sha256": "2879a6b3bd9110e8c49c65141d89f1ca31bdc2da984001884987608708333f73"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/ground.mat.meta",
+      "sha256": "bc0af2f428e00b219076b3e8ff5b56e7814e9bd5d26d2ef95dd950b93dbfd135"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/layout.json.meta",
+      "sha256": "13a0bf7300c16d441c59d94595aa6e4f8d3aec274100915a5e95fa160fcc50f4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/map_rebuild_draft.unity",
+      "sha256": "9d17bbcf3e1ede5ef134cec44662dfe62d964eaee10af0c5512f3fc67510a80b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/map_rebuild_draft.unity.meta",
+      "sha256": "938b026335fd43c919f962f36fbc3163f4bdd84b48e1ca7bf4a110d9cc2e5b33"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/mark.mat.meta",
+      "sha256": "dd8c8363e48c49c367234c0c2d2657a0581979257dc276d09e186eaa1cf3f536"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/park.mat.meta",
+      "sha256": "b5739d1b74bbdfecc7b8a0d6e540d616d0e1dd88b643fb25f9c9266e91d1b044"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/proxy.mat.meta",
+      "sha256": "cf776c1129e9bced1f3023c460196b66b31258d881b220f75de2c3a7d2f00767"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/residential.mat.meta",
+      "sha256": "b483c598de8db748f7ca120cd7804eff3c2ec000e7663b87cee3735f6fdd5be0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/road.mat.meta",
+      "sha256": "1d92f7ca92b647da6f277775249b2263e51b33e631f4408e526420084bfe4fe7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/school.mat.meta",
+      "sha256": "dfe4b0c49ff0ee07ef24705fde081f08f41be954606076369a4b229346881d78"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/walk.mat.meta",
+      "sha256": "502139cfd674b95556bd9b147713c1d548cd73d7071bbd0da6a4f07f3f0ae8e6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft.meta",
+      "sha256": "22e52bb197593480e1ae4d6f13a7ea4bf7bd71ae2b9642bcd79082ad634794c3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/npc_follow_test/CompletedMapNpcFollow.unity",
+      "sha256": "0c0bb8b3c4b689a89f96c0be35327ee84940eec6a40ef030b0ba5cc01b13a966"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/npc_follow_test/CompletedMapNpcFollow.unity.meta",
+      "sha256": "9d15a187cdccdf32ccb13f0b1997d31e2e1ab0f6624f3b7216f4e1b4983a6de6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/npc_follow_test/README.md.meta",
+      "sha256": "76ede5978d69fec4d078a2a830f8e80fed5c1fae8c5caa3331052467d5b54e54"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/npc_follow_test/TestNpcWalk.controller",
+      "sha256": "1fd2e7f25bca82d0e4a5a21947782201273e524cc4121f21a0980406eb4f3375"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/npc_follow_test/TestNpcWalk.controller.meta",
+      "sha256": "bc04eff780aee5d09b68aa94eca79e06529cb84dac321789b43f71f80703dab6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/npc_follow_test.meta",
+      "sha256": "8470fb9c9a98cd21fd712e55c40a8bf2ca257219c137e9dbeeb0b7971596e94e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes.meta",
+      "sha256": "4101499690bdc3a08954bfc4235409afea3e4e2b937c4c94303faa69691fe9b3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/CitizenCharacterAppearanceTests.cs",
+      "sha256": "411ab12a2dcc87aa95d0c77fc9eb1d8d5661748f2ac90be5526f5a75540339c1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/CitizenCharacterAppearanceTests.cs.meta",
+      "sha256": "918b5811d6d2bf4c69428dd48c31b768f5ddb3d76f8bbe79b3bea58c4ce06167"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/CityClientTests.cs",
+      "sha256": "e0768608a02c5c01e9b6b8028bb970f9edddfa555dfe050a64f0f887e6f2be51"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/CityClientTests.cs.meta",
+      "sha256": "2685fc5f6dcd13c6faa8bb86ca1e27d23cd15e837407392962ea1b2774c8d5b9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/NpcMovementTests.cs",
+      "sha256": "58bf7b0e9e8a77edb14c0b5188c6ba6cbdb2d4fd999d8c193712b5b81ab1df7f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/NpcMovementTests.cs.meta",
+      "sha256": "9fceddcb272f3ef2722f2ea5d704ed3963e025e4d3122dfd762c43ac87550140"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/SIMUS.City.Tests.asmdef.meta",
+      "sha256": "ad420f35b3f93e3cbaecc23a7b9147e4501e57d6c71b951cd044e929e26b16c9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/WebBridgeStateTests.cs",
+      "sha256": "d47a7d3d1f654c910ba9cf112bddc86cb097247ba3fcdf944dc6875b56947005"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/WebBridgeStateTests.cs.meta",
+      "sha256": "91db699c27c05d90e90bb868748810e8a8de189c42d2db1ae08625fde27c2265"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor.meta",
+      "sha256": "14986c983c9956e9d42655d0217a97f85067e025bdd08f4e0477114e70b55eea"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests.meta",
+      "sha256": "aa442bbfa94f7dd5c45efe450d7c18fa3f4320c70e611b1aa9b27175d6a045a8"
+    },
+    {
+      "path": "unity/Assets/SIMUS.meta",
+      "sha256": "634792083dfae052fd4ceff19c1057759e376e175bc58eb6ec795699431df61d"
+    },
+    {
+      "path": "unity/Assets/Scenes.meta",
+      "sha256": "a02f1ee82dab7e39f15a8a94fdd7cb1f591c34c3b0ab4c29b716473f7850f29a"
+    },
+    {
+      "path": "unity/Assets/Scripts/CityPreviewCamera.cs",
+      "sha256": "3c23c0110f799a390f6512d97bd268bf7b905a7d501dc78ab384a9fa115fea44"
+    },
+    {
+      "path": "unity/Assets/Scripts/CityPreviewCamera.cs.meta",
+      "sha256": "e0424c1d5811cddc7befbbbb470253ac87e4879c9f694fbb2dbe52426c32eb68"
+    },
+    {
+      "path": "unity/Assets/Scripts/NpcGrounding.cs",
+      "sha256": "f6b7bbf28b3f697724c7f827f09e83cf1a9e99ca7c08f1009512cefd220c2545"
+    },
+    {
+      "path": "unity/Assets/Scripts/NpcGrounding.cs.meta",
+      "sha256": "6dbb201a6b068be4e3ae0d6d73f1ec79a40c532b5444c004ff34b8abb6c8844f"
+    },
+    {
+      "path": "unity/Assets/Scripts/NpcOcclusionReveal.cs",
+      "sha256": "84126a166827c3ac052a2acbd6abd715fc5791575a1ad90fa0fd8ccb59978fd8"
+    },
+    {
+      "path": "unity/Assets/Scripts/NpcOcclusionReveal.cs.meta",
+      "sha256": "dc99725979623bd6b59af2a5baddf529f85e1076668336e44696ebfb24288f60"
+    },
+    {
+      "path": "unity/Assets/Scripts/TestNpcPatrol.cs",
+      "sha256": "8bdc852b8d720407d1e206901429660f54433b7f32fae70d5e10d6bc2aff9b77"
+    },
+    {
+      "path": "unity/Assets/Scripts/TestNpcPatrol.cs.meta",
+      "sha256": "a44d9b8f94a3cb5c6f045cb7f207a831cb4563802e071550295d4a5a35747ebd"
+    },
+    {
+      "path": "unity/Assets/Scripts/WebCityBridge.cs",
+      "sha256": "01aa7a1d26d393d4f7ffbf15de1efe12c509704933fc829c7acbef534f426122"
+    },
+    {
+      "path": "unity/Assets/Scripts/WebCityBridge.cs.meta",
+      "sha256": "ec9a21aba2f84fee2fd0c042c4548c248dcbadf5c5cb65505e09345c431bc665"
+    },
+    {
+      "path": "unity/Assets/Scripts.meta",
+      "sha256": "6dd060c2494324955ae851774cd0d83d914b046c4dcec24730ef31d0578cbcfb"
+    },
+    {
+      "path": "unity/Assets/Shaders/CitySurface.shader",
+      "sha256": "7ec4ddeab5eb051a99e5ba682a492809af114510135747558c52c00027b57e37"
+    },
+    {
+      "path": "unity/Assets/Shaders/CitySurface.shader.meta",
+      "sha256": "ed0ce948efc10779623e4eedc82b21e95a9fe63c8d07d612268d520d5e11882f"
+    },
+    {
+      "path": "unity/Assets/Shaders/NpcReveal.shader",
+      "sha256": "ce9db1b0c453583a0270e1af0153381fc9cccec10b2a69d666e0bd65f87a90c7"
+    },
+    {
+      "path": "unity/Assets/Shaders/NpcReveal.shader.meta",
+      "sha256": "9e1fa5cee9f3ae16b45bd985d2adb36f8d15cb607f08186acd48672b500af309"
+    },
+    {
+      "path": "unity/Assets/Shaders.meta",
+      "sha256": "d4694b76c23f21c9b0fbceab1c697f74bc371274ae262a20ca447d48a00ff430"
+    },
+    {
+      "path": "unity/Assets/WebGLTemplates/simus_city/bridge.js.meta",
+      "sha256": "e013ab6e8ba00dff2fcbfa4586fb84f8b0cfc077b029441c5982784fa664da47"
+    },
+    {
+      "path": "unity/Assets/WebGLTemplates/simus_city/index.html.meta",
+      "sha256": "6d02bc052ce012ae33d2655b5ac3dd975e3153a6cf6b4885d6a8b463901b821a"
+    },
+    {
+      "path": "unity/Assets/WebGLTemplates/simus_city.meta",
+      "sha256": "d4e870b36be516a136dc244df3929c1e1d8de2369fbd85ef5d291712007f5b22"
+    },
+    {
+      "path": "unity/Assets/WebGLTemplates/simus_preview/index.html.meta",
+      "sha256": "a9832bbe55d90d3c1f71e8dd3919a95a308e28899ea1b0a05a8deb52812ee0d2"
+    },
+    {
+      "path": "unity/Assets/WebGLTemplates/simus_preview.meta",
+      "sha256": "a864c84caf46c020508015bd9c5a1b7fa5c99f56b09deb17f3a5c3264c4bd41a"
+    },
+    {
+      "path": "unity/Assets/WebGLTemplates.meta",
+      "sha256": "ca9879934e41473c475b098eaa5748fc16c334e121b5b5efa3bdf1488568cd17"
+    },
+    {
+      "path": "unity/Assets/department_store_v2/SIMUS_Department_Store_v2.blend",
+      "sha256": "f46360ef1bd0d85c3aeba167244d37f15ac60e9353bd95ad8a9b2d6be2f7dd59"
+    },
+    {
+      "path": "unity/Assets/department_store_v2/SIMUS_Department_Store_v2.blend.meta",
+      "sha256": "22de45ce2e558fccb10652380e78bcaa498a8b2c4ba21b495298d931cbc8d436"
+    },
+    {
+      "path": "unity/Assets/department_store_v2/SIMUS_Department_Store_v2.fbx",
+      "sha256": "18efee1cebc89bd0e48ded53c3b0022902a38369916186c5e01fd94991c80779"
+    },
+    {
+      "path": "unity/Assets/department_store_v2/SIMUS_Department_Store_v2.fbx.meta",
+      "sha256": "a20062a7102676a1ba6a2ba36458297a4fbc5dbbe7394b89725b0cfb093f030f"
+    },
+    {
+      "path": "unity/Assets/department_store_v2/SIMUS_Department_Store_v2.glb.meta",
+      "sha256": "2009a44563dfa9a04125210aec9f63ce89c922b571cc838626b13c8933c0974a"
+    },
+    {
+      "path": "unity/Assets/department_store_v2/SIMUS_Department_Store_v2_Preview.png.meta",
+      "sha256": "4ab91844804813436d57d2bf71908af904b45b32430ab1ff92320dd993628d2c"
+    },
+    {
+      "path": "unity/Assets/department_store_v2/사용안내.md.meta",
+      "sha256": "7a0d955e1722b71560cb58915d72a4c062845a0d700abeee79ab7cbf4e326122"
+    },
+    {
+      "path": "unity/Assets/department_store_v2.meta",
+      "sha256": "1ac746354c2e26648c6286483c6ee59a8a8a898bb34d4ecfc4a754d2eeed59c1"
+    },
+    {
+      "path": "unity/ProjectSettings/AudioManager.asset",
+      "sha256": "9543c41dbfc7d3951217c4dd9481ed026eb8e529b85ecf4463969a0fea747729"
+    },
+    {
+      "path": "unity/ProjectSettings/ClusterInputManager.asset",
+      "sha256": "40e65dd214bf254955d2c8829ca8ce2130fd3510485560ce012e9a1ddd93e623"
+    },
+    {
+      "path": "unity/ProjectSettings/DynamicsManager.asset",
+      "sha256": "d102dd312ef330f5e5ca255c070fb34f68f59ec633d1e9fd67e2f2f6f88f66c8"
+    },
+    {
+      "path": "unity/ProjectSettings/EditorBuildSettings.asset",
+      "sha256": "2cd022cef03df022746b9ab3e571ab35ae423c7a10bf896bbef3cd0b4342ca20"
+    },
+    {
+      "path": "unity/ProjectSettings/EditorSettings.asset",
+      "sha256": "06753c21648950aee0013b70f79a9035ac52aec6204d44cc2ac55a84034ad9ca"
+    },
+    {
+      "path": "unity/ProjectSettings/GraphicsSettings.asset",
+      "sha256": "40de98f4d46d02fb08e268ad3a722a00eed7289f4ef6d2e759984b1b4a85d2af"
+    },
+    {
+      "path": "unity/ProjectSettings/InputManager.asset",
+      "sha256": "d0f454ddb880912abcae92e3e12957a7446786ba89e24937e019ff3bbc0d4300"
+    },
+    {
+      "path": "unity/ProjectSettings/MemorySettings.asset",
+      "sha256": "2c9e2339b4fa50f4782840d37dde021508d411b99278614cba335d206edb1738"
+    },
+    {
+      "path": "unity/ProjectSettings/MultiplayerManager.asset",
+      "sha256": "ce4075d7a7dd8ac7ffe55de2427692c63f90dae398208bd80cec0f27cbe09f4b"
+    },
+    {
+      "path": "unity/ProjectSettings/NavMeshAreas.asset",
+      "sha256": "7ebbf8f53b8033104e1878b95ca07a28d0954092d81c220f14196a42f651e658"
+    },
+    {
+      "path": "unity/ProjectSettings/PackageManagerSettings.asset",
+      "sha256": "d5193b2bd6fb849b947191069456b8585bc731c6c4728a223b10ce8a0356b533"
+    },
+    {
+      "path": "unity/ProjectSettings/Physics2DSettings.asset",
+      "sha256": "1cfc0c8fbceec604fd7cd2a06c04ff05dddee6335b75c92b0f5715ad80ba9490"
+    },
+    {
+      "path": "unity/ProjectSettings/PresetManager.asset",
+      "sha256": "29c125923fe6e29f90190d4fce1c82d660e7051546e2c9d02908d18c9cf2436c"
+    },
+    {
+      "path": "unity/ProjectSettings/ProjectSettings.asset",
+      "sha256": "44dda145df8338d0ac95ab3dbe3cb7759353f44d31c0a60a765b0a9d433e9fd4"
+    },
+    {
+      "path": "unity/ProjectSettings/ProjectVersion.txt",
+      "sha256": "7a43a06dfe51c4e3933c5a7848320925ce96e667f8c7736557d13a02007e9860"
+    },
+    {
+      "path": "unity/ProjectSettings/QualitySettings.asset",
+      "sha256": "f1f893b1be47ad2442f58338dd7c860dc1986bb317e2f5bb31084454ffabbf4c"
+    },
+    {
+      "path": "unity/ProjectSettings/TagManager.asset",
+      "sha256": "da4b5eefc927f8b91bcf9e56a186d2b852f49d9cbe91d466638d26c79d6a83ce"
+    },
+    {
+      "path": "unity/ProjectSettings/TimeManager.asset",
+      "sha256": "3396f52fdc16d445024e01d7a2d99db6f0a37569d1d73c0302e9ffb857d90287"
+    },
+    {
+      "path": "unity/ProjectSettings/UnityConnectSettings.asset",
+      "sha256": "11251dae0356b6f43dd2c67bb511f6b7ecda4e5de425186bba3297e6f3dc1c6f"
+    },
+    {
+      "path": "unity/ProjectSettings/VFXManager.asset",
+      "sha256": "2973a6af930e142f62cde00076beda8a3cc3a66d9bfcde7a58ba7d4be2251c26"
+    },
+    {
+      "path": "unity/ProjectSettings/VersionControlSettings.asset",
+      "sha256": "e199cdfa6a8f2bf33cfd47e549198f13e3eb2a5099e908fdb4e0f14d939ccc6b"
+    },
+    {
+      "path": "web/.DS_Store",
+      "sha256": "f48b56efa68abb392c65a6821f95573c8fcb8e8d503459ff49eef1e26f29cc3a"
+    },
+    {
+      "path": "web/.demo/admin-token.txt",
+      "sha256": "6342a8b38757363704110aca7ae7f9a876a55852fae4dd6b589ac79ef7a9dfff"
+    },
+    {
+      "path": "web/.demo/check-live-unity.mjs",
+      "sha256": "22ab382b0e6ef0637a7e82fb93096c4e01a08f5ae74ae1d51fbec9066a786d5a"
+    },
+    {
+      "path": "web/.demo/env.local",
+      "sha256": "66b745f4d9ad217dcbccb89263af08b3d9c7a17e7364c5df00cb8b28a87bab0b"
+    },
+    {
+      "path": "web/.demo/start-dev-round.cjs",
+      "sha256": "48ec6b0d3be6de151678117f817d9f086493d3d8a6538388fb8b63ae07ec2453"
+    },
+    {
+      "path": "web/.env.local",
+      "sha256": "a38a7ec91bd3fd870062e649e49403f9d7345a9c42ae2016803a4aa36710bdbb"
+    },
+    {
+      "path": "web/.gitignore",
+      "sha256": "207e265ff4901f9ad9f96d8ce08530e04f9fc600815472a66d0a446096d654cd"
+    },
+    {
+      "path": "web/.unity-deploy-backups/city-before-character-1791867226314699000/Build/development_city.data",
+      "sha256": "ab62e89feecd734d99fbd093147d489ba838c2e0eaae6f17fba0bc5cad482f6f"
+    },
+    {
+      "path": "web/.unity-deploy-backups/city-before-character-1791867226314699000/Build/development_city.framework.js",
+      "sha256": "5e11241e3e49a81ffb86319deff63dcaebd2690b573a02a037b510ac86931bab"
+    },
+    {
+      "path": "web/.unity-deploy-backups/city-before-character-1791867226314699000/Build/development_city.loader.js",
+      "sha256": "19652b5390d8d8510235fb13e918b0553ac4eceff0d9028fad6467672412bb99"
+    },
+    {
+      "path": "web/.unity-deploy-backups/city-before-character-1791867226314699000/Build/development_city.wasm",
+      "sha256": "34646b6afdac6a58a236e160a93c5e0235509d842f905ac59a810bd20ce49987"
+    },
+    {
+      "path": "web/.unity-deploy-backups/city-before-character-1791867226314699000/bridge.js",
+      "sha256": "0f3b72662cc12879951e99d3a23ee22c26eb7b981c5b694115a7f8a01044521c"
+    },
+    {
+      "path": "web/.unity-deploy-backups/city-before-character-1791867226314699000/build.json",
+      "sha256": "3e63ea440f921869966cd56b78dabe3ef48a4a8fb91c40548c7ea01082c292d9"
+    },
+    {
+      "path": "web/.unity-deploy-backups/city-before-character-1791867226314699000/index.html",
+      "sha256": "984368c522454e3805b31870251636c5e2e1d960d2f98eae737c648a30b784cc"
+    },
+    {
+      "path": "web/.unity-deploy-backups/city-before-character-1791869370007058000/Build/development_city.data",
+      "sha256": "8220137b937fb99417139919354b41264f1e057db367a2e76795a0a61a83d3cc"
+    },
+    {
+      "path": "web/.unity-deploy-backups/city-before-character-1791869370007058000/Build/development_city.framework.js",
+      "sha256": "d45b2712093e1d9d01bc22fa9d5f3f2e4c7480ec2cb15e2493471d618bcdb046"
+    },
+    {
+      "path": "web/.unity-deploy-backups/city-before-character-1791869370007058000/Build/development_city.loader.js",
+      "sha256": "4530ce9a6311ed07002c0b875ce3738cf79829a409460ddc9c65444f35ee09c0"
+    },
+    {
+      "path": "web/.unity-deploy-backups/city-before-character-1791869370007058000/Build/development_city.wasm",
+      "sha256": "ed33c7cd39590d58df8cc6e75f05c7a60e664fe8a4f8d7d4e47ea8655d664ed6"
+    },
+    {
+      "path": "web/.unity-deploy-backups/city-before-character-1791869370007058000/bridge.js",
+      "sha256": "0f3b72662cc12879951e99d3a23ee22c26eb7b981c5b694115a7f8a01044521c"
+    },
+    {
+      "path": "web/.unity-deploy-backups/city-before-character-1791869370007058000/build.json",
+      "sha256": "3e63ea440f921869966cd56b78dabe3ef48a4a8fb91c40548c7ea01082c292d9"
+    },
+    {
+      "path": "web/.unity-deploy-backups/city-before-character-1791869370007058000/index.html",
+      "sha256": "984368c522454e3805b31870251636c5e2e1d960d2f98eae737c648a30b784cc"
+    },
+    {
+      "path": "web/.unity-deploy-backups/city-before-character-1791871742295733000/Build/development_city.data",
+      "sha256": "32ea9161e28b29f09eaa097471fa08067a6fad2ba66e19039ed263179163752c"
+    },
+    {
+      "path": "web/.unity-deploy-backups/city-before-character-1791871742295733000/Build/development_city.framework.js",
+      "sha256": "d45b2712093e1d9d01bc22fa9d5f3f2e4c7480ec2cb15e2493471d618bcdb046"
+    },
+    {
+      "path": "web/.unity-deploy-backups/city-before-character-1791871742295733000/Build/development_city.loader.js",
+      "sha256": "cea3c9351e815b197df75d9d15748f12a05b7157389ba2d7c9bfd28c17f6975b"
+    },
+    {
+      "path": "web/.unity-deploy-backups/city-before-character-1791871742295733000/Build/development_city.wasm",
+      "sha256": "bf515156497087952efca8feae46a897fd4f6eaaa0a5bfdfcfef8ed5814c1d9e"
+    },
+    {
+      "path": "web/.unity-deploy-backups/city-before-character-1791871742295733000/bridge.js",
+      "sha256": "0f3b72662cc12879951e99d3a23ee22c26eb7b981c5b694115a7f8a01044521c"
+    },
+    {
+      "path": "web/.unity-deploy-backups/city-before-character-1791871742295733000/build.json",
+      "sha256": "3e63ea440f921869966cd56b78dabe3ef48a4a8fb91c40548c7ea01082c292d9"
+    },
+    {
+      "path": "web/.unity-deploy-backups/city-before-character-1791871742295733000/index.html",
+      "sha256": "984368c522454e3805b31870251636c5e2e1d960d2f98eae737c648a30b784cc"
+    },
+    {
+      "path": "web/AGENTS.md",
+      "sha256": "63f2c50380ed6303237cce215ce27af1d620d094c215e28d1b1538a3c070e3bb"
+    },
+    {
+      "path": "web/API.md",
+      "sha256": "089e0817fde66e81a6d9423fa5bd06b011d5cdf0738b46cce751f4f127391453"
+    },
+    {
+      "path": "web/CLAUDE.md",
+      "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49"
+    },
+    {
+      "path": "web/OPERATIONS.md",
+      "sha256": "ec79030aed08af46e064230e72d4c889a89752adb0322fa0a17b29d1e86e0b76"
+    },
+    {
+      "path": "web/README.md",
+      "sha256": "a7ef674ceb49e49048e49752edddced9a426c48b34800e095a641e67014ec185"
+    },
+    {
+      "path": "web/env.example",
+      "sha256": "63675117e8c7e35fe0a52168191c0c3c25b06d7020338aa98537bdb9244a3df3"
+    },
+    {
+      "path": "web/eslint.config.mjs",
+      "sha256": "df1f73f257215fd0a574bdb20eeebefda0975255e274e32eb84626d6a74adead"
+    },
+    {
+      "path": "web/next-env.d.ts",
+      "sha256": "0f70629890b72a0a82e91972cc032c04b658b26c265373cb711cf576bfbf8fcc"
+    },
+    {
+      "path": "web/next.config.ts",
+      "sha256": "04fd9b0d7e0788bba6199b1e52b2ed32ff640cc65c33a2fcc12872ac8e86340d"
+    },
+    {
+      "path": "web/package-lock.json",
+      "sha256": "69d1ac69552d8142c2d38a0ecfc0eaec084cc78b772e00de02ee0bc57aca1aa2"
+    },
+    {
+      "path": "web/package.json",
+      "sha256": "c3cf56264249acf8d938ffc01ecd362990214d19571dbdc7ceb2ee3f2edb5b13"
+    },
+    {
+      "path": "web/public/characters/custom/npc_01_none.png",
+      "sha256": "22ec3ea7b0a0259ee8329a0004ed0e692d2da3d25c77aba73ac9117da42aec5e"
+    },
+    {
+      "path": "web/public/characters/custom/npc_01_round.png",
+      "sha256": "2bb093f0dfe466aa6ff34320311e7e95ef740549a5d8aa8cb31c18338f37d299"
+    },
+    {
+      "path": "web/public/characters/custom/npc_01_square.png",
+      "sha256": "5e092d978f06443dfaa02007f18ac798a40842f33fc49a15229606490b91503a"
+    },
+    {
+      "path": "web/public/characters/custom/npc_02_none.png",
+      "sha256": "61775e9efdeaac90a9837f215ac40cc75cb411b1cbb38308314e13298c035ed0"
+    },
+    {
+      "path": "web/public/characters/custom/npc_02_round.png",
+      "sha256": "6f260df15f7ab13d19af725d1bd14199d9a89422971a0a525e4d083d78a63c6a"
+    },
+    {
+      "path": "web/public/characters/custom/npc_02_square.png",
+      "sha256": "2d4c929834bfcad44b213c351fa087e391f4efe2c7c26eb004477eb0f4d36ff7"
+    },
+    {
+      "path": "web/public/characters/custom/npc_03_none.png",
+      "sha256": "3e34c934b71362b9ca9c299dc3b694010a90fec39a29f854888acfa68ca7fce7"
+    },
+    {
+      "path": "web/public/characters/custom/npc_03_round.png",
+      "sha256": "e007a0df5da0fa2dcb31d35892785af76ab279f5dc9778fc77a789281053bb2f"
+    },
+    {
+      "path": "web/public/characters/custom/npc_03_square.png",
+      "sha256": "1950ea8d155984fdac66a5b678aa1a08e2108476c2860a1a6a6526c738a004b8"
+    },
+    {
+      "path": "web/public/characters/custom/npc_04_none.png",
+      "sha256": "71092c9b648a417587535e544673a4be267fb79a8a7176d6cbad7def0db0b966"
+    },
+    {
+      "path": "web/public/characters/custom/npc_04_round.png",
+      "sha256": "5d422241317ce1287bed324568e7936ae4a60a5237590fd5e92892c33546af72"
+    },
+    {
+      "path": "web/public/characters/custom/npc_04_square.png",
+      "sha256": "575d5084644c851940a96858d358d2902ef1f954b3a5f30694811f677a7314e2"
+    },
+    {
+      "path": "web/public/characters/custom/npc_05_none.png",
+      "sha256": "96e8e8ee0063938549ea0dc18fa673c6dfe8b4b45dac74e0a4a9a57a2fc0af0d"
+    },
+    {
+      "path": "web/public/characters/custom/npc_05_round.png",
+      "sha256": "6a8b4dc6de04fbd15fd9ad97d3448dadcaa5b5d91d375b9b54f7476d126c21c2"
+    },
+    {
+      "path": "web/public/characters/custom/npc_05_square.png",
+      "sha256": "0feaed9e6069a79c76b8849918ac945902a99f9d88f0331d72d03b916f58ef9d"
+    },
+    {
+      "path": "web/public/characters/custom/npc_06_none.png",
+      "sha256": "b3d78996ae3d8d846623cd858e8741a13907b78a122ebe7b4d9bd3f456ee4596"
+    },
+    {
+      "path": "web/public/characters/custom/npc_06_round.png",
+      "sha256": "5c74af3f82f50e20c3fb62c896d2ce5fa185ca6340a18b3ac6d7272b91749163"
+    },
+    {
+      "path": "web/public/characters/custom/npc_06_square.png",
+      "sha256": "991f2fa369f713aa212e376187311053086a0cda6b8a219313890f6e6db0c83d"
+    },
+    {
+      "path": "web/public/characters/custom/npc_07_none.png",
+      "sha256": "fe83f5905362b24443b7cb957c4db3cfcae035d0ff81f71e352501c3b23fb964"
+    },
+    {
+      "path": "web/public/characters/custom/npc_07_round.png",
+      "sha256": "c1ffc6860001caaa23e4951bca5f33f66be843720b83203618d11a0af255e989"
+    },
+    {
+      "path": "web/public/characters/custom/npc_07_square.png",
+      "sha256": "48c13e04af84058764d7a41ff56df6f914ab8bd11685853d77f88b64e386cfc6"
+    },
+    {
+      "path": "web/public/characters/custom/npc_08_none.png",
+      "sha256": "760b77ba27e5cd17c781bc9f753165cc46e7eaee14c083eaaf96958c05c51209"
+    },
+    {
+      "path": "web/public/characters/custom/npc_08_round.png",
+      "sha256": "6552d0c94166a089dfb90768b0bab6db6ca9223c3c9783a93d89ba2679821c0f"
+    },
+    {
+      "path": "web/public/characters/custom/npc_08_square.png",
+      "sha256": "7e588198d409fda19d15c8eceeaa63a88ca4c4428afa4f1b621f976e987281d8"
+    },
+    {
+      "path": "web/public/characters/custom/npc_09_none.png",
+      "sha256": "786139abd125b1c319e00d70e0e89ef7453326e678c2ee2d838b831b39627294"
+    },
+    {
+      "path": "web/public/characters/custom/npc_09_round.png",
+      "sha256": "55ab7f36462db1ee6ed95916ec37611606571f8d5318625bc51b178b7a18dff6"
+    },
+    {
+      "path": "web/public/characters/custom/npc_09_square.png",
+      "sha256": "892309d4f131147c751d5b0ed237e7ac85233f2ac3c3833955e0244ab826bef6"
+    },
+    {
+      "path": "web/public/characters/custom/npc_10_none.png",
+      "sha256": "5cef8df3834dcbb89f8ac8f10adec4bba9bdd5f28c45f7a4ceda94bf26b4b0c3"
+    },
+    {
+      "path": "web/public/characters/custom/npc_10_round.png",
+      "sha256": "ee1abf2a7c13affd643e32ba7255b0c1b5a89217c232ca3be04616340cca5747"
+    },
+    {
+      "path": "web/public/characters/custom/npc_10_square.png",
+      "sha256": "d039b3c8ebdaa1e62a976225c6a8a057c015ebdaddfd94094f1e0906b1f766a0"
+    },
+    {
+      "path": "web/public/characters/custom/npc_11_none.png",
+      "sha256": "17e35f9259600d67c6ee58cd5437787a3c65259466f418bb3c0dbe8471a2849d"
+    },
+    {
+      "path": "web/public/characters/custom/npc_11_round.png",
+      "sha256": "4e872616a3acdc989601540a8e57ba5a6114e2418fe615721b69512b777b9493"
+    },
+    {
+      "path": "web/public/characters/custom/npc_11_square.png",
+      "sha256": "ec1a246bc9f9e9a04d0595c806720e18cb21b11604f5dca12f4f3f2dae611f9c"
+    },
+    {
+      "path": "web/public/characters/custom/npc_12_none.png",
+      "sha256": "043b1ffa3bd3a14e2d2e692e1d99022fbd788303a673ef01801aff036ed005cc"
+    },
+    {
+      "path": "web/public/characters/custom/npc_12_round.png",
+      "sha256": "03aa4fc1d7bef12e8b5f625bb9ea9ef34b976f48106b521ea30d95f382c04ad7"
+    },
+    {
+      "path": "web/public/characters/custom/npc_12_square.png",
+      "sha256": "6c5528f7f5559f44a10bd8870c28ce4ba20c72478fbd2db5bccf1ccd1557cc9a"
+    },
+    {
+      "path": "web/public/characters/custom/npc_13_none.png",
+      "sha256": "ebedf584dd35cc659fcc46aa587c61d1c86783e08aa169d44bc1594f0d29dc7d"
+    },
+    {
+      "path": "web/public/characters/custom/npc_13_round.png",
+      "sha256": "bcede2e7cb046baa79d9f481d26272ead1e574bfae10acf97244ce0a08fc5136"
+    },
+    {
+      "path": "web/public/characters/custom/npc_13_square.png",
+      "sha256": "b2b25b0f12ffa7ba41550b5fb4e44987670a1b0aac0a8f60acf9ed4c5fc2f4fd"
+    },
+    {
+      "path": "web/public/characters/custom/npc_14_none.png",
+      "sha256": "fb3a7f3f1b43c960e24b976f564645a7087f2670abd9712df4217cb65ab84620"
+    },
+    {
+      "path": "web/public/characters/custom/npc_14_round.png",
+      "sha256": "23c5368aa5d958920a18be88d81fa7bad31968aa5202b9d9fe2b2ccae7c8d69a"
+    },
+    {
+      "path": "web/public/characters/custom/npc_14_square.png",
+      "sha256": "2a37ec3c7e4edfaae7f638f9ae738d8fa7317bca7a629cd49fc10626ea6a8de3"
+    },
+    {
+      "path": "web/public/characters/custom/npc_15_none.png",
+      "sha256": "80033876df9dcf1807ced8c2683b4e482eef10377e36dbd9d733c1f56716fb5f"
+    },
+    {
+      "path": "web/public/characters/custom/npc_15_round.png",
+      "sha256": "e08558514d8b2f55590d6715ef8e846e753c216c0b4ee6e2e48b3cd0d80e4722"
+    },
+    {
+      "path": "web/public/characters/custom/npc_15_square.png",
+      "sha256": "f3eacc95bdab0332ef7fc91aa8d1ec296a64b579efee44d81388f768df481493"
+    },
+    {
+      "path": "web/public/characters/custom/npc_16_none.png",
+      "sha256": "2dea9693570108e0d96412eb174d3664d1412ade6b9714b920a2ccdf8260b9b5"
+    },
+    {
+      "path": "web/public/characters/custom/npc_16_round.png",
+      "sha256": "dd039ee19072557ed150031bb4121d79279676daad066362ead70827e8a3ddb3"
+    },
+    {
+      "path": "web/public/characters/custom/npc_16_square.png",
+      "sha256": "10263ab4231048c651e597d5d79edd4156164de59ec634e8ca1370164c32d4fb"
+    },
+    {
+      "path": "web/public/characters/npc_01.png",
+      "sha256": "7cb906d95f898264457d631d518d486a832dd99e583b8eb8a093a13831be25b8"
+    },
+    {
+      "path": "web/public/characters/npc_02.png",
+      "sha256": "496594e06609538e0f8eeb43c484a06be6dc0ad8a2f3481382bd67e3f8e2e9b0"
+    },
+    {
+      "path": "web/public/characters/npc_03.png",
+      "sha256": "75667655035710ed7a84b1c50da0ba9275679e30252e72873c663c22fa29f586"
+    },
+    {
+      "path": "web/public/characters/npc_04.png",
+      "sha256": "c4c5de41bf01efd2098b0f7c00f7e1c74bd4335edd04a90604df3d3d6f7e3d7c"
+    },
+    {
+      "path": "web/public/characters/npc_05.png",
+      "sha256": "c7f80e6baf1f188cbadd0e6eefd5950ed7388a44ba80a388076ee9ba216b056f"
+    },
+    {
+      "path": "web/public/characters/npc_06.png",
+      "sha256": "ea1db1ffe4fc3106b9c51d26b171f93203598af613ee093b3aee9a7d414b722a"
+    },
+    {
+      "path": "web/public/characters/npc_07.png",
+      "sha256": "0bbc9d062957990303a5972d9a370a867cb315902fd2e480497d9b2cd7c1e6e3"
+    },
+    {
+      "path": "web/public/characters/npc_08.png",
+      "sha256": "b4ad4f4bfc681064c7498fe41d561b6838c49749d8adcfae0f61ac1a3a4168af"
+    },
+    {
+      "path": "web/public/characters/npc_09.png",
+      "sha256": "a16b005dbf5f415eac074cb3e0e23f62cd1eb5f375e2b3b8f22b408f190239c0"
+    },
+    {
+      "path": "web/public/characters/npc_10.png",
+      "sha256": "8a54abd17fefb819a4466b5983b2f3b7379d2854c7b762a8af2a689fb28b0fb4"
+    },
+    {
+      "path": "web/public/characters/npc_11.png",
+      "sha256": "7cf4045b4e147969be8fd660d0f60c63e131a141394185ed867136abcc3e027f"
+    },
+    {
+      "path": "web/public/characters/npc_12.png",
+      "sha256": "233c8c4adca2c958cfef800f50fd5beb246f43a379e1c1a471134398c6b98a9c"
+    },
+    {
+      "path": "web/public/characters/npc_13.png",
+      "sha256": "518b9efcb751657ac43da5976a65846bcb2a92c3c3fcd952d1ba2834658524b0"
+    },
+    {
+      "path": "web/public/characters/npc_14.png",
+      "sha256": "9dcb48c6251d77d4df28ef7de633f121299c747e5d6bee286628c1a7744a0fd2"
+    },
+    {
+      "path": "web/public/characters/npc_15.png",
+      "sha256": "10c96a1a49f430d039dd950bf72cfd6e9f3a03171e2b457d074d54d9249f9d5d"
+    },
+    {
+      "path": "web/public/characters/npc_16.png",
+      "sha256": "6e3da18b9327723a22c3cf39ddea6eacc0fce2afcad2c70a087a017735f2b34d"
+    },
+    {
+      "path": "web/public/city/Build/development_city.data",
+      "sha256": "7dd40c5f15606e8158d57c5717b2085d553ca72601b353eb396f9fd33d2c02f9"
+    },
+    {
+      "path": "web/public/city/Build/development_city.framework.js",
+      "sha256": "65339d84093e272489ef09498693c8ef7a75adca3c1a70716fe09efaba805862"
+    },
+    {
+      "path": "web/public/city/Build/development_city.loader.js",
+      "sha256": "0176a6f4d1e5c8d1bc0275a834746efaea3ba78e0290d6cd18248b5ac8180117"
+    },
+    {
+      "path": "web/public/city/Build/development_city.wasm",
+      "sha256": "7501bbdf992d41a87b86d42f11076ed0464de34532e1c473c6d1b06cc968c50d"
+    },
+    {
+      "path": "web/public/city/bridge.js",
+      "sha256": "0f3b72662cc12879951e99d3a23ee22c26eb7b981c5b694115a7f8a01044521c"
+    },
+    {
+      "path": "web/public/city/build.json",
+      "sha256": "3e63ea440f921869966cd56b78dabe3ef48a4a8fb91c40548c7ea01082c292d9"
+    },
+    {
+      "path": "web/public/city/index.html",
+      "sha256": "984368c522454e3805b31870251636c5e2e1d960d2f98eae737c648a30b784cc"
+    },
+    {
+      "path": "web/public/file.svg",
+      "sha256": "2b67812c325c199a02536cdbeea0c593a72f707d323b72ee3e08dbab06753bd4"
+    },
+    {
+      "path": "web/public/globe.svg",
+      "sha256": "b614b9bf183925957661ac851498fe1d8029fd43a62fbfed86f9e2624a57e7cf"
+    },
+    {
+      "path": "web/public/next.svg",
+      "sha256": "55995dfad6ecb4945a1e856ddca03c5e16aa5bf13fd21b4df6a74ae79357bcfc"
+    },
+    {
+      "path": "web/public/push-sw.js",
+      "sha256": "ef99d75fe199d1fa9b432e74841070bb3f7394f24d0faa9abbf64ada41908de0"
+    },
+    {
+      "path": "web/public/unity-preview/Build/npc_follow_preview.data",
+      "sha256": "649ce86f1c452e568386694d31341fa63b910d7335ec7832a3386e2981a3a977"
+    },
+    {
+      "path": "web/public/unity-preview/Build/npc_follow_preview.framework.js",
+      "sha256": "d45b2712093e1d9d01bc22fa9d5f3f2e4c7480ec2cb15e2493471d618bcdb046"
+    },
+    {
+      "path": "web/public/unity-preview/Build/npc_follow_preview.loader.js",
+      "sha256": "e6b4e917ca5db1b93a9132241a40f2168cc83f299de4b8cbb5f6f42c78e4074a"
+    },
+    {
+      "path": "web/public/unity-preview/Build/npc_follow_preview.wasm",
+      "sha256": "2666a76b6977b5f9bca65f216a234a1a58fb1a293244c0abe30739813b33c3ab"
+    },
+    {
+      "path": "web/public/unity-preview/build.json",
+      "sha256": "d79337311740f783fcee5e3f8d7b50c3443ba380086c0901231e57e74c8f9d66"
+    },
+    {
+      "path": "web/public/unity-preview/index.html",
+      "sha256": "5cba4e3ba4b7a6896a217932681586189d3c8127327b7348341ec7adec3b380b"
+    },
+    {
+      "path": "web/public/vercel.svg",
+      "sha256": "f081337b2fee635b455b63275406a3e7f39d6a014e25ad90dab5a67e62a12ac4"
+    },
+    {
+      "path": "web/public/window.svg",
+      "sha256": "644768c4aaeb4767bce293344eeb0c125fb804a94d801440424072202d85e3a1"
+    },
+    {
+      "path": "web/scripts/demo-auth.mjs",
+      "sha256": "fefaedc94e976ecd34b9626ba697b48c27c32947a420013ed1d8db5c49babf3d"
+    },
+    {
+      "path": "web/scripts/deploy-unity.mjs",
+      "sha256": "492f77e096b75fbb0d54490186831036b9da2f44ed97768d550dfdb7bca24126"
+    },
+    {
+      "path": "web/src/app/admin/CreateSession.tsx",
+      "sha256": "74b3cbeb355a984c326ee9b7988d5ba7bfc9d4916e2c22a259ee80198b10114c"
+    },
+    {
+      "path": "web/src/app/admin/admin.module.css",
+      "sha256": "1e850c3bf58f9ffe1a94f2079615bd9c13467e3878df68434804243185161104"
+    },
+    {
+      "path": "web/src/app/admin/page.tsx",
+      "sha256": "b4504e2d886217f423b91c5c3b99157826e456e47e3660bc2e15c5550d9d8ef1"
+    },
+    {
+      "path": "web/src/app/api/admin/sessions/[id]/end/route.ts",
+      "sha256": "78467cf0396331892699a621f596eff7cc33b84b8dac97a46dd9e184593b45ac"
+    },
+    {
+      "path": "web/src/app/api/admin/sessions/[id]/event-locations/route.ts",
+      "sha256": "5ca7576c53efcaf92e15283e21caef6f70a48aa10f73d161d93a338b784990e4"
+    },
+    {
+      "path": "web/src/app/api/admin/sessions/[id]/npc-motion/route.ts",
+      "sha256": "666476f0c6d86bb1fcbf99c485105dd582c1629dc22c3bf99a12468104fa8d3e"
+    },
+    {
+      "path": "web/src/app/api/admin/sessions/[id]/start/route.ts",
+      "sha256": "98f52a75f86e8045704de75ac1aebc14472e8397a6dcbb75cb5e6279740974e0"
+    },
+    {
+      "path": "web/src/app/api/admin/sessions/route.ts",
+      "sha256": "82b268e75647dcbe7319adf8e53b8f6e36cc10b818a4ae2bf4f3e64076431ef0"
+    },
+    {
+      "path": "web/src/app/api/choices/route.ts",
+      "sha256": "ace6a10f6a10d3bbb0b262ed8395c23a0dc481bd20dee6c18826aef51a76999e"
+    },
+    {
+      "path": "web/src/app/api/city-state/route.ts",
+      "sha256": "867b32dd0f2a368179e724cbfea249bd3b275836a2f052ffeeed2c0cf7f59780"
+    },
+    {
+      "path": "web/src/app/api/health/route.ts",
+      "sha256": "7a7bacb8c462fd24de0860bffbef72409c06b6c2c5aff8d8b18dfbcbfc9cc191"
+    },
+    {
+      "path": "web/src/app/api/internal/sessions/reconcile/route.ts",
+      "sha256": "c472c6cad34dcd2de41d71c1ab1e590196f0202b39eb8f755b6bb21cff744e20"
+    },
+    {
+      "path": "web/src/app/api/participants/route.ts",
+      "sha256": "0e193b076e2a8bd2df0970deb1b61d7469c183479c5bdbb4f6dc5759e0d28f5a"
+    },
+    {
+      "path": "web/src/app/api/push/config/route.ts",
+      "sha256": "a934b757157996061074574e0c9439d5081722b65d5a916f8faa09e05e66a3df"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/department/route.ts",
+      "sha256": "dd89a9cd1b7104bebcf2c507c669eb695307c52320b66249549272b43bf0fb29"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/department-statistics/route.ts",
+      "sha256": "9e40ba2178e3674d93b548e9e6e6da49763ed0af80c06b1ab253fb6c5880bf82"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/event/route.ts",
+      "sha256": "22187a82b8c894d7cb751d5011558957abca49cd97a0f8d750457f2390c66e9a"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/join/route.ts",
+      "sha256": "4be77b92efc02e0b17c3d43a8e630bcb967b111292b0c67531ce658005dc4b5c"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/npc/route.ts",
+      "sha256": "e9c34ed9b7d62aca243789eb6567a22ed9a2f39e8f9fb88c66ec7253d5c47fc0"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/npc-positions/route.ts",
+      "sha256": "b6d583f74a9ede306192f5c9b8c9fc25a483df3a57513e9eb7a4049154fa269a"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/npcs/route.ts",
+      "sha256": "540561ba83103ef891e262cc5471dc14da88486e8cf8421d79651e94af8959d2"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/profile/route.ts",
+      "sha256": "612832ae0cd2f61bfcbe48f4f47526696148101a714e76b084eb3fa4588ddcb7"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/push-subscription/route.ts",
+      "sha256": "1d268d25e9130161c2e0ab6f024f663c810936fd5c2513d8bf3751297b24436a"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/responses/route.ts",
+      "sha256": "84cd47639e34f04f5acdc782092d23a38f6dd27d52b53a972dda2e4cd1f0e68a"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/result/route.ts",
+      "sha256": "e4e3eb40a60ab826c8377696e36d22d2465ac5175685af2a1d87e2510e66beff"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/result-link/route.ts",
+      "sha256": "396b01e28f97b620244ddc60a08f8690b81b2de3c3936d766e4d1201ac79de50"
+    },
+    {
+      "path": "web/src/app/api/sessions/current/route.ts",
+      "sha256": "28a7f97d08645c1230f3984a4c0d2c8639f345c4e91e87dd5a70c524ff3ae2d7"
+    },
+    {
+      "path": "web/src/app/api/shared-result/route.ts",
+      "sha256": "9fcc71446356d094100f1e3d1f6ceaaa7306c7e985ddd5cabdadc3132ab48d57"
+    },
+    {
+      "path": "web/src/app/components/CityStats.module.css",
+      "sha256": "a3becc9f13ada077a9763bb1ac36410e839b2c1290dead8c0411492f948bb0a5"
+    },
+    {
+      "path": "web/src/app/components/CityStats.tsx",
+      "sha256": "6b11f4a1e63ea76a20351c92a6ec31ee3fb28814ad9b54bd8436d413b51285f9"
+    },
+    {
+      "path": "web/src/app/favicon.ico",
+      "sha256": "2b8ad2d33455a8f736fc3a8ebf8f0bdea8848ad4c0db48a2833bd0f9cd775932"
+    },
+    {
+      "path": "web/src/app/globals.css",
+      "sha256": "e1c0289930d17ef10122ec7347f09b03f84e3d51dbbe982785f7316c00e49c08"
+    },
+    {
+      "path": "web/src/app/layout.tsx",
+      "sha256": "0f8c7344624507ffe2e62b98671b562e0591f3c4dbc4a574931b713921b1076a"
+    },
+    {
+      "path": "web/src/app/manifest.ts",
+      "sha256": "16c46b59ea06010fbaafb0259955437301b28e5905806f106184a6fe463f1d64"
+    },
+    {
+      "path": "web/src/app/page.module.css",
+      "sha256": "8423bb56be6457f07bde42b2cc9fb8c7af6072d197d0b9d71d099e8873e46ce3"
+    },
+    {
+      "path": "web/src/app/page.tsx",
+      "sha256": "63909f850b416b9813466779e8a1a28fadd4078ee2d2ad0bd445bb07a13787bc"
+    },
+    {
+      "path": "web/src/app/participate/CitizenCard.module.css",
+      "sha256": "0ac02b1e5f5632394dba908252f1f0e400f44bcc79917e261b6ce0a6f33b628c"
+    },
+    {
+      "path": "web/src/app/participate/CitizenCard.tsx",
+      "sha256": "8ac0bda334a6e01c6a59e1501024a4d59ac0e1c707c5e31e3d199d6f23c47c82"
+    },
+    {
+      "path": "web/src/app/participate/CityTrack.tsx",
+      "sha256": "17ccc230538b89f6089294ef4771b02e84ef4736d4b0c5d423139d782e465545"
+    },
+    {
+      "path": "web/src/app/participate/ProfileEntry.module.css",
+      "sha256": "dee14eac1ec54105f6e27c4f13a25042dff0e38d7045efc158aae09e3125630f"
+    },
+    {
+      "path": "web/src/app/participate/ProfileEntry.tsx",
+      "sha256": "ffb9349a20cfb4de88e5c33b0c97bbffc857605a39667ef935ebf81240ad7cf0"
+    },
+    {
+      "path": "web/src/app/participate/PushOptIn.tsx",
+      "sha256": "691b5820a07e85d00fea0fedab4134c781fa4c355eec75f8ee2053ac793f1117"
+    },
+    {
+      "path": "web/src/app/participate/SituationCard.tsx",
+      "sha256": "12ec20a01f29deb8aa20cb7c40c83f1e06c74e3687762c93c51515d48f19a12d"
+    },
+    {
+      "path": "web/src/app/participate/UnityCity.tsx",
+      "sha256": "bb1f76d3e904575dada40711c62d0ab13c2cf7d128029848f42a5fe278ef3c27"
+    },
+    {
+      "path": "web/src/app/participate/npc-motion.ts",
+      "sha256": "7b349b9e23acfdc8e29e4b83f2da4ed775e0bd0a8736a211b8973c0270f2815f"
+    },
+    {
+      "path": "web/src/app/participate/page.tsx",
+      "sha256": "dfb350a27c4ae4f56987c9a00dec20382e113375e0edbfa8fbcfe80fb0ee45d5"
+    },
+    {
+      "path": "web/src/app/participate/participate.module.css",
+      "sha256": "393f426b02fb2f68c2b6d5d9b1a3077f783f571eb4e567d99a4dc7fe74612bfa"
+    },
+    {
+      "path": "web/src/app/participate/pending.ts",
+      "sha256": "1bcffd5039c6936dccded598dfb56d4daabf4be73d9b43ac4811b80be8f22a1e"
+    },
+    {
+      "path": "web/src/app/participate/types.ts",
+      "sha256": "168d4422ad11bf72bcabf033da4ae40410d2037bd6cd7bd287b765d82c9758ba"
+    },
+    {
+      "path": "web/src/app/participate/unity-bridge.ts",
+      "sha256": "f45acd49ca17a5407985fa09c7f8da2e240c02fab5ea48bdb678f07ef1c64703"
+    },
+    {
+      "path": "web/src/app/participate/useParticipation.ts",
+      "sha256": "7f06a87ebbad87afd53c3aed6687dec8c14f86a166be513e55a46096c996c35e"
+    },
+    {
+      "path": "web/src/app/result/[id]/ResultClient.tsx",
+      "sha256": "9dd7229dbee68d286ba6f93f0f03d7b1d91eae781da2511bc3eb3c29f255cb83"
+    },
+    {
+      "path": "web/src/app/result/[id]/page.tsx",
+      "sha256": "3f67ab31e85d1d49232d865a94e4c13fe9065ef125535507dfa3913590c17428"
+    },
+    {
+      "path": "web/src/app/result/[id]/result.module.css",
+      "sha256": "f38a1c8753cca77496c2c80d210f0e57ad11ef34947747cafea4be410a294cea"
+    },
+    {
+      "path": "web/src/app/result/alignment-names.ts",
+      "sha256": "f5621f8c5e6f36eb0189ce92c6287b1dd1721612700ee0ac513aa5dbf14fc801"
+    },
+    {
+      "path": "web/src/app/result/request.ts",
+      "sha256": "0662a67973dd8b9828b1ad18d759cb57a86cd98d2600012cdac3de788c11dc53"
+    },
+    {
+      "path": "web/src/app/shared-result/page.tsx",
+      "sha256": "86b3433b642c888bd6ba23b878395fe3ec1e3afaab01ca12cb69171e31c320f9"
+    },
+    {
+      "path": "web/src/app/statistics/[id]/StatisticsClient.tsx",
+      "sha256": "d4573ac08043ace3d7b6034633abe1a68e78dc9fad95b697ec6cae8932942320"
+    },
+    {
+      "path": "web/src/app/statistics/[id]/page.tsx",
+      "sha256": "ffa90c2e7d8631b09f9dbb86ca44fa43c2ca134bf7af6a10fa0517efc203b5ce"
+    },
+    {
+      "path": "web/src/app/statistics/[id]/statistics.module.css",
+      "sha256": "4d3afbc1fe33f7e6b54b2ea9f9c721c5beaad2457ea583e780ebd667a4089a99"
+    },
+    {
+      "path": "web/src/app/unity/UnityPreview.tsx",
+      "sha256": "c3f034b3f56bf67bc384d04081d60829737434ba21ad33bebea27aca014e31b7"
+    },
+    {
+      "path": "web/src/app/unity/page.tsx",
+      "sha256": "33a7ebccc9c8f7199cbfe29a62f4829cd75450367532a4f0990b868610482e57"
+    },
+    {
+      "path": "web/src/app/unity/unity.module.css",
+      "sha256": "91f068bddd10c71ddd05582b4f4cd56a1833799b3aae831166e3bce71f62f3cc"
+    },
+    {
+      "path": "web/src/instrumentation.ts",
+      "sha256": "2135fe204673d685176dbd9d05f1679bc4e4ffb731bbecd612c9720dffa902ab"
+    },
+    {
+      "path": "web/src/lib/admin-auth.ts",
+      "sha256": "22d3ad47563818668e53a4b3d370b9efb661d43ca63c91fa99ff7e327f19f246"
+    },
+    {
+      "path": "web/src/lib/admin-session-readiness.ts",
+      "sha256": "47b62b80e36de844b560017ee017b187a81e26d95f6c0aac1822edb9db946ec4"
+    },
+    {
+      "path": "web/src/lib/api.ts",
+      "sha256": "aad000c34310296c18f75cd283ae564e3dadfd4e6cbf370635b71911ad081a09"
+    },
+    {
+      "path": "web/src/lib/citizen-characters.ts",
+      "sha256": "3fda02e93330eed3b71e40c911b3684bee8a4ad6710d980c4ef6f921665b479e"
+    },
+    {
+      "path": "web/src/lib/common-event.ts",
+      "sha256": "79c36b472b33ae4bb6145171f8685e297b7d5978fdf3ad22674b3fdefcb75a4d"
+    },
+    {
+      "path": "web/src/lib/db.ts",
+      "sha256": "0f09eff94b1d50c4003b175729e4b4e03480ced5b90c65499ba4488f527e53d2"
+    },
+    {
+      "path": "web/src/lib/npc-events.ts",
+      "sha256": "a8baa2887dac58f7f81458ff0e7e5def7503087f133a638779d0175b543f6fcb"
+    },
+    {
+      "path": "web/src/lib/npc-position-sync.ts",
+      "sha256": "2ab32cb9ce960d359380d4653ca70acf51c9fdabf45c7fcc4e8deafd8d21789d"
+    },
+    {
+      "path": "web/src/lib/participant-npcs.ts",
+      "sha256": "f5cb003e8ccfaa78c9ae91c78d53dd1c250b5f80097a2898a484ca79a81bab91"
+    },
+    {
+      "path": "web/src/lib/participant-profiles.ts",
+      "sha256": "25aea2fb25632d53b7a2b1140f376b534bcd6e2edece8bff09bfdef1f06c3453"
+    },
+    {
+      "path": "web/src/lib/participant-results.ts",
+      "sha256": "5119605b0371d20b617dbf54ffe01e21a9f97c608f4de6ca5781272ed9582d10"
+    },
+    {
+      "path": "web/src/lib/push-delivery.ts",
+      "sha256": "c9f8ba2c26837379b5eee027069eed64935714960e99d771afdc2fb7b6fc1ac3"
+    },
+    {
+      "path": "web/src/lib/session-creation.ts",
+      "sha256": "19d04bf53ce517d36105d62335ad1488c5b1c3386b4b2666a60bf286374336db"
+    },
+    {
+      "path": "web/src/lib/session-lifecycle.ts",
+      "sha256": "96f7da7e43f669cfd090be5869087b0be6bb8076b24853cc16f4cabd3a4c583c"
+    },
+    {
+      "path": "web/src/lib/session-rules.ts",
+      "sha256": "8c6c86463130050f2242c95bced872429c6c4f07be3bcb6c913a94e181bc93e2"
+    },
+    {
+      "path": "web/tests/api.integration.mjs",
+      "sha256": "08ec3f32882d185835be87e27051ed7ac9a55bc9712f12463ddf7dcb92afc042"
+    },
+    {
+      "path": "web/tests/department-statistics.integration.mjs",
+      "sha256": "487ab8e02c2e5b1aa5ada6ec35bd02d98b335b30726b5f3ef897200cc6f97b77"
+    },
+    {
+      "path": "web/tests/departments.integration.mjs",
+      "sha256": "04001325b7d0306193dc20929ec78fbcb97d81cb971a1b5d07ea1c609d2cf9ed"
+    },
+    {
+      "path": "web/tests/event-browser.mjs",
+      "sha256": "a1e2f902c1a54fdd9a59877847580ff59150f6d32a7f81c20d6b5a12f0c85ad1"
+    },
+    {
+      "path": "web/tests/event-fixture.mjs",
+      "sha256": "3af8b8b93cfd07d95c69c143472fa32f883132723fde4686dbf0925aeed6c609"
+    },
+    {
+      "path": "web/tests/exhibition-content.integration.mjs",
+      "sha256": "4d4059d629d64ff989f3ce6b88c50db3959b9b71694092d9d8bea3110127906a"
+    },
+    {
+      "path": "web/tests/isolated-browser.mjs",
+      "sha256": "61210e17d4d781e37c5fba88eea243f6c803527549efa361980c45c99eca8680"
+    },
+    {
+      "path": "web/tests/isolated-flow.mjs",
+      "sha256": "a6cf3b3c9d8ef44e13a3d250ae241cd1333e25c4440108ab8e1a506118318ba7"
+    },
+    {
+      "path": "web/tests/isolated-runner.mjs",
+      "sha256": "e96b16a1a6f12990ea2f6a0bffb7fceb2d9e54244eecf5f0ca301e703c4af5a7"
+    },
+    {
+      "path": "web/tests/mobile-panel.mjs",
+      "sha256": "3f6adab56068f8257447b4983fde875a1b6387ba75a870034f77c50c6457299b"
+    },
+    {
+      "path": "web/tests/npc-events.integration.mjs",
+      "sha256": "d3c66208f09970938760d4ba00fe70c0f6d5132ca8efab970d385f6734bd49bc"
+    },
+    {
+      "path": "web/tests/npc-positions.integration.mjs",
+      "sha256": "c7726b1150a2860bae138651e2db25fc3ce836d8d3d516b6d163d10654675741"
+    },
+    {
+      "path": "web/tests/participant-entry.mjs",
+      "sha256": "1abdc4bec7753644110920b3c1c379aab474fa01da908bfb4f426a6d12ec7224"
+    },
+    {
+      "path": "web/tests/profiles.integration.mjs",
+      "sha256": "71517e443a599efa2866245c1c889175761fc34a1cfcde638eae8ec04c1eb339"
+    },
+    {
+      "path": "web/tests/result-links.integration.mjs",
+      "sha256": "b662ac022eb57d902cf8e968561c55d4ffddd071070a33598e27af98ff563c8c"
+    },
+    {
+      "path": "web/tests/result-ui.mjs",
+      "sha256": "60039a26d16a8fa172a9564fb15c728f4696b9d909a558bb10f35f6678a6cacd"
+    },
+    {
+      "path": "web/tests/session-lifecycle.integration.mjs",
+      "sha256": "78275ae3444b32d57132366997fb5af28f2e6acca6201795dd793cc6cba82cc8"
+    },
+    {
+      "path": "web/tests/stage-browser.mjs",
+      "sha256": "b22a3c0e8ffbc38f997015730bba703215ebab45af837ded2a568779a5a60ca3"
+    },
+    {
+      "path": "web/tests/stage-integration.mjs",
+      "sha256": "cd7670744fdd333c04bbdd940b4e4d9562a2ee4f2fe016d17785d90538392daf"
+    },
+    {
+      "path": "web/tests/unity-bridge.test.mjs",
+      "sha256": "88f47ebebdea7b656d5db38c3b81f1034d7c3ffb80ecadc0461f0a804bd71f32"
+    },
+    {
+      "path": "web/tests/unity-fixture.mjs",
+      "sha256": "b32cdb358b3a54017c7d0a7e5f8123b00c4011de33bf880b445ac1d0af8cfb9b"
+    },
+    {
+      "path": "web/tests/unity-preview.mjs",
+      "sha256": "c37d71e07dfc828fd0cbe23707a8377115b2e478665a9f77c5b9ba6111c26cfe"
+    },
+    {
+      "path": "web/tsconfig.json",
+      "sha256": "5c51df4c59f4510d8c7dadf07a5c32132228826a3b331da5e286207b4df7ef9c"
+    },
+    {
+      "path": "web/tsconfig.tsbuildinfo",
+      "sha256": "a88aa9fb9be108e9218fb4d7ac8fe5d51a2b6db90fbcfad0f6dced4ef43cb964"
+    }
+  ]
+}

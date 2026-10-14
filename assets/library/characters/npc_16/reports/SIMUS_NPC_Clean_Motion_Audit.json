@@ -1,0 +1,506 @@
+[
+  {
+    "lod": 0,
+    "action": "Idle",
+    "frame": 1,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 0,
+    "action": "Idle",
+    "frame": 3,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 0,
+    "action": "Idle",
+    "frame": 16,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 0,
+    "action": "Idle",
+    "frame": 31,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 0,
+    "action": "Idle",
+    "frame": 59,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 0,
+    "action": "Idle",
+    "frame": 61,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 0,
+    "action": "Walk",
+    "frame": 71,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 0,
+    "action": "Walk",
+    "frame": 73,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 0,
+    "action": "Walk",
+    "frame": 78,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 0,
+    "action": "Walk",
+    "frame": 86,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 0,
+    "action": "Walk",
+    "frame": 99,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 0,
+    "action": "Walk",
+    "frame": 101,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 0,
+    "action": "Interact",
+    "frame": 111,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 0,
+    "action": "Interact",
+    "frame": 113,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 0,
+    "action": "Interact",
+    "frame": 126,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 0,
+    "action": "Interact",
+    "frame": 141,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 0,
+    "action": "Interact",
+    "frame": 169,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 0,
+    "action": "Interact",
+    "frame": 171,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 0,
+    "action": "Wave",
+    "frame": 181,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 0,
+    "action": "Wave",
+    "frame": 183,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 0,
+    "action": "Wave",
+    "frame": 192,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 0,
+    "action": "Wave",
+    "frame": 203,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 0,
+    "action": "Wave",
+    "frame": 224,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 0,
+    "action": "Wave",
+    "frame": 226,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Idle",
+    "frame": 1,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Idle",
+    "frame": 3,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Idle",
+    "frame": 16,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Idle",
+    "frame": 31,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Idle",
+    "frame": 59,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Idle",
+    "frame": 61,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Walk",
+    "frame": 71,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Walk",
+    "frame": 73,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Walk",
+    "frame": 78,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Walk",
+    "frame": 86,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Walk",
+    "frame": 99,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Walk",
+    "frame": 101,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Interact",
+    "frame": 111,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Interact",
+    "frame": 113,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Interact",
+    "frame": 126,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Interact",
+    "frame": 141,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Interact",
+    "frame": 169,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Interact",
+    "frame": 171,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Wave",
+    "frame": 181,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Wave",
+    "frame": 183,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Wave",
+    "frame": 192,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Wave",
+    "frame": 203,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Wave",
+    "frame": 224,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 1,
+    "action": "Wave",
+    "frame": 226,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Idle",
+    "frame": 1,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Idle",
+    "frame": 3,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Idle",
+    "frame": 16,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Idle",
+    "frame": 31,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Idle",
+    "frame": 59,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Idle",
+    "frame": 61,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Walk",
+    "frame": 71,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Walk",
+    "frame": 73,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Walk",
+    "frame": 78,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Walk",
+    "frame": 86,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Walk",
+    "frame": 99,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Walk",
+    "frame": 101,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Interact",
+    "frame": 111,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Interact",
+    "frame": 113,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Interact",
+    "frame": 126,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Interact",
+    "frame": 141,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Interact",
+    "frame": 169,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Interact",
+    "frame": 171,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Wave",
+    "frame": 181,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Wave",
+    "frame": 183,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Wave",
+    "frame": 192,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Wave",
+    "frame": 203,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Wave",
+    "frame": 224,
+    "characters": 16,
+    "finite_deformation": true
+  },
+  {
+    "lod": 2,
+    "action": "Wave",
+    "frame": 226,
+    "characters": 16,
+    "finite_deformation": true
+  }
+]

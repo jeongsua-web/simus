@@ -1,0 +1,192 @@
+{
+  "objects": [
+    "SIMUS_CHARACTER_ROOT",
+    "ARMATURE",
+    "BODY",
+    "OUTFIT_TOP",
+    "OUTFIT_BOTTOM",
+    "SHOES",
+    "HAIR_ROOT",
+    "ACCESSORY_ROOT",
+    "HAIR_01_PARTED_SHORT",
+    "HAIR_03_BOB_BANGS",
+    "HAIR_04_BOB_NO_BANGS",
+    "HAIR_05_PONYTAIL_BANGS",
+    "HAIR_06_CAP_PONYTAIL",
+    "HAIR_07_TWIN_TAIL_BANGS",
+    "HAIR_08_SIDE_TAIL_BANGS",
+    "HAIR_12_BUN_NO_BANGS",
+    "HAIR_13_BALD",
+    "HAIR_15_SHORT_BANGS",
+    "HAIR_16_LOW_SHORT_PONYTAIL",
+    "HAIR_09_LONG_STRAIGHT_BANGS",
+    "HAIR_10_LONG_STRAIGHT_NO_BANGS",
+    "HAIR_11_CAP_CURLY_BOB",
+    "HAIR_14_LONG_CURLY",
+    "HAIR_02_BEANIE_SHORT",
+    "GLASSES_SQUARE",
+    "GLASSES_ROUND"
+  ],
+  "bones": [
+    "Root",
+    "Hips",
+    "Spine",
+    "Chest",
+    "Neck",
+    "Head",
+    "LeftShoulder",
+    "LeftUpperArm",
+    "LeftLowerArm",
+    "LeftHand",
+    "RightShoulder",
+    "RightUpperArm",
+    "RightLowerArm",
+    "RightHand",
+    "LeftUpperLeg",
+    "LeftLowerLeg",
+    "LeftFoot",
+    "LeftToes",
+    "RightUpperLeg",
+    "RightLowerLeg",
+    "RightFoot",
+    "RightToes"
+  ],
+  "meshes": {
+    "BODY": {
+      "vertices": 444,
+      "materials": [
+        "MAT_SKIN",
+        "MAT_EYES"
+      ]
+    },
+    "OUTFIT_TOP": {
+      "vertices": 572,
+      "materials": [
+        "MAT_OUTFIT_TOP"
+      ]
+    },
+    "OUTFIT_BOTTOM": {
+      "vertices": 456,
+      "materials": [
+        "MAT_OUTFIT_BOTTOM"
+      ]
+    },
+    "SHOES": {
+      "vertices": 120,
+      "materials": [
+        "MAT_SHOES"
+      ]
+    },
+    "HAIR_01_PARTED_SHORT": {
+      "vertices": 290,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    "HAIR_03_BOB_BANGS": {
+      "vertices": 640,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    "HAIR_04_BOB_NO_BANGS": {
+      "vertices": 710,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    "HAIR_05_PONYTAIL_BANGS": {
+      "vertices": 330,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    "HAIR_06_CAP_PONYTAIL": {
+      "vertices": 878,
+      "materials": [
+        "MAT_HAIR",
+        "MAT_HAT"
+      ]
+    },
+    "HAIR_07_TWIN_TAIL_BANGS": {
+      "vertices": 610,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    "HAIR_08_SIDE_TAIL_BANGS": {
+      "vertices": 450,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    "HAIR_12_BUN_NO_BANGS": {
+      "vertices": 338,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    "HAIR_15_SHORT_BANGS": {
+      "vertices": 290,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    "HAIR_16_LOW_SHORT_PONYTAIL": {
+      "vertices": 330,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    "HAIR_09_LONG_STRAIGHT_BANGS": {
+      "vertices": 640,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    "HAIR_10_LONG_STRAIGHT_NO_BANGS": {
+      "vertices": 640,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    "HAIR_11_CAP_CURLY_BOB": {
+      "vertices": 1454,
+      "materials": [
+        "MAT_HAIR",
+        "MAT_HAT"
+      ]
+    },
+    "HAIR_14_LONG_CURLY": {
+      "vertices": 1111,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    "HAIR_02_BEANIE_SHORT": {
+      "vertices": 836,
+      "materials": [
+        "MAT_HAIR",
+        "MAT_HAT"
+      ]
+    },
+    "GLASSES_SQUARE": {
+      "vertices": 450,
+      "materials": [
+        "MAT_GLASSES"
+      ]
+    },
+    "GLASSES_ROUND": {
+      "vertices": 450,
+      "materials": [
+        "MAT_GLASSES"
+      ]
+    }
+  },
+  "clips": [
+    "Idle",
+    "Walk",
+    "Interact",
+    "Wave"
+  ]
+}

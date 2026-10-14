@@ -1,0 +1,153 @@
+{
+  "blend": {
+    "scene": "SIMUS_MODULAR_CHARACTER",
+    "source_objects_absent": true,
+    "rig_count": 1,
+    "export_objects": 26,
+    "hair01_only": true,
+    "glasses_none": true,
+    "animation_tracks": [
+      "Idle",
+      "Walk",
+      "Interact",
+      "Wave"
+    ]
+  },
+  "fbx": {
+    "objects": 26,
+    "mesh_count": 21,
+    "meshes": [
+      {
+        "name": "BODY",
+        "vertices": 444,
+        "skinned": true
+      },
+      {
+        "name": "OUTFIT_TOP",
+        "vertices": 572,
+        "skinned": true
+      },
+      {
+        "name": "OUTFIT_BOTTOM",
+        "vertices": 456,
+        "skinned": true
+      },
+      {
+        "name": "SHOES",
+        "vertices": 120,
+        "skinned": true
+      },
+      {
+        "name": "HAIR_01_PARTED_SHORT",
+        "vertices": 290,
+        "skinned": true
+      },
+      {
+        "name": "HAIR_03_BOB_BANGS",
+        "vertices": 640,
+        "skinned": true
+      },
+      {
+        "name": "HAIR_04_BOB_NO_BANGS",
+        "vertices": 640,
+        "skinned": true
+      },
+      {
+        "name": "HAIR_05_PONYTAIL_BANGS",
+        "vertices": 330,
+        "skinned": true
+      },
+      {
+        "name": "HAIR_06_CAP_PONYTAIL",
+        "vertices": 654,
+        "skinned": true
+      },
+      {
+        "name": "HAIR_07_TWIN_TAIL_BANGS",
+        "vertices": 370,
+        "skinned": true
+      },
+      {
+        "name": "HAIR_08_SIDE_TAIL_BANGS",
+        "vertices": 330,
+        "skinned": true
+      },
+      {
+        "name": "HAIR_12_BUN_NO_BANGS",
+        "vertices": 338,
+        "skinned": true
+      },
+      {
+        "name": "HAIR_15_SHORT_BANGS",
+        "vertices": 290,
+        "skinned": true
+      },
+      {
+        "name": "HAIR_16_LOW_SHORT_PONYTAIL",
+        "vertices": 330,
+        "skinned": true
+      },
+      {
+        "name": "HAIR_09_LONG_STRAIGHT_BANGS",
+        "vertices": 640,
+        "skinned": true
+      },
+      {
+        "name": "HAIR_10_LONG_STRAIGHT_NO_BANGS",
+        "vertices": 640,
+        "skinned": true
+      },
+      {
+        "name": "HAIR_11_CAP_CURLY_BOB",
+        "vertices": 1230,
+        "skinned": true
+      },
+      {
+        "name": "HAIR_14_LONG_CURLY",
+        "vertices": 1346,
+        "skinned": true
+      },
+      {
+        "name": "HAIR_02_BEANIE_SHORT",
+        "vertices": 836,
+        "skinned": true
+      },
+      {
+        "name": "GLASSES_SQUARE",
+        "vertices": 450,
+        "skinned": true
+      },
+      {
+        "name": "GLASSES_ROUND",
+        "vertices": 450,
+        "skinned": true
+      }
+    ],
+    "bones": 22,
+    "actions": [
+      "ACCESSORY_ROOT|Idle",
+      "ACCESSORY_ROOT|Interact",
+      "ACCESSORY_ROOT|Walk",
+      "ACCESSORY_ROOT|Wave",
+      "ARMATURE|Idle",
+      "ARMATURE|Interact",
+      "ARMATURE|Walk",
+      "ARMATURE|Wave",
+      "HAIR_13_BALD|Idle",
+      "HAIR_13_BALD|Interact",
+      "HAIR_13_BALD|Walk",
+      "HAIR_13_BALD|Wave",
+      "HAIR_ROOT|Idle",
+      "HAIR_ROOT|Interact",
+      "HAIR_ROOT|Walk",
+      "HAIR_ROOT|Wave",
+      "SIMUS_CHARACTER_ROOT|Idle",
+      "SIMUS_CHARACTER_ROOT|Interact",
+      "SIMUS_CHARACTER_ROOT|Walk",
+      "SIMUS_CHARACTER_ROOT|Wave"
+    ],
+    "no_preview_camera_light": true,
+    "missing": []
+  },
+  "passed": true
+}

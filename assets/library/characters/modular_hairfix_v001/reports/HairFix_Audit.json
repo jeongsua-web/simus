@@ -1,0 +1,76 @@
+{
+  "protected_state_unchanged": true,
+  "meshes": {
+    "HAIR_04_BOB_NO_BANGS": {
+      "vertices": 710,
+      "boundary": 0,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.000763007753340706,
+      "head_weights": true
+    },
+    "HAIR_06_CAP_PONYTAIL": {
+      "vertices": 878,
+      "boundary": 0,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.002578711842356408,
+      "head_weights": true
+    },
+    "HAIR_07_TWIN_TAIL_BANGS": {
+      "vertices": 610,
+      "boundary": 0,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.004836770285097928,
+      "head_weights": true
+    },
+    "HAIR_08_SIDE_TAIL_BANGS": {
+      "vertices": 450,
+      "boundary": 0,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0038178411733114184,
+      "head_weights": true
+    },
+    "HAIR_11_CAP_CURLY_BOB": {
+      "vertices": 1454,
+      "boundary": 0,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0038299886547148833,
+      "head_weights": true
+    },
+    "HAIR_14_LONG_CURLY": {
+      "vertices": 1111,
+      "boundary": 0,
+      "nonmanifold": 0,
+      "degenerate": 0,
+      "volume": 0.0011437405736975093,
+      "head_weights": true
+    }
+  },
+  "motion": [
+    {
+      "clip": "Idle",
+      "frames": 6,
+      "all_target_vertices_max_error_m": 1.192238405779396e-07
+    },
+    {
+      "clip": "Walk",
+      "frames": 6,
+      "all_target_vertices_max_error_m": 0
+    },
+    {
+      "clip": "Interact",
+      "frames": 6,
+      "all_target_vertices_max_error_m": 1.192238405779396e-07
+    },
+    {
+      "clip": "Wave",
+      "frames": 6,
+      "all_target_vertices_max_error_m": 0
+    }
+  ],
+  "unity_runtime_test": "not_run"
+}

@@ -1,0 +1,296 @@
+{
+  "source_file": "SIMUS_NPC_Base_16_Unity_Clean_Neck.blend",
+  "source_style": 15,
+  "preserved_parts": {
+    "BODY": {
+      "source_vertices_weights_exact": 425,
+      "new_scalp_vertices": 19
+    },
+    "OUTFIT_TOP": {
+      "source_vertices_weights_exact": 572,
+      "new_scalp_vertices": 0
+    },
+    "OUTFIT_BOTTOM": {
+      "source_vertices_weights_exact": 456,
+      "new_scalp_vertices": 0
+    },
+    "SHOES": {
+      "source_vertices_weights_exact": 120,
+      "new_scalp_vertices": 0
+    }
+  },
+  "bone_rest_matrices_exact": true,
+  "bone_count": 22,
+  "hair_slots": 16,
+  "glasses": 2,
+  "meshes": [
+    {
+      "name": "BODY",
+      "vertices": 444,
+      "triangles": 832,
+      "boundary_edges": 28,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "materials": [
+        "MAT_SKIN",
+        "MAT_EYES"
+      ]
+    },
+    {
+      "name": "OUTFIT_TOP",
+      "vertices": 572,
+      "triangles": 1084,
+      "boundary_edges": 56,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "materials": [
+        "MAT_OUTFIT_TOP"
+      ]
+    },
+    {
+      "name": "OUTFIT_BOTTOM",
+      "vertices": 456,
+      "triangles": 852,
+      "boundary_edges": 56,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "materials": [
+        "MAT_OUTFIT_BOTTOM"
+      ]
+    },
+    {
+      "name": "SHOES",
+      "vertices": 120,
+      "triangles": 232,
+      "boundary_edges": 0,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "materials": [
+        "MAT_SHOES"
+      ]
+    },
+    {
+      "name": "HAIR_01_PARTED_SHORT",
+      "vertices": 290,
+      "triangles": 576,
+      "boundary_edges": 0,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    {
+      "name": "HAIR_03_BOB_BANGS",
+      "vertices": 640,
+      "triangles": 1272,
+      "boundary_edges": 0,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    {
+      "name": "HAIR_04_BOB_NO_BANGS",
+      "vertices": 640,
+      "triangles": 1272,
+      "boundary_edges": 0,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    {
+      "name": "HAIR_05_PONYTAIL_BANGS",
+      "vertices": 330,
+      "triangles": 652,
+      "boundary_edges": 0,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    {
+      "name": "HAIR_06_CAP_PONYTAIL",
+      "vertices": 654,
+      "triangles": 1292,
+      "boundary_edges": 0,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "materials": [
+        "MAT_HAIR",
+        "MAT_HAT"
+      ]
+    },
+    {
+      "name": "HAIR_07_TWIN_TAIL_BANGS",
+      "vertices": 370,
+      "triangles": 728,
+      "boundary_edges": 0,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    {
+      "name": "HAIR_08_SIDE_TAIL_BANGS",
+      "vertices": 330,
+      "triangles": 652,
+      "boundary_edges": 0,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    {
+      "name": "HAIR_12_BUN_NO_BANGS",
+      "vertices": 338,
+      "triangles": 668,
+      "boundary_edges": 0,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    {
+      "name": "HAIR_15_SHORT_BANGS",
+      "vertices": 290,
+      "triangles": 576,
+      "boundary_edges": 0,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    {
+      "name": "HAIR_16_LOW_SHORT_PONYTAIL",
+      "vertices": 330,
+      "triangles": 652,
+      "boundary_edges": 0,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    {
+      "name": "HAIR_09_LONG_STRAIGHT_BANGS",
+      "vertices": 640,
+      "triangles": 1272,
+      "boundary_edges": 0,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    {
+      "name": "HAIR_10_LONG_STRAIGHT_NO_BANGS",
+      "vertices": 640,
+      "triangles": 1272,
+      "boundary_edges": 0,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    {
+      "name": "HAIR_11_CAP_CURLY_BOB",
+      "vertices": 1230,
+      "triangles": 2404,
+      "boundary_edges": 0,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "materials": [
+        "MAT_HAIR",
+        "MAT_HAT"
+      ]
+    },
+    {
+      "name": "HAIR_14_LONG_CURLY",
+      "vertices": 1346,
+      "triangles": 2644,
+      "boundary_edges": 0,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "materials": [
+        "MAT_HAIR"
+      ]
+    },
+    {
+      "name": "HAIR_02_BEANIE_SHORT",
+      "vertices": 836,
+      "triangles": 1664,
+      "boundary_edges": 0,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "materials": [
+        "MAT_HAIR",
+        "MAT_HAT"
+      ]
+    },
+    {
+      "name": "GLASSES_SQUARE",
+      "vertices": 450,
+      "triangles": 888,
+      "boundary_edges": 0,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "materials": [
+        "MAT_GLASSES"
+      ]
+    },
+    {
+      "name": "GLASSES_ROUND",
+      "vertices": 450,
+      "triangles": 888,
+      "boundary_edges": 0,
+      "degenerate_faces": 0,
+      "loose_vertices": 0,
+      "materials": [
+        "MAT_GLASSES"
+      ]
+    }
+  ],
+  "motion": [
+    {
+      "clip": "Idle",
+      "head_motion_m": 0.0033837654251548392,
+      "accessory_follow_error_m": 1.4901161193847656E-08,
+      "sample_frames": 6,
+      "accessory_meshes": 17
+    },
+    {
+      "clip": "Walk",
+      "head_motion_m": 0.009000062964610502,
+      "accessory_follow_error_m": 0,
+      "sample_frames": 6,
+      "accessory_meshes": 17
+    },
+    {
+      "clip": "Interact",
+      "head_motion_m": 0.0033837654251548392,
+      "accessory_follow_error_m": 1.4901161193847656E-08,
+      "sample_frames": 6,
+      "accessory_meshes": 17
+    },
+    {
+      "clip": "Wave",
+      "head_motion_m": 0.00271356107637385,
+      "accessory_follow_error_m": 0,
+      "sample_frames": 6,
+      "accessory_meshes": 17
+    }
+  ],
+  "unity_runtime_test": "not_run",
+  "viewport_remote_evidence": "Local Viewport_Final.png captured and visually inspected; remote screenshot retrieval unavailable",
+  "source_file_hash_unchanged": true
+}

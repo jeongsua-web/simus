@@ -1,0 +1,41 @@
+SCENE
+- intent: SIM:US Unity modular character; reuse clean style 15, preserve proportions.
+- deliverable: SIMUS_Modular_Character_Unity.blend and .fbx; no Unity scripts/UI.
+- units: metres; axes: right-handed Z-up; front -Y, FBX forward Z up Y.
+- render: EEVEE, 1200x1200, 30fps, 1-226; technical previews.
+- dynamic: existing Idle/Walk/Interact/Wave compatible and preserved.
+HIERARCHY
+- collection/object naming: MODULAR_CHARACTER, PREVIEW_ONLY; exact user root/part/option names.
+- parent/child relationships: one root/armature; four skinned base parts; hair/accessory roots with Head-weighted mesh options.
+- protected existing objects: ALL existing objects/data/actions; source file never overwritten. New scene uses copies.
+ASSETS
+- A01 BODY/OUTFIT_TOP/OUTFIT_BOTTOM/SHOES | [EXISTING] | stylized | source width1.09 depth0.28 height1.625m | origin feet(0,0,0), rotation0 | SIMUS_CHARACTER_ROOT
+- A02 ARMATURE | [EXISTING] | unchanged22bones/rest matrices | origin0 | root
+- A03 HAIR_01..16 | [BLOCK] custom lofted low-poly shells/locks | stylized detailed silhouettes | head radii .112,.099,.135; new shell clearance .004-.012m; long hair ends z1.16+ | origin0 | HAIR_ROOT
+- A04 GLASSES_SQUARE/ROUND | [BLOCK] thin .002m tube frames | stylized | eyes x+-.039,y-.099,z1.513 | origin0 | ACCESSORY_ROOT
+- generation estimate/submission state: no generation; zero credits.
+SHOT
+- active camera: CAM_Modular_Front
+- framing/lens/target: orthographic front + side/back + 4x4 hairstyle preview; fullbody height1.8m, headcrop .65m.
+- foreground, subject, background depth: empty neutral studio, no imported preview objects.
+LOOK
+- material roles and palette: seven requested MAT_* plus MAT_EYES; pastel sage top, charcoal trousers/shoes, brown hair, peach skin.
+- material route: new simple Principled Base Color, no textures or Blender-specific dependence.
+- texture scale/UV: none; relief:none; dielectric, roughness .55-.85.
+- world/background: neutral soft gray.
+LIGHTING
+- focal subject: hairstyle/face; secondary: clothing; darkest: eyes.
+- mood: neutral technical catalog; environment NONE; no HDR required.
+- world-only/zero-world baseline: diagnostic previews; key upper front-left, soft broad source; fill subdued.
+- motivation: studio; no atmosphere/cards; AgX exposure0.
+MOTION
+- fps/frame range:30,1-226; unchanged four existing clips, same rest skeleton.
+- beats: authored source animations; no new acting; all accessories Head weights1.
+- rest: source bindpose saved, hair01 only, glassesnone.
+ACCEPTANCE
+- structural: one body/outfit/rig;16slots incl bald;2glasses;separatematerials;original source hash unchanged; export excludes PREVIEW_ONLY.
+- motion: head/accessory deformation match evaluated Head matrix; source weights/rest/animations preserved.
+- visual: all16 front/side/back checked; no block decorations; scalp closed; hats fitted; glasses align eyes; no severe intersections.
+- lighting: readable technical previews, no clipped face or missingmaterials.
+refs_read: blender-scene, blender-scene-spec, blender-modeling, blender-lookdev, blender-lighting-camera, blender-animation, blender-audit-finalize, blender-volatile.
+TODO: reads complete; A inspect/spec complete; B checkpoint; C base/silhouette camera gate; D hair/glasses/material/preview; E structural/motion/visual/export audit/save.

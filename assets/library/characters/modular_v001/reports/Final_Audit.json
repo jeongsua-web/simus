@@ -1,0 +1,17 @@
+{
+  "default_glasses": 0,
+  "modified_source_objects": 0,
+  "deliverables": [
+    "SIMUS_Modular_Character_Unity.blend",
+    "SIMUS_Modular_Character_Unity.fbx"
+  ],
+  "source_unchanged": true,
+  "valid": true,
+  "unity_runtime": "not tested",
+  "motion": "passed: four existing clips, six sampled frames per clip",
+  "created": "one shared character, 16 hair slots, 2 glasses, separate preview",
+  "default_hair": 1,
+  "structural": "passed",
+  "deleted_source_objects": 0,
+  "visual": "front, side, back, final three-quarter, four motion renders and local viewport inspected"
+}

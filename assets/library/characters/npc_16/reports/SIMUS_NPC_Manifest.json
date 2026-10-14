@@ -1,0 +1,387 @@
+{
+  "project": "SIMUS_NPC",
+  "height_m": 1.65,
+  "collider": {
+    "height": 1.65,
+    "radius": 0.27,
+    "center_y": 0.825
+  },
+  "coordinate_system": {
+    "blender": "Z up, -Y forward",
+    "unity": "Y up, +Z forward"
+  },
+  "material": "MAT_NPC_SHARED",
+  "shader": "SIMUS/NPCVertexMask",
+  "mask": {
+    "R": "_PrimaryColor",
+    "G": "_SecondaryColor",
+    "B": "_SkinColor",
+    "A": "_HairColor",
+    "zero": "_NeutralColor"
+  },
+  "palettes": {
+    "primary": {
+      "CORAL": [
+        0.73,
+        0.25,
+        0.21
+      ],
+      "ORANGE": [
+        0.76,
+        0.39,
+        0.15
+      ],
+      "YELLOW": [
+        0.75,
+        0.61,
+        0.21
+      ],
+      "LIME": [
+        0.43,
+        0.6,
+        0.2
+      ],
+      "GREEN": [
+        0.16,
+        0.46,
+        0.3
+      ],
+      "MINT": [
+        0.25,
+        0.61,
+        0.48
+      ],
+      "CYAN": [
+        0.18,
+        0.53,
+        0.61
+      ],
+      "BLUE": [
+        0.17,
+        0.34,
+        0.65
+      ],
+      "NAVY": [
+        0.12,
+        0.2,
+        0.37
+      ],
+      "PURPLE": [
+        0.43,
+        0.28,
+        0.58
+      ],
+      "PINK": [
+        0.7,
+        0.35,
+        0.49
+      ],
+      "RED": [
+        0.59,
+        0.16,
+        0.17
+      ]
+    },
+    "skin": [
+      [
+        0.76,
+        0.52,
+        0.36
+      ],
+      [
+        0.87,
+        0.66,
+        0.48
+      ],
+      [
+        0.63,
+        0.39,
+        0.25
+      ],
+      [
+        0.45,
+        0.25,
+        0.15
+      ],
+      [
+        0.28,
+        0.135,
+        0.075
+      ],
+      [
+        0.79,
+        0.57,
+        0.43
+      ]
+    ],
+    "hair": {
+      "BLACK": [
+        0.028,
+        0.024,
+        0.025
+      ],
+      "DARK_BROWN": [
+        0.065,
+        0.036,
+        0.021
+      ],
+      "BROWN": [
+        0.16,
+        0.075,
+        0.035
+      ],
+      "LIGHT_BROWN": [
+        0.31,
+        0.18,
+        0.09
+      ],
+      "DARK_BLUE_GRAY": [
+        0.055,
+        0.075,
+        0.1
+      ],
+      "MUTED_RED_BROWN": [
+        0.24,
+        0.075,
+        0.045
+      ]
+    }
+  },
+  "appearance_department_mbti_independent": true,
+  "mbti_values": [
+    "ISTJ",
+    "ISFJ",
+    "INFJ",
+    "INTJ",
+    "ISTP",
+    "ISFP",
+    "INFP",
+    "INTP",
+    "ESTP",
+    "ESFP",
+    "ENFP",
+    "ENTP",
+    "ESTJ",
+    "ESFJ",
+    "ENFJ",
+    "ENTJ"
+  ],
+  "bone_names": [
+    "Root",
+    "Hips",
+    "Spine",
+    "Chest",
+    "Neck",
+    "Head",
+    "LeftShoulder",
+    "LeftUpperArm",
+    "LeftLowerArm",
+    "LeftHand",
+    "LeftUpperLeg",
+    "LeftLowerLeg",
+    "LeftFoot",
+    "LeftToes",
+    "RightShoulder",
+    "RightUpperArm",
+    "RightLowerArm",
+    "RightHand",
+    "RightUpperLeg",
+    "RightLowerLeg",
+    "RightFoot",
+    "RightToes"
+  ],
+  "clips": {
+    "Idle": {
+      "blender_frames": [
+        1,
+        61
+      ],
+      "seconds": 2.0,
+      "loop": true,
+      "root_motion": false
+    },
+    "Walk": {
+      "blender_frames": [
+        71,
+        101
+      ],
+      "seconds": 1.0,
+      "loop": true,
+      "root_motion": false
+    },
+    "Interact": {
+      "blender_frames": [
+        111,
+        171
+      ],
+      "seconds": 2.0,
+      "loop": true,
+      "root_motion": false
+    },
+    "Wave": {
+      "blender_frames": [
+        181,
+        226
+      ],
+      "seconds": 1.5,
+      "loop": false,
+      "root_motion": false
+    }
+  },
+  "LOD_screen_heights": [
+    0.6,
+    0.25,
+    0.05
+  ],
+  "badge_socket_unity": [
+    0,
+    1.82,
+    0
+  ],
+  "styles": [
+    {
+      "id": 1,
+      "name": "SHORT_HOODIE",
+      "mesh_names": [
+        "NPC_STYLE_01_LOD0",
+        "NPC_STYLE_01_LOD1",
+        "NPC_STYLE_01_LOD2"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "BOB_CARDIGAN",
+      "mesh_names": [
+        "NPC_STYLE_02_LOD0",
+        "NPC_STYLE_02_LOD1",
+        "NPC_STYLE_02_LOD2"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "WAVY_SWEATER",
+      "mesh_names": [
+        "NPC_STYLE_03_LOD0",
+        "NPC_STYLE_03_LOD1",
+        "NPC_STYLE_03_LOD2"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "CAP_JACKET",
+      "mesh_names": [
+        "NPC_STYLE_04_LOD0",
+        "NPC_STYLE_04_LOD1",
+        "NPC_STYLE_04_LOD2"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "LONG_SHIRT",
+      "mesh_names": [
+        "NPC_STYLE_05_LOD0",
+        "NPC_STYLE_05_LOD1",
+        "NPC_STYLE_05_LOD2"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "CROP_WORK_JACKET",
+      "mesh_names": [
+        "NPC_STYLE_06_LOD0",
+        "NPC_STYLE_06_LOD1",
+        "NPC_STYLE_06_LOD2"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "BUN_BLOUSON",
+      "mesh_names": [
+        "NPC_STYLE_07_LOD0",
+        "NPC_STYLE_07_LOD1",
+        "NPC_STYLE_07_LOD2"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "BUCKET_WINDBREAKER",
+      "mesh_names": [
+        "NPC_STYLE_08_LOD0",
+        "NPC_STYLE_08_LOD1",
+        "NPC_STYLE_08_LOD2"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "SIDE_PART_VEST",
+      "mesh_names": [
+        "NPC_STYLE_09_LOD0",
+        "NPC_STYLE_09_LOD1",
+        "NPC_STYLE_09_LOD2"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "PONYTAIL_SWEATSHIRT",
+      "mesh_names": [
+        "NPC_STYLE_10_LOD0",
+        "NPC_STYLE_10_LOD1",
+        "NPC_STYLE_10_LOD2"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "GLASSES_KNIT",
+      "mesh_names": [
+        "NPC_STYLE_11_LOD0",
+        "NPC_STYLE_11_LOD1",
+        "NPC_STYLE_11_LOD2"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "OVERALL",
+      "mesh_names": [
+        "NPC_STYLE_12_LOD0",
+        "NPC_STYLE_12_LOD1",
+        "NPC_STYLE_12_LOD2"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "TRACK_JACKET",
+      "mesh_names": [
+        "NPC_STYLE_13_LOD0",
+        "NPC_STYLE_13_LOD1",
+        "NPC_STYLE_13_LOD2"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "HALF_COAT",
+      "mesh_names": [
+        "NPC_STYLE_14_LOD0",
+        "NPC_STYLE_14_LOD1",
+        "NPC_STYLE_14_LOD2"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "LAYERED_TEE",
+      "mesh_names": [
+        "NPC_STYLE_15_LOD0",
+        "NPC_STYLE_15_LOD1",
+        "NPC_STYLE_15_LOD2"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "UTILITY_VEST",
+      "mesh_names": [
+        "NPC_STYLE_16_LOD0",
+        "NPC_STYLE_16_LOD1",
+        "NPC_STYLE_16_LOD2"
+      ]
+    }
+  ]
+}

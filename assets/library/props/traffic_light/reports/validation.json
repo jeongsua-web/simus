@@ -1,0 +1,28 @@
+{
+  "bounds_blender_m": [
+    [
+      -2.7750000953674316,
+      0.20999999344348907
+    ],
+    [
+      -0.5699999928474426,
+      0.20999999344348907
+    ],
+    [
+      0.0,
+      6.074999809265137
+    ]
+  ],
+  "front_direction": "-Y",
+  "arm_direction": "-X",
+  "states": [
+    "Red",
+    "Amber",
+    "Green"
+  ],
+  "separate_lens_meshes": true,
+  "base_size_m": [
+    0.42,
+    0.42
+  ]
+}

@@ -1,0 +1,27 @@
+# road_signs
+
+접수한 제작 후보이며 전시 승인을 뜻하지 않습니다.
+
+- [SIMUS_Road_Signs_Collection.blend](source/SIMUS_Road_Signs_Collection.blend)
+- [SIMUS_Road_Signs_Front.png](previews/SIMUS_Road_Signs_Front.png)
+- [SIMUS_Road_Signs_Preview.png](previews/SIMUS_Road_Signs_Preview.png)
+- [SIMUS_Sign_Crosswalk.blend](source/SIMUS_Sign_Crosswalk.blend)
+- [SIMUS_Sign_Crosswalk.fbx](exports/SIMUS_Sign_Crosswalk.fbx)
+- [SIMUS_Sign_Crosswalk.glb](exports/SIMUS_Sign_Crosswalk.glb)
+- [SIMUS_Sign_NoEntry.blend](source/SIMUS_Sign_NoEntry.blend)
+- [SIMUS_Sign_NoEntry.fbx](exports/SIMUS_Sign_NoEntry.fbx)
+- [SIMUS_Sign_NoEntry.glb](exports/SIMUS_Sign_NoEntry.glb)
+- [SIMUS_Sign_OneWay.blend](source/SIMUS_Sign_OneWay.blend)
+- [SIMUS_Sign_OneWay.fbx](exports/SIMUS_Sign_OneWay.fbx)
+- [SIMUS_Sign_OneWay.glb](exports/SIMUS_Sign_OneWay.glb)
+- [SIMUS_Sign_Parking.blend](source/SIMUS_Sign_Parking.blend)
+- [SIMUS_Sign_Parking.fbx](exports/SIMUS_Sign_Parking.fbx)
+- [SIMUS_Sign_Parking.glb](exports/SIMUS_Sign_Parking.glb)
+- [SIMUS_Sign_Speed30.blend](source/SIMUS_Sign_Speed30.blend)
+- [SIMUS_Sign_Speed30.fbx](exports/SIMUS_Sign_Speed30.fbx)
+- [SIMUS_Sign_Speed30.glb](exports/SIMUS_Sign_Speed30.glb)
+- [SIMUS_Sign_Stop.blend](source/SIMUS_Sign_Stop.blend)
+- [SIMUS_Sign_Stop.fbx](exports/SIMUS_Sign_Stop.fbx)
+- [SIMUS_Sign_Stop.glb](exports/SIMUS_Sign_Stop.glb)
+- [validation.json](reports/validation.json)
+- [사용안내.md](사용안내.md)

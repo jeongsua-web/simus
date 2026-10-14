@@ -1,0 +1,122 @@
+[
+  {
+    "lod": 0,
+    "action": "Idle",
+    "frames": [
+      1,
+      61
+    ],
+    "characters": 16,
+    "passed": true
+  },
+  {
+    "lod": 0,
+    "action": "Walk",
+    "frames": [
+      71,
+      101
+    ],
+    "characters": 16,
+    "passed": true
+  },
+  {
+    "lod": 0,
+    "action": "Interact",
+    "frames": [
+      111,
+      171
+    ],
+    "characters": 16,
+    "passed": true
+  },
+  {
+    "lod": 0,
+    "action": "Wave",
+    "frames": [
+      181,
+      226
+    ],
+    "characters": 16,
+    "passed": true
+  },
+  {
+    "lod": 1,
+    "action": "Idle",
+    "frames": [
+      1,
+      61
+    ],
+    "characters": 16,
+    "passed": true
+  },
+  {
+    "lod": 1,
+    "action": "Walk",
+    "frames": [
+      71,
+      101
+    ],
+    "characters": 16,
+    "passed": true
+  },
+  {
+    "lod": 1,
+    "action": "Interact",
+    "frames": [
+      111,
+      171
+    ],
+    "characters": 16,
+    "passed": true
+  },
+  {
+    "lod": 1,
+    "action": "Wave",
+    "frames": [
+      181,
+      226
+    ],
+    "characters": 16,
+    "passed": true
+  },
+  {
+    "lod": 2,
+    "action": "Idle",
+    "frames": [
+      1,
+      61
+    ],
+    "characters": 16,
+    "passed": true
+  },
+  {
+    "lod": 2,
+    "action": "Walk",
+    "frames": [
+      71,
+      101
+    ],
+    "characters": 16,
+    "passed": true
+  },
+  {
+    "lod": 2,
+    "action": "Interact",
+    "frames": [
+      111,
+      171
+    ],
+    "characters": 16,
+    "passed": true
+  },
+  {
+    "lod": 2,
+    "action": "Wave",
+    "frames": [
+      181,
+      226
+    ],
+    "characters": 16,
+    "passed": true
+  }
+]

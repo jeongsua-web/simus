@@ -1,0 +1,51 @@
+{
+  "bounds_blender_m": [
+    [
+      3.827021116543629e-16,
+      13.75
+    ],
+    [
+      0.0,
+      13.75
+    ],
+    [
+      -0.20000000298023224,
+      0.17000000178813934
+    ]
+  ],
+  "centerline_radius_m": 10,
+  "turn_degrees": 90,
+  "carriageway_m": 5.5,
+  "total_width_m": 7.5,
+  "connectors_blender": [
+    [
+      10,
+      0,
+      0
+    ],
+    [
+      0,
+      10,
+      0
+    ]
+  ],
+  "straight_placements_blender": [
+    {
+      "location": [
+        10,
+        -5,
+        0
+      ],
+      "rotation_z_deg": 0
+    },
+    {
+      "location": [
+        -5,
+        10,
+        0
+      ],
+      "rotation_z_deg": 90
+    }
+  ],
+  "endpoint_check": "passed"
+}
