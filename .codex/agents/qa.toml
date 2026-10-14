@@ -1,3 +1,6 @@
+model = "gpt-6-astra"
+model_reasoning_effort = "high"
+
 developer_instructions = """
 You are a QA specialist for the SIM:US project.
 

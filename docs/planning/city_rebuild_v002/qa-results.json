@@ -1,0 +1,805 @@
+{
+  "scope": "Independent static design QA only; not Unity import/physics/NavMesh/render validation",
+  "protected_file_count": 644,
+  "protected_files_changed": [],
+  "errors": [],
+  "warnings": [
+    "Conservative full asset envelope and round corridor ends are used; mesh-level collision and NavMesh require future Unity verification.",
+    "Road width, speed and junction radii are design proposals, not real-world statutory compliance certification.",
+    "Graph connectivity is not evidence of walkable height/slope/threshold geometry."
+  ],
+  "layout_sha256": "3e98ea485bd92dc9c2528d0420b5999a0336f700270c0f73f7630aa214fbd105",
+  "counts": {
+    "buildings": 69,
+    "street_buildings": 55,
+    "campus_buildings": 14,
+    "roads": 7,
+    "nodes": 388,
+    "edges": 409,
+    "crossing_facilities": 17,
+    "crossing_edges": 110
+  },
+  "crossing_profiles": [
+    {
+      "edge": "R01LE01_S1",
+      "road": "R02",
+      "length": 4.499,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R01LE02_S0",
+      "road": "R02",
+      "length": 4.499,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R01RE01_S1",
+      "road": "R02",
+      "length": 5.144,
+      "minimum_angle_degrees": 82.7
+    },
+    {
+      "edge": "R01RE02_S0",
+      "road": "R02",
+      "length": 3.929,
+      "minimum_angle_degrees": 82.7
+    },
+    {
+      "edge": "R01RE02_S2",
+      "road": "R06",
+      "length": 6.499,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R01_END_0_S1",
+      "road": "R01",
+      "length": 9.499,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R01_END_-1_S1",
+      "road": "R01",
+      "length": 9.499,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R02LE02_S1",
+      "road": "R01",
+      "length": 4.77,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R02LE03_S0",
+      "road": "R01",
+      "length": 4.263,
+      "minimum_angle_degrees": 82.7
+    },
+    {
+      "edge": "R02LE03_S2",
+      "road": "R03",
+      "length": 4.56,
+      "minimum_angle_degrees": 88.0
+    },
+    {
+      "edge": "R02LE04_S0",
+      "road": "R03",
+      "length": 2.812,
+      "minimum_angle_degrees": 60.3
+    },
+    {
+      "edge": "R02RE00_S1",
+      "road": "R04",
+      "length": 3.499,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R02RE01_S0",
+      "road": "R04",
+      "length": 3.499,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R02RE01_S2",
+      "road": "R05",
+      "length": 3.249,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R02RE02_S0",
+      "road": "R05",
+      "length": 3.25,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R02RE02_S2",
+      "road": "R01",
+      "length": 4.229,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R02RE03_S0",
+      "road": "R01",
+      "length": 4.809,
+      "minimum_angle_degrees": 82.7
+    },
+    {
+      "edge": "R02_END_0_S1",
+      "road": "R02",
+      "length": 8.499,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R02_END_-1_S1",
+      "road": "R02",
+      "length": 8.499,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R03LE00_S0",
+      "road": "R02",
+      "length": 3.791,
+      "minimum_angle_degrees": 88.0
+    },
+    {
+      "edge": "R03LE02_S1",
+      "road": "R07",
+      "length": 4.278,
+      "minimum_angle_degrees": 77.0
+    },
+    {
+      "edge": "R03LE03_S0",
+      "road": "R07",
+      "length": 1.536,
+      "minimum_angle_degrees": 47.4
+    },
+    {
+      "edge": "R03RE00_S0",
+      "road": "R02",
+      "length": 2.692,
+      "minimum_angle_degrees": 60.3
+    },
+    {
+      "edge": "R03_END_0_S0",
+      "road": "R02",
+      "length": 0.0,
+      "minimum_angle_degrees": 2.0
+    },
+    {
+      "edge": "R03_END_0_S1",
+      "road": "R02",
+      "length": 6.299,
+      "minimum_angle_degrees": 2.0
+    },
+    {
+      "edge": "R03_END_0_S1",
+      "road": "R03",
+      "length": 6.299,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R03_END_0_S2",
+      "road": "R02",
+      "length": 0.0,
+      "minimum_angle_degrees": 29.7
+    },
+    {
+      "edge": "R03_END_-1_S1",
+      "road": "R03",
+      "length": 6.299,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R04LE00_S0",
+      "road": "R02",
+      "length": 3.9,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R04RE00_S0",
+      "road": "R02",
+      "length": 3.9,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R04_END_0_S0",
+      "road": "R02",
+      "length": 0.0,
+      "minimum_angle_degrees": 0.0
+    },
+    {
+      "edge": "R04_END_0_S1",
+      "road": "R02",
+      "length": 6.299,
+      "minimum_angle_degrees": 0.0
+    },
+    {
+      "edge": "R04_END_0_S1",
+      "road": "R04",
+      "length": 6.299,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R04_END_0_S2",
+      "road": "R02",
+      "length": 0.0,
+      "minimum_angle_degrees": 0.0
+    },
+    {
+      "edge": "R04_END_-1_S1",
+      "road": "R04",
+      "length": 6.299,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R05LE00_S0",
+      "road": "R02",
+      "length": 3.9,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R05RE00_S0",
+      "road": "R02",
+      "length": 3.899,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R05_END_0_S0",
+      "road": "R02",
+      "length": 0.001,
+      "minimum_angle_degrees": 0.0
+    },
+    {
+      "edge": "R05_END_0_S1",
+      "road": "R02",
+      "length": 5.799,
+      "minimum_angle_degrees": 0.0
+    },
+    {
+      "edge": "R05_END_0_S1",
+      "road": "R05",
+      "length": 5.799,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R05_END_0_S2",
+      "road": "R02",
+      "length": 0.001,
+      "minimum_angle_degrees": 0.0
+    },
+    {
+      "edge": "R05_END_-1_S1",
+      "road": "R05",
+      "length": 5.799,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R06_END_0_S1",
+      "road": "R06",
+      "length": 5.499,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R06_END_-1_S1",
+      "road": "R06",
+      "length": 5.499,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R07LE02_S1",
+      "road": "R03",
+      "length": 1.885,
+      "minimum_angle_degrees": 47.4
+    },
+    {
+      "edge": "R07RE02_S1",
+      "road": "R03",
+      "length": 3.967,
+      "minimum_angle_degrees": 77.0
+    },
+    {
+      "edge": "R07_END_0_S1",
+      "road": "R07",
+      "length": 5.499,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R07_END_-1_S0",
+      "road": "R03",
+      "length": 0.001,
+      "minimum_angle_degrees": 42.6
+    },
+    {
+      "edge": "R07_END_-1_S1",
+      "road": "R07",
+      "length": 5.499,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "R07_END_-1_S1",
+      "road": "R03",
+      "length": 5.499,
+      "minimum_angle_degrees": 13.0
+    },
+    {
+      "edge": "R07_END_-1_S2",
+      "road": "R03",
+      "length": 0.001,
+      "minimum_angle_degrees": 13.0
+    },
+    {
+      "edge": "J01_CORNER_1_S0",
+      "road": "R01",
+      "length": 0.259,
+      "minimum_angle_degrees": 3.6
+    },
+    {
+      "edge": "J01_CORNER_1_S1",
+      "road": "R02",
+      "length": 8.007,
+      "minimum_angle_degrees": 86.4
+    },
+    {
+      "edge": "J01_CORNER_1_S1",
+      "road": "R01",
+      "length": 8.007,
+      "minimum_angle_degrees": 3.6
+    },
+    {
+      "edge": "J01_CORNER_1_S2",
+      "road": "R01",
+      "length": 0.251,
+      "minimum_angle_degrees": 3.6
+    },
+    {
+      "edge": "J01_CORNER_2_S0",
+      "road": "R01",
+      "length": 0.388,
+      "minimum_angle_degrees": 49.8
+    },
+    {
+      "edge": "J01_CORNER_2_S1",
+      "road": "R02",
+      "length": 5.535,
+      "minimum_angle_degrees": 40.2
+    },
+    {
+      "edge": "J01_CORNER_2_S1",
+      "road": "R01",
+      "length": 5.535,
+      "minimum_angle_degrees": 49.8
+    },
+    {
+      "edge": "J01_CORNER_2_S2",
+      "road": "R02",
+      "length": 0.656,
+      "minimum_angle_degrees": 40.2
+    },
+    {
+      "edge": "J01_CORNER_3_S0",
+      "road": "R01",
+      "length": 0.424,
+      "minimum_angle_degrees": 46.5
+    },
+    {
+      "edge": "J01_CORNER_3_S1",
+      "road": "R02",
+      "length": 5.061,
+      "minimum_angle_degrees": 36.2
+    },
+    {
+      "edge": "J01_CORNER_3_S1",
+      "road": "R01",
+      "length": 5.061,
+      "minimum_angle_degrees": 46.5
+    },
+    {
+      "edge": "J01_CORNER_3_S2",
+      "road": "R02",
+      "length": 0.69,
+      "minimum_angle_degrees": 36.2
+    },
+    {
+      "edge": "J02_CORNER_1_S0",
+      "road": "R02",
+      "length": 6.3,
+      "minimum_angle_degrees": 0.0
+    },
+    {
+      "edge": "J02_CORNER_1_S0",
+      "road": "R04",
+      "length": 6.3,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "J02_CORNER_2_S0",
+      "road": "R02",
+      "length": 4.978,
+      "minimum_angle_degrees": 53.5
+    },
+    {
+      "edge": "J02_CORNER_2_S0",
+      "road": "R04",
+      "length": 4.978,
+      "minimum_angle_degrees": 36.5
+    },
+    {
+      "edge": "J02_CORNER_2_S1",
+      "road": "R04",
+      "length": 0.312,
+      "minimum_angle_degrees": 36.5
+    },
+    {
+      "edge": "J02_CORNER_3_S0",
+      "road": "R02",
+      "length": 3.914,
+      "minimum_angle_degrees": 53.5
+    },
+    {
+      "edge": "J02_CORNER_3_S0",
+      "road": "R04",
+      "length": 3.914,
+      "minimum_angle_degrees": 36.5
+    },
+    {
+      "edge": "J02_CORNER_3_S1",
+      "road": "R02",
+      "length": 1.064,
+      "minimum_angle_degrees": 53.5
+    },
+    {
+      "edge": "J03_CORNER_1_S0",
+      "road": "R02",
+      "length": 5.8,
+      "minimum_angle_degrees": 0.0
+    },
+    {
+      "edge": "J03_CORNER_1_S0",
+      "road": "R05",
+      "length": 5.8,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "J03_CORNER_2_S0",
+      "road": "R02",
+      "length": 3.44,
+      "minimum_angle_degrees": 55.7
+    },
+    {
+      "edge": "J03_CORNER_2_S0",
+      "road": "R05",
+      "length": 3.44,
+      "minimum_angle_degrees": 34.3
+    },
+    {
+      "edge": "J03_CORNER_2_S1",
+      "road": "R02",
+      "length": 1.402,
+      "minimum_angle_degrees": 55.7
+    },
+    {
+      "edge": "J03_CORNER_3_S0",
+      "road": "R02",
+      "length": 4.842,
+      "minimum_angle_degrees": 55.7
+    },
+    {
+      "edge": "J03_CORNER_3_S0",
+      "road": "R05",
+      "length": 4.842,
+      "minimum_angle_degrees": 34.3
+    },
+    {
+      "edge": "J03_CORNER_3_S1",
+      "road": "R05",
+      "length": 0.303,
+      "minimum_angle_degrees": 34.3
+    },
+    {
+      "edge": "J04_CORNER_1_S0",
+      "road": "R02",
+      "length": 6.3,
+      "minimum_angle_degrees": 2.0
+    },
+    {
+      "edge": "J04_CORNER_1_S0",
+      "road": "R03",
+      "length": 6.3,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "J04_CORNER_2_S0",
+      "road": "R02",
+      "length": 5.513,
+      "minimum_angle_degrees": 43.5
+    },
+    {
+      "edge": "J04_CORNER_2_S0",
+      "road": "R03",
+      "length": 5.513,
+      "minimum_angle_degrees": 44.4
+    },
+    {
+      "edge": "J04_CORNER_2_S1",
+      "road": "R03",
+      "length": 0.496,
+      "minimum_angle_degrees": 44.4
+    },
+    {
+      "edge": "J04_CORNER_3_S0",
+      "road": "R02",
+      "length": 2.976,
+      "minimum_angle_degrees": 66.0
+    },
+    {
+      "edge": "J04_CORNER_3_S0",
+      "road": "R03",
+      "length": 2.976,
+      "minimum_angle_degrees": 26.0
+    },
+    {
+      "edge": "J04_CORNER_3_S1",
+      "road": "R02",
+      "length": 1.523,
+      "minimum_angle_degrees": 66.0
+    },
+    {
+      "edge": "J05_JOIN_L_S1",
+      "road": "R06",
+      "length": 2.75,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "J05_JOIN_R_S1",
+      "road": "R06",
+      "length": 2.75,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "J05_MAIN_JOIN_S0",
+      "road": "R06",
+      "length": 2.749,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "J06_CORNER_1_S0",
+      "road": "R03",
+      "length": 0.001,
+      "minimum_angle_degrees": 13.0
+    },
+    {
+      "edge": "J06_CORNER_1_S1",
+      "road": "R07",
+      "length": 5.499,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "J06_CORNER_1_S1",
+      "road": "R03",
+      "length": 5.499,
+      "minimum_angle_degrees": 13.0
+    },
+    {
+      "edge": "J06_CORNER_1_S2",
+      "road": "R03",
+      "length": 0.001,
+      "minimum_angle_degrees": 42.6
+    },
+    {
+      "edge": "J06_CORNER_2_S0",
+      "road": "R03",
+      "length": 0.001,
+      "minimum_angle_degrees": 47.0
+    },
+    {
+      "edge": "J06_CORNER_2_S1",
+      "road": "R07",
+      "length": 5.14,
+      "minimum_angle_degrees": 56.0
+    },
+    {
+      "edge": "J06_CORNER_2_S1",
+      "road": "R03",
+      "length": 5.14,
+      "minimum_angle_degrees": 47.0
+    },
+    {
+      "edge": "J06_CORNER_2_S2",
+      "road": "R07",
+      "length": 0.01,
+      "minimum_angle_degrees": 56.0
+    },
+    {
+      "edge": "J06_CORNER_3_S0",
+      "road": "R03",
+      "length": 0.001,
+      "minimum_angle_degrees": 53.9
+    },
+    {
+      "edge": "J06_CORNER_3_S1",
+      "road": "R07",
+      "length": 2.157,
+      "minimum_angle_degrees": 23.1
+    },
+    {
+      "edge": "J06_CORNER_3_S1",
+      "road": "R03",
+      "length": 2.157,
+      "minimum_angle_degrees": 53.9
+    },
+    {
+      "edge": "J06_CORNER_3_S2",
+      "road": "R03",
+      "length": 0.976,
+      "minimum_angle_degrees": 53.9
+    },
+    {
+      "edge": "X_GATE_S1",
+      "road": "R01",
+      "length": 9.499,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "BACK_NEIGHBORHOOD_S2",
+      "road": "R02",
+      "length": 8.499,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "B01_BRANCH_S1",
+      "road": "R02",
+      "length": 3.425,
+      "minimum_angle_degrees": 82.7
+    },
+    {
+      "edge": "B02_BRANCH_S1",
+      "road": "R02",
+      "length": 3.425,
+      "minimum_angle_degrees": 82.7
+    },
+    {
+      "edge": "B03_BRANCH_S1",
+      "road": "R02",
+      "length": 3.425,
+      "minimum_angle_degrees": 82.7
+    },
+    {
+      "edge": "B18_BRANCH_S1",
+      "road": "R04",
+      "length": 3.249,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "B19_BRANCH_S1",
+      "road": "R02",
+      "length": 3.899,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "B21_BRANCH_S1",
+      "road": "R02",
+      "length": 3.9,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "B22_BRANCH_S1",
+      "road": "R02",
+      "length": 3.899,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "B23_BRANCH_S1",
+      "road": "R02",
+      "length": 3.9,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "B24_BRANCH_S1",
+      "road": "R02",
+      "length": 3.899,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "B25_BRANCH_S1",
+      "road": "R02",
+      "length": 3.9,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "B26_ACCESS_EDGE_S3",
+      "road": "R05",
+      "length": 5.799,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "B26_BRANCH_S1",
+      "road": "R02",
+      "length": 3.899,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "B27_ACCESS_EDGE_S1",
+      "road": "R05",
+      "length": 4.582,
+      "minimum_angle_degrees": 52.2
+    },
+    {
+      "edge": "B32_BRANCH_S1",
+      "road": "R03",
+      "length": 2.524,
+      "minimum_angle_degrees": 60.3
+    },
+    {
+      "edge": "B33_BRANCH_S1",
+      "road": "R02",
+      "length": 2.692,
+      "minimum_angle_degrees": 60.3
+    },
+    {
+      "edge": "B35_BRANCH_S1",
+      "road": "R02",
+      "length": 2.692,
+      "minimum_angle_degrees": 60.3
+    },
+    {
+      "edge": "B43_BRANCH_S1",
+      "road": "R03",
+      "length": 2.524,
+      "minimum_angle_degrees": 60.3
+    },
+    {
+      "edge": "B52_ACCESS_EDGE_S1",
+      "road": "R07",
+      "length": 3.577,
+      "minimum_angle_degrees": 69.7
+    },
+    {
+      "edge": "B52_ACCESS_EDGE_S2",
+      "road": "R07",
+      "length": 0.0,
+      "minimum_angle_degrees": 13.0
+    },
+    {
+      "edge": "B52_ACCESS_EDGE_S3",
+      "road": "R07",
+      "length": 5.799,
+      "minimum_angle_degrees": 13.0
+    },
+    {
+      "edge": "B52_ACCESS_EDGE_S3",
+      "road": "R03",
+      "length": 5.799,
+      "minimum_angle_degrees": 90.0
+    },
+    {
+      "edge": "B52_ACCESS_EDGE_S4",
+      "road": "R03",
+      "length": 0.501,
+      "minimum_angle_degrees": 60.3
+    },
+    {
+      "edge": "B52_ACCESS_EDGE_S5",
+      "road": "R03",
+      "length": 0.834,
+      "minimum_angle_degrees": 29.7
+    },
+    {
+      "edge": "B53_ACCESS_EDGE_S4",
+      "road": "R03",
+      "length": 6.3,
+      "minimum_angle_degrees": 84.4
+    },
+    {
+      "edge": "B53_ACCESS_EDGE_S5",
+      "road": "R03",
+      "length": 0.15,
+      "minimum_angle_degrees": 5.6
+    },
+    {
+      "edge": "B55_ACCESS_EDGE_S2",
+      "road": "R03",
+      "length": 6.299,
+      "minimum_angle_degrees": 90.0
+    }
+  ],
+  "status": "static_design_checks_passed"
+}

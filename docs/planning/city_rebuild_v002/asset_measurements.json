@@ -1,0 +1,4476 @@
+{
+  "schema": "simus-city-rebuild-asset-measurements-v002",
+  "status": "design-only, not exhibition approval",
+  "map_version": null,
+  "coordinate_contract": {
+    "units": "metres",
+    "design_unity": "X east, Y height, Z north",
+    "campus_center_xz": [
+      0,
+      65
+    ],
+    "campus_yaw_degrees": 0,
+    "source_to_design": "Unity design (X,Y,Z)=(Blender world X, Blender world Z - 0.18, Blender world Y + 65)",
+    "caveat": "This is an explicit proposed placement adapter. Unity FBX axis handedness/root offset has not been executed or verified; correct adapter on future implementation, do not change campus geometry."
+  },
+  "provenance": [
+    {
+      "name": "simus_asset_audit.json",
+      "sha256": "d8fcbb19a8ca2af0daac1af2f1de7b89b4420b22b3aeda23505753f86d59c4c0"
+    },
+    {
+      "name": "simus_fbx_audit.json",
+      "sha256": "ada7ee98836bb32fd75270cc93e0b950f26f323d1e5091c6e708b40dc37f98ec"
+    },
+    {
+      "name": "simus_park_audit.json",
+      "sha256": "7b0cd72d3866fc7f3412188342da27157fd975cc5c5cd22f910ff70492ac2161"
+    }
+  ],
+  "assets": [
+    {
+      "asset_key": "VILLA_03_CORNER_MIXED",
+      "source": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.blend",
+      "source_sha256": "0f4b0e6927ac9738d5c74d7077d9f8212451525c959c09f18eafa2b51d380963",
+      "existing_fbx": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx",
+      "existing_fbx_sha256": "a035520c65fb1adbae7e7cb79720bffdafde936e9595f2e8ed50f3a2af4e9c1b",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 183,
+      "bounds_blender_xyz": {
+        "min": [
+          -9.273,
+          -9.71,
+          0.0
+        ],
+        "max": [
+          9.273,
+          9.71,
+          11.896
+        ]
+      },
+      "dimensions_blender_xyz": [
+        18.546,
+        19.42,
+        11.896
+      ],
+      "dimensions_design_unity_xzy": [
+        18.546,
+        19.42,
+        11.896
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_asset_audit.json",
+      "measurement_id": "VILLA_03_CORNER_MIXED",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [],
+      "manifest_statuses": {},
+      "dimensions_unity_xyz": [
+        18.546,
+        11.896,
+        19.42
+      ]
+    },
+    {
+      "asset_key": "VILLA_02_STONE_MODERN",
+      "source": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.blend",
+      "source_sha256": "247eb4e45bab8d6f738700157e68fddc43db3343999d902757b4a9b358c91661",
+      "existing_fbx": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.fbx",
+      "existing_fbx_sha256": "b6dc05e3f4b6764d0059f386e83cd23883b149f15a52fbecb4a2e1ae6322af76",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 223,
+      "bounds_blender_xyz": {
+        "min": [
+          -10.707,
+          -9.334,
+          0.0
+        ],
+        "max": [
+          10.707,
+          9.334,
+          14.528
+        ]
+      },
+      "dimensions_blender_xyz": [
+        21.414,
+        18.668,
+        14.528
+      ],
+      "dimensions_design_unity_xzy": [
+        21.414,
+        18.668,
+        14.528
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_asset_audit.json",
+      "measurement_id": "VILLA_02_STONE_MODERN",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [],
+      "manifest_statuses": {},
+      "dimensions_unity_xyz": [
+        21.414,
+        14.528,
+        18.668
+      ]
+    },
+    {
+      "asset_key": "VILLA_01_PILOTI_BRICK",
+      "source": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.blend",
+      "source_sha256": "2102aad849d295c047ec395073a7c8532898d86bb7bc564c503d93540217d90d",
+      "existing_fbx": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx",
+      "existing_fbx_sha256": "65601c83435281e1b1bf4851b3ed65d1e8f1b50c7f82bfaf0c772c8b275ff5a1",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 240,
+      "bounds_blender_xyz": {
+        "min": [
+          -10.237,
+          -8.394,
+          0.0
+        ],
+        "max": [
+          10.237,
+          8.394,
+          17.291
+        ]
+      },
+      "dimensions_blender_xyz": [
+        20.474,
+        16.788,
+        17.291
+      ],
+      "dimensions_design_unity_xzy": [
+        20.474,
+        16.788,
+        17.291
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_asset_audit.json",
+      "measurement_id": "VILLA_01_PILOTI_BRICK",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [],
+      "manifest_statuses": {},
+      "dimensions_unity_xyz": [
+        20.474,
+        17.291,
+        16.788
+      ]
+    },
+    {
+      "asset_key": "SIMUS_Apartment_Complex",
+      "source": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/SIMUS_Apartment_Complex.blend",
+      "source_sha256": "476130322a0ef45151568cd9b98cab513610eed6377833da731ded473a16030c",
+      "existing_fbx": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/SIMUS_Apartment_Complex.fbx",
+      "existing_fbx_sha256": "1d752a87ba6689a03c0b323bb02f42570aaf3c48cfa2399b55ab175501aaf711",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 281,
+      "bounds_blender_xyz": {
+        "min": [
+          -1000.0,
+          -1000.0,
+          -1.3
+        ],
+        "max": [
+          1000.0,
+          1000.0,
+          49.89
+        ]
+      },
+      "dimensions_blender_xyz": [
+        2000.0,
+        2000.0,
+        51.19
+      ],
+      "dimensions_design_unity_xzy": [
+        2000.0,
+        2000.0,
+        51.19
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_asset_audit.json",
+      "measurement_id": "SIMUS_Apartment_Complex",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [],
+      "manifest_statuses": {},
+      "dimensions_unity_xyz": [
+        2000.0,
+        51.19,
+        2000.0
+      ]
+    },
+    {
+      "asset_key": "SIMUS_Apartment_Complex",
+      "source": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/SIMUS_Apartment_Complex.blend",
+      "source_sha256": "8800918e0ccc6426011601f1c5b6b059e90f6d9f6aba02a54088a887dafc756f",
+      "existing_fbx": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/SIMUS_Apartment_Complex.fbx",
+      "existing_fbx_sha256": "d40551194a6f0845b7839bf32925ff78647bed7749218685bee1db7270c76fec",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 344,
+      "bounds_blender_xyz": {
+        "min": [
+          -1000.0,
+          -1000.0,
+          -1.3
+        ],
+        "max": [
+          1000.0,
+          1000.0,
+          43.77
+        ]
+      },
+      "dimensions_blender_xyz": [
+        2000.0,
+        2000.0,
+        45.07
+      ],
+      "dimensions_design_unity_xzy": [
+        2000.0,
+        2000.0,
+        45.07
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_asset_audit.json",
+      "measurement_id": "SIMUS_Apartment_Complex",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [],
+      "manifest_statuses": {},
+      "dimensions_unity_xyz": [
+        2000.0,
+        45.07,
+        2000.0
+      ]
+    },
+    {
+      "asset_key": "HOUSE_03_NARROW_HOUSE",
+      "source": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.blend",
+      "source_sha256": "7104a4b3304aa9e9f9e98c383c21868b8801987aa83642b8dc69e4972e2a40c4",
+      "existing_fbx": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.fbx",
+      "existing_fbx_sha256": "e39bcb769d024c20a5be16a32707344a82c042b05a06f7235115b9e72a672dfa",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 93,
+      "bounds_blender_xyz": {
+        "min": [
+          -5.725,
+          -6.542,
+          0.0
+        ],
+        "max": [
+          5.725,
+          6.542,
+          9.605
+        ]
+      },
+      "dimensions_blender_xyz": [
+        11.45,
+        13.084,
+        9.605
+      ],
+      "dimensions_design_unity_xzy": [
+        11.45,
+        13.084,
+        9.605
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_asset_audit.json",
+      "measurement_id": "HOUSE_03_NARROW_HOUSE",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [],
+      "manifest_statuses": {},
+      "dimensions_unity_xyz": [
+        11.45,
+        9.605,
+        13.084
+      ]
+    },
+    {
+      "asset_key": "HOUSE_01_URBAN_MODERN",
+      "source": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.blend",
+      "source_sha256": "0f55bda83224b668b67c22976bb3b9fde25c5217826a628464345c679418c6eb",
+      "existing_fbx": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx",
+      "existing_fbx_sha256": "40f37e299f6a047facc69973de312c8c7566a92ff6be2430a0d547a3426160eb",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 90,
+      "bounds_blender_xyz": {
+        "min": [
+          -5.725,
+          -7.7,
+          0.0
+        ],
+        "max": [
+          5.725,
+          7.7,
+          9.755
+        ]
+      },
+      "dimensions_blender_xyz": [
+        11.45,
+        15.4,
+        9.755
+      ],
+      "dimensions_design_unity_xzy": [
+        11.45,
+        15.4,
+        9.755
+      ],
+      "fbx_readonly_import_verified": true,
+      "fbx_import_engine": "Blender 5.2.2 LTS",
+      "fbx_mesh_count": 1,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_asset_audit.json",
+      "measurement_id": "HOUSE_01_URBAN_MODERN",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [],
+      "manifest_statuses": {},
+      "dimensions_unity_xyz": [
+        11.45,
+        9.755,
+        15.4
+      ]
+    },
+    {
+      "asset_key": "HOUSE_02_OLD_BRICK",
+      "source": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.blend",
+      "source_sha256": "f5a6882376285c2b030480eb313c4f086dd769caadd1b6fab6750b99c3eeb7af",
+      "existing_fbx": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx",
+      "existing_fbx_sha256": "66c9f21a9c087cdbdd224c2387eee85ffbe7b154b22d23573eb244035e61aabe",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 91,
+      "bounds_blender_xyz": {
+        "min": [
+          -6.875,
+          -7.795,
+          0.0
+        ],
+        "max": [
+          6.875,
+          7.795,
+          7.571
+        ]
+      },
+      "dimensions_blender_xyz": [
+        13.75,
+        15.59,
+        7.571
+      ],
+      "dimensions_design_unity_xzy": [
+        13.75,
+        15.59,
+        7.571
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_asset_audit.json",
+      "measurement_id": "HOUSE_02_OLD_BRICK",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [],
+      "manifest_statuses": {},
+      "dimensions_unity_xyz": [
+        13.75,
+        7.571,
+        15.59
+      ]
+    },
+    {
+      "asset_key": "Campus",
+      "source": "unity/Assets/SIMUS/Art/buildings/campus/Campus.blend",
+      "source_sha256": "c99bc316cffb670ae564aebc92ecdff80f98651a15c7558fb167cf8fb21e7456",
+      "existing_fbx": "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+      "existing_fbx_sha256": "a424e0e33dcc7d3a2d0a3da918d064414bbf141f3f9c4e9da803a8f2c80f5d96",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 487,
+      "bounds_blender_xyz": {
+        "min": [
+          -78.12,
+          -106.093,
+          -2.796
+        ],
+        "max": [
+          78.12,
+          106.093,
+          19.224
+        ]
+      },
+      "dimensions_blender_xyz": [
+        156.24,
+        212.186,
+        22.02
+      ],
+      "dimensions_design_unity_xzy": [
+        156.24,
+        212.186,
+        22.02
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_asset_audit.json",
+      "measurement_id": "Campus",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [],
+      "manifest_statuses": {},
+      "dimensions_unity_xyz": [
+        156.24,
+        22.02,
+        212.186
+      ]
+    },
+    {
+      "asset_key": "COMMERCIAL_01_OLD_MULTI_TENANT",
+      "source": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.blend",
+      "source_sha256": "5f006182397eb92b6e17ecf9e4878e1ab3bacc733d16086a9b9d636545563dd0",
+      "existing_fbx": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx",
+      "existing_fbx_sha256": "dc4e0d842bd4e0e1ca224ab42ddda094c9c1fc81b7d9bc6a8e8add8de98aac06",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 583,
+      "bounds_blender_xyz": {
+        "min": [
+          -6.3,
+          -8.55,
+          0.0
+        ],
+        "max": [
+          6.3,
+          8.55,
+          16.488
+        ]
+      },
+      "dimensions_blender_xyz": [
+        12.6,
+        17.1,
+        16.488
+      ],
+      "dimensions_design_unity_xzy": [
+        12.6,
+        17.1,
+        16.488
+      ],
+      "fbx_readonly_import_verified": true,
+      "fbx_import_engine": "Blender 5.2.2 LTS",
+      "fbx_mesh_count": 1,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_asset_audit.json",
+      "measurement_id": "COMMERCIAL_01_OLD_MULTI_TENANT",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [],
+      "manifest_statuses": {},
+      "dimensions_unity_xyz": [
+        12.6,
+        16.488,
+        17.1
+      ]
+    },
+    {
+      "asset_key": "COMMERCIAL_03_MODERN_CORNER",
+      "source": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.blend",
+      "source_sha256": "8e66eafbd405eac73c60b13f290cd42049e87073d5c419acb9a0dbe044a0b411",
+      "existing_fbx": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx",
+      "existing_fbx_sha256": "30ddd89e46c9134b96ec9de93850584f825a2d0b9894469bd797c261cfd9ec93",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 569,
+      "bounds_blender_xyz": {
+        "min": [
+          -7.2,
+          -9.0,
+          0.0
+        ],
+        "max": [
+          7.2,
+          9.0,
+          13.878
+        ]
+      },
+      "dimensions_blender_xyz": [
+        14.4,
+        18.0,
+        13.878
+      ],
+      "dimensions_design_unity_xzy": [
+        14.4,
+        18.0,
+        13.878
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_asset_audit.json",
+      "measurement_id": "COMMERCIAL_03_MODERN_CORNER",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [],
+      "manifest_statuses": {},
+      "dimensions_unity_xyz": [
+        14.4,
+        13.878,
+        18.0
+      ]
+    },
+    {
+      "asset_key": "COMMERCIAL_02_NEIGHBORHOOD_CENTER",
+      "source": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_02_NEIGHBORHOOD_CENTER.blend",
+      "source_sha256": "daa269a28e7495ac0690afc3da7ac52a9269af2a8a13107d357de7033ff7ad30",
+      "existing_fbx": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_02_NEIGHBORHOOD_CENTER.fbx",
+      "existing_fbx_sha256": "a62574005414ccb75b884b9da044f6833618ba40ddcaa526dae7914255165472",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 526,
+      "bounds_blender_xyz": {
+        "min": [
+          -10.125,
+          -9.9,
+          0.0
+        ],
+        "max": [
+          10.125,
+          9.9,
+          13.383
+        ]
+      },
+      "dimensions_blender_xyz": [
+        20.25,
+        19.8,
+        13.383
+      ],
+      "dimensions_design_unity_xzy": [
+        20.25,
+        19.8,
+        13.383
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_asset_audit.json",
+      "measurement_id": "COMMERCIAL_02_NEIGHBORHOOD_CENTER",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [],
+      "manifest_statuses": {},
+      "dimensions_unity_xyz": [
+        20.25,
+        13.383,
+        19.8
+      ]
+    },
+    {
+      "asset_key": "DEPARTMENT",
+      "source": "unity/Assets/SIMUS/Art/buildings/department_store/DEPARTMENT.blend",
+      "source_sha256": "63f41143e2b1e716fc4d2a494555346115f1d5dd67ba84182957821dc5633ac3",
+      "existing_fbx": "unity/Assets/SIMUS/Art/buildings/department_store/DEPARTMENT.fbx",
+      "existing_fbx_sha256": "548356718cefd78fa5065fee83339bf3a02112b31827563b736ee4ad97a7f4e7",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 313,
+      "bounds_blender_xyz": {
+        "min": [
+          -12.205,
+          -9.4,
+          0.0
+        ],
+        "max": [
+          12.205,
+          9.4,
+          13.74
+        ]
+      },
+      "dimensions_blender_xyz": [
+        24.41,
+        18.8,
+        13.74
+      ],
+      "dimensions_design_unity_xzy": [
+        24.41,
+        18.8,
+        13.74
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_asset_audit.json",
+      "measurement_id": "DEPARTMENT",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [],
+      "manifest_statuses": {},
+      "dimensions_unity_xyz": [
+        24.41,
+        13.74,
+        18.8
+      ]
+    },
+    {
+      "asset_key": "APARTMENT_C_MIDRISE",
+      "source": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_C_MIDRISE.blend",
+      "source_sha256": "eceb39e842884155caea6b99ccf0413adb31e270e9860c9a64b18cccc4c2c1f4",
+      "existing_fbx": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_C_MIDRISE.fbx",
+      "existing_fbx_sha256": "dc42968bec87d27fa922ef5535d23902b127594186a94ec442a8d1cdd0859816",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 485,
+      "bounds_blender_xyz": {
+        "min": [
+          -10.09,
+          -15.045,
+          0.0
+        ],
+        "max": [
+          10.09,
+          15.045,
+          37.6
+        ]
+      },
+      "dimensions_blender_xyz": [
+        20.18,
+        30.09,
+        37.6
+      ],
+      "dimensions_design_unity_xzy": [
+        20.18,
+        30.09,
+        37.6
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_asset_audit.json",
+      "measurement_id": "APARTMENT_C_MIDRISE",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [],
+      "manifest_statuses": {},
+      "dimensions_unity_xyz": [
+        20.18,
+        37.6,
+        30.09
+      ]
+    },
+    {
+      "asset_key": "APARTMENT_A_MIDRISE",
+      "source": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_A_MIDRISE.blend",
+      "source_sha256": "6238ce305407a8f3dbdf4628ff2febc2fa056a8236d9abbc948f9fc7f7824f12",
+      "existing_fbx": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_A_MIDRISE.fbx",
+      "existing_fbx_sha256": "12537f53d5defe04a4c93cd8395780f759a205b1358b41950fc9dc9f450040e5",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 837,
+      "bounds_blender_xyz": {
+        "min": [
+          -7.47,
+          -17.09,
+          0.0
+        ],
+        "max": [
+          7.47,
+          17.09,
+          43.48
+        ]
+      },
+      "dimensions_blender_xyz": [
+        14.94,
+        34.18,
+        43.48
+      ],
+      "dimensions_design_unity_xzy": [
+        14.94,
+        34.18,
+        43.48
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_asset_audit.json",
+      "measurement_id": "APARTMENT_A_MIDRISE",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [],
+      "manifest_statuses": {},
+      "dimensions_unity_xyz": [
+        14.94,
+        43.48,
+        34.18
+      ]
+    },
+    {
+      "asset_key": "APARTMENT_B_MIDRISE",
+      "source": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_B_MIDRISE.blend",
+      "source_sha256": "842dbd9cd80c3ff440ea9a88e371cc45c1d48583790f87f919d23e3f1c089fa5",
+      "existing_fbx": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_B_MIDRISE.fbx",
+      "existing_fbx_sha256": "cd0386c38331d5c7c515d0916fa160eb83ec59fda4f2cbc4b2c5ac2148e682c6",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 855,
+      "bounds_blender_xyz": {
+        "min": [
+          -11.09,
+          -11.445,
+          0.0
+        ],
+        "max": [
+          11.09,
+          11.445,
+          49.6
+        ]
+      },
+      "dimensions_blender_xyz": [
+        22.18,
+        22.89,
+        49.6
+      ],
+      "dimensions_design_unity_xzy": [
+        22.18,
+        22.89,
+        49.6
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_asset_audit.json",
+      "measurement_id": "APARTMENT_B_MIDRISE",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [],
+      "manifest_statuses": {},
+      "dimensions_unity_xyz": [
+        22.18,
+        49.6,
+        22.89
+      ]
+    },
+    {
+      "asset_key": "City_Infrastructure",
+      "source": "unity/Assets/SIMUS/Art/roads/city_infrastructure/City_Infrastructure.blend",
+      "source_sha256": "ae2c43831d3aefb5bc0b49e86471ece4bf4d772efff1155249a177da6dfc8465",
+      "existing_fbx": "unity/Assets/SIMUS/Art/roads/city_infrastructure/City_Infrastructure.fbx",
+      "existing_fbx_sha256": "f1f8fcdcdb2987869e766bde19b6305b26f7a34f6d3d121ba093d4849f2cac4e",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 450,
+      "bounds_blender_xyz": {
+        "min": [
+          -187.75,
+          -158.25,
+          -0.16
+        ],
+        "max": [
+          198.5,
+          159.0,
+          0.336
+        ]
+      },
+      "dimensions_blender_xyz": [
+        386.25,
+        317.25,
+        0.496
+      ],
+      "dimensions_design_unity_xzy": [
+        386.25,
+        317.25,
+        0.496
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_asset_audit.json",
+      "measurement_id": "City_Infrastructure",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [],
+      "manifest_statuses": {},
+      "dimensions_unity_xyz": [
+        386.25,
+        0.496,
+        317.25
+      ]
+    },
+    {
+      "asset_key": "SIMUS_Dense_Realistic_University_Map_03",
+      "source": "unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Dense_Realistic_University_Map_03.blend",
+      "source_sha256": "95c73300f7116fb8d3fa0468c9b7b16fa93788780597b2eb347ac723deb1dee5",
+      "existing_fbx": "unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Dense_Realistic_University_Map_03.fbx",
+      "existing_fbx_sha256": "2b4b27598f4e86cb20f8604c52077b53490cd089e3699d81680866bbed0cb36d",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 24141,
+      "bounds_blender_xyz": {
+        "min": [
+          -310.0,
+          -285.0,
+          -34.8
+        ],
+        "max": [
+          285.0,
+          290.0,
+          49.66
+        ]
+      },
+      "dimensions_blender_xyz": [
+        595.0,
+        575.0,
+        84.46
+      ],
+      "dimensions_design_unity_xzy": [
+        595.0,
+        575.0,
+        84.46
+      ],
+      "fbx_readonly_import_verified": true,
+      "fbx_import_engine": "Blender 5.2.2 LTS",
+      "fbx_mesh_count": 1385,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_asset_audit.json",
+      "measurement_id": "SIMUS_Dense_Realistic_University_Map_03",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [
+        "university_v003_environment_states"
+      ],
+      "manifest_statuses": {
+        "university_v003_environment_states": "received"
+      },
+      "dimensions_unity_xyz": [
+        595.0,
+        84.46,
+        575.0
+      ]
+    },
+    {
+      "asset_key": "SIMUS_Road_Corner_90",
+      "source": "assets/library/roads/road_corner/source/SIMUS_Road_Corner_90.blend",
+      "source_sha256": "274116279eba377240888ff1508ecc2c4d9e99fa66960f65c47c4eef4a4f2d3c",
+      "existing_fbx": null,
+      "existing_fbx_sha256": null,
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 13,
+      "bounds_blender_xyz": {
+        "min": [
+          -100.0,
+          -100.0,
+          -0.28
+        ],
+        "max": [
+          100.0,
+          100.0,
+          0.17
+        ]
+      },
+      "dimensions_blender_xyz": [
+        200.0,
+        200.0,
+        0.45
+      ],
+      "dimensions_design_unity_xzy": [
+        200.0,
+        200.0,
+        0.45
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_asset_audit.json",
+      "measurement_id": "SIMUS_Road_Corner_90",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [
+        "candidate_road_corner_simus_road_corner_90"
+      ],
+      "manifest_statuses": {
+        "candidate_road_corner_simus_road_corner_90": "received"
+      },
+      "dimensions_unity_xyz": [
+        200.0,
+        0.45,
+        200.0
+      ]
+    },
+    {
+      "asset_key": "SIMUS_Parking_Lot_16",
+      "source": "assets/library/roads/parking_lot/source/SIMUS_Parking_Lot_16.blend",
+      "source_sha256": "921060e2785b09d7181904e4fd8835c0b6f87935f4d98339507b3efce8680b20",
+      "existing_fbx": null,
+      "existing_fbx_sha256": null,
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 18,
+      "bounds_blender_xyz": {
+        "min": [
+          -100.0,
+          -100.0,
+          -0.28
+        ],
+        "max": [
+          100.0,
+          100.0,
+          0.17
+        ]
+      },
+      "dimensions_blender_xyz": [
+        200.0,
+        200.0,
+        0.45
+      ],
+      "dimensions_design_unity_xzy": [
+        200.0,
+        200.0,
+        0.45
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_asset_audit.json",
+      "measurement_id": "SIMUS_Parking_Lot_16",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [
+        "candidate_parking_lot_simus_parking_lot_16"
+      ],
+      "manifest_statuses": {
+        "candidate_parking_lot_simus_parking_lot_16": "received"
+      },
+      "dimensions_unity_xyz": [
+        200.0,
+        0.45,
+        200.0
+      ]
+    },
+    {
+      "asset_key": "SIMUS_Road_Straight_10m",
+      "source": "assets/library/roads/road_straight/source/SIMUS_Road_Straight_10m.blend",
+      "source_sha256": "c90f858e2c2394732b886456e1e353c56a2917fb90b0cd925788529ca66753ec",
+      "existing_fbx": null,
+      "existing_fbx_sha256": null,
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 13,
+      "bounds_blender_xyz": {
+        "min": [
+          -100.0,
+          -100.0,
+          -0.28
+        ],
+        "max": [
+          100.0,
+          100.0,
+          0.17
+        ]
+      },
+      "dimensions_blender_xyz": [
+        200.0,
+        200.0,
+        0.45
+      ],
+      "dimensions_design_unity_xzy": [
+        200.0,
+        200.0,
+        0.45
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_asset_audit.json",
+      "measurement_id": "SIMUS_Road_Straight_10m",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [
+        "candidate_road_straight_simus_road_straight_10m"
+      ],
+      "manifest_statuses": {
+        "candidate_road_straight_simus_road_straight_10m": "received"
+      },
+      "dimensions_unity_xyz": [
+        200.0,
+        0.45,
+        200.0
+      ]
+    },
+    {
+      "asset_key": "SIMUS_Road_Crossroad_15m",
+      "source": "assets/library/roads/road_crossroad/source/SIMUS_Road_Crossroad_15m.blend",
+      "source_sha256": "6fe77645e71a7aa2cf75d18411f13f12c39b7aa69ccc562c95a7b277f71c4c55",
+      "existing_fbx": null,
+      "existing_fbx_sha256": null,
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 8,
+      "bounds_blender_xyz": {
+        "min": [
+          -100.0,
+          -100.0,
+          -0.28
+        ],
+        "max": [
+          100.0,
+          100.0,
+          0.17
+        ]
+      },
+      "dimensions_blender_xyz": [
+        200.0,
+        200.0,
+        0.45
+      ],
+      "dimensions_design_unity_xzy": [
+        200.0,
+        200.0,
+        0.45
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_asset_audit.json",
+      "measurement_id": "SIMUS_Road_Crossroad_15m",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [
+        "candidate_road_crossroad_simus_road_crossroad_15m"
+      ],
+      "manifest_statuses": {
+        "candidate_road_crossroad_simus_road_crossroad_15m": "received"
+      },
+      "dimensions_unity_xyz": [
+        200.0,
+        0.45,
+        200.0
+      ]
+    },
+    {
+      "asset_key": "SIMUS_Modular_Character_Happiness_Animations",
+      "source": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Happiness_Animations.blend",
+      "source_sha256": "c7ca09cb7b2a70fcea347efe602b39fc152f1a757b57ea4eafb3c38a7ea75506",
+      "existing_fbx": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Happiness_Animations.fbx",
+      "existing_fbx_sha256": "a81da78cc3eaf0b44e21ef322b046e5d27f9b3a9637829917929d93af2851fb3",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 70,
+      "bounds_blender_xyz": {
+        "min": [
+          -0.545,
+          -0.204,
+          0.0
+        ],
+        "max": [
+          6.546,
+          0.271,
+          3.775
+        ]
+      },
+      "dimensions_blender_xyz": [
+        7.091,
+        0.475,
+        3.775
+      ],
+      "dimensions_design_unity_xzy": [
+        7.091,
+        0.475,
+        3.775
+      ],
+      "fbx_readonly_import_verified": true,
+      "fbx_import_engine": "Blender 5.2.2 LTS",
+      "fbx_mesh_count": 21,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_asset_audit.json",
+      "measurement_id": "SIMUS_Modular_Character_Happiness_Animations",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [
+        "modular_character_happiness_animations_v001",
+        "citizen_portrait_npc_01",
+        "citizen_portrait_npc_02",
+        "citizen_portrait_npc_03",
+        "citizen_portrait_npc_04",
+        "citizen_portrait_npc_05",
+        "citizen_portrait_npc_06",
+        "citizen_portrait_npc_07",
+        "citizen_portrait_npc_08",
+        "citizen_portrait_npc_09",
+        "citizen_portrait_npc_10",
+        "citizen_portrait_npc_11",
+        "citizen_portrait_npc_12",
+        "citizen_portrait_npc_13",
+        "citizen_portrait_npc_14",
+        "citizen_portrait_npc_15",
+        "citizen_portrait_npc_16",
+        "citizen_custom_portrait_npc_01_none",
+        "citizen_custom_portrait_npc_01_square",
+        "citizen_custom_portrait_npc_01_round",
+        "citizen_custom_portrait_npc_02_none",
+        "citizen_custom_portrait_npc_02_square",
+        "citizen_custom_portrait_npc_02_round",
+        "citizen_custom_portrait_npc_03_none",
+        "citizen_custom_portrait_npc_03_square",
+        "citizen_custom_portrait_npc_03_round",
+        "citizen_custom_portrait_npc_04_none",
+        "citizen_custom_portrait_npc_04_square",
+        "citizen_custom_portrait_npc_04_round",
+        "citizen_custom_portrait_npc_05_none",
+        "citizen_custom_portrait_npc_05_square",
+        "citizen_custom_portrait_npc_05_round",
+        "citizen_custom_portrait_npc_06_none",
+        "citizen_custom_portrait_npc_06_square",
+        "citizen_custom_portrait_npc_06_round",
+        "citizen_custom_portrait_npc_07_none",
+        "citizen_custom_portrait_npc_07_square",
+        "citizen_custom_portrait_npc_07_round",
+        "citizen_custom_portrait_npc_08_none",
+        "citizen_custom_portrait_npc_08_square",
+        "citizen_custom_portrait_npc_08_round",
+        "citizen_custom_portrait_npc_09_none",
+        "citizen_custom_portrait_npc_09_square",
+        "citizen_custom_portrait_npc_09_round",
+        "citizen_custom_portrait_npc_10_none",
+        "citizen_custom_portrait_npc_10_square",
+        "citizen_custom_portrait_npc_10_round",
+        "citizen_custom_portrait_npc_11_none",
+        "citizen_custom_portrait_npc_11_square",
+        "citizen_custom_portrait_npc_11_round",
+        "citizen_custom_portrait_npc_12_none",
+        "citizen_custom_portrait_npc_12_square",
+        "citizen_custom_portrait_npc_12_round",
+        "citizen_custom_portrait_npc_13_none",
+        "citizen_custom_portrait_npc_13_square",
+        "citizen_custom_portrait_npc_13_round",
+        "citizen_custom_portrait_npc_14_none",
+        "citizen_custom_portrait_npc_14_square",
+        "citizen_custom_portrait_npc_14_round",
+        "citizen_custom_portrait_npc_15_none",
+        "citizen_custom_portrait_npc_15_square",
+        "citizen_custom_portrait_npc_15_round",
+        "citizen_custom_portrait_npc_16_none",
+        "citizen_custom_portrait_npc_16_square",
+        "citizen_custom_portrait_npc_16_round"
+      ],
+      "manifest_statuses": {
+        "modular_character_happiness_animations_v001": "received",
+        "citizen_portrait_npc_01": "received",
+        "citizen_portrait_npc_02": "received",
+        "citizen_portrait_npc_03": "received",
+        "citizen_portrait_npc_04": "received",
+        "citizen_portrait_npc_05": "received",
+        "citizen_portrait_npc_06": "received",
+        "citizen_portrait_npc_07": "received",
+        "citizen_portrait_npc_08": "received",
+        "citizen_portrait_npc_09": "received",
+        "citizen_portrait_npc_10": "received",
+        "citizen_portrait_npc_11": "received",
+        "citizen_portrait_npc_12": "received",
+        "citizen_portrait_npc_13": "received",
+        "citizen_portrait_npc_14": "received",
+        "citizen_portrait_npc_15": "received",
+        "citizen_portrait_npc_16": "received",
+        "citizen_custom_portrait_npc_01_none": "received",
+        "citizen_custom_portrait_npc_01_square": "received",
+        "citizen_custom_portrait_npc_01_round": "received",
+        "citizen_custom_portrait_npc_02_none": "received",
+        "citizen_custom_portrait_npc_02_square": "received",
+        "citizen_custom_portrait_npc_02_round": "received",
+        "citizen_custom_portrait_npc_03_none": "received",
+        "citizen_custom_portrait_npc_03_square": "received",
+        "citizen_custom_portrait_npc_03_round": "received",
+        "citizen_custom_portrait_npc_04_none": "received",
+        "citizen_custom_portrait_npc_04_square": "received",
+        "citizen_custom_portrait_npc_04_round": "received",
+        "citizen_custom_portrait_npc_05_none": "received",
+        "citizen_custom_portrait_npc_05_square": "received",
+        "citizen_custom_portrait_npc_05_round": "received",
+        "citizen_custom_portrait_npc_06_none": "received",
+        "citizen_custom_portrait_npc_06_square": "received",
+        "citizen_custom_portrait_npc_06_round": "received",
+        "citizen_custom_portrait_npc_07_none": "received",
+        "citizen_custom_portrait_npc_07_square": "received",
+        "citizen_custom_portrait_npc_07_round": "received",
+        "citizen_custom_portrait_npc_08_none": "received",
+        "citizen_custom_portrait_npc_08_square": "received",
+        "citizen_custom_portrait_npc_08_round": "received",
+        "citizen_custom_portrait_npc_09_none": "received",
+        "citizen_custom_portrait_npc_09_square": "received",
+        "citizen_custom_portrait_npc_09_round": "received",
+        "citizen_custom_portrait_npc_10_none": "received",
+        "citizen_custom_portrait_npc_10_square": "received",
+        "citizen_custom_portrait_npc_10_round": "received",
+        "citizen_custom_portrait_npc_11_none": "received",
+        "citizen_custom_portrait_npc_11_square": "received",
+        "citizen_custom_portrait_npc_11_round": "received",
+        "citizen_custom_portrait_npc_12_none": "received",
+        "citizen_custom_portrait_npc_12_square": "received",
+        "citizen_custom_portrait_npc_12_round": "received",
+        "citizen_custom_portrait_npc_13_none": "received",
+        "citizen_custom_portrait_npc_13_square": "received",
+        "citizen_custom_portrait_npc_13_round": "received",
+        "citizen_custom_portrait_npc_14_none": "received",
+        "citizen_custom_portrait_npc_14_square": "received",
+        "citizen_custom_portrait_npc_14_round": "received",
+        "citizen_custom_portrait_npc_15_none": "received",
+        "citizen_custom_portrait_npc_15_square": "received",
+        "citizen_custom_portrait_npc_15_round": "received",
+        "citizen_custom_portrait_npc_16_none": "received",
+        "citizen_custom_portrait_npc_16_square": "received",
+        "citizen_custom_portrait_npc_16_round": "received"
+      },
+      "dimensions_unity_xyz": [
+        7.091,
+        3.775,
+        0.475
+      ]
+    },
+    {
+      "asset_key": "COZY_NEIGHBORHOOD_PARK",
+      "source": "unity/Assets/SIMUS/Art/vegetation/parks/COZY_NEIGHBORHOOD_PARK.blend",
+      "source_sha256": "1f465417d7abd45092ac970f40191d3cd8878cf4be9d2034b080717b82289384",
+      "existing_fbx": "unity/Assets/SIMUS/Art/vegetation/parks/COZY_NEIGHBORHOOD_PARK.fbx",
+      "existing_fbx_sha256": "7b0290b9d91ba9eb771b4fb641ab843c81e6795d530693481135e341a55ad057",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 205,
+      "bounds_blender_xyz": {
+        "min": [
+          -6.0,
+          -6.0,
+          0.0
+        ],
+        "max": [
+          6.0,
+          6.0,
+          4.654
+        ]
+      },
+      "dimensions_blender_xyz": [
+        12.0,
+        12.0,
+        4.654
+      ],
+      "dimensions_design_unity_xzy": [
+        12.0,
+        12.0,
+        4.654
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_park_audit.json",
+      "measurement_id": "COZY_NEIGHBORHOOD_PARK",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [],
+      "manifest_statuses": {},
+      "dimensions_unity_xyz": [
+        12.0,
+        4.654,
+        12.0
+      ],
+      "loading_note": "Blender reported library-file/empty-scene warning; bpy.data.objects nevertheless supplied mesh bounds. Actual linked-scene visibility and FBX import not verified."
+    },
+    {
+      "asset_key": "MODERN_MINIMAL_PARK",
+      "source": "unity/Assets/SIMUS/Art/vegetation/parks/MODERN_MINIMAL_PARK.blend",
+      "source_sha256": "a7c2d73e017e8969dd4f7338c5ac991ca259f51ea6b1fa86793b2bb26e1c88cb",
+      "existing_fbx": "unity/Assets/SIMUS/Art/vegetation/parks/MODERN_MINIMAL_PARK.fbx",
+      "existing_fbx_sha256": "310d3617f9e8ea83bc075f75ff54cfdb80a25e840fe66480e65040b863dd989e",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 93,
+      "bounds_blender_xyz": {
+        "min": [
+          -6.0,
+          -6.0,
+          0.0
+        ],
+        "max": [
+          6.0,
+          6.0,
+          3.831
+        ]
+      },
+      "dimensions_blender_xyz": [
+        12.0,
+        12.0,
+        3.831
+      ],
+      "dimensions_design_unity_xzy": [
+        12.0,
+        12.0,
+        3.831
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_park_audit.json",
+      "measurement_id": "MODERN_MINIMAL_PARK",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [],
+      "manifest_statuses": {},
+      "dimensions_unity_xyz": [
+        12.0,
+        3.831,
+        12.0
+      ],
+      "loading_note": "Blender reported library-file/empty-scene warning; bpy.data.objects nevertheless supplied mesh bounds. Actual linked-scene visibility and FBX import not verified."
+    },
+    {
+      "asset_key": "ECO_RAIN_GARDEN",
+      "source": "unity/Assets/SIMUS/Art/vegetation/parks/ECO_RAIN_GARDEN.blend",
+      "source_sha256": "414cdbee0b214ebe9f9011c6598af6d307a6fb89b0b5cc2a3ad8fd114728e77f",
+      "existing_fbx": "unity/Assets/SIMUS/Art/vegetation/parks/ECO_RAIN_GARDEN.fbx",
+      "existing_fbx_sha256": "48fb41ea01ff1437ebf5deaaeecc2287831b6a463cb43159be4ee1527996106b",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 191,
+      "bounds_blender_xyz": {
+        "min": [
+          -6.0,
+          -6.0,
+          0.0
+        ],
+        "max": [
+          6.0,
+          6.0,
+          3.731
+        ]
+      },
+      "dimensions_blender_xyz": [
+        12.0,
+        12.0,
+        3.731
+      ],
+      "dimensions_design_unity_xzy": [
+        12.0,
+        12.0,
+        3.731
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_park_audit.json",
+      "measurement_id": "ECO_RAIN_GARDEN",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [],
+      "manifest_statuses": {},
+      "dimensions_unity_xyz": [
+        12.0,
+        3.731,
+        12.0
+      ],
+      "loading_note": "Blender reported library-file/empty-scene warning; bpy.data.objects nevertheless supplied mesh bounds. Actual linked-scene visibility and FBX import not verified."
+    },
+    {
+      "asset_key": "POCKET_PLAY_PARK",
+      "source": "unity/Assets/SIMUS/Art/vegetation/parks/POCKET_PLAY_PARK.blend",
+      "source_sha256": "5ed8e12a7261ef83cad59fb733d0f189828cd16fd1695d0c98ac890a83509bad",
+      "existing_fbx": "unity/Assets/SIMUS/Art/vegetation/parks/POCKET_PLAY_PARK.fbx",
+      "existing_fbx_sha256": "855460ddcf250fb9aa3a2371e424f3102dcf2a8cb9432404b92efd0545e00ccd",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 149,
+      "bounds_blender_xyz": {
+        "min": [
+          -6.0,
+          -6.0,
+          0.0
+        ],
+        "max": [
+          6.0,
+          6.0,
+          4.231
+        ]
+      },
+      "dimensions_blender_xyz": [
+        12.0,
+        12.0,
+        4.231
+      ],
+      "dimensions_design_unity_xzy": [
+        12.0,
+        12.0,
+        4.231
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_park_audit.json",
+      "measurement_id": "POCKET_PLAY_PARK",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [],
+      "manifest_statuses": {},
+      "dimensions_unity_xyz": [
+        12.0,
+        4.231,
+        12.0
+      ],
+      "loading_note": "Blender reported library-file/empty-scene warning; bpy.data.objects nevertheless supplied mesh bounds. Actual linked-scene visibility and FBX import not verified."
+    },
+    {
+      "asset_key": "ZEN_GARDEN_PARK",
+      "source": "unity/Assets/SIMUS/Art/vegetation/parks/ZEN_GARDEN_PARK.blend",
+      "source_sha256": "335de24e6d5137f12086c03cc705df5b34aabf00fb2ea7413ed76da568b50c4a",
+      "existing_fbx": "unity/Assets/SIMUS/Art/vegetation/parks/ZEN_GARDEN_PARK.fbx",
+      "existing_fbx_sha256": "251cfd17d1c5aed8d2c4eedc657e38172090ec5175f62872eee06a871b18faf9",
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 118,
+      "bounds_blender_xyz": {
+        "min": [
+          -6.0,
+          -6.0,
+          0.0
+        ],
+        "max": [
+          6.0,
+          6.0,
+          3.964
+        ]
+      },
+      "dimensions_blender_xyz": [
+        12.0,
+        12.0,
+        3.964
+      ],
+      "dimensions_design_unity_xzy": [
+        12.0,
+        12.0,
+        3.964
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_park_audit.json",
+      "measurement_id": "ZEN_GARDEN_PARK",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [],
+      "manifest_statuses": {},
+      "dimensions_unity_xyz": [
+        12.0,
+        3.964,
+        12.0
+      ],
+      "loading_note": "Blender reported library-file/empty-scene warning; bpy.data.objects nevertheless supplied mesh bounds. Actual linked-scene visibility and FBX import not verified."
+    },
+    {
+      "asset_key": "SIMUS_Street_Landscape_Collection",
+      "source": "assets/library/vegetation/street_landscape/source/SIMUS_Street_Landscape_Collection.blend",
+      "source_sha256": "956d7c0a4fad5c1e152764c5dd09322ac620ad0603513e160fda78ad27b925d9",
+      "existing_fbx": null,
+      "existing_fbx_sha256": null,
+      "unit_system": "METRIC",
+      "unit_scale": 1.0,
+      "mesh_count": 44,
+      "bounds_blender_xyz": {
+        "min": [
+          -100.0,
+          -100.0,
+          -0.12
+        ],
+        "max": [
+          100.0,
+          100.0,
+          8.223
+        ]
+      },
+      "dimensions_blender_xyz": [
+        200.0,
+        200.0,
+        8.343
+      ],
+      "dimensions_design_unity_xzy": [
+        200.0,
+        200.0,
+        8.343
+      ],
+      "fbx_readonly_import_verified": false,
+      "fbx_import_engine": null,
+      "fbx_mesh_count": null,
+      "origin_note": "Mesh origins are not parcel centres. Use measured world bounds and an adapter root; root empties were not included in previous mesh audit.",
+      "measurement_source": "simus_park_audit.json",
+      "measurement_id": "SIMUS_Street_Landscape_Collection",
+      "identifier_note": "File-stem measurement identifier; not a registered stable manifest asset_key.",
+      "manifest_asset_keys": [
+        "candidate_street_landscape_simus_bench",
+        "candidate_street_landscape_simus_cherry",
+        "candidate_street_landscape_simus_flowerbed",
+        "candidate_street_landscape_simus_fringetree",
+        "candidate_street_landscape_simus_ginkgo_autumn",
+        "candidate_street_landscape_simus_ginkgo_green",
+        "candidate_street_landscape_simus_metasequoia",
+        "candidate_street_landscape_simus_trashbin",
+        "candidate_street_landscape_simus_zelkova"
+      ],
+      "manifest_statuses": {
+        "candidate_street_landscape_simus_bench": "received",
+        "candidate_street_landscape_simus_cherry": "received",
+        "candidate_street_landscape_simus_flowerbed": "received",
+        "candidate_street_landscape_simus_fringetree": "received",
+        "candidate_street_landscape_simus_ginkgo_autumn": "received",
+        "candidate_street_landscape_simus_ginkgo_green": "received",
+        "candidate_street_landscape_simus_metasequoia": "received",
+        "candidate_street_landscape_simus_trashbin": "received",
+        "candidate_street_landscape_simus_zelkova": "received"
+      },
+      "dimensions_unity_xyz": [
+        200.0,
+        8.343,
+        200.0
+      ]
+    }
+  ],
+  "campus": {
+    "source": "unity/Assets/SIMUS/Art/buildings/campus/Campus.blend",
+    "bounds_blender_xyz": {
+      "min": [
+        -78.12,
+        -106.093,
+        -2.796
+      ],
+      "max": [
+        78.12,
+        106.093,
+        19.224
+      ]
+    },
+    "surface_top_blender_z": 0.18,
+    "fbx_mesh_count": 487,
+    "fbx_bounds_blender_reimport_xyz": {
+      "min": [
+        -78.12,
+        -106.0927,
+        -2.796
+      ],
+      "max": [
+        78.12,
+        106.0927,
+        19.224
+      ]
+    },
+    "components": [
+      {
+        "id": "C00",
+        "name": "서관",
+        "source_index": 0,
+        "body_object": "ASSET_Campus__D03_CAMPUS__서관",
+        "roof_object": "ASSET_Campus__D03_CAMPUS__서관 / roof",
+        "bounds_blender_xyz": {
+          "min": [
+            -63.074,
+            90.235,
+            0.18
+          ],
+          "max": [
+            -19.125,
+            103.528,
+            12.024
+          ]
+        },
+        "roof_dimensions_blender_xyz": [
+          43.8,
+          12.12,
+          0.3
+        ],
+        "parcel_anchor_blender_xyz": [
+          -41.1,
+          97.393,
+          0.18
+        ],
+        "placement_design_unity_xyz": [
+          -41.1,
+          0.0,
+          162.393
+        ],
+        "yaw_degrees": 0,
+        "entry_glass_center_blender_xyz": [
+          -24.0685,
+          91.8085,
+          1.594
+        ],
+        "entry_glass_center_design_unity_xyz": [
+          -24.0685,
+          1.414,
+          156.8085
+        ],
+        "entry_steps_bounds_blender_xyz": {
+          "min": [
+            -25.61,
+            90.422,
+            0.18
+          ],
+          "max": [
+            -22.689,
+            91.905,
+            0.444
+          ]
+        },
+        "provisional_approach_design_unity_xz": [
+          -24.0685,
+          154.533
+        ],
+        "entrance_facing_design": "south / -Z candidate inferred from door-step bounds, mesh normals not inspected",
+        "entrance_validation": "Measured entry meshes exist. Exact exterior boundary clearance, walkable threshold and Unity import remain unverified.",
+        "split_objects": [
+          "ASSET_Campus__D03_CAMPUS__서관",
+          "ASSET_Campus__D03_CAMPUS__서관 / roof",
+          "ASSET_Campus__D03_CAMPUS__서관 / windows",
+          "ASSET_Campus__D03_BUILDING_PLINTH_0",
+          "ASSET_Campus__D03_WINDOW_FRAMES_D03_CAMPUS___windows_7d492250f4",
+          "ASSET_Campus__D03_CANOPY_0",
+          "ASSET_Campus__D03_DOOR_FRAME_0_0",
+          "ASSET_Campus__D03_DOOR_FRAME_0_1",
+          "ASSET_Campus__D03_DOOR_FRAME_0_2",
+          "ASSET_Campus__D03_ENTRY_GLASS_0",
+          "ASSET_Campus__D03_ENTRY_STEP_0_0",
+          "ASSET_Campus__D03_ENTRY_STEP_0_1",
+          "ASSET_Campus__D03_ENTRY_STEP_0_2",
+          "ASSET_Campus__D03_PARAPET_0_0",
+          "ASSET_Campus__D03_PARAPET_0_1",
+          "ASSET_Campus__D03_PARAPET_0_4",
+          "ASSET_Campus__D03_PARAPET_0_5",
+          "ASSET_Campus__D03_PARAPET_0_7",
+          "ASSET_Campus__D03_PARAPET_0_8"
+        ],
+        "fbx_group": "D03_UNITY_GROUP_CAMPUS",
+        "fbx_names": [
+          "D03_UNITY_D03_CAMPUS__서관",
+          "D03_UNITY_D03_CAMPUS__서관 / roof",
+          "D03_UNITY_D03_CAMPUS__서관 / windows",
+          "D03_UNITY_D03_BUILDING_PLINTH_0",
+          "D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___windows_7d492250f4",
+          "D03_UNITY_D03_CANOPY_0",
+          "D03_UNITY_D03_DOOR_FRAME_0_0",
+          "D03_UNITY_D03_DOOR_FRAME_0_1",
+          "D03_UNITY_D03_DOOR_FRAME_0_2",
+          "D03_UNITY_D03_ENTRY_GLASS_0",
+          "D03_UNITY_D03_ENTRY_STEP_0_0",
+          "D03_UNITY_D03_ENTRY_STEP_0_1",
+          "D03_UNITY_D03_ENTRY_STEP_0_2",
+          "D03_UNITY_D03_PARAPET_0_0",
+          "D03_UNITY_D03_PARAPET_0_1",
+          "D03_UNITY_D03_PARAPET_0_4",
+          "D03_UNITY_D03_PARAPET_0_5",
+          "D03_UNITY_D03_PARAPET_0_7",
+          "D03_UNITY_D03_PARAPET_0_8"
+        ]
+      },
+      {
+        "id": "C01",
+        "name": "서측동",
+        "source_index": 1,
+        "body_object": "ASSET_Campus__D03_CAMPUS__서측동",
+        "roof_object": "ASSET_Campus__D03_CAMPUS__서측동 / roof",
+        "bounds_blender_xyz": {
+          "min": [
+            -75.314,
+            71.008,
+            0.18
+          ],
+          "max": [
+            -62.806,
+            102.566,
+            13.224
+          ]
+        },
+        "roof_dimensions_blender_xyz": [
+          12.36,
+          30.24,
+          0.3
+        ],
+        "parcel_anchor_blender_xyz": [
+          -69.06,
+          87.373,
+          0.18
+        ],
+        "placement_design_unity_xyz": [
+          -69.06,
+          0.0,
+          152.373
+        ],
+        "yaw_degrees": 0,
+        "entry_glass_center_blender_xyz": [
+          -70.027,
+          72.548,
+          1.594
+        ],
+        "entry_glass_center_design_unity_xyz": [
+          -70.027,
+          1.414,
+          137.548
+        ],
+        "entry_steps_bounds_blender_xyz": {
+          "min": [
+            -71.547,
+            71.188,
+            0.18
+          ],
+          "max": [
+            -68.643,
+            72.615,
+            0.444
+          ]
+        },
+        "provisional_approach_design_unity_xz": [
+          -70.027,
+          135.453
+        ],
+        "entrance_facing_design": "south / -Z candidate inferred from door-step bounds, mesh normals not inspected",
+        "entrance_validation": "Measured entry meshes exist. Exact exterior boundary clearance, walkable threshold and Unity import remain unverified.",
+        "split_objects": [
+          "ASSET_Campus__D03_CAMPUS__서측동",
+          "ASSET_Campus__D03_CAMPUS__서측동 / roof",
+          "ASSET_Campus__D03_CAMPUS__서측동 / windows",
+          "ASSET_Campus__D03_BUILDING_PLINTH_1",
+          "ASSET_Campus__D03_WINDOW_FRAMES_D03_CAMPUS___windows_4b10671786",
+          "ASSET_Campus__D03_CANOPY_1",
+          "ASSET_Campus__D03_DOOR_FRAME_1_0",
+          "ASSET_Campus__D03_DOOR_FRAME_1_1",
+          "ASSET_Campus__D03_DOOR_FRAME_1_2",
+          "ASSET_Campus__D03_ENTRY_GLASS_1",
+          "ASSET_Campus__D03_ENTRY_STEP_1_0",
+          "ASSET_Campus__D03_ENTRY_STEP_1_1",
+          "ASSET_Campus__D03_ENTRY_STEP_1_2",
+          "ASSET_Campus__D03_PARAPET_1_0",
+          "ASSET_Campus__D03_PARAPET_1_1",
+          "ASSET_Campus__D03_PARAPET_1_4",
+          "ASSET_Campus__D03_PARAPET_1_5",
+          "ASSET_Campus__D03_PARAPET_1_7",
+          "ASSET_Campus__D03_PARAPET_1_8"
+        ],
+        "fbx_group": "D03_UNITY_GROUP_CAMPUS",
+        "fbx_names": [
+          "D03_UNITY_D03_CAMPUS__서측동",
+          "D03_UNITY_D03_CAMPUS__서측동 / roof",
+          "D03_UNITY_D03_CAMPUS__서측동 / windows",
+          "D03_UNITY_D03_BUILDING_PLINTH_1",
+          "D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___windows_4b10671786",
+          "D03_UNITY_D03_CANOPY_1",
+          "D03_UNITY_D03_DOOR_FRAME_1_0",
+          "D03_UNITY_D03_DOOR_FRAME_1_1",
+          "D03_UNITY_D03_DOOR_FRAME_1_2",
+          "D03_UNITY_D03_ENTRY_GLASS_1",
+          "D03_UNITY_D03_ENTRY_STEP_1_0",
+          "D03_UNITY_D03_ENTRY_STEP_1_1",
+          "D03_UNITY_D03_ENTRY_STEP_1_2",
+          "D03_UNITY_D03_PARAPET_1_0",
+          "D03_UNITY_D03_PARAPET_1_1",
+          "D03_UNITY_D03_PARAPET_1_4",
+          "D03_UNITY_D03_PARAPET_1_5",
+          "D03_UNITY_D03_PARAPET_1_7",
+          "D03_UNITY_D03_PARAPET_1_8"
+        ]
+      },
+      {
+        "id": "C02",
+        "name": "실습관",
+        "source_index": 2,
+        "body_object": "ASSET_Campus__D03_CAMPUS__실습관",
+        "roof_object": "ASSET_Campus__D03_CAMPUS__실습관 / roof",
+        "bounds_blender_xyz": {
+          "min": [
+            -73.515,
+            52.435,
+            0.18
+          ],
+          "max": [
+            -54.285,
+            70.405,
+            9.624
+          ]
+        },
+        "roof_dimensions_blender_xyz": [
+          19.08,
+          16.56,
+          0.3
+        ],
+        "parcel_anchor_blender_xyz": [
+          -63.9,
+          62.053,
+          0.18
+        ],
+        "placement_design_unity_xyz": [
+          -63.9,
+          0.0,
+          127.053
+        ],
+        "yaw_degrees": 0,
+        "entry_glass_center_blender_xyz": [
+          -63.239,
+          53.8275,
+          1.594
+        ],
+        "entry_glass_center_design_unity_xyz": [
+          -63.239,
+          1.414,
+          118.8275
+        ],
+        "entry_steps_bounds_blender_xyz": {
+          "min": [
+            -64.638,
+            52.589,
+            0.18
+          ],
+          "max": [
+            -61.823,
+            53.767,
+            0.444
+          ]
+        },
+        "provisional_approach_design_unity_xz": [
+          -63.239,
+          116.973
+        ],
+        "entrance_facing_design": "south / -Z candidate inferred from door-step bounds, mesh normals not inspected",
+        "entrance_validation": "Measured entry meshes exist. Exact exterior boundary clearance, walkable threshold and Unity import remain unverified.",
+        "split_objects": [
+          "ASSET_Campus__D03_CAMPUS__실습관",
+          "ASSET_Campus__D03_CAMPUS__실습관 / roof",
+          "ASSET_Campus__D03_CAMPUS__실습관 / windows",
+          "ASSET_Campus__D03_BUILDING_PLINTH_2",
+          "ASSET_Campus__D03_WINDOW_FRAMES_D03_CAMPUS___windows_7a3c94dc1a",
+          "ASSET_Campus__D03_CANOPY_2",
+          "ASSET_Campus__D03_DOOR_FRAME_2_0",
+          "ASSET_Campus__D03_DOOR_FRAME_2_1",
+          "ASSET_Campus__D03_DOOR_FRAME_2_2",
+          "ASSET_Campus__D03_ENTRY_GLASS_2",
+          "ASSET_Campus__D03_ENTRY_STEP_2_0",
+          "ASSET_Campus__D03_ENTRY_STEP_2_1",
+          "ASSET_Campus__D03_ENTRY_STEP_2_2",
+          "ASSET_Campus__D03_PARAPET_2_0",
+          "ASSET_Campus__D03_PARAPET_2_1",
+          "ASSET_Campus__D03_PARAPET_2_10",
+          "ASSET_Campus__D03_PARAPET_2_13",
+          "ASSET_Campus__D03_PARAPET_2_15",
+          "ASSET_Campus__D03_PARAPET_2_16",
+          "ASSET_Campus__D03_PARAPET_2_3",
+          "ASSET_Campus__D03_PARAPET_2_5",
+          "ASSET_Campus__D03_PARAPET_2_6",
+          "ASSET_Campus__D03_PARAPET_2_8"
+        ],
+        "fbx_group": "D03_UNITY_GROUP_CAMPUS",
+        "fbx_names": [
+          "D03_UNITY_D03_CAMPUS__실습관",
+          "D03_UNITY_D03_CAMPUS__실습관 / roof",
+          "D03_UNITY_D03_CAMPUS__실습관 / windows",
+          "D03_UNITY_D03_BUILDING_PLINTH_2",
+          "D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___windows_7a3c94dc1a",
+          "D03_UNITY_D03_CANOPY_2",
+          "D03_UNITY_D03_DOOR_FRAME_2_0",
+          "D03_UNITY_D03_DOOR_FRAME_2_1",
+          "D03_UNITY_D03_DOOR_FRAME_2_2",
+          "D03_UNITY_D03_ENTRY_GLASS_2",
+          "D03_UNITY_D03_ENTRY_STEP_2_0",
+          "D03_UNITY_D03_ENTRY_STEP_2_1",
+          "D03_UNITY_D03_ENTRY_STEP_2_2",
+          "D03_UNITY_D03_PARAPET_2_0",
+          "D03_UNITY_D03_PARAPET_2_1",
+          "D03_UNITY_D03_PARAPET_2_10",
+          "D03_UNITY_D03_PARAPET_2_13",
+          "D03_UNITY_D03_PARAPET_2_15",
+          "D03_UNITY_D03_PARAPET_2_16",
+          "D03_UNITY_D03_PARAPET_2_3",
+          "D03_UNITY_D03_PARAPET_2_5",
+          "D03_UNITY_D03_PARAPET_2_6",
+          "D03_UNITY_D03_PARAPET_2_8"
+        ]
+      },
+      {
+        "id": "C03",
+        "name": "동관",
+        "source_index": 3,
+        "body_object": "ASSET_Campus__D03_CAMPUS__동관",
+        "roof_object": "ASSET_Campus__D03_CAMPUS__동관 / roof",
+        "bounds_blender_xyz": {
+          "min": [
+            -3.794,
+            69.418,
+            0.18
+          ],
+          "max": [
+            27.914,
+            82.407,
+            14.424
+          ]
+        },
+        "roof_dimensions_blender_xyz": [
+          31.56,
+          12.84,
+          0.3
+        ],
+        "parcel_anchor_blender_xyz": [
+          12.06,
+          75.913,
+          0.18
+        ],
+        "placement_design_unity_xyz": [
+          12.06,
+          0.0,
+          140.913
+        ],
+        "yaw_degrees": 0,
+        "entry_glass_center_blender_xyz": [
+          11.633,
+          71.048,
+          1.594
+        ],
+        "entry_glass_center_design_unity_xyz": [
+          11.633,
+          1.414,
+          136.048
+        ],
+        "entry_steps_bounds_blender_xyz": {
+          "min": [
+            10.113,
+            69.688,
+            0.18
+          ],
+          "max": [
+            13.017,
+            71.115,
+            0.444
+          ]
+        },
+        "provisional_approach_design_unity_xz": [
+          11.633,
+          132.693
+        ],
+        "entrance_facing_design": "south / -Z candidate inferred from door-step bounds, mesh normals not inspected",
+        "entrance_validation": "Measured entry meshes exist. Exact exterior boundary clearance, walkable threshold and Unity import remain unverified.",
+        "split_objects": [
+          "ASSET_Campus__D03_CAMPUS__동관",
+          "ASSET_Campus__D03_CAMPUS__동관 / roof",
+          "ASSET_Campus__D03_CAMPUS__동관 / windows",
+          "ASSET_Campus__D03_BUILDING_PLINTH_3",
+          "ASSET_Campus__D03_WINDOW_FRAMES_D03_CAMPUS___windows_a851d10e30",
+          "ASSET_Campus__D03_CANOPY_3",
+          "ASSET_Campus__D03_DOOR_FRAME_3_0",
+          "ASSET_Campus__D03_DOOR_FRAME_3_1",
+          "ASSET_Campus__D03_DOOR_FRAME_3_2",
+          "ASSET_Campus__D03_ENTRY_GLASS_3",
+          "ASSET_Campus__D03_ENTRY_STEP_3_0",
+          "ASSET_Campus__D03_ENTRY_STEP_3_1",
+          "ASSET_Campus__D03_ENTRY_STEP_3_2",
+          "ASSET_Campus__D03_PARAPET_3_0",
+          "ASSET_Campus__D03_PARAPET_3_1",
+          "ASSET_Campus__D03_PARAPET_3_3",
+          "ASSET_Campus__D03_PARAPET_3_5",
+          "ASSET_Campus__D03_PARAPET_3_7",
+          "ASSET_Campus__D03_PARAPET_3_8"
+        ],
+        "fbx_group": "D03_UNITY_GROUP_CAMPUS",
+        "fbx_names": [
+          "D03_UNITY_D03_CAMPUS__동관",
+          "D03_UNITY_D03_CAMPUS__동관 / roof",
+          "D03_UNITY_D03_CAMPUS__동관 / windows",
+          "D03_UNITY_D03_BUILDING_PLINTH_3",
+          "D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___windows_a851d10e30",
+          "D03_UNITY_D03_CANOPY_3",
+          "D03_UNITY_D03_DOOR_FRAME_3_0",
+          "D03_UNITY_D03_DOOR_FRAME_3_1",
+          "D03_UNITY_D03_DOOR_FRAME_3_2",
+          "D03_UNITY_D03_ENTRY_GLASS_3",
+          "D03_UNITY_D03_ENTRY_STEP_3_0",
+          "D03_UNITY_D03_ENTRY_STEP_3_1",
+          "D03_UNITY_D03_ENTRY_STEP_3_2",
+          "D03_UNITY_D03_PARAPET_3_0",
+          "D03_UNITY_D03_PARAPET_3_1",
+          "D03_UNITY_D03_PARAPET_3_3",
+          "D03_UNITY_D03_PARAPET_3_5",
+          "D03_UNITY_D03_PARAPET_3_7",
+          "D03_UNITY_D03_PARAPET_3_8"
+        ]
+      },
+      {
+        "id": "C04",
+        "name": "중앙동 A",
+        "source_index": 4,
+        "body_object": "ASSET_Campus__D03_CAMPUS__중앙동 A",
+        "roof_object": "ASSET_Campus__D03_CAMPUS__중앙동 A / roof",
+        "bounds_blender_xyz": {
+          "min": [
+            -46.035,
+            3.939,
+            0.18
+          ],
+          "max": [
+            -35.325,
+            18.567,
+            12.024
+          ]
+        },
+        "roof_dimensions_blender_xyz": [
+          10.56,
+          13.56,
+          0.3
+        ],
+        "parcel_anchor_blender_xyz": [
+          -40.68,
+          11.713,
+          0.18
+        ],
+        "placement_design_unity_xyz": [
+          -40.68,
+          0.0,
+          76.713
+        ],
+        "yaw_degrees": 0,
+        "entry_glass_center_blender_xyz": [
+          -41.1685,
+          5.5285,
+          1.594
+        ],
+        "entry_glass_center_design_unity_xyz": [
+          -41.1685,
+          1.414,
+          70.5285
+        ],
+        "entry_steps_bounds_blender_xyz": {
+          "min": [
+            -42.722,
+            4.129,
+            0.18
+          ],
+          "max": [
+            -39.793,
+            5.64,
+            0.444
+          ]
+        },
+        "provisional_approach_design_unity_xz": [
+          -41.1685,
+          68.133
+        ],
+        "entrance_facing_design": "south / -Z candidate inferred from door-step bounds, mesh normals not inspected",
+        "entrance_validation": "Measured entry meshes exist. Exact exterior boundary clearance, walkable threshold and Unity import remain unverified.",
+        "split_objects": [
+          "ASSET_Campus__D03_CAMPUS__중앙동 A",
+          "ASSET_Campus__D03_CAMPUS__중앙동 A / roof",
+          "ASSET_Campus__D03_CAMPUS__중앙동 A / windows",
+          "ASSET_Campus__D03_BUILDING_PLINTH_4",
+          "ASSET_Campus__D03_WINDOW_FRAMES_D03_CAMPUS___A_windows_5e91c9a0d1",
+          "ASSET_Campus__D03_CANOPY_4",
+          "ASSET_Campus__D03_DOOR_FRAME_4_0",
+          "ASSET_Campus__D03_DOOR_FRAME_4_1",
+          "ASSET_Campus__D03_DOOR_FRAME_4_2",
+          "ASSET_Campus__D03_ENTRY_GLASS_4",
+          "ASSET_Campus__D03_ENTRY_STEP_4_0",
+          "ASSET_Campus__D03_ENTRY_STEP_4_1",
+          "ASSET_Campus__D03_ENTRY_STEP_4_2",
+          "ASSET_Campus__D03_PARAPET_4_0",
+          "ASSET_Campus__D03_PARAPET_4_1",
+          "ASSET_Campus__D03_PARAPET_4_3",
+          "ASSET_Campus__D03_PARAPET_4_4"
+        ],
+        "fbx_group": "D03_UNITY_GROUP_CAMPUS",
+        "fbx_names": [
+          "D03_UNITY_D03_CAMPUS__중앙동 A",
+          "D03_UNITY_D03_CAMPUS__중앙동 A / roof",
+          "D03_UNITY_D03_CAMPUS__중앙동 A / windows",
+          "D03_UNITY_D03_BUILDING_PLINTH_4",
+          "D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___A_windows_5e91c9a0d1",
+          "D03_UNITY_D03_CANOPY_4",
+          "D03_UNITY_D03_DOOR_FRAME_4_0",
+          "D03_UNITY_D03_DOOR_FRAME_4_1",
+          "D03_UNITY_D03_DOOR_FRAME_4_2",
+          "D03_UNITY_D03_ENTRY_GLASS_4",
+          "D03_UNITY_D03_ENTRY_STEP_4_0",
+          "D03_UNITY_D03_ENTRY_STEP_4_1",
+          "D03_UNITY_D03_ENTRY_STEP_4_2",
+          "D03_UNITY_D03_PARAPET_4_0",
+          "D03_UNITY_D03_PARAPET_4_1",
+          "D03_UNITY_D03_PARAPET_4_3",
+          "D03_UNITY_D03_PARAPET_4_4"
+        ]
+      },
+      {
+        "id": "C05",
+        "name": "중앙동 B",
+        "source_index": 5,
+        "body_object": "ASSET_Campus__D03_CAMPUS__중앙동 B",
+        "roof_object": "ASSET_Campus__D03_CAMPUS__중앙동 B / roof",
+        "bounds_blender_xyz": {
+          "min": [
+            -33.315,
+            -0.424,
+            0.18
+          ],
+          "max": [
+            -17.685,
+            22.407,
+            16.824
+          ]
+        },
+        "roof_dimensions_blender_xyz": [
+          15.48,
+          21.96,
+          0.3
+        ],
+        "parcel_anchor_blender_xyz": [
+          -25.5,
+          11.353,
+          0.18
+        ],
+        "placement_design_unity_xyz": [
+          -25.5,
+          0.0,
+          76.353
+        ],
+        "yaw_degrees": 0,
+        "entry_glass_center_blender_xyz": [
+          -26.588,
+          1.1485,
+          1.594
+        ],
+        "entry_glass_center_design_unity_xyz": [
+          -26.588,
+          1.414,
+          66.1485
+        ],
+        "entry_steps_bounds_blender_xyz": {
+          "min": [
+            -28.13,
+            -0.237,
+            0.18
+          ],
+          "max": [
+            -25.209,
+            1.244,
+            0.444
+          ]
+        },
+        "provisional_approach_design_unity_xz": [
+          -26.588,
+          63.573
+        ],
+        "entrance_facing_design": "south / -Z candidate inferred from door-step bounds, mesh normals not inspected",
+        "entrance_validation": "Measured entry meshes exist. Exact exterior boundary clearance, walkable threshold and Unity import remain unverified.",
+        "split_objects": [
+          "ASSET_Campus__D03_CAMPUS__중앙동 B",
+          "ASSET_Campus__D03_CAMPUS__중앙동 B / roof",
+          "ASSET_Campus__D03_CAMPUS__중앙동 B / windows",
+          "ASSET_Campus__D03_BUILDING_PLINTH_5",
+          "ASSET_Campus__D03_WINDOW_FRAMES_D03_CAMPUS___B_windows_e547662a2f",
+          "ASSET_Campus__D03_CANOPY_5",
+          "ASSET_Campus__D03_DOOR_FRAME_5_0",
+          "ASSET_Campus__D03_DOOR_FRAME_5_1",
+          "ASSET_Campus__D03_DOOR_FRAME_5_2",
+          "ASSET_Campus__D03_ENTRY_GLASS_5",
+          "ASSET_Campus__D03_ENTRY_STEP_5_0",
+          "ASSET_Campus__D03_ENTRY_STEP_5_1",
+          "ASSET_Campus__D03_ENTRY_STEP_5_2",
+          "ASSET_Campus__D03_PARAPET_5_0",
+          "ASSET_Campus__D03_PARAPET_5_1",
+          "ASSET_Campus__D03_PARAPET_5_3",
+          "ASSET_Campus__D03_PARAPET_5_4"
+        ],
+        "fbx_group": "D03_UNITY_GROUP_CAMPUS",
+        "fbx_names": [
+          "D03_UNITY_D03_CAMPUS__중앙동 B",
+          "D03_UNITY_D03_CAMPUS__중앙동 B / roof",
+          "D03_UNITY_D03_CAMPUS__중앙동 B / windows",
+          "D03_UNITY_D03_BUILDING_PLINTH_5",
+          "D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___B_windows_e547662a2f",
+          "D03_UNITY_D03_CANOPY_5",
+          "D03_UNITY_D03_DOOR_FRAME_5_0",
+          "D03_UNITY_D03_DOOR_FRAME_5_1",
+          "D03_UNITY_D03_DOOR_FRAME_5_2",
+          "D03_UNITY_D03_ENTRY_GLASS_5",
+          "D03_UNITY_D03_ENTRY_STEP_5_0",
+          "D03_UNITY_D03_ENTRY_STEP_5_1",
+          "D03_UNITY_D03_ENTRY_STEP_5_2",
+          "D03_UNITY_D03_PARAPET_5_0",
+          "D03_UNITY_D03_PARAPET_5_1",
+          "D03_UNITY_D03_PARAPET_5_3",
+          "D03_UNITY_D03_PARAPET_5_4"
+        ]
+      },
+      {
+        "id": "C06",
+        "name": "중앙동 C",
+        "source_index": 6,
+        "body_object": "ASSET_Campus__D03_CAMPUS__중앙동 C",
+        "roof_object": "ASSET_Campus__D03_CAMPUS__중앙동 C / roof",
+        "bounds_blender_xyz": {
+          "min": [
+            -16.987,
+            0.909,
+            0.18
+          ],
+          "max": [
+            -5.206,
+            15.207,
+            10.824
+          ]
+        },
+        "roof_dimensions_blender_xyz": [
+          11.64,
+          13.2,
+          0.3
+        ],
+        "parcel_anchor_blender_xyz": [
+          -11.1,
+          8.533,
+          0.18
+        ],
+        "placement_design_unity_xyz": [
+          -11.1,
+          0.0,
+          73.533
+        ],
+        "yaw_degrees": 0,
+        "entry_glass_center_blender_xyz": [
+          -11.8275,
+          2.468,
+          1.594
+        ],
+        "entry_glass_center_design_unity_xyz": [
+          -11.8275,
+          1.414,
+          67.468
+        ],
+        "entry_steps_bounds_blender_xyz": {
+          "min": [
+            -13.361,
+            1.093,
+            0.18
+          ],
+          "max": [
+            -10.447,
+            2.552,
+            0.444
+          ]
+        },
+        "provisional_approach_design_unity_xz": [
+          -11.8275,
+          65.133
+        ],
+        "entrance_facing_design": "south / -Z candidate inferred from door-step bounds, mesh normals not inspected",
+        "entrance_validation": "Measured entry meshes exist. Exact exterior boundary clearance, walkable threshold and Unity import remain unverified.",
+        "split_objects": [
+          "ASSET_Campus__D03_CAMPUS__중앙동 C",
+          "ASSET_Campus__D03_CAMPUS__중앙동 C / roof",
+          "ASSET_Campus__D03_CAMPUS__중앙동 C / windows",
+          "ASSET_Campus__D03_BUILDING_PLINTH_6",
+          "ASSET_Campus__D03_WINDOW_FRAMES_D03_CAMPUS___C_windows_1650b4ba25",
+          "ASSET_Campus__D03_CANOPY_6",
+          "ASSET_Campus__D03_DOOR_FRAME_6_0",
+          "ASSET_Campus__D03_DOOR_FRAME_6_1",
+          "ASSET_Campus__D03_DOOR_FRAME_6_2",
+          "ASSET_Campus__D03_ENTRY_GLASS_6",
+          "ASSET_Campus__D03_ENTRY_STEP_6_0",
+          "ASSET_Campus__D03_ENTRY_STEP_6_1",
+          "ASSET_Campus__D03_ENTRY_STEP_6_2",
+          "ASSET_Campus__D03_PARAPET_6_0",
+          "ASSET_Campus__D03_PARAPET_6_1",
+          "ASSET_Campus__D03_PARAPET_6_3",
+          "ASSET_Campus__D03_PARAPET_6_5",
+          "ASSET_Campus__D03_PARAPET_6_6"
+        ],
+        "fbx_group": "D03_UNITY_GROUP_CAMPUS",
+        "fbx_names": [
+          "D03_UNITY_D03_CAMPUS__중앙동 C",
+          "D03_UNITY_D03_CAMPUS__중앙동 C / roof",
+          "D03_UNITY_D03_CAMPUS__중앙동 C / windows",
+          "D03_UNITY_D03_BUILDING_PLINTH_6",
+          "D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___C_windows_1650b4ba25",
+          "D03_UNITY_D03_CANOPY_6",
+          "D03_UNITY_D03_DOOR_FRAME_6_0",
+          "D03_UNITY_D03_DOOR_FRAME_6_1",
+          "D03_UNITY_D03_DOOR_FRAME_6_2",
+          "D03_UNITY_D03_ENTRY_GLASS_6",
+          "D03_UNITY_D03_ENTRY_STEP_6_0",
+          "D03_UNITY_D03_ENTRY_STEP_6_1",
+          "D03_UNITY_D03_ENTRY_STEP_6_2",
+          "D03_UNITY_D03_PARAPET_6_0",
+          "D03_UNITY_D03_PARAPET_6_1",
+          "D03_UNITY_D03_PARAPET_6_3",
+          "D03_UNITY_D03_PARAPET_6_5",
+          "D03_UNITY_D03_PARAPET_6_6"
+        ]
+      },
+      {
+        "id": "C07",
+        "name": "국제관",
+        "source_index": 7,
+        "body_object": "ASSET_Campus__D03_CAMPUS__국제관",
+        "roof_object": "ASSET_Campus__D03_CAMPUS__국제관 / roof",
+        "bounds_blender_xyz": {
+          "min": [
+            31.485,
+            -8.961,
+            0.18
+          ],
+          "max": [
+            61.155,
+            30.568,
+            19.224
+          ]
+        },
+        "roof_dimensions_blender_xyz": [
+          29.52,
+          38.04,
+          0.3
+        ],
+        "parcel_anchor_blender_xyz": [
+          46.32,
+          11.473,
+          0.18
+        ],
+        "placement_design_unity_xyz": [
+          46.32,
+          0.0,
+          76.473
+        ],
+        "yaw_degrees": 0,
+        "entry_glass_center_blender_xyz": [
+          35.5215,
+          -7.552,
+          1.594
+        ],
+        "entry_glass_center_design_unity_xyz": [
+          35.5215,
+          1.414,
+          57.448
+        ],
+        "entry_steps_bounds_blender_xyz": {
+          "min": [
+            34.124,
+            -8.804,
+            0.18
+          ],
+          "max": [
+            36.949,
+            -7.6,
+            0.444
+          ]
+        },
+        "provisional_approach_design_unity_xz": [
+          35.5215,
+          55.653
+        ],
+        "entrance_facing_design": "south / -Z candidate inferred from door-step bounds, mesh normals not inspected",
+        "entrance_validation": "Measured entry meshes exist. Exact exterior boundary clearance, walkable threshold and Unity import remain unverified.",
+        "split_objects": [
+          "ASSET_Campus__D03_CAMPUS__국제관",
+          "ASSET_Campus__D03_CAMPUS__국제관 / roof",
+          "ASSET_Campus__D03_CAMPUS__국제관 / windows",
+          "ASSET_Campus__D03_BUILDING_PLINTH_7",
+          "ASSET_Campus__D03_WINDOW_FRAMES_D03_CAMPUS___windows_9e2d9ab9c0",
+          "ASSET_Campus__D03_CANOPY_7",
+          "ASSET_Campus__D03_DOOR_FRAME_7_0",
+          "ASSET_Campus__D03_DOOR_FRAME_7_1",
+          "ASSET_Campus__D03_DOOR_FRAME_7_2",
+          "ASSET_Campus__D03_ENTRY_GLASS_7",
+          "ASSET_Campus__D03_ENTRY_STEP_7_0",
+          "ASSET_Campus__D03_ENTRY_STEP_7_1",
+          "ASSET_Campus__D03_ENTRY_STEP_7_2",
+          "ASSET_Campus__D03_PARAPET_7_0",
+          "ASSET_Campus__D03_PARAPET_7_1",
+          "ASSET_Campus__D03_PARAPET_7_10",
+          "ASSET_Campus__D03_PARAPET_7_12",
+          "ASSET_Campus__D03_PARAPET_7_14",
+          "ASSET_Campus__D03_PARAPET_7_16",
+          "ASSET_Campus__D03_PARAPET_7_18",
+          "ASSET_Campus__D03_PARAPET_7_24",
+          "ASSET_Campus__D03_PARAPET_7_25",
+          "ASSET_Campus__D03_PARAPET_7_28",
+          "ASSET_Campus__D03_PARAPET_7_29",
+          "ASSET_Campus__D03_PARAPET_7_3",
+          "ASSET_Campus__D03_PARAPET_7_31",
+          "ASSET_Campus__D03_PARAPET_7_32",
+          "ASSET_Campus__D03_PARAPET_7_33",
+          "ASSET_Campus__D03_PARAPET_7_34",
+          "ASSET_Campus__D03_PARAPET_7_5",
+          "ASSET_Campus__D03_PARAPET_7_7",
+          "ASSET_Campus__D03_PARAPET_7_9"
+        ],
+        "fbx_group": "D03_UNITY_GROUP_CAMPUS",
+        "fbx_names": [
+          "D03_UNITY_D03_CAMPUS__국제관",
+          "D03_UNITY_D03_CAMPUS__국제관 / roof",
+          "D03_UNITY_D03_CAMPUS__국제관 / windows",
+          "D03_UNITY_D03_BUILDING_PLINTH_7",
+          "D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___windows_9e2d9ab9c0",
+          "D03_UNITY_D03_CANOPY_7",
+          "D03_UNITY_D03_DOOR_FRAME_7_0",
+          "D03_UNITY_D03_DOOR_FRAME_7_1",
+          "D03_UNITY_D03_DOOR_FRAME_7_2",
+          "D03_UNITY_D03_ENTRY_GLASS_7",
+          "D03_UNITY_D03_ENTRY_STEP_7_0",
+          "D03_UNITY_D03_ENTRY_STEP_7_1",
+          "D03_UNITY_D03_ENTRY_STEP_7_2",
+          "D03_UNITY_D03_PARAPET_7_0",
+          "D03_UNITY_D03_PARAPET_7_1",
+          "D03_UNITY_D03_PARAPET_7_10",
+          "D03_UNITY_D03_PARAPET_7_12",
+          "D03_UNITY_D03_PARAPET_7_14",
+          "D03_UNITY_D03_PARAPET_7_16",
+          "D03_UNITY_D03_PARAPET_7_18",
+          "D03_UNITY_D03_PARAPET_7_24",
+          "D03_UNITY_D03_PARAPET_7_25",
+          "D03_UNITY_D03_PARAPET_7_28",
+          "D03_UNITY_D03_PARAPET_7_29",
+          "D03_UNITY_D03_PARAPET_7_3",
+          "D03_UNITY_D03_PARAPET_7_31",
+          "D03_UNITY_D03_PARAPET_7_32",
+          "D03_UNITY_D03_PARAPET_7_33",
+          "D03_UNITY_D03_PARAPET_7_34",
+          "D03_UNITY_D03_PARAPET_7_5",
+          "D03_UNITY_D03_PARAPET_7_7",
+          "D03_UNITY_D03_PARAPET_7_9"
+        ]
+      },
+      {
+        "id": "C08",
+        "name": "산학협력관",
+        "source_index": 8,
+        "body_object": "ASSET_Campus__D03_CAMPUS__산학협력관",
+        "roof_object": "ASSET_Campus__D03_CAMPUS__산학협력관 / roof",
+        "bounds_blender_xyz": {
+          "min": [
+            41.925,
+            -45.266,
+            0.18
+          ],
+          "max": [
+            63.915,
+            -7.712,
+            15.624
+          ]
+        },
+        "roof_dimensions_blender_xyz": [
+          21.84,
+          36.24,
+          0.3
+        ],
+        "parcel_anchor_blender_xyz": [
+          52.92,
+          -25.907,
+          0.18
+        ],
+        "placement_design_unity_xyz": [
+          52.92,
+          0.0,
+          39.093
+        ],
+        "yaw_degrees": 0,
+        "entry_glass_center_blender_xyz": [
+          47.9195,
+          -43.429,
+          1.594
+        ],
+        "entry_glass_center_design_unity_xyz": [
+          47.9195,
+          1.414,
+          21.571
+        ],
+        "entry_steps_bounds_blender_xyz": {
+          "min": [
+            46.205,
+            -45.029,
+            0.18
+          ],
+          "max": [
+            49.222,
+            -43.062,
+            0.444
+          ]
+        },
+        "provisional_approach_design_unity_xz": [
+          47.9195,
+          19.173
+        ],
+        "entrance_facing_design": "south / -Z candidate inferred from door-step bounds, mesh normals not inspected",
+        "entrance_validation": "Measured entry meshes exist. Exact exterior boundary clearance, walkable threshold and Unity import remain unverified.",
+        "split_objects": [
+          "ASSET_Campus__D03_CAMPUS__산학협력관",
+          "ASSET_Campus__D03_CAMPUS__산학협력관 / roof",
+          "ASSET_Campus__D03_CAMPUS__산학협력관 / windows",
+          "ASSET_Campus__D03_BUILDING_PLINTH_8",
+          "ASSET_Campus__D03_WINDOW_FRAMES_D03_CAMPUS___windows_f7cd8d9190",
+          "ASSET_Campus__D03_CANOPY_8",
+          "ASSET_Campus__D03_DOOR_FRAME_8_0",
+          "ASSET_Campus__D03_DOOR_FRAME_8_1",
+          "ASSET_Campus__D03_DOOR_FRAME_8_2",
+          "ASSET_Campus__D03_ENTRY_GLASS_8",
+          "ASSET_Campus__D03_ENTRY_STEP_8_0",
+          "ASSET_Campus__D03_ENTRY_STEP_8_1",
+          "ASSET_Campus__D03_ENTRY_STEP_8_2",
+          "ASSET_Campus__D03_PARAPET_8_0",
+          "ASSET_Campus__D03_PARAPET_8_1",
+          "ASSET_Campus__D03_PARAPET_8_10",
+          "ASSET_Campus__D03_PARAPET_8_11",
+          "ASSET_Campus__D03_PARAPET_8_13",
+          "ASSET_Campus__D03_PARAPET_8_14",
+          "ASSET_Campus__D03_PARAPET_8_18",
+          "ASSET_Campus__D03_PARAPET_8_22",
+          "ASSET_Campus__D03_PARAPET_8_23",
+          "ASSET_Campus__D03_PARAPET_8_25",
+          "ASSET_Campus__D03_PARAPET_8_26",
+          "ASSET_Campus__D03_PARAPET_8_28",
+          "ASSET_Campus__D03_PARAPET_8_29",
+          "ASSET_Campus__D03_PARAPET_8_3",
+          "ASSET_Campus__D03_PARAPET_8_31",
+          "ASSET_Campus__D03_PARAPET_8_32",
+          "ASSET_Campus__D03_PARAPET_8_8",
+          "ASSET_Campus__D03_PARAPET_8_9"
+        ],
+        "fbx_group": "D03_UNITY_GROUP_CAMPUS",
+        "fbx_names": [
+          "D03_UNITY_D03_CAMPUS__산학협력관",
+          "D03_UNITY_D03_CAMPUS__산학협력관 / roof",
+          "D03_UNITY_D03_CAMPUS__산학협력관 / windows",
+          "D03_UNITY_D03_BUILDING_PLINTH_8",
+          "D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___windows_f7cd8d9190",
+          "D03_UNITY_D03_CANOPY_8",
+          "D03_UNITY_D03_DOOR_FRAME_8_0",
+          "D03_UNITY_D03_DOOR_FRAME_8_1",
+          "D03_UNITY_D03_DOOR_FRAME_8_2",
+          "D03_UNITY_D03_ENTRY_GLASS_8",
+          "D03_UNITY_D03_ENTRY_STEP_8_0",
+          "D03_UNITY_D03_ENTRY_STEP_8_1",
+          "D03_UNITY_D03_ENTRY_STEP_8_2",
+          "D03_UNITY_D03_PARAPET_8_0",
+          "D03_UNITY_D03_PARAPET_8_1",
+          "D03_UNITY_D03_PARAPET_8_10",
+          "D03_UNITY_D03_PARAPET_8_11",
+          "D03_UNITY_D03_PARAPET_8_13",
+          "D03_UNITY_D03_PARAPET_8_14",
+          "D03_UNITY_D03_PARAPET_8_18",
+          "D03_UNITY_D03_PARAPET_8_22",
+          "D03_UNITY_D03_PARAPET_8_23",
+          "D03_UNITY_D03_PARAPET_8_25",
+          "D03_UNITY_D03_PARAPET_8_26",
+          "D03_UNITY_D03_PARAPET_8_28",
+          "D03_UNITY_D03_PARAPET_8_29",
+          "D03_UNITY_D03_PARAPET_8_3",
+          "D03_UNITY_D03_PARAPET_8_31",
+          "D03_UNITY_D03_PARAPET_8_32",
+          "D03_UNITY_D03_PARAPET_8_8",
+          "D03_UNITY_D03_PARAPET_8_9"
+        ]
+      },
+      {
+        "id": "C09",
+        "name": "창업관",
+        "source_index": 9,
+        "body_object": "ASSET_Campus__D03_CAMPUS__창업관",
+        "roof_object": "ASSET_Campus__D03_CAMPUS__창업관 / roof",
+        "bounds_blender_xyz": {
+          "min": [
+            61.964,
+            -68.982,
+            0.18
+          ],
+          "max": [
+            76.635,
+            -42.512,
+            13.224
+          ]
+        },
+        "roof_dimensions_blender_xyz": [
+          14.52,
+          24.96,
+          0.3
+        ],
+        "parcel_anchor_blender_xyz": [
+          69.3,
+          -55.067,
+          0.18
+        ],
+        "placement_design_unity_xyz": [
+          69.3,
+          0.0,
+          9.933
+        ],
+        "yaw_degrees": 0,
+        "entry_glass_center_blender_xyz": [
+          72.0,
+          -67.612,
+          1.594
+        ],
+        "entry_glass_center_design_unity_xyz": [
+          72.0,
+          1.414,
+          -2.612
+        ],
+        "entry_steps_bounds_blender_xyz": {
+          "min": [
+            70.6,
+            -68.832,
+            0.18
+          ],
+          "max": [
+            73.4,
+            -67.692,
+            0.444
+          ]
+        },
+        "provisional_approach_design_unity_xz": [
+          72.0,
+          -4.347
+        ],
+        "entrance_facing_design": "south / -Z candidate inferred from door-step bounds, mesh normals not inspected",
+        "entrance_validation": "Measured entry meshes exist. Exact exterior boundary clearance, walkable threshold and Unity import remain unverified.",
+        "split_objects": [
+          "ASSET_Campus__D03_CAMPUS__창업관",
+          "ASSET_Campus__D03_CAMPUS__창업관 / roof",
+          "ASSET_Campus__D03_CAMPUS__창업관 / windows",
+          "ASSET_Campus__D03_BUILDING_PLINTH_9",
+          "ASSET_Campus__D03_WINDOW_FRAMES_D03_CAMPUS___windows_da525f52b7",
+          "ASSET_Campus__D03_CANOPY_9",
+          "ASSET_Campus__D03_DOOR_FRAME_9_0",
+          "ASSET_Campus__D03_DOOR_FRAME_9_1",
+          "ASSET_Campus__D03_DOOR_FRAME_9_2",
+          "ASSET_Campus__D03_ENTRY_GLASS_9",
+          "ASSET_Campus__D03_ENTRY_STEP_9_0",
+          "ASSET_Campus__D03_ENTRY_STEP_9_1",
+          "ASSET_Campus__D03_ENTRY_STEP_9_2",
+          "ASSET_Campus__D03_PARAPET_9_0",
+          "ASSET_Campus__D03_PARAPET_9_1",
+          "ASSET_Campus__D03_PARAPET_9_10",
+          "ASSET_Campus__D03_PARAPET_9_11",
+          "ASSET_Campus__D03_PARAPET_9_12",
+          "ASSET_Campus__D03_PARAPET_9_3",
+          "ASSET_Campus__D03_PARAPET_9_5",
+          "ASSET_Campus__D03_PARAPET_9_7"
+        ],
+        "fbx_group": "D03_UNITY_GROUP_CAMPUS",
+        "fbx_names": [
+          "D03_UNITY_D03_CAMPUS__창업관",
+          "D03_UNITY_D03_CAMPUS__창업관 / roof",
+          "D03_UNITY_D03_CAMPUS__창업관 / windows",
+          "D03_UNITY_D03_BUILDING_PLINTH_9",
+          "D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___windows_da525f52b7",
+          "D03_UNITY_D03_CANOPY_9",
+          "D03_UNITY_D03_DOOR_FRAME_9_0",
+          "D03_UNITY_D03_DOOR_FRAME_9_1",
+          "D03_UNITY_D03_DOOR_FRAME_9_2",
+          "D03_UNITY_D03_ENTRY_GLASS_9",
+          "D03_UNITY_D03_ENTRY_STEP_9_0",
+          "D03_UNITY_D03_ENTRY_STEP_9_1",
+          "D03_UNITY_D03_ENTRY_STEP_9_2",
+          "D03_UNITY_D03_PARAPET_9_0",
+          "D03_UNITY_D03_PARAPET_9_1",
+          "D03_UNITY_D03_PARAPET_9_10",
+          "D03_UNITY_D03_PARAPET_9_11",
+          "D03_UNITY_D03_PARAPET_9_12",
+          "D03_UNITY_D03_PARAPET_9_3",
+          "D03_UNITY_D03_PARAPET_9_5",
+          "D03_UNITY_D03_PARAPET_9_7"
+        ]
+      },
+      {
+        "id": "C10",
+        "name": "남관",
+        "source_index": 10,
+        "body_object": "ASSET_Campus__D03_CAMPUS__남관",
+        "roof_object": "ASSET_Campus__D03_CAMPUS__남관 / roof",
+        "bounds_blender_xyz": {
+          "min": [
+            18.884,
+            -67.954,
+            0.18
+          ],
+          "max": [
+            67.276,
+            -55.832,
+            13.224
+          ]
+        },
+        "roof_dimensions_blender_xyz": [
+          48.24,
+          11.28,
+          0.3
+        ],
+        "parcel_anchor_blender_xyz": [
+          43.08,
+          -61.547,
+          0.18
+        ],
+        "placement_design_unity_xyz": [
+          43.08,
+          0.0,
+          3.453
+        ],
+        "yaw_degrees": 0,
+        "entry_glass_center_blender_xyz": [
+          43.682,
+          -66.532,
+          1.594
+        ],
+        "entry_glass_center_design_unity_xyz": [
+          43.682,
+          1.414,
+          -1.532
+        ],
+        "entry_steps_bounds_blender_xyz": {
+          "min": [
+            42.285,
+            -67.795,
+            0.18
+          ],
+          "max": [
+            45.119,
+            -66.569,
+            0.444
+          ]
+        },
+        "provisional_approach_design_unity_xz": [
+          43.682,
+          -3.987
+        ],
+        "entrance_facing_design": "south / -Z candidate inferred from door-step bounds, mesh normals not inspected",
+        "entrance_validation": "Measured entry meshes exist. Exact exterior boundary clearance, walkable threshold and Unity import remain unverified.",
+        "split_objects": [
+          "ASSET_Campus__D03_CAMPUS__남관",
+          "ASSET_Campus__D03_CAMPUS__남관 / roof",
+          "ASSET_Campus__D03_CAMPUS__남관 / windows",
+          "ASSET_Campus__D03_BUILDING_PLINTH_10",
+          "ASSET_Campus__D03_WINDOW_FRAMES_D03_CAMPUS___windows_ed987eca9c",
+          "ASSET_Campus__D03_CANOPY_10",
+          "ASSET_Campus__D03_DOOR_FRAME_10_0",
+          "ASSET_Campus__D03_DOOR_FRAME_10_1",
+          "ASSET_Campus__D03_DOOR_FRAME_10_2",
+          "ASSET_Campus__D03_ENTRY_GLASS_10",
+          "ASSET_Campus__D03_ENTRY_STEP_10_0",
+          "ASSET_Campus__D03_ENTRY_STEP_10_1",
+          "ASSET_Campus__D03_ENTRY_STEP_10_2",
+          "ASSET_Campus__D03_PARAPET_10_0",
+          "ASSET_Campus__D03_PARAPET_10_1",
+          "ASSET_Campus__D03_PARAPET_10_10",
+          "ASSET_Campus__D03_PARAPET_10_11",
+          "ASSET_Campus__D03_PARAPET_10_14",
+          "ASSET_Campus__D03_PARAPET_10_17",
+          "ASSET_Campus__D03_PARAPET_10_19",
+          "ASSET_Campus__D03_PARAPET_10_20",
+          "ASSET_Campus__D03_PARAPET_10_3",
+          "ASSET_Campus__D03_PARAPET_10_5",
+          "ASSET_Campus__D03_PARAPET_10_6",
+          "ASSET_Campus__D03_PARAPET_10_8"
+        ],
+        "fbx_group": "D03_UNITY_GROUP_CAMPUS",
+        "fbx_names": [
+          "D03_UNITY_D03_CAMPUS__남관",
+          "D03_UNITY_D03_CAMPUS__남관 / roof",
+          "D03_UNITY_D03_CAMPUS__남관 / windows",
+          "D03_UNITY_D03_BUILDING_PLINTH_10",
+          "D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___windows_ed987eca9c",
+          "D03_UNITY_D03_CANOPY_10",
+          "D03_UNITY_D03_DOOR_FRAME_10_0",
+          "D03_UNITY_D03_DOOR_FRAME_10_1",
+          "D03_UNITY_D03_DOOR_FRAME_10_2",
+          "D03_UNITY_D03_ENTRY_GLASS_10",
+          "D03_UNITY_D03_ENTRY_STEP_10_0",
+          "D03_UNITY_D03_ENTRY_STEP_10_1",
+          "D03_UNITY_D03_ENTRY_STEP_10_2",
+          "D03_UNITY_D03_PARAPET_10_0",
+          "D03_UNITY_D03_PARAPET_10_1",
+          "D03_UNITY_D03_PARAPET_10_10",
+          "D03_UNITY_D03_PARAPET_10_11",
+          "D03_UNITY_D03_PARAPET_10_14",
+          "D03_UNITY_D03_PARAPET_10_17",
+          "D03_UNITY_D03_PARAPET_10_19",
+          "D03_UNITY_D03_PARAPET_10_20",
+          "D03_UNITY_D03_PARAPET_10_3",
+          "D03_UNITY_D03_PARAPET_10_5",
+          "D03_UNITY_D03_PARAPET_10_6",
+          "D03_UNITY_D03_PARAPET_10_8"
+        ]
+      },
+      {
+        "id": "C11",
+        "name": "체육관",
+        "source_index": 11,
+        "body_object": "ASSET_Campus__D03_CAMPUS__체육관",
+        "roof_object": "ASSET_Campus__D03_CAMPUS__체육관 / roof",
+        "bounds_blender_xyz": {
+          "min": [
+            -55.155,
+            -103.135,
+            0.18
+          ],
+          "max": [
+            -29.804,
+            -69.392,
+            12.024
+          ]
+        },
+        "roof_dimensions_blender_xyz": [
+          25.2,
+          32.28,
+          0.3
+        ],
+        "parcel_anchor_blender_xyz": [
+          -42.48,
+          -85.607,
+          0.18
+        ],
+        "placement_design_unity_xyz": [
+          -42.48,
+          0.0,
+          -20.607
+        ],
+        "yaw_degrees": 0,
+        "entry_glass_center_blender_xyz": [
+          -42.4195,
+          -101.7525,
+          1.594
+        ],
+        "entry_glass_center_design_unity_xyz": [
+          -42.4195,
+          1.414,
+          -36.7525
+        ],
+        "entry_steps_bounds_blender_xyz": {
+          "min": [
+            -43.819,
+            -102.982,
+            0.18
+          ],
+          "max": [
+            -41.011,
+            -101.822,
+            0.444
+          ]
+        },
+        "provisional_approach_design_unity_xz": [
+          -42.4195,
+          -38.547
+        ],
+        "entrance_facing_design": "south / -Z candidate inferred from door-step bounds, mesh normals not inspected",
+        "entrance_validation": "Measured entry meshes exist. Exact exterior boundary clearance, walkable threshold and Unity import remain unverified.",
+        "split_objects": [
+          "ASSET_Campus__D03_CAMPUS__체육관",
+          "ASSET_Campus__D03_CAMPUS__체육관 / roof",
+          "ASSET_Campus__D03_CAMPUS__체육관 / windows",
+          "ASSET_Campus__D03_BUILDING_PLINTH_11",
+          "ASSET_Campus__D03_WINDOW_FRAMES_D03_CAMPUS___windows_af54b076f0",
+          "ASSET_Campus__D03_CANOPY_11",
+          "ASSET_Campus__D03_DOOR_FRAME_11_0",
+          "ASSET_Campus__D03_DOOR_FRAME_11_1",
+          "ASSET_Campus__D03_DOOR_FRAME_11_2",
+          "ASSET_Campus__D03_ENTRY_GLASS_11",
+          "ASSET_Campus__D03_ENTRY_STEP_11_0",
+          "ASSET_Campus__D03_ENTRY_STEP_11_1",
+          "ASSET_Campus__D03_ENTRY_STEP_11_2",
+          "ASSET_Campus__D03_PARAPET_11_0",
+          "ASSET_Campus__D03_PARAPET_11_1",
+          "ASSET_Campus__D03_PARAPET_11_11",
+          "ASSET_Campus__D03_PARAPET_11_13",
+          "ASSET_Campus__D03_PARAPET_11_15",
+          "ASSET_Campus__D03_PARAPET_11_18",
+          "ASSET_Campus__D03_PARAPET_11_19",
+          "ASSET_Campus__D03_PARAPET_11_20",
+          "ASSET_Campus__D03_PARAPET_11_3",
+          "ASSET_Campus__D03_PARAPET_11_5",
+          "ASSET_Campus__D03_PARAPET_11_6",
+          "ASSET_Campus__D03_PARAPET_11_9"
+        ],
+        "fbx_group": "D03_UNITY_GROUP_CAMPUS",
+        "fbx_names": [
+          "D03_UNITY_D03_CAMPUS__체육관",
+          "D03_UNITY_D03_CAMPUS__체육관 / roof",
+          "D03_UNITY_D03_CAMPUS__체육관 / windows",
+          "D03_UNITY_D03_BUILDING_PLINTH_11",
+          "D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___windows_af54b076f0",
+          "D03_UNITY_D03_CANOPY_11",
+          "D03_UNITY_D03_DOOR_FRAME_11_0",
+          "D03_UNITY_D03_DOOR_FRAME_11_1",
+          "D03_UNITY_D03_DOOR_FRAME_11_2",
+          "D03_UNITY_D03_ENTRY_GLASS_11",
+          "D03_UNITY_D03_ENTRY_STEP_11_0",
+          "D03_UNITY_D03_ENTRY_STEP_11_1",
+          "D03_UNITY_D03_ENTRY_STEP_11_2",
+          "D03_UNITY_D03_PARAPET_11_0",
+          "D03_UNITY_D03_PARAPET_11_1",
+          "D03_UNITY_D03_PARAPET_11_11",
+          "D03_UNITY_D03_PARAPET_11_13",
+          "D03_UNITY_D03_PARAPET_11_15",
+          "D03_UNITY_D03_PARAPET_11_18",
+          "D03_UNITY_D03_PARAPET_11_19",
+          "D03_UNITY_D03_PARAPET_11_20",
+          "D03_UNITY_D03_PARAPET_11_3",
+          "D03_UNITY_D03_PARAPET_11_5",
+          "D03_UNITY_D03_PARAPET_11_6",
+          "D03_UNITY_D03_PARAPET_11_9"
+        ]
+      },
+      {
+        "id": "C12",
+        "name": "학생시설",
+        "source_index": 12,
+        "body_object": "ASSET_Campus__D03_CAMPUS__학생시설",
+        "roof_object": "ASSET_Campus__D03_CAMPUS__학생시설 / roof",
+        "bounds_blender_xyz": {
+          "min": [
+            -26.476,
+            -96.702,
+            0.18
+          ],
+          "max": [
+            4.276,
+            -73.112,
+            10.824
+          ]
+        },
+        "roof_dimensions_blender_xyz": [
+          30.6,
+          22.08,
+          0.3
+        ],
+        "parcel_anchor_blender_xyz": [
+          -11.1,
+          -84.227,
+          0.18
+        ],
+        "placement_design_unity_xyz": [
+          -11.1,
+          0.0,
+          -19.227
+        ],
+        "yaw_degrees": 0,
+        "entry_glass_center_blender_xyz": [
+          -21.96,
+          -95.332,
+          1.594
+        ],
+        "entry_glass_center_design_unity_xyz": [
+          -21.96,
+          1.414,
+          -30.332
+        ],
+        "entry_steps_bounds_blender_xyz": {
+          "min": [
+            -23.36,
+            -96.552,
+            0.18
+          ],
+          "max": [
+            -20.56,
+            -95.412,
+            0.444
+          ]
+        },
+        "provisional_approach_design_unity_xz": [
+          -21.96,
+          -32.067
+        ],
+        "entrance_facing_design": "south / -Z candidate inferred from door-step bounds, mesh normals not inspected",
+        "entrance_validation": "Measured entry meshes exist. Exact exterior boundary clearance, walkable threshold and Unity import remain unverified.",
+        "split_objects": [
+          "ASSET_Campus__D03_CAMPUS__학생시설",
+          "ASSET_Campus__D03_CAMPUS__학생시설 / roof",
+          "ASSET_Campus__D03_CAMPUS__학생시설 / windows",
+          "ASSET_Campus__D03_BUILDING_PLINTH_12",
+          "ASSET_Campus__D03_WINDOW_FRAMES_D03_CAMPUS___windows_91538f98f6",
+          "ASSET_Campus__D03_CANOPY_12",
+          "ASSET_Campus__D03_DOOR_FRAME_12_0",
+          "ASSET_Campus__D03_DOOR_FRAME_12_1",
+          "ASSET_Campus__D03_DOOR_FRAME_12_2",
+          "ASSET_Campus__D03_ENTRY_GLASS_12",
+          "ASSET_Campus__D03_ENTRY_STEP_12_0",
+          "ASSET_Campus__D03_ENTRY_STEP_12_1",
+          "ASSET_Campus__D03_ENTRY_STEP_12_2",
+          "ASSET_Campus__D03_PARAPET_12_0",
+          "ASSET_Campus__D03_PARAPET_12_1",
+          "ASSET_Campus__D03_PARAPET_12_10",
+          "ASSET_Campus__D03_PARAPET_12_11",
+          "ASSET_Campus__D03_PARAPET_12_12",
+          "ASSET_Campus__D03_PARAPET_12_3",
+          "ASSET_Campus__D03_PARAPET_12_8",
+          "ASSET_Campus__D03_PARAPET_12_9"
+        ],
+        "fbx_group": "D03_UNITY_GROUP_CAMPUS",
+        "fbx_names": [
+          "D03_UNITY_D03_CAMPUS__학생시설",
+          "D03_UNITY_D03_CAMPUS__학생시설 / roof",
+          "D03_UNITY_D03_CAMPUS__학생시설 / windows",
+          "D03_UNITY_D03_BUILDING_PLINTH_12",
+          "D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___windows_91538f98f6",
+          "D03_UNITY_D03_CANOPY_12",
+          "D03_UNITY_D03_DOOR_FRAME_12_0",
+          "D03_UNITY_D03_DOOR_FRAME_12_1",
+          "D03_UNITY_D03_DOOR_FRAME_12_2",
+          "D03_UNITY_D03_ENTRY_GLASS_12",
+          "D03_UNITY_D03_ENTRY_STEP_12_0",
+          "D03_UNITY_D03_ENTRY_STEP_12_1",
+          "D03_UNITY_D03_ENTRY_STEP_12_2",
+          "D03_UNITY_D03_PARAPET_12_0",
+          "D03_UNITY_D03_PARAPET_12_1",
+          "D03_UNITY_D03_PARAPET_12_10",
+          "D03_UNITY_D03_PARAPET_12_11",
+          "D03_UNITY_D03_PARAPET_12_12",
+          "D03_UNITY_D03_PARAPET_12_3",
+          "D03_UNITY_D03_PARAPET_12_8",
+          "D03_UNITY_D03_PARAPET_12_9"
+        ]
+      },
+      {
+        "id": "C13",
+        "name": "지원시설",
+        "source_index": 13,
+        "body_object": "ASSET_Campus__D03_CAMPUS__지원시설",
+        "roof_object": "ASSET_Campus__D03_CAMPUS__지원시설 / roof",
+        "bounds_blender_xyz": {
+          "min": [
+            41.084,
+            -84.102,
+            0.18
+          ],
+          "max": [
+            52.035,
+            -71.673,
+            8.424
+          ]
+        },
+        "roof_dimensions_blender_xyz": [
+          10.8,
+          10.92,
+          0.3
+        ],
+        "parcel_anchor_blender_xyz": [
+          46.56,
+          -77.207,
+          0.18
+        ],
+        "placement_design_unity_xyz": [
+          46.56,
+          0.0,
+          -12.207
+        ],
+        "yaw_degrees": 0,
+        "entry_glass_center_blender_xyz": [
+          46.56,
+          -82.732,
+          1.594
+        ],
+        "entry_glass_center_design_unity_xyz": [
+          46.56,
+          1.414,
+          -17.732
+        ],
+        "entry_steps_bounds_blender_xyz": {
+          "min": [
+            45.16,
+            -83.952,
+            0.18
+          ],
+          "max": [
+            47.96,
+            -82.812,
+            0.444
+          ]
+        },
+        "provisional_approach_design_unity_xz": [
+          46.56,
+          -19.467
+        ],
+        "entrance_facing_design": "south / -Z candidate inferred from door-step bounds, mesh normals not inspected",
+        "entrance_validation": "Measured entry meshes exist. Exact exterior boundary clearance, walkable threshold and Unity import remain unverified.",
+        "split_objects": [
+          "ASSET_Campus__D03_CAMPUS__지원시설",
+          "ASSET_Campus__D03_CAMPUS__지원시설 / roof",
+          "ASSET_Campus__D03_CAMPUS__지원시설 / windows",
+          "ASSET_Campus__D03_BUILDING_PLINTH_13",
+          "ASSET_Campus__D03_WINDOW_FRAMES_D03_CAMPUS___windows_42473642ab",
+          "ASSET_Campus__D03_CANOPY_13",
+          "ASSET_Campus__D03_DOOR_FRAME_13_0",
+          "ASSET_Campus__D03_DOOR_FRAME_13_1",
+          "ASSET_Campus__D03_DOOR_FRAME_13_2",
+          "ASSET_Campus__D03_ENTRY_GLASS_13",
+          "ASSET_Campus__D03_ENTRY_STEP_13_0",
+          "ASSET_Campus__D03_ENTRY_STEP_13_1",
+          "ASSET_Campus__D03_ENTRY_STEP_13_2",
+          "ASSET_Campus__D03_PARAPET_13_0",
+          "ASSET_Campus__D03_PARAPET_13_1",
+          "ASSET_Campus__D03_PARAPET_13_11",
+          "ASSET_Campus__D03_PARAPET_13_12",
+          "ASSET_Campus__D03_PARAPET_13_4",
+          "ASSET_Campus__D03_PARAPET_13_5",
+          "ASSET_Campus__D03_PARAPET_13_7",
+          "ASSET_Campus__D03_PARAPET_13_9"
+        ],
+        "fbx_group": "D03_UNITY_GROUP_CAMPUS",
+        "fbx_names": [
+          "D03_UNITY_D03_CAMPUS__지원시설",
+          "D03_UNITY_D03_CAMPUS__지원시설 / roof",
+          "D03_UNITY_D03_CAMPUS__지원시설 / windows",
+          "D03_UNITY_D03_BUILDING_PLINTH_13",
+          "D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___windows_42473642ab",
+          "D03_UNITY_D03_CANOPY_13",
+          "D03_UNITY_D03_DOOR_FRAME_13_0",
+          "D03_UNITY_D03_DOOR_FRAME_13_1",
+          "D03_UNITY_D03_DOOR_FRAME_13_2",
+          "D03_UNITY_D03_ENTRY_GLASS_13",
+          "D03_UNITY_D03_ENTRY_STEP_13_0",
+          "D03_UNITY_D03_ENTRY_STEP_13_1",
+          "D03_UNITY_D03_ENTRY_STEP_13_2",
+          "D03_UNITY_D03_PARAPET_13_0",
+          "D03_UNITY_D03_PARAPET_13_1",
+          "D03_UNITY_D03_PARAPET_13_11",
+          "D03_UNITY_D03_PARAPET_13_12",
+          "D03_UNITY_D03_PARAPET_13_4",
+          "D03_UNITY_D03_PARAPET_13_5",
+          "D03_UNITY_D03_PARAPET_13_7",
+          "D03_UNITY_D03_PARAPET_13_9"
+        ]
+      }
+    ],
+    "features": [
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Basketball court",
+        "bounds_blender_xyz": {
+          "min": [
+            -7.32,
+            -27.587,
+            0.324
+          ],
+          "max": [
+            3.84,
+            -10.067,
+            0.408
+          ]
+        },
+        "dimensions_blender_xyz": [
+          11.16,
+          17.52,
+          0.084
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            -7.32,
+            37.413
+          ],
+          "max": [
+            3.84,
+            54.933
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Campus plinth",
+        "bounds_blender_xyz": {
+          "min": [
+            -78.12,
+            -106.067,
+            -2.796
+          ],
+          "max": [
+            78.12,
+            106.093,
+            -0.036
+          ]
+        },
+        "dimensions_blender_xyz": [
+          156.24,
+          212.16,
+          2.76
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            -78.12,
+            -41.067
+          ],
+          "max": [
+            78.12,
+            171.093
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Campus surface",
+        "bounds_blender_xyz": {
+          "min": [
+            -78.12,
+            -106.067,
+            -0.036
+          ],
+          "max": [
+            78.12,
+            106.093,
+            0.18
+          ]
+        },
+        "dimensions_blender_xyz": [
+          156.24,
+          212.16,
+          0.216
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            -78.12,
+            -41.067
+          ],
+          "max": [
+            78.12,
+            171.093
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Central garden",
+        "bounds_blender_xyz": {
+          "min": [
+            -37.32,
+            27.853,
+            0.192
+          ],
+          "max": [
+            -11.16,
+            36.493,
+            0.264
+          ]
+        },
+        "dimensions_blender_xyz": [
+          26.16,
+          8.64,
+          0.072
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            -37.32,
+            92.853
+          ],
+          "max": [
+            -11.16,
+            101.493
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__East north lawn",
+        "bounds_blender_xyz": {
+          "min": [
+            -23.16,
+            60.373,
+            0.192
+          ],
+          "max": [
+            -10.92,
+            81.733,
+            0.264
+          ]
+        },
+        "dimensions_blender_xyz": [
+          12.24,
+          21.36,
+          0.072
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            -23.16,
+            125.373
+          ],
+          "max": [
+            -10.92,
+            146.733
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Field lawn",
+        "bounds_blender_xyz": {
+          "min": [
+            -63.96,
+            -55.547,
+            0.192
+          ],
+          "max": [
+            3.36,
+            -2.987,
+            0.264
+          ]
+        },
+        "dimensions_blender_xyz": [
+          67.32,
+          52.56,
+          0.072
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            -63.96,
+            9.453
+          ],
+          "max": [
+            3.36,
+            62.013
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__North lawn",
+        "bounds_blender_xyz": {
+          "min": [
+            -57.0,
+            60.613,
+            0.192
+          ],
+          "max": [
+            -22.08,
+            84.253,
+            0.264
+          ]
+        },
+        "dimensions_blender_xyz": [
+          34.92,
+          23.64,
+          0.072
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            -57.0,
+            125.613
+          ],
+          "max": [
+            -22.08,
+            149.253
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Road 0",
+        "bounds_blender_xyz": {
+          "min": [
+            -72.78,
+            -106.077,
+            0.336
+          ],
+          "max": [
+            26.229,
+            49.517,
+            0.338
+          ]
+        },
+        "dimensions_blender_xyz": [
+          99.009,
+          155.594,
+          0.002
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            -72.78,
+            -41.077
+          ],
+          "max": [
+            26.229,
+            114.517
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Road 1",
+        "bounds_blender_xyz": {
+          "min": [
+            -71.343,
+            -23.088,
+            0.337
+          ],
+          "max": [
+            23.993,
+            28.299,
+            0.339
+          ]
+        },
+        "dimensions_blender_xyz": [
+          95.336,
+          51.386,
+          0.002
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            -71.343,
+            41.912
+          ],
+          "max": [
+            23.993,
+            93.299
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Road 2",
+        "bounds_blender_xyz": {
+          "min": [
+            -70.8,
+            -65.821,
+            0.338
+          ],
+          "max": [
+            27.786,
+            88.315,
+            0.341
+          ]
+        },
+        "dimensions_blender_xyz": [
+          98.586,
+          154.136,
+          0.003
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            -70.8,
+            -0.821
+          ],
+          "max": [
+            27.786,
+            153.315
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Road 3",
+        "bounds_blender_xyz": {
+          "min": [
+            -27.491,
+            57.865,
+            0.339
+          ],
+          "max": [
+            -17.629,
+            84.48,
+            0.339
+          ]
+        },
+        "dimensions_blender_xyz": [
+          9.862,
+          26.615,
+          0.0
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            -27.491,
+            122.865
+          ],
+          "max": [
+            -17.629,
+            149.48
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Road 4",
+        "bounds_blender_xyz": {
+          "min": [
+            -17.83,
+            56.861,
+            0.34
+          ],
+          "max": [
+            -7.85,
+            67.124,
+            0.34
+          ]
+        },
+        "dimensions_blender_xyz": [
+          9.98,
+          10.263,
+          0.0
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            -17.83,
+            121.861
+          ],
+          "max": [
+            -7.85,
+            132.124
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Road 5",
+        "bounds_blender_xyz": {
+          "min": [
+            -63.902,
+            -106.083,
+            0.341
+          ],
+          "max": [
+            -57.576,
+            -58.36,
+            0.341
+          ]
+        },
+        "dimensions_blender_xyz": [
+          6.326,
+          47.723,
+          0.0
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            -63.902,
+            -41.083
+          ],
+          "max": [
+            -57.576,
+            6.64
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Road 6",
+        "bounds_blender_xyz": {
+          "min": [
+            8.701,
+            -83.683,
+            0.342
+          ],
+          "max": [
+            12.299,
+            -59.331,
+            0.342
+          ]
+        },
+        "dimensions_blender_xyz": [
+          3.598,
+          24.352,
+          0.0
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            8.701,
+            -18.683
+          ],
+          "max": [
+            12.299,
+            5.669
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Road 7",
+        "bounds_blender_xyz": {
+          "min": [
+            2.987,
+            -90.22,
+            0.343
+          ],
+          "max": [
+            77.445,
+            -85.605,
+            0.343
+          ]
+        },
+        "dimensions_blender_xyz": [
+          74.459,
+          4.615,
+          0.0
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            2.987,
+            -25.22
+          ],
+          "max": [
+            77.445,
+            -20.605
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__South garden",
+        "bounds_blender_xyz": {
+          "min": [
+            14.64,
+            -81.467,
+            0.192
+          ],
+          "max": [
+            34.56,
+            -70.067,
+            0.264
+          ]
+        },
+        "dimensions_blender_xyz": [
+          19.92,
+          11.4,
+          0.072
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            14.64,
+            -16.467
+          ],
+          "max": [
+            34.56,
+            -5.067
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Sports field",
+        "bounds_blender_xyz": {
+          "min": [
+            -61.32,
+            -53.267,
+            0.3
+          ],
+          "max": [
+            -7.2,
+            -4.787,
+            0.396
+          ]
+        },
+        "dimensions_blender_xyz": [
+          54.12,
+          48.48,
+          0.096
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            -61.32,
+            11.733
+          ],
+          "max": [
+            -7.2,
+            60.213
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Tennis court",
+        "bounds_blender_xyz": {
+          "min": [
+            63.0,
+            -37.667,
+            0.3
+          ],
+          "max": [
+            70.8,
+            -23.627,
+            0.396
+          ]
+        },
+        "dimensions_blender_xyz": [
+          7.8,
+          14.04,
+          0.096
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            63.0,
+            27.333
+          ],
+          "max": [
+            70.8,
+            41.373
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Upper garden",
+        "bounds_blender_xyz": {
+          "min": [
+            -52.32,
+            49.453,
+            0.192
+          ],
+          "max": [
+            -21.72,
+            57.733,
+            0.264
+          ]
+        },
+        "dimensions_blender_xyz": [
+          30.6,
+          8.28,
+          0.072
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            -52.32,
+            114.453
+          ],
+          "max": [
+            -21.72,
+            122.733
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Walk 0",
+        "bounds_blender_xyz": {
+          "min": [
+            -73.56,
+            -106.083,
+            0.3
+          ],
+          "max": [
+            26.346,
+            50.3,
+            0.302
+          ]
+        },
+        "dimensions_blender_xyz": [
+          99.906,
+          156.383,
+          0.002
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            -73.56,
+            -41.083
+          ],
+          "max": [
+            26.346,
+            115.3
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Walk 1",
+        "bounds_blender_xyz": {
+          "min": [
+            -71.382,
+            -23.496,
+            0.301
+          ],
+          "max": [
+            24.657,
+            29.095,
+            0.303
+          ]
+        },
+        "dimensions_blender_xyz": [
+          96.039,
+          52.591,
+          0.002
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            -71.382,
+            41.504
+          ],
+          "max": [
+            24.657,
+            94.095
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Walk 2",
+        "bounds_blender_xyz": {
+          "min": [
+            -70.8,
+            -66.61,
+            0.302
+          ],
+          "max": [
+            28.569,
+            89.121,
+            0.305
+          ]
+        },
+        "dimensions_blender_xyz": [
+          99.369,
+          155.73,
+          0.003
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            -70.8,
+            -1.61
+          ],
+          "max": [
+            28.569,
+            154.121
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Walk 3",
+        "bounds_blender_xyz": {
+          "min": [
+            -28.241,
+            57.65,
+            0.303
+          ],
+          "max": [
+            -16.879,
+            84.696,
+            0.303
+          ]
+        },
+        "dimensions_blender_xyz": [
+          11.362,
+          27.046,
+          0.0
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            -28.241,
+            122.65
+          ],
+          "max": [
+            -16.879,
+            149.696
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Walk 4",
+        "bounds_blender_xyz": {
+          "min": [
+            -18.393,
+            56.322,
+            0.304
+          ],
+          "max": [
+            -7.287,
+            67.664,
+            0.304
+          ]
+        },
+        "dimensions_blender_xyz": [
+          11.107,
+          11.342,
+          0.0
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            -18.393,
+            121.322
+          ],
+          "max": [
+            -7.287,
+            132.664
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Walk 5",
+        "bounds_blender_xyz": {
+          "min": [
+            -64.683,
+            -106.093,
+            0.305
+          ],
+          "max": [
+            -56.967,
+            -57.873,
+            0.305
+          ]
+        },
+        "dimensions_blender_xyz": [
+          7.716,
+          48.22,
+          0.0
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            -64.683,
+            -41.093
+          ],
+          "max": [
+            -56.967,
+            7.127
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Walk 6",
+        "bounds_blender_xyz": {
+          "min": [
+            7.922,
+            -83.718,
+            0.306
+          ],
+          "max": [
+            13.078,
+            -59.297,
+            0.306
+          ]
+        },
+        "dimensions_blender_xyz": [
+          5.156,
+          24.422,
+          0.0
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            7.922,
+            -18.718
+          ],
+          "max": [
+            13.078,
+            5.703
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      },
+      {
+        "name": "ASSET_Campus__D03_CAMPUS__Walk 7",
+        "bounds_blender_xyz": {
+          "min": [
+            2.978,
+            -90.959,
+            0.307
+          ],
+          "max": [
+            77.696,
+            -84.824,
+            0.307
+          ]
+        },
+        "dimensions_blender_xyz": [
+          74.718,
+          6.135,
+          0.0
+        ],
+        "bounds_design_unity_xz": {
+          "min": [
+            2.978,
+            -25.959
+          ],
+          "max": [
+            77.696,
+            -19.824
+          ]
+        },
+        "mesh_origin_blender_xyz": [
+          0.72,
+          -1.067,
+          -0.036
+        ]
+      }
+    ],
+    "unassigned_shared_meshes": [
+      "ASSET_Campus__D03_CAMPUS__Basketball court",
+      "ASSET_Campus__D03_CAMPUS__Campus plinth",
+      "ASSET_Campus__D03_CAMPUS__Campus surface",
+      "ASSET_Campus__D03_CAMPUS__Center circle",
+      "ASSET_Campus__D03_CAMPUS__Central garden",
+      "ASSET_Campus__D03_CAMPUS__Court boundary",
+      "ASSET_Campus__D03_CAMPUS__Court halfway",
+      "ASSET_Campus__D03_CAMPUS__Court key",
+      "ASSET_Campus__D03_CAMPUS__Court key.001",
+      "ASSET_Campus__D03_CAMPUS__Crosswalk",
+      "ASSET_Campus__D03_CAMPUS__Crosswalk.001",
+      "ASSET_Campus__D03_CAMPUS__Crosswalk.002",
+      "ASSET_Campus__D03_CAMPUS__Crosswalk.003",
+      "ASSET_Campus__D03_CAMPUS__Crosswalk.004",
+      "ASSET_Campus__D03_CAMPUS__Crosswalk.005",
+      "ASSET_Campus__D03_CAMPUS__Crosswalk.006",
+      "ASSET_Campus__D03_CAMPUS__Crosswalk.007",
+      "ASSET_Campus__D03_CAMPUS__Crosswalk.008",
+      "ASSET_Campus__D03_CAMPUS__Crosswalk.009",
+      "ASSET_Campus__D03_CAMPUS__Crosswalk.010",
+      "ASSET_Campus__D03_CAMPUS__Crosswalk.011",
+      "ASSET_Campus__D03_CAMPUS__Crosswalk.012",
+      "ASSET_Campus__D03_CAMPUS__Crosswalk.013",
+      "ASSET_Campus__D03_CAMPUS__Crosswalk.014",
+      "ASSET_Campus__D03_CAMPUS__Crosswalk.015",
+      "ASSET_Campus__D03_CAMPUS__Crosswalk.016",
+      "ASSET_Campus__D03_CAMPUS__Crosswalk.017",
+      "ASSET_Campus__D03_CAMPUS__Crosswalk.018",
+      "ASSET_Campus__D03_CAMPUS__Crosswalk.019",
+      "ASSET_Campus__D03_CAMPUS__Crosswalk.020",
+      "ASSET_Campus__D03_CAMPUS__East green",
+      "ASSET_Campus__D03_CAMPUS__East north lawn",
+      "ASSET_Campus__D03_CAMPUS__Edge line 0",
+      "ASSET_Campus__D03_CAMPUS__Edge line 1",
+      "ASSET_Campus__D03_CAMPUS__Edge line 2",
+      "ASSET_Campus__D03_CAMPUS__Edge line 3",
+      "ASSET_Campus__D03_CAMPUS__Field lawn",
+      "ASSET_Campus__D03_CAMPUS__Goal",
+      "ASSET_Campus__D03_CAMPUS__Goal.001",
+      "ASSET_Campus__D03_CAMPUS__Halfway",
+      "ASSET_Campus__D03_CAMPUS__North lawn",
+      "ASSET_Campus__D03_CAMPUS__Parking 2",
+      "ASSET_Campus__D03_CAMPUS__Parking bay",
+      "ASSET_Campus__D03_CAMPUS__Parking bay.001",
+      "ASSET_Campus__D03_CAMPUS__Parking bay.002",
+      "ASSET_Campus__D03_CAMPUS__Parking bay.003",
+      "ASSET_Campus__D03_CAMPUS__Parking bay.004",
+      "ASSET_Campus__D03_CAMPUS__Parking bay.005",
+      "ASSET_Campus__D03_CAMPUS__Parking bay.006",
+      "ASSET_Campus__D03_CAMPUS__Parking bay.007",
+      "ASSET_Campus__D03_CAMPUS__Penalty area",
+      "ASSET_Campus__D03_CAMPUS__Penalty area.001",
+      "ASSET_Campus__D03_CAMPUS__Pitch boundary",
+      "ASSET_Campus__D03_CAMPUS__Road 0",
+      "ASSET_Campus__D03_CAMPUS__Road 1",
+      "ASSET_Campus__D03_CAMPUS__Road 2",
+      "ASSET_Campus__D03_CAMPUS__Road 3",
+      "ASSET_Campus__D03_CAMPUS__Road 4",
+      "ASSET_Campus__D03_CAMPUS__Road 5",
+      "ASSET_Campus__D03_CAMPUS__Road 6",
+      "ASSET_Campus__D03_CAMPUS__Road 7",
+      "ASSET_Campus__D03_CAMPUS__South garden",
+      "ASSET_Campus__D03_CAMPUS__Sports field",
+      "ASSET_Campus__D03_CAMPUS__Tennis court",
+      "ASSET_Campus__D03_CAMPUS__Tennis lines",
+      "ASSET_Campus__D03_CAMPUS__Tennis net",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.001",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.002",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.003",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.004",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.005",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.006",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.007",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.008",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.009",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.010",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.011",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.012",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.013",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.014",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.015",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.016",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.017",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.018",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.019",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.020",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.021",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.022",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.023",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.024",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.025",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.026",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.027",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.028",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.029",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.030",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.031",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.032",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.033",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.034",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.035",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.036",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.037",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.038",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.039",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.040",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.041",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.042",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.043",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.044",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.045",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.046",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.047",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.048",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.049",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.050",
+      "ASSET_Campus__D03_CAMPUS__Tree canopy.051",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.001",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.002",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.003",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.004",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.005",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.006",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.007",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.008",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.009",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.010",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.011",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.012",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.013",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.014",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.015",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.016",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.017",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.018",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.019",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.020",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.021",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.022",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.023",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.024",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.025",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.026",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.027",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.028",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.029",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.030",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.031",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.032",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.033",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.034",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.035",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.036",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.037",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.038",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.039",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.040",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.041",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.042",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.043",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.044",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.045",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.046",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.047",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.048",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.049",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.050",
+      "ASSET_Campus__D03_CAMPUS__Tree trunk.051",
+      "ASSET_Campus__D03_CAMPUS__Upper garden",
+      "ASSET_Campus__D03_CAMPUS__Walk 0",
+      "ASSET_Campus__D03_CAMPUS__Walk 1",
+      "ASSET_Campus__D03_CAMPUS__Walk 2",
+      "ASSET_Campus__D03_CAMPUS__Walk 3",
+      "ASSET_Campus__D03_CAMPUS__Walk 4",
+      "ASSET_Campus__D03_CAMPUS__Walk 5",
+      "ASSET_Campus__D03_CAMPUS__Walk 6",
+      "ASSET_Campus__D03_CAMPUS__Walk 7"
+    ],
+    "gates": "No gate-named mesh found: main/rear gates are proposed access openings, not existing measured gate assets.",
+    "plaza": "Central garden is measured; a new adjacent central plaza footprint is a design decision, not an existing plaza mesh.",
+    "split_rule": "Keep all 487 meshes rigid as first choice. If independent buildings required, use exact split_objects, each includes body, roof, windows, window frame, indexed plinth/parapet/canopy/door/entry meshes; rebase group to parcel_anchor only in a new derived source after approval. Shared campus surface/plinth/roads/walks/sports/vegetation stay outside building bundles.",
+    "standalone_campus_fbx": "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx exists, not read-only imported in either audit.",
+    "verified_fbx_source": "unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Dense_Realistic_University_Map_03.fbx -> D03_UNITY_GROUP_CAMPUS only",
+    "body_footprint_evidence": "campus-footprint-evidence.json"
+  },
+  "vegetation_root_groups": [
+    {
+      "root": "SIMUS_Bench_ROOT",
+      "mesh_count": 3,
+      "bounds_source_scene_blender_xyz": {
+        "min": [
+          -0.525,
+          -0.285,
+          0.0
+        ],
+        "max": [
+          1.325,
+          0.31,
+          0.928
+        ]
+      },
+      "dimensions_blender_xyz": [
+        1.85,
+        0.595,
+        0.928
+      ],
+      "note": "Source scene offsets retained; exported root local placement must be inspected before reuse. Studio floor excluded."
+    },
+    {
+      "root": "SIMUS_Cherry_ROOT",
+      "mesh_count": 4,
+      "bounds_source_scene_blender_xyz": {
+        "min": [
+          -0.116,
+          2.261,
+          0.0
+        ],
+        "max": [
+          5.544,
+          7.875,
+          5.322
+        ]
+      },
+      "dimensions_blender_xyz": [
+        5.66,
+        5.614,
+        5.322
+      ],
+      "note": "Source scene offsets retained; exported root local placement must be inspected before reuse. Studio floor excluded."
+    },
+    {
+      "root": "SIMUS_Flowerbed_ROOT",
+      "mesh_count": 8,
+      "bounds_source_scene_blender_xyz": {
+        "min": [
+          -4.6,
+          -1.134,
+          -0.048
+        ],
+        "max": [
+          -1.798,
+          1.351,
+          1.463
+        ]
+      },
+      "dimensions_blender_xyz": [
+        2.802,
+        2.485,
+        1.511
+      ],
+      "note": "Source scene offsets retained; exported root local placement must be inspected before reuse. Studio floor excluded."
+    },
+    {
+      "root": "SIMUS_FringeTree_ROOT",
+      "mesh_count": 7,
+      "bounds_source_scene_blender_xyz": {
+        "min": [
+          5.869,
+          2.508,
+          0.0
+        ],
+        "max": [
+          11.074,
+          7.535,
+          5.481
+        ]
+      },
+      "dimensions_blender_xyz": [
+        5.205,
+        5.027,
+        5.481
+      ],
+      "note": "Source scene offsets retained; exported root local placement must be inspected before reuse. Studio floor excluded."
+    },
+    {
+      "root": "SIMUS_Ginkgo_Autumn_ROOT",
+      "mesh_count": 4,
+      "bounds_source_scene_blender_xyz": {
+        "min": [
+          -11.271,
+          2.511,
+          0.0
+        ],
+        "max": [
+          -5.721,
+          8.033,
+          7.434
+        ]
+      },
+      "dimensions_blender_xyz": [
+        5.55,
+        5.522,
+        7.434
+      ],
+      "note": "Source scene offsets retained; exported root local placement must be inspected before reuse. Studio floor excluded."
+    },
+    {
+      "root": "SIMUS_Ginkgo_Green_ROOT",
+      "mesh_count": 4,
+      "bounds_source_scene_blender_xyz": {
+        "min": [
+          -16.871,
+          2.511,
+          0.0
+        ],
+        "max": [
+          -11.321,
+          8.033,
+          7.434
+        ]
+      },
+      "dimensions_blender_xyz": [
+        5.55,
+        5.522,
+        7.434
+      ],
+      "note": "Source scene offsets retained; exported root local placement must be inspected before reuse. Studio floor excluded."
+    },
+    {
+      "root": "SIMUS_Metasequoia_ROOT",
+      "mesh_count": 5,
+      "bounds_source_scene_blender_xyz": {
+        "min": [
+          11.276,
+          1.706,
+          0.0
+        ],
+        "max": [
+          16.735,
+          8.237,
+          8.223
+        ]
+      },
+      "dimensions_blender_xyz": [
+        5.459,
+        6.531,
+        8.223
+      ],
+      "note": "Source scene offsets retained; exported root local placement must be inspected before reuse. Studio floor excluded."
+    },
+    {
+      "root": "SIMUS_TrashBin_ROOT",
+      "mesh_count": 3,
+      "bounds_source_scene_blender_xyz": {
+        "min": [
+          2.745,
+          -0.255,
+          0.0
+        ],
+        "max": [
+          3.255,
+          0.255,
+          0.985
+        ]
+      },
+      "dimensions_blender_xyz": [
+        0.51,
+        0.51,
+        0.985
+      ],
+      "note": "Source scene offsets retained; exported root local placement must be inspected before reuse. Studio floor excluded."
+    },
+    {
+      "root": "SIMUS_Zelkova_ROOT",
+      "mesh_count": 5,
+      "bounds_source_scene_blender_xyz": {
+        "min": [
+          -6.494,
+          1.875,
+          0.0
+        ],
+        "max": [
+          0.884,
+          8.249,
+          6.283
+        ]
+      },
+      "dimensions_blender_xyz": [
+        7.378,
+        6.374,
+        6.283
+      ],
+      "note": "Source scene offsets retained; exported root local placement must be inspected before reuse. Studio floor excluded."
+    }
+  ]
+}

@@ -1,0 +1,3226 @@
+{
+  "captured_at": "2026-10-13T14:01:00.276692+00:00",
+  "scope": "Existing Unity Assets/ProjectSettings/Packages, tracked web/scripts, source/exchange assets; deleted-at-start files excluded. This is session baseline, not Git HEAD.",
+  "files": [
+    {
+      "path": "assets/archive/backups/modular_hairfix_v001.meta",
+      "bytes": 172,
+      "sha256": "390e83a02cba76a74913660dda0c7010ddee23380232f8eacf0f7f8c841b04a4"
+    },
+    {
+      "path": "assets/archive/backups/modular_hairfix_v001/Before_Geometry.json.meta",
+      "bytes": 59,
+      "sha256": "934e7a95070ba7b8362bd1ee476914c38151bc7d4b163479d7f0c44285071a63"
+    },
+    {
+      "path": "assets/archive/backups/modular_hairfix_v001/Before_Viewport.png.meta",
+      "bytes": 2652,
+      "sha256": "c5bfecdb88fc14820a88911ba03a54859a3b7d0a5f3f73325d8bdf8ee2215b99"
+    },
+    {
+      "path": "assets/archive/backups/modular_hairfix_v001/Protected_State.json.meta",
+      "bytes": 59,
+      "sha256": "64718ab782401acaa36bf2716ee6b45cf29e3cd32d2ea7acc29a6eb09f94a4d4"
+    },
+    {
+      "path": "assets/archive/backups/modular_hairfix_v001/Source_Hash.json.meta",
+      "bytes": 59,
+      "sha256": "c87309aa5bb89b55396bcc2573d67a13f7819f0544cf4531e16c684345cf15cb"
+    },
+    {
+      "path": "assets/archive/backups/modular_v001.meta",
+      "bytes": 172,
+      "sha256": "2c5fa0cc6dd78183f78dfe14345a3939fa7d75b071dc5443d95512921bfc0ceb"
+    },
+    {
+      "path": "assets/archive/backups/npc_16.meta",
+      "bytes": 172,
+      "sha256": "1b511311152f1cba540b01b806468c34954c1f2c688907477861705a1f6013dd"
+    },
+    {
+      "path": "assets/archive/backups/university_v003/SIMUS_Dense_Realistic_University_Map_03.blend1.meta",
+      "bytes": 155,
+      "sha256": "1a2c99ef44858c1f8a657c3eb2baf50360564689b0913ece9443ce3e0103ca45"
+    },
+    {
+      "path": "scripts/assets/catalog.py",
+      "bytes": 4960,
+      "sha256": "c01f4e3a0534dccb02e6cfea1e07767f2e005cee5dcaf16c05e15ae6f75ca7fc"
+    },
+    {
+      "path": "scripts/characters/register_custom_portraits.py",
+      "bytes": 1381,
+      "sha256": "8de8d1006e5b916864980946a46688e384bb5b302c2029df0f6b15c712de8165"
+    },
+    {
+      "path": "scripts/characters/render_citizen_portraits.py",
+      "bytes": 1725,
+      "sha256": "ff5ddbc46ac88ef4e2eb3783d05f18b6d7c46810b4ca21c095a11648e702767f"
+    },
+    {
+      "path": "scripts/characters/render_custom_citizen_portraits.py",
+      "bytes": 1857,
+      "sha256": "5353c387f20db20865dac35f6d277ecbe9d77db2fda985f5de5682bdbd65d130"
+    },
+    {
+      "path": "scripts/unity/bridge-adapter.test.cjs",
+      "bytes": 3451,
+      "sha256": "ecb451db0a502cd15ae3dbf4c82d3ddcb5a92ecb400c5dd6cd534562898f0f8e"
+    },
+    {
+      "path": "scripts/unity/bridge-browser-test.mjs",
+      "bytes": 3377,
+      "sha256": "f6b62110bc2405c898a7cc37eb0b5f09f2cc886e618667f7758a81ff36344017"
+    },
+    {
+      "path": "scripts/unity/check-map-rebuild-draft.py",
+      "bytes": 3683,
+      "sha256": "1cfdc0f750902d772652d1619e3c89fde0ed1ab53c26987c82e75fcf44bc8c21"
+    },
+    {
+      "path": "scripts/unity/serve-bridge-test.mjs",
+      "bytes": 5185,
+      "sha256": "6d1e5a4341b35efd78b0b6a336a12a6bb7e0b3426c1dd55b570299e36d5645af"
+    },
+    {
+      "path": "unity/Assets/.DS_Store",
+      "bytes": 12292,
+      "sha256": "a9e3d17f82a561071121fb5e98080c13787c6c1c5e48770e89e198b216695ee4"
+    },
+    {
+      "path": "unity/Assets/Art.meta",
+      "bytes": 172,
+      "sha256": "722697a64c0dfab8d4e6007648484a198eadc4b44ee7f3151dd3f0852892a6b8"
+    },
+    {
+      "path": "unity/Assets/Editor.meta",
+      "bytes": 172,
+      "sha256": "3558e81a70cfd54d14d3514e94656fa5c014746008a77c49d19da5603b781910"
+    },
+    {
+      "path": "unity/Assets/Editor/CompletedMapFollowSetup.cs",
+      "bytes": 8768,
+      "sha256": "9659881e1616bf5d40e161b3ec2e11689b32e8813bb1a2a8e9b3cda66c9aa61f"
+    },
+    {
+      "path": "unity/Assets/Editor/CompletedMapFollowSetup.cs.meta",
+      "bytes": 59,
+      "sha256": "1f92b28eecece43535f407e7de24a0c73f7729269de99b3473ce225394cd0e86"
+    },
+    {
+      "path": "unity/Assets/Editor/CompletedMapFollowVerification.cs",
+      "bytes": 4124,
+      "sha256": "ac42280251778c97fd616cd39b5584fd0a76965c0b98f3f1f811a29f860bea0b"
+    },
+    {
+      "path": "unity/Assets/Editor/CompletedMapFollowVerification.cs.meta",
+      "bytes": 59,
+      "sha256": "60023f1193012640ba7e03aa2aedb1b5546e74a858db02ba088d2df8917e7b11"
+    },
+    {
+      "path": "unity/Assets/Editor/DevelopmentCityWebGLBuild.cs",
+      "bytes": 3283,
+      "sha256": "dff913355fd57030e9aa2776b310a090d2a537b832931129a3f55d4e7176bc3f"
+    },
+    {
+      "path": "unity/Assets/Editor/DevelopmentCityWebGLBuild.cs.meta",
+      "bytes": 60,
+      "sha256": "44a5d0301bf759309b2e2b35df7a641864b0fd22daf730d17b12ce7cdf4a964b"
+    },
+    {
+      "path": "unity/Assets/Editor/MapRebuildDraftSetup.cs",
+      "bytes": 8055,
+      "sha256": "71815afa87524e5c1452998062a772c7156b3a5c2ee705bec56ff20af3902bb5"
+    },
+    {
+      "path": "unity/Assets/Editor/MapRebuildDraftSetup.cs.meta",
+      "bytes": 60,
+      "sha256": "92120150e27924f5287e5353f538ccf15c33461e9a85b454c4e8bf1efeac11ea"
+    },
+    {
+      "path": "unity/Assets/Editor/NpcFollowWebGLBuild.cs",
+      "bytes": 1841,
+      "sha256": "33388081e3b330c16f7d903dc4f1c9c1678ac15a31828fc9ec677167eea3fe68"
+    },
+    {
+      "path": "unity/Assets/Editor/NpcFollowWebGLBuild.cs.meta",
+      "bytes": 60,
+      "sha256": "f0ceaf7a0494c5497bab833c4ef4f1c1a2ef8bdf266f9aa8afbd9ba7f2abde48"
+    },
+    {
+      "path": "unity/Assets/Editor/WebBridgeTestBuild.cs",
+      "bytes": 4475,
+      "sha256": "93d83a198d56e0f88bedc7cc962497564ff527374d41d65fc15f1bb4aa4de31e"
+    },
+    {
+      "path": "unity/Assets/Editor/WebBridgeTestBuild.cs.meta",
+      "bytes": 59,
+      "sha256": "7975f0c8b3b9e6a50b303d5b2ec4a0eeee3ddac89e59090c233289c4ec7655fd"
+    },
+    {
+      "path": "unity/Assets/Materials.meta",
+      "bytes": 172,
+      "sha256": "40d191534b21f0ada57d0e5daad73367904f37db77a6b86c96f37c53c8baef5c"
+    },
+    {
+      "path": "unity/Assets/Materials/Court_60F6A4163E.mat",
+      "bytes": 857,
+      "sha256": "2557fa022d91352be4cad32db715f646db3ec21660c6ef5263954e1d5ab693c0"
+    },
+    {
+      "path": "unity/Assets/Materials/Court_60F6A4163E.mat.meta",
+      "bytes": 188,
+      "sha256": "c9d81ce558693c9947e8269a823e31a6c15a3f54d8f4334438352040b52a2d6a"
+    },
+    {
+      "path": "unity/Assets/Materials/Field_F45FC1DFDC.mat",
+      "bytes": 856,
+      "sha256": "2765d6e9dc2e1602a1b271f84f77faedd26ad80904d53b1736b1231cd4816ff6"
+    },
+    {
+      "path": "unity/Assets/Materials/Field_F45FC1DFDC.mat.meta",
+      "bytes": 188,
+      "sha256": "894cad5d252ea875ceb5edd45a8f8aadc75a5179f8c6ffabaaca97a4e5e50ba3"
+    },
+    {
+      "path": "unity/Assets/Materials/Glass_82C268188C.mat",
+      "bytes": 856,
+      "sha256": "2f47a3cd9bdcc0e2da94f8dcc3e48e04136def95e2dbdf7e1927175c4c714acd"
+    },
+    {
+      "path": "unity/Assets/Materials/Glass_82C268188C.mat.meta",
+      "bytes": 188,
+      "sha256": "7c1248ab219d16b90ee56c60ffe3a7b32f464d4c175e3bb7e8f11de1371b89dd"
+    },
+    {
+      "path": "unity/Assets/Materials/Grass_84573C57CC.mat",
+      "bytes": 858,
+      "sha256": "51f6f8fbd8891da90055864c47a7ba261c6dbc60f4bd645af3041521d471fa41"
+    },
+    {
+      "path": "unity/Assets/Materials/Grass_84573C57CC.mat.meta",
+      "bytes": 188,
+      "sha256": "208130b099800b12b8bc924904c7ab015d0de1abe3a1cd4ef69cfa986438711a"
+    },
+    {
+      "path": "unity/Assets/Materials/Ground_151BF49394.mat",
+      "bytes": 857,
+      "sha256": "83691cb50b7e25ee5b772ae30cfbfe2e54fcc2ba4ce7a6d3335ffa82534295d7"
+    },
+    {
+      "path": "unity/Assets/Materials/Ground_151BF49394.mat.meta",
+      "bytes": 188,
+      "sha256": "12af00d83c85fed78ea2cd6794454d01d2f6a6e5006e8af512a01d28da22020c"
+    },
+    {
+      "path": "unity/Assets/Materials/Ivory_F3ADB67E92.mat",
+      "bytes": 857,
+      "sha256": "d7d733f8a73bd647b193dc7bd76581fc87ae6d0d92314f5db8e6da9024f83b19"
+    },
+    {
+      "path": "unity/Assets/Materials/Ivory_F3ADB67E92.mat.meta",
+      "bytes": 188,
+      "sha256": "8da48f53f509883a8922c97641074a174a1cb5e6d337226325b2ee43e7631745"
+    },
+    {
+      "path": "unity/Assets/Materials/Road_A22E0B1FC3.mat",
+      "bytes": 856,
+      "sha256": "5419feccbe2a8d92c2b1bffd459da978c3504bddbe6287a8a857bb217008f8f5"
+    },
+    {
+      "path": "unity/Assets/Materials/Road_A22E0B1FC3.mat.meta",
+      "bytes": 188,
+      "sha256": "44f4fc57685e466adf78dc6147446c530a33a1a7e884254951f14e27ca1cb239"
+    },
+    {
+      "path": "unity/Assets/Materials/Roof_C2F6A4D9EC.mat",
+      "bytes": 857,
+      "sha256": "9bdb4a11e03c8309edf7c92ac50fee712fc74e99f4c1b876478fb57cfabc8849"
+    },
+    {
+      "path": "unity/Assets/Materials/Roof_C2F6A4D9EC.mat.meta",
+      "bytes": 188,
+      "sha256": "a287c77b47e359b595a2947180a12528a4d04cd25b7f12689344e0cb70891461"
+    },
+    {
+      "path": "unity/Assets/Materials/Tree_B85F5FABF9.mat",
+      "bytes": 856,
+      "sha256": "cfde91d3255832454a77eb03234c58cb4ac143e3f3d05849fb91994ee24aac72"
+    },
+    {
+      "path": "unity/Assets/Materials/Tree_B85F5FABF9.mat.meta",
+      "bytes": 188,
+      "sha256": "14d6dc947113db232d94724a18e3c9020f7b4a574627c7c171061904a7e37881"
+    },
+    {
+      "path": "unity/Assets/Materials/Trunk_10C81E7CF2.mat",
+      "bytes": 858,
+      "sha256": "9f1b081f6d024acffa77c6a61f27542be22cbb68b7db5187b404431a56850a30"
+    },
+    {
+      "path": "unity/Assets/Materials/Trunk_10C81E7CF2.mat.meta",
+      "bytes": 188,
+      "sha256": "60ca110997d5ca98351114a8d68961b55fc78736e6cc91055d4fb76c25eb011c"
+    },
+    {
+      "path": "unity/Assets/Materials/Walk_08EE52AE12.mat",
+      "bytes": 855,
+      "sha256": "e8f38a21efd608a4b025183685a50bb98bf72708f2f24e3c9dbcbf18cdbcdd1a"
+    },
+    {
+      "path": "unity/Assets/Materials/Walk_08EE52AE12.mat.meta",
+      "bytes": 188,
+      "sha256": "c2eb0fd40071a81d9b5b461c0c26cab46cd6b0a324fe271c6554c3eb934f3a0e"
+    },
+    {
+      "path": "unity/Assets/Materials/White_3495E75785.mat",
+      "bytes": 856,
+      "sha256": "f3b86a419bc9602c94297e740f95ec3eaafad156ddd2fdd17626f5b747b2be2a"
+    },
+    {
+      "path": "unity/Assets/Materials/White_3495E75785.mat.meta",
+      "bytes": 188,
+      "sha256": "21201a4a64ccd8a706e8c7f5cc9742c2cd7aad4608edfadb3e54dd2b2872fb1e"
+    },
+    {
+      "path": "unity/Assets/Materials/academy_E6F933F762.mat",
+      "bytes": 859,
+      "sha256": "0e32ea42f80f1f40287ee9a52087f47295d9aff925b27f2d3487d5457df17247"
+    },
+    {
+      "path": "unity/Assets/Materials/academy_E6F933F762.mat.meta",
+      "bytes": 188,
+      "sha256": "7850e354dd5421497310e7a5a9a4281ecc26216217138498a160dc415cd80ea1"
+    },
+    {
+      "path": "unity/Assets/Materials/base_CAE662172F.mat",
+      "bytes": 856,
+      "sha256": "4ce46b9f213892e470b48c3e65c8f23f433e3863278b025888d4c3547724c8f8"
+    },
+    {
+      "path": "unity/Assets/Materials/base_CAE662172F.mat.meta",
+      "bytes": 188,
+      "sha256": "0411892f495317744d882f8d318e65db3cc53488ffdca01501cc940e0501c006"
+    },
+    {
+      "path": "unity/Assets/Materials/brick_C762830741.mat",
+      "bytes": 857,
+      "sha256": "f91938b71061222b568fc4089e1d3e0aba5bc1335a2211e91a95c96a5e4f9181"
+    },
+    {
+      "path": "unity/Assets/Materials/brick_C762830741.mat.meta",
+      "bytes": 188,
+      "sha256": "017ddd081b29ab629588a5f57b084c4f62be7f2ed2bc35d363cf4d2e1cc7e3c1"
+    },
+    {
+      "path": "unity/Assets/Materials/cream_F3A22C1CE8.mat",
+      "bytes": 858,
+      "sha256": "adb9997d2b8d81df20a9f831281a4e9188f7ba2fba25dff2458b3ae71c5eacd3"
+    },
+    {
+      "path": "unity/Assets/Materials/cream_F3A22C1CE8.mat.meta",
+      "bytes": 188,
+      "sha256": "ac2167b257e38075d5fc132d6b441998bd07c63117903f4a4b14cbd919fd7c5a"
+    },
+    {
+      "path": "unity/Assets/Materials/firm_3F62550731.mat",
+      "bytes": 855,
+      "sha256": "133688d135de34d103e1dd69a2e3d1cbf23ed6023e8fcb848967b57d2481cee6"
+    },
+    {
+      "path": "unity/Assets/Materials/firm_3F62550731.mat.meta",
+      "bytes": 188,
+      "sha256": "fc791ad8f0084985b5850e5fa3beda8de745bc5a7b2b05bf4846cba3b6275187"
+    },
+    {
+      "path": "unity/Assets/Materials/glass_132A1A391C.mat",
+      "bytes": 857,
+      "sha256": "64f86e04ec5fa6e479e7f58cef0a17b6e3cefe5ebbb083e08524994b09179e53"
+    },
+    {
+      "path": "unity/Assets/Materials/glass_132A1A391C.mat.meta",
+      "bytes": 188,
+      "sha256": "30d232482ce39aafc93c95903b5586b0fe38ed1f7b71d10801ece5fb1a88d153"
+    },
+    {
+      "path": "unity/Assets/Materials/gold_24D7F03D8D.mat",
+      "bytes": 855,
+      "sha256": "bd8318abbba9af4318cf81849538e3a9e35ec1121c7d94f402c53252f57c3664"
+    },
+    {
+      "path": "unity/Assets/Materials/gold_24D7F03D8D.mat.meta",
+      "bytes": 188,
+      "sha256": "85622c0404f2f7f0515ce4e68be4326dd9db4b9c194c84f36ad0bbc6ae67726d"
+    },
+    {
+      "path": "unity/Assets/Materials/ground_DBB3B50E59.mat",
+      "bytes": 855,
+      "sha256": "064a4c87c162e3e05adc53dab534809f45d760c929d21e650ffc683a3fedaab4"
+    },
+    {
+      "path": "unity/Assets/Materials/ground_DBB3B50E59.mat.meta",
+      "bytes": 188,
+      "sha256": "ae4efc4d192d182e282c24355791eec622eb424447fbcd9ee5fc7369f9328ef2"
+    },
+    {
+      "path": "unity/Assets/Materials/home_4EA1405881.mat",
+      "bytes": 856,
+      "sha256": "31d2a3dbe88e8de9f2a136445bc7f62dc539e7508185292fd07f769de19c9af0"
+    },
+    {
+      "path": "unity/Assets/Materials/home_4EA1405881.mat.meta",
+      "bytes": 188,
+      "sha256": "f2173c34c25c01a3b0b4cec3edb7d943ce25114d219938c860ec650d6dc6cb4d"
+    },
+    {
+      "path": "unity/Assets/Materials/lawn_8B3E27A4D4.mat",
+      "bytes": 854,
+      "sha256": "a3cfae9759b2b291144e9846558db850c210eaf98ffb3241a1e2bc6e5e1ca0d9"
+    },
+    {
+      "path": "unity/Assets/Materials/lawn_8B3E27A4D4.mat.meta",
+      "bytes": 188,
+      "sha256": "d0d280b1549c731020a4afddf3cbec1385bf43b6142194fe4cbe84c01dd12295"
+    },
+    {
+      "path": "unity/Assets/Materials/park_4D3971DE62.mat",
+      "bytes": 858,
+      "sha256": "4aed8b858072855276acfc2b24d35d12628bbf2be633516ab806fe53f7ba5474"
+    },
+    {
+      "path": "unity/Assets/Materials/park_4D3971DE62.mat.meta",
+      "bytes": 188,
+      "sha256": "982df8bf26d46f046eac2c9fa0a5ed3424806f3fcbd0300a228c6226d8049822"
+    },
+    {
+      "path": "unity/Assets/Materials/restaurant_EE275D64DA.mat",
+      "bytes": 862,
+      "sha256": "1b9681f7d32830d2772e70ef0dce3796224dbdb1f70fe28affe7120c3c44bbb1"
+    },
+    {
+      "path": "unity/Assets/Materials/restaurant_EE275D64DA.mat.meta",
+      "bytes": 188,
+      "sha256": "23e56479af1b816192a636c4a242f39834309f847c6b92c2411c6d37ca2664af"
+    },
+    {
+      "path": "unity/Assets/Materials/road_362A284952.mat",
+      "bytes": 855,
+      "sha256": "6093431f67b6213ff19d93fbc03b6c492f9b07ed282ad320993c0afca9ee4b5b"
+    },
+    {
+      "path": "unity/Assets/Materials/road_362A284952.mat.meta",
+      "bytes": 188,
+      "sha256": "605d48e16fdda723230116137b28e29289effe4d928f411ef2f2965ec360539e"
+    },
+    {
+      "path": "unity/Assets/Materials/roof_D1A0D6F470.mat",
+      "bytes": 857,
+      "sha256": "7ce3328819e79923568b6b5c291be8f061632b2340b47126226e279bee534e5b"
+    },
+    {
+      "path": "unity/Assets/Materials/roof_D1A0D6F470.mat.meta",
+      "bytes": 188,
+      "sha256": "64de7eddd6e2ad109612870ecc98daed13992334c915ab1aec80bd56647f264e"
+    },
+    {
+      "path": "unity/Assets/Materials/shopping_1180412AF4.mat",
+      "bytes": 858,
+      "sha256": "dc5c711375c3f8e9f26a7df9bb387eb9774959000b98a2496faae111cb0f31b3"
+    },
+    {
+      "path": "unity/Assets/Materials/shopping_1180412AF4.mat.meta",
+      "bytes": 188,
+      "sha256": "f643b8ebf09930d10e235a14bf4abc181884caad3128b4301c688be4c075f177"
+    },
+    {
+      "path": "unity/Assets/Materials/tree_DC9C5EDB8B.mat",
+      "bytes": 857,
+      "sha256": "e1d356b91d200d7f5b50967dbedc17f38e8a842e899b8f4b35fe348fd7eae807"
+    },
+    {
+      "path": "unity/Assets/Materials/tree_DC9C5EDB8B.mat.meta",
+      "bytes": 188,
+      "sha256": "7c1397cb6632b3cf595c25cf57c25f770f7b58f9e02cc9a14f898485df804e52"
+    },
+    {
+      "path": "unity/Assets/Materials/trunk_3E341D2D9C.mat",
+      "bytes": 856,
+      "sha256": "5a55f0bbeb69a55bbdf82e63918b3ef03c1f278ecab9cdbe839d3a8eba946e48"
+    },
+    {
+      "path": "unity/Assets/Materials/trunk_3E341D2D9C.mat.meta",
+      "bytes": 188,
+      "sha256": "d8490d6560dff09e8c9191c485cd9613db630cc59cb5b0ad854f5a886ffb2afe"
+    },
+    {
+      "path": "unity/Assets/Materials/walk_7A6C4FAC6C.mat",
+      "bytes": 856,
+      "sha256": "b11009aa353b510ca291af69a0e94b1992a41b4d8ce44dbe5b02fa9a602e0541"
+    },
+    {
+      "path": "unity/Assets/Materials/walk_7A6C4FAC6C.mat.meta",
+      "bytes": 188,
+      "sha256": "b498e5fd7e013c4b4e732ad2e41055a9f8fa233fe28f47c612d43b3deb98d183"
+    },
+    {
+      "path": "unity/Assets/Materials/water_0F4168490E.mat",
+      "bytes": 857,
+      "sha256": "7d78b9a9e06d020a11b7b3f12b3d64536392e03d1ca58f2fbe69f1f4b32b1017"
+    },
+    {
+      "path": "unity/Assets/Materials/water_0F4168490E.mat.meta",
+      "bytes": 188,
+      "sha256": "f7905e371ff1c92722a7f4c9992a6c2f2ef2f8343e0ab2e02b45cd2ddfb2a374"
+    },
+    {
+      "path": "unity/Assets/Materials/white_018FA96A44.mat",
+      "bytes": 857,
+      "sha256": "35e59f471631d315501d2182af4e60b1e5062f41bc179533781887881ed84fd7"
+    },
+    {
+      "path": "unity/Assets/Materials/white_018FA96A44.mat.meta",
+      "bytes": 188,
+      "sha256": "7beff19f4c6ae6fdf7e3176b7ee919f30e22eb16e7dd8213278b5d45af899694"
+    },
+    {
+      "path": "unity/Assets/Plugins.meta",
+      "bytes": 172,
+      "sha256": "4acddaeb3a5f1fcac8d9d08118da3d191b8bb114b9dacf33a2327b9a1c7d9556"
+    },
+    {
+      "path": "unity/Assets/Plugins/WebGL.meta",
+      "bytes": 172,
+      "sha256": "5e689b729196c0df9b9b447d0d5ed9d01fe50403b9e1ff6caca6ea77e7eb2577"
+    },
+    {
+      "path": "unity/Assets/Plugins/WebGL/simus_bridge.jslib",
+      "bytes": 157,
+      "sha256": "bc9d52fe1986ecd9647444edafd1e8ce21dd1a055b8ff222f12cb2b720d96c08"
+    },
+    {
+      "path": "unity/Assets/Plugins/WebGL/simus_bridge.jslib.meta",
+      "bytes": 59,
+      "sha256": "094ce24a7e7e8ba25bd0020e2275f7bae2794f1277ff87a5a6b78044fac95003"
+    },
+    {
+      "path": "unity/Assets/SIMUS.meta",
+      "bytes": 172,
+      "sha256": "634792083dfae052fd4ceff19c1057759e376e175bc58eb6ec795699431df61d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/.DS_Store",
+      "bytes": 8196,
+      "sha256": "0184639a83694b5523d6810d73fd92fd17ce0d398e17102dbcb7dd2f2884d164"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art.meta",
+      "bytes": 172,
+      "sha256": "dd8eb2fd08de17b53c1e5aa5a5a30e5e54fe379481e88f87b3e8bea2cdf5f2fc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/.DS_Store",
+      "bytes": 6148,
+      "sha256": "1bf404485be0b2673488b7618e1fe46679b1ea879bc6e33d27cd06f08f1d4079"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/README.md",
+      "bytes": 539,
+      "sha256": "cd5ffd40fbd5deaf81dadce5f9a2e5adc764d2dd61e82d7588f52bdd043c227b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/README.md.meta",
+      "bytes": 158,
+      "sha256": "8502a301bcd86f63fd5a745fb9d0d6da23c552d2ea7fc5667e367e3c1f03fc8a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings.meta",
+      "bytes": 172,
+      "sha256": "426dd406290a9fa7a1a4c46337d8d0d2015e8fabdcbeaac12fcb559e3fc98e4b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001.meta",
+      "bytes": 172,
+      "sha256": "bfa68db133953b85be9f4e4c185059789b88b205f3e9f64832dbcd1657e0f520"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/Layout_and_Validation.json",
+      "bytes": 27638,
+      "sha256": "c1a4ed21b93432ef89053a93d5527465f7c6a60c13ce89d6cd363476178ba4fa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/Layout_and_Validation.json.meta",
+      "bytes": 158,
+      "sha256": "9667f43e0b5491d317f84f83def87b8efa34a4e3692f7b4ce005b7d76b0788a0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/Preview_Isometric.png",
+      "bytes": 2798454,
+      "sha256": "fd076ed0a6b3525abe561c73f21c619b598e8004e1821f72423fba9cca20c1f6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/Preview_Isometric.png.meta",
+      "bytes": 2652,
+      "sha256": "1f8feeba451aa12e80b768e32c29815523438af7d3a48365961332a25a02dd06"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/Preview_Top.png",
+      "bytes": 2475109,
+      "sha256": "bc481acb427073318690edf1b73fba7c70a14371ebb5d1b73c8595aa12f0763b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/Preview_Top.png.meta",
+      "bytes": 2652,
+      "sha256": "d77af0241ea795049a8fe21af4568efea3e16ff45218e2067496c29dcd800957"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/README.txt",
+      "bytes": 1431,
+      "sha256": "37ea2e7bc5b4169ce79e5fb89f2d23dd7e4efd327f108de34f9f6ed1f2fbb15f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/README.txt.meta",
+      "bytes": 158,
+      "sha256": "5b8b3245f211e7bb01d162eb7110b1d695422e9c54f7d8227952f32f62411f51"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/SIMUS_Apartment_Complex.blend",
+      "bytes": 4837248,
+      "sha256": "8800918e0ccc6426011601f1c5b6b059e90f6d9f6aba02a54088a887dafc756f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/SIMUS_Apartment_Complex.blend.meta",
+      "bytes": 2891,
+      "sha256": "c8f2decde04fba7b8f7c8c249525a5ea8218c716c6e1f1691077a69e448e4db6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/SIMUS_Apartment_Complex.fbx",
+      "bytes": 25279324,
+      "sha256": "d40551194a6f0845b7839bf32925ff78647bed7749218685bee1db7270c76fec"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/SIMUS_Apartment_Complex.fbx.meta",
+      "bytes": 2891,
+      "sha256": "92e605811380a68edfc8aeb61f19feb470736ebc75950dffc64fd2622a71697f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/SIMUS_Apartment_Complex.glb",
+      "bytes": 22736440,
+      "sha256": "306db1ccc518d206bdc164d9ff769ea55a1635e961d501a19ff7f50a23cad15d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/SIMUS_Apartment_Complex.glb.meta",
+      "bytes": 155,
+      "sha256": "e3bc8885270cac6ec593f1711e483d9f58ac7caa1b7780d324c724061dc51ffd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/build_complex.py",
+      "bytes": 10854,
+      "sha256": "8cae1c4158bc81a40ef384735c554f132b012a89c8e56ce2deddc4b77db6dc14"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_unified_v001/build_complex.py.meta",
+      "bytes": 155,
+      "sha256": "a1ef4700ed5c5f9bdf0f57a5820bc9b39431e9149b8c07ababf368d279c55448"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001.meta",
+      "bytes": 172,
+      "sha256": "505aafc2d9886330f4a7bc19c581333b6f26aa6b40902bde1e518832ec4a6df3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/Layout_and_Validation.json",
+      "bytes": 19346,
+      "sha256": "0b300e577cfd8be0f0989ddf0d88b4b2a3f104aab335fec2908ebe834257ae39"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/Layout_and_Validation.json.meta",
+      "bytes": 158,
+      "sha256": "7cd9467045dacd68e78609b5e55b1110e09f2e971f1958ad8efdf28b605b418b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/Preview_Isometric.png",
+      "bytes": 3064218,
+      "sha256": "24c5a97e7b34e61e2a476ee24ec8c6b842ff4e2e053617ab0ee2d6c7d8e509f4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/Preview_Isometric.png.meta",
+      "bytes": 2652,
+      "sha256": "3fb0d23d305130da9c4f3db4c55c43bd51197d54747a9c93bd4ba2bad49a3204"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/Preview_Top.png",
+      "bytes": 2672764,
+      "sha256": "065752292b8a227f5378a420614978301c67ca8c8520789d9bedd217f86eaa71"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/Preview_Top.png.meta",
+      "bytes": 2652,
+      "sha256": "92da17133a15fabf4b903dbe8dd53ab6cb460fea67d700a76002220eac144c60"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/README.txt",
+      "bytes": 1665,
+      "sha256": "74c5753c385660965c65753c37efbbd4d1fa278ab0ede3451f715d8741e1e336"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/README.txt.meta",
+      "bytes": 158,
+      "sha256": "6d21a485d04cfe1d8c9f9739863b6a1fccfba09a6b41e064df3b0a95982f3f6b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/SIMUS_Apartment_Complex.blend",
+      "bytes": 11234546,
+      "sha256": "476130322a0ef45151568cd9b98cab513610eed6377833da731ded473a16030c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/SIMUS_Apartment_Complex.blend.meta",
+      "bytes": 2891,
+      "sha256": "4e61c0cb0dd761ff5d18dc53ec46bdcc6311f797b15cf5a1b1d79bc974687258"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/SIMUS_Apartment_Complex.fbx",
+      "bytes": 19805452,
+      "sha256": "1d752a87ba6689a03c0b323bb02f42570aaf3c48cfa2399b55ab175501aaf711"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/SIMUS_Apartment_Complex.fbx.meta",
+      "bytes": 2891,
+      "sha256": "94f02b6dd4936f72aa1d7e20e5d1ce7e9a348f49abf49083c5ccaf2a37dcd8b3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/SIMUS_Apartment_Complex.glb",
+      "bytes": 54455780,
+      "sha256": "e53c3d161f3b759f9dfd909bc598aff1f2073b0ea2c50b9f17e1cc73df276643"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/SIMUS_Apartment_Complex.glb.meta",
+      "bytes": 155,
+      "sha256": "ef6785c5e6fe62f70ba57b801eaad891dfb745a1bba0ccd9367c172f09ae517f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/build_complex.py",
+      "bytes": 9287,
+      "sha256": "86cbe79f13b352c685b4fcac13fe43312f21b6df974da1ef0d1fe2b8746ac0b4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/build_complex.py.meta",
+      "bytes": 155,
+      "sha256": "b709513aacf585ae39bea173a092e5830f9b2e4a563e5de8f70c6b586e266159"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/source_inspection.json",
+      "bytes": 10785,
+      "sha256": "97b05c69d4a221aa82f2027694daffc258f29d9057b0815d0fdaa33a053a5c45"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/source_inspection.json.meta",
+      "bytes": 158,
+      "sha256": "cc5725f2c4fa2ebec730e7e202ed104ec584fe033f2eb7cd72d05aaa1d3f042a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments.meta",
+      "bytes": 172,
+      "sha256": "45929637ff5b91db7e88c65a86bd08a7b5c77ac1d0588d8f7ebac6e1605f9cef"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_A_MIDRISE.blend",
+      "bytes": 298003,
+      "sha256": "6238ce305407a8f3dbdf4628ff2febc2fa056a8236d9abbc948f9fc7f7824f12"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_A_MIDRISE.blend.meta",
+      "bytes": 2891,
+      "sha256": "451c7a4ac7ef3e757dcbf96d6f0b8d57fad5d68738e55b704ecdaaf65901a67d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_A_MIDRISE.fbx",
+      "bytes": 3122908,
+      "sha256": "12537f53d5defe04a4c93cd8395780f759a205b1358b41950fc9dc9f450040e5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_A_MIDRISE.fbx.meta",
+      "bytes": 2891,
+      "sha256": "1ecca2f4b30ef21c3b38725dfa65f884e7e2e22a07534f37c3c1d470b076aea2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_B_MIDRISE.blend",
+      "bytes": 309391,
+      "sha256": "842dbd9cd80c3ff440ea9a88e371cc45c1d48583790f87f919d23e3f1c089fa5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_B_MIDRISE.blend.meta",
+      "bytes": 2891,
+      "sha256": "34384b7cadc564634226b8d1bded2be473e365d89b8ffacb746db5fe8435488f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_B_MIDRISE.fbx",
+      "bytes": 3240828,
+      "sha256": "cd0386c38331d5c7c515d0916fa160eb83ec59fda4f2cbc4b2c5ac2148e682c6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_B_MIDRISE.fbx.meta",
+      "bytes": 2891,
+      "sha256": "882c3e644d0d2d36ab29882296a8ddd187bc49e4a768359b1fdb6d231ba780c6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_C_MIDRISE.blend",
+      "bytes": 220421,
+      "sha256": "eceb39e842884155caea6b99ccf0413adb31e270e9860c9a64b18cccc4c2c1f4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_C_MIDRISE.blend.meta",
+      "bytes": 2891,
+      "sha256": "46b9a4f8be2cff7d97e7cadd05d872f5ebdb79418cfea8fcca06ef2c59d1b44a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_C_MIDRISE.fbx",
+      "bytes": 2067676,
+      "sha256": "dc42968bec87d27fa922ef5535d23902b127594186a94ec442a8d1cdd0859816"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_C_MIDRISE.fbx.meta",
+      "bytes": 2891,
+      "sha256": "02c31620096c80595c4858664c342146a25bda980a91f5b910338737278de211"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/campus.meta",
+      "bytes": 172,
+      "sha256": "17994fb0a0eecc0197f5e2a527c91f99b03e8a93881391b278525d345e1d0261"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/campus/Campus.blend",
+      "bytes": 2076807,
+      "sha256": "c99bc316cffb670ae564aebc92ecdff80f98651a15c7558fb167cf8fb21e7456"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/campus/Campus.blend.meta",
+      "bytes": 2891,
+      "sha256": "3efc230d38360cb6b86ffc38499a307f4a3c17f0d3c44359a023ea6b8898de80"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+      "bytes": 3042300,
+      "sha256": "a424e0e33dcc7d3a2d0a3da918d064414bbf141f3f9c4e9da803a8f2c80f5d96"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx.meta",
+      "bytes": 2891,
+      "sha256": "fa8bf0d0082d6be8f6935bc2e1b7eb11a7f6710eea3042ee51f1334dfb5e4c19"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial.meta",
+      "bytes": 172,
+      "sha256": "6521d37520aa02eddc35e27bec02a5e7222cdc6c595e518dd6fbf7a0f7842730"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.blend",
+      "bytes": 397819,
+      "sha256": "5f006182397eb92b6e17ecf9e4878e1ab3bacc733d16086a9b9d636545563dd0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.blend.meta",
+      "bytes": 2891,
+      "sha256": "9cb252a20bf3d1829b6f9f4addb7e19872c094587c94c10de3c9cacb7ce691ae"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx",
+      "bytes": 249948,
+      "sha256": "dc4e0d842bd4e0e1ca224ab42ddda094c9c1fc81b7d9bc6a8e8add8de98aac06"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx.meta",
+      "bytes": 2891,
+      "sha256": "a978a76e6fdaaa30b864e00144103b4301db39b6df293d3cc12564804b2bd856"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_02_NEIGHBORHOOD_CENTER.blend",
+      "bytes": 362732,
+      "sha256": "daa269a28e7495ac0690afc3da7ac52a9269af2a8a13107d357de7033ff7ad30"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_02_NEIGHBORHOOD_CENTER.blend.meta",
+      "bytes": 2891,
+      "sha256": "7b09efee99989d7e99f37ee0aecb7a1a94bd106aab3e5119a65768a7ec2ca97c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_02_NEIGHBORHOOD_CENTER.fbx",
+      "bytes": 219948,
+      "sha256": "a62574005414ccb75b884b9da044f6833618ba40ddcaa526dae7914255165472"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_02_NEIGHBORHOOD_CENTER.fbx.meta",
+      "bytes": 2891,
+      "sha256": "7835976a8abdcf981619007d94fe9910192fd94f8545c182e7d82d7653cb3d1a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.blend",
+      "bytes": 388145,
+      "sha256": "8e66eafbd405eac73c60b13f290cd42049e87073d5c419acb9a0dbe044a0b411"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.blend.meta",
+      "bytes": 2891,
+      "sha256": "b536d09d0dac959a3582150d2aebfcd7c078e915492f9718636a1f96ffa7df79"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx",
+      "bytes": 246204,
+      "sha256": "30ddd89e46c9134b96ec9de93850584f825a2d0b9894469bd797c261cfd9ec93"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx.meta",
+      "bytes": 2891,
+      "sha256": "31240f4c86022df80c28b265ec90f829c7fa458f6c819875f4f33dbaad7aca9f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/department_store.meta",
+      "bytes": 172,
+      "sha256": "cfd6b3350ada5a69aec4dcb27f0054137e8a99046ae9f12a5486cf654320538b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/department_store/DEPARTMENT.blend",
+      "bytes": 331024,
+      "sha256": "63f41143e2b1e716fc4d2a494555346115f1d5dd67ba84182957821dc5633ac3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/department_store/DEPARTMENT.blend.meta",
+      "bytes": 2891,
+      "sha256": "5a015228e9f36af4bdb1978c6381bf5533cc61dab57315780861fb54e0dfe31b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/department_store/DEPARTMENT.fbx",
+      "bytes": 225580,
+      "sha256": "548356718cefd78fa5065fee83339bf3a02112b31827563b736ee4ad97a7f4e7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/department_store/DEPARTMENT.fbx.meta",
+      "bytes": 2891,
+      "sha256": "3744fdce62d82c10c7a40a880fb286439347b8fd78e5df4813c70606df50fab0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses.meta",
+      "bytes": 172,
+      "sha256": "ff8ac05fc5b414090e92ecce8441e28672088d7f25a06414954d1d2f0fbfbf26"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.blend",
+      "bytes": 149355,
+      "sha256": "0f55bda83224b668b67c22976bb3b9fde25c5217826a628464345c679418c6eb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.blend.meta",
+      "bytes": 2891,
+      "sha256": "f8d7b0c4ff484fce3cc72262abce1cd181b78e8ff75601ebc898c3e1e782112f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx",
+      "bytes": 456284,
+      "sha256": "40f37e299f6a047facc69973de312c8c7566a92ff6be2430a0d547a3426160eb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx.meta",
+      "bytes": 2891,
+      "sha256": "15150e1ba6594bebd45db0ef031fc9f5e22151d694684fc00d31d9b9e9cacf2a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.blend",
+      "bytes": 144174,
+      "sha256": "f5a6882376285c2b030480eb313c4f086dd769caadd1b6fab6750b99c3eeb7af"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.blend.meta",
+      "bytes": 2891,
+      "sha256": "a85a550e44d52203ac0d6d87750ded8432703642840505c20e09c3db98597cb5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx",
+      "bytes": 491836,
+      "sha256": "66c9f21a9c087cdbdd224c2387eee85ffbe7b154b22d23573eb244035e61aabe"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx.meta",
+      "bytes": 2891,
+      "sha256": "169417214bc490357719f5c800009d5dc4c821498bb839f5daefe1d697940021"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.blend",
+      "bytes": 149554,
+      "sha256": "7104a4b3304aa9e9f9e98c383c21868b8801987aa83642b8dc69e4972e2a40c4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.blend.meta",
+      "bytes": 2891,
+      "sha256": "6c51c494807500787ee23b3195130ff92a1056548e5ac5295b6a35b7caa77d7f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.fbx",
+      "bytes": 439388,
+      "sha256": "e39bcb769d024c20a5be16a32707344a82c042b05a06f7235115b9e72a672dfa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.fbx.meta",
+      "bytes": 2891,
+      "sha256": "efe982e47251c16ca4f3d893e7f90b86c1ad5fd453a13025cf8c5960fe09a73d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas.meta",
+      "bytes": 172,
+      "sha256": "57c0f446ecdde1ced8e57367df6bd7e9c9532628e7bbf4df313d079988c3f041"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.blend",
+      "bytes": 216511,
+      "sha256": "2102aad849d295c047ec395073a7c8532898d86bb7bc564c503d93540217d90d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.blend.meta",
+      "bytes": 2891,
+      "sha256": "18bc23e56cbb95d7e44d6b4c94985173bd8ba83732ee32eebd4a6f703979ae20"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx",
+      "bytes": 1205900,
+      "sha256": "65601c83435281e1b1bf4851b3ed65d1e8f1b50c7f82bfaf0c772c8b275ff5a1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx.meta",
+      "bytes": 2891,
+      "sha256": "6add2e16df95795e4439db397779e63b313b882d1b6a3b933e23450ace57f0f2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.blend",
+      "bytes": 203800,
+      "sha256": "247eb4e45bab8d6f738700157e68fddc43db3343999d902757b4a9b358c91661"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.blend.meta",
+      "bytes": 2891,
+      "sha256": "50b1c229a7cfd590423a0cb2ce90c835c3db042388ff1c439ab8eaa150f8f87b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.fbx",
+      "bytes": 1018044,
+      "sha256": "b6dc05e3f4b6764d0059f386e83cd23883b149f15a52fbecb4a2e1ae6322af76"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.fbx.meta",
+      "bytes": 2891,
+      "sha256": "ad47aa3c0be134f8c821a4de73cba6fbb97c8482c0e4c529c1f0b5d8f33a069b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.blend",
+      "bytes": 196855,
+      "sha256": "0f4b0e6927ac9738d5c74d7077d9f8212451525c959c09f18eafa2b51d380963"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.blend.meta",
+      "bytes": 2891,
+      "sha256": "4a6dd6dd614b9289f6d4d0a27b49ca51d3707a6de08f4bb03e99cd1c12008758"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx",
+      "bytes": 924908,
+      "sha256": "a035520c65fb1adbae7e7cb79720bffdafde936e9595f2e8ed50f3a2af4e9c1b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx.meta",
+      "bytes": 2891,
+      "sha256": "81336402c7d22ecee30b71fa7320f75695774783092a9ea399e2a759e1adf843"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters.meta",
+      "bytes": 172,
+      "sha256": "c5d4c4300dbf1fd961caa765efac6583784f3e342999adf946c608a676594c36"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/.DS_Store",
+      "bytes": 8196,
+      "sha256": "7b09461e324495cdec7fe8b5d02e585582b5cc1929e61b06e7880b639aff916a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001.meta",
+      "bytes": 172,
+      "sha256": "26d115da1384f88ff5790d3fba1411de9358777da2624e8e68985c0a1a539d50"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/.DS_Store",
+      "bytes": 6148,
+      "sha256": "e6fbdefddde269f604443e51149704804e16b07ede08aab36e5360b3b7c24699"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models.meta",
+      "bytes": 172,
+      "sha256": "340b864eeb3b993f93ee9253610cfc4087e8cb1ffcb64e4632756cf2cb2e7e8a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/Happiness_Animations_README.md",
+      "bytes": 5649,
+      "sha256": "3cc9ebcc317d806721c501b00e51c9d6ae791cf61733ecd3ec8fcb93f67efc4c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/Happiness_Animations_README.md.meta",
+      "bytes": 158,
+      "sha256": "cc908f93351e290bcae64608223bd343a0c713a47e6f9bb3e020fcaf91d6b74d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Happiness_Animations.blend",
+      "bytes": 899014,
+      "sha256": "c7ca09cb7b2a70fcea347efe602b39fc152f1a757b57ea4eafb3c38a7ea75506"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Happiness_Animations.blend.meta",
+      "bytes": 2891,
+      "sha256": "fd6cbeaab76a6786aa61edec5b1800ea2167c90461cf7fefeeaf6f78aeb235d7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Happiness_Animations.blend1",
+      "bytes": 900103,
+      "sha256": "288f9b6331b2cb6488a8755c6975520b35015adab8e26fad2287a61f7df273bd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Happiness_Animations.blend1.meta",
+      "bytes": 155,
+      "sha256": "590c7571aee731d0b9eb5af39ca8d41d32804267f3225829c413e0eb9c55371f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Happiness_Animations.fbx",
+      "bytes": 4081068,
+      "sha256": "a81da78cc3eaf0b44e21ef322b046e5d27f9b3a9637829917929d93af2851fb3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Happiness_Animations.fbx.meta",
+      "bytes": 27668,
+      "sha256": "eab2624af4ba5b45bb52e5cdabfe9ffec63efbb9a92d916cabe8d8900d44d7d2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Unity_CapFix.blend",
+      "bytes": 586455,
+      "sha256": "014afec72a951de25d5069d7b75e484450e8e8826a0063c7c433223b416411e7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Unity_CapFix.blend.meta",
+      "bytes": 2891,
+      "sha256": "7b227ad849c6c7a6c928cf74809da8ca5a6664aa31a9484e202ed85af802fad4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001.meta",
+      "bytes": 172,
+      "sha256": "a1d8ea01a57317fe8cc48cc8e0a76baad48ce9d0db2d959f5270dc5f3d199384"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/README.md",
+      "bytes": 1776,
+      "sha256": "7b85de62a3c85a72f31a6f7dd44d8a6ec9a17692be4d1a36b0e0671375fc671d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/README.md.meta",
+      "bytes": 158,
+      "sha256": "b980e150a97640ec3f7122ff52aaf4134fc7f7aeeec8c5de4fc1d6663a42dd5e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/models.meta",
+      "bytes": 172,
+      "sha256": "17f1909dfb100bd6d876d1404d1672a64384d14d1a4360c31cf6500d5d03e327"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/models/SIMUS_NPC_Cleaner.fbx",
+      "bytes": 1468636,
+      "sha256": "603b89e33112c69ad989c5878ead9d0d704f3b1c6e746a080d98ade1bf2fac6d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/models/SIMUS_NPC_Cleaner.fbx.meta",
+      "bytes": 2891,
+      "sha256": "528d6522255b63408bdc9c03313169da9a5d13bb76e2267cce35b22bf112fc70"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/models/SIMUS_NPC_Criminal.fbx",
+      "bytes": 1353372,
+      "sha256": "5cd418a3ae0fd730dd29fb5c1a05b7bac6c7d91e627edf75275b8a2630040184"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/models/SIMUS_NPC_Criminal.fbx.meta",
+      "bytes": 2891,
+      "sha256": "98b8655a0888fa67cf3e0269e66ef1a358a338792d758ddf0d0b24deb7682fdb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/models/SIMUS_NPC_Police.fbx",
+      "bytes": 1524828,
+      "sha256": "63e8ebc0445ec05982bd8f1df0bdb57d3b3be135b9c027ea2db09f50fdbd6371"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/models/SIMUS_NPC_Police.fbx.meta",
+      "bytes": 2891,
+      "sha256": "ca62015bdbe600e91111e9c180910e805f2d91379698d71f982d4c3772694cbf"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/environment.meta",
+      "bytes": 172,
+      "sha256": "d2db9524241c3140c01ee8ae3e6b31d82ebd46bfc433659250057fa963634245"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/environment/README.md",
+      "bytes": 199,
+      "sha256": "01f19066cff03683f88f0bd8b060e41ad88bf18474c066bf5b10885b9d54e531"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/environment/README.md.meta",
+      "bytes": 158,
+      "sha256": "459490cdbb99f2c11048177152a574ec6eae4a9fb53a295b5b57035f34b82ec1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps.meta",
+      "bytes": 172,
+      "sha256": "3eb6d79d95354513f26cafec1370b8b365cbc0c65d468740819baf73493c1149"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003.meta",
+      "bytes": 172,
+      "sha256": "388ae7fadb1b2af12171104d3939143e979ba368218faebedeb61bf90840ec32"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Environment_States_v3.md",
+      "bytes": 1776,
+      "sha256": "7b85de62a3c85a72f31a6f7dd44d8a6ec9a17692be4d1a36b0e0671375fc671d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Environment_States_v3.md.meta",
+      "bytes": 158,
+      "sha256": "985b188b62d54ae1440e8abb0f86189029c521a8cb4b420ba4648f778d9ab7d3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Dense_Realistic_University_Map_03.blend",
+      "bytes": 33887325,
+      "sha256": "95c73300f7116fb8d3fa0468c9b7b16fa93788780597b2eb347ac723deb1dee5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Dense_Realistic_University_Map_03.blend.meta",
+      "bytes": 59,
+      "sha256": "88bc9eb37558d6b2c030d715812a5ad6b2cecb9d324c6659e88e38ff08688bf7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Dense_Realistic_University_Map_03.fbx",
+      "bytes": 20449948,
+      "sha256": "2b4b27598f4e86cb20f8604c52077b53490cd089e3699d81680866bbed0cb36d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Dense_Realistic_University_Map_03.fbx.meta",
+      "bytes": 2891,
+      "sha256": "3d5c5ea4b98998e7d960e425d60f5a17b13e1a1ef3630a1d259901424c9a568f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Environmental_State_Assets_v3.fbx",
+      "bytes": 5687164,
+      "sha256": "00d916f2c92c07c0f39321e1c64fed98c5411f34daa7374fa03679dd34a5f548"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Environmental_State_Assets_v3.fbx.meta",
+      "bytes": 2891,
+      "sha256": "1c1c5c58af2f2ed4cbc4bf87687a52b1267eef0b616cf452e0f43b6cc93467f7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Textures.meta",
+      "bytes": 172,
+      "sha256": "fd98acb9654d623dfefdad6847a701429abce9a38ebd7990bebab342b6f0e8dc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Textures/R02_UNITY_TEX_STONE_BEIGE.png",
+      "bytes": 1995,
+      "sha256": "fd363acd2e0f8687a7e42bf073da190633b11526112f876057fc4e79e8007b33"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Textures/R02_UNITY_TEX_STONE_BEIGE.png.meta",
+      "bytes": 2652,
+      "sha256": "c8dfe434dd136f8f5702c6ab38314ea6e0be772f873234d35e66b6855ea932b5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Textures/R02_UNITY_TEX_STONE_GRAY.png",
+      "bytes": 1993,
+      "sha256": "0e462c5c0353b4d4432b529dfbf412d567f155344beb0b6261fa07a02db4ed2b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Textures/R02_UNITY_TEX_STONE_GRAY.png.meta",
+      "bytes": 2652,
+      "sha256": "c914ee1163f5fd3e8ac677fe6632d3158fcf1d90857a876543b2e34bd947dc0d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Textures/R02_UNITY_TEX_TILE_OFFWHITE.png",
+      "bytes": 2047,
+      "sha256": "c732d617842659fea55d941cbd9bc513ac3d61a4e75b04e4b90ace6dce6148c0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/Textures/R02_UNITY_TEX_TILE_OFFWHITE.png.meta",
+      "bytes": 2652,
+      "sha256": "57e1f3d26b12a427ccd4750cb58e276547a0124c4eba27359775892f2428a3f3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/UnityEditor.meta",
+      "bytes": 172,
+      "sha256": "8f618b4649da439cddf521113307ca2eaea152877a0819bf20df616d8f4d6df5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/UnityEditor/SIMUSDenseMap03Importer.cs",
+      "bytes": 2667,
+      "sha256": "0736a6b210bb5e997446f8723f7c780103e50d238b6e74402179a71e67ae3078"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/UnityEditor/SIMUSDenseMap03Importer.cs.meta",
+      "bytes": 59,
+      "sha256": "9abd87785df606538da69667d8615e5924ce3b6ecaef89ca43c2a0458ef4fa2e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props.meta",
+      "bytes": 172,
+      "sha256": "e9db422695a28515190e925e7c4318cd344d792d631d5a4286cfd6b6d12421c3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props.meta",
+      "bytes": 172,
+      "sha256": "75733493d7c7ebe99b336cd5612aa3b6be4d793c4eb26cf19fc66cebd86e8b0c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/BICYCLE.blend",
+      "bytes": 70320,
+      "sha256": "47d15e9f00a289cd3fc5551d424c7dbc7c39700fa0aab07d9cb97b8ec77588fd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/BICYCLE.blend.meta",
+      "bytes": 2891,
+      "sha256": "3515fa7d1bef522f4caea89fef91dae340aad5d3e239a2ca5a4cc2700bf1282b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/BICYCLE.fbx",
+      "bytes": 47596,
+      "sha256": "bff46303eea5f2ddca56e0743a574418a84fdd27fefdf178134363087f8f16ab"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/BICYCLE.fbx.meta",
+      "bytes": 2891,
+      "sha256": "8e0d600b8f25ed85c49e8754812e58c6b0a1b5477ed7b0f68989c317955d5ca3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/PLANTER.blend",
+      "bytes": 87975,
+      "sha256": "39a4bfa0a327984b510a9c1579f1d5cc9431b7af902cad29efb29a504b643ac5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/PLANTER.blend.meta",
+      "bytes": 2891,
+      "sha256": "dedd56f2bcd4e587795c67d3acb1ee6eca777da27125d69fce5c65c3e5a80f13"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/PLANTER.fbx",
+      "bytes": 60620,
+      "sha256": "0b81532f0afe15e235195b6d4d338b16349a90dde69a62f8c70fb4e973c975d3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/PLANTER.fbx.meta",
+      "bytes": 2891,
+      "sha256": "7118d26af1fe9cc7fbb55202bb616f79c8017df07470a2d96200158b13a1bc62"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/RECYCLE.blend",
+      "bytes": 69174,
+      "sha256": "00e8f6f67c02821204fbd0ef5fba92d82c634d0fd96515cab0406ff230d70f32"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/RECYCLE.blend.meta",
+      "bytes": 2891,
+      "sha256": "60c71075a143bb9dbc58df4fbe492a1ec6f7a797f22dc37dbab8e961a8b7221e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/RECYCLE.fbx",
+      "bytes": 16140,
+      "sha256": "f6a8409a12ad43e1f9e34e364c0d7be8029f6ffeec35eee3f38812c0209fe406"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/RECYCLE.fbx.meta",
+      "bytes": 2891,
+      "sha256": "a396683a5c85a14f368efca6381eef96938b8ab975f166ce25eb22d7c90bf71c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/REUSED_BENCH.blend",
+      "bytes": 75623,
+      "sha256": "27364a3b22b02f7bf1490a97c468042f486a11abf0a3ab2f8f4ab0f0ebca57b2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/REUSED_BENCH.blend.meta",
+      "bytes": 2891,
+      "sha256": "cad5315661e39611705154ca78fec45b2a77ba16ec8afd0f26ca3e806faec0b0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/REUSED_BENCH.fbx",
+      "bytes": 33164,
+      "sha256": "7c0a9c5ef0d532c782e8e4b4f34390da534f577eae9f35f2e573b073b451b3cb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/REUSED_BENCH.fbx.meta",
+      "bytes": 2891,
+      "sha256": "7f43417f2a83ccfbc93903813b43c10b3deaf374292cb48384edcac17d2e8f92"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/STREET_TREE.blend",
+      "bytes": 69785,
+      "sha256": "2b588a9e9d99ffe7f1eb98b7b0142ebe7d68599847065e1f2a9372c45a9a04e1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/STREET_TREE.blend.meta",
+      "bytes": 2891,
+      "sha256": "221ced620e721fc110c172d9d93ab522d15549b6278fba7eb931d420284122a5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/STREET_TREE.fbx",
+      "bytes": 17868,
+      "sha256": "1fe983174c830fc869b774e86cafd474aaa64bdabcd167ab47c77bfba0b2a75e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/STREET_TREE.fbx.meta",
+      "bytes": 2891,
+      "sha256": "44ddc1b657143cbfb69c97882057a769d8b8dbb442cc7dc1fc851d883fd3f3bb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/WALK_LAMP.blend",
+      "bytes": 73197,
+      "sha256": "0baafbc6a3b48d95e4611582f362d11ae8594b648db95fb040c7351618dac4e0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/WALK_LAMP.blend.meta",
+      "bytes": 2891,
+      "sha256": "967fb2a7fe3626bb3115a5027c5a278b38130d21a70463ace8c070c4f304ad0b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/WALK_LAMP.fbx",
+      "bytes": 29916,
+      "sha256": "b3594009176c886590869181adfdfedc5f2669023cecf77995cf3561d64b192c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/WALK_LAMP.fbx.meta",
+      "bytes": 2891,
+      "sha256": "5c28cbea66e62f914355ba3dbddc0981d877b040ddfefaf5fd9eec9fb2807ec3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads.meta",
+      "bytes": 172,
+      "sha256": "5dd40936a5a40593cad5f4b75175381b8b2435f4131be1744f32184cab90dd14"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/city_infrastructure.meta",
+      "bytes": 172,
+      "sha256": "fff91674bdff9e97897413c8d1d9ca84565fb80ef9e2464bbb9db6f33ca734db"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/city_infrastructure/City_Infrastructure.blend",
+      "bytes": 227035,
+      "sha256": "ae2c43831d3aefb5bc0b49e86471ece4bf4d772efff1155249a177da6dfc8465"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/city_infrastructure/City_Infrastructure.blend.meta",
+      "bytes": 2891,
+      "sha256": "1847d30889bce4c3a178f92f6a5061fcac3f6b75c3e722fb3fe97c3c3924bc0e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/city_infrastructure/City_Infrastructure.fbx",
+      "bytes": 1058524,
+      "sha256": "f1f8fcdcdb2987869e766bde19b6305b26f7a34f6d3d121ba093d4849f2cac4e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/city_infrastructure/City_Infrastructure.fbx.meta",
+      "bytes": 2891,
+      "sha256": "cb3d81e668d967a7f07cd4a20d4e4c1adaa0b977917159ed39cb36160884d9fa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation.meta",
+      "bytes": 172,
+      "sha256": "a8096775e9e17bb493a6111a6fa963f3ad384776eaa8eb88e3089e4bcd2bb03a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks.meta",
+      "bytes": 172,
+      "sha256": "8224447569efd176b80a013b3cf343ca0c305d6f3fbb1c92ee3d721e75477c76"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/COZY_NEIGHBORHOOD_PARK.blend",
+      "bytes": 189628,
+      "sha256": "1f465417d7abd45092ac970f40191d3cd8878cf4be9d2034b080717b82289384"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/COZY_NEIGHBORHOOD_PARK.blend.meta",
+      "bytes": 2891,
+      "sha256": "ac71585f13f6bb7905dc312f7610913d4ab80ec9d0ce79c96550a8fc1e8e8dec"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/COZY_NEIGHBORHOOD_PARK.fbx",
+      "bytes": 586188,
+      "sha256": "7b0290b9d91ba9eb771b4fb641ab843c81e6795d530693481135e341a55ad057"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/COZY_NEIGHBORHOOD_PARK.fbx.meta",
+      "bytes": 2891,
+      "sha256": "39dd4d88c6f777b26063b0a92889422da82841e2611c4e7e2adb9529e3226f2b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/ECO_RAIN_GARDEN.blend",
+      "bytes": 173091,
+      "sha256": "414cdbee0b214ebe9f9011c6598af6d307a6fb89b0b5cc2a3ad8fd114728e77f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/ECO_RAIN_GARDEN.blend.meta",
+      "bytes": 2891,
+      "sha256": "f4eff39e11ff3191ec3149e40106f04b673bf1be06afaecb039a749cf6f6ce7b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/ECO_RAIN_GARDEN.fbx",
+      "bytes": 264220,
+      "sha256": "48fb41ea01ff1437ebf5deaaeecc2287831b6a463cb43159be4ee1527996106b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/ECO_RAIN_GARDEN.fbx.meta",
+      "bytes": 2891,
+      "sha256": "83a8bbe657b82e77db06c295792a898a1843691db659d33f558f0758401244a4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/MODERN_MINIMAL_PARK.blend",
+      "bytes": 123597,
+      "sha256": "a7c2d73e017e8969dd4f7338c5ac991ca259f51ea6b1fa86793b2bb26e1c88cb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/MODERN_MINIMAL_PARK.blend.meta",
+      "bytes": 2891,
+      "sha256": "f4e4119ce8723ef80fe14f654c30fefd7891b491178c20db32316f3884a547c8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/MODERN_MINIMAL_PARK.fbx",
+      "bytes": 201388,
+      "sha256": "310d3617f9e8ea83bc075f75ff54cfdb80a25e840fe66480e65040b863dd989e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/MODERN_MINIMAL_PARK.fbx.meta",
+      "bytes": 2891,
+      "sha256": "853a510c7de539bdb1f87fc0241b4cb5f2ee070de78dea906d29e87d017b49ad"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/POCKET_PLAY_PARK.blend",
+      "bytes": 154405,
+      "sha256": "5ed8e12a7261ef83cad59fb733d0f189828cd16fd1695d0c98ac890a83509bad"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/POCKET_PLAY_PARK.blend.meta",
+      "bytes": 2891,
+      "sha256": "0c1ed2cdf323683852a12acf2ecea20ffbb3a1cdb15d9ca292e407a4a7334c7b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/POCKET_PLAY_PARK.fbx",
+      "bytes": 425516,
+      "sha256": "855460ddcf250fb9aa3a2371e424f3102dcf2a8cb9432404b92efd0545e00ccd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/POCKET_PLAY_PARK.fbx.meta",
+      "bytes": 2891,
+      "sha256": "01def9b89ec27155e88025374b2b6f353657e8309bf25ab0e7401a6e0f5a0a7d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/ZEN_GARDEN_PARK.blend",
+      "bytes": 146292,
+      "sha256": "335de24e6d5137f12086c03cc705df5b34aabf00fb2ea7413ed76da568b50c4a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/ZEN_GARDEN_PARK.blend.meta",
+      "bytes": 2891,
+      "sha256": "f80f90a234a8d5fc0010d420acde611729d2fd54c55beb1d46b8dac9f41d1812"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/ZEN_GARDEN_PARK.fbx",
+      "bytes": 583916,
+      "sha256": "251cfd17d1c5aed8d2c4eedc657e38172090ec5175f62872eee06a871b18faf9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/ZEN_GARDEN_PARK.fbx.meta",
+      "bytes": 2891,
+      "sha256": "68c781c1f9d3d77387acd75bf96e213b5ca2e9575b03649bf8bdd3851d7595c0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Editor.meta",
+      "bytes": 172,
+      "sha256": "44883b15db2cd55c16358dbf38b756145c2e85ad33cb4fd5127d102f62cd412d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Editor/NeighborhoodIntegration.cs",
+      "bytes": 3108,
+      "sha256": "31e755d0a148bf6663217474283b5c519faacf8466e69b103e12d005a0849ed2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Editor/NeighborhoodIntegration.cs.meta",
+      "bytes": 59,
+      "sha256": "f48bc519e96df35e14736efc7897f7854b38b89ff77e30c73acf7e1ac3674717"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Editor/NeighborhoodVerification.cs",
+      "bytes": 3846,
+      "sha256": "51243d26e7a05bfeb27952fa4fc20527df8ca412c116f9b26c5563a68023f4cb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Editor/NeighborhoodVerification.cs.meta",
+      "bytes": 59,
+      "sha256": "839371f786afa105094775ef997d30a1d8ca70a24a45892226c6a24b7ca0e702"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Editor/SIMUS.City.Editor.asmdef",
+      "bytes": 190,
+      "sha256": "bb79a8889a5578745d6a2ade3ecd1f70ed72e794de66ad8aac4dc5dd17d7f925"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Editor/SIMUS.City.Editor.asmdef.meta",
+      "bytes": 166,
+      "sha256": "66d4c9925651d627baf5e9b6a4d9e95a9c8c0fd49404465c05139f99d97e504d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Editor/SimusCityClientMenu.cs",
+      "bytes": 1003,
+      "sha256": "1a63503cd4b181632ba31ec049b0b98b8788cedd4bc2eaacd7499cbe3859d46e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Editor/SimusCityClientMenu.cs.meta",
+      "bytes": 59,
+      "sha256": "8425c709e920491701b7f8f235e0c4884cd880a232908054662185a3e280180c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime.meta",
+      "bytes": 172,
+      "sha256": "8a106f982918eaf8194423d95409174e60f948c709b0c17e5758530d5d47b8bf"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CitizenCharacterAppearance.cs",
+      "bytes": 2081,
+      "sha256": "14e4ce6efdab1538b085fea64e7293f89864917ad258f8fa866d583f56a997e6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CitizenCharacterAppearance.cs.meta",
+      "bytes": 240,
+      "sha256": "51c8dfef3857eb196f591f03edc2cacf0f159b00d44c9051b0ee015e1bec3bf1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityClientBootstrap.cs",
+      "bytes": 1173,
+      "sha256": "025087d0ac688ad622a11a1b09474a4734bf02571a27bba8ffd916a0faaf6344"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityClientBootstrap.cs.meta",
+      "bytes": 59,
+      "sha256": "d64722161bde0d475e4db999d2212daf132d6f5de523d874214eae89797d5325"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityStateApiClient.cs",
+      "bytes": 3537,
+      "sha256": "3d56d971e8b8b1143b8958477f6a5707b931414d91a2fcc221df1f86baa3d0ef"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityStateApiClient.cs.meta",
+      "bytes": 59,
+      "sha256": "0fea0fca5249943c09d54a9d2adad52cc3807c8c8a2e8465d0100f9100055d78"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityStateDebugView.cs",
+      "bytes": 2294,
+      "sha256": "aaa48c064e11bf336883c819bf0eebbea41e51474eedb0176fdb8a150831a0d3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityStateDebugView.cs.meta",
+      "bytes": 59,
+      "sha256": "607c68cae4b167fb692e481fb7b2e02a4356b9a0875e5be3ee300c421718fda2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityStatePoller.cs",
+      "bytes": 3900,
+      "sha256": "2c0eca7b62e0f1aaeb11d1c28c7dbbcbacd9d3a6d3af22d326ee978644df2ea5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityStatePoller.cs.meta",
+      "bytes": 59,
+      "sha256": "20e51ecc7cab1eab00ecfaff70cbc47426985bcd739bc511e6cade404490a1e7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityVisualization.cs",
+      "bytes": 17224,
+      "sha256": "b94938ee1516581f3a4cd1a303e873077b334f9055aef115b8d7ca5972cea740"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityVisualization.cs.meta",
+      "bytes": 59,
+      "sha256": "d3a2c2a4b773c57c1a46b1f78c33155ad57770c44c00d53e88620dcba3af9213"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core.meta",
+      "bytes": 172,
+      "sha256": "812a8aa763c2cced04ae5de9988b1da5a4990248c1ca4074f94d9fc64e4bfdfd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/CityPollingPolicy.cs",
+      "bytes": 1107,
+      "sha256": "74c6a9f39a5710a97010ede75c2f4b9631bbac24b3f107314ed4ee995bce4842"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/CityPollingPolicy.cs.meta",
+      "bytes": 59,
+      "sha256": "3c0cd0e920c23cfbf22f9565c4e2d6e42c6492a680113090299dcf6205903cee"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/CityStateDto.cs",
+      "bytes": 2027,
+      "sha256": "736c0290b8e178d6c623d30c1798f84502d74178599270ac1b969dc71ea71368"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/CityStateDto.cs.meta",
+      "bytes": 59,
+      "sha256": "0be6b3eebe3146fc4d86d9f4f1559e84f562c6f567e80a36d858f8df4971a4da"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/CityStateJson.cs",
+      "bytes": 6830,
+      "sha256": "e8b7c4ea6a8c90c974a2d5420b06823a06c57aef8ca1f1925bb0c4e16bdd4d5b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/CityStateJson.cs.meta",
+      "bytes": 59,
+      "sha256": "d958aef21a5aefb55ab546ec8d12f38d5de4b111180ddaea8976e348e44217c9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/CityStateStore.cs",
+      "bytes": 4745,
+      "sha256": "3fbdceece5c0e1d244cbf636a9dc4a27aa0a55159b56aa63b2e05a21e1fdd9f3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/CityStateStore.cs.meta",
+      "bytes": 59,
+      "sha256": "40c9a21f8ccfed1eb5d36b05fee786b6b065d4556e6fb6abd2d50144ef96bc5e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/CityVisualMapping.cs",
+      "bytes": 1076,
+      "sha256": "9bff8ba0cdef8b3edba34e5eaeca2da0291ec3668385b2e3d2ca2f2425996a2a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/CityVisualMapping.cs.meta",
+      "bytes": 59,
+      "sha256": "b8c8dcef25c9df5ca2efef132ea0e052057fe185690f02fcbb27ef4c15e0387e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/WebBridgeState.cs",
+      "bytes": 8168,
+      "sha256": "eeaa03d301ed37a538886a8861180a7c812187f76133e59a3b7c6a989282ba57"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/Core/WebBridgeState.cs.meta",
+      "bytes": 59,
+      "sha256": "945213ecc5759984b63d7483edf2dc782224e09277812346a46012b97317dfd4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/NeighborhoodLife.cs",
+      "bytes": 7140,
+      "sha256": "36afe608f08663adc9afb7018eee94d08b818afe0500cce6b273ef7e9a156b6d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/NeighborhoodLife.cs.meta",
+      "bytes": 59,
+      "sha256": "f055816550ef642a0e2fb82d84316789538ac657f749d11fbcb4969aed95558f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/NpcCrowdPoller.cs",
+      "bytes": 13381,
+      "sha256": "3e5fdad808e4d77cbcae6f89a88d4167964d3897a025023217e346458297ac6c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/NpcCrowdPoller.cs.meta",
+      "bytes": 240,
+      "sha256": "78129259aa590a7c636de1e33e6b21a890b4c24486910b91144aaee2f0d5a3d7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/SIMUS.City.Runtime.asmdef",
+      "bytes": 145,
+      "sha256": "a51ad2ee43bdc6df1702721f4c12448f6ba02296def751d64d4d4d204b13b1af"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/SIMUS.City.Runtime.asmdef.meta",
+      "bytes": 166,
+      "sha256": "0af6bff46d417d763e3e8c6b0c538a193a3d67debbc7b8eeb7c8bc474e09cf02"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/link.xml",
+      "bytes": 317,
+      "sha256": "247c453567da752ed5a592607843d8463232cee1816c012b87f91fed66755627"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/link.xml.meta",
+      "bytes": 158,
+      "sha256": "591fb77b1d498aa984a7a985c1a016544f90b31b142fb22848a9ef28cfeb6e74"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes.meta",
+      "bytes": 172,
+      "sha256": "4101499690bdc3a08954bfc4235409afea3e4e2b937c4c94303faa69691fe9b3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/.DS_Store",
+      "bytes": 6148,
+      "sha256": "fcd14e8043a0b1372e36b88275c402a30672804df5422a79ce28398db388ee68"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/bridge_test.meta",
+      "bytes": 172,
+      "sha256": "27a21b3d97bc8ca8f61b7c6a8aca5a3f9a0dd90c1db518f03288cb726babcffb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/bridge_test/simus_bridge_test.unity",
+      "bytes": 13235,
+      "sha256": "ed55614d1a80b465f9d166fc35fc7fbd3514e87a9824345816bc5264d8f4a7de"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/bridge_test/simus_bridge_test.unity.meta",
+      "bytes": 155,
+      "sha256": "841fb95b305c7ff49d7614145a6cc19b6738c7f6808f568ab5bd4cf138778d0b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft.meta",
+      "bytes": 172,
+      "sha256": "22e52bb197593480e1ae4d6f13a7ea4bf7bd71ae2b9642bcd79082ad634794c3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/clearance.mat",
+      "bytes": 584,
+      "sha256": "198dc5bd450332e25656061875deeae74c48c24d6cbc679df646e1caccd6f642"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/clearance.mat.meta",
+      "bytes": 160,
+      "sha256": "753aa5feceb0424e6fd58cb8c7c5b63bc5303cfbe4bdbe22f2022f465a39e33d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/commercial.mat",
+      "bytes": 585,
+      "sha256": "57d3b833eec8ada3a001c7d8377bc8db59347451a1064719e928565acf3e1952"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/commercial.mat.meta",
+      "bytes": 160,
+      "sha256": "2879a6b3bd9110e8c49c65141d89f1ca31bdc2da984001884987608708333f73"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/ground.mat",
+      "bytes": 581,
+      "sha256": "27bdc2a3d78cb6b681fc02c1cd3509e3615665943e9f563c0f8b245c5fe2612e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/ground.mat.meta",
+      "bytes": 160,
+      "sha256": "bc0af2f428e00b219076b3e8ff5b56e7814e9bd5d26d2ef95dd950b93dbfd135"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/layout.json",
+      "bytes": 81954,
+      "sha256": "ba051e0addd56c8d75565d73de5978de10a232c87c249d813f3bea22b1e6d9f9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/layout.json.meta",
+      "bytes": 155,
+      "sha256": "13a0bf7300c16d441c59d94595aa6e4f8d3aec274100915a5e95fa160fcc50f4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/map_rebuild_draft.unity",
+      "bytes": 561824,
+      "sha256": "9d17bbcf3e1ede5ef134cec44662dfe62d964eaee10af0c5512f3fc67510a80b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/map_rebuild_draft.unity.meta",
+      "bytes": 155,
+      "sha256": "938b026335fd43c919f962f36fbc3163f4bdd84b48e1ca7bf4a110d9cc2e5b33"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/mark.mat",
+      "bytes": 579,
+      "sha256": "ff146fb55c0deef3db955ee6ce728620bd75671ccefa2246c607c58db3844b6f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/mark.mat.meta",
+      "bytes": 160,
+      "sha256": "dd8c8363e48c49c367234c0c2d2657a0581979257dc276d09e186eaa1cf3f536"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/park.mat",
+      "bytes": 579,
+      "sha256": "973520c61ddb689cfc9c4571cb933257441afdd734be4e8aceda9ba1f5cf37f5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/park.mat.meta",
+      "bytes": 160,
+      "sha256": "b5739d1b74bbdfecc7b8a0d6e540d616d0e1dd88b643fb25f9c9266e91d1b044"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/proxy.mat",
+      "bytes": 580,
+      "sha256": "20cb71b2a2f1443e71048482a5d72dd51556f71a5d3774d5e2a569e042292692"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/proxy.mat.meta",
+      "bytes": 160,
+      "sha256": "cf776c1129e9bced1f3023c460196b66b31258d881b220f75de2c3a7d2f00767"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/residential.mat",
+      "bytes": 586,
+      "sha256": "27932253f33180ca1aacd3133e94566038e0215d9a2b1b7cd7458a748d8e42bd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/residential.mat.meta",
+      "bytes": 160,
+      "sha256": "b483c598de8db748f7ca120cd7804eff3c2ec000e7663b87cee3735f6fdd5be0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/road.mat",
+      "bytes": 579,
+      "sha256": "fc71e323472ca8a0c6a5cc429a1b4ecf6c7252659e5fbd442e62f3ea2bbc3bc0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/road.mat.meta",
+      "bytes": 160,
+      "sha256": "1d92f7ca92b647da6f277775249b2263e51b33e631f4408e526420084bfe4fe7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/school.mat",
+      "bytes": 581,
+      "sha256": "8eac71da353f5a3407a1731ae075107010c3a323403c3db0e03cf70d9bcf6ceb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/school.mat.meta",
+      "bytes": 160,
+      "sha256": "dfe4b0c49ff0ee07ef24705fde081f08f41be954606076369a4b229346881d78"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/walk.mat",
+      "bytes": 579,
+      "sha256": "2669a56e71d4a10872703be67c766ad331b1159c958aa0d3cbfe80d1a486dfb2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/walk.mat.meta",
+      "bytes": 160,
+      "sha256": "502139cfd674b95556bd9b147713c1d548cd73d7071bbd0da6a4f07f3f0ae8e6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/npc_follow_test.meta",
+      "bytes": 172,
+      "sha256": "8470fb9c9a98cd21fd712e55c40a8bf2ca257219c137e9dbeeb0b7971596e94e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/npc_follow_test/CompletedMapNpcFollow.unity",
+      "bytes": 22010,
+      "sha256": "0c0bb8b3c4b689a89f96c0be35327ee84940eec6a40ef030b0ba5cc01b13a966"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/npc_follow_test/CompletedMapNpcFollow.unity.meta",
+      "bytes": 155,
+      "sha256": "9d15a187cdccdf32ccb13f0b1997d31e2e1ab0f6624f3b7216f4e1b4983a6de6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/npc_follow_test/README.md",
+      "bytes": 6277,
+      "sha256": "303fcda64003e259090c7f248a91753804e7c17169ebfefd4f004647257b854f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/npc_follow_test/README.md.meta",
+      "bytes": 158,
+      "sha256": "76ede5978d69fec4d078a2a830f8e80fed5c1fae8c5caa3331052467d5b54e54"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/npc_follow_test/TestNpcWalk.controller",
+      "bytes": 2044,
+      "sha256": "1fd2e7f25bca82d0e4a5a21947782201273e524cc4121f21a0980406eb4f3375"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/npc_follow_test/TestNpcWalk.controller.meta",
+      "bytes": 188,
+      "sha256": "bc04eff780aee5d09b68aa94eca79e06529cb84dac321789b43f71f80703dab6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests.meta",
+      "bytes": 172,
+      "sha256": "aa442bbfa94f7dd5c45efe450d7c18fa3f4320c70e611b1aa9b27175d6a045a8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor.meta",
+      "bytes": 172,
+      "sha256": "14986c983c9956e9d42655d0217a97f85067e025bdd08f4e0477114e70b55eea"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/CitizenCharacterAppearanceTests.cs",
+      "bytes": 3825,
+      "sha256": "411ab12a2dcc87aa95d0c77fc9eb1d8d5661748f2ac90be5526f5a75540339c1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/CitizenCharacterAppearanceTests.cs.meta",
+      "bytes": 60,
+      "sha256": "918b5811d6d2bf4c69428dd48c31b768f5ddb3d76f8bbe79b3bea58c4ce06167"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/CityClientTests.cs",
+      "bytes": 7522,
+      "sha256": "e0768608a02c5c01e9b6b8028bb970f9edddfa555dfe050a64f0f887e6f2be51"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/CityClientTests.cs.meta",
+      "bytes": 59,
+      "sha256": "2685fc5f6dcd13c6faa8bb86ca1e27d23cd15e837407392962ea1b2774c8d5b9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/NpcMovementTests.cs",
+      "bytes": 7712,
+      "sha256": "58bf7b0e9e8a77edb14c0b5188c6ba6cbdb2d4fd999d8c193712b5b81ab1df7f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/NpcMovementTests.cs.meta",
+      "bytes": 60,
+      "sha256": "9fceddcb272f3ef2722f2ea5d704ed3963e025e4d3122dfd762c43ac87550140"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/SIMUS.City.Tests.asmdef",
+      "bytes": 363,
+      "sha256": "b67c3f2d0e9db6c61176ee97627cf966850e95e2961f754731c816fcff9b899f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/SIMUS.City.Tests.asmdef.meta",
+      "bytes": 166,
+      "sha256": "ad420f35b3f93e3cbaecc23a7b9147e4501e57d6c71b951cd044e929e26b16c9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/WebBridgeStateTests.cs",
+      "bytes": 6988,
+      "sha256": "d47a7d3d1f654c910ba9cf112bddc86cb097247ba3fcdf944dc6875b56947005"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/WebBridgeStateTests.cs.meta",
+      "bytes": 59,
+      "sha256": "91db699c27c05d90e90bb868748810e8a8de189c42d2db1ae08625fde27c2265"
+    },
+    {
+      "path": "unity/Assets/Scenes.meta",
+      "bytes": 172,
+      "sha256": "a02f1ee82dab7e39f15a8a94fdd7cb1f591c34c3b0ab4c29b716473f7850f29a"
+    },
+    {
+      "path": "unity/Assets/Scripts.meta",
+      "bytes": 172,
+      "sha256": "6dd060c2494324955ae851774cd0d83d914b046c4dcec24730ef31d0578cbcfb"
+    },
+    {
+      "path": "unity/Assets/Scripts/CityPreviewCamera.cs",
+      "bytes": 7844,
+      "sha256": "3c23c0110f799a390f6512d97bd268bf7b905a7d501dc78ab384a9fa115fea44"
+    },
+    {
+      "path": "unity/Assets/Scripts/CityPreviewCamera.cs.meta",
+      "bytes": 59,
+      "sha256": "e0424c1d5811cddc7befbbbb470253ac87e4879c9f694fbb2dbe52426c32eb68"
+    },
+    {
+      "path": "unity/Assets/Scripts/NpcGrounding.cs",
+      "bytes": 2602,
+      "sha256": "f6b7bbf28b3f697724c7f827f09e83cf1a9e99ca7c08f1009512cefd220c2545"
+    },
+    {
+      "path": "unity/Assets/Scripts/NpcGrounding.cs.meta",
+      "bytes": 60,
+      "sha256": "6dbb201a6b068be4e3ae0d6d73f1ec79a40c532b5444c004ff34b8abb6c8844f"
+    },
+    {
+      "path": "unity/Assets/Scripts/NpcOcclusionReveal.cs",
+      "bytes": 2900,
+      "sha256": "05068eea43d532e89b83eb09ea26f23299accb5e31187385ed1457e39ecbc5ff"
+    },
+    {
+      "path": "unity/Assets/Scripts/NpcOcclusionReveal.cs.meta",
+      "bytes": 60,
+      "sha256": "dc99725979623bd6b59af2a5baddf529f85e1076668336e44696ebfb24288f60"
+    },
+    {
+      "path": "unity/Assets/Scripts/TestNpcPatrol.cs",
+      "bytes": 1413,
+      "sha256": "8bdc852b8d720407d1e206901429660f54433b7f32fae70d5e10d6bc2aff9b77"
+    },
+    {
+      "path": "unity/Assets/Scripts/TestNpcPatrol.cs.meta",
+      "bytes": 59,
+      "sha256": "a44d9b8f94a3cb5c6f045cb7f207a831cb4563802e071550295d4a5a35747ebd"
+    },
+    {
+      "path": "unity/Assets/Scripts/WebCityBridge.cs",
+      "bytes": 8902,
+      "sha256": "01aa7a1d26d393d4f7ffbf15de1efe12c509704933fc829c7acbef534f426122"
+    },
+    {
+      "path": "unity/Assets/Scripts/WebCityBridge.cs.meta",
+      "bytes": 59,
+      "sha256": "ec9a21aba2f84fee2fd0c042c4548c248dcbadf5c5cb65505e09345c431bc665"
+    },
+    {
+      "path": "unity/Assets/Shaders.meta",
+      "bytes": 172,
+      "sha256": "d4694b76c23f21c9b0fbceab1c697f74bc371274ae262a20ca447d48a00ff430"
+    },
+    {
+      "path": "unity/Assets/Shaders/CitySurface.shader",
+      "bytes": 937,
+      "sha256": "7ec4ddeab5eb051a99e5ba682a492809af114510135747558c52c00027b57e37"
+    },
+    {
+      "path": "unity/Assets/Shaders/CitySurface.shader.meta",
+      "bytes": 204,
+      "sha256": "ed0ce948efc10779623e4eedc82b21e95a9fe63c8d07d612268d520d5e11882f"
+    },
+    {
+      "path": "unity/Assets/Shaders/NpcReveal.shader",
+      "bytes": 2237,
+      "sha256": "ce9db1b0c453583a0270e1af0153381fc9cccec10b2a69d666e0bd65f87a90c7"
+    },
+    {
+      "path": "unity/Assets/Shaders/NpcReveal.shader.meta",
+      "bytes": 148,
+      "sha256": "9e1fa5cee9f3ae16b45bd985d2adb36f8d15cb607f08186acd48672b500af309"
+    },
+    {
+      "path": "unity/Assets/WebGLTemplates.meta",
+      "bytes": 172,
+      "sha256": "ca9879934e41473c475b098eaa5748fc16c334e121b5b5efa3bdf1488568cd17"
+    },
+    {
+      "path": "unity/Assets/WebGLTemplates/simus_city.meta",
+      "bytes": 172,
+      "sha256": "d4e870b36be516a136dc244df3929c1e1d8de2369fbd85ef5d291712007f5b22"
+    },
+    {
+      "path": "unity/Assets/WebGLTemplates/simus_city/bridge.js",
+      "bytes": 3512,
+      "sha256": "0f3b72662cc12879951e99d3a23ee22c26eb7b981c5b694115a7f8a01044521c"
+    },
+    {
+      "path": "unity/Assets/WebGLTemplates/simus_city/bridge.js.meta",
+      "bytes": 155,
+      "sha256": "e013ab6e8ba00dff2fcbfa4586fb84f8b0cfc077b029441c5982784fa664da47"
+    },
+    {
+      "path": "unity/Assets/WebGLTemplates/simus_city/index.html",
+      "bytes": 1590,
+      "sha256": "9353c04ca3452cd1279be54acb2814f587c11e021ea5a688c4462e0386ec8f32"
+    },
+    {
+      "path": "unity/Assets/WebGLTemplates/simus_city/index.html.meta",
+      "bytes": 155,
+      "sha256": "6d02bc052ce012ae33d2655b5ac3dd975e3153a6cf6b4885d6a8b463901b821a"
+    },
+    {
+      "path": "unity/Assets/WebGLTemplates/simus_preview.meta",
+      "bytes": 77,
+      "sha256": "a864c84caf46c020508015bd9c5a1b7fa5c99f56b09deb17f3a5c3264c4bd41a"
+    },
+    {
+      "path": "unity/Assets/WebGLTemplates/simus_preview/index.html",
+      "bytes": 2311,
+      "sha256": "89a4f718d678f4bd5fb57adf06fe433886366749721e817bd03f4099a3a3a080"
+    },
+    {
+      "path": "unity/Assets/WebGLTemplates/simus_preview/index.html.meta",
+      "bytes": 60,
+      "sha256": "a9832bbe55d90d3c1f71e8dd3919a95a308e28899ea1b0a05a8deb52812ee0d2"
+    },
+    {
+      "path": "unity/Assets/department_store_v2.meta",
+      "bytes": 172,
+      "sha256": "1ac746354c2e26648c6286483c6ee59a8a8a898bb34d4ecfc4a754d2eeed59c1"
+    },
+    {
+      "path": "unity/Assets/department_store_v2/SIMUS_Department_Store_v2.blend",
+      "bytes": 362062,
+      "sha256": "f46360ef1bd0d85c3aeba167244d37f15ac60e9353bd95ad8a9b2d6be2f7dd59"
+    },
+    {
+      "path": "unity/Assets/department_store_v2/SIMUS_Department_Store_v2.blend.meta",
+      "bytes": 2891,
+      "sha256": "22de45ce2e558fccb10652380e78bcaa498a8b2c4ba21b495298d931cbc8d436"
+    },
+    {
+      "path": "unity/Assets/department_store_v2/SIMUS_Department_Store_v2.fbx",
+      "bytes": 263132,
+      "sha256": "18efee1cebc89bd0e48ded53c3b0022902a38369916186c5e01fd94991c80779"
+    },
+    {
+      "path": "unity/Assets/department_store_v2/SIMUS_Department_Store_v2.fbx.meta",
+      "bytes": 2891,
+      "sha256": "a20062a7102676a1ba6a2ba36458297a4fbc5dbbe7394b89725b0cfb093f030f"
+    },
+    {
+      "path": "unity/Assets/department_store_v2/SIMUS_Department_Store_v2.glb",
+      "bytes": 553248,
+      "sha256": "c7b500d3e4f3fd09b38bafa0849db5be82913ae5a314aa1605db9e2e6e39c96d"
+    },
+    {
+      "path": "unity/Assets/department_store_v2/SIMUS_Department_Store_v2.glb.meta",
+      "bytes": 155,
+      "sha256": "2009a44563dfa9a04125210aec9f63ce89c922b571cc838626b13c8933c0974a"
+    },
+    {
+      "path": "unity/Assets/department_store_v2/SIMUS_Department_Store_v2_Preview.png",
+      "bytes": 1797390,
+      "sha256": "34076c056119522fa99c39e975e5edd428ea590060e698fdc5c80b77eb0ff772"
+    },
+    {
+      "path": "unity/Assets/department_store_v2/SIMUS_Department_Store_v2_Preview.png.meta",
+      "bytes": 2652,
+      "sha256": "4ab91844804813436d57d2bf71908af904b45b32430ab1ff92320dd993628d2c"
+    },
+    {
+      "path": "unity/Assets/department_store_v2/\uc0ac\uc6a9\uc548\ub0b4.md",
+      "bytes": 1807,
+      "sha256": "30b57f35501cb7c20bf7f2afd39438c75906994d8b8bdd33306432758d8cb972"
+    },
+    {
+      "path": "unity/Assets/department_store_v2/\uc0ac\uc6a9\uc548\ub0b4.md.meta",
+      "bytes": 158,
+      "sha256": "7a0d955e1722b71560cb58915d72a4c062845a0d700abeee79ab7cbf4e326122"
+    },
+    {
+      "path": "unity/Packages/manifest.json",
+      "bytes": 293,
+      "sha256": "7203654c363623edcea4c49c6b4cff2646cdd2d39814f334ed68e7b12e3fb5b0"
+    },
+    {
+      "path": "unity/Packages/packages-lock.json",
+      "bytes": 1330,
+      "sha256": "3d040834d9cc3841475245f2dea1afa293104542b35191ce9ed77a1c22cfc318"
+    },
+    {
+      "path": "unity/ProjectSettings/AudioManager.asset",
+      "bytes": 523,
+      "sha256": "9543c41dbfc7d3951217c4dd9481ed026eb8e529b85ecf4463969a0fea747729"
+    },
+    {
+      "path": "unity/ProjectSettings/ClusterInputManager.asset",
+      "bytes": 114,
+      "sha256": "40e65dd214bf254955d2c8829ca8ce2130fd3510485560ce012e9a1ddd93e623"
+    },
+    {
+      "path": "unity/ProjectSettings/DynamicsManager.asset",
+      "bytes": 1574,
+      "sha256": "d102dd312ef330f5e5ca255c070fb34f68f59ec633d1e9fd67e2f2f6f88f66c8"
+    },
+    {
+      "path": "unity/ProjectSettings/EditorBuildSettings.asset",
+      "bytes": 319,
+      "sha256": "2cd022cef03df022746b9ab3e571ab35ae423c7a10bf896bbef3cd0b4342ca20"
+    },
+    {
+      "path": "unity/ProjectSettings/EditorSettings.asset",
+      "bytes": 1603,
+      "sha256": "06753c21648950aee0013b70f79a9035ac52aec6204d44cc2ac55a84034ad9ca"
+    },
+    {
+      "path": "unity/ProjectSettings/GraphicsSettings.asset",
+      "bytes": 2433,
+      "sha256": "40de98f4d46d02fb08e268ad3a722a00eed7289f4ef6d2e759984b1b4a85d2af"
+    },
+    {
+      "path": "unity/ProjectSettings/InputManager.asset",
+      "bytes": 5816,
+      "sha256": "d0f454ddb880912abcae92e3e12957a7446786ba89e24937e019ff3bbc0d4300"
+    },
+    {
+      "path": "unity/ProjectSettings/MemorySettings.asset",
+      "bytes": 1226,
+      "sha256": "2c9e2339b4fa50f4782840d37dde021508d411b99278614cba335d206edb1738"
+    },
+    {
+      "path": "unity/ProjectSettings/MultiplayerManager.asset",
+      "bytes": 232,
+      "sha256": "ce4075d7a7dd8ac7ffe55de2427692c63f90dae398208bd80cec0f27cbe09f4b"
+    },
+    {
+      "path": "unity/ProjectSettings/NavMeshAreas.asset",
+      "bytes": 1361,
+      "sha256": "7ebbf8f53b8033104e1878b95ca07a28d0954092d81c220f14196a42f651e658"
+    },
+    {
+      "path": "unity/ProjectSettings/PackageManagerSettings.asset",
+      "bytes": 1132,
+      "sha256": "d5193b2bd6fb849b947191069456b8585bc731c6c4728a223b10ce8a0356b533"
+    },
+    {
+      "path": "unity/ProjectSettings/Physics2DSettings.asset",
+      "bytes": 1862,
+      "sha256": "1cfc0c8fbceec604fd7cd2a06c04ff05dddee6335b75c92b0f5715ad80ba9490"
+    },
+    {
+      "path": "unity/ProjectSettings/PresetManager.asset",
+      "bytes": 146,
+      "sha256": "29c125923fe6e29f90190d4fce1c82d660e7051546e2c9d02908d18c9cf2436c"
+    },
+    {
+      "path": "unity/ProjectSettings/ProjectSettings.asset",
+      "bytes": 20465,
+      "sha256": "44dda145df8338d0ac95ab3dbe3cb7759353f44d31c0a60a765b0a9d433e9fd4"
+    },
+    {
+      "path": "unity/ProjectSettings/ProjectVersion.txt",
+      "bytes": 85,
+      "sha256": "7a43a06dfe51c4e3933c5a7848320925ce96e667f8c7736557d13a02007e9860"
+    },
+    {
+      "path": "unity/ProjectSettings/QualitySettings.asset",
+      "bytes": 9802,
+      "sha256": "f1f893b1be47ad2442f58338dd7c860dc1986bb317e2f5bb31084454ffabbf4c"
+    },
+    {
+      "path": "unity/ProjectSettings/TagManager.asset",
+      "bytes": 411,
+      "sha256": "da4b5eefc927f8b91bcf9e56a186d2b852f49d9cbe91d466638d26c79d6a83ce"
+    },
+    {
+      "path": "unity/ProjectSettings/TimeManager.asset",
+      "bytes": 305,
+      "sha256": "3396f52fdc16d445024e01d7a2d99db6f0a37569d1d73c0302e9ffb857d90287"
+    },
+    {
+      "path": "unity/ProjectSettings/UnityConnectSettings.asset",
+      "bytes": 1063,
+      "sha256": "11251dae0356b6f43dd2c67bb511f6b7ecda4e5de425186bba3297e6f3dc1c6f"
+    },
+    {
+      "path": "unity/ProjectSettings/VFXManager.asset",
+      "bytes": 525,
+      "sha256": "2973a6af930e142f62cde00076beda8a3cc3a66d9bfcde7a58ba7d4be2251c26"
+    },
+    {
+      "path": "unity/ProjectSettings/VersionControlSettings.asset",
+      "bytes": 172,
+      "sha256": "e199cdfa6a8f2bf33cfd47e549198f13e3eb2a5099e908fdb4e0f14d939ccc6b"
+    },
+    {
+      "path": "web/.gitignore",
+      "bytes": 480,
+      "sha256": "207e265ff4901f9ad9f96d8ce08530e04f9fc600815472a66d0a446096d654cd"
+    },
+    {
+      "path": "web/AGENTS.md",
+      "bytes": 678,
+      "sha256": "63f2c50380ed6303237cce215ce27af1d620d094c215e28d1b1538a3c070e3bb"
+    },
+    {
+      "path": "web/API.md",
+      "bytes": 16143,
+      "sha256": "089e0817fde66e81a6d9423fa5bd06b011d5cdf0738b46cce751f4f127391453"
+    },
+    {
+      "path": "web/CLAUDE.md",
+      "bytes": 11,
+      "sha256": "336cc4fbf19beaada7ccf9986414fa91851a8d7a07dfb3ccbe800a69eed0ab49"
+    },
+    {
+      "path": "web/OPERATIONS.md",
+      "bytes": 7242,
+      "sha256": "ec79030aed08af46e064230e72d4c889a89752adb0322fa0a17b29d1e86e0b76"
+    },
+    {
+      "path": "web/README.md",
+      "bytes": 1259,
+      "sha256": "a7ef674ceb49e49048e49752edddced9a426c48b34800e095a641e67014ec185"
+    },
+    {
+      "path": "web/env.example",
+      "bytes": 784,
+      "sha256": "63675117e8c7e35fe0a52168191c0c3c25b06d7020338aa98537bdb9244a3df3"
+    },
+    {
+      "path": "web/eslint.config.mjs",
+      "bytes": 566,
+      "sha256": "df1f73f257215fd0a574bdb20eeebefda0975255e274e32eb84626d6a74adead"
+    },
+    {
+      "path": "web/next.config.ts",
+      "bytes": 421,
+      "sha256": "04fd9b0d7e0788bba6199b1e52b2ed32ff640cc65c33a2fcc12872ac8e86340d"
+    },
+    {
+      "path": "web/package-lock.json",
+      "bytes": 227824,
+      "sha256": "69d1ac69552d8142c2d38a0ecfc0eaec084cc78b772e00de02ee0bc57aca1aa2"
+    },
+    {
+      "path": "web/package.json",
+      "bytes": 710,
+      "sha256": "c3cf56264249acf8d938ffc01ecd362990214d19571dbdc7ceb2ee3f2edb5b13"
+    },
+    {
+      "path": "web/public/characters/custom/npc_01_none.png",
+      "bytes": 194757,
+      "sha256": "22ec3ea7b0a0259ee8329a0004ed0e692d2da3d25c77aba73ac9117da42aec5e"
+    },
+    {
+      "path": "web/public/characters/custom/npc_01_round.png",
+      "bytes": 198292,
+      "sha256": "2bb093f0dfe466aa6ff34320311e7e95ef740549a5d8aa8cb31c18338f37d299"
+    },
+    {
+      "path": "web/public/characters/custom/npc_01_square.png",
+      "bytes": 197867,
+      "sha256": "5e092d978f06443dfaa02007f18ac798a40842f33fc49a15229606490b91503a"
+    },
+    {
+      "path": "web/public/characters/custom/npc_02_none.png",
+      "bytes": 192051,
+      "sha256": "61775e9efdeaac90a9837f215ac40cc75cb411b1cbb38308314e13298c035ed0"
+    },
+    {
+      "path": "web/public/characters/custom/npc_02_round.png",
+      "bytes": 195543,
+      "sha256": "6f260df15f7ab13d19af725d1bd14199d9a89422971a0a525e4d083d78a63c6a"
+    },
+    {
+      "path": "web/public/characters/custom/npc_02_square.png",
+      "bytes": 194858,
+      "sha256": "2d4c929834bfcad44b213c351fa087e391f4efe2c7c26eb004477eb0f4d36ff7"
+    },
+    {
+      "path": "web/public/characters/custom/npc_03_none.png",
+      "bytes": 196759,
+      "sha256": "3e34c934b71362b9ca9c299dc3b694010a90fec39a29f854888acfa68ca7fce7"
+    },
+    {
+      "path": "web/public/characters/custom/npc_03_round.png",
+      "bytes": 199682,
+      "sha256": "e007a0df5da0fa2dcb31d35892785af76ab279f5dc9778fc77a789281053bb2f"
+    },
+    {
+      "path": "web/public/characters/custom/npc_03_square.png",
+      "bytes": 198855,
+      "sha256": "1950ea8d155984fdac66a5b678aa1a08e2108476c2860a1a6a6526c738a004b8"
+    },
+    {
+      "path": "web/public/characters/custom/npc_04_none.png",
+      "bytes": 194827,
+      "sha256": "71092c9b648a417587535e544673a4be267fb79a8a7176d6cbad7def0db0b966"
+    },
+    {
+      "path": "web/public/characters/custom/npc_04_round.png",
+      "bytes": 198848,
+      "sha256": "5d422241317ce1287bed324568e7936ae4a60a5237590fd5e92892c33546af72"
+    },
+    {
+      "path": "web/public/characters/custom/npc_04_square.png",
+      "bytes": 197788,
+      "sha256": "575d5084644c851940a96858d358d2902ef1f954b3a5f30694811f677a7314e2"
+    },
+    {
+      "path": "web/public/characters/custom/npc_05_none.png",
+      "bytes": 192927,
+      "sha256": "96e8e8ee0063938549ea0dc18fa673c6dfe8b4b45dac74e0a4a9a57a2fc0af0d"
+    },
+    {
+      "path": "web/public/characters/custom/npc_05_round.png",
+      "bytes": 196245,
+      "sha256": "6a8b4dc6de04fbd15fd9ad97d3448dadcaa5b5d91d375b9b54f7476d126c21c2"
+    },
+    {
+      "path": "web/public/characters/custom/npc_05_square.png",
+      "bytes": 195368,
+      "sha256": "0feaed9e6069a79c76b8849918ac945902a99f9d88f0331d72d03b916f58ef9d"
+    },
+    {
+      "path": "web/public/characters/custom/npc_06_none.png",
+      "bytes": 193008,
+      "sha256": "b3d78996ae3d8d846623cd858e8741a13907b78a122ebe7b4d9bd3f456ee4596"
+    },
+    {
+      "path": "web/public/characters/custom/npc_06_round.png",
+      "bytes": 196185,
+      "sha256": "5c74af3f82f50e20c3fb62c896d2ce5fa185ca6340a18b3ac6d7272b91749163"
+    },
+    {
+      "path": "web/public/characters/custom/npc_06_square.png",
+      "bytes": 195355,
+      "sha256": "991f2fa369f713aa212e376187311053086a0cda6b8a219313890f6e6db0c83d"
+    },
+    {
+      "path": "web/public/characters/custom/npc_07_none.png",
+      "bytes": 208392,
+      "sha256": "fe83f5905362b24443b7cb957c4db3cfcae035d0ff81f71e352501c3b23fb964"
+    },
+    {
+      "path": "web/public/characters/custom/npc_07_round.png",
+      "bytes": 211495,
+      "sha256": "c1ffc6860001caaa23e4951bca5f33f66be843720b83203618d11a0af255e989"
+    },
+    {
+      "path": "web/public/characters/custom/npc_07_square.png",
+      "bytes": 211059,
+      "sha256": "48c13e04af84058764d7a41ff56df6f914ab8bd11685853d77f88b64e386cfc6"
+    },
+    {
+      "path": "web/public/characters/custom/npc_08_none.png",
+      "bytes": 202981,
+      "sha256": "760b77ba27e5cd17c781bc9f753165cc46e7eaee14c083eaaf96958c05c51209"
+    },
+    {
+      "path": "web/public/characters/custom/npc_08_round.png",
+      "bytes": 205883,
+      "sha256": "6552d0c94166a089dfb90768b0bab6db6ca9223c3c9783a93d89ba2679821c0f"
+    },
+    {
+      "path": "web/public/characters/custom/npc_08_square.png",
+      "bytes": 205470,
+      "sha256": "7e588198d409fda19d15c8eceeaa63a88ca4c4428afa4f1b621f976e987281d8"
+    },
+    {
+      "path": "web/public/characters/custom/npc_09_none.png",
+      "bytes": 195509,
+      "sha256": "786139abd125b1c319e00d70e0e89ef7453326e678c2ee2d838b831b39627294"
+    },
+    {
+      "path": "web/public/characters/custom/npc_09_round.png",
+      "bytes": 198976,
+      "sha256": "55ab7f36462db1ee6ed95916ec37611606571f8d5318625bc51b178b7a18dff6"
+    },
+    {
+      "path": "web/public/characters/custom/npc_09_square.png",
+      "bytes": 198222,
+      "sha256": "892309d4f131147c751d5b0ed237e7ac85233f2ac3c3833955e0244ab826bef6"
+    },
+    {
+      "path": "web/public/characters/custom/npc_10_none.png",
+      "bytes": 197770,
+      "sha256": "5cef8df3834dcbb89f8ac8f10adec4bba9bdd5f28c45f7a4ceda94bf26b4b0c3"
+    },
+    {
+      "path": "web/public/characters/custom/npc_10_round.png",
+      "bytes": 201288,
+      "sha256": "ee1abf2a7c13affd643e32ba7255b0c1b5a89217c232ca3be04616340cca5747"
+    },
+    {
+      "path": "web/public/characters/custom/npc_10_square.png",
+      "bytes": 200681,
+      "sha256": "d039b3c8ebdaa1e62a976225c6a8a057c015ebdaddfd94094f1e0906b1f766a0"
+    },
+    {
+      "path": "web/public/characters/custom/npc_11_none.png",
+      "bytes": 196964,
+      "sha256": "17e35f9259600d67c6ee58cd5437787a3c65259466f418bb3c0dbe8471a2849d"
+    },
+    {
+      "path": "web/public/characters/custom/npc_11_round.png",
+      "bytes": 200186,
+      "sha256": "4e872616a3acdc989601540a8e57ba5a6114e2418fe615721b69512b777b9493"
+    },
+    {
+      "path": "web/public/characters/custom/npc_11_square.png",
+      "bytes": 199441,
+      "sha256": "ec1a246bc9f9e9a04d0595c806720e18cb21b11604f5dca12f4f3f2dae611f9c"
+    },
+    {
+      "path": "web/public/characters/custom/npc_12_none.png",
+      "bytes": 191460,
+      "sha256": "043b1ffa3bd3a14e2d2e692e1d99022fbd788303a673ef01801aff036ed005cc"
+    },
+    {
+      "path": "web/public/characters/custom/npc_12_round.png",
+      "bytes": 195373,
+      "sha256": "03aa4fc1d7bef12e8b5f625bb9ea9ef34b976f48106b521ea30d95f382c04ad7"
+    },
+    {
+      "path": "web/public/characters/custom/npc_12_square.png",
+      "bytes": 194465,
+      "sha256": "6c5528f7f5559f44a10bd8870c28ce4ba20c72478fbd2db5bccf1ccd1557cc9a"
+    },
+    {
+      "path": "web/public/characters/custom/npc_13_none.png",
+      "bytes": 189777,
+      "sha256": "ebedf584dd35cc659fcc46aa587c61d1c86783e08aa169d44bc1594f0d29dc7d"
+    },
+    {
+      "path": "web/public/characters/custom/npc_13_round.png",
+      "bytes": 194099,
+      "sha256": "bcede2e7cb046baa79d9f481d26272ead1e574bfae10acf97244ce0a08fc5136"
+    },
+    {
+      "path": "web/public/characters/custom/npc_13_square.png",
+      "bytes": 193062,
+      "sha256": "b2b25b0f12ffa7ba41550b5fb4e44987670a1b0aac0a8f60acf9ed4c5fc2f4fd"
+    },
+    {
+      "path": "web/public/characters/custom/npc_14_none.png",
+      "bytes": 196438,
+      "sha256": "fb3a7f3f1b43c960e24b976f564645a7087f2670abd9712df4217cb65ab84620"
+    },
+    {
+      "path": "web/public/characters/custom/npc_14_round.png",
+      "bytes": 200428,
+      "sha256": "23c5368aa5d958920a18be88d81fa7bad31968aa5202b9d9fe2b2ccae7c8d69a"
+    },
+    {
+      "path": "web/public/characters/custom/npc_14_square.png",
+      "bytes": 199434,
+      "sha256": "2a37ec3c7e4edfaae7f638f9ae738d8fa7317bca7a629cd49fc10626ea6a8de3"
+    },
+    {
+      "path": "web/public/characters/custom/npc_15_none.png",
+      "bytes": 192939,
+      "sha256": "80033876df9dcf1807ced8c2683b4e482eef10377e36dbd9d733c1f56716fb5f"
+    },
+    {
+      "path": "web/public/characters/custom/npc_15_round.png",
+      "bytes": 196224,
+      "sha256": "e08558514d8b2f55590d6715ef8e846e753c216c0b4ee6e2e48b3cd0d80e4722"
+    },
+    {
+      "path": "web/public/characters/custom/npc_15_square.png",
+      "bytes": 195415,
+      "sha256": "f3eacc95bdab0332ef7fc91aa8d1ec296a64b579efee44d81388f768df481493"
+    },
+    {
+      "path": "web/public/characters/custom/npc_16_none.png",
+      "bytes": 194843,
+      "sha256": "2dea9693570108e0d96412eb174d3664d1412ade6b9714b920a2ccdf8260b9b5"
+    },
+    {
+      "path": "web/public/characters/custom/npc_16_round.png",
+      "bytes": 198329,
+      "sha256": "dd039ee19072557ed150031bb4121d79279676daad066362ead70827e8a3ddb3"
+    },
+    {
+      "path": "web/public/characters/custom/npc_16_square.png",
+      "bytes": 197786,
+      "sha256": "10263ab4231048c651e597d5d79edd4156164de59ec634e8ca1370164c32d4fb"
+    },
+    {
+      "path": "web/public/characters/npc_01.png",
+      "bytes": 183004,
+      "sha256": "7cb906d95f898264457d631d518d486a832dd99e583b8eb8a093a13831be25b8"
+    },
+    {
+      "path": "web/public/characters/npc_02.png",
+      "bytes": 181153,
+      "sha256": "496594e06609538e0f8eeb43c484a06be6dc0ad8a2f3481382bd67e3f8e2e9b0"
+    },
+    {
+      "path": "web/public/characters/npc_03.png",
+      "bytes": 181104,
+      "sha256": "75667655035710ed7a84b1c50da0ba9275679e30252e72873c663c22fa29f586"
+    },
+    {
+      "path": "web/public/characters/npc_04.png",
+      "bytes": 183402,
+      "sha256": "c4c5de41bf01efd2098b0f7c00f7e1c74bd4335edd04a90604df3d3d6f7e3d7c"
+    },
+    {
+      "path": "web/public/characters/npc_05.png",
+      "bytes": 179298,
+      "sha256": "c7f80e6baf1f188cbadd0e6eefd5950ed7388a44ba80a388076ee9ba216b056f"
+    },
+    {
+      "path": "web/public/characters/npc_06.png",
+      "bytes": 180641,
+      "sha256": "ea1db1ffe4fc3106b9c51d26b171f93203598af613ee093b3aee9a7d414b722a"
+    },
+    {
+      "path": "web/public/characters/npc_07.png",
+      "bytes": 190066,
+      "sha256": "0bbc9d062957990303a5972d9a370a867cb315902fd2e480497d9b2cd7c1e6e3"
+    },
+    {
+      "path": "web/public/characters/npc_08.png",
+      "bytes": 185486,
+      "sha256": "b4ad4f4bfc681064c7498fe41d561b6838c49749d8adcfae0f61ac1a3a4168af"
+    },
+    {
+      "path": "web/public/characters/npc_09.png",
+      "bytes": 183857,
+      "sha256": "a16b005dbf5f415eac074cb3e0e23f62cd1eb5f375e2b3b8f22b408f190239c0"
+    },
+    {
+      "path": "web/public/characters/npc_10.png",
+      "bytes": 183804,
+      "sha256": "8a54abd17fefb819a4466b5983b2f3b7379d2854c7b762a8af2a689fb28b0fb4"
+    },
+    {
+      "path": "web/public/characters/npc_11.png",
+      "bytes": 182936,
+      "sha256": "7cf4045b4e147969be8fd660d0f60c63e131a141394185ed867136abcc3e027f"
+    },
+    {
+      "path": "web/public/characters/npc_12.png",
+      "bytes": 179587,
+      "sha256": "233c8c4adca2c958cfef800f50fd5beb246f43a379e1c1a471134398c6b98a9c"
+    },
+    {
+      "path": "web/public/characters/npc_13.png",
+      "bytes": 176208,
+      "sha256": "518b9efcb751657ac43da5976a65846bcb2a92c3c3fcd952d1ba2834658524b0"
+    },
+    {
+      "path": "web/public/characters/npc_14.png",
+      "bytes": 184059,
+      "sha256": "9dcb48c6251d77d4df28ef7de633f121299c747e5d6bee286628c1a7744a0fd2"
+    },
+    {
+      "path": "web/public/characters/npc_15.png",
+      "bytes": 177945,
+      "sha256": "10c96a1a49f430d039dd950bf72cfd6e9f3a03171e2b457d074d54d9249f9d5d"
+    },
+    {
+      "path": "web/public/characters/npc_16.png",
+      "bytes": 178284,
+      "sha256": "6e3da18b9327723a22c3cf39ddea6eacc0fce2afcad2c70a087a017735f2b34d"
+    },
+    {
+      "path": "web/public/file.svg",
+      "bytes": 391,
+      "sha256": "2b67812c325c199a02536cdbeea0c593a72f707d323b72ee3e08dbab06753bd4"
+    },
+    {
+      "path": "web/public/globe.svg",
+      "bytes": 1035,
+      "sha256": "b614b9bf183925957661ac851498fe1d8029fd43a62fbfed86f9e2624a57e7cf"
+    },
+    {
+      "path": "web/public/next.svg",
+      "bytes": 1375,
+      "sha256": "55995dfad6ecb4945a1e856ddca03c5e16aa5bf13fd21b4df6a74ae79357bcfc"
+    },
+    {
+      "path": "web/public/push-sw.js",
+      "bytes": 996,
+      "sha256": "ef99d75fe199d1fa9b432e74841070bb3f7394f24d0faa9abbf64ada41908de0"
+    },
+    {
+      "path": "web/public/vercel.svg",
+      "bytes": 128,
+      "sha256": "f081337b2fee635b455b63275406a3e7f39d6a014e25ad90dab5a67e62a12ac4"
+    },
+    {
+      "path": "web/public/window.svg",
+      "bytes": 385,
+      "sha256": "644768c4aaeb4767bce293344eeb0c125fb804a94d801440424072202d85e3a1"
+    },
+    {
+      "path": "web/scripts/demo-auth.mjs",
+      "bytes": 1271,
+      "sha256": "fefaedc94e976ecd34b9626ba697b48c27c32947a420013ed1d8db5c49babf3d"
+    },
+    {
+      "path": "web/scripts/deploy-unity.mjs",
+      "bytes": 2210,
+      "sha256": "492f77e096b75fbb0d54490186831036b9da2f44ed97768d550dfdb7bca24126"
+    },
+    {
+      "path": "web/src/app/admin/CreateSession.tsx",
+      "bytes": 3480,
+      "sha256": "74b3cbeb355a984c326ee9b7988d5ba7bfc9d4916e2c22a259ee80198b10114c"
+    },
+    {
+      "path": "web/src/app/admin/admin.module.css",
+      "bytes": 3815,
+      "sha256": "1e850c3bf58f9ffe1a94f2079615bd9c13467e3878df68434804243185161104"
+    },
+    {
+      "path": "web/src/app/admin/page.tsx",
+      "bytes": 6956,
+      "sha256": "b4504e2d886217f423b91c5c3b99157826e456e47e3660bc2e15c5550d9d8ef1"
+    },
+    {
+      "path": "web/src/app/api/admin/sessions/[id]/end/route.ts",
+      "bytes": 805,
+      "sha256": "78467cf0396331892699a621f596eff7cc33b84b8dac97a46dd9e184593b45ac"
+    },
+    {
+      "path": "web/src/app/api/admin/sessions/[id]/event-locations/route.ts",
+      "bytes": 2835,
+      "sha256": "5ca7576c53efcaf92e15283e21caef6f70a48aa10f73d161d93a338b784990e4"
+    },
+    {
+      "path": "web/src/app/api/admin/sessions/[id]/npc-motion/route.ts",
+      "bytes": 1235,
+      "sha256": "666476f0c6d86bb1fcbf99c485105dd582c1629dc22c3bf99a12468104fa8d3e"
+    },
+    {
+      "path": "web/src/app/api/admin/sessions/[id]/start/route.ts",
+      "bytes": 797,
+      "sha256": "98f52a75f86e8045704de75ac1aebc14472e8397a6dcbb75cb5e6279740974e0"
+    },
+    {
+      "path": "web/src/app/api/admin/sessions/route.ts",
+      "bytes": 1874,
+      "sha256": "82b268e75647dcbe7319adf8e53b8f6e36cc10b818a4ae2bf4f3e64076431ef0"
+    },
+    {
+      "path": "web/src/app/api/choices/route.ts",
+      "bytes": 6893,
+      "sha256": "ace6a10f6a10d3bbb0b262ed8395c23a0dc481bd20dee6c18826aef51a76999e"
+    },
+    {
+      "path": "web/src/app/api/city-state/route.ts",
+      "bytes": 1295,
+      "sha256": "867b32dd0f2a368179e724cbfea249bd3b275836a2f052ffeeed2c0cf7f59780"
+    },
+    {
+      "path": "web/src/app/api/health/route.ts",
+      "bytes": 844,
+      "sha256": "7a7bacb8c462fd24de0860bffbef72409c06b6c2c5aff8d8b18dfbcbfc9cc191"
+    },
+    {
+      "path": "web/src/app/api/internal/sessions/reconcile/route.ts",
+      "bytes": 604,
+      "sha256": "c472c6cad34dcd2de41d71c1ab1e590196f0202b39eb8f755b6bb21cff744e20"
+    },
+    {
+      "path": "web/src/app/api/participants/route.ts",
+      "bytes": 2831,
+      "sha256": "0e193b076e2a8bd2df0970deb1b61d7469c183479c5bdbb4f6dc5759e0d28f5a"
+    },
+    {
+      "path": "web/src/app/api/push/config/route.ts",
+      "bytes": 264,
+      "sha256": "a934b757157996061074574e0c9439d5081722b65d5a916f8faa09e05e66a3df"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/department-statistics/route.ts",
+      "bytes": 5696,
+      "sha256": "9e40ba2178e3674d93b548e9e6e6da49763ed0af80c06b1ab253fb6c5880bf82"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/department/route.ts",
+      "bytes": 3627,
+      "sha256": "dd89a9cd1b7104bebcf2c507c669eb695307c52320b66249549272b43bf0fb29"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/event/route.ts",
+      "bytes": 846,
+      "sha256": "22187a82b8c894d7cb751d5011558957abca49cd97a0f8d750457f2390c66e9a"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/join/route.ts",
+      "bytes": 1080,
+      "sha256": "4be77b92efc02e0b17c3d43a8e630bcb967b111292b0c67531ce658005dc4b5c"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/npc-positions/route.ts",
+      "bytes": 1236,
+      "sha256": "b6d583f74a9ede306192f5c9b8c9fc25a483df3a57513e9eb7a4049154fa269a"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/npc/route.ts",
+      "bytes": 688,
+      "sha256": "e9c34ed9b7d62aca243789eb6567a22ed9a2f39e8f9fb88c66ec7253d5c47fc0"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/npcs/route.ts",
+      "bytes": 487,
+      "sha256": "540561ba83103ef891e262cc5471dc14da88486e8cf8421d79651e94af8959d2"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/profile/route.ts",
+      "bytes": 3416,
+      "sha256": "612832ae0cd2f61bfcbe48f4f47526696148101a714e76b084eb3fa4588ddcb7"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/push-subscription/route.ts",
+      "bytes": 4339,
+      "sha256": "1d268d25e9130161c2e0ab6f024f663c810936fd5c2513d8bf3751297b24436a"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/responses/route.ts",
+      "bytes": 1564,
+      "sha256": "84cd47639e34f04f5acdc782092d23a38f6dd27d52b53a972dda2e4cd1f0e68a"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/result-link/route.ts",
+      "bytes": 1534,
+      "sha256": "396b01e28f97b620244ddc60a08f8690b81b2de3c3936d766e4d1201ac79de50"
+    },
+    {
+      "path": "web/src/app/api/sessions/[id]/result/route.ts",
+      "bytes": 799,
+      "sha256": "e4e3eb40a60ab826c8377696e36d22d2465ac5175685af2a1d87e2510e66beff"
+    },
+    {
+      "path": "web/src/app/api/sessions/current/route.ts",
+      "bytes": 1026,
+      "sha256": "28a7f97d08645c1230f3984a4c0d2c8639f345c4e91e87dd5a70c524ff3ae2d7"
+    },
+    {
+      "path": "web/src/app/api/shared-result/route.ts",
+      "bytes": 1170,
+      "sha256": "9fcc71446356d094100f1e3d1f6ceaaa7306c7e985ddd5cabdadc3132ab48d57"
+    },
+    {
+      "path": "web/src/app/components/CityStats.module.css",
+      "bytes": 405,
+      "sha256": "a3becc9f13ada077a9763bb1ac36410e839b2c1290dead8c0411492f948bb0a5"
+    },
+    {
+      "path": "web/src/app/components/CityStats.tsx",
+      "bytes": 1990,
+      "sha256": "6b11f4a1e63ea76a20351c92a6ec31ee3fb28814ad9b54bd8436d413b51285f9"
+    },
+    {
+      "path": "web/src/app/favicon.ico",
+      "bytes": 25931,
+      "sha256": "2b8ad2d33455a8f736fc3a8ebf8f0bdea8848ad4c0db48a2833bd0f9cd775932"
+    },
+    {
+      "path": "web/src/app/globals.css",
+      "bytes": 697,
+      "sha256": "e1c0289930d17ef10122ec7347f09b03f84e3d51dbbe982785f7316c00e49c08"
+    },
+    {
+      "path": "web/src/app/layout.tsx",
+      "bytes": 416,
+      "sha256": "0f8c7344624507ffe2e62b98671b562e0591f3c4dbc4a574931b713921b1076a"
+    },
+    {
+      "path": "web/src/app/manifest.ts",
+      "bytes": 312,
+      "sha256": "16c46b59ea06010fbaafb0259955437301b28e5905806f106184a6fe463f1d64"
+    },
+    {
+      "path": "web/src/app/page.module.css",
+      "bytes": 2204,
+      "sha256": "8423bb56be6457f07bde42b2cc9fb8c7af6072d197d0b9d71d099e8873e46ce3"
+    },
+    {
+      "path": "web/src/app/page.tsx",
+      "bytes": 1137,
+      "sha256": "63909f850b416b9813466779e8a1a28fadd4078ee2d2ad0bd445bb07a13787bc"
+    },
+    {
+      "path": "web/src/app/participate/CitizenCard.module.css",
+      "bytes": 3126,
+      "sha256": "0ac02b1e5f5632394dba908252f1f0e400f44bcc79917e261b6ce0a6f33b628c"
+    },
+    {
+      "path": "web/src/app/participate/CitizenCard.tsx",
+      "bytes": 2631,
+      "sha256": "8ac0bda334a6e01c6a59e1501024a4d59ac0e1c707c5e31e3d199d6f23c47c82"
+    },
+    {
+      "path": "web/src/app/participate/CityTrack.tsx",
+      "bytes": 6053,
+      "sha256": "17ccc230538b89f6089294ef4771b02e84ef4736d4b0c5d423139d782e465545"
+    },
+    {
+      "path": "web/src/app/participate/ProfileEntry.module.css",
+      "bytes": 8395,
+      "sha256": "dee14eac1ec54105f6e27c4f13a25042dff0e38d7045efc158aae09e3125630f"
+    },
+    {
+      "path": "web/src/app/participate/ProfileEntry.tsx",
+      "bytes": 13197,
+      "sha256": "ffb9349a20cfb4de88e5c33b0c97bbffc857605a39667ef935ebf81240ad7cf0"
+    },
+    {
+      "path": "web/src/app/participate/PushOptIn.tsx",
+      "bytes": 3054,
+      "sha256": "691b5820a07e85d00fea0fedab4134c781fa4c355eec75f8ee2053ac793f1117"
+    },
+    {
+      "path": "web/src/app/participate/SituationCard.tsx",
+      "bytes": 2759,
+      "sha256": "12ec20a01f29deb8aa20cb7c40c83f1e06c74e3687762c93c51515d48f19a12d"
+    },
+    {
+      "path": "web/src/app/participate/UnityCity.tsx",
+      "bytes": 6515,
+      "sha256": "bb1f76d3e904575dada40711c62d0ab13c2cf7d128029848f42a5fe278ef3c27"
+    },
+    {
+      "path": "web/src/app/participate/npc-motion.ts",
+      "bytes": 2509,
+      "sha256": "7b349b9e23acfdc8e29e4b83f2da4ed775e0bd0a8736a211b8973c0270f2815f"
+    },
+    {
+      "path": "web/src/app/participate/page.tsx",
+      "bytes": 7814,
+      "sha256": "dfb350a27c4ae4f56987c9a00dec20382e113375e0edbfa8fbcfe80fb0ee45d5"
+    },
+    {
+      "path": "web/src/app/participate/participate.module.css",
+      "bytes": 7767,
+      "sha256": "393f426b02fb2f68c2b6d5d9b1a3077f783f571eb4e567d99a4dc7fe74612bfa"
+    },
+    {
+      "path": "web/src/app/participate/pending.ts",
+      "bytes": 1241,
+      "sha256": "1bcffd5039c6936dccded598dfb56d4daabf4be73d9b43ac4811b80be8f22a1e"
+    },
+    {
+      "path": "web/src/app/participate/types.ts",
+      "bytes": 1473,
+      "sha256": "168d4422ad11bf72bcabf033da4ae40410d2037bd6cd7bd287b765d82c9758ba"
+    },
+    {
+      "path": "web/src/app/participate/unity-bridge.ts",
+      "bytes": 1957,
+      "sha256": "f45acd49ca17a5407985fa09c7f8da2e240c02fab5ea48bdb678f07ef1c64703"
+    },
+    {
+      "path": "web/src/app/participate/useParticipation.ts",
+      "bytes": 11585,
+      "sha256": "7f06a87ebbad87afd53c3aed6687dec8c14f86a166be513e55a46096c996c35e"
+    },
+    {
+      "path": "web/src/app/result/[id]/ResultClient.tsx",
+      "bytes": 7904,
+      "sha256": "9dd7229dbee68d286ba6f93f0f03d7b1d91eae781da2511bc3eb3c29f255cb83"
+    },
+    {
+      "path": "web/src/app/result/[id]/page.tsx",
+      "bytes": 219,
+      "sha256": "3f67ab31e85d1d49232d865a94e4c13fe9065ef125535507dfa3913590c17428"
+    },
+    {
+      "path": "web/src/app/result/[id]/result.module.css",
+      "bytes": 3368,
+      "sha256": "f38a1c8753cca77496c2c80d210f0e57ad11ef34947747cafea4be410a294cea"
+    },
+    {
+      "path": "web/src/app/result/alignment-names.ts",
+      "bytes": 320,
+      "sha256": "f5621f8c5e6f36eb0189ce92c6287b1dd1721612700ee0ac513aa5dbf14fc801"
+    },
+    {
+      "path": "web/src/app/result/request.ts",
+      "bytes": 1072,
+      "sha256": "0662a67973dd8b9828b1ad18d759cb57a86cd98d2600012cdac3de788c11dc53"
+    },
+    {
+      "path": "web/src/app/shared-result/page.tsx",
+      "bytes": 4565,
+      "sha256": "86b3433b642c888bd6ba23b878395fe3ec1e3afaab01ca12cb69171e31c320f9"
+    },
+    {
+      "path": "web/src/app/statistics/[id]/StatisticsClient.tsx",
+      "bytes": 5100,
+      "sha256": "d4573ac08043ace3d7b6034633abe1a68e78dc9fad95b697ec6cae8932942320"
+    },
+    {
+      "path": "web/src/app/statistics/[id]/page.tsx",
+      "bytes": 211,
+      "sha256": "ffa90c2e7d8631b09f9dbb86ca44fa43c2ca134bf7af6a10fa0517efc203b5ce"
+    },
+    {
+      "path": "web/src/app/statistics/[id]/statistics.module.css",
+      "bytes": 1758,
+      "sha256": "4d3afbc1fe33f7e6b54b2ea9f9c721c5beaad2457ea583e780ebd667a4089a99"
+    },
+    {
+      "path": "web/src/app/unity/UnityPreview.tsx",
+      "bytes": 3149,
+      "sha256": "c3f034b3f56bf67bc384d04081d60829737434ba21ad33bebea27aca014e31b7"
+    },
+    {
+      "path": "web/src/app/unity/page.tsx",
+      "bytes": 729,
+      "sha256": "33a7ebccc9c8f7199cbfe29a62f4829cd75450367532a4f0990b868610482e57"
+    },
+    {
+      "path": "web/src/app/unity/unity.module.css",
+      "bytes": 1241,
+      "sha256": "91f068bddd10c71ddd05582b4f4cd56a1833799b3aae831166e3bce71f62f3cc"
+    },
+    {
+      "path": "web/src/instrumentation.ts",
+      "bytes": 703,
+      "sha256": "2135fe204673d685176dbd9d05f1679bc4e4ffb731bbecd612c9720dffa902ab"
+    },
+    {
+      "path": "web/src/lib/admin-auth.ts",
+      "bytes": 3130,
+      "sha256": "22d3ad47563818668e53a4b3d370b9efb661d43ca63c91fa99ff7e327f19f246"
+    },
+    {
+      "path": "web/src/lib/admin-session-readiness.ts",
+      "bytes": 3897,
+      "sha256": "47b62b80e36de844b560017ee017b187a81e26d95f6c0aac1822edb9db946ec4"
+    },
+    {
+      "path": "web/src/lib/api.ts",
+      "bytes": 4953,
+      "sha256": "aad000c34310296c18f75cd283ae564e3dadfd4e6cbf370635b71911ad081a09"
+    },
+    {
+      "path": "web/src/lib/citizen-characters.ts",
+      "bytes": 3323,
+      "sha256": "3fda02e93330eed3b71e40c911b3684bee8a4ad6710d980c4ef6f921665b479e"
+    },
+    {
+      "path": "web/src/lib/common-event.ts",
+      "bytes": 1180,
+      "sha256": "79c36b472b33ae4bb6145171f8685e297b7d5978fdf3ad22674b3fdefcb75a4d"
+    },
+    {
+      "path": "web/src/lib/db.ts",
+      "bytes": 398,
+      "sha256": "0f09eff94b1d50c4003b175729e4b4e03480ced5b90c65499ba4488f527e53d2"
+    },
+    {
+      "path": "web/src/lib/npc-events.ts",
+      "bytes": 11954,
+      "sha256": "a8baa2887dac58f7f81458ff0e7e5def7503087f133a638779d0175b543f6fcb"
+    },
+    {
+      "path": "web/src/lib/npc-position-sync.ts",
+      "bytes": 3099,
+      "sha256": "2ab32cb9ce960d359380d4653ca70acf51c9fdabf45c7fcc4e8deafd8d21789d"
+    },
+    {
+      "path": "web/src/lib/participant-npcs.ts",
+      "bytes": 4817,
+      "sha256": "f5cb003e8ccfaa78c9ae91c78d53dd1c250b5f80097a2898a484ca79a81bab91"
+    },
+    {
+      "path": "web/src/lib/participant-profiles.ts",
+      "bytes": 3354,
+      "sha256": "25aea2fb25632d53b7a2b1140f376b534bcd6e2edece8bff09bfdef1f06c3453"
+    },
+    {
+      "path": "web/src/lib/participant-results.ts",
+      "bytes": 1735,
+      "sha256": "5119605b0371d20b617dbf54ffe01e21a9f97c608f4de6ca5781272ed9582d10"
+    },
+    {
+      "path": "web/src/lib/push-delivery.ts",
+      "bytes": 2648,
+      "sha256": "c9f8ba2c26837379b5eee027069eed64935714960e99d771afdc2fb7b6fc1ac3"
+    },
+    {
+      "path": "web/src/lib/session-creation.ts",
+      "bytes": 4649,
+      "sha256": "19d04bf53ce517d36105d62335ad1488c5b1c3386b4b2666a60bf286374336db"
+    },
+    {
+      "path": "web/src/lib/session-lifecycle.ts",
+      "bytes": 12714,
+      "sha256": "96f7da7e43f669cfd090be5869087b0be6bb8076b24853cc16f4cabd3a4c583c"
+    },
+    {
+      "path": "web/src/lib/session-rules.ts",
+      "bytes": 3841,
+      "sha256": "8c6c86463130050f2242c95bced872429c6c4f07be3bcb6c913a94e181bc93e2"
+    },
+    {
+      "path": "web/tests/api.integration.mjs",
+      "bytes": 5132,
+      "sha256": "08ec3f32882d185835be87e27051ed7ac9a55bc9712f12463ddf7dcb92afc042"
+    },
+    {
+      "path": "web/tests/department-statistics.integration.mjs",
+      "bytes": 4493,
+      "sha256": "487ab8e02c2e5b1aa5ada6ec35bd02d98b335b30726b5f3ef897200cc6f97b77"
+    },
+    {
+      "path": "web/tests/departments.integration.mjs",
+      "bytes": 7356,
+      "sha256": "04001325b7d0306193dc20929ec78fbcb97d81cb971a1b5d07ea1c609d2cf9ed"
+    },
+    {
+      "path": "web/tests/event-browser.mjs",
+      "bytes": 7661,
+      "sha256": "a1e2f902c1a54fdd9a59877847580ff59150f6d32a7f81c20d6b5a12f0c85ad1"
+    },
+    {
+      "path": "web/tests/event-fixture.mjs",
+      "bytes": 2688,
+      "sha256": "3af8b8b93cfd07d95c69c143472fa32f883132723fde4686dbf0925aeed6c609"
+    },
+    {
+      "path": "web/tests/exhibition-content.integration.mjs",
+      "bytes": 2440,
+      "sha256": "4d4059d629d64ff989f3ce6b88c50db3959b9b71694092d9d8bea3110127906a"
+    },
+    {
+      "path": "web/tests/isolated-browser.mjs",
+      "bytes": 6716,
+      "sha256": "61210e17d4d781e37c5fba88eea243f6c803527549efa361980c45c99eca8680"
+    },
+    {
+      "path": "web/tests/isolated-flow.mjs",
+      "bytes": 12350,
+      "sha256": "a6cf3b3c9d8ef44e13a3d250ae241cd1333e25c4440108ab8e1a506118318ba7"
+    },
+    {
+      "path": "web/tests/isolated-runner.mjs",
+      "bytes": 13393,
+      "sha256": "e96b16a1a6f12990ea2f6a0bffb7fceb2d9e54244eecf5f0ca301e703c4af5a7"
+    },
+    {
+      "path": "web/tests/mobile-panel.mjs",
+      "bytes": 3226,
+      "sha256": "3f6adab56068f8257447b4983fde875a1b6387ba75a870034f77c50c6457299b"
+    },
+    {
+      "path": "web/tests/npc-events.integration.mjs",
+      "bytes": 15082,
+      "sha256": "d3c66208f09970938760d4ba00fe70c0f6d5132ca8efab970d385f6734bd49bc"
+    },
+    {
+      "path": "web/tests/npc-positions.integration.mjs",
+      "bytes": 5936,
+      "sha256": "c7726b1150a2860bae138651e2db25fc3ce836d8d3d516b6d163d10654675741"
+    },
+    {
+      "path": "web/tests/participant-entry.mjs",
+      "bytes": 920,
+      "sha256": "1abdc4bec7753644110920b3c1c379aab474fa01da908bfb4f426a6d12ec7224"
+    },
+    {
+      "path": "web/tests/profiles.integration.mjs",
+      "bytes": 10718,
+      "sha256": "71517e443a599efa2866245c1c889175761fc34a1cfcde638eae8ec04c1eb339"
+    },
+    {
+      "path": "web/tests/result-links.integration.mjs",
+      "bytes": 6334,
+      "sha256": "b662ac022eb57d902cf8e968561c55d4ffddd071070a33598e27af98ff563c8c"
+    },
+    {
+      "path": "web/tests/result-ui.mjs",
+      "bytes": 6046,
+      "sha256": "60039a26d16a8fa172a9564fb15c728f4696b9d909a558bb10f35f6678a6cacd"
+    },
+    {
+      "path": "web/tests/session-lifecycle.integration.mjs",
+      "bytes": 9018,
+      "sha256": "78275ae3444b32d57132366997fb5af28f2e6acca6201795dd793cc6cba82cc8"
+    },
+    {
+      "path": "web/tests/stage-browser.mjs",
+      "bytes": 601,
+      "sha256": "b22a3c0e8ffbc38f997015730bba703215ebab45af837ded2a568779a5a60ca3"
+    },
+    {
+      "path": "web/tests/stage-integration.mjs",
+      "bytes": 8682,
+      "sha256": "cd7670744fdd333c04bbdd940b4e4d9562a2ee4f2fe016d17785d90538392daf"
+    },
+    {
+      "path": "web/tests/unity-bridge.test.mjs",
+      "bytes": 1772,
+      "sha256": "88f47ebebdea7b656d5db38c3b81f1034d7c3ffb80ecadc0461f0a804bd71f32"
+    },
+    {
+      "path": "web/tests/unity-fixture.mjs",
+      "bytes": 1424,
+      "sha256": "b32cdb358b3a54017c7d0a7e5f8123b00c4011de33bf880b445ac1d0af8cfb9b"
+    },
+    {
+      "path": "web/tests/unity-preview.mjs",
+      "bytes": 3466,
+      "sha256": "c37d71e07dfc828fd0cbe23707a8377115b2e478665a9f77c5b9ba6111c26cfe"
+    },
+    {
+      "path": "web/tsconfig.json",
+      "bytes": 670,
+      "sha256": "5c51df4c59f4510d8c7dadf07a5c32132228826a3b331da5e286207b4df7ef9c"
+    }
+  ]
+}

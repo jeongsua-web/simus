@@ -1,0 +1,37 @@
+[
+  {
+    "revision": "initial_layout",
+    "layout_sha256": "7c4d66d1cb73da9316b122b251908d56ee08a1889436e5e35a1c7cfa1be5ed8e",
+    "result": "revision_required",
+    "error_counts": {
+      "building_envelope_overlap": 2,
+      "building_vs_carriageway": 2,
+      "finite_width_walk_vs_building": 13,
+      "walk_centerline_unmarked_carriageway_entry": 50,
+      "finite_width_walk_vs_carriageway": 9,
+      "npc_route_nonadjacent_nodes": 8
+    }
+  },
+  {
+    "revision": "second_layout",
+    "layout_sha256": "6651667289e114b7b41d36c72586d93bda289e03b1ef2e5a9ad1b55cf1661bfd",
+    "result": "revision_required",
+    "error_counts": {
+      "crossing_geometry": 55,
+      "edge_geometry_endpoints": 1,
+      "event_or_rest_anchor_outside_walk_network": 2
+    }
+  },
+  {
+    "revision": "geometry_corrected_pre_facilities",
+    "layout_sha256": "9e03d0c805d053a6e34d56240e2292e875695a6e9504570a73106b410ed7c723",
+    "result": "static_design_checks_passed",
+    "error_counts": {}
+  },
+  {
+    "revision": "final_facilities_and_park",
+    "layout_sha256": "3e98ea485bd92dc9c2528d0420b5999a0336f700270c0f73f7630aa214fbd105",
+    "result": "static_design_checks_passed",
+    "error_counts": {}
+  }
+]
