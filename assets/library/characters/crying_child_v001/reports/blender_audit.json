@@ -1,0 +1,158 @@
+{
+  "meshes": {
+    "CHILD_BODY": {
+      "vertices": 142,
+      "triangles": 272,
+      "open_edges": 0,
+      "unweighted": 0
+    },
+    "CHILD_HEAD": {
+      "vertices": 250,
+      "triangles": 488,
+      "open_edges": 0,
+      "unweighted": 0
+    },
+    "CHILD_EYES": {
+      "vertices": 52,
+      "triangles": 96,
+      "open_edges": 0,
+      "unweighted": 0
+    },
+    "CHILD_OUTFIT_TOP": {
+      "vertices": 572,
+      "triangles": 1132,
+      "open_edges": 0,
+      "unweighted": 0
+    },
+    "CHILD_OUTFIT_BOTTOM": {
+      "vertices": 456,
+      "triangles": 900,
+      "open_edges": 0,
+      "unweighted": 0
+    },
+    "CHILD_SHOES": {
+      "vertices": 120,
+      "triangles": 232,
+      "open_edges": 0,
+      "unweighted": 0
+    },
+    "CHILD_EYEBROWS": {
+      "vertices": 48,
+      "triangles": 88,
+      "open_edges": 0,
+      "unweighted": 0
+    },
+    "CHILD_MOUTH": {
+      "vertices": 56,
+      "triangles": 108,
+      "open_edges": 0,
+      "unweighted": 0
+    },
+    "CHILD_NOSE": {
+      "vertices": 222,
+      "triangles": 440,
+      "open_edges": 0,
+      "unweighted": 0
+    },
+    "CHILD_TEARS": {
+      "vertices": 96,
+      "triangles": 184,
+      "open_edges": 0,
+      "unweighted": 0
+    },
+    "CHILD_HAIR": {
+      "vertices": 530,
+      "triangles": 1056,
+      "open_edges": 0,
+      "unweighted": 0
+    },
+    "CHILD_BACKPACK_STRAPS": {
+      "vertices": 288,
+      "triangles": 568,
+      "open_edges": 0,
+      "unweighted": 0
+    },
+    "CHILD_WRISTS": {
+      "vertices": 292,
+      "triangles": 576,
+      "open_edges": 0,
+      "unweighted": 0
+    },
+    "CHILD_BACKPACK": {
+      "vertices": 144,
+      "triangles": 284,
+      "open_edges": 0,
+      "unweighted": 0
+    },
+    "CHILD_BACKPACK_HANDLE": {
+      "vertices": 40,
+      "triangles": 76,
+      "open_edges": 0,
+      "unweighted": 0
+    },
+    "CHILD_BACKPACK_SEAM": {
+      "vertices": 42,
+      "triangles": 80,
+      "open_edges": 0,
+      "unweighted": 0
+    }
+  },
+  "clips": {
+    "CHILD_CRY_LOOP": {
+      "fps": 30,
+      "seconds": 5.0,
+      "loop": true,
+      "frames_checked": 151,
+      "root_max_displacement": 0.0,
+      "foot_max_displacement": 0.0,
+      "loop_matrix_error": 1.959214503959411e-18,
+      "hand_motion_m": 0.5949604305903587
+    },
+    "CHILD_IDLE_SAD": {
+      "fps": 30,
+      "seconds": 4.0,
+      "loop": true,
+      "frames_checked": 121,
+      "root_max_displacement": 0.0,
+      "foot_max_displacement": 0.0,
+      "loop_matrix_error": 1.959214503959411e-18,
+      "hand_motion_m": 1.341104507446289e-07
+    },
+    "CHILD_SOB_STRONG": {
+      "fps": 30,
+      "seconds": 3.0,
+      "loop": true,
+      "frames_checked": 91,
+      "root_max_displacement": 0.0,
+      "foot_max_displacement": 9.778443536465383e-08,
+      "loop_matrix_error": 1.9582353289093013e-18,
+      "hand_motion_m": 0.06546406540187762
+    },
+    "CHILD_WIPE_TEARS": {
+      "fps": 30,
+      "seconds": 2.5,
+      "loop": false,
+      "frames_checked": 76,
+      "root_max_displacement": 0.0,
+      "foot_max_displacement": 0.0,
+      "loop_matrix_error": 1.959214503959411e-18,
+      "hand_motion_m": 0.594871777311835
+    }
+  },
+  "materials": [
+    "Child_Skin",
+    "Child_Eyes",
+    "Child_Top",
+    "Child_Pants",
+    "Child_Shoes",
+    "Child_Hair",
+    "Child_Tears",
+    "Child_Bag"
+  ],
+  "bones": 22,
+  "map_placed": false,
+  "triangles": 6580,
+  "mesh_count": 16,
+  "material_count": 8,
+  "height_m": 1.255
+}
