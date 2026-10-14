@@ -1,0 +1,344 @@
+[
+  {
+    "name": "HAP_PLANTER_HEALTHY_01",
+    "vertices": 2326,
+    "polygons": 2682,
+    "route": "REUSED:FLOWERBED_HEALTHY"
+  },
+  {
+    "name": "HAP_PLANTER_WITHERED_01",
+    "vertices": 2326,
+    "polygons": 2682,
+    "route": "REUSED:FLOWERBED_WITHERED"
+  },
+  {
+    "name": "POL_TREE_HEALTHY_01",
+    "vertices": 26,
+    "polygons": 29,
+    "route": "REUSED:TREE_HEALTHY"
+  },
+  {
+    "name": "POL_TREE_WITHERED_01",
+    "vertices": 26,
+    "polygons": 29,
+    "route": "REUSED:TREE_WITHERED"
+  },
+  {
+    "name": "SAF_POLICE_CAR_01",
+    "vertices": 672,
+    "polygons": 726,
+    "route": "REUSED:ILLEGALLY_PARKED_CAR"
+  },
+  {
+    "name": "SAF_CAR_NORMAL_01",
+    "vertices": 664,
+    "polygons": 724,
+    "route": "REUSED:ILLEGALLY_PARKED_CAR"
+  },
+  {
+    "name": "CLN_BIN_NORMAL_01",
+    "vertices": 44,
+    "polygons": 31,
+    "route": "IMPROVED: existing .45 x .52 x .65 bin shell opened; visible fill levels"
+  },
+  {
+    "name": "CLN_GARBAGE_BAG_01",
+    "vertices": 362,
+    "polygons": 360,
+    "route": "REUSED:TRASH_BAG_BLACK"
+  },
+  {
+    "name": "CLN_CARDBOARD_01",
+    "vertices": 64,
+    "polygons": 44,
+    "route": "REUSED:CARDBOARD_STACK"
+  },
+  {
+    "name": "CLN_TRASH_PILE_SMALL_01",
+    "vertices": 846,
+    "polygons": 836,
+    "route": "REUSED:TRASH_PILE_SMALL"
+  },
+  {
+    "name": "CLN_TRASH_PILE_MEDIUM_01",
+    "vertices": 1932,
+    "polygons": 1916,
+    "route": "REUSED:TRASH_PILE_MEDIUM"
+  },
+  {
+    "name": "CLN_TRASH_PILE_LARGE_01",
+    "vertices": 3380,
+    "polygons": 3356,
+    "route": "REUSED:TRASH_PILE_LARGE"
+  },
+  {
+    "name": "POL_ROOFTOP_VENT_01",
+    "vertices": 114,
+    "polygons": 110,
+    "route": "REUSED:VENT_OUTLET"
+  },
+  {
+    "name": "SAF_CCTV_01",
+    "vertices": 122,
+    "polygons": 116,
+    "route": "REUSED:CCTV_KOREAN_POLE"
+  },
+  {
+    "name": "SAF_EMERGENCY_BELL_01",
+    "vertices": 180,
+    "polygons": 192,
+    "route": "REUSED:EMERGENCY_BELL"
+  },
+  {
+    "name": "HAP_DECOR_LIGHTS_01",
+    "vertices": 350,
+    "polygons": 388,
+    "route": "REUSED:DECOR_LIGHTS_ON"
+  },
+  {
+    "name": "HAP_FLAGS_01",
+    "vertices": 77,
+    "polygons": 45,
+    "route": "REUSED:FESTIVAL_FLAGS"
+  },
+  {
+    "name": "SAF_BENCH_NORMAL_01",
+    "vertices": 120,
+    "polygons": 90,
+    "route": "REUSED:BENCH_CLEAN"
+  },
+  {
+    "name": "SAF_BENCH_BROKEN_01",
+    "vertices": 88,
+    "polygons": 66,
+    "route": "REUSED:BENCH_BROKEN"
+  },
+  {
+    "name": "SAF_FENCE_NORMAL_01",
+    "vertices": 224,
+    "polygons": 146,
+    "route": "REUSED:FENCE_NORMAL"
+  },
+  {
+    "name": "SAF_FENCE_BROKEN_01",
+    "vertices": 224,
+    "polygons": 146,
+    "route": "REUSED:FENCE_BENT"
+  },
+  {
+    "name": "SAF_LAMP_NORMAL_01",
+    "vertices": 168,
+    "polygons": 92,
+    "route": "REUSED:LAMP_NORMAL"
+  },
+  {
+    "name": "SAF_LAMP_BROKEN_01",
+    "vertices": 168,
+    "polygons": 92,
+    "route": "REUSED:LAMP_BROKEN_OFF"
+  },
+  {
+    "name": "SAF_FALLEN_BICYCLE_01",
+    "vertices": 1448,
+    "polygons": 1278,
+    "route": "REUSED:FALLEN_BICYCLE"
+  },
+  {
+    "name": "POL_GRASS_HEALTHY_01",
+    "vertices": 62,
+    "polygons": 80,
+    "route": "REUSED:HEALTHY_GRASS"
+  },
+  {
+    "name": "POL_GRASS_BROWN_01",
+    "vertices": 62,
+    "polygons": 80,
+    "route": "REUSED:BROWN_GRASS"
+  },
+  {
+    "name": "HAP_PLANTER_EMPTY_01",
+    "vertices": 168,
+    "polygons": 27,
+    "route": "MODIFIED:FLOWERBED_HEALTHY"
+  },
+  {
+    "name": "HAP_BANNER_ACTIVE_01",
+    "vertices": 4,
+    "polygons": 1,
+    "route": "NEW"
+  },
+  {
+    "name": "HAP_BANNER_FADED_01",
+    "vertices": 4,
+    "polygons": 1,
+    "route": "NEW"
+  },
+  {
+    "name": "HAP_SIGN_CLOSED_01",
+    "vertices": 4,
+    "polygons": 1,
+    "route": "NEW"
+  },
+  {
+    "name": "HAP_SIGN_TEMPORARY_CLOSED_01",
+    "vertices": 4,
+    "polygons": 1,
+    "route": "NEW"
+  },
+  {
+    "name": "SAF_BROKEN_GLASS_DECAL_01",
+    "vertices": 4,
+    "polygons": 1,
+    "route": "NEW"
+  },
+  {
+    "name": "SAF_BROKEN_GLASS_DECAL_02",
+    "vertices": 4,
+    "polygons": 1,
+    "route": "NEW"
+  },
+  {
+    "name": "SAF_BROKEN_GLASS_DECAL_03",
+    "vertices": 4,
+    "polygons": 1,
+    "route": "NEW"
+  },
+  {
+    "name": "CLN_GROUND_STAIN_DUST_01",
+    "vertices": 4,
+    "polygons": 1,
+    "route": "NEW"
+  },
+  {
+    "name": "CLN_GROUND_STAIN_DARK_01",
+    "vertices": 4,
+    "polygons": 1,
+    "route": "NEW"
+  },
+  {
+    "name": "CLN_GROUND_STAIN_SPILL_01",
+    "vertices": 4,
+    "polygons": 1,
+    "route": "NEW"
+  },
+  {
+    "name": "CLN_DRAIN_STAIN_01",
+    "vertices": 4,
+    "polygons": 1,
+    "route": "NEW"
+  },
+  {
+    "name": "SAF_POLICE_LIGHTBAR_01",
+    "vertices": 24,
+    "polygons": 18,
+    "route": "NEW"
+  },
+  {
+    "name": "SAF_DAMAGED_CAR_01",
+    "vertices": 680,
+    "polygons": 732,
+    "route": "MODIFIED:ILLEGALLY_PARKED_CAR"
+  },
+  {
+    "name": "SAF_DAMAGED_CAR_02",
+    "vertices": 680,
+    "polygons": 732,
+    "route": "MODIFIED:ILLEGALLY_PARKED_CAR"
+  },
+  {
+    "name": "CLN_TRASH_PAPER_01",
+    "vertices": 23,
+    "polygons": 28,
+    "route": "NEW"
+  },
+  {
+    "name": "CLN_TRASH_CUP_01",
+    "vertices": 20,
+    "polygons": 12,
+    "route": "NEW"
+  },
+  {
+    "name": "CLN_TRASH_BOTTLE_01",
+    "vertices": 30,
+    "polygons": 22,
+    "route": "NEW"
+  },
+  {
+    "name": "CLN_TRASH_CAN_01",
+    "vertices": 20,
+    "polygons": 12,
+    "route": "NEW"
+  },
+  {
+    "name": "CLN_TRASH_PLASTIC_BAG_01",
+    "vertices": 362,
+    "polygons": 360,
+    "route": "NEW"
+  },
+  {
+    "name": "CLN_TRASH_WRAPPER_01",
+    "vertices": 4,
+    "polygons": 1,
+    "route": "NEW"
+  },
+  {
+    "name": "CLN_GARBAGE_BAG_02",
+    "vertices": 1086,
+    "polygons": 1080,
+    "route": "NEW"
+  },
+  {
+    "name": "CLN_GARBAGE_BAG_GROUP_01",
+    "vertices": 2534,
+    "polygons": 2520,
+    "route": "NEW"
+  },
+  {
+    "name": "CLN_BIN_HALF_01",
+    "vertices": 200,
+    "polygons": 223,
+    "route": "IMPROVED: existing .45 x .52 x .65 bin shell opened; visible fill levels"
+  },
+  {
+    "name": "CLN_BIN_OVERFLOW_01",
+    "vertices": 408,
+    "polygons": 479,
+    "route": "IMPROVED: existing .45 x .52 x .65 bin shell opened; visible fill levels"
+  },
+  {
+    "name": "CLN_BIN_SPILL_01",
+    "vertices": 616,
+    "polygons": 735,
+    "route": "IMPROVED: existing .45 x .52 x .65 bin shell opened; visible fill levels"
+  },
+  {
+    "name": "POL_TREE_DEAD_01",
+    "vertices": 139,
+    "polygons": 92,
+    "route": "MODIFIED:TREE_HEALTHY proportions"
+  },
+  {
+    "name": "SAF_GRAFFITI_DECAL_01",
+    "vertices": 4,
+    "polygons": 1,
+    "route": "IMPROVED: existing abstract graffiti converted to alpha PNG"
+  },
+  {
+    "name": "SAF_GRAFFITI_DECAL_02",
+    "vertices": 4,
+    "polygons": 1,
+    "route": "IMPROVED: existing abstract graffiti converted to alpha PNG"
+  },
+  {
+    "name": "SAF_GRAFFITI_DECAL_03",
+    "vertices": 4,
+    "polygons": 1,
+    "route": "IMPROVED: existing abstract graffiti converted to alpha PNG"
+  },
+  {
+    "name": "SAF_GRAFFITI_DECAL_04",
+    "vertices": 4,
+    "polygons": 1,
+    "route": "IMPROVED: existing abstract graffiti converted to alpha PNG"
+  }
+]

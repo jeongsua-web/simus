@@ -1,0 +1,3941 @@
+{
+  "rules": [
+    {
+      "name": "PLACED_CAMPUS_HAP_PLANTER_EMPTY_01_0",
+      "stat": "HAPPINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "CAMPUS",
+      "group": "PLANTER_00",
+      "asset": "HAP_PLANTER_EMPTY_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_HAP_PLANTER_WITHERED_01_0",
+      "stat": "HAPPINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "CAMPUS",
+      "group": "PLANTER_00",
+      "asset": "HAP_PLANTER_WITHERED_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_HAP_PLANTER_HEALTHY_01_0",
+      "stat": "HAPPINESS",
+      "minimum": 3,
+      "maximum": 5,
+      "region": "CAMPUS",
+      "group": "PLANTER_00",
+      "asset": "HAP_PLANTER_HEALTHY_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_HAP_PLANTER_EMPTY_01_1",
+      "stat": "HAPPINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "CAMPUS",
+      "group": "PLANTER_01",
+      "asset": "HAP_PLANTER_EMPTY_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_HAP_PLANTER_WITHERED_01_1",
+      "stat": "HAPPINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "CAMPUS",
+      "group": "PLANTER_01",
+      "asset": "HAP_PLANTER_WITHERED_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_HAP_PLANTER_HEALTHY_01_1",
+      "stat": "HAPPINESS",
+      "minimum": 3,
+      "maximum": 5,
+      "region": "CAMPUS",
+      "group": "PLANTER_01",
+      "asset": "HAP_PLANTER_HEALTHY_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_HAP_PLANTER_EMPTY_01_2",
+      "stat": "HAPPINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "CAMPUS",
+      "group": "PLANTER_02",
+      "asset": "HAP_PLANTER_EMPTY_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_HAP_PLANTER_WITHERED_01_2",
+      "stat": "HAPPINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "CAMPUS",
+      "group": "PLANTER_02",
+      "asset": "HAP_PLANTER_WITHERED_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_HAP_PLANTER_HEALTHY_01_2",
+      "stat": "HAPPINESS",
+      "minimum": 3,
+      "maximum": 5,
+      "region": "CAMPUS",
+      "group": "PLANTER_02",
+      "asset": "HAP_PLANTER_HEALTHY_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_HAP_PLANTER_EMPTY_01_3",
+      "stat": "HAPPINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "PLANTER_03",
+      "asset": "HAP_PLANTER_EMPTY_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_HAP_PLANTER_WITHERED_01_3",
+      "stat": "HAPPINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "PLANTER_03",
+      "asset": "HAP_PLANTER_WITHERED_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_HAP_PLANTER_HEALTHY_01_3",
+      "stat": "HAPPINESS",
+      "minimum": 3,
+      "maximum": 5,
+      "region": "COMMERCIAL",
+      "group": "PLANTER_03",
+      "asset": "HAP_PLANTER_HEALTHY_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_HAP_PLANTER_EMPTY_01_4",
+      "stat": "HAPPINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "PLANTER_04",
+      "asset": "HAP_PLANTER_EMPTY_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_HAP_PLANTER_WITHERED_01_4",
+      "stat": "HAPPINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "PLANTER_04",
+      "asset": "HAP_PLANTER_WITHERED_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_HAP_PLANTER_HEALTHY_01_4",
+      "stat": "HAPPINESS",
+      "minimum": 3,
+      "maximum": 5,
+      "region": "COMMERCIAL",
+      "group": "PLANTER_04",
+      "asset": "HAP_PLANTER_HEALTHY_01"
+    },
+    {
+      "name": "PLACED_PARK_HAP_PLANTER_EMPTY_01_5",
+      "stat": "HAPPINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "PARK",
+      "group": "PLANTER_05",
+      "asset": "HAP_PLANTER_EMPTY_01"
+    },
+    {
+      "name": "PLACED_PARK_HAP_PLANTER_WITHERED_01_5",
+      "stat": "HAPPINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "PARK",
+      "group": "PLANTER_05",
+      "asset": "HAP_PLANTER_WITHERED_01"
+    },
+    {
+      "name": "PLACED_PARK_HAP_PLANTER_HEALTHY_01_5",
+      "stat": "HAPPINESS",
+      "minimum": 3,
+      "maximum": 5,
+      "region": "PARK",
+      "group": "PLANTER_05",
+      "asset": "HAP_PLANTER_HEALTHY_01"
+    },
+    {
+      "name": "PLACED_PARK_HAP_PLANTER_EMPTY_01_6",
+      "stat": "HAPPINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "PARK",
+      "group": "PLANTER_06",
+      "asset": "HAP_PLANTER_EMPTY_01"
+    },
+    {
+      "name": "PLACED_PARK_HAP_PLANTER_WITHERED_01_6",
+      "stat": "HAPPINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "PARK",
+      "group": "PLANTER_06",
+      "asset": "HAP_PLANTER_WITHERED_01"
+    },
+    {
+      "name": "PLACED_PARK_HAP_PLANTER_HEALTHY_01_6",
+      "stat": "HAPPINESS",
+      "minimum": 3,
+      "maximum": 5,
+      "region": "PARK",
+      "group": "PLANTER_06",
+      "asset": "HAP_PLANTER_HEALTHY_01"
+    },
+    {
+      "name": "PLACED_PARK_HAP_PLANTER_EMPTY_01_7",
+      "stat": "HAPPINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "PARK",
+      "group": "PLANTER_07",
+      "asset": "HAP_PLANTER_EMPTY_01"
+    },
+    {
+      "name": "PLACED_PARK_HAP_PLANTER_WITHERED_01_7",
+      "stat": "HAPPINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "PARK",
+      "group": "PLANTER_07",
+      "asset": "HAP_PLANTER_WITHERED_01"
+    },
+    {
+      "name": "PLACED_PARK_HAP_PLANTER_HEALTHY_01_7",
+      "stat": "HAPPINESS",
+      "minimum": 3,
+      "maximum": 5,
+      "region": "PARK",
+      "group": "PLANTER_07",
+      "asset": "HAP_PLANTER_HEALTHY_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_HAP_BANNER_ACTIVE_01_25",
+      "stat": "HAPPINESS",
+      "minimum": 4,
+      "maximum": 5,
+      "region": "CAMPUS",
+      "group": "BANNER_0",
+      "asset": "HAP_BANNER_ACTIVE_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_HAP_BANNER_FADED_01_26",
+      "stat": "HAPPINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "CAMPUS",
+      "group": "BANNER_0",
+      "asset": "HAP_BANNER_FADED_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_HAP_FLAGS_01_27",
+      "stat": "HAPPINESS",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "HAP_FLAGS_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_HAP_DECOR_LIGHTS_01_28",
+      "stat": "HAPPINESS",
+      "minimum": 4,
+      "maximum": 5,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "HAP_DECOR_LIGHTS_01"
+    },
+    {
+      "name": "PLACED_PARK_HAP_BANNER_ACTIVE_01_29",
+      "stat": "HAPPINESS",
+      "minimum": 4,
+      "maximum": 5,
+      "region": "PARK",
+      "group": "BANNER_1",
+      "asset": "HAP_BANNER_ACTIVE_01"
+    },
+    {
+      "name": "PLACED_PARK_HAP_BANNER_FADED_01_30",
+      "stat": "HAPPINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "PARK",
+      "group": "BANNER_1",
+      "asset": "HAP_BANNER_FADED_01"
+    },
+    {
+      "name": "PLACED_PARK_HAP_FLAGS_01_31",
+      "stat": "HAPPINESS",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "PARK",
+      "group": "",
+      "asset": "HAP_FLAGS_01"
+    },
+    {
+      "name": "PLACED_PARK_HAP_DECOR_LIGHTS_01_32",
+      "stat": "HAPPINESS",
+      "minimum": 4,
+      "maximum": 5,
+      "region": "PARK",
+      "group": "",
+      "asset": "HAP_DECOR_LIGHTS_01"
+    },
+    {
+      "name": "PLACED_PARK_HAP_BANNER_ACTIVE_01_33",
+      "stat": "HAPPINESS",
+      "minimum": 4,
+      "maximum": 5,
+      "region": "PARK",
+      "group": "BANNER_2",
+      "asset": "HAP_BANNER_ACTIVE_01"
+    },
+    {
+      "name": "PLACED_PARK_HAP_BANNER_FADED_01_34",
+      "stat": "HAPPINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "PARK",
+      "group": "BANNER_2",
+      "asset": "HAP_BANNER_FADED_01"
+    },
+    {
+      "name": "PLACED_PARK_HAP_FLAGS_01_35",
+      "stat": "HAPPINESS",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "PARK",
+      "group": "",
+      "asset": "HAP_FLAGS_01"
+    },
+    {
+      "name": "PLACED_PARK_HAP_DECOR_LIGHTS_01_36",
+      "stat": "HAPPINESS",
+      "minimum": 4,
+      "maximum": 5,
+      "region": "PARK",
+      "group": "",
+      "asset": "HAP_DECOR_LIGHTS_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_HAP_SIGN_CLOSED_01_37",
+      "stat": "HAPPINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "HAP_SIGN_CLOSED_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_BROKEN_GLASS_DECAL_01_38",
+      "stat": "SAFETY",
+      "minimum": 3,
+      "maximum": 3,
+      "region": "COMMERCIAL",
+      "group": "GLASS_0",
+      "asset": "SAF_BROKEN_GLASS_DECAL_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_BROKEN_GLASS_DECAL_02_39",
+      "stat": "SAFETY",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "GLASS_0",
+      "asset": "SAF_BROKEN_GLASS_DECAL_02"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_BROKEN_GLASS_DECAL_03_40",
+      "stat": "SAFETY",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "GLASS_0",
+      "asset": "SAF_BROKEN_GLASS_DECAL_03"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_HAP_SIGN_TEMPORARY_CLOSED_01_41",
+      "stat": "HAPPINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "HAP_SIGN_TEMPORARY_CLOSED_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_BROKEN_GLASS_DECAL_01_42",
+      "stat": "SAFETY",
+      "minimum": 3,
+      "maximum": 3,
+      "region": "COMMERCIAL",
+      "group": "GLASS_1",
+      "asset": "SAF_BROKEN_GLASS_DECAL_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_BROKEN_GLASS_DECAL_02_43",
+      "stat": "SAFETY",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "GLASS_1",
+      "asset": "SAF_BROKEN_GLASS_DECAL_02"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_BROKEN_GLASS_DECAL_03_44",
+      "stat": "SAFETY",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "GLASS_1",
+      "asset": "SAF_BROKEN_GLASS_DECAL_03"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_HAP_SIGN_CLOSED_01_45",
+      "stat": "HAPPINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "HAP_SIGN_CLOSED_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_BROKEN_GLASS_DECAL_01_46",
+      "stat": "SAFETY",
+      "minimum": 3,
+      "maximum": 3,
+      "region": "COMMERCIAL",
+      "group": "GLASS_2",
+      "asset": "SAF_BROKEN_GLASS_DECAL_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_BROKEN_GLASS_DECAL_02_47",
+      "stat": "SAFETY",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "GLASS_2",
+      "asset": "SAF_BROKEN_GLASS_DECAL_02"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_BROKEN_GLASS_DECAL_03_48",
+      "stat": "SAFETY",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "GLASS_2",
+      "asset": "SAF_BROKEN_GLASS_DECAL_03"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_HAP_SIGN_TEMPORARY_CLOSED_01_49",
+      "stat": "HAPPINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "HAP_SIGN_TEMPORARY_CLOSED_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_BROKEN_GLASS_DECAL_01_50",
+      "stat": "SAFETY",
+      "minimum": 3,
+      "maximum": 3,
+      "region": "COMMERCIAL",
+      "group": "GLASS_3",
+      "asset": "SAF_BROKEN_GLASS_DECAL_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_BROKEN_GLASS_DECAL_02_51",
+      "stat": "SAFETY",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "GLASS_3",
+      "asset": "SAF_BROKEN_GLASS_DECAL_02"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_BROKEN_GLASS_DECAL_03_52",
+      "stat": "SAFETY",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "GLASS_3",
+      "asset": "SAF_BROKEN_GLASS_DECAL_03"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_HAP_SIGN_CLOSED_01_53",
+      "stat": "HAPPINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "HAP_SIGN_CLOSED_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_BROKEN_GLASS_DECAL_01_54",
+      "stat": "SAFETY",
+      "minimum": 3,
+      "maximum": 3,
+      "region": "COMMERCIAL",
+      "group": "GLASS_4",
+      "asset": "SAF_BROKEN_GLASS_DECAL_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_BROKEN_GLASS_DECAL_02_55",
+      "stat": "SAFETY",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "GLASS_4",
+      "asset": "SAF_BROKEN_GLASS_DECAL_02"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_BROKEN_GLASS_DECAL_03_56",
+      "stat": "SAFETY",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "GLASS_4",
+      "asset": "SAF_BROKEN_GLASS_DECAL_03"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_HAP_SIGN_TEMPORARY_CLOSED_01_57",
+      "stat": "HAPPINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "HAP_SIGN_TEMPORARY_CLOSED_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_BROKEN_GLASS_DECAL_01_58",
+      "stat": "SAFETY",
+      "minimum": 3,
+      "maximum": 3,
+      "region": "COMMERCIAL",
+      "group": "GLASS_5",
+      "asset": "SAF_BROKEN_GLASS_DECAL_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_BROKEN_GLASS_DECAL_02_59",
+      "stat": "SAFETY",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "GLASS_5",
+      "asset": "SAF_BROKEN_GLASS_DECAL_02"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_BROKEN_GLASS_DECAL_03_60",
+      "stat": "SAFETY",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "GLASS_5",
+      "asset": "SAF_BROKEN_GLASS_DECAL_03"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_SAF_GRAFFITI_DECAL_01_61",
+      "stat": "SAFETY",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "RESIDENTIAL",
+      "group": "",
+      "asset": "SAF_GRAFFITI_DECAL_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_SAF_GRAFFITI_DECAL_02_62",
+      "stat": "SAFETY",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "RESIDENTIAL",
+      "group": "",
+      "asset": "SAF_GRAFFITI_DECAL_02"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_SAF_GRAFFITI_DECAL_03_63",
+      "stat": "SAFETY",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "RESIDENTIAL",
+      "group": "",
+      "asset": "SAF_GRAFFITI_DECAL_03"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_SAF_GRAFFITI_DECAL_04_64",
+      "stat": "SAFETY",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "RESIDENTIAL",
+      "group": "",
+      "asset": "SAF_GRAFFITI_DECAL_04"
+    },
+    {
+      "name": "PLACED_CAMPUS_SAF_CCTV_01_65",
+      "stat": "SAFETY",
+      "minimum": 3,
+      "maximum": 5,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "SAF_CCTV_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_SAF_EMERGENCY_BELL_01_66",
+      "stat": "SAFETY",
+      "minimum": 4,
+      "maximum": 5,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "SAF_EMERGENCY_BELL_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_SAF_CCTV_01_67",
+      "stat": "SAFETY",
+      "minimum": 3,
+      "maximum": 5,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "SAF_CCTV_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_SAF_EMERGENCY_BELL_01_68",
+      "stat": "SAFETY",
+      "minimum": 4,
+      "maximum": 5,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "SAF_EMERGENCY_BELL_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_SAF_CCTV_01_69",
+      "stat": "SAFETY",
+      "minimum": 3,
+      "maximum": 5,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "SAF_CCTV_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_SAF_EMERGENCY_BELL_01_70",
+      "stat": "SAFETY",
+      "minimum": 4,
+      "maximum": 5,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "SAF_EMERGENCY_BELL_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_CCTV_01_71",
+      "stat": "SAFETY",
+      "minimum": 3,
+      "maximum": 5,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "SAF_CCTV_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_EMERGENCY_BELL_01_72",
+      "stat": "SAFETY",
+      "minimum": 4,
+      "maximum": 5,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "SAF_EMERGENCY_BELL_01"
+    },
+    {
+      "name": "PLACED_ROAD_SAF_DAMAGED_CAR_01_73",
+      "stat": "SAFETY",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "ROAD",
+      "group": "INCIDENT_CAR_0",
+      "asset": "SAF_DAMAGED_CAR_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_DAMAGED_CAR_02_74",
+      "stat": "SAFETY",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "INCIDENT_CAR_1",
+      "asset": "SAF_DAMAGED_CAR_02"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_POLICE_CAR_01_75",
+      "stat": "SAFETY",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "SAF_POLICE_CAR_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_POLICE_LIGHTBAR_01_76",
+      "stat": "SAFETY",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "SAF_POLICE_LIGHTBAR_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_SAF_POLICE_CAR_01_77",
+      "stat": "SAFETY",
+      "minimum": 4,
+      "maximum": 5,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "SAF_POLICE_CAR_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_SAF_POLICE_LIGHTBAR_01_78",
+      "stat": "SAFETY",
+      "minimum": 4,
+      "maximum": 5,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "SAF_POLICE_LIGHTBAR_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_SAF_FALLEN_BICYCLE_01_79",
+      "stat": "SAFETY",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "SAF_FALLEN_BICYCLE_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_0",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_0",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_CAMPUS_POL_TREE_WITHERED_01_81",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_0",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_POL_TREE_DEAD_01_82",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_0",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_1",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_1",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_CAMPUS_POL_TREE_WITHERED_01_84",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_1",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_POL_TREE_DEAD_01_85",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_1",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_10",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_10",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_WITHERED_01_87",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_10",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_DEAD_01_88",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_10",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_11",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_11",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_WITHERED_01_90",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_11",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_DEAD_01_91",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_11",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_12",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_12",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_WITHERED_01_93",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_12",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_DEAD_01_94",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_12",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_13",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_13",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_WITHERED_01_96",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_13",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_DEAD_01_97",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_13",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_14",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_14",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_WITHERED_01_99",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_14",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_DEAD_01_100",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_14",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_15",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_15",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_WITHERED_01_102",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_15",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_DEAD_01_103",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_15",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_16",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_16",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_WITHERED_01_105",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_16",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_DEAD_01_106",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_16",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_17",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_17",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_WITHERED_01_108",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_17",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_DEAD_01_109",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_17",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_18",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_18",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_WITHERED_01_111",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_18",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_DEAD_01_112",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_18",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_19",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_19",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_WITHERED_01_114",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_19",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_DEAD_01_115",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_19",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_2",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_2",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_CAMPUS_POL_TREE_WITHERED_01_117",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_2",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_POL_TREE_DEAD_01_118",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_2",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_20",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_20",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_WITHERED_01_120",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_20",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_DEAD_01_121",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_20",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_21",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_21",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_WITHERED_01_123",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_21",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_DEAD_01_124",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_21",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_22",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_22",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_WITHERED_01_126",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_22",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_DEAD_01_127",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_22",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_23",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_23",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_ROAD_POL_TREE_WITHERED_01_129",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_23",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_ROAD_POL_TREE_DEAD_01_130",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_23",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_24",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_24",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_ROAD_POL_TREE_WITHERED_01_132",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_24",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_ROAD_POL_TREE_DEAD_01_133",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_24",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_25",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_25",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_ROAD_POL_TREE_WITHERED_01_135",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_25",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_ROAD_POL_TREE_DEAD_01_136",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_25",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_26",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_26",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_ROAD_POL_TREE_WITHERED_01_138",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_26",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_ROAD_POL_TREE_DEAD_01_139",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_26",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_27",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_27",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_ROAD_POL_TREE_WITHERED_01_141",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_27",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_ROAD_POL_TREE_DEAD_01_142",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_27",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_28",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_28",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_ROAD_POL_TREE_WITHERED_01_144",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_28",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_ROAD_POL_TREE_DEAD_01_145",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_28",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_29",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_29",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_ROAD_POL_TREE_WITHERED_01_147",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_29",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_ROAD_POL_TREE_DEAD_01_148",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_29",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_3",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_3",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_CAMPUS_POL_TREE_WITHERED_01_150",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_3",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_POL_TREE_DEAD_01_151",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_3",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_30",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_30",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_ROAD_POL_TREE_WITHERED_01_153",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_30",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_ROAD_POL_TREE_DEAD_01_154",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_30",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_31",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_31",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_ROAD_POL_TREE_WITHERED_01_156",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_31",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_ROAD_POL_TREE_DEAD_01_157",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_31",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_32",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_32",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_ROAD_POL_TREE_WITHERED_01_159",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_32",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_ROAD_POL_TREE_DEAD_01_160",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_TREE_32",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_4",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_4",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_CAMPUS_POL_TREE_WITHERED_01_162",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_4",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_POL_TREE_DEAD_01_163",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_4",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_5",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_5",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_CAMPUS_POL_TREE_WITHERED_01_165",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_5",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_POL_TREE_DEAD_01_166",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_5",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_6",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_6",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_CAMPUS_POL_TREE_WITHERED_01_168",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_6",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_POL_TREE_DEAD_01_169",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_6",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_7",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_7",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_CAMPUS_POL_TREE_WITHERED_01_171",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_7",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_POL_TREE_DEAD_01_172",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "CAMPUS",
+      "group": "D03_UNITY_D03_TREE_7",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_8",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_8",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_WITHERED_01_174",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_8",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_DEAD_01_175",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_8",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_TREE_9",
+      "stat": "POLLUTION",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_9",
+      "asset": "ORIGINAL_HEALTHY_TREE"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_WITHERED_01_177",
+      "stat": "POLLUTION",
+      "minimum": 4,
+      "maximum": 4,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_9",
+      "asset": "POL_TREE_WITHERED_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_POL_TREE_DEAD_01_178",
+      "stat": "POLLUTION",
+      "minimum": 5,
+      "maximum": 5,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_TREE_9",
+      "asset": "POL_TREE_DEAD_01"
+    },
+    {
+      "name": "D03_UNITY_D03_RECYCLE_0",
+      "stat": "CLEANLINESS",
+      "minimum": 4,
+      "maximum": 5,
+      "region": "COMMERCIAL",
+      "group": "D03_UNITY_D03_RECYCLE_0",
+      "asset": "ORIGINAL_BIN"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_BIN_HALF_01_180",
+      "stat": "CLEANLINESS",
+      "minimum": 3,
+      "maximum": 3,
+      "region": "COMMERCIAL",
+      "group": "D03_UNITY_D03_RECYCLE_0",
+      "asset": "CLN_BIN_HALF_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_BIN_OVERFLOW_01_181",
+      "stat": "CLEANLINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "D03_UNITY_D03_RECYCLE_0",
+      "asset": "CLN_BIN_OVERFLOW_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_BIN_SPILL_01_182",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "D03_UNITY_D03_RECYCLE_0",
+      "asset": "CLN_BIN_SPILL_01"
+    },
+    {
+      "name": "D03_UNITY_D03_RECYCLE_1",
+      "stat": "CLEANLINESS",
+      "minimum": 4,
+      "maximum": 5,
+      "region": "COMMERCIAL",
+      "group": "D03_UNITY_D03_RECYCLE_1",
+      "asset": "ORIGINAL_BIN"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_BIN_HALF_01_184",
+      "stat": "CLEANLINESS",
+      "minimum": 3,
+      "maximum": 3,
+      "region": "COMMERCIAL",
+      "group": "D03_UNITY_D03_RECYCLE_1",
+      "asset": "CLN_BIN_HALF_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_BIN_OVERFLOW_01_185",
+      "stat": "CLEANLINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "D03_UNITY_D03_RECYCLE_1",
+      "asset": "CLN_BIN_OVERFLOW_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_BIN_SPILL_01_186",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "D03_UNITY_D03_RECYCLE_1",
+      "asset": "CLN_BIN_SPILL_01"
+    },
+    {
+      "name": "D03_UNITY_D03_RECYCLE_2",
+      "stat": "CLEANLINESS",
+      "minimum": 4,
+      "maximum": 5,
+      "region": "COMMERCIAL",
+      "group": "D03_UNITY_D03_RECYCLE_2",
+      "asset": "ORIGINAL_BIN"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_BIN_HALF_01_188",
+      "stat": "CLEANLINESS",
+      "minimum": 3,
+      "maximum": 3,
+      "region": "COMMERCIAL",
+      "group": "D03_UNITY_D03_RECYCLE_2",
+      "asset": "CLN_BIN_HALF_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_BIN_OVERFLOW_01_189",
+      "stat": "CLEANLINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "D03_UNITY_D03_RECYCLE_2",
+      "asset": "CLN_BIN_OVERFLOW_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_BIN_SPILL_01_190",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "D03_UNITY_D03_RECYCLE_2",
+      "asset": "CLN_BIN_SPILL_01"
+    },
+    {
+      "name": "D03_UNITY_D03_RECYCLE_3",
+      "stat": "CLEANLINESS",
+      "minimum": 4,
+      "maximum": 5,
+      "region": "COMMERCIAL",
+      "group": "D03_UNITY_D03_RECYCLE_3",
+      "asset": "ORIGINAL_BIN"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_BIN_HALF_01_192",
+      "stat": "CLEANLINESS",
+      "minimum": 3,
+      "maximum": 3,
+      "region": "COMMERCIAL",
+      "group": "D03_UNITY_D03_RECYCLE_3",
+      "asset": "CLN_BIN_HALF_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_BIN_OVERFLOW_01_193",
+      "stat": "CLEANLINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "D03_UNITY_D03_RECYCLE_3",
+      "asset": "CLN_BIN_OVERFLOW_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_BIN_SPILL_01_194",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "D03_UNITY_D03_RECYCLE_3",
+      "asset": "CLN_BIN_SPILL_01"
+    },
+    {
+      "name": "D03_UNITY_D03_RECYCLE_4",
+      "stat": "CLEANLINESS",
+      "minimum": 4,
+      "maximum": 5,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_RECYCLE_4",
+      "asset": "ORIGINAL_BIN"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_BIN_HALF_01_196",
+      "stat": "CLEANLINESS",
+      "minimum": 3,
+      "maximum": 3,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_RECYCLE_4",
+      "asset": "CLN_BIN_HALF_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_BIN_OVERFLOW_01_197",
+      "stat": "CLEANLINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_RECYCLE_4",
+      "asset": "CLN_BIN_OVERFLOW_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_BIN_SPILL_01_198",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_RECYCLE_4",
+      "asset": "CLN_BIN_SPILL_01"
+    },
+    {
+      "name": "D03_UNITY_D03_RECYCLE_5",
+      "stat": "CLEANLINESS",
+      "minimum": 4,
+      "maximum": 5,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_RECYCLE_5",
+      "asset": "ORIGINAL_BIN"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_BIN_HALF_01_200",
+      "stat": "CLEANLINESS",
+      "minimum": 3,
+      "maximum": 3,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_RECYCLE_5",
+      "asset": "CLN_BIN_HALF_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_BIN_OVERFLOW_01_201",
+      "stat": "CLEANLINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_RECYCLE_5",
+      "asset": "CLN_BIN_OVERFLOW_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_BIN_SPILL_01_202",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "RESIDENTIAL",
+      "group": "D03_UNITY_D03_RECYCLE_5",
+      "asset": "CLN_BIN_SPILL_01"
+    },
+    {
+      "name": "D03_UNITY_D03_REUSED_BENCH_3",
+      "stat": "SAFETY",
+      "minimum": 3,
+      "maximum": 5,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_REUSED_BENCH_3",
+      "asset": "ORIGINAL_FURNITURE"
+    },
+    {
+      "name": "PLACED_ROAD_SAF_BENCH_BROKEN_01_204",
+      "stat": "SAFETY",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_REUSED_BENCH_3",
+      "asset": "SAF_BENCH_BROKEN_01"
+    },
+    {
+      "name": "D03_UNITY_D03_LAMP_2",
+      "stat": "SAFETY",
+      "minimum": 3,
+      "maximum": 5,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_LAMP_2",
+      "asset": "ORIGINAL_FURNITURE"
+    },
+    {
+      "name": "PLACED_ROAD_SAF_LAMP_BROKEN_01_206",
+      "stat": "SAFETY",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_LAMP_2",
+      "asset": "SAF_LAMP_BROKEN_01"
+    },
+    {
+      "name": "D03_UNITY_D03_LAMP_10",
+      "stat": "SAFETY",
+      "minimum": 3,
+      "maximum": 5,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_LAMP_10",
+      "asset": "ORIGINAL_FURNITURE"
+    },
+    {
+      "name": "PLACED_ROAD_SAF_LAMP_BROKEN_01_208",
+      "stat": "SAFETY",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "ROAD",
+      "group": "D03_UNITY_D03_LAMP_10",
+      "asset": "SAF_LAMP_BROKEN_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_TRASH_PILE_SMALL_01_SLOT_001",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 4,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_SMALL_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_TRASH_PAPER_01_SLOT_002",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 4,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PAPER_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_TRASH_PILE_SMALL_01_SLOT_003",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 4,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_SMALL_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_TRASH_PAPER_01_SLOT_004",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 4,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PAPER_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_TRASH_PILE_SMALL_01_SLOT_005",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 4,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_SMALL_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_TRASH_PAPER_01_SLOT_006",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 4,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PAPER_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_TRASH_PILE_SMALL_01_SLOT_007",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 4,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_SMALL_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_TRASH_PAPER_01_SLOT_008",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 4,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PAPER_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_TRASH_PILE_SMALL_01_SLOT_009",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 4,
+      "region": "RESIDENTIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_SMALL_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_TRASH_PAPER_01_SLOT_010",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 4,
+      "region": "RESIDENTIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PAPER_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_TRASH_PILE_SMALL_01_SLOT_011",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 4,
+      "region": "RESIDENTIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_SMALL_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_TRASH_PAPER_01_SLOT_012",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 4,
+      "region": "RESIDENTIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PAPER_01"
+    },
+    {
+      "name": "PLACED_PARK_CLN_TRASH_PILE_SMALL_01_SLOT_013",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 4,
+      "region": "PARK",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_SMALL_01"
+    },
+    {
+      "name": "PLACED_PARK_CLN_TRASH_PAPER_01_SLOT_014",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 4,
+      "region": "PARK",
+      "group": "",
+      "asset": "CLN_TRASH_PAPER_01"
+    },
+    {
+      "name": "PLACED_PARK_CLN_TRASH_PILE_SMALL_01_SLOT_015",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 4,
+      "region": "PARK",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_SMALL_01"
+    },
+    {
+      "name": "PLACED_PARK_CLN_TRASH_PAPER_01_SLOT_016",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 4,
+      "region": "PARK",
+      "group": "",
+      "asset": "CLN_TRASH_PAPER_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_CLN_TRASH_PILE_SMALL_01_SLOT_017",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 4,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_SMALL_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_CLN_TRASH_PAPER_01_SLOT_018",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 4,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "CLN_TRASH_PAPER_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_CLN_TRASH_PILE_SMALL_01_SLOT_019",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 4,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_SMALL_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_CLN_TRASH_PAPER_01_SLOT_020",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 4,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "CLN_TRASH_PAPER_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_GARBAGE_BAG_01_SLOT_021",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_GARBAGE_BAG_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_TRASH_PILE_MEDIUM_01_SLOT_022",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_MEDIUM_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_GARBAGE_BAG_01_SLOT_023",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_GARBAGE_BAG_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_TRASH_PILE_MEDIUM_01_SLOT_024",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_MEDIUM_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_GARBAGE_BAG_01_SLOT_025",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_GARBAGE_BAG_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_TRASH_PILE_MEDIUM_01_SLOT_026",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_MEDIUM_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_GARBAGE_BAG_01_SLOT_027",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_GARBAGE_BAG_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_TRASH_PILE_MEDIUM_01_SLOT_028",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_MEDIUM_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_GARBAGE_BAG_01_SLOT_029",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "RESIDENTIAL",
+      "group": "",
+      "asset": "CLN_GARBAGE_BAG_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_TRASH_PILE_MEDIUM_01_SLOT_030",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "RESIDENTIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_MEDIUM_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_GARBAGE_BAG_01_SLOT_031",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "RESIDENTIAL",
+      "group": "",
+      "asset": "CLN_GARBAGE_BAG_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_TRASH_PILE_MEDIUM_01_SLOT_032",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "RESIDENTIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_MEDIUM_01"
+    },
+    {
+      "name": "PLACED_PARK_CLN_GARBAGE_BAG_01_SLOT_033",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "PARK",
+      "group": "",
+      "asset": "CLN_GARBAGE_BAG_01"
+    },
+    {
+      "name": "PLACED_PARK_CLN_TRASH_PILE_MEDIUM_01_SLOT_034",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "PARK",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_MEDIUM_01"
+    },
+    {
+      "name": "PLACED_PARK_CLN_GARBAGE_BAG_01_SLOT_035",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "PARK",
+      "group": "",
+      "asset": "CLN_GARBAGE_BAG_01"
+    },
+    {
+      "name": "PLACED_PARK_CLN_TRASH_PILE_MEDIUM_01_SLOT_036",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "PARK",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_MEDIUM_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_CLN_GARBAGE_BAG_01_SLOT_037",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "CLN_GARBAGE_BAG_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_CLN_TRASH_PILE_MEDIUM_01_SLOT_038",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_MEDIUM_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_CLN_GARBAGE_BAG_01_SLOT_039",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "CLN_GARBAGE_BAG_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_CLN_TRASH_PILE_MEDIUM_01_SLOT_040",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 3,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_MEDIUM_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_TRASH_CUP_01_SLOT_041",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_TRASH_CUP_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_CARDBOARD_01_SLOT_042",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_CARDBOARD_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_TRASH_CUP_01_SLOT_043",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_TRASH_CUP_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_CARDBOARD_01_SLOT_044",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_CARDBOARD_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_TRASH_CUP_01_SLOT_045",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_TRASH_CUP_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_CARDBOARD_01_SLOT_046",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_CARDBOARD_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_TRASH_CUP_01_SLOT_047",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_TRASH_CUP_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_CARDBOARD_01_SLOT_048",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_CARDBOARD_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_TRASH_CUP_01_SLOT_049",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "RESIDENTIAL",
+      "group": "",
+      "asset": "CLN_TRASH_CUP_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_CARDBOARD_01_SLOT_050",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "RESIDENTIAL",
+      "group": "",
+      "asset": "CLN_CARDBOARD_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_TRASH_CUP_01_SLOT_051",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "RESIDENTIAL",
+      "group": "",
+      "asset": "CLN_TRASH_CUP_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_CARDBOARD_01_SLOT_052",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "RESIDENTIAL",
+      "group": "",
+      "asset": "CLN_CARDBOARD_01"
+    },
+    {
+      "name": "PLACED_PARK_CLN_TRASH_CUP_01_SLOT_053",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "PARK",
+      "group": "",
+      "asset": "CLN_TRASH_CUP_01"
+    },
+    {
+      "name": "PLACED_PARK_CLN_CARDBOARD_01_SLOT_054",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "PARK",
+      "group": "",
+      "asset": "CLN_CARDBOARD_01"
+    },
+    {
+      "name": "PLACED_PARK_CLN_TRASH_CUP_01_SLOT_055",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "PARK",
+      "group": "",
+      "asset": "CLN_TRASH_CUP_01"
+    },
+    {
+      "name": "PLACED_PARK_CLN_CARDBOARD_01_SLOT_056",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "PARK",
+      "group": "",
+      "asset": "CLN_CARDBOARD_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_CLN_TRASH_CUP_01_SLOT_057",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "CLN_TRASH_CUP_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_CLN_CARDBOARD_01_SLOT_058",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "CLN_CARDBOARD_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_CLN_TRASH_CUP_01_SLOT_059",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "CLN_TRASH_CUP_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_CLN_CARDBOARD_01_SLOT_060",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 2,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "CLN_CARDBOARD_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_TRASH_PILE_LARGE_01_SLOT_061",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_LARGE_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_GARBAGE_BAG_02_SLOT_062",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_GARBAGE_BAG_02"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_TRASH_PILE_LARGE_01_SLOT_063",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_LARGE_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_GARBAGE_BAG_02_SLOT_064",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_GARBAGE_BAG_02"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_TRASH_PILE_LARGE_01_SLOT_065",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_LARGE_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_GARBAGE_BAG_02_SLOT_066",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_GARBAGE_BAG_02"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_TRASH_PILE_LARGE_01_SLOT_067",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_LARGE_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_GARBAGE_BAG_02_SLOT_068",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "",
+      "asset": "CLN_GARBAGE_BAG_02"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_TRASH_PILE_LARGE_01_SLOT_069",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "RESIDENTIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_LARGE_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_GARBAGE_BAG_02_SLOT_070",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "RESIDENTIAL",
+      "group": "",
+      "asset": "CLN_GARBAGE_BAG_02"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_TRASH_PILE_LARGE_01_SLOT_071",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "RESIDENTIAL",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_LARGE_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_GARBAGE_BAG_02_SLOT_072",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "RESIDENTIAL",
+      "group": "",
+      "asset": "CLN_GARBAGE_BAG_02"
+    },
+    {
+      "name": "PLACED_PARK_CLN_TRASH_PILE_LARGE_01_SLOT_073",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "PARK",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_LARGE_01"
+    },
+    {
+      "name": "PLACED_PARK_CLN_GARBAGE_BAG_02_SLOT_074",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "PARK",
+      "group": "",
+      "asset": "CLN_GARBAGE_BAG_02"
+    },
+    {
+      "name": "PLACED_PARK_CLN_TRASH_PILE_LARGE_01_SLOT_075",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "PARK",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_LARGE_01"
+    },
+    {
+      "name": "PLACED_PARK_CLN_GARBAGE_BAG_02_SLOT_076",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "PARK",
+      "group": "",
+      "asset": "CLN_GARBAGE_BAG_02"
+    },
+    {
+      "name": "PLACED_CAMPUS_CLN_TRASH_PILE_LARGE_01_SLOT_077",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_LARGE_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_CLN_GARBAGE_BAG_02_SLOT_078",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "CLN_GARBAGE_BAG_02"
+    },
+    {
+      "name": "PLACED_CAMPUS_CLN_TRASH_PILE_LARGE_01_SLOT_079",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "CLN_TRASH_PILE_LARGE_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_CLN_GARBAGE_BAG_02_SLOT_080",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "CAMPUS",
+      "group": "",
+      "asset": "CLN_GARBAGE_BAG_02"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_GROUND_STAIN_DUST_01_289",
+      "stat": "CLEANLINESS",
+      "minimum": 3,
+      "maximum": 3,
+      "region": "COMMERCIAL",
+      "group": "STAIN_0",
+      "asset": "CLN_GROUND_STAIN_DUST_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_GROUND_STAIN_DARK_01_290",
+      "stat": "CLEANLINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "STAIN_0",
+      "asset": "CLN_GROUND_STAIN_DARK_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_DRAIN_STAIN_01_291",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "STAIN_0",
+      "asset": "CLN_DRAIN_STAIN_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_GROUND_STAIN_DUST_01_292",
+      "stat": "CLEANLINESS",
+      "minimum": 3,
+      "maximum": 3,
+      "region": "COMMERCIAL",
+      "group": "STAIN_1",
+      "asset": "CLN_GROUND_STAIN_DUST_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_GROUND_STAIN_DARK_01_293",
+      "stat": "CLEANLINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "STAIN_1",
+      "asset": "CLN_GROUND_STAIN_DARK_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_DRAIN_STAIN_01_294",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "STAIN_1",
+      "asset": "CLN_DRAIN_STAIN_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_GROUND_STAIN_DUST_01_295",
+      "stat": "CLEANLINESS",
+      "minimum": 3,
+      "maximum": 3,
+      "region": "COMMERCIAL",
+      "group": "STAIN_2",
+      "asset": "CLN_GROUND_STAIN_DUST_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_GROUND_STAIN_DARK_01_296",
+      "stat": "CLEANLINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "STAIN_2",
+      "asset": "CLN_GROUND_STAIN_DARK_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_DRAIN_STAIN_01_297",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "STAIN_2",
+      "asset": "CLN_DRAIN_STAIN_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_GROUND_STAIN_DUST_01_298",
+      "stat": "CLEANLINESS",
+      "minimum": 3,
+      "maximum": 3,
+      "region": "COMMERCIAL",
+      "group": "STAIN_3",
+      "asset": "CLN_GROUND_STAIN_DUST_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_GROUND_STAIN_DARK_01_299",
+      "stat": "CLEANLINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "COMMERCIAL",
+      "group": "STAIN_3",
+      "asset": "CLN_GROUND_STAIN_DARK_01"
+    },
+    {
+      "name": "PLACED_COMMERCIAL_CLN_DRAIN_STAIN_01_300",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "COMMERCIAL",
+      "group": "STAIN_3",
+      "asset": "CLN_DRAIN_STAIN_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_GROUND_STAIN_DUST_01_301",
+      "stat": "CLEANLINESS",
+      "minimum": 3,
+      "maximum": 3,
+      "region": "RESIDENTIAL",
+      "group": "STAIN_4",
+      "asset": "CLN_GROUND_STAIN_DUST_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_GROUND_STAIN_DARK_01_302",
+      "stat": "CLEANLINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "RESIDENTIAL",
+      "group": "STAIN_4",
+      "asset": "CLN_GROUND_STAIN_DARK_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_DRAIN_STAIN_01_303",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "RESIDENTIAL",
+      "group": "STAIN_4",
+      "asset": "CLN_DRAIN_STAIN_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_GROUND_STAIN_DUST_01_304",
+      "stat": "CLEANLINESS",
+      "minimum": 3,
+      "maximum": 3,
+      "region": "RESIDENTIAL",
+      "group": "STAIN_5",
+      "asset": "CLN_GROUND_STAIN_DUST_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_GROUND_STAIN_DARK_01_305",
+      "stat": "CLEANLINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "RESIDENTIAL",
+      "group": "STAIN_5",
+      "asset": "CLN_GROUND_STAIN_DARK_01"
+    },
+    {
+      "name": "PLACED_RESIDENTIAL_CLN_DRAIN_STAIN_01_306",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "RESIDENTIAL",
+      "group": "STAIN_5",
+      "asset": "CLN_DRAIN_STAIN_01"
+    },
+    {
+      "name": "PLACED_PARK_CLN_GROUND_STAIN_DUST_01_307",
+      "stat": "CLEANLINESS",
+      "minimum": 3,
+      "maximum": 3,
+      "region": "PARK",
+      "group": "STAIN_6",
+      "asset": "CLN_GROUND_STAIN_DUST_01"
+    },
+    {
+      "name": "PLACED_PARK_CLN_GROUND_STAIN_DARK_01_308",
+      "stat": "CLEANLINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "PARK",
+      "group": "STAIN_6",
+      "asset": "CLN_GROUND_STAIN_DARK_01"
+    },
+    {
+      "name": "PLACED_PARK_CLN_DRAIN_STAIN_01_309",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "PARK",
+      "group": "STAIN_6",
+      "asset": "CLN_DRAIN_STAIN_01"
+    },
+    {
+      "name": "PLACED_PARK_CLN_GROUND_STAIN_DUST_01_310",
+      "stat": "CLEANLINESS",
+      "minimum": 3,
+      "maximum": 3,
+      "region": "PARK",
+      "group": "STAIN_7",
+      "asset": "CLN_GROUND_STAIN_DUST_01"
+    },
+    {
+      "name": "PLACED_PARK_CLN_GROUND_STAIN_DARK_01_311",
+      "stat": "CLEANLINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "PARK",
+      "group": "STAIN_7",
+      "asset": "CLN_GROUND_STAIN_DARK_01"
+    },
+    {
+      "name": "PLACED_PARK_CLN_DRAIN_STAIN_01_312",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "PARK",
+      "group": "STAIN_7",
+      "asset": "CLN_DRAIN_STAIN_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_CLN_GROUND_STAIN_DUST_01_313",
+      "stat": "CLEANLINESS",
+      "minimum": 3,
+      "maximum": 3,
+      "region": "CAMPUS",
+      "group": "STAIN_8",
+      "asset": "CLN_GROUND_STAIN_DUST_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_CLN_GROUND_STAIN_DARK_01_314",
+      "stat": "CLEANLINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "CAMPUS",
+      "group": "STAIN_8",
+      "asset": "CLN_GROUND_STAIN_DARK_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_CLN_DRAIN_STAIN_01_315",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "CAMPUS",
+      "group": "STAIN_8",
+      "asset": "CLN_DRAIN_STAIN_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_CLN_GROUND_STAIN_DUST_01_316",
+      "stat": "CLEANLINESS",
+      "minimum": 3,
+      "maximum": 3,
+      "region": "CAMPUS",
+      "group": "STAIN_9",
+      "asset": "CLN_GROUND_STAIN_DUST_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_CLN_GROUND_STAIN_DARK_01_317",
+      "stat": "CLEANLINESS",
+      "minimum": 2,
+      "maximum": 2,
+      "region": "CAMPUS",
+      "group": "STAIN_9",
+      "asset": "CLN_GROUND_STAIN_DARK_01"
+    },
+    {
+      "name": "PLACED_CAMPUS_CLN_DRAIN_STAIN_01_318",
+      "stat": "CLEANLINESS",
+      "minimum": 1,
+      "maximum": 1,
+      "region": "CAMPUS",
+      "group": "STAIN_9",
+      "asset": "CLN_DRAIN_STAIN_01"
+    }
+  ],
+  "anchors": [
+    {
+      "name": "FX_INCIDENT_CORDON_01",
+      "stat": "safety",
+      "region": "road",
+      "activation_level": 2,
+      "effect_type": "cordon",
+      "recommended_intensity": 0.5,
+      "notes": "Optional scene boundary; preserve pedestrian clearance."
+    },
+    {
+      "name": "FX_INCIDENT_CORDON_02",
+      "stat": "safety",
+      "region": "commercial",
+      "activation_level": 2,
+      "effect_type": "cordon",
+      "recommended_intensity": 0.5,
+      "notes": "Optional scene boundary; preserve pedestrian clearance."
+    },
+    {
+      "name": "FX_POLICE_LIGHT_RED_03",
+      "stat": "safety",
+      "region": "commercial",
+      "activation_level": 1,
+      "effect_type": "police_light_red",
+      "recommended_intensity": 0.8,
+      "notes": "Flashing for response; steady/off for patrol."
+    },
+    {
+      "name": "FX_POLICE_LIGHT_BLUE_04",
+      "stat": "safety",
+      "region": "commercial",
+      "activation_level": 1,
+      "effect_type": "police_light_blue",
+      "recommended_intensity": 0.8,
+      "notes": "Flashing for response; steady/off for patrol."
+    },
+    {
+      "name": "FX_POLICE_LIGHT_RED_05",
+      "stat": "safety",
+      "region": "campus",
+      "activation_level": 4,
+      "effect_type": "police_light_red",
+      "recommended_intensity": 0.8,
+      "notes": "Flashing for response; steady/off for patrol."
+    },
+    {
+      "name": "FX_POLICE_LIGHT_BLUE_06",
+      "stat": "safety",
+      "region": "campus",
+      "activation_level": 4,
+      "effect_type": "police_light_blue",
+      "recommended_intensity": 0.8,
+      "notes": "Flashing for response; steady/off for patrol."
+    },
+    {
+      "name": "FX_ROOFTOP_VENT_SMOKE_ANCHOR_07",
+      "stat": "pollution",
+      "region": "campus",
+      "activation_level": 4,
+      "effect_type": "smoke",
+      "recommended_intensity": 0.6,
+      "notes": "Connect Unity particles; do not use opaque mesh smoke."
+    },
+    {
+      "name": "FX_ROOFTOP_VENT_SMOKE_ANCHOR_08",
+      "stat": "pollution",
+      "region": "campus",
+      "activation_level": 4,
+      "effect_type": "smoke",
+      "recommended_intensity": 0.6,
+      "notes": "Connect Unity particles; do not use opaque mesh smoke."
+    },
+    {
+      "name": "FX_ROOFTOP_VENT_SMOKE_ANCHOR_09",
+      "stat": "pollution",
+      "region": "campus",
+      "activation_level": 4,
+      "effect_type": "smoke",
+      "recommended_intensity": 0.6,
+      "notes": "Connect Unity particles; do not use opaque mesh smoke."
+    },
+    {
+      "name": "FX_ROOFTOP_VENT_SMOKE_ANCHOR_10",
+      "stat": "pollution",
+      "region": "campus",
+      "activation_level": 4,
+      "effect_type": "smoke",
+      "recommended_intensity": 0.6,
+      "notes": "Connect Unity particles; do not use opaque mesh smoke."
+    },
+    {
+      "name": "FX_VEHICLE_EXHAUST_ANCHOR_11",
+      "stat": "pollution",
+      "region": "road",
+      "activation_level": 4,
+      "effect_type": "exhaust",
+      "recommended_intensity": 0.55,
+      "notes": "Particle emission at the existing car tailpipe."
+    },
+    {
+      "name": "FX_SMOG_GLOBAL_ANCHOR_12",
+      "stat": "pollution",
+      "region": "global",
+      "activation_level": 4,
+      "effect_type": "fog",
+      "recommended_intensity": 0.5,
+      "notes": "Optional global fog; regional values use separate volumes."
+    },
+    {
+      "name": "FX_SMOG_REGION_CAMPUS_13",
+      "stat": "pollution",
+      "region": "campus",
+      "activation_level": 4,
+      "effect_type": "regional_fog",
+      "recommended_intensity": 0.6,
+      "notes": "Unity volume bounds are advisory; not authoritative gameplay region boundaries."
+    },
+    {
+      "name": "FX_SMOG_REGION_COMMERCIAL_14",
+      "stat": "pollution",
+      "region": "commercial",
+      "activation_level": 4,
+      "effect_type": "regional_fog",
+      "recommended_intensity": 0.6,
+      "notes": "Unity volume bounds are advisory; not authoritative gameplay region boundaries."
+    },
+    {
+      "name": "FX_SMOG_REGION_RESIDENTIAL_15",
+      "stat": "pollution",
+      "region": "residential",
+      "activation_level": 4,
+      "effect_type": "regional_fog",
+      "recommended_intensity": 0.6,
+      "notes": "Unity volume bounds are advisory; not authoritative gameplay region boundaries."
+    },
+    {
+      "name": "FX_SMOG_REGION_PARK_16",
+      "stat": "pollution",
+      "region": "park",
+      "activation_level": 4,
+      "effect_type": "regional_fog",
+      "recommended_intensity": 0.6,
+      "notes": "Unity volume bounds are advisory; not authoritative gameplay region boundaries."
+    },
+    {
+      "name": "FX_SMOG_REGION_APARTMENT_17",
+      "stat": "pollution",
+      "region": "apartment",
+      "activation_level": 4,
+      "effect_type": "regional_fog",
+      "recommended_intensity": 0.6,
+      "notes": "Unity volume bounds are advisory; not authoritative gameplay region boundaries."
+    },
+    {
+      "name": "FX_PARK_WATER_MATERIAL_18",
+      "stat": "pollution",
+      "region": "park",
+      "activation_level": 4,
+      "effect_type": "water_material",
+      "recommended_intensity": 0.7,
+      "notes": "Replace only SP_Water material slots on the two existing park ponds."
+    }
+  ],
+  "slots": [
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_001",
+      "object": "PLACED_COMMERCIAL_CLN_TRASH_PILE_SMALL_01_SLOT_001",
+      "region": "COMMERCIAL",
+      "maximum": 4,
+      "position": [
+        -139.2,
+        -151.0,
+        -0.0070146484375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_002",
+      "object": "PLACED_COMMERCIAL_CLN_TRASH_PAPER_01_SLOT_002",
+      "region": "COMMERCIAL",
+      "maximum": 4,
+      "position": [
+        -138.39999999999998,
+        -151.0,
+        -0.0070146484375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_003",
+      "object": "PLACED_COMMERCIAL_CLN_TRASH_PILE_SMALL_01_SLOT_003",
+      "region": "COMMERCIAL",
+      "maximum": 4,
+      "position": [
+        -49.2,
+        -151.0,
+        -0.0070146484375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_004",
+      "object": "PLACED_COMMERCIAL_CLN_TRASH_PAPER_01_SLOT_004",
+      "region": "COMMERCIAL",
+      "maximum": 4,
+      "position": [
+        -48.400000000000006,
+        -151.0,
+        -0.0070146484375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_005",
+      "object": "PLACED_COMMERCIAL_CLN_TRASH_PILE_SMALL_01_SLOT_005",
+      "region": "COMMERCIAL",
+      "maximum": 4,
+      "position": [
+        20.8,
+        -151.0,
+        -0.0070299072265625
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_006",
+      "object": "PLACED_COMMERCIAL_CLN_TRASH_PAPER_01_SLOT_006",
+      "region": "COMMERCIAL",
+      "maximum": 4,
+      "position": [
+        21.6,
+        -151.0,
+        -0.0070299072265625
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_007",
+      "object": "PLACED_COMMERCIAL_CLN_TRASH_PILE_SMALL_01_SLOT_007",
+      "region": "COMMERCIAL",
+      "maximum": 4,
+      "position": [
+        75.8,
+        -151.0,
+        -0.0070299072265625
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_008",
+      "object": "PLACED_COMMERCIAL_CLN_TRASH_PAPER_01_SLOT_008",
+      "region": "COMMERCIAL",
+      "maximum": 4,
+      "position": [
+        76.6,
+        -151.0,
+        -0.0070299072265625
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_RESIDENTIAL_009",
+      "object": "PLACED_RESIDENTIAL_CLN_TRASH_PILE_SMALL_01_SLOT_009",
+      "region": "RESIDENTIAL",
+      "maximum": 4,
+      "position": [
+        -117.2,
+        148.0,
+        -0.0069688720703125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_RESIDENTIAL_010",
+      "object": "PLACED_RESIDENTIAL_CLN_TRASH_PAPER_01_SLOT_010",
+      "region": "RESIDENTIAL",
+      "maximum": 4,
+      "position": [
+        -116.4,
+        148.0,
+        -0.006984130859375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_RESIDENTIAL_011",
+      "object": "PLACED_RESIDENTIAL_CLN_TRASH_PILE_SMALL_01_SLOT_011",
+      "region": "RESIDENTIAL",
+      "maximum": 4,
+      "position": [
+        -46.2,
+        149.0,
+        -0.0069688720703125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_RESIDENTIAL_012",
+      "object": "PLACED_RESIDENTIAL_CLN_TRASH_PAPER_01_SLOT_012",
+      "region": "RESIDENTIAL",
+      "maximum": 4,
+      "position": [
+        -45.400000000000006,
+        149.0,
+        -0.0069688720703125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_PARK_013",
+      "object": "PLACED_PARK_CLN_TRASH_PILE_SMALL_01_SLOT_013",
+      "region": "PARK",
+      "maximum": 4,
+      "position": [
+        -120.2,
+        143.0,
+        -0.0069688720703125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_PARK_014",
+      "object": "PLACED_PARK_CLN_TRASH_PAPER_01_SLOT_014",
+      "region": "PARK",
+      "maximum": 4,
+      "position": [
+        -119.4,
+        143.0,
+        -0.006984130859375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_PARK_015",
+      "object": "PLACED_PARK_CLN_TRASH_PILE_SMALL_01_SLOT_015",
+      "region": "PARK",
+      "maximum": 4,
+      "position": [
+        108.8,
+        137.0,
+        -0.006984130859375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_PARK_016",
+      "object": "PLACED_PARK_CLN_TRASH_PAPER_01_SLOT_016",
+      "region": "PARK",
+      "maximum": 4,
+      "position": [
+        109.6,
+        137.0,
+        -0.006984130859375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_CAMPUS_017",
+      "object": "PLACED_CAMPUS_CLN_TRASH_PILE_SMALL_01_SLOT_017",
+      "region": "CAMPUS",
+      "maximum": 4,
+      "position": [
+        32.8,
+        -110.0,
+        0.18799267578125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_CAMPUS_018",
+      "object": "PLACED_CAMPUS_CLN_TRASH_PAPER_01_SLOT_018",
+      "region": "CAMPUS",
+      "maximum": 4,
+      "position": [
+        33.599999999999994,
+        -110.0,
+        0.1879774169921875
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_CAMPUS_019",
+      "object": "PLACED_CAMPUS_CLN_TRASH_PILE_SMALL_01_SLOT_019",
+      "region": "CAMPUS",
+      "maximum": 4,
+      "position": [
+        52.8,
+        -110.0,
+        0.18799267578125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_CAMPUS_020",
+      "object": "PLACED_CAMPUS_CLN_TRASH_PAPER_01_SLOT_020",
+      "region": "CAMPUS",
+      "maximum": 4,
+      "position": [
+        53.599999999999994,
+        -110.0,
+        0.18799267578125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_021",
+      "object": "PLACED_COMMERCIAL_CLN_GARBAGE_BAG_01_SLOT_021",
+      "region": "COMMERCIAL",
+      "maximum": 3,
+      "position": [
+        -137.6,
+        -151.0,
+        -0.0070146484375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_022",
+      "object": "PLACED_COMMERCIAL_CLN_TRASH_PILE_MEDIUM_01_SLOT_022",
+      "region": "COMMERCIAL",
+      "maximum": 3,
+      "position": [
+        -136.79999999999998,
+        -151.0,
+        -0.0070146484375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_023",
+      "object": "PLACED_COMMERCIAL_CLN_GARBAGE_BAG_01_SLOT_023",
+      "region": "COMMERCIAL",
+      "maximum": 3,
+      "position": [
+        -47.6,
+        -151.0,
+        -0.0070146484375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_024",
+      "object": "PLACED_COMMERCIAL_CLN_TRASH_PILE_MEDIUM_01_SLOT_024",
+      "region": "COMMERCIAL",
+      "maximum": 3,
+      "position": [
+        -46.800000000000004,
+        -151.0,
+        -0.0070146484375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_025",
+      "object": "PLACED_COMMERCIAL_CLN_GARBAGE_BAG_01_SLOT_025",
+      "region": "COMMERCIAL",
+      "maximum": 3,
+      "position": [
+        22.400000000000002,
+        -151.0,
+        -0.0070299072265625
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_026",
+      "object": "PLACED_COMMERCIAL_CLN_TRASH_PILE_MEDIUM_01_SLOT_026",
+      "region": "COMMERCIAL",
+      "maximum": 3,
+      "position": [
+        23.2,
+        -151.0,
+        -0.0070146484375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_027",
+      "object": "PLACED_COMMERCIAL_CLN_GARBAGE_BAG_01_SLOT_027",
+      "region": "COMMERCIAL",
+      "maximum": 3,
+      "position": [
+        77.39999999999999,
+        -151.0,
+        -0.0070299072265625
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_028",
+      "object": "PLACED_COMMERCIAL_CLN_TRASH_PILE_MEDIUM_01_SLOT_028",
+      "region": "COMMERCIAL",
+      "maximum": 3,
+      "position": [
+        78.2,
+        -151.0,
+        -0.0070299072265625
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_RESIDENTIAL_029",
+      "object": "PLACED_RESIDENTIAL_CLN_GARBAGE_BAG_01_SLOT_029",
+      "region": "RESIDENTIAL",
+      "maximum": 3,
+      "position": [
+        -115.60000000000001,
+        148.0,
+        -0.0069688720703125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_RESIDENTIAL_030",
+      "object": "PLACED_RESIDENTIAL_CLN_TRASH_PILE_MEDIUM_01_SLOT_030",
+      "region": "RESIDENTIAL",
+      "maximum": 3,
+      "position": [
+        -114.8,
+        148.0,
+        -0.00695361328125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_RESIDENTIAL_031",
+      "object": "PLACED_RESIDENTIAL_CLN_GARBAGE_BAG_01_SLOT_031",
+      "region": "RESIDENTIAL",
+      "maximum": 3,
+      "position": [
+        -44.6,
+        149.0,
+        -0.0069688720703125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_RESIDENTIAL_032",
+      "object": "PLACED_RESIDENTIAL_CLN_TRASH_PILE_MEDIUM_01_SLOT_032",
+      "region": "RESIDENTIAL",
+      "maximum": 3,
+      "position": [
+        -43.800000000000004,
+        149.0,
+        -0.0069688720703125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_PARK_033",
+      "object": "PLACED_PARK_CLN_GARBAGE_BAG_01_SLOT_033",
+      "region": "PARK",
+      "maximum": 3,
+      "position": [
+        -118.60000000000001,
+        143.0,
+        -0.0069688720703125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_PARK_034",
+      "object": "PLACED_PARK_CLN_TRASH_PILE_MEDIUM_01_SLOT_034",
+      "region": "PARK",
+      "maximum": 3,
+      "position": [
+        -117.8,
+        143.0,
+        -0.006984130859375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_PARK_035",
+      "object": "PLACED_PARK_CLN_GARBAGE_BAG_01_SLOT_035",
+      "region": "PARK",
+      "maximum": 3,
+      "position": [
+        110.39999999999999,
+        137.0,
+        -0.006984130859375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_PARK_036",
+      "object": "PLACED_PARK_CLN_TRASH_PILE_MEDIUM_01_SLOT_036",
+      "region": "PARK",
+      "maximum": 3,
+      "position": [
+        111.2,
+        137.0,
+        -0.006984130859375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_CAMPUS_037",
+      "object": "PLACED_CAMPUS_CLN_GARBAGE_BAG_01_SLOT_037",
+      "region": "CAMPUS",
+      "maximum": 3,
+      "position": [
+        34.4,
+        -110.0,
+        0.1879774169921875
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_CAMPUS_038",
+      "object": "PLACED_CAMPUS_CLN_TRASH_PILE_MEDIUM_01_SLOT_038",
+      "region": "CAMPUS",
+      "maximum": 3,
+      "position": [
+        35.199999999999996,
+        -110.0,
+        0.1879774169921875
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_CAMPUS_039",
+      "object": "PLACED_CAMPUS_CLN_GARBAGE_BAG_01_SLOT_039",
+      "region": "CAMPUS",
+      "maximum": 3,
+      "position": [
+        54.4,
+        -110.0,
+        0.18799267578125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_CAMPUS_040",
+      "object": "PLACED_CAMPUS_CLN_TRASH_PILE_MEDIUM_01_SLOT_040",
+      "region": "CAMPUS",
+      "maximum": 3,
+      "position": [
+        55.199999999999996,
+        -110.0,
+        0.18799267578125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_041",
+      "object": "PLACED_COMMERCIAL_CLN_TRASH_CUP_01_SLOT_041",
+      "region": "COMMERCIAL",
+      "maximum": 2,
+      "position": [
+        -139.2,
+        -150.3,
+        -0.0070146484375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_042",
+      "object": "PLACED_COMMERCIAL_CLN_CARDBOARD_01_SLOT_042",
+      "region": "COMMERCIAL",
+      "maximum": 2,
+      "position": [
+        -138.39999999999998,
+        -150.3,
+        -0.0070146484375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_043",
+      "object": "PLACED_COMMERCIAL_CLN_TRASH_CUP_01_SLOT_043",
+      "region": "COMMERCIAL",
+      "maximum": 2,
+      "position": [
+        -49.2,
+        -150.3,
+        -0.0070299072265625
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_044",
+      "object": "PLACED_COMMERCIAL_CLN_CARDBOARD_01_SLOT_044",
+      "region": "COMMERCIAL",
+      "maximum": 2,
+      "position": [
+        -48.400000000000006,
+        -150.3,
+        -0.0070299072265625
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_045",
+      "object": "PLACED_COMMERCIAL_CLN_TRASH_CUP_01_SLOT_045",
+      "region": "COMMERCIAL",
+      "maximum": 2,
+      "position": [
+        20.8,
+        -150.3,
+        -0.0070146484375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_046",
+      "object": "PLACED_COMMERCIAL_CLN_CARDBOARD_01_SLOT_046",
+      "region": "COMMERCIAL",
+      "maximum": 2,
+      "position": [
+        21.6,
+        -150.3,
+        -0.0070299072265625
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_047",
+      "object": "PLACED_COMMERCIAL_CLN_TRASH_CUP_01_SLOT_047",
+      "region": "COMMERCIAL",
+      "maximum": 2,
+      "position": [
+        75.8,
+        -150.3,
+        -0.0070299072265625
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_048",
+      "object": "PLACED_COMMERCIAL_CLN_CARDBOARD_01_SLOT_048",
+      "region": "COMMERCIAL",
+      "maximum": 2,
+      "position": [
+        76.6,
+        -150.3,
+        -0.0070299072265625
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_RESIDENTIAL_049",
+      "object": "PLACED_RESIDENTIAL_CLN_TRASH_CUP_01_SLOT_049",
+      "region": "RESIDENTIAL",
+      "maximum": 2,
+      "position": [
+        -117.2,
+        148.7,
+        -0.0069688720703125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_RESIDENTIAL_050",
+      "object": "PLACED_RESIDENTIAL_CLN_CARDBOARD_01_SLOT_050",
+      "region": "RESIDENTIAL",
+      "maximum": 2,
+      "position": [
+        -116.4,
+        148.7,
+        -0.0069688720703125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_RESIDENTIAL_051",
+      "object": "PLACED_RESIDENTIAL_CLN_TRASH_CUP_01_SLOT_051",
+      "region": "RESIDENTIAL",
+      "maximum": 2,
+      "position": [
+        -46.2,
+        149.7,
+        -0.0069688720703125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_RESIDENTIAL_052",
+      "object": "PLACED_RESIDENTIAL_CLN_CARDBOARD_01_SLOT_052",
+      "region": "RESIDENTIAL",
+      "maximum": 2,
+      "position": [
+        -45.400000000000006,
+        149.7,
+        -0.0069688720703125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_PARK_053",
+      "object": "PLACED_PARK_CLN_TRASH_CUP_01_SLOT_053",
+      "region": "PARK",
+      "maximum": 2,
+      "position": [
+        -120.2,
+        143.7,
+        -0.0069688720703125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_PARK_054",
+      "object": "PLACED_PARK_CLN_CARDBOARD_01_SLOT_054",
+      "region": "PARK",
+      "maximum": 2,
+      "position": [
+        -119.4,
+        143.7,
+        -0.0069688720703125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_PARK_055",
+      "object": "PLACED_PARK_CLN_TRASH_CUP_01_SLOT_055",
+      "region": "PARK",
+      "maximum": 2,
+      "position": [
+        108.8,
+        137.7,
+        -0.0069993896484375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_PARK_056",
+      "object": "PLACED_PARK_CLN_CARDBOARD_01_SLOT_056",
+      "region": "PARK",
+      "maximum": 2,
+      "position": [
+        109.6,
+        137.7,
+        -0.0069993896484375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_CAMPUS_057",
+      "object": "PLACED_CAMPUS_CLN_TRASH_CUP_01_SLOT_057",
+      "region": "CAMPUS",
+      "maximum": 2,
+      "position": [
+        32.8,
+        -109.3,
+        0.1879774169921875
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_CAMPUS_058",
+      "object": "PLACED_CAMPUS_CLN_CARDBOARD_01_SLOT_058",
+      "region": "CAMPUS",
+      "maximum": 2,
+      "position": [
+        33.599999999999994,
+        -109.3,
+        0.18799267578125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_CAMPUS_059",
+      "object": "PLACED_CAMPUS_CLN_TRASH_CUP_01_SLOT_059",
+      "region": "CAMPUS",
+      "maximum": 2,
+      "position": [
+        52.8,
+        -109.3,
+        0.18799267578125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_CAMPUS_060",
+      "object": "PLACED_CAMPUS_CLN_CARDBOARD_01_SLOT_060",
+      "region": "CAMPUS",
+      "maximum": 2,
+      "position": [
+        53.599999999999994,
+        -109.3,
+        0.18799267578125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_061",
+      "object": "PLACED_COMMERCIAL_CLN_TRASH_PILE_LARGE_01_SLOT_061",
+      "region": "COMMERCIAL",
+      "maximum": 1,
+      "position": [
+        -137.6,
+        -150.3,
+        -0.0070299072265625
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_062",
+      "object": "PLACED_COMMERCIAL_CLN_GARBAGE_BAG_02_SLOT_062",
+      "region": "COMMERCIAL",
+      "maximum": 1,
+      "position": [
+        -136.79999999999998,
+        -150.3,
+        -0.0070146484375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_063",
+      "object": "PLACED_COMMERCIAL_CLN_TRASH_PILE_LARGE_01_SLOT_063",
+      "region": "COMMERCIAL",
+      "maximum": 1,
+      "position": [
+        -47.6,
+        -150.3,
+        -0.007045166015625
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_064",
+      "object": "PLACED_COMMERCIAL_CLN_GARBAGE_BAG_02_SLOT_064",
+      "region": "COMMERCIAL",
+      "maximum": 1,
+      "position": [
+        -46.800000000000004,
+        -150.3,
+        -0.0070146484375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_065",
+      "object": "PLACED_COMMERCIAL_CLN_TRASH_PILE_LARGE_01_SLOT_065",
+      "region": "COMMERCIAL",
+      "maximum": 1,
+      "position": [
+        22.400000000000002,
+        -150.3,
+        -0.0070299072265625
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_066",
+      "object": "PLACED_COMMERCIAL_CLN_GARBAGE_BAG_02_SLOT_066",
+      "region": "COMMERCIAL",
+      "maximum": 1,
+      "position": [
+        23.2,
+        -150.3,
+        -0.0070299072265625
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_067",
+      "object": "PLACED_COMMERCIAL_CLN_TRASH_PILE_LARGE_01_SLOT_067",
+      "region": "COMMERCIAL",
+      "maximum": 1,
+      "position": [
+        77.39999999999999,
+        -150.3,
+        -0.0070299072265625
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_COMMERCIAL_068",
+      "object": "PLACED_COMMERCIAL_CLN_GARBAGE_BAG_02_SLOT_068",
+      "region": "COMMERCIAL",
+      "maximum": 1,
+      "position": [
+        78.2,
+        -150.3,
+        -0.0070299072265625
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_RESIDENTIAL_069",
+      "object": "PLACED_RESIDENTIAL_CLN_TRASH_PILE_LARGE_01_SLOT_069",
+      "region": "RESIDENTIAL",
+      "maximum": 1,
+      "position": [
+        -115.60000000000001,
+        148.7,
+        -0.00695361328125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_RESIDENTIAL_070",
+      "object": "PLACED_RESIDENTIAL_CLN_GARBAGE_BAG_02_SLOT_070",
+      "region": "RESIDENTIAL",
+      "maximum": 1,
+      "position": [
+        -114.8,
+        148.7,
+        -0.006984130859375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_RESIDENTIAL_071",
+      "object": "PLACED_RESIDENTIAL_CLN_TRASH_PILE_LARGE_01_SLOT_071",
+      "region": "RESIDENTIAL",
+      "maximum": 1,
+      "position": [
+        -44.6,
+        149.7,
+        -0.0069688720703125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_RESIDENTIAL_072",
+      "object": "PLACED_RESIDENTIAL_CLN_GARBAGE_BAG_02_SLOT_072",
+      "region": "RESIDENTIAL",
+      "maximum": 1,
+      "position": [
+        -43.800000000000004,
+        149.7,
+        -0.0069688720703125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_PARK_073",
+      "object": "PLACED_PARK_CLN_TRASH_PILE_LARGE_01_SLOT_073",
+      "region": "PARK",
+      "maximum": 1,
+      "position": [
+        -118.60000000000001,
+        143.7,
+        -0.0069688720703125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_PARK_074",
+      "object": "PLACED_PARK_CLN_GARBAGE_BAG_02_SLOT_074",
+      "region": "PARK",
+      "maximum": 1,
+      "position": [
+        -117.8,
+        143.7,
+        -0.0069688720703125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_PARK_075",
+      "object": "PLACED_PARK_CLN_TRASH_PILE_LARGE_01_SLOT_075",
+      "region": "PARK",
+      "maximum": 1,
+      "position": [
+        110.39999999999999,
+        137.7,
+        -0.0069688720703125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_PARK_076",
+      "object": "PLACED_PARK_CLN_GARBAGE_BAG_02_SLOT_076",
+      "region": "PARK",
+      "maximum": 1,
+      "position": [
+        111.2,
+        137.7,
+        -0.0069993896484375
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_CAMPUS_077",
+      "object": "PLACED_CAMPUS_CLN_TRASH_PILE_LARGE_01_SLOT_077",
+      "region": "CAMPUS",
+      "maximum": 1,
+      "position": [
+        34.4,
+        -109.3,
+        0.18799267578125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_CAMPUS_078",
+      "object": "PLACED_CAMPUS_CLN_GARBAGE_BAG_02_SLOT_078",
+      "region": "CAMPUS",
+      "maximum": 1,
+      "position": [
+        35.199999999999996,
+        -109.3,
+        0.18799267578125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_CAMPUS_079",
+      "object": "PLACED_CAMPUS_CLN_TRASH_PILE_LARGE_01_SLOT_079",
+      "region": "CAMPUS",
+      "maximum": 1,
+      "position": [
+        54.4,
+        -109.3,
+        0.18799267578125
+      ]
+    },
+    {
+      "slot": "SLOT_TRASH_CAMPUS_080",
+      "object": "PLACED_CAMPUS_CLN_GARBAGE_BAG_02_SLOT_080",
+      "region": "CAMPUS",
+      "maximum": 1,
+      "position": [
+        55.199999999999996,
+        -109.3,
+        0.18799267578125
+      ]
+    }
+  ],
+  "water": [
+    {
+      "object": "D03_UNITY_D03_PARK_NORTH_7",
+      "slot": 5,
+      "clear": "R02_UNITY_SP_Water",
+      "region": "PARK"
+    },
+    {
+      "object": "D03_UNITY_D03_PARK_GATE",
+      "slot": 9,
+      "clear": "R02_UNITY_SP_Water",
+      "region": "PARK"
+    }
+  ],
+  "defaultStats": {
+    "HAPPINESS": 50,
+    "SAFETY": 50,
+    "CLEANLINESS": 50,
+    "POLLUTION": 50
+  },
+  "regions": [
+    "CAMPUS",
+    "COMMERCIAL",
+    "RESIDENTIAL",
+    "APARTMENT",
+    "PARK",
+    "ROAD"
+  ],
+  "notes": "Placement regions are visual groups, not confirmed simulation region boundaries."
+}

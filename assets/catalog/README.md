@@ -76,3 +76,11 @@
 ## 2026-10-14 독립 시내버스·택시
 
 [시내버스 v001](../library/props/city_bus_v001/README.md) · [택시 v001](../library/props/taxi_v001/README.md). Blender 원본, FBX, 재질·텍스처, 바퀴·문·등화 제어 프리팹 및 LOD0/1을 제작했습니다. received이며 기존 맵에는 배치하지 않았습니다.
+
+## 2026-10-14 독립 재활용 분리수거장
+
+[원본·사용 안내·검수](../library/props/recycle_station_v001/README.md). 기존 정상 통 5개를 재사용하고 지붕·가림막·조명·슬롯을 새로 제작했습니다. 구조물/완성형 FBX·프리팹 제공, 15개 상태 교체 검사. received이며 맵에는 배치하지 않았습니다.
+
+## 2026-10-14 대기환경 시설 원본 접수
+
+[대기오염측정시설](../library/props/air_quality_monitoring_station_v001/README.md) · [미세먼지 알리미 신호등](../library/props/fine_dust_indicator_light_v001/README.md). 받은 Blender 파일을 이름 변경하여 보존했습니다. received, Unity 내보내기 및 맵 배치 미실행.

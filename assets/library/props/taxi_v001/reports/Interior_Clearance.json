@@ -1,0 +1,26 @@
+{
+  "rear_seat_components_adjusted": [
+    {
+      "object": "TAXI_INTERIOR_Interior_LOD0",
+      "part": "rear_bench"
+    },
+    {
+      "object": "TAXI_INTERIOR_Interior_LOD0",
+      "part": "rear_back"
+    },
+    {
+      "object": "TAXI_INTERIOR_Interior_LOD1",
+      "part": "rear_bench"
+    },
+    {
+      "object": "TAXI_INTERIOR_Interior_LOD1",
+      "part": "rear_back"
+    }
+  ],
+  "status_display_shift_m": [
+    0,
+    0.11,
+    -0.015
+  ],
+  "both_lods": true
+}

@@ -1,0 +1,404 @@
+{
+  "passed": true,
+  "assets": [
+    {
+      "name": "HAP_PLANTER_HEALTHY_01",
+      "boundsError": 1.6002306324480742e-07,
+      "materialSlots": 6,
+      "polygons": 16758,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "HAP_PLANTER_WITHERED_01",
+      "boundsError": 1.5986881862772861e-07,
+      "materialSlots": 3,
+      "polygons": 16878,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "POL_TREE_HEALTHY_01",
+      "boundsError": 5.960464477539062e-07,
+      "materialSlots": 2,
+      "polygons": 29,
+      "groundPivotError": 3.869366338449254e-08
+    },
+    {
+      "name": "POL_TREE_WITHERED_01",
+      "boundsError": 5.960464477539062e-07,
+      "materialSlots": 2,
+      "polygons": 29,
+      "groundPivotError": 3.869366338449254e-08
+    },
+    {
+      "name": "SAF_POLICE_CAR_01",
+      "boundsError": 2.541578396630939e-07,
+      "materialSlots": 7,
+      "polygons": 1862,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "SAF_CAR_NORMAL_01",
+      "boundsError": 2.541578396630939e-07,
+      "materialSlots": 6,
+      "polygons": 1860,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "CLN_BIN_NORMAL_01",
+      "boundsError": 6.20294997588644e-08,
+      "materialSlots": 3,
+      "polygons": 31,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "CLN_GARBAGE_BAG_01",
+      "boundsError": 5.960464477539063e-08,
+      "materialSlots": 2,
+      "polygons": 360,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "CLN_CARDBOARD_01",
+      "boundsError": 8.940696716308594e-08,
+      "materialSlots": 1,
+      "polygons": 380,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "CLN_TRASH_PILE_SMALL_01",
+      "boundsError": 5.960464477539063e-08,
+      "materialSlots": 4,
+      "polygons": 836,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "CLN_TRASH_PILE_MEDIUM_01",
+      "boundsError": 5.960464477539063e-08,
+      "materialSlots": 4,
+      "polygons": 1916,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "CLN_TRASH_PILE_LARGE_01",
+      "boundsError": 1.1920928955078125e-07,
+      "materialSlots": 4,
+      "polygons": 3356,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "POL_ROOFTOP_VENT_01",
+      "boundsError": 7.321558825879038e-08,
+      "materialSlots": 1,
+      "polygons": 110,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "SAF_CCTV_01",
+      "boundsError": 0.0017264001071453094,
+      "materialSlots": 3,
+      "polygons": 520,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "SAF_EMERGENCY_BELL_01",
+      "boundsError": 3.954216509782782e-08,
+      "materialSlots": 3,
+      "polygons": 564,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "HAP_DECOR_LIGHTS_01",
+      "boundsError": 3.46451997756958e-07,
+      "materialSlots": 2,
+      "polygons": 388,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "HAP_FLAGS_01",
+      "boundsError": 3.0174851417541504e-07,
+      "materialSlots": 4,
+      "polygons": 45,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "SAF_BENCH_NORMAL_01",
+      "boundsError": 1.4901161193847656e-07,
+      "materialSlots": 2,
+      "polygons": 90,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "SAF_BENCH_BROKEN_01",
+      "boundsError": 1.1920928955078125e-07,
+      "materialSlots": 2,
+      "polygons": 66,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "SAF_FENCE_NORMAL_01",
+      "boundsError": 1.7881393432617188e-07,
+      "materialSlots": 1,
+      "polygons": 146,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "SAF_FENCE_BROKEN_01",
+      "boundsError": 1.7881393432617188e-07,
+      "materialSlots": 1,
+      "polygons": 146,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "SAF_LAMP_NORMAL_01",
+      "boundsError": 3.8743019104003906e-07,
+      "materialSlots": 2,
+      "polygons": 92,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "SAF_LAMP_BROKEN_01",
+      "boundsError": 3.8743019104003906e-07,
+      "materialSlots": 2,
+      "polygons": 92,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "SAF_FALLEN_BICYCLE_01",
+      "boundsError": 1.0522465743179055e-07,
+      "materialSlots": 4,
+      "polygons": 1278,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "POL_GRASS_HEALTHY_01",
+      "boundsError": 0.0,
+      "materialSlots": 1,
+      "polygons": 80,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "POL_GRASS_BROWN_01",
+      "boundsError": 0.0,
+      "materialSlots": 1,
+      "polygons": 80,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "HAP_PLANTER_EMPTY_01",
+      "boundsError": 1.6073707342911803e-07,
+      "materialSlots": 3,
+      "polygons": 27,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "HAP_BANNER_ACTIVE_01",
+      "boundsError": 2.384185791015625e-07,
+      "materialSlots": 1,
+      "polygons": 1,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "HAP_BANNER_FADED_01",
+      "boundsError": 2.384185791015625e-07,
+      "materialSlots": 1,
+      "polygons": 1,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "HAP_SIGN_CLOSED_01",
+      "boundsError": 5.70222340456894e-08,
+      "materialSlots": 1,
+      "polygons": 1,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "HAP_SIGN_TEMPORARY_CLOSED_01",
+      "boundsError": 5.70222340456894e-08,
+      "materialSlots": 1,
+      "polygons": 1,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "SAF_BROKEN_GLASS_DECAL_01",
+      "boundsError": 1.9550481056285207e-07,
+      "materialSlots": 1,
+      "polygons": 1,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "SAF_BROKEN_GLASS_DECAL_02",
+      "boundsError": 1.9550481056285207e-07,
+      "materialSlots": 1,
+      "polygons": 1,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "SAF_BROKEN_GLASS_DECAL_03",
+      "boundsError": 1.9550481056285207e-07,
+      "materialSlots": 1,
+      "polygons": 1,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "CLN_GROUND_STAIN_DUST_01",
+      "boundsError": 2.0146724466485466e-07,
+      "materialSlots": 1,
+      "polygons": 1,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "CLN_GROUND_STAIN_DARK_01",
+      "boundsError": 2.0146724466485466e-07,
+      "materialSlots": 1,
+      "polygons": 1,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "CLN_GROUND_STAIN_SPILL_01",
+      "boundsError": 2.0146724466485466e-07,
+      "materialSlots": 1,
+      "polygons": 1,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "CLN_DRAIN_STAIN_01",
+      "boundsError": 2.0146724466485466e-07,
+      "materialSlots": 1,
+      "polygons": 1,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "SAF_POLICE_LIGHTBAR_01",
+      "boundsError": 7.450580596923828e-08,
+      "materialSlots": 3,
+      "polygons": 18,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "SAF_DAMAGED_CAR_01",
+      "boundsError": 0.00035649538040161133,
+      "materialSlots": 7,
+      "polygons": 2334,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "SAF_DAMAGED_CAR_02",
+      "boundsError": 0.00035649538040161133,
+      "materialSlots": 7,
+      "polygons": 2334,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "CLN_TRASH_PAPER_01",
+      "boundsError": 1.4901161193847656e-08,
+      "materialSlots": 1,
+      "polygons": 28,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "CLN_TRASH_CUP_01",
+      "boundsError": 1.862645149230957e-08,
+      "materialSlots": 1,
+      "polygons": 12,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "CLN_TRASH_BOTTLE_01",
+      "boundsError": 2.9802322387695312e-08,
+      "materialSlots": 1,
+      "polygons": 22,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "CLN_TRASH_CAN_01",
+      "boundsError": 1.862645149230957e-08,
+      "materialSlots": 1,
+      "polygons": 12,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "CLN_TRASH_PLASTIC_BAG_01",
+      "boundsError": 3.725290298461914e-08,
+      "materialSlots": 2,
+      "polygons": 360,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "CLN_TRASH_WRAPPER_01",
+      "boundsError": 2.421438694000244e-08,
+      "materialSlots": 1,
+      "polygons": 1,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "CLN_GARBAGE_BAG_02",
+      "boundsError": 5.960464477539063e-08,
+      "materialSlots": 2,
+      "polygons": 1080,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "CLN_GARBAGE_BAG_GROUP_01",
+      "boundsError": 5.960464477539063e-08,
+      "materialSlots": 2,
+      "polygons": 2520,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "CLN_BIN_HALF_01",
+      "boundsError": 6.20294997588644e-08,
+      "materialSlots": 4,
+      "polygons": 223,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "CLN_BIN_OVERFLOW_01",
+      "boundsError": 6.20294997588644e-08,
+      "materialSlots": 4,
+      "polygons": 479,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "CLN_BIN_SPILL_01",
+      "boundsError": 7.478556085516175e-08,
+      "materialSlots": 4,
+      "polygons": 735,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "POL_TREE_DEAD_01",
+      "boundsError": 5.960464477539062e-07,
+      "materialSlots": 1,
+      "polygons": 92,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "SAF_GRAFFITI_DECAL_01",
+      "boundsError": 1.792127477528993e-07,
+      "materialSlots": 1,
+      "polygons": 1,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "SAF_GRAFFITI_DECAL_02",
+      "boundsError": 1.792127477528993e-07,
+      "materialSlots": 1,
+      "polygons": 1,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "SAF_GRAFFITI_DECAL_03",
+      "boundsError": 1.792127477528993e-07,
+      "materialSlots": 1,
+      "polygons": 1,
+      "groundPivotError": 0.0
+    },
+    {
+      "name": "SAF_GRAFFITI_DECAL_04",
+      "boundsError": 1.792127477528993e-07,
+      "materialSlots": 1,
+      "polygons": 1,
+      "groundPivotError": 0.0
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "protected_exact": true,
+  "clips": [
+    {
+      "clip": "HAPPY_IDLE",
+      "frames_checked": 91,
+      "loop": true,
+      "seam_matrix_error": 1.224646790546622e-18,
+      "min_shoe_height_m": -1.0126736071924825e-07,
+      "root_translation_error_m": 0.0,
+      "contact_drift_or_speed_error_m": 1.661856344552343e-07,
+      "accessory_head_follow_error_m": 2.9802322387695312e-08
+    },
+    {
+      "clip": "HAPPY_WALK",
+      "frames_checked": 31,
+      "loop": true,
+      "seam_matrix_error": 0.0,
+      "min_shoe_height_m": -5.9418375997211115e-08,
+      "root_translation_error_m": 0.0,
+      "contact_drift_or_speed_error_m": 1.93834304811763e-07,
+      "accessory_head_follow_error_m": 1.1920928955078125e-07
+    },
+    {
+      "clip": "HAPPY_CHEER",
+      "frames_checked": 61,
+      "loop": false,
+      "seam_matrix_error": 0.0,
+      "min_shoe_height_m": -1.814216155082704e-08,
+      "root_translation_error_m": 0.0,
+      "contact_drift_or_speed_error_m": 0.0,
+      "accessory_head_follow_error_m": 1.1944189326376765e-07
+    },
+    {
+      "clip": "HAPPY_WAVE",
+      "frames_checked": 61,
+      "loop": false,
+      "seam_matrix_error": 0.0,
+      "min_shoe_height_m": -1.814216155082704e-08,
+      "root_translation_error_m": 0.0,
+      "contact_drift_or_speed_error_m": 0.0,
+      "accessory_head_follow_error_m": 1.1920928955078125e-07
+    },
+    {
+      "clip": "NEUTRAL_IDLE",
+      "frames_checked": 91,
+      "loop": true,
+      "seam_matrix_error": 0.0,
+      "min_shoe_height_m": -8.461624361189024e-07,
+      "root_translation_error_m": 0.0,
+      "contact_drift_or_speed_error_m": 8.963760856720105e-07,
+      "accessory_head_follow_error_m": 1.4901161193847656e-08
+    },
+    {
+      "clip": "NEUTRAL_WALK",
+      "frames_checked": 31,
+      "loop": true,
+      "seam_matrix_error": 0.0,
+      "min_shoe_height_m": -1.4133751058409416e-08,
+      "root_translation_error_m": 0.0,
+      "contact_drift_or_speed_error_m": 2.3402770360156366e-07,
+      "accessory_head_follow_error_m": 0.0
+    },
+    {
+      "clip": "SAD_IDLE",
+      "frames_checked": 121,
+      "loop": true,
+      "seam_matrix_error": 4.898587368981641e-19,
+      "min_shoe_height_m": -3.841880058530478e-08,
+      "root_translation_error_m": 0.0,
+      "contact_drift_or_speed_error_m": 1.3411368446458222e-07,
+      "accessory_head_follow_error_m": 1.228781230931777e-07
+    },
+    {
+      "clip": "SAD_WALK",
+      "frames_checked": 43,
+      "loop": true,
+      "seam_matrix_error": 0.0,
+      "min_shoe_height_m": -8.679925223020746e-09,
+      "root_translation_error_m": 0.0,
+      "contact_drift_or_speed_error_m": 9.628988447557552e-08,
+      "accessory_head_follow_error_m": 1.1944189326376765e-07
+    },
+    {
+      "clip": "SAD_SIGH",
+      "frames_checked": 91,
+      "loop": false,
+      "seam_matrix_error": 0.0,
+      "min_shoe_height_m": -1.814216155082704e-08,
+      "root_translation_error_m": 0.0,
+      "contact_drift_or_speed_error_m": 0.0,
+      "accessory_head_follow_error_m": 1.2013700229374393e-07
+    }
+  ],
+  "hair_arm_candidates": [],
+  "unity_editor_test": "Unity 6000.3.24f1 isolated import passed; project Play Mode not run"
+}

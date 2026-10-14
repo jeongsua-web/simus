@@ -1,0 +1,136 @@
+{
+  "objects": [
+    "NPC_CRIMINAL",
+    "CRIMINAL_ARMATURE",
+    "CRIMINAL_BODY",
+    "CRIMINAL_OUTFIT_TOP",
+    "CRIMINAL_OUTFIT_BOTTOM",
+    "CRIMINAL_SHOES",
+    "CRIMINAL_HAIR_01_PARTED_SHORT",
+    "CRIMINAL_Connected_Hood",
+    "CRIMINAL_Kangaroo_Fabric_Pocket",
+    "CRIMINAL_Crossbody_Front",
+    "CRIMINAL_Crossbody_Back",
+    "CRIMINAL_Fitted_Crossbody_Bag",
+    "CRIMINAL_Curved_Face_Mask",
+    "CRIMINAL_Strap_Returns"
+  ],
+  "bones": [
+    "Root",
+    "Hips",
+    "Spine",
+    "Chest",
+    "Neck",
+    "Head",
+    "LeftShoulder",
+    "LeftUpperArm",
+    "LeftLowerArm",
+    "LeftHand",
+    "RightShoulder",
+    "RightUpperArm",
+    "RightLowerArm",
+    "RightHand",
+    "LeftUpperLeg",
+    "LeftLowerLeg",
+    "LeftFoot",
+    "LeftToes",
+    "RightUpperLeg",
+    "RightLowerLeg",
+    "RightFoot",
+    "RightToes"
+  ],
+  "clips": [
+    "Idle",
+    "Walk",
+    "Interact",
+    "Wave"
+  ],
+  "meshes": {
+    "CRIMINAL_BODY": {
+      "vertices": 444,
+      "materials": [
+        "MAT_SKIN",
+        "MAT_EYES",
+        "ENV3_NPC_Dark_Gloves"
+      ],
+      "skinned": true
+    },
+    "CRIMINAL_OUTFIT_TOP": {
+      "vertices": 572,
+      "materials": [
+        "ENV3_NPC_CRIMINAL_OUTFIT_TOP"
+      ],
+      "skinned": true
+    },
+    "CRIMINAL_OUTFIT_BOTTOM": {
+      "vertices": 456,
+      "materials": [
+        "ENV3_NPC_CRIMINAL_OUTFIT_BOTTOM"
+      ],
+      "skinned": true
+    },
+    "CRIMINAL_SHOES": {
+      "vertices": 120,
+      "materials": [
+        "ENV3_NPC_CRIMINAL_SHOES"
+      ],
+      "skinned": true
+    },
+    "CRIMINAL_HAIR_01_PARTED_SHORT": {
+      "vertices": 290,
+      "materials": [
+        "MAT_HAIR"
+      ],
+      "skinned": true
+    },
+    "CRIMINAL_Connected_Hood": {
+      "vertices": 1152,
+      "materials": [
+        "ENV3_NPC_Hood_Fabric"
+      ],
+      "skinned": true
+    },
+    "CRIMINAL_Kangaroo_Fabric_Pocket": {
+      "vertices": 217,
+      "materials": [
+        "ENV3_NPC_Hood_Seam"
+      ],
+      "skinned": true
+    },
+    "CRIMINAL_Crossbody_Front": {
+      "vertices": 1201,
+      "materials": [
+        "ENV3_NPC_Crossbody_Webbing"
+      ],
+      "skinned": true
+    },
+    "CRIMINAL_Crossbody_Back": {
+      "vertices": 1201,
+      "materials": [
+        "ENV3_NPC_Crossbody_Webbing"
+      ],
+      "skinned": true
+    },
+    "CRIMINAL_Fitted_Crossbody_Bag": {
+      "vertices": 114,
+      "materials": [
+        "ENV3_NPC_Hood_Fabric"
+      ],
+      "skinned": true
+    },
+    "CRIMINAL_Curved_Face_Mask": {
+      "vertices": 39,
+      "materials": [
+        "ENV3_NPC_Hood_Fabric"
+      ],
+      "skinned": true
+    },
+    "CRIMINAL_Strap_Returns": {
+      "vertices": 304,
+      "materials": [
+        "ENV3_NPC_Crossbody_Webbing"
+      ],
+      "skinned": true
+    }
+  }
+}

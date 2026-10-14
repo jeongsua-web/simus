@@ -1,0 +1,265 @@
+{
+  "original_objects_checked": 19572,
+  "original_geometry_transform_changes": [],
+  "source_assets": 42,
+  "placed_meshes": 93,
+  "asset_issues": [],
+  "no_NPC_in_map": true,
+  "source_inventory": [
+    {
+      "name": "TRASH_BAG_BLACK",
+      "route": "NEW",
+      "source": "",
+      "vertices": 362
+    },
+    {
+      "name": "CCTV_KOREAN_POLE",
+      "route": "NEW",
+      "source": "",
+      "vertices": 122
+    },
+    {
+      "name": "FLOWERBED_HEALTHY",
+      "route": "NEW",
+      "source": "",
+      "vertices": 2326
+    },
+    {
+      "name": "BENCH_CLEAN",
+      "route": "REUSED",
+      "source": "D03_REUSED_BENCH_0",
+      "vertices": 120
+    },
+    {
+      "name": "LAMP_NORMAL",
+      "route": "REUSED",
+      "source": "D03_LAMP_0",
+      "vertices": 168
+    },
+    {
+      "name": "TREE_HEALTHY",
+      "route": "REUSED",
+      "source": "D03_TREE_0",
+      "vertices": 26
+    },
+    {
+      "name": "BENCH_BROKEN",
+      "route": "MODIFIED",
+      "source": "D03_REUSED_BENCH_0",
+      "vertices": 88
+    },
+    {
+      "name": "LAMP_BROKEN_OFF",
+      "route": "MODIFIED",
+      "source": "D03_LAMP_0",
+      "vertices": 168
+    },
+    {
+      "name": "TREE_WITHERED",
+      "route": "MODIFIED",
+      "source": "D03_TREE_0",
+      "vertices": 26
+    },
+    {
+      "name": "RECYCLE_NORMAL",
+      "route": "REUSED",
+      "source": "D03_RECYCLE_0",
+      "vertices": 8
+    },
+    {
+      "name": "PLANTER_HEALTHY",
+      "route": "REUSED",
+      "source": "D03_PLANTER_0",
+      "vertices": 372
+    },
+    {
+      "name": "FLOWERBED_WITHERED",
+      "route": "NEW",
+      "source": "",
+      "vertices": 2326
+    },
+    {
+      "name": "CARDBOARD_STACK",
+      "route": "NEW",
+      "source": "",
+      "vertices": 64
+    },
+    {
+      "name": "TRASH_PILE_SMALL",
+      "route": "NEW",
+      "source": "",
+      "vertices": 846
+    },
+    {
+      "name": "TRASH_PILE_MEDIUM",
+      "route": "NEW",
+      "source": "",
+      "vertices": 1932
+    },
+    {
+      "name": "TRASH_PILE_LARGE",
+      "route": "NEW",
+      "source": "",
+      "vertices": 3380
+    },
+    {
+      "name": "TRASH_BIN_OVERFLOW",
+      "route": "MODIFIED",
+      "source": "RECYCLE_NORMAL",
+      "vertices": 1480
+    },
+    {
+      "name": "FENCE_NORMAL",
+      "route": "NEW",
+      "source": "",
+      "vertices": 224
+    },
+    {
+      "name": "FENCE_BENT",
+      "route": "NEW",
+      "source": "",
+      "vertices": 224
+    },
+    {
+      "name": "EMERGENCY_BELL",
+      "route": "NEW",
+      "source": "",
+      "vertices": 180
+    },
+    {
+      "name": "FESTIVAL_FLAGS",
+      "route": "NEW",
+      "source": "",
+      "vertices": 77
+    },
+    {
+      "name": "FESTIVAL_FLAGS_FADED",
+      "route": "NEW",
+      "source": "",
+      "vertices": 77
+    },
+    {
+      "name": "BALLOON_CLUSTER",
+      "route": "NEW",
+      "source": "",
+      "vertices": 458
+    },
+    {
+      "name": "BROAD_GROUND_STAIN",
+      "route": "NEW",
+      "source": "",
+      "vertices": 62
+    },
+    {
+      "name": "WATER_CLEAR",
+      "route": "NEW",
+      "source": "",
+      "vertices": 62
+    },
+    {
+      "name": "WATER_POLLUTED",
+      "route": "NEW",
+      "source": "",
+      "vertices": 62
+    },
+    {
+      "name": "BROWN_GRASS",
+      "route": "NEW",
+      "source": "",
+      "vertices": 62
+    },
+    {
+      "name": "HEALTHY_GRASS",
+      "route": "NEW",
+      "source": "",
+      "vertices": 62
+    },
+    {
+      "name": "DIRTY_DRAIN",
+      "route": "NEW",
+      "source": "",
+      "vertices": 138
+    },
+    {
+      "name": "EXHAUST_PUFFS",
+      "route": "NEW",
+      "source": "",
+      "vertices": 252
+    },
+    {
+      "name": "VENT_SMOKE",
+      "route": "NEW",
+      "source": "",
+      "vertices": 252
+    },
+    {
+      "name": "CONSTRUCTION_DUST",
+      "route": "NEW",
+      "source": "",
+      "vertices": 252
+    },
+    {
+      "name": "VENT_OUTLET",
+      "route": "NEW",
+      "source": "",
+      "vertices": 114
+    },
+    {
+      "name": "FALLEN_BICYCLE",
+      "route": "NEW",
+      "source": "",
+      "vertices": 1448
+    },
+    {
+      "name": "ILLEGALLY_PARKED_CAR",
+      "route": "NEW",
+      "source": "",
+      "vertices": 664
+    },
+    {
+      "name": "GRAFFITI_DECAL_01",
+      "route": "NEW",
+      "source": "",
+      "vertices": 60
+    },
+    {
+      "name": "GRAFFITI_DECAL_02",
+      "route": "NEW",
+      "source": "",
+      "vertices": 84
+    },
+    {
+      "name": "GRAFFITI_DECAL_03",
+      "route": "NEW",
+      "source": "",
+      "vertices": 60
+    },
+    {
+      "name": "GRAFFITI_DECAL_04",
+      "route": "NEW",
+      "source": "",
+      "vertices": 60
+    },
+    {
+      "name": "MAINTENANCE_DUST_BASE",
+      "route": "NEW",
+      "source": "",
+      "vertices": 88
+    },
+    {
+      "name": "DECOR_LIGHTS_ON",
+      "route": "NEW",
+      "source": "",
+      "vertices": 350
+    },
+    {
+      "name": "DECOR_LIGHTS_OFF",
+      "route": "NEW",
+      "source": "",
+      "vertices": 350
+    }
+  ],
+  "fbx": "C:/Users/sonmi/Documents/Codex/2026-09-22/higgsfield-plugin-app-6a3293e129088191abf0875820e839da-openai-curated-6/SIMUS_Environmental_States_v3/SIMUS_Environmental_State_Assets_v3.fbx",
+  "fbx_bytes": 5157004,
+  "road_bound_overlap_candidates": []
+}

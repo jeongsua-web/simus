@@ -1,0 +1,75 @@
+{
+  "lods": {
+    "0": {
+      "meshes": 39,
+      "triangles": 24608,
+      "bounds": [
+        [
+          -1.625,
+          1.625
+        ],
+        [
+          -5.565000057220459,
+          5.534999847412109
+        ],
+        [
+          0.0,
+          3.3589999675750732
+        ]
+      ]
+    },
+    "1": {
+      "meshes": 33,
+      "triangles": 2072,
+      "bounds": [
+        [
+          -1.625,
+          1.625
+        ],
+        [
+          -5.565000057220459,
+          5.534999847412109
+        ],
+        [
+          0.0,
+          3.3499999046325684
+        ]
+      ]
+    }
+  },
+  "negative_scales": [],
+  "missing_materials": [],
+  "open_meshes": [],
+  "front": "Blender -Y; Unity +Z",
+  "wheel_spin_axis_blender": "X",
+  "body_ground_origin": [
+    0,
+    0,
+    0
+  ],
+  "materials": 11,
+  "wheel_centers": {
+    "WHEEL_FL": [
+      1.0800000429153442,
+      -3.549999952316284,
+      0.5
+    ],
+    "WHEEL_RL": [
+      1.0800000429153442,
+      3.0,
+      0.5
+    ],
+    "WHEEL_FR": [
+      -1.0800000429153442,
+      -3.549999952316284,
+      0.5
+    ],
+    "WHEEL_RR": [
+      -1.0800000429153442,
+      3.0,
+      0.5
+    ]
+  },
+  "colliders": 3,
+  "optimization": "Same-parent same-material rigid pieces merged per LOD; wheels, doors, lamps and signs remain independently controlled."
+}

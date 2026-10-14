@@ -1,0 +1,86 @@
+{
+  "npc": {
+    "POLICE": {
+      "passed": true,
+      "objects": 24,
+      "meshes": 22,
+      "bones": 22,
+      "actions": [
+        "NPC_POLICE|Idle",
+        "NPC_POLICE|Interact",
+        "NPC_POLICE|Walk",
+        "NPC_POLICE|Wave",
+        "POLICE_ARMATURE|Idle",
+        "POLICE_ARMATURE|Interact",
+        "POLICE_ARMATURE|Walk",
+        "POLICE_ARMATURE|Wave"
+      ],
+      "weights_normalized": true,
+      "cameras_lights_absent": true,
+      "motion_amplitude": {
+        "Walk": 0.3325685113668442,
+        "Wave": 0.6649389714002609
+      }
+    },
+    "CLEANER": {
+      "passed": true,
+      "objects": 20,
+      "meshes": 18,
+      "bones": 22,
+      "actions": [
+        "CLEANER_ARMATURE|Idle",
+        "CLEANER_ARMATURE|Interact",
+        "CLEANER_ARMATURE|Walk",
+        "CLEANER_ARMATURE|Wave",
+        "CLEANER_Collection_Cart|Idle",
+        "CLEANER_Collection_Cart|Interact",
+        "CLEANER_Collection_Cart|Walk",
+        "CLEANER_Collection_Cart|Wave",
+        "NPC_CLEANER|Idle",
+        "NPC_CLEANER|Interact",
+        "NPC_CLEANER|Walk",
+        "NPC_CLEANER|Wave"
+      ],
+      "weights_normalized": true,
+      "cameras_lights_absent": true,
+      "motion_amplitude": {
+        "Walk": 0.3325685113668442,
+        "Wave": 0.6649389714002609
+      }
+    },
+    "CRIMINAL": {
+      "passed": true,
+      "objects": 14,
+      "meshes": 12,
+      "bones": 22,
+      "actions": [
+        "CRIMINAL_ARMATURE|Idle",
+        "CRIMINAL_ARMATURE|Interact",
+        "CRIMINAL_ARMATURE|Walk",
+        "CRIMINAL_ARMATURE|Wave",
+        "NPC_CRIMINAL|Idle",
+        "NPC_CRIMINAL|Interact",
+        "NPC_CRIMINAL|Walk",
+        "NPC_CRIMINAL|Wave"
+      ],
+      "weights_normalized": true,
+      "cameras_lights_absent": true,
+      "motion_amplitude": {
+        "Walk": 0.3325685113668442,
+        "Wave": 0.6649389714002609
+      }
+    }
+  },
+  "environment": {
+    "passed": true,
+    "objects": 113,
+    "meshes": 93,
+    "no_map_buildings_roads_rigs_cameras_lights": true
+  },
+  "npc_blend": {
+    "scene": "SIMUS_NPC_ROLES",
+    "scenes": 1,
+    "role_rigs": 3,
+    "source_character_scene_excluded": true
+  }
+}

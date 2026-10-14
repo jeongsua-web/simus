@@ -1,0 +1,508 @@
+{
+  "roles": {
+    "POLICE": {
+      "body_geometry_exact": true,
+      "bones_exact": true,
+      "bones": 22,
+      "weight_errors": [],
+      "meshes": [
+        {
+          "name": "POLICE_BODY",
+          "vertices": 444,
+          "skinned": true
+        },
+        {
+          "name": "POLICE_OUTFIT_TOP",
+          "vertices": 572,
+          "skinned": true
+        },
+        {
+          "name": "POLICE_OUTFIT_BOTTOM",
+          "vertices": 456,
+          "skinned": true
+        },
+        {
+          "name": "POLICE_SHOES",
+          "vertices": 120,
+          "skinned": true
+        },
+        {
+          "name": "POLICE_HAIR_06_CAP_PONYTAIL",
+          "vertices": 1412,
+          "skinned": true
+        },
+        {
+          "name": "POLICE_Collar_-1",
+          "vertices": 145,
+          "skinned": true
+        },
+        {
+          "name": "POLICE_Collar_1",
+          "vertices": 145,
+          "skinned": true
+        },
+        {
+          "name": "POLICE_Thin_Placket",
+          "vertices": 145,
+          "skinned": true
+        },
+        {
+          "name": "POLICE_Shirt_Button",
+          "vertices": 145,
+          "skinned": true
+        },
+        {
+          "name": "POLICE_Shirt_Button.001",
+          "vertices": 145,
+          "skinned": true
+        },
+        {
+          "name": "POLICE_Shirt_Button.002",
+          "vertices": 145,
+          "skinned": true
+        },
+        {
+          "name": "POLICE_Shirt_Button.003",
+          "vertices": 145,
+          "skinned": true
+        },
+        {
+          "name": "POLICE_Shield_Badge",
+          "vertices": 181,
+          "skinned": true
+        },
+        {
+          "name": "POLICE_Nameplate",
+          "vertices": 145,
+          "skinned": true
+        },
+        {
+          "name": "POLICE_Shoulder_Epaulette_-1",
+          "vertices": 145,
+          "skinned": true
+        },
+        {
+          "name": "POLICE_Shoulder_Epaulette_1",
+          "vertices": 145,
+          "skinned": true
+        },
+        {
+          "name": "POLICE_Full_Duty_Belt",
+          "vertices": 96,
+          "skinned": true
+        },
+        {
+          "name": "POLICE_Close_Radio",
+          "vertices": 78,
+          "skinned": true
+        },
+        {
+          "name": "POLICE_Belt_Pouch",
+          "vertices": 74,
+          "skinned": true
+        },
+        {
+          "name": "POLICE_Arm_Patch",
+          "vertices": 4,
+          "skinned": true
+        },
+        {
+          "name": "POLICE_Arm_Patch.001",
+          "vertices": 4,
+          "skinned": true
+        },
+        {
+          "name": "POLICE_Ankle_Boot_Cuffs",
+          "vertices": 144,
+          "skinned": true
+        }
+      ],
+      "clips": [
+        "Idle",
+        "Walk",
+        "Interact",
+        "Wave"
+      ]
+    },
+    "CLEANER": {
+      "body_geometry_exact": true,
+      "bones_exact": true,
+      "bones": 22,
+      "weight_errors": [],
+      "meshes": [
+        {
+          "name": "CLEANER_BODY",
+          "vertices": 444,
+          "skinned": true
+        },
+        {
+          "name": "CLEANER_OUTFIT_TOP",
+          "vertices": 392,
+          "skinned": true
+        },
+        {
+          "name": "CLEANER_OUTFIT_BOTTOM",
+          "vertices": 456,
+          "skinned": true
+        },
+        {
+          "name": "CLEANER_SHOES",
+          "vertices": 120,
+          "skinned": true
+        },
+        {
+          "name": "CLEANER_HAIR_11_CAP_CURLY_BOB",
+          "vertices": 1988,
+          "skinned": true
+        },
+        {
+          "name": "CLEANER_Safety_Vest",
+          "vertices": 180,
+          "skinned": true
+        },
+        {
+          "name": "CLEANER_Reflective_Waist",
+          "vertices": 96,
+          "skinned": true
+        },
+        {
+          "name": "CLEANER_Reflective_Waist.001",
+          "vertices": 96,
+          "skinned": true
+        },
+        {
+          "name": "CLEANER_Reflective_Shoulder",
+          "vertices": 145,
+          "skinned": true
+        },
+        {
+          "name": "CLEANER_Reflective_Shoulder.001",
+          "vertices": 145,
+          "skinned": true
+        },
+        {
+          "name": "CLEANER_Reflective_Shoulder.002",
+          "vertices": 145,
+          "skinned": true
+        },
+        {
+          "name": "CLEANER_Reflective_Shoulder.003",
+          "vertices": 145,
+          "skinned": true
+        },
+        {
+          "name": "CLEANER_Flat_Vest_Pocket",
+          "vertices": 145,
+          "skinned": true
+        },
+        {
+          "name": "CLEANER_Flat_Vest_Pocket.001",
+          "vertices": 145,
+          "skinned": true
+        },
+        {
+          "name": "CLEANER_Vest_Front_Opening",
+          "vertices": 145,
+          "skinned": true
+        },
+        {
+          "name": "CLEANER_Ankle_Boot_Cuffs",
+          "vertices": 144,
+          "skinned": true
+        },
+        {
+          "name": "CLEANER_Collection_Cart",
+          "vertices": 558,
+          "skinned": false
+        },
+        {
+          "name": "CLEANER_Broom_Hand_Held",
+          "vertices": 188,
+          "skinned": true
+        }
+      ],
+      "clips": [
+        "Idle",
+        "Walk",
+        "Interact",
+        "Wave"
+      ]
+    },
+    "CRIMINAL": {
+      "body_geometry_exact": true,
+      "bones_exact": true,
+      "bones": 22,
+      "weight_errors": [],
+      "meshes": [
+        {
+          "name": "CRIMINAL_BODY",
+          "vertices": 444,
+          "skinned": true
+        },
+        {
+          "name": "CRIMINAL_OUTFIT_TOP",
+          "vertices": 572,
+          "skinned": true
+        },
+        {
+          "name": "CRIMINAL_OUTFIT_BOTTOM",
+          "vertices": 456,
+          "skinned": true
+        },
+        {
+          "name": "CRIMINAL_SHOES",
+          "vertices": 120,
+          "skinned": true
+        },
+        {
+          "name": "CRIMINAL_HAIR_01_PARTED_SHORT",
+          "vertices": 290,
+          "skinned": true
+        },
+        {
+          "name": "CRIMINAL_Connected_Hood",
+          "vertices": 1152,
+          "skinned": true
+        },
+        {
+          "name": "CRIMINAL_Kangaroo_Fabric_Pocket",
+          "vertices": 217,
+          "skinned": true
+        },
+        {
+          "name": "CRIMINAL_Crossbody_Front",
+          "vertices": 1201,
+          "skinned": true
+        },
+        {
+          "name": "CRIMINAL_Crossbody_Back",
+          "vertices": 1201,
+          "skinned": true
+        },
+        {
+          "name": "CRIMINAL_Fitted_Crossbody_Bag",
+          "vertices": 114,
+          "skinned": true
+        },
+        {
+          "name": "CRIMINAL_Curved_Face_Mask",
+          "vertices": 39,
+          "skinned": true
+        },
+        {
+          "name": "CRIMINAL_Strap_Returns",
+          "vertices": 304,
+          "skinned": true
+        }
+      ],
+      "clips": [
+        "Idle",
+        "Walk",
+        "Interact",
+        "Wave"
+      ]
+    }
+  },
+  "pose_checks": [
+    {
+      "role": "POLICE",
+      "pose": "Rest",
+      "finite_meshes": true,
+      "max_radius": 1.6509999972920502
+    },
+    {
+      "role": "POLICE",
+      "pose": "ArmsDown",
+      "finite_meshes": true,
+      "max_radius": 1.6509999972920502
+    },
+    {
+      "role": "POLICE",
+      "pose": "ArmsForward",
+      "finite_meshes": true,
+      "max_radius": 1.6509999972920502
+    },
+    {
+      "role": "POLICE",
+      "pose": "ArmsSide",
+      "finite_meshes": true,
+      "max_radius": 1.6509999972920502
+    },
+    {
+      "role": "POLICE",
+      "pose": "KneesBent",
+      "finite_meshes": true,
+      "max_radius": 1.6509999972920502
+    },
+    {
+      "role": "POLICE",
+      "pose": "TorsoLean",
+      "finite_meshes": true,
+      "max_radius": 1.635772921145365
+    },
+    {
+      "role": "POLICE",
+      "pose": "Idle",
+      "finite_meshes": true,
+      "max_radius": 1.6509999972920502
+    },
+    {
+      "role": "POLICE",
+      "pose": "Walk",
+      "finite_meshes": true,
+      "max_radius": 1.6509999972920502
+    },
+    {
+      "role": "POLICE",
+      "pose": "Interact",
+      "finite_meshes": true,
+      "max_radius": 1.6509999972920502
+    },
+    {
+      "role": "POLICE",
+      "pose": "Wave",
+      "finite_meshes": true,
+      "max_radius": 1.6509999972920502
+    },
+    {
+      "role": "CLEANER",
+      "pose": "Rest",
+      "finite_meshes": true,
+      "max_radius": 1.6509999972920502
+    },
+    {
+      "role": "CLEANER",
+      "pose": "ArmsDown",
+      "finite_meshes": true,
+      "max_radius": 1.6509999972920502
+    },
+    {
+      "role": "CLEANER",
+      "pose": "ArmsForward",
+      "finite_meshes": true,
+      "max_radius": 1.6509999972920502
+    },
+    {
+      "role": "CLEANER",
+      "pose": "ArmsSide",
+      "finite_meshes": true,
+      "max_radius": 2.086031044601975
+    },
+    {
+      "role": "CLEANER",
+      "pose": "KneesBent",
+      "finite_meshes": true,
+      "max_radius": 1.6509999972920502
+    },
+    {
+      "role": "CLEANER",
+      "pose": "TorsoLean",
+      "finite_meshes": true,
+      "max_radius": 1.635736383456281
+    },
+    {
+      "role": "CLEANER",
+      "pose": "Idle",
+      "finite_meshes": true,
+      "max_radius": 1.6509999972920502
+    },
+    {
+      "role": "CLEANER",
+      "pose": "Walk",
+      "finite_meshes": true,
+      "max_radius": 1.6509999972920502
+    },
+    {
+      "role": "CLEANER",
+      "pose": "Interact",
+      "finite_meshes": true,
+      "max_radius": 1.6509999972920502
+    },
+    {
+      "role": "CLEANER",
+      "pose": "Wave",
+      "finite_meshes": true,
+      "max_radius": 1.6509999972920502
+    },
+    {
+      "role": "CRIMINAL",
+      "pose": "Rest",
+      "finite_meshes": true,
+      "max_radius": 1.6792635074454916,
+      "hood_body_intersections": 0,
+      "hood_hair_intersections": 0
+    },
+    {
+      "role": "CRIMINAL",
+      "pose": "ArmsDown",
+      "finite_meshes": true,
+      "max_radius": 1.6792635074454916,
+      "hood_body_intersections": 0,
+      "hood_hair_intersections": 0
+    },
+    {
+      "role": "CRIMINAL",
+      "pose": "ArmsForward",
+      "finite_meshes": true,
+      "max_radius": 1.6792635074454916,
+      "hood_body_intersections": 0,
+      "hood_hair_intersections": 0
+    },
+    {
+      "role": "CRIMINAL",
+      "pose": "ArmsSide",
+      "finite_meshes": true,
+      "max_radius": 1.6792635074454916,
+      "hood_body_intersections": 0,
+      "hood_hair_intersections": 0
+    },
+    {
+      "role": "CRIMINAL",
+      "pose": "KneesBent",
+      "finite_meshes": true,
+      "max_radius": 1.6792635074454916,
+      "hood_body_intersections": 0,
+      "hood_hair_intersections": 0
+    },
+    {
+      "role": "CRIMINAL",
+      "pose": "TorsoLean",
+      "finite_meshes": true,
+      "max_radius": 1.6658682952636066,
+      "hood_body_intersections": 0,
+      "hood_hair_intersections": 0
+    },
+    {
+      "role": "CRIMINAL",
+      "pose": "Idle",
+      "finite_meshes": true,
+      "max_radius": 1.6792635074454916,
+      "hood_body_intersections": 0,
+      "hood_hair_intersections": 0
+    },
+    {
+      "role": "CRIMINAL",
+      "pose": "Walk",
+      "finite_meshes": true,
+      "max_radius": 1.6792635074454916,
+      "hood_body_intersections": 0,
+      "hood_hair_intersections": 0
+    },
+    {
+      "role": "CRIMINAL",
+      "pose": "Interact",
+      "finite_meshes": true,
+      "max_radius": 1.6792635074454916,
+      "hood_body_intersections": 0,
+      "hood_hair_intersections": 0
+    },
+    {
+      "role": "CRIMINAL",
+      "pose": "Wave",
+      "finite_meshes": true,
+      "max_radius": 1.6792635074454916,
+      "hood_body_intersections": 0,
+      "hood_hair_intersections": 0
+    }
+  ]
+}

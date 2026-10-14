@@ -1,0 +1,44 @@
+{
+  "source": "C:\\Project\\simus\\unity\\Assets\\SIMUS\\Art\\characters\\modular_hairfix_v001\\models\\SIMUS_Modular_Character_Unity_CapFix.blend",
+  "source_sha256": "014afec72a951de25d5069d7b75e484450e8e8826a0063c7c433223b416411e7",
+  "blend": "C:\\Project\\simus\\unity\\Assets\\SIMUS\\Art\\characters\\modular_hairfix_v001\\models\\SIMUS_Modular_Character_Happiness_Animations.blend",
+  "fbx": "C:\\Project\\simus\\unity\\Assets\\SIMUS\\Art\\characters\\modular_hairfix_v001\\models\\SIMUS_Modular_Character_Happiness_Animations.fbx",
+  "clips": {
+    "HAPPY_IDLE": [
+      90,
+      true
+    ],
+    "HAPPY_WALK": [
+      30,
+      true
+    ],
+    "HAPPY_CHEER": [
+      60,
+      false
+    ],
+    "HAPPY_WAVE": [
+      60,
+      false
+    ],
+    "NEUTRAL_IDLE": [
+      90,
+      true
+    ],
+    "NEUTRAL_WALK": [
+      30,
+      true
+    ],
+    "SAD_IDLE": [
+      120,
+      true
+    ],
+    "SAD_WALK": [
+      42,
+      true
+    ],
+    "SAD_SIGH": [
+      90,
+      false
+    ]
+  }
+}
