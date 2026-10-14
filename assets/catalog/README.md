@@ -84,3 +84,7 @@
 ## 2026-10-14 대기환경 시설 원본 접수
 
 [대기오염측정시설](../library/props/air_quality_monitoring_station_v001/README.md) · [미세먼지 알리미 신호등](../library/props/fine_dust_indicator_light_v001/README.md). 받은 Blender 파일을 이름 변경하여 보존했습니다. received, Unity 내보내기 및 맵 배치 미실행.
+
+## 2026-10-14 카페·식당 상가 파생 에셋
+
+[카페](../library/buildings/commercial_cafe_v001/README.md) · [식당](../library/buildings/commercial_restaurant_v001/README.md). 서로 다른 기존 상가를 보존한 1층 외관 파생본입니다. Blender·FBX·재질·텍스처·Unity 프리팹·검수 이미지 제공. received, 기존 맵 미배치.

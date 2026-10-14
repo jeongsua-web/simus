@@ -1,0 +1,31 @@
+{
+  "bridge_live": true,
+  "type": "Restaurant",
+  "new_solids_normals_recalculated": 83,
+  "unexpected_open_new_meshes": [],
+  "negative_scales": [],
+  "missing_materials": [],
+  "root_origin": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "groups": [
+    "RESTAURANT_AC_UNIT",
+    "RESTAURANT_AWNING",
+    "RESTAURANT_BUILDING_BODY",
+    "RESTAURANT_COLLIDER",
+    "RESTAURANT_DOOR",
+    "RESTAURANT_EXHAUST",
+    "RESTAURANT_GROUND_FACADE",
+    "RESTAURANT_INTERIOR_ILLUSION",
+    "RESTAURANT_MAIN_SIGN",
+    "RESTAURANT_MENU_BOARD",
+    "RESTAURANT_SIDE_SIGN",
+    "RESTAURANT_WAITING_BENCH",
+    "RESTAURANT_WALL_LIGHTS",
+    "RESTAURANT_WINDOWS"
+  ],
+  "mesh_count": 644,
+  "static_asset": true
+}
