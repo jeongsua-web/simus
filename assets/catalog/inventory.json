@@ -992,8 +992,386 @@
       "path": "assets/library/characters/crying_child_v001/source/SIMUS_NPC_CryingChild.blend",
       "role": "source",
       "location": "library",
-      "bytes": 4477746,
-      "sha256": "f95d8cd6800d27f907aef0617114808250739bf599f8034eb9d7f2655c2ac7a9"
+      "bytes": 4474834,
+      "sha256": "14cf832ab3986058c0671cbdc7eb2fba23915d0e6f913e6ea82314fec819fd99"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/README.md",
+      "role": "support",
+      "location": "library",
+      "bytes": 2888,
+      "sha256": "f20270197562c050514847cb074ec59cc4d2d13ed0007c0d42091c0e1fc6f886"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/01_front.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 659723,
+      "sha256": "8dfdf5c10247500382f1eb2e4b9b606d45414adeff55306356a9bab5a722b44f"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/02_left.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 634618,
+      "sha256": "0edb3e9fc3fb1519f6bf63158568d44574e3e57f23aeb4708ea47655df525e8b"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/03_right.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 634268,
+      "sha256": "6358874a858c35ce132adbbbc82f0c6a0fd1b83ba496da148c68cd3d00334d59"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/04_back.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 652799,
+      "sha256": "2619d152ba1e5621d4c5e3c367986890ab28ffca01f4230eeb896cce8ebac220"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/05_oblique.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 662005,
+      "sha256": "822298291e81c2bf2bf66ee2b4c6b66064e89e3eda7bdc30843e50433b9d29cd"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/06_carry_front.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 655743,
+      "sha256": "30964807fb2fa77c7a6813a3567225fb440040dba9354c8cbdf87aea34467977"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/07_contact.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 689034,
+      "sha256": "5949c5bc7ab01e98c356d2e523b59397df02b4af67fe1524ac77a708400b1574"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/08_face.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 673435,
+      "sha256": "7afd7744c6ece71e6f5258cfa2df0a60ec487021fa0ee67716cc7e5b8c97474c"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/09_clothes.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 649729,
+      "sha256": "d24f37d09673ba290cf83b109f9a85978a1fcfd3ce210bb7ebe3a42926b81017"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/10_adult_comparison.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 666702,
+      "sha256": "782d3e594f529789eebbeed60ee51941064d7f1014be70ebee075db1880fb3a2"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/11_box_detached.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 656803,
+      "sha256": "4c1743220175b67d6282539ca14b3a9a41c5d8edb171a83ba4ea12f0653c2388"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/12_anchor_targets.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 662276,
+      "sha256": "26e7deef35f7bdcec62a3bad8a110789b23eea77c8a3b0801a31750fbe3cf3ef"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/Final_Overview.jpg",
+      "role": "image",
+      "location": "library",
+      "bytes": 76666,
+      "sha256": "bcd13cf59ddfb8d6773b9676229b2e55d7a200f6a69083e12e9e39a4bfe9ecc3"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/HEAVY_CARRY_IDLE_end.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 666363,
+      "sha256": "7773bda64f88fa3c1070e2cfd5bc953c2c86f12af989c027b389c09af093029e"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/HEAVY_CARRY_IDLE_middle.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 666331,
+      "sha256": "ed46a5b7e5aab118c9c64c8210fad9fc17d80a8db45dc56fa608b43443c5fbe3"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/HEAVY_CARRY_IDLE_start.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 665968,
+      "sha256": "e2556b0651a043494751e9eaa78bdec669b31aa54032376e40ab773511ca7da8"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/HEAVY_CARRY_LOOK_AROUND_end.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 666165,
+      "sha256": "8553a0711fec1e1b9abdcc58c1365e5f2949b84dc4b81553fd62dd568980ea48"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/HEAVY_CARRY_LOOK_AROUND_left.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 665868,
+      "sha256": "88acec91827722815ea11d39d8ed8b9a66edffc6eb3ed6a8777c30954d1a012c"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/HEAVY_CARRY_LOOK_AROUND_middle.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 666054,
+      "sha256": "d21085363e001404bd7bfba553415b9007a0050f7ad4d385a7181f0a6e00280f"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/HEAVY_CARRY_LOOK_AROUND_right.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 665919,
+      "sha256": "22601516eab66c7e09e2cba54eb153c628f8ea3182c20abd196c7dd7899f8de1"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/HEAVY_CARRY_LOOK_AROUND_start.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 666011,
+      "sha256": "39e0d522b83a74ac480fadbed01646a389ead9877f06ee81df7ac1afee058839"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/HEAVY_CARRY_STRUGGLE_end.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 665978,
+      "sha256": "e0abeef474805cb84a9d7dde620ac80c65d0759ab7e48dbe59c5e67167fbbe0d"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/HEAVY_CARRY_STRUGGLE_middle.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 666957,
+      "sha256": "bdda4f9847a7ac044e1f37329195af96d8c26682b7d3b20b555e2c7879e5344c"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/HEAVY_CARRY_STRUGGLE_start.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 666038,
+      "sha256": "39b7e6291587ae96176b676d937443182ac072226095d2aeb212d177469f6f9e"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/HEAVY_CARRY_WALK_end.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 664195,
+      "sha256": "a90356b6da0d48b8809298ed780456b3b9d8fe78d2fd9d147a43e0b33413cca1"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/HEAVY_CARRY_WALK_middle.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 665279,
+      "sha256": "80bc80dc5ebd439bfdbf9d0e48a5a4c4053a74a2d9cd66d368b779527a6c0713"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/HEAVY_CARRY_WALK_start.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 663880,
+      "sha256": "5abcfcdad94bbc4a8ef44619fafe2d855f7dd49867bea3f67170ae9aac571c6c"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_IDLE.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 59306,
+      "sha256": "c0512e3dbbd55c4266d4f383ec4b6c7e04238a112ee5bc60f421b22a5696881f"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_IDLE_0.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 59306,
+      "sha256": "c0512e3dbbd55c4266d4f383ec4b6c7e04238a112ee5bc60f421b22a5696881f"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_IDLE_12.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 59306,
+      "sha256": "c0512e3dbbd55c4266d4f383ec4b6c7e04238a112ee5bc60f421b22a5696881f"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_IDLE_6.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 59306,
+      "sha256": "c0512e3dbbd55c4266d4f383ec4b6c7e04238a112ee5bc60f421b22a5696881f"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_LOOK_AROUND.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 59291,
+      "sha256": "7d28823c53d203dca4bdaaa88282f944ee1332bcc877dcde680352e277269f6a"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_LOOK_AROUND_0.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 59306,
+      "sha256": "c0512e3dbbd55c4266d4f383ec4b6c7e04238a112ee5bc60f421b22a5696881f"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_LOOK_AROUND_12.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 59306,
+      "sha256": "c0512e3dbbd55c4266d4f383ec4b6c7e04238a112ee5bc60f421b22a5696881f"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_LOOK_AROUND_6.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 59291,
+      "sha256": "7d28823c53d203dca4bdaaa88282f944ee1332bcc877dcde680352e277269f6a"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_STRUGGLE.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 60414,
+      "sha256": "e3aff8372ffd47b04ad7dc85afe57b2d8de03dd0dda58b8c4b37d009858d396e"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_STRUGGLE_0.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 59306,
+      "sha256": "c0512e3dbbd55c4266d4f383ec4b6c7e04238a112ee5bc60f421b22a5696881f"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_STRUGGLE_12.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 59306,
+      "sha256": "c0512e3dbbd55c4266d4f383ec4b6c7e04238a112ee5bc60f421b22a5696881f"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_STRUGGLE_6.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 60414,
+      "sha256": "e3aff8372ffd47b04ad7dc85afe57b2d8de03dd0dda58b8c4b37d009858d396e"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_WALK.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 54935,
+      "sha256": "1c28ccf329ceed8ae2c73486888f58a34cf384113e7dd0067b955a588232609f"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_WALK_0.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 59083,
+      "sha256": "4d48a40f4142af0628288fb4c919a4bb9c6cdb4f5aeca4895ea58eb9f5f6156e"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_WALK_12.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 59083,
+      "sha256": "4d48a40f4142af0628288fb4c919a4bb9c6cdb4f5aeca4895ea58eb9f5f6156e"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_WALK_6.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 54935,
+      "sha256": "1c28ccf329ceed8ae2c73486888f58a34cf384113e7dd0067b955a588232609f"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/reports/Delivery_Report.md",
+      "role": "support",
+      "location": "library",
+      "bytes": 5441,
+      "sha256": "3693ee0b86363717635fb5512d98d75cebdbbeb7774b578cbff49e7869d283da"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/reports/blender_audit.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 4030,
+      "sha256": "f0076d2a7d2cd5758cb22ad7950a6960ccacc50d9c9ec90750e195cb8f3525c6"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/reports/box_unity_bounds.txt",
+      "role": "support",
+      "location": "library",
+      "bytes": 73,
+      "sha256": "a03890664c74a1c51fa231317c0faa692bdf090545b47ae1e43fa0805144a4d0"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/reports/contact_unity.txt",
+      "role": "support",
+      "location": "library",
+      "bytes": 6920,
+      "sha256": "4a18fb6ff32cf3b03312362d5ac967a2fa3b2fd88e53e42d4417c8875804cda0"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/reports/final_structure.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 670,
+      "sha256": "02fd3e0952cbe62c02335947ad89fed87d6f83703a320866f5f106962644452b"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/reports/passport.md",
+      "role": "support",
+      "location": "library",
+      "bytes": 3273,
+      "sha256": "fbdac641c26dc9bfbe8856c059a77500e381b11a7eaa4028cbad838a29647a7b"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/reports/penetration.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 493,
+      "sha256": "cd5b260e6517963b13bbde677ef11f4bb0d9ae2826f5318029f29497779c8dd1"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/reports/unity_audit.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 1285,
+      "sha256": "3afb30092328285de440a8bdfa5d9de8517d4ffc814ddf590b01af3d1371cd84"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/reports/unity_contact_metric.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 40,
+      "sha256": "f03c35fdc95e01bee330ae9a2001ea6e6c63ef7ae667ca259938bc2f34e6cc54"
+    },
+    {
+      "path": "assets/library/characters/heavy_carrier_v001/source/SIMUS_NPC_HeavyCarrier.blend",
+      "role": "source",
+      "location": "library",
+      "bytes": 4126238,
+      "sha256": "61ad6c86af6760a68871f4c2bf7e517880ec5c8a94c1d052a3e0602d3265c737"
     },
     {
       "path": "assets/library/characters/modular_hairfix_v001/citizen_portraits.md",
@@ -3997,6 +4375,13 @@
       "location": "library",
       "bytes": 167376,
       "sha256": "ec31599f2111032f67ef5922d341bd4bf8fc968660211d50619aba4691875b08"
+    },
+    {
+      "path": "assets/library/props/heavy_box_v001/README.md",
+      "role": "support",
+      "location": "library",
+      "bytes": 739,
+      "sha256": "a48ba2cfe86ba101ac143ba6931f12541bde18e6b3d9e5145080dc4b75fb9e12"
     },
     {
       "path": "assets/library/props/korean_guide_signs/README.md",
@@ -7602,6 +7987,174 @@
       "location": "unity_existing",
       "bytes": 21711,
       "sha256": "f43a21191a0590896588820ca5d10ac718c3ea66fbca2fd5519e5ba1ca3bb6fa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "dadddfff3cfbfac427538286175d889feed0062de2de859b49eacdb838c7e272"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001/animations.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "c9bcd19a8537928e9150d14bf7352e638ac8d2c29651f0cad3dadfa2eacb39b0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001/animations/HeavyCarrier.controller",
+      "role": "animation_controller",
+      "location": "unity_existing",
+      "bytes": 8660,
+      "sha256": "54e4f28e0e1c6ac7ecfab48bdbf7387d0b66c3e11ef2a3c1e0e4537f3285f3d4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001/animations/HeavyCarrier.controller.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "9c07d9562a629056cab4a51ee3ac0d23b9a238135377e7ed1fbef8f9374df732"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001/materials.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "115dc23757dbeffccf213991cc98c4e4d34f56a35dc9448843b9c64baf9f28c6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001/materials/Heavy_Face.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2216,
+      "sha256": "b0fa6668e3df88f4dfd606adfef106c47637291da8d3df3a74e299b3ccce1e7b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001/materials/Heavy_Face.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "d3d5081628879a848a5177e9e803d6f167425deec7e45c8af52c5d71baba59f5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001/materials/Heavy_Gloves.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2215,
+      "sha256": "924f31dfd5ba8363c8034cca92945f3b7042ca92c6848f1f86178e5bbd4af901"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001/materials/Heavy_Gloves.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "0de8e8c7be6853291c444a4aa3bae1cbcd9b46b7938966a1449bb12890fc90c7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001/materials/Heavy_Hair.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2216,
+      "sha256": "e6c1d36ef6453d45a6115f3763d26fca2177d2d5161ab9e917d6baf257c262c4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001/materials/Heavy_Hair.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "d88607e6092ffc4a70d88fbd87c210551ad6aa48f782ebfe69db528d74084346"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001/materials/Heavy_Pants.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2215,
+      "sha256": "68b77a2a0db1c16aa77a32c777c95e24707d4e427421491d6d7443c7b21cd2ec"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001/materials/Heavy_Pants.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "807fc1e6f7ca9cd0b5810ff2d7e3b9107545212790b0a33075ff99bc224acddd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001/materials/Heavy_Shoes.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2214,
+      "sha256": "75cc7f47771ef58359b371c862492c191e6161c33739ece26fa7be1455acba5f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001/materials/Heavy_Shoes.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "15c04bd091a472c0d770ff09e84c1f389ad5a24e00ac2ac78beff752c17e14ab"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001/materials/Heavy_Skin.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2213,
+      "sha256": "8b5d43e0f210dd73e0cde6ab67138c9a172d40f07cc58f70ac9ef3abd6fe03ca"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001/materials/Heavy_Skin.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "8eff2a360ede0d7b5a55cdffbf204a5246bb62fd0d18f6e0ea042e870a3e2067"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001/materials/Heavy_Sole.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2212,
+      "sha256": "eebc81a33184694219063b7320dbe1593a04060738b3a2d940288865b6748f07"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001/materials/Heavy_Sole.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "c9255fe813b0ec77cb19306f468c336fe1fdf15f563cef3c8941d11bccb69ad8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001/materials/Heavy_Top.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2212,
+      "sha256": "139cd0bb9cd1f3ae4ff02bc4346c9524e0c25d97316b682a8443c45aa8321c65"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001/materials/Heavy_Top.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "5e1f8d710b105826f5b1f67030e689f106c913fba46f34a487fbc7de025fe0a9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001/models.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "62aa24c8d1c6b829caf695a7ceac211ade45e82338553274bfa68841f6a298c9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001/models/SIMUS_NPC_HeavyCarrier.fbx",
+      "role": "export",
+      "location": "unity_existing",
+      "bytes": 2328780,
+      "sha256": "a7a8a4801b76d4865aa3e9af6a7455962a3b2e8c22eb6e70444ee003d4d01904"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/heavy_carrier_v001/models/SIMUS_NPC_HeavyCarrier.fbx.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 22955,
+      "sha256": "2bcc2fcefa895ba31fe3c85a7cabde86029cbb07e4247aa17160d7294f218e68"
     },
     {
       "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001.meta",
@@ -11461,6 +12014,83 @@
       "sha256": "e0ce42794f14dbd692a07bb046147d8de6951721aee81a0f7b2e7f6739ae35d9"
     },
     {
+      "path": "unity/Assets/SIMUS/Art/props/heavy_box_v001.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "b09ac82500400723043d4bc62cd1175237619b897de9ae03f67c123a9c0a8f7c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/heavy_box_v001/materials.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "15cb01ce3b39ed91f4af5f0e5b8b395e8047f100945f03c5745d72102a4318a9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/heavy_box_v001/materials/Heavy_Cardboard.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2217,
+      "sha256": "05dee94e12b6bd405a9a085b3e896fc236f7f78557556a8752190d9611fdddc8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/heavy_box_v001/materials/Heavy_Cardboard.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "1e76a240d93ab5da3844e97a3d7f7eb8adb0724cbb1b00106c43f3d8e93b2692"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/heavy_box_v001/materials/Heavy_Label.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2214,
+      "sha256": "de9d676eb70ea25a0a76bbad3c281ce8208a96e7a3caeb793038174b90af558b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/heavy_box_v001/materials/Heavy_Label.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "f15c26598229c72ae6becd96dd20252febd1e74bd55a77b08c30bd5a619e8a9b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/heavy_box_v001/materials/Heavy_Tape.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2212,
+      "sha256": "686a3d97f8b02c96348aa18fc8621c4227d7fec1e38c32786eda5afe8316d6b9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/heavy_box_v001/materials/Heavy_Tape.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "72ef691e95d93326b440712b9b1e132eebb7f70c1abfd28715ada89e5542a7ea"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/heavy_box_v001/models.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "1082abdeae68fd94564956ee02a1d0a1cd3c0342cd3728576a604096f1ea95fe"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/heavy_box_v001/models/SIMUS_Prop_HeavyBox.fbx",
+      "role": "export",
+      "location": "unity_existing",
+      "bytes": 24476,
+      "sha256": "1bf7e2f5bc6452f9ce6532b93e67978bf73af923930f474c32cc1fcf6f16c71b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/heavy_box_v001/models/SIMUS_Prop_HeavyBox.fbx.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 3449,
+      "sha256": "9c4037b8f2b7aae11b721e56e2d1eae12881e17235d3c9d9fa41af521ad126ca"
+    },
+    {
       "path": "unity/Assets/SIMUS/Art/props/props.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
@@ -12595,6 +13225,27 @@
       "sha256": "851ab82b444ad908d6f884a59d273ff7965d22827fb9292630b12daf34f1e193"
     },
     {
+      "path": "unity/Assets/SIMUS/Prefabs/characters/heavy_carrier_v001.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "d19c9f3a4043c3d8ae6450236dab5141abedb69d17e6c69e951d45f680806bde"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/characters/heavy_carrier_v001/SIMUS_NPC_HeavyCarrier.prefab",
+      "role": "prefab",
+      "location": "unity_existing",
+      "bytes": 27687,
+      "sha256": "3d533c6c1c198095758d9ba709e31b3ebe5f1c417b076cbca83d09cbd50a5d3c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/characters/heavy_carrier_v001/SIMUS_NPC_HeavyCarrier.prefab.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 154,
+      "sha256": "983226da26a25d0c6d9c70422c2a43722b9e9b49538c8f5ba2c413d51b0eb0e1"
+    },
+    {
       "path": "unity/Assets/SIMUS/Prefabs/props.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
@@ -12621,6 +13272,27 @@
       "location": "unity_existing",
       "bytes": 154,
       "sha256": "23d96a2d348e62937516897f1fa03fd0f70e76d7f73c89e87073f04a68501c8e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/props/heavy_box_v001.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "9da36d6ed49f4bcea5e4e7f7ecb295a1a9e706831c652d1ad4a283a58257d878"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/props/heavy_box_v001/SIMUS_Prop_HeavyBox.prefab",
+      "role": "prefab",
+      "location": "unity_existing",
+      "bytes": 3435,
+      "sha256": "ffb4c7dcd878b537e202b9227615526ce9bec0379d192572b1167cd08e6c639c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/props/heavy_box_v001/SIMUS_Prop_HeavyBox.prefab.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 154,
+      "sha256": "ef1cea3ba87cd5f12f12edc6fc55c19c6fc0e00cd54e9c56384fba4c79cdaf7d"
     },
     {
       "path": "unity/Assets/SIMUS/Prefabs/props/public_toilet_v001.meta",
@@ -14109,6 +14781,13 @@
       ]
     },
     {
+      "sha256": "1c28ccf329ceed8ae2c73486888f58a34cf384113e7dd0067b955a588232609f",
+      "paths": [
+        "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_WALK.png",
+        "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_WALK_6.png"
+      ]
+    },
+    {
       "sha256": "2ccdec6829b92840eb01726cb9f00e8923ee83ecdaeaf0dd424292e3efe4a061",
       "paths": [
         "unity/Assets/SIMUS/Art/buildings/commercial_cafe_v001/materials/MAT_GLASS_NEUTRAL.mat",
@@ -14120,6 +14799,13 @@
       "paths": [
         "unity/Assets/SIMUS/Art/buildings/commercial_cafe_v001/materials/MAT_SIGN_DARK.mat",
         "unity/Assets/SIMUS/Art/buildings/commercial_restaurant_v001/materials/MAT_SIGN_DARK.mat"
+      ]
+    },
+    {
+      "sha256": "4d48a40f4142af0628288fb4c919a4bb9c6cdb4f5aeca4895ea58eb9f5f6156e",
+      "paths": [
+        "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_WALK_0.png",
+        "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_WALK_12.png"
       ]
     },
     {
@@ -14137,6 +14823,13 @@
       ]
     },
     {
+      "sha256": "7d28823c53d203dca4bdaaa88282f944ee1332bcc877dcde680352e277269f6a",
+      "paths": [
+        "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_LOOK_AROUND.png",
+        "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_LOOK_AROUND_6.png"
+      ]
+    },
+    {
       "sha256": "a14691279f3dd9d2e8e1f9912a1a44a33b6683586c301a2bc837dc80c2af98e8",
       "paths": [
         "assets/library/buildings/commercial_cafe_v001/previews/09_Hero.png",
@@ -14151,6 +14844,19 @@
       ]
     },
     {
+      "sha256": "c0512e3dbbd55c4266d4f383ec4b6c7e04238a112ee5bc60f421b22a5696881f",
+      "paths": [
+        "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_IDLE.png",
+        "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_IDLE_0.png",
+        "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_IDLE_12.png",
+        "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_IDLE_6.png",
+        "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_LOOK_AROUND_0.png",
+        "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_LOOK_AROUND_12.png",
+        "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_STRUGGLE_0.png",
+        "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_STRUGGLE_12.png"
+      ]
+    },
+    {
       "sha256": "c732d617842659fea55d941cbd9bc513ac3d61a4e75b04e4b90ace6dce6148c0",
       "paths": [
         "unity/Assets/SIMUS/Art/buildings/commercial_restaurant_v001/textures/TEX_TILE_OFFWHITE.png",
@@ -14162,6 +14868,13 @@
       "paths": [
         "unity/Assets/SIMUS/Art/buildings/commercial_cafe_v001/materials/MAT_CONCRETE.mat",
         "unity/Assets/SIMUS/Art/buildings/commercial_restaurant_v001/materials/MAT_CONCRETE.mat"
+      ]
+    },
+    {
+      "sha256": "e3aff8372ffd47b04ad7dc85afe57b2d8de03dd0dda58b8c4b37d009858d396e",
+      "paths": [
+        "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_STRUGGLE.png",
+        "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_STRUGGLE_6.png"
       ]
     }
   ]

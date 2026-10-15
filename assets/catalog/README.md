@@ -92,3 +92,7 @@
 ## 2026-10-15 울고 있는 아이 NPC
 
 [crying_child_v001](../library/characters/crying_child_v001/README.md). 아이 체형, Humanoid, 울음4클립, 독립 프리팹, GIF·이미지 검수 제공. received, 기존 맵 미배치.
+
+## 2026-10-15 무거운 짐 운반 시민
+
+[heavy_carrier_v001](../library/characters/heavy_carrier_v001/README.md) · [heavy_box_v001](../library/props/heavy_box_v001/README.md). 성인 Humanoid, 운반4클립, 독립 상자 및 프리팹. received, 기존 맵 미배치.
