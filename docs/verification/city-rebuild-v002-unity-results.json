@@ -1,0 +1,4704 @@
+{
+  "design_id": "city_rebuild_v002",
+  "scope": "Phases 1–3",
+  "layout_sha256": "3e98ea485bd92dc9c2528d0420b5999a0336f700270c0f73f7630aa214fbd105",
+  "scene": "Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity",
+  "unity_version": "6000.3.24f1",
+  "phase1": "PASS: all required FBX assets loaded by Unity AssetDatabase, real mesh bounds verified",
+  "phase2": "PASS: serialized ground, 7 roads, turning spaces, pedestrian surfaces and 17 facility roots; runtime navigation not tested",
+  "phase3": "PASS: 14 campus wrappers, 55 external FBX instances and original sports facilities serialized",
+  "phase4_to_7": "NOT TESTED / outside this delivery",
+  "instances": [
+    {
+      "id": "C00",
+      "asset": "Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+      "asset_guid": "db95cddf399db4b02837fe4bb12a675e",
+      "native_bounds": {
+        "min": [
+          -63.0744553,
+          0.180017948,
+          90.2352753
+        ],
+        "max": [
+          -19.1251,
+          12.0240231,
+          103.527664
+        ],
+        "size": [
+          43.9493561,
+          11.8440056,
+          13.2923889
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -60.0744553,
+          1.8119812E-05,
+          155.23526
+        ],
+        "max": [
+          -16.1251,
+          11.8440218,
+          168.527649
+        ],
+        "size": [
+          43.9493561,
+          11.8440037,
+          13.2923889
+        ]
+      },
+      "root_position": [
+        3.0,
+        -0.18,
+        65.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [
+        "PACKAGE_D03_UNITY_D03_CAMPUS_9d45fc07bd",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___roof_2a0cbb846b",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___windows_7d492250f4",
+        "PACKAGE_D03_UNITY_D03_BUILDING_PLINTH_0",
+        "PACKAGE_D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___windows_7d492250f4",
+        "PACKAGE_D03_UNITY_D03_CANOPY_0",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_0_0",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_0_1",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_0_2",
+        "PACKAGE_D03_UNITY_D03_ENTRY_GLASS_0",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_0_0",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_0_1",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_0_2",
+        "PACKAGE_D03_UNITY_D03_PARAPET_0_0",
+        "PACKAGE_D03_UNITY_D03_PARAPET_0_1",
+        "PACKAGE_D03_UNITY_D03_PARAPET_0_4",
+        "PACKAGE_D03_UNITY_D03_PARAPET_0_5",
+        "PACKAGE_D03_UNITY_D03_PARAPET_0_7",
+        "PACKAGE_D03_UNITY_D03_PARAPET_0_8"
+      ],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "C01",
+      "asset": "Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+      "asset_guid": "db95cddf399db4b02837fe4bb12a675e",
+      "native_bounds": {
+        "min": [
+          -75.31435,
+          0.180018425,
+          71.0076
+        ],
+        "max": [
+          -62.8056335,
+          13.2240229,
+          102.566452
+        ],
+        "size": [
+          12.5087128,
+          13.0440044,
+          31.5588531
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -75.31435,
+          1.859665E-05,
+          136.0076
+        ],
+        "max": [
+          -62.8056335,
+          13.0440216,
+          167.566437
+        ],
+        "size": [
+          12.5087128,
+          13.0440025,
+          31.5588379
+        ]
+      },
+      "root_position": [
+        0.0,
+        -0.18,
+        65.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [
+        "PACKAGE_D03_UNITY_D03_CAMPUS_2c3548bed0",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___roof_fc8c93126f",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___windows_4b10671786",
+        "PACKAGE_D03_UNITY_D03_BUILDING_PLINTH_1",
+        "PACKAGE_D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___windows_4b10671786",
+        "PACKAGE_D03_UNITY_D03_CANOPY_1",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_1_0",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_1_1",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_1_2",
+        "PACKAGE_D03_UNITY_D03_ENTRY_GLASS_1",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_1_0",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_1_1",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_1_2",
+        "PACKAGE_D03_UNITY_D03_PARAPET_1_0",
+        "PACKAGE_D03_UNITY_D03_PARAPET_1_1",
+        "PACKAGE_D03_UNITY_D03_PARAPET_1_4",
+        "PACKAGE_D03_UNITY_D03_PARAPET_1_5",
+        "PACKAGE_D03_UNITY_D03_PARAPET_1_7",
+        "PACKAGE_D03_UNITY_D03_PARAPET_1_8"
+      ],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "C02",
+      "asset": "Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+      "asset_guid": "db95cddf399db4b02837fe4bb12a675e",
+      "native_bounds": {
+        "min": [
+          -73.5147552,
+          0.180014133,
+          52.4348373
+        ],
+        "max": [
+          -54.28501,
+          9.624018,
+          70.40474
+        ],
+        "size": [
+          19.229744,
+          9.444004,
+          17.969902
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -73.5147552,
+          1.43051147E-05,
+          113.43483
+        ],
+        "max": [
+          -54.28501,
+          9.444017,
+          131.404739
+        ],
+        "size": [
+          19.229744,
+          9.444003,
+          17.96991
+        ]
+      },
+      "root_position": [
+        0.0,
+        -0.18,
+        61.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [
+        "PACKAGE_D03_UNITY_D03_CAMPUS_1b0bcb7975",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___roof_9fc65d8eb5",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___windows_7a3c94dc1a",
+        "PACKAGE_D03_UNITY_D03_BUILDING_PLINTH_2",
+        "PACKAGE_D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___windows_7a3c94dc1a",
+        "PACKAGE_D03_UNITY_D03_CANOPY_2",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_2_0",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_2_1",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_2_2",
+        "PACKAGE_D03_UNITY_D03_ENTRY_GLASS_2",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_2_0",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_2_1",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_2_2",
+        "PACKAGE_D03_UNITY_D03_PARAPET_2_0",
+        "PACKAGE_D03_UNITY_D03_PARAPET_2_1",
+        "PACKAGE_D03_UNITY_D03_PARAPET_2_10",
+        "PACKAGE_D03_UNITY_D03_PARAPET_2_13",
+        "PACKAGE_D03_UNITY_D03_PARAPET_2_15",
+        "PACKAGE_D03_UNITY_D03_PARAPET_2_16",
+        "PACKAGE_D03_UNITY_D03_PARAPET_2_3",
+        "PACKAGE_D03_UNITY_D03_PARAPET_2_5",
+        "PACKAGE_D03_UNITY_D03_PARAPET_2_6",
+        "PACKAGE_D03_UNITY_D03_PARAPET_2_8"
+      ],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "C03",
+      "asset": "Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+      "asset_guid": "db95cddf399db4b02837fe4bb12a675e",
+      "native_bounds": {
+        "min": [
+          -3.79441357,
+          0.180009842,
+          69.4180756
+        ],
+        "max": [
+          27.9138832,
+          14.4240141,
+          82.40729
+        ],
+        "size": [
+          31.7082977,
+          14.2440042,
+          12.989212
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -3.79441357,
+          1.001358E-05,
+          134.418091
+        ],
+        "max": [
+          27.9138832,
+          14.2440109,
+          147.407288
+        ],
+        "size": [
+          31.7082977,
+          14.2440014,
+          12.9891968
+        ]
+      },
+      "root_position": [
+        0.0,
+        -0.18,
+        65.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [
+        "PACKAGE_D03_UNITY_D03_CAMPUS_8e8e8b62df",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___roof_66e0664a12",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___windows_a851d10e30",
+        "PACKAGE_D03_UNITY_D03_BUILDING_PLINTH_3",
+        "PACKAGE_D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___windows_a851d10e30",
+        "PACKAGE_D03_UNITY_D03_CANOPY_3",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_3_0",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_3_1",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_3_2",
+        "PACKAGE_D03_UNITY_D03_ENTRY_GLASS_3",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_3_0",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_3_1",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_3_2",
+        "PACKAGE_D03_UNITY_D03_PARAPET_3_0",
+        "PACKAGE_D03_UNITY_D03_PARAPET_3_1",
+        "PACKAGE_D03_UNITY_D03_PARAPET_3_3",
+        "PACKAGE_D03_UNITY_D03_PARAPET_3_5",
+        "PACKAGE_D03_UNITY_D03_PARAPET_3_7",
+        "PACKAGE_D03_UNITY_D03_PARAPET_3_8"
+      ],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "C04",
+      "asset": "Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+      "asset_guid": "db95cddf399db4b02837fe4bb12a675e",
+      "native_bounds": {
+        "min": [
+          -46.0346375,
+          0.18000412,
+          3.939478
+        ],
+        "max": [
+          -35.32522,
+          12.0240059,
+          18.567173
+        ],
+        "size": [
+          10.7094193,
+          11.8440018,
+          14.6276951
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -46.0346375,
+          3.81469727E-06,
+          68.93948
+        ],
+        "max": [
+          -35.32522,
+          11.8440037,
+          83.56717
+        ],
+        "size": [
+          10.7094193,
+          11.844,
+          14.6276855
+        ]
+      },
+      "root_position": [
+        0.0,
+        -0.18,
+        65.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [
+        "PACKAGE_D03_UNITY_D03_CAMPUS___A_95f531acb3",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___A_roof_a57fbc4cd1",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___A_windows_5e91c9a0d1",
+        "PACKAGE_D03_UNITY_D03_BUILDING_PLINTH_4",
+        "PACKAGE_D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___A_windows_5e91c9a0d1",
+        "PACKAGE_D03_UNITY_D03_CANOPY_4",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_4_0",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_4_1",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_4_2",
+        "PACKAGE_D03_UNITY_D03_ENTRY_GLASS_4",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_4_0",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_4_1",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_4_2",
+        "PACKAGE_D03_UNITY_D03_PARAPET_4_0",
+        "PACKAGE_D03_UNITY_D03_PARAPET_4_1",
+        "PACKAGE_D03_UNITY_D03_PARAPET_4_3",
+        "PACKAGE_D03_UNITY_D03_PARAPET_4_4"
+      ],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "C05",
+      "asset": "Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+      "asset_guid": "db95cddf399db4b02837fe4bb12a675e",
+      "native_bounds": {
+        "min": [
+          -33.3145256,
+          0.180001259,
+          -0.423778534
+        ],
+        "max": [
+          -17.6853981,
+          16.8240051,
+          22.4073582
+        ],
+        "size": [
+          15.6291275,
+          16.6440048,
+          22.8311367
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -33.3145256,
+          1.90734863E-06,
+          64.57622
+        ],
+        "max": [
+          -17.6853981,
+          16.6440029,
+          87.4073639
+        ],
+        "size": [
+          15.6291275,
+          16.644001,
+          22.8311462
+        ]
+      },
+      "root_position": [
+        0.0,
+        -0.18,
+        65.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [
+        "PACKAGE_D03_UNITY_D03_CAMPUS___B_92f7f42429",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___B_roof_2732f97c69",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___B_windows_e547662a2f",
+        "PACKAGE_D03_UNITY_D03_BUILDING_PLINTH_5",
+        "PACKAGE_D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___B_windows_e547662a2f",
+        "PACKAGE_D03_UNITY_D03_CANOPY_5",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_5_0",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_5_1",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_5_2",
+        "PACKAGE_D03_UNITY_D03_ENTRY_GLASS_5",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_5_0",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_5_1",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_5_2",
+        "PACKAGE_D03_UNITY_D03_PARAPET_5_0",
+        "PACKAGE_D03_UNITY_D03_PARAPET_5_1",
+        "PACKAGE_D03_UNITY_D03_PARAPET_5_3",
+        "PACKAGE_D03_UNITY_D03_PARAPET_5_4"
+      ],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "C06",
+      "asset": "Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+      "asset_guid": "db95cddf399db4b02837fe4bb12a675e",
+      "native_bounds": {
+        "min": [
+          -16.9870815,
+          0.180000782,
+          0.9088688
+        ],
+        "max": [
+          -5.20552063,
+          10.8240032,
+          15.207159
+        ],
+        "size": [
+          11.7815609,
+          10.6440029,
+          14.29829
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -16.9870815,
+          9.536743E-07,
+          65.90887
+        ],
+        "max": [
+          -5.20552063,
+          10.644001,
+          80.20716
+        ],
+        "size": [
+          11.7815609,
+          10.644,
+          14.2982941
+        ]
+      },
+      "root_position": [
+        0.0,
+        -0.18,
+        65.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [
+        "PACKAGE_D03_UNITY_D03_CAMPUS___C_12bbc38382",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___C_roof_9875cf76e1",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___C_windows_1650b4ba25",
+        "PACKAGE_D03_UNITY_D03_BUILDING_PLINTH_6",
+        "PACKAGE_D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___C_windows_1650b4ba25",
+        "PACKAGE_D03_UNITY_D03_CANOPY_6",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_6_0",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_6_1",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_6_2",
+        "PACKAGE_D03_UNITY_D03_ENTRY_GLASS_6",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_6_0",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_6_1",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_6_2",
+        "PACKAGE_D03_UNITY_D03_PARAPET_6_0",
+        "PACKAGE_D03_UNITY_D03_PARAPET_6_1",
+        "PACKAGE_D03_UNITY_D03_PARAPET_6_3",
+        "PACKAGE_D03_UNITY_D03_PARAPET_6_5",
+        "PACKAGE_D03_UNITY_D03_PARAPET_6_6"
+      ],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "C07",
+      "asset": "Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+      "asset_guid": "db95cddf399db4b02837fe4bb12a675e",
+      "native_bounds": {
+        "min": [
+          31.4851227,
+          0.179993629,
+          -8.960589
+        ],
+        "max": [
+          61.155,
+          19.2240028,
+          30.5676384
+        ],
+        "size": [
+          29.6698761,
+          19.04401,
+          39.52823
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          31.4851227,
+          -6.67572E-06,
+          56.0394135
+        ],
+        "max": [
+          61.155,
+          19.0439987,
+          95.56764
+        ],
+        "size": [
+          29.6698761,
+          19.0440063,
+          39.52823
+        ]
+      },
+      "root_position": [
+        0.0,
+        -0.18,
+        65.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [
+        "PACKAGE_D03_UNITY_D03_CAMPUS_ac63cdf883",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___roof_3af07ed6df",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___windows_9e2d9ab9c0",
+        "PACKAGE_D03_UNITY_D03_BUILDING_PLINTH_7",
+        "PACKAGE_D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___windows_9e2d9ab9c0",
+        "PACKAGE_D03_UNITY_D03_CANOPY_7",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_7_0",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_7_1",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_7_2",
+        "PACKAGE_D03_UNITY_D03_ENTRY_GLASS_7",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_7_0",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_7_1",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_7_2",
+        "PACKAGE_D03_UNITY_D03_PARAPET_7_0",
+        "PACKAGE_D03_UNITY_D03_PARAPET_7_1",
+        "PACKAGE_D03_UNITY_D03_PARAPET_7_10",
+        "PACKAGE_D03_UNITY_D03_PARAPET_7_12",
+        "PACKAGE_D03_UNITY_D03_PARAPET_7_14",
+        "PACKAGE_D03_UNITY_D03_PARAPET_7_16",
+        "PACKAGE_D03_UNITY_D03_PARAPET_7_18",
+        "PACKAGE_D03_UNITY_D03_PARAPET_7_24",
+        "PACKAGE_D03_UNITY_D03_PARAPET_7_25",
+        "PACKAGE_D03_UNITY_D03_PARAPET_7_28",
+        "PACKAGE_D03_UNITY_D03_PARAPET_7_29",
+        "PACKAGE_D03_UNITY_D03_PARAPET_7_3",
+        "PACKAGE_D03_UNITY_D03_PARAPET_7_31",
+        "PACKAGE_D03_UNITY_D03_PARAPET_7_32",
+        "PACKAGE_D03_UNITY_D03_PARAPET_7_33",
+        "PACKAGE_D03_UNITY_D03_PARAPET_7_34",
+        "PACKAGE_D03_UNITY_D03_PARAPET_7_5",
+        "PACKAGE_D03_UNITY_D03_PARAPET_7_7",
+        "PACKAGE_D03_UNITY_D03_PARAPET_7_9"
+      ],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "C08",
+      "asset": "Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+      "asset_guid": "db95cddf399db4b02837fe4bb12a675e",
+      "native_bounds": {
+        "min": [
+          41.92505,
+          0.179986477,
+          -45.2662773
+        ],
+        "max": [
+          63.9149551,
+          15.6239929,
+          -7.712364
+        ],
+        "size": [
+          21.9899063,
+          15.444006,
+          37.5539131
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          41.92505,
+          -1.335144E-05,
+          15.7337265
+        ],
+        "max": [
+          63.9149551,
+          15.4439907,
+          53.2876358
+        ],
+        "size": [
+          21.9899063,
+          15.4440041,
+          37.55391
+        ]
+      },
+      "root_position": [
+        0.0,
+        -0.18,
+        61.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [
+        "PACKAGE_D03_UNITY_D03_CAMPUS_0e662ead48",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___roof_e09f627e81",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___windows_f7cd8d9190",
+        "PACKAGE_D03_UNITY_D03_BUILDING_PLINTH_8",
+        "PACKAGE_D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___windows_f7cd8d9190",
+        "PACKAGE_D03_UNITY_D03_CANOPY_8",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_8_0",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_8_1",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_8_2",
+        "PACKAGE_D03_UNITY_D03_ENTRY_GLASS_8",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_8_0",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_8_1",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_8_2",
+        "PACKAGE_D03_UNITY_D03_PARAPET_8_0",
+        "PACKAGE_D03_UNITY_D03_PARAPET_8_1",
+        "PACKAGE_D03_UNITY_D03_PARAPET_8_10",
+        "PACKAGE_D03_UNITY_D03_PARAPET_8_11",
+        "PACKAGE_D03_UNITY_D03_PARAPET_8_13",
+        "PACKAGE_D03_UNITY_D03_PARAPET_8_14",
+        "PACKAGE_D03_UNITY_D03_PARAPET_8_18",
+        "PACKAGE_D03_UNITY_D03_PARAPET_8_22",
+        "PACKAGE_D03_UNITY_D03_PARAPET_8_23",
+        "PACKAGE_D03_UNITY_D03_PARAPET_8_25",
+        "PACKAGE_D03_UNITY_D03_PARAPET_8_26",
+        "PACKAGE_D03_UNITY_D03_PARAPET_8_28",
+        "PACKAGE_D03_UNITY_D03_PARAPET_8_29",
+        "PACKAGE_D03_UNITY_D03_PARAPET_8_3",
+        "PACKAGE_D03_UNITY_D03_PARAPET_8_31",
+        "PACKAGE_D03_UNITY_D03_PARAPET_8_32",
+        "PACKAGE_D03_UNITY_D03_PARAPET_8_8",
+        "PACKAGE_D03_UNITY_D03_PARAPET_8_9"
+      ],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "C09",
+      "asset": "Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+      "asset_guid": "db95cddf399db4b02837fe4bb12a675e",
+      "native_bounds": {
+        "min": [
+          61.9640045,
+          0.179981232,
+          -68.98234
+        ],
+        "max": [
+          76.63489,
+          13.2239857,
+          -42.5123367
+        ],
+        "size": [
+          14.6708832,
+          13.0440044,
+          26.4700012
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          70.96399,
+          -1.859665E-05,
+          -3.98232651
+        ],
+        "max": [
+          85.63489,
+          13.0439835,
+          22.4876671
+        ],
+        "size": [
+          14.6708984,
+          13.0440025,
+          26.4699936
+        ]
+      },
+      "root_position": [
+        9.0,
+        -0.18,
+        65.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [
+        "PACKAGE_D03_UNITY_D03_CAMPUS_6fdb2209e4",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___roof_ff889b8d89",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___windows_da525f52b7",
+        "PACKAGE_D03_UNITY_D03_BUILDING_PLINTH_9",
+        "PACKAGE_D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___windows_da525f52b7",
+        "PACKAGE_D03_UNITY_D03_CANOPY_9",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_9_0",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_9_1",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_9_2",
+        "PACKAGE_D03_UNITY_D03_ENTRY_GLASS_9",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_9_0",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_9_1",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_9_2",
+        "PACKAGE_D03_UNITY_D03_PARAPET_9_0",
+        "PACKAGE_D03_UNITY_D03_PARAPET_9_1",
+        "PACKAGE_D03_UNITY_D03_PARAPET_9_10",
+        "PACKAGE_D03_UNITY_D03_PARAPET_9_11",
+        "PACKAGE_D03_UNITY_D03_PARAPET_9_12",
+        "PACKAGE_D03_UNITY_D03_PARAPET_9_3",
+        "PACKAGE_D03_UNITY_D03_PARAPET_9_5",
+        "PACKAGE_D03_UNITY_D03_PARAPET_9_7"
+      ],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "C10",
+      "asset": "Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+      "asset_guid": "db95cddf399db4b02837fe4bb12a675e",
+      "native_bounds": {
+        "min": [
+          18.8840027,
+          0.179982185,
+          -67.9536743
+        ],
+        "max": [
+          67.276,
+          13.2239857,
+          -55.8323669
+        ],
+        "size": [
+          48.392,
+          13.0440035,
+          12.1213074
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          18.8840027,
+          -1.8119812E-05,
+          -2.95366287
+        ],
+        "max": [
+          67.276,
+          13.0439844,
+          9.167644
+        ],
+        "size": [
+          48.392,
+          13.0440025,
+          12.1213064
+        ]
+      },
+      "root_position": [
+        0.0,
+        -0.18,
+        65.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [
+        "PACKAGE_D03_UNITY_D03_CAMPUS_f252bc0d66",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___roof_b72b3437d1",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___windows_ed987eca9c",
+        "PACKAGE_D03_UNITY_D03_BUILDING_PLINTH_10",
+        "PACKAGE_D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___windows_ed987eca9c",
+        "PACKAGE_D03_UNITY_D03_CANOPY_10",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_10_0",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_10_1",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_10_2",
+        "PACKAGE_D03_UNITY_D03_ENTRY_GLASS_10",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_10_0",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_10_1",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_10_2",
+        "PACKAGE_D03_UNITY_D03_PARAPET_10_0",
+        "PACKAGE_D03_UNITY_D03_PARAPET_10_1",
+        "PACKAGE_D03_UNITY_D03_PARAPET_10_10",
+        "PACKAGE_D03_UNITY_D03_PARAPET_10_11",
+        "PACKAGE_D03_UNITY_D03_PARAPET_10_14",
+        "PACKAGE_D03_UNITY_D03_PARAPET_10_17",
+        "PACKAGE_D03_UNITY_D03_PARAPET_10_19",
+        "PACKAGE_D03_UNITY_D03_PARAPET_10_20",
+        "PACKAGE_D03_UNITY_D03_PARAPET_10_3",
+        "PACKAGE_D03_UNITY_D03_PARAPET_10_5",
+        "PACKAGE_D03_UNITY_D03_PARAPET_10_6",
+        "PACKAGE_D03_UNITY_D03_PARAPET_10_8"
+      ],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "C11",
+      "asset": "Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+      "asset_guid": "db95cddf399db4b02837fe4bb12a675e",
+      "native_bounds": {
+        "min": [
+          -55.155014,
+          0.17998457,
+          -103.134506
+        ],
+        "max": [
+          -29.8040085,
+          12.0239906,
+          -69.39235
+        ],
+        "size": [
+          25.3510056,
+          11.8440056,
+          33.742157
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -55.155014,
+          -1.57356262E-05,
+          -38.1345062
+        ],
+        "max": [
+          -29.8040085,
+          11.84399,
+          -4.392334
+        ],
+        "size": [
+          25.3510056,
+          11.8440056,
+          33.7421722
+        ]
+      },
+      "root_position": [
+        0.0,
+        -0.18,
+        65.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [
+        "PACKAGE_D03_UNITY_D03_CAMPUS_ce106fb7fb",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___roof_2684406e33",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___windows_af54b076f0",
+        "PACKAGE_D03_UNITY_D03_BUILDING_PLINTH_11",
+        "PACKAGE_D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___windows_af54b076f0",
+        "PACKAGE_D03_UNITY_D03_CANOPY_11",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_11_0",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_11_1",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_11_2",
+        "PACKAGE_D03_UNITY_D03_ENTRY_GLASS_11",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_11_0",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_11_1",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_11_2",
+        "PACKAGE_D03_UNITY_D03_PARAPET_11_0",
+        "PACKAGE_D03_UNITY_D03_PARAPET_11_1",
+        "PACKAGE_D03_UNITY_D03_PARAPET_11_11",
+        "PACKAGE_D03_UNITY_D03_PARAPET_11_13",
+        "PACKAGE_D03_UNITY_D03_PARAPET_11_15",
+        "PACKAGE_D03_UNITY_D03_PARAPET_11_18",
+        "PACKAGE_D03_UNITY_D03_PARAPET_11_19",
+        "PACKAGE_D03_UNITY_D03_PARAPET_11_20",
+        "PACKAGE_D03_UNITY_D03_PARAPET_11_3",
+        "PACKAGE_D03_UNITY_D03_PARAPET_11_5",
+        "PACKAGE_D03_UNITY_D03_PARAPET_11_6",
+        "PACKAGE_D03_UNITY_D03_PARAPET_11_9"
+      ],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "C12",
+      "asset": "Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+      "asset_guid": "db95cddf399db4b02837fe4bb12a675e",
+      "native_bounds": {
+        "min": [
+          -26.47601,
+          0.179982662,
+          -96.70233
+        ],
+        "max": [
+          4.27599525,
+          10.823988,
+          -73.11232
+        ],
+        "size": [
+          30.7520046,
+          10.6440048,
+          23.5900116
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -26.47601,
+          -1.76429749E-05,
+          -31.70232
+        ],
+        "max": [
+          4.27599525,
+          10.6439857,
+          -8.112316
+        ],
+        "size": [
+          30.7520046,
+          10.6440029,
+          23.590004
+        ]
+      },
+      "root_position": [
+        0.0,
+        -0.18,
+        65.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [
+        "PACKAGE_D03_UNITY_D03_CAMPUS_46f4de2db9",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___roof_918c55add8",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___windows_91538f98f6",
+        "PACKAGE_D03_UNITY_D03_BUILDING_PLINTH_12",
+        "PACKAGE_D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___windows_91538f98f6",
+        "PACKAGE_D03_UNITY_D03_CANOPY_12",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_12_0",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_12_1",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_12_2",
+        "PACKAGE_D03_UNITY_D03_ENTRY_GLASS_12",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_12_0",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_12_1",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_12_2",
+        "PACKAGE_D03_UNITY_D03_PARAPET_12_0",
+        "PACKAGE_D03_UNITY_D03_PARAPET_12_1",
+        "PACKAGE_D03_UNITY_D03_PARAPET_12_10",
+        "PACKAGE_D03_UNITY_D03_PARAPET_12_11",
+        "PACKAGE_D03_UNITY_D03_PARAPET_12_12",
+        "PACKAGE_D03_UNITY_D03_PARAPET_12_3",
+        "PACKAGE_D03_UNITY_D03_PARAPET_12_8",
+        "PACKAGE_D03_UNITY_D03_PARAPET_12_9"
+      ],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "C13",
+      "asset": "Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+      "asset_guid": "db95cddf399db4b02837fe4bb12a675e",
+      "native_bounds": {
+        "min": [
+          41.084,
+          0.179980755,
+          -84.10234
+        ],
+        "max": [
+          52.03499,
+          8.423985,
+          -71.6727448
+        ],
+        "size": [
+          10.9509888,
+          8.244003,
+          12.4295959
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          41.084,
+          -1.90734863E-05,
+          -19.1023369
+        ],
+        "max": [
+          52.03499,
+          8.243982,
+          -6.67273331
+        ],
+        "size": [
+          10.9509888,
+          8.244001,
+          12.4296036
+        ]
+      },
+      "root_position": [
+        0.0,
+        -0.18,
+        65.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [
+        "PACKAGE_D03_UNITY_D03_CAMPUS_889d350bf5",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___roof_bea79cb5b0",
+        "PACKAGE_D03_UNITY_D03_CAMPUS___windows_42473642ab",
+        "PACKAGE_D03_UNITY_D03_BUILDING_PLINTH_13",
+        "PACKAGE_D03_UNITY_D03_WINDOW_FRAMES_D03_CAMPUS___windows_42473642ab",
+        "PACKAGE_D03_UNITY_D03_CANOPY_13",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_13_0",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_13_1",
+        "PACKAGE_D03_UNITY_D03_DOOR_FRAME_13_2",
+        "PACKAGE_D03_UNITY_D03_ENTRY_GLASS_13",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_13_0",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_13_1",
+        "PACKAGE_D03_UNITY_D03_ENTRY_STEP_13_2",
+        "PACKAGE_D03_UNITY_D03_PARAPET_13_0",
+        "PACKAGE_D03_UNITY_D03_PARAPET_13_1",
+        "PACKAGE_D03_UNITY_D03_PARAPET_13_11",
+        "PACKAGE_D03_UNITY_D03_PARAPET_13_12",
+        "PACKAGE_D03_UNITY_D03_PARAPET_13_4",
+        "PACKAGE_D03_UNITY_D03_PARAPET_13_5",
+        "PACKAGE_D03_UNITY_D03_PARAPET_13_7",
+        "PACKAGE_D03_UNITY_D03_PARAPET_13_9"
+      ],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B01",
+      "asset": "Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx",
+      "asset_guid": "f0ac66a90ee304b9b8aa50da43068d03",
+      "native_bounds": {
+        "min": [
+          -6.30000257,
+          -1.90734863E-06,
+          -8.549991
+        ],
+        "max": [
+          6.30000067,
+          16.488,
+          8.550012
+        ],
+        "size": [
+          12.6000032,
+          16.4880028,
+          17.1000023
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -78.3,
+          0.0,
+          -92.55
+        ],
+        "max": [
+          -65.7,
+          16.4880028,
+          -75.45
+        ],
+        "size": [
+          12.6000042,
+          16.4880028,
+          17.1000023
+        ]
+      },
+      "root_position": [
+        -72.0,
+        0.0,
+        -84.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B02",
+      "asset": "Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx",
+      "asset_guid": "060d76c32cbc24c5faddca24ea1030fd",
+      "native_bounds": {
+        "min": [
+          -7.200004,
+          -2.38418579E-06,
+          -8.999995
+        ],
+        "max": [
+          7.19999838,
+          13.878,
+          9.000007
+        ],
+        "size": [
+          14.4000025,
+          13.8780031,
+          18.0000019
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -56.2,
+          0.0,
+          -92.0
+        ],
+        "max": [
+          -41.8,
+          13.8780031,
+          -74.0
+        ],
+        "size": [
+          14.4000034,
+          13.8780031,
+          18.0000019
+        ]
+      },
+      "root_position": [
+        -49.0,
+        0.0,
+        -83.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B03",
+      "asset": "Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_02_NEIGHBORHOOD_CENTER.fbx",
+      "asset_guid": "0bc35881b64664bc9a210b85c4389636",
+      "native_bounds": {
+        "min": [
+          -10.125,
+          -2.861023E-06,
+          -9.899987
+        ],
+        "max": [
+          10.1250038,
+          13.3830013,
+          9.900014
+        ],
+        "size": [
+          20.2500038,
+          13.3830042,
+          19.8000011
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -35.1250038,
+          0.0,
+          -95.9
+        ],
+        "max": [
+          -14.8749971,
+          13.3830042,
+          -76.1
+        ],
+        "size": [
+          20.2500057,
+          13.3830042,
+          19.8000031
+        ]
+      },
+      "root_position": [
+        -25.0,
+        0.0,
+        -86.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B04",
+      "asset": "Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx",
+      "asset_guid": "f0ac66a90ee304b9b8aa50da43068d03",
+      "native_bounds": {
+        "min": [
+          -6.30000257,
+          -1.90734863E-06,
+          -8.549991
+        ],
+        "max": [
+          6.30000067,
+          16.488,
+          8.550012
+        ],
+        "size": [
+          12.6000032,
+          16.4880028,
+          17.1000023
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -0.3000021,
+          0.0,
+          -90.55
+        ],
+        "max": [
+          12.3000021,
+          16.4880028,
+          -73.45
+        ],
+        "size": [
+          12.6000042,
+          16.4880028,
+          17.1000023
+        ]
+      },
+      "root_position": [
+        6.0,
+        0.0,
+        -82.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B05",
+      "asset": "Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx",
+      "asset_guid": "060d76c32cbc24c5faddca24ea1030fd",
+      "native_bounds": {
+        "min": [
+          -7.200004,
+          -2.38418579E-06,
+          -8.999995
+        ],
+        "max": [
+          7.19999838,
+          13.878,
+          9.000007
+        ],
+        "size": [
+          14.4000025,
+          13.8780031,
+          18.0000019
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          23.8,
+          0.0,
+          -93.0
+        ],
+        "max": [
+          38.2,
+          13.8780031,
+          -75.0
+        ],
+        "size": [
+          14.4000034,
+          13.8780031,
+          18.0000019
+        ]
+      },
+      "root_position": [
+        31.0,
+        0.0,
+        -84.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B06",
+      "asset": "Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx",
+      "asset_guid": "f0ac66a90ee304b9b8aa50da43068d03",
+      "native_bounds": {
+        "min": [
+          -6.30000257,
+          -1.90734863E-06,
+          -8.549991
+        ],
+        "max": [
+          6.30000067,
+          16.488,
+          8.550012
+        ],
+        "size": [
+          12.6000032,
+          16.4880028,
+          17.1000023
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          47.6999969,
+          0.0,
+          -90.55
+        ],
+        "max": [
+          60.3000031,
+          16.4880028,
+          -73.45
+        ],
+        "size": [
+          12.6000042,
+          16.4880028,
+          17.1000023
+        ]
+      },
+      "root_position": [
+        54.0,
+        0.0,
+        -82.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B07",
+      "asset": "Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_02_NEIGHBORHOOD_CENTER.fbx",
+      "asset_guid": "0bc35881b64664bc9a210b85c4389636",
+      "native_bounds": {
+        "min": [
+          -10.125,
+          -2.861023E-06,
+          -9.899987
+        ],
+        "max": [
+          10.1250038,
+          13.3830013,
+          9.900014
+        ],
+        "size": [
+          20.2500038,
+          13.3830042,
+          19.8000011
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          70.875,
+          0.0,
+          -95.9
+        ],
+        "max": [
+          91.125,
+          13.3830042,
+          -76.1
+        ],
+        "size": [
+          20.2500057,
+          13.3830042,
+          19.8000031
+        ]
+      },
+      "root_position": [
+        81.0,
+        0.0,
+        -86.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B08",
+      "asset": "Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx",
+      "asset_guid": "060d76c32cbc24c5faddca24ea1030fd",
+      "native_bounds": {
+        "min": [
+          -7.200004,
+          -2.38418579E-06,
+          -8.999995
+        ],
+        "max": [
+          7.19999838,
+          13.878,
+          9.000007
+        ],
+        "size": [
+          14.4000025,
+          13.8780031,
+          18.0000019
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          104.799995,
+          0.0,
+          -98.0
+        ],
+        "max": [
+          119.200005,
+          13.8780031,
+          -80.0
+        ],
+        "size": [
+          14.4000034,
+          13.8780031,
+          18.0000019
+        ]
+      },
+      "root_position": [
+        112.0,
+        0.0,
+        -89.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B09",
+      "asset": "Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx",
+      "asset_guid": "060d76c32cbc24c5faddca24ea1030fd",
+      "native_bounds": {
+        "min": [
+          -7.200004,
+          -2.38418579E-06,
+          -8.999995
+        ],
+        "max": [
+          7.19999838,
+          13.878,
+          9.000007
+        ],
+        "size": [
+          14.4000025,
+          13.8780031,
+          18.0000019
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -72.2000046,
+          0.0,
+          -138.0
+        ],
+        "max": [
+          -57.8,
+          13.8780031,
+          -120.0
+        ],
+        "size": [
+          14.4000034,
+          13.8780031,
+          18.0000019
+        ]
+      },
+      "root_position": [
+        -65.0,
+        0.0,
+        -129.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B10",
+      "asset": "Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx",
+      "asset_guid": "f0ac66a90ee304b9b8aa50da43068d03",
+      "native_bounds": {
+        "min": [
+          -6.30000257,
+          -1.90734863E-06,
+          -8.549991
+        ],
+        "max": [
+          6.30000067,
+          16.488,
+          8.550012
+        ],
+        "size": [
+          12.6000032,
+          16.4880028,
+          17.1000023
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -45.3000031,
+          0.0,
+          -136.55
+        ],
+        "max": [
+          -32.6999969,
+          16.4880028,
+          -119.45
+        ],
+        "size": [
+          12.6000042,
+          16.4880028,
+          17.1000023
+        ]
+      },
+      "root_position": [
+        -39.0,
+        0.0,
+        -128.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B11",
+      "asset": "Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_02_NEIGHBORHOOD_CENTER.fbx",
+      "asset_guid": "0bc35881b64664bc9a210b85c4389636",
+      "native_bounds": {
+        "min": [
+          -10.125,
+          -2.861023E-06,
+          -9.899987
+        ],
+        "max": [
+          10.1250038,
+          13.3830013,
+          9.900014
+        ],
+        "size": [
+          20.2500038,
+          13.3830042,
+          19.8000011
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -1.12500286,
+          0.0,
+          -137.9
+        ],
+        "max": [
+          19.1250038,
+          13.3830042,
+          -118.1
+        ],
+        "size": [
+          20.2500057,
+          13.3830042,
+          19.8000031
+        ]
+      },
+      "root_position": [
+        9.0,
+        0.0,
+        -128.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B12",
+      "asset": "Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx",
+      "asset_guid": "f0ac66a90ee304b9b8aa50da43068d03",
+      "native_bounds": {
+        "min": [
+          -6.30000257,
+          -1.90734863E-06,
+          -8.549991
+        ],
+        "max": [
+          6.30000067,
+          16.488,
+          8.550012
+        ],
+        "size": [
+          12.6000032,
+          16.4880028,
+          17.1000023
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          36.6999969,
+          0.0,
+          -140.55
+        ],
+        "max": [
+          49.3000031,
+          16.4880028,
+          -123.45
+        ],
+        "size": [
+          12.6000042,
+          16.4880028,
+          17.1000023
+        ]
+      },
+      "root_position": [
+        43.0,
+        0.0,
+        -132.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B13",
+      "asset": "Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx",
+      "asset_guid": "060d76c32cbc24c5faddca24ea1030fd",
+      "native_bounds": {
+        "min": [
+          -7.200004,
+          -2.38418579E-06,
+          -8.999995
+        ],
+        "max": [
+          7.19999838,
+          13.878,
+          9.000007
+        ],
+        "size": [
+          14.4000025,
+          13.8780031,
+          18.0000019
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          60.8,
+          0.0,
+          -144.0
+        ],
+        "max": [
+          75.2000046,
+          13.8780031,
+          -126.0
+        ],
+        "size": [
+          14.4000034,
+          13.8780031,
+          18.0000019
+        ]
+      },
+      "root_position": [
+        68.0,
+        0.0,
+        -135.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B14",
+      "asset": "Assets/SIMUS/Art/buildings/department_store/DEPARTMENT.fbx",
+      "asset_guid": "520123869906c4c17a2480cde1891f3c",
+      "native_bounds": {
+        "min": [
+          -12.2050028,
+          -2.861023E-06,
+          -9.400002
+        ],
+        "max": [
+          12.2050028,
+          13.7400017,
+          9.4
+        ],
+        "size": [
+          24.4100056,
+          13.7400045,
+          18.8000011
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          114.795,
+          0.0,
+          -127.4
+        ],
+        "max": [
+          139.205,
+          13.7400045,
+          -108.6
+        ],
+        "size": [
+          24.4100075,
+          13.7400045,
+          18.8000031
+        ]
+      },
+      "root_position": [
+        127.0,
+        0.0,
+        -118.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B15",
+      "asset": "Assets/SIMUS/Art/buildings/apartments/APARTMENT_A_MIDRISE.fbx",
+      "asset_guid": "2e529dfe9f73d4b23a6b5fbe3847ca20",
+      "native_bounds": {
+        "min": [
+          -7.47000647,
+          -1.90734863E-06,
+          -17.0900021
+        ],
+        "max": [
+          7.469999,
+          43.4800034,
+          17.0899982
+        ],
+        "size": [
+          14.9400053,
+          43.4800034,
+          34.18
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -139.47,
+          0.0,
+          119.91
+        ],
+        "max": [
+          -124.53,
+          43.4800034,
+          154.09
+        ],
+        "size": [
+          14.9400053,
+          43.4800034,
+          34.18
+        ]
+      },
+      "root_position": [
+        -132.0,
+        0.0,
+        137.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B16",
+      "asset": "Assets/SIMUS/Art/buildings/apartments/APARTMENT_B_MIDRISE.fbx",
+      "asset_guid": "506a13c7141104b26b9167d27caa36bc",
+      "native_bounds": {
+        "min": [
+          -11.0900011,
+          -1.90734863E-06,
+          -11.4450035
+        ],
+        "max": [
+          11.0900049,
+          49.6000061,
+          11.4450035
+        ],
+        "size": [
+          22.180006,
+          49.6000061,
+          22.890007
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -175.09,
+          0.0,
+          125.554993
+        ],
+        "max": [
+          -152.91,
+          49.6000061,
+          148.445
+        ],
+        "size": [
+          22.180006,
+          49.6000061,
+          22.890007
+        ]
+      },
+      "root_position": [
+        -164.0,
+        0.0,
+        137.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B17",
+      "asset": "Assets/SIMUS/Art/buildings/apartments/APARTMENT_C_MIDRISE.fbx",
+      "asset_guid": "1ac1ff558c19442b8b949be9656d8c6b",
+      "native_bounds": {
+        "min": [
+          -10.0899973,
+          -1.90734863E-06,
+          -15.0449972
+        ],
+        "max": [
+          10.0900087,
+          37.6,
+          15.0450068
+        ],
+        "size": [
+          20.180006,
+          37.6000023,
+          30.090004
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -222.09,
+          0.0,
+          105.955
+        ],
+        "max": [
+          -201.91,
+          37.6000023,
+          136.045
+        ],
+        "size": [
+          20.180006,
+          37.6000023,
+          30.090004
+        ]
+      },
+      "root_position": [
+        -212.0,
+        0.0,
+        121.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B18",
+      "asset": "Assets/SIMUS/Art/buildings/apartments/APARTMENT_A_MIDRISE.fbx",
+      "asset_guid": "2e529dfe9f73d4b23a6b5fbe3847ca20",
+      "native_bounds": {
+        "min": [
+          -7.47000647,
+          -1.90734863E-06,
+          -17.0900021
+        ],
+        "max": [
+          7.469999,
+          43.4800034,
+          17.0899982
+        ],
+        "size": [
+          14.9400053,
+          43.4800034,
+          34.18
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -220.47,
+          0.0,
+          51.91
+        ],
+        "max": [
+          -205.53,
+          43.4800034,
+          86.09
+        ],
+        "size": [
+          14.9400053,
+          43.4800034,
+          34.18
+        ]
+      },
+      "root_position": [
+        -213.0,
+        0.0,
+        69.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B19",
+      "asset": "Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx",
+      "asset_guid": "9ee97e5958e7d48938b3cf4094b1dc22",
+      "native_bounds": {
+        "min": [
+          -10.2366,
+          -2.861023E-06,
+          -8.3942
+        ],
+        "max": [
+          10.2366056,
+          17.2913017,
+          8.394198
+        ],
+        "size": [
+          20.4732056,
+          17.2913055,
+          16.7883987
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -139.2366,
+          0.0,
+          84.6058044
+        ],
+        "max": [
+          -118.7634,
+          17.2913055,
+          101.394196
+        ],
+        "size": [
+          20.4732056,
+          17.2913055,
+          16.7883987
+        ]
+      },
+      "root_position": [
+        -129.0,
+        0.0,
+        93.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B20",
+      "asset": "Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.fbx",
+      "asset_guid": "468359488874540b788de4d19059be94",
+      "native_bounds": {
+        "min": [
+          -10.7066011,
+          -1.90734863E-06,
+          -9.334201
+        ],
+        "max": [
+          10.7066088,
+          14.5277014,
+          9.334199
+        ],
+        "size": [
+          21.41321,
+          14.5277033,
+          18.6684
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -170.7066,
+          0.0,
+          83.6658
+        ],
+        "max": [
+          -149.2934,
+          14.5277033,
+          102.3342
+        ],
+        "size": [
+          21.41321,
+          14.5277033,
+          18.6684
+        ]
+      },
+      "root_position": [
+        -160.0,
+        0.0,
+        93.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B21",
+      "asset": "Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx",
+      "asset_guid": "09333facf5b0e4b8ca4181393544d809",
+      "native_bounds": {
+        "min": [
+          -9.273106,
+          -1.90734863E-06,
+          -9.710204
+        ],
+        "max": [
+          9.273106,
+          11.8957014,
+          9.710198
+        ],
+        "size": [
+          18.5462112,
+          11.8957033,
+          19.4204025
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -135.2731,
+          0.0,
+          25.2897987
+        ],
+        "max": [
+          -116.726891,
+          11.8957033,
+          44.7102
+        ],
+        "size": [
+          18.5462132,
+          11.8957033,
+          19.4204044
+        ]
+      },
+      "root_position": [
+        -126.0,
+        0.0,
+        35.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B22",
+      "asset": "Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx",
+      "asset_guid": "9ee97e5958e7d48938b3cf4094b1dc22",
+      "native_bounds": {
+        "min": [
+          -10.2366,
+          -2.861023E-06,
+          -8.3942
+        ],
+        "max": [
+          10.2366056,
+          17.2913017,
+          8.394198
+        ],
+        "size": [
+          20.4732056,
+          17.2913055,
+          16.7883987
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -165.2366,
+          0.0,
+          23.6058
+        ],
+        "max": [
+          -144.7634,
+          17.2913055,
+          40.3942
+        ],
+        "size": [
+          20.4732075,
+          17.2913055,
+          16.7884
+        ]
+      },
+      "root_position": [
+        -155.0,
+        0.0,
+        32.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B23",
+      "asset": "Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx",
+      "asset_guid": "bb77d5c8a24e44a43a5523167a60fbf0",
+      "native_bounds": {
+        "min": [
+          -5.725003,
+          -1.90734863E-06,
+          -7.69999838
+        ],
+        "max": [
+          5.72500372,
+          9.755001,
+          7.700004
+        ],
+        "size": [
+          11.4500065,
+          9.755003,
+          15.4000025
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -190.725,
+          0.0,
+          22.3
+        ],
+        "max": [
+          -179.275,
+          9.755003,
+          37.7
+        ],
+        "size": [
+          11.4500084,
+          9.755003,
+          15.4000034
+        ]
+      },
+      "root_position": [
+        -185.0,
+        0.0,
+        30.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B24",
+      "asset": "Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx",
+      "asset_guid": "55bbbd1ce0e154369bc2eab8b427923c",
+      "native_bounds": {
+        "min": [
+          -6.87500048,
+          -1.90734863E-06,
+          -7.795
+        ],
+        "max": [
+          6.87500143,
+          7.57054949,
+          7.79500866
+        ],
+        "size": [
+          13.7500019,
+          7.5705514,
+          15.5900087
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -219.795,
+          0.0,
+          15.124998099999999
+        ],
+        "max": [
+          -204.205,
+          7.5705514,
+          28.8750019
+        ],
+        "size": [
+          15.5900087,
+          7.5705514,
+          13.7500038
+        ]
+      },
+      "root_position": [
+        -212.0,
+        0.0,
+        22.0
+      ],
+      "root_yaw": 270.0,
+      "root_scale": [
+        1.00000024,
+        1.0,
+        1.00000024
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B25",
+      "asset": "Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.fbx",
+      "asset_guid": "a86f6530993f241009b86225f1abb050",
+      "native_bounds": {
+        "min": [
+          -5.724999,
+          -1.90734863E-06,
+          -6.54183865
+        ],
+        "max": [
+          5.72500753,
+          9.605001,
+          6.541847
+        ],
+        "size": [
+          11.4500065,
+          9.605003,
+          13.0836859
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -131.725,
+          0.0,
+          -31.5418434
+        ],
+        "max": [
+          -120.274994,
+          9.605003,
+          -18.4581566
+        ],
+        "size": [
+          11.4500074,
+          9.605003,
+          13.0836868
+        ]
+      },
+      "root_position": [
+        -126.0,
+        0.0,
+        -25.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B26",
+      "asset": "Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx",
+      "asset_guid": "09333facf5b0e4b8ca4181393544d809",
+      "native_bounds": {
+        "min": [
+          -9.273106,
+          -1.90734863E-06,
+          -9.710204
+        ],
+        "max": [
+          9.273106,
+          11.8957014,
+          9.710198
+        ],
+        "size": [
+          18.5462112,
+          11.8957033,
+          19.4204025
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -165.2731,
+          0.0,
+          -40.7102
+        ],
+        "max": [
+          -146.7269,
+          11.8957033,
+          -21.2897987
+        ],
+        "size": [
+          18.5462132,
+          11.8957033,
+          19.4204044
+        ]
+      },
+      "root_position": [
+        -156.0,
+        0.0,
+        -31.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B27",
+      "asset": "Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx",
+      "asset_guid": "bb77d5c8a24e44a43a5523167a60fbf0",
+      "native_bounds": {
+        "min": [
+          -5.725003,
+          -1.90734863E-06,
+          -7.69999838
+        ],
+        "max": [
+          5.72500372,
+          9.755001,
+          7.700004
+        ],
+        "size": [
+          11.4500065,
+          9.755003,
+          15.4000025
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -218.7,
+          0.0,
+          -37.7250023
+        ],
+        "max": [
+          -203.3,
+          9.755003,
+          -26.2749958
+        ],
+        "size": [
+          15.4000025,
+          9.755003,
+          11.4500074
+        ]
+      },
+      "root_position": [
+        -211.0,
+        0.0,
+        -32.0
+      ],
+      "root_yaw": 270.0,
+      "root_scale": [
+        1.00000024,
+        1.0,
+        1.00000024
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B28",
+      "asset": "Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx",
+      "asset_guid": "55bbbd1ce0e154369bc2eab8b427923c",
+      "native_bounds": {
+        "min": [
+          -6.87500048,
+          -1.90734863E-06,
+          -7.795
+        ],
+        "max": [
+          6.87500143,
+          7.57054949,
+          7.79500866
+        ],
+        "size": [
+          13.7500019,
+          7.5705514,
+          15.5900087
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -188.875,
+          0.0,
+          -56.7950058
+        ],
+        "max": [
+          -175.125,
+          7.5705514,
+          -41.2049942
+        ],
+        "size": [
+          13.7500038,
+          7.5705514,
+          15.5900106
+        ]
+      },
+      "root_position": [
+        -182.0,
+        0.0,
+        -49.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B29",
+      "asset": "Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx",
+      "asset_guid": "bb77d5c8a24e44a43a5523167a60fbf0",
+      "native_bounds": {
+        "min": [
+          -5.725003,
+          -1.90734863E-06,
+          -7.69999838
+        ],
+        "max": [
+          5.72500372,
+          9.755001,
+          7.700004
+        ],
+        "size": [
+          11.4500065,
+          9.755003,
+          15.4000025
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -190.725,
+          0.0,
+          -168.7
+        ],
+        "max": [
+          -179.275,
+          9.755003,
+          -153.3
+        ],
+        "size": [
+          11.4500084,
+          9.755003,
+          15.4000034
+        ]
+      },
+      "root_position": [
+        -185.0,
+        0.0,
+        -161.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B30",
+      "asset": "Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx",
+      "asset_guid": "9ee97e5958e7d48938b3cf4094b1dc22",
+      "native_bounds": {
+        "min": [
+          -10.2366,
+          -2.861023E-06,
+          -8.3942
+        ],
+        "max": [
+          10.2366056,
+          17.2913017,
+          8.394198
+        ],
+        "size": [
+          20.4732056,
+          17.2913055,
+          16.7883987
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -170.2366,
+          0.0,
+          -159.3942
+        ],
+        "max": [
+          -149.7634,
+          17.2913055,
+          -142.6058
+        ],
+        "size": [
+          20.4732075,
+          17.2913055,
+          16.7884
+        ]
+      },
+      "root_position": [
+        -160.0,
+        0.0,
+        -151.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B31",
+      "asset": "Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx",
+      "asset_guid": "55bbbd1ce0e154369bc2eab8b427923c",
+      "native_bounds": {
+        "min": [
+          -6.87500048,
+          -1.90734863E-06,
+          -7.795
+        ],
+        "max": [
+          6.87500143,
+          7.57054949,
+          7.79500866
+        ],
+        "size": [
+          13.7500019,
+          7.5705514,
+          15.5900087
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -165.795,
+          0.0,
+          -182.875
+        ],
+        "max": [
+          -150.205,
+          7.5705514,
+          -169.125
+        ],
+        "size": [
+          15.5900087,
+          7.5705514,
+          13.7500038
+        ]
+      },
+      "root_position": [
+        -158.0,
+        0.0,
+        -176.0
+      ],
+      "root_yaw": 270.0,
+      "root_scale": [
+        1.00000024,
+        1.0,
+        1.00000024
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B32",
+      "asset": "Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx",
+      "asset_guid": "09333facf5b0e4b8ca4181393544d809",
+      "native_bounds": {
+        "min": [
+          -9.273106,
+          -1.90734863E-06,
+          -9.710204
+        ],
+        "max": [
+          9.273106,
+          11.8957014,
+          9.710198
+        ],
+        "size": [
+          18.5462112,
+          11.8957033,
+          19.4204025
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -115.273109,
+          0.0,
+          -201.7102
+        ],
+        "max": [
+          -96.72689,
+          11.8957033,
+          -182.2898
+        ],
+        "size": [
+          18.5462132,
+          11.8957033,
+          19.4204044
+        ]
+      },
+      "root_position": [
+        -106.0,
+        0.0,
+        -192.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B33",
+      "asset": "Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.fbx",
+      "asset_guid": "a86f6530993f241009b86225f1abb050",
+      "native_bounds": {
+        "min": [
+          -5.724999,
+          -1.90734863E-06,
+          -6.54183865
+        ],
+        "max": [
+          5.72500753,
+          9.605001,
+          6.541847
+        ],
+        "size": [
+          11.4500065,
+          9.605003,
+          13.0836859
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -80.7250061,
+          0.0,
+          -193.54184
+        ],
+        "max": [
+          -69.2749939,
+          9.605003,
+          -180.45816
+        ],
+        "size": [
+          11.4500074,
+          9.605003,
+          13.0836868
+        ]
+      },
+      "root_position": [
+        -75.0,
+        0.0,
+        -187.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B34",
+      "asset": "Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.fbx",
+      "asset_guid": "468359488874540b788de4d19059be94",
+      "native_bounds": {
+        "min": [
+          -10.7066011,
+          -1.90734863E-06,
+          -9.334201
+        ],
+        "max": [
+          10.7066088,
+          14.5277014,
+          9.334199
+        ],
+        "size": [
+          21.41321,
+          14.5277033,
+          18.6684
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -56.706604,
+          0.0,
+          -194.3342
+        ],
+        "max": [
+          -35.293396,
+          14.5277033,
+          -175.6658
+        ],
+        "size": [
+          21.4132118,
+          14.5277033,
+          18.6684017
+        ]
+      },
+      "root_position": [
+        -46.0,
+        0.0,
+        -185.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B35",
+      "asset": "Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx",
+      "asset_guid": "bb77d5c8a24e44a43a5523167a60fbf0",
+      "native_bounds": {
+        "min": [
+          -5.725003,
+          -1.90734863E-06,
+          -7.69999838
+        ],
+        "max": [
+          5.72500372,
+          9.755001,
+          7.700004
+        ],
+        "size": [
+          11.4500065,
+          9.755003,
+          15.4000025
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -24.7250042,
+          0.0,
+          -208.7
+        ],
+        "max": [
+          -13.2749958,
+          9.755003,
+          -193.3
+        ],
+        "size": [
+          11.4500084,
+          9.755003,
+          15.4000034
+        ]
+      },
+      "root_position": [
+        -19.0,
+        0.0,
+        -201.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B36",
+      "asset": "Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx",
+      "asset_guid": "9ee97e5958e7d48938b3cf4094b1dc22",
+      "native_bounds": {
+        "min": [
+          -10.2366,
+          -2.861023E-06,
+          -8.3942
+        ],
+        "max": [
+          10.2366056,
+          17.2913017,
+          8.394198
+        ],
+        "size": [
+          20.4732056,
+          17.2913055,
+          16.7883987
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -2.23660374,
+          0.0,
+          -215.3942
+        ],
+        "max": [
+          18.2366028,
+          17.2913055,
+          -198.6058
+        ],
+        "size": [
+          20.4732075,
+          17.2913055,
+          16.7884
+        ]
+      },
+      "root_position": [
+        8.0,
+        0.0,
+        -207.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B37",
+      "asset": "Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx",
+      "asset_guid": "55bbbd1ce0e154369bc2eab8b427923c",
+      "native_bounds": {
+        "min": [
+          -6.87500048,
+          -1.90734863E-06,
+          -7.795
+        ],
+        "max": [
+          6.87500143,
+          7.57054949,
+          7.79500866
+        ],
+        "size": [
+          13.7500019,
+          7.5705514,
+          15.5900087
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          29.1249981,
+          0.0,
+          -211.795
+        ],
+        "max": [
+          42.875,
+          7.5705514,
+          -196.205
+        ],
+        "size": [
+          13.7500038,
+          7.5705514,
+          15.5900106
+        ]
+      },
+      "root_position": [
+        36.0,
+        0.0,
+        -204.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B38",
+      "asset": "Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx",
+      "asset_guid": "09333facf5b0e4b8ca4181393544d809",
+      "native_bounds": {
+        "min": [
+          -9.273106,
+          -1.90734863E-06,
+          -9.710204
+        ],
+        "max": [
+          9.273106,
+          11.8957014,
+          9.710198
+        ],
+        "size": [
+          18.5462112,
+          11.8957033,
+          19.4204025
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          53.7268944,
+          0.0,
+          -210.7102
+        ],
+        "max": [
+          72.27311,
+          11.8957033,
+          -191.2898
+        ],
+        "size": [
+          18.5462132,
+          11.8957033,
+          19.4204044
+        ]
+      },
+      "root_position": [
+        63.0,
+        0.0,
+        -201.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B39",
+      "asset": "Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.fbx",
+      "asset_guid": "a86f6530993f241009b86225f1abb050",
+      "native_bounds": {
+        "min": [
+          -5.724999,
+          -1.90734863E-06,
+          -6.54183865
+        ],
+        "max": [
+          5.72500753,
+          9.605001,
+          6.541847
+        ],
+        "size": [
+          11.4500065,
+          9.605003,
+          13.0836859
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          82.2749939,
+          0.0,
+          -206.54184
+        ],
+        "max": [
+          93.7250061,
+          9.605003,
+          -193.45816
+        ],
+        "size": [
+          11.4500074,
+          9.605003,
+          13.0836868
+        ]
+      },
+      "root_position": [
+        88.0,
+        0.0,
+        -200.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B40",
+      "asset": "Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.fbx",
+      "asset_guid": "468359488874540b788de4d19059be94",
+      "native_bounds": {
+        "min": [
+          -10.7066011,
+          -1.90734863E-06,
+          -9.334201
+        ],
+        "max": [
+          10.7066088,
+          14.5277014,
+          9.334199
+        ],
+        "size": [
+          21.41321,
+          14.5277033,
+          18.6684
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          112.293396,
+          0.0,
+          -220.3342
+        ],
+        "max": [
+          133.7066,
+          14.5277033,
+          -201.6658
+        ],
+        "size": [
+          21.4132118,
+          14.5277033,
+          18.6684017
+        ]
+      },
+      "root_position": [
+        123.0,
+        0.0,
+        -211.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B41",
+      "asset": "Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx",
+      "asset_guid": "bb77d5c8a24e44a43a5523167a60fbf0",
+      "native_bounds": {
+        "min": [
+          -5.725003,
+          -1.90734863E-06,
+          -7.69999838
+        ],
+        "max": [
+          5.72500372,
+          9.755001,
+          7.700004
+        ],
+        "size": [
+          11.4500065,
+          9.755003,
+          15.4000025
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          147.275,
+          0.0,
+          -233.7
+        ],
+        "max": [
+          158.725,
+          9.755003,
+          -218.3
+        ],
+        "size": [
+          11.4500084,
+          9.755003,
+          15.4000034
+        ]
+      },
+      "root_position": [
+        153.0,
+        0.0,
+        -226.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B42",
+      "asset": "Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx",
+      "asset_guid": "9ee97e5958e7d48938b3cf4094b1dc22",
+      "native_bounds": {
+        "min": [
+          -10.2366,
+          -2.861023E-06,
+          -8.3942
+        ],
+        "max": [
+          10.2366056,
+          17.2913017,
+          8.394198
+        ],
+        "size": [
+          20.4732056,
+          17.2913055,
+          16.7883987
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -188.2366,
+          0.0,
+          -217.3942
+        ],
+        "max": [
+          -167.7634,
+          17.2913055,
+          -200.6058
+        ],
+        "size": [
+          20.4732075,
+          17.2913055,
+          16.7884
+        ]
+      },
+      "root_position": [
+        -178.0,
+        0.0,
+        -209.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B43",
+      "asset": "Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx",
+      "asset_guid": "55bbbd1ce0e154369bc2eab8b427923c",
+      "native_bounds": {
+        "min": [
+          -6.87500048,
+          -1.90734863E-06,
+          -7.795
+        ],
+        "max": [
+          6.87500143,
+          7.57054949,
+          7.79500866
+        ],
+        "size": [
+          13.7500019,
+          7.5705514,
+          15.5900087
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -157.875,
+          0.0,
+          -233.795
+        ],
+        "max": [
+          -144.125,
+          7.5705514,
+          -218.205
+        ],
+        "size": [
+          13.7500038,
+          7.5705514,
+          15.5900106
+        ]
+      },
+      "root_position": [
+        -151.0,
+        0.0,
+        -226.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B44",
+      "asset": "Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx",
+      "asset_guid": "09333facf5b0e4b8ca4181393544d809",
+      "native_bounds": {
+        "min": [
+          -9.273106,
+          -1.90734863E-06,
+          -9.710204
+        ],
+        "max": [
+          9.273106,
+          11.8957014,
+          9.710198
+        ],
+        "size": [
+          18.5462112,
+          11.8957033,
+          19.4204025
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -128.2731,
+          0.0,
+          -233.7102
+        ],
+        "max": [
+          -109.726891,
+          11.8957033,
+          -214.2898
+        ],
+        "size": [
+          18.5462132,
+          11.8957033,
+          19.4204044
+        ]
+      },
+      "root_position": [
+        -119.0,
+        0.0,
+        -224.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B45",
+      "asset": "Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.fbx",
+      "asset_guid": "a86f6530993f241009b86225f1abb050",
+      "native_bounds": {
+        "min": [
+          -5.724999,
+          -1.90734863E-06,
+          -6.54183865
+        ],
+        "max": [
+          5.72500753,
+          9.605001,
+          6.541847
+        ],
+        "size": [
+          11.4500065,
+          9.605003,
+          13.0836859
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -92.7250061,
+          0.0,
+          -228.54184
+        ],
+        "max": [
+          -81.2749939,
+          9.605003,
+          -215.45816
+        ],
+        "size": [
+          11.4500074,
+          9.605003,
+          13.0836868
+        ]
+      },
+      "root_position": [
+        -87.0,
+        0.0,
+        -222.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B46",
+      "asset": "Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.fbx",
+      "asset_guid": "468359488874540b788de4d19059be94",
+      "native_bounds": {
+        "min": [
+          -10.7066011,
+          -1.90734863E-06,
+          -9.334201
+        ],
+        "max": [
+          10.7066088,
+          14.5277014,
+          9.334199
+        ],
+        "size": [
+          21.41321,
+          14.5277033,
+          18.6684
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -64.706604,
+          0.0,
+          -233.3342
+        ],
+        "max": [
+          -43.293396,
+          14.5277033,
+          -214.6658
+        ],
+        "size": [
+          21.4132118,
+          14.5277033,
+          18.6684017
+        ]
+      },
+      "root_position": [
+        -54.0,
+        0.0,
+        -224.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B47",
+      "asset": "Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx",
+      "asset_guid": "bb77d5c8a24e44a43a5523167a60fbf0",
+      "native_bounds": {
+        "min": [
+          -5.725003,
+          -1.90734863E-06,
+          -7.69999838
+        ],
+        "max": [
+          5.72500372,
+          9.755001,
+          7.700004
+        ],
+        "size": [
+          11.4500065,
+          9.755003,
+          15.4000025
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -26.7250042,
+          0.0,
+          -235.7
+        ],
+        "max": [
+          -15.2749958,
+          9.755003,
+          -220.3
+        ],
+        "size": [
+          11.4500084,
+          9.755003,
+          15.4000034
+        ]
+      },
+      "root_position": [
+        -21.0,
+        0.0,
+        -228.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B48",
+      "asset": "Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx",
+      "asset_guid": "9ee97e5958e7d48938b3cf4094b1dc22",
+      "native_bounds": {
+        "min": [
+          -10.2366,
+          -2.861023E-06,
+          -8.3942
+        ],
+        "max": [
+          10.2366056,
+          17.2913017,
+          8.394198
+        ],
+        "size": [
+          20.4732056,
+          17.2913055,
+          16.7883987
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -1.23660374,
+          0.0,
+          -239.3942
+        ],
+        "max": [
+          19.2366028,
+          17.2913055,
+          -222.6058
+        ],
+        "size": [
+          20.4732075,
+          17.2913055,
+          16.7884
+        ]
+      },
+      "root_position": [
+        9.0,
+        0.0,
+        -231.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B49",
+      "asset": "Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx",
+      "asset_guid": "55bbbd1ce0e154369bc2eab8b427923c",
+      "native_bounds": {
+        "min": [
+          -6.87500048,
+          -1.90734863E-06,
+          -7.795
+        ],
+        "max": [
+          6.87500143,
+          7.57054949,
+          7.79500866
+        ],
+        "size": [
+          13.7500019,
+          7.5705514,
+          15.5900087
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          31.1249981,
+          0.0,
+          -234.795
+        ],
+        "max": [
+          44.875,
+          7.5705514,
+          -219.205
+        ],
+        "size": [
+          13.7500038,
+          7.5705514,
+          15.5900106
+        ]
+      },
+      "root_position": [
+        38.0,
+        0.0,
+        -227.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B50",
+      "asset": "Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx",
+      "asset_guid": "09333facf5b0e4b8ca4181393544d809",
+      "native_bounds": {
+        "min": [
+          -9.273106,
+          -1.90734863E-06,
+          -9.710204
+        ],
+        "max": [
+          9.273106,
+          11.8957014,
+          9.710198
+        ],
+        "size": [
+          18.5462112,
+          11.8957033,
+          19.4204025
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          63.7268944,
+          0.0,
+          -235.7102
+        ],
+        "max": [
+          82.27311,
+          11.8957033,
+          -216.2898
+        ],
+        "size": [
+          18.5462132,
+          11.8957033,
+          19.4204044
+        ]
+      },
+      "root_position": [
+        73.0,
+        0.0,
+        -226.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B51",
+      "asset": "Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.fbx",
+      "asset_guid": "a86f6530993f241009b86225f1abb050",
+      "native_bounds": {
+        "min": [
+          -5.724999,
+          -1.90734863E-06,
+          -6.54183865
+        ],
+        "max": [
+          5.72500753,
+          9.605001,
+          6.541847
+        ],
+        "size": [
+          11.4500065,
+          9.605003,
+          13.0836859
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          102.274994,
+          0.0,
+          -238.54184
+        ],
+        "max": [
+          113.725006,
+          9.605003,
+          -225.45816
+        ],
+        "size": [
+          11.4500074,
+          9.605003,
+          13.0836868
+        ]
+      },
+      "root_position": [
+        108.0,
+        0.0,
+        -232.0
+      ],
+      "root_yaw": 180.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B52",
+      "asset": "Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.fbx",
+      "asset_guid": "468359488874540b788de4d19059be94",
+      "native_bounds": {
+        "min": [
+          -10.7066011,
+          -1.90734863E-06,
+          -9.334201
+        ],
+        "max": [
+          10.7066088,
+          14.5277014,
+          9.334199
+        ],
+        "size": [
+          21.41321,
+          14.5277033,
+          18.6684
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          -6.706605,
+          0.0,
+          -160.3342
+        ],
+        "max": [
+          14.706605,
+          14.5277033,
+          -141.6658
+        ],
+        "size": [
+          21.41321,
+          14.5277033,
+          18.6684
+        ]
+      },
+      "root_position": [
+        4.0,
+        0.0,
+        -151.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B53",
+      "asset": "Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx",
+      "asset_guid": "bb77d5c8a24e44a43a5523167a60fbf0",
+      "native_bounds": {
+        "min": [
+          -5.725003,
+          -1.90734863E-06,
+          -7.69999838
+        ],
+        "max": [
+          5.72500372,
+          9.755001,
+          7.700004
+        ],
+        "size": [
+          11.4500065,
+          9.755003,
+          15.4000025
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          32.2749977,
+          0.0,
+          -157.7
+        ],
+        "max": [
+          43.7250023,
+          9.755003,
+          -142.3
+        ],
+        "size": [
+          11.4500065,
+          9.755003,
+          15.4000025
+        ]
+      },
+      "root_position": [
+        38.0,
+        0.0,
+        -150.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B54",
+      "asset": "Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx",
+      "asset_guid": "9ee97e5958e7d48938b3cf4094b1dc22",
+      "native_bounds": {
+        "min": [
+          -10.2366,
+          -2.861023E-06,
+          -8.3942
+        ],
+        "max": [
+          10.2366056,
+          17.2913017,
+          8.394198
+        ],
+        "size": [
+          20.4732056,
+          17.2913055,
+          16.7883987
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          63.7633972,
+          0.0,
+          -165.3942
+        ],
+        "max": [
+          84.2366,
+          17.2913055,
+          -148.6058
+        ],
+        "size": [
+          20.4732056,
+          17.2913055,
+          16.7883987
+        ]
+      },
+      "root_position": [
+        74.0,
+        0.0,
+        -157.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    },
+    {
+      "id": "B55",
+      "asset": "Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx",
+      "asset_guid": "55bbbd1ce0e154369bc2eab8b427923c",
+      "native_bounds": {
+        "min": [
+          -6.87500048,
+          -1.90734863E-06,
+          -7.795
+        ],
+        "max": [
+          6.87500143,
+          7.57054949,
+          7.79500866
+        ],
+        "size": [
+          13.7500019,
+          7.5705514,
+          15.5900087
+        ]
+      },
+      "world_bounds": {
+        "min": [
+          133.125,
+          0.0,
+          -162.795
+        ],
+        "max": [
+          146.875,
+          7.5705514,
+          -147.205
+        ],
+        "size": [
+          13.7500019,
+          7.5705514,
+          15.5900087
+        ]
+      },
+      "root_position": [
+        140.0,
+        0.0,
+        -155.0
+      ],
+      "root_yaw": 0.0,
+      "root_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "source_axis_rotation_euler": [
+        0.0,
+        180.0,
+        0.0
+      ],
+      "source_axis_scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "selected_fbx_meshes": [],
+      "entrance_verification": "NOT TESTED: actual doorway, threshold and NavMesh access deferred"
+    }
+  ],
+  "campus_axis_calibration": {
+    "sum_error_m": 0.0123871453,
+    "rotation_euler": [
+      0.0,
+      180.0,
+      0.0
+    ],
+    "native_adjusted_scale": [
+      1.0,
+      1.0,
+      1.0
+    ]
+  },
+  "retained_campus_facility_meshes": [
+    "PACKAGE_D03_UNITY_D03_CAMPUS__Basketball_court",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__Campus_plinth",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__Campus_surface",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__Center_circle",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__Central_garden",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__Court_boundary",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__Court_halfway",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__Court_key",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__Court_key_001",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__East_green",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__East_north_lawn",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__Field_lawn",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__Goal",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__Goal_001",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__Halfway",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__North_lawn",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__Penalty_area",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__Penalty_area_001",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__Pitch_boundary",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__South_garden",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__Sports_field",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__Tennis_court",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__Tennis_lines",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__Tennis_net",
+    "PACKAGE_D03_UNITY_D03_CAMPUS__Upper_garden"
+  ],
+  "local_npc_segment": {
+    "edge": "C_SPINE_S1",
+    "start": [
+      6.4445,
+      0.16,
+      3.735999
+    ],
+    "end": [
+      7.4815,
+      0.16,
+      77.912
+    ],
+    "status": "support rays checked; Play Mode movement NOT TESTED"
+  },
+  "camera_settings": {
+    "before": {
+      "overview_size": 260.0,
+      "top_view_size": 235.0,
+      "follow_size": 12.75089,
+      "follow_pitch": 28.85,
+      "follow_yaw": -131.64
+    },
+    "after": {
+      "overview_size": 260.0,
+      "top_view_size": 235.0,
+      "follow_size": 12.75089,
+      "follow_pitch": 28.85,
+      "follow_yaw": -131.64
+    },
+    "runtime_validation": "NOT TESTED; original script zoom clamp 170 remains, full overview tuning deferred to phase 6"
+  },
+  "local_npc_support_rays": 21,
+  "generated_mesh_count": 560,
+  "graph_nodes": 388,
+  "graph_edges": 409,
+  "ground_surface_y": -0.02,
+  "road_surface_y": 0.02,
+  "walk_surface_y": 0.14,
+  "play_mode": "NOT TESTED",
+  "navmesh": "NOT TESTED / Phase 5",
+  "scene_reload": "PASS: saved scene reopened by Unity Editor",
+  "scene_sha256": "f130d18e40a517d87bbaa6fa39442a64d86850771d686aafc7d12158e7bb14c7",
+  "script_sha256": "5f3b02dd554c15c57fe5535b0cd53dfe2dae1e1252fd289d3b4d8429fb535c0e",
+  "protected_original_and_build_settings": "PASS: byte-identical",
+  "editor_inspection_captures": [
+    "overview-editor.png",
+    "top-view-editor.png",
+    "npc-inspection-editor.png"
+  ],
+  "capture_scope": "Unity Editor Camera.Render, not Play Mode or Phase 6 dynamic validation",
+  "npc_capture_pose": "NEUTRAL_WALK manually sampled at 0.5 seconds; not Play Mode"
+}

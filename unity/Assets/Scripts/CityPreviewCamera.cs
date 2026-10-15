@@ -10,6 +10,7 @@ namespace Simus
         public float overviewSize = 132f;
         public Vector3 overviewTarget = Vector3.zero;
         public float topViewSize = 112f;
+        [Min(1f)] public float maximumZoom = 170f;
         public bool clampPanToBounds;
         public Vector2 panMinimum;
         public Vector2 panMaximum;
@@ -25,6 +26,7 @@ namespace Simus
         public float followPitch = 28.85f;
         public float followYaw = -131.64f;
         public Shader occlusionShader;
+        public Transform occlusionRoot;
         [Min(0.1f)] public float revealRadius = 3.5f;
         private NpcOcclusionReveal reveal;
         public Vector3 followOffset = new Vector3(0f, 1f, 0f);
@@ -50,7 +52,7 @@ namespace Simus
             if (occlusionShader != null)
             {
                 reveal = gameObject.AddComponent<NpcOcclusionReveal>();
-                reveal.Initialize(occlusionShader);
+                reveal.Initialize(occlusionShader, occlusionRoot);
             }
             Follow();
         }
@@ -125,7 +127,7 @@ namespace Simus
                         target.z = Mathf.Clamp(target.z, panMinimum.y, panMaximum.y);
                     }
                 }
-                size = Mathf.Clamp(size * (1f - Input.mouseScrollDelta.y * 0.07f), 1f, 170f);
+                size = Mathf.Clamp(size * (1f - Input.mouseScrollDelta.y * 0.07f), 1f, Mathf.Max(1f, maximumZoom));
             }
         }
 

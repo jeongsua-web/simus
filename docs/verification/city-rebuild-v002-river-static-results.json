@@ -1,0 +1,92 @@
+{
+  "scope": "Independent sampled plan geometry and serialized artifact review only; no Unity physics/runtime or exhibition approval.",
+  "scene_sha256": "1ab548d80630023e9ebe5361643cea30d08235820feb35d5045e71770c2c98db",
+  "design_sha256": "5eb5cbfc029b98bc567ba504d2d8e3df7ad660ef359599edc6dda2328b1f3265",
+  "checks": [
+    {
+      "check": "design_fixed_ten_metre_water",
+      "status": "PASS",
+      "evidence": {
+        "water_width_m": 10,
+        "reason": "PKE01 existing pedestrian envelope would intersect a 12m water width."
+      }
+    },
+    {
+      "check": "design_preserves_buildings_roads_park_modules",
+      "status": "PASS",
+      "evidence": {
+        "road_min": [
+          21.3812929932919,
+          "R01"
+        ],
+        "building_min": [
+          22.755899939211588,
+          "C09"
+        ],
+        "modules": {
+          "PM1": 0.4791893450267235,
+          "PM2": 3.560058052770099
+        },
+        "rest_areas": {
+          "PZ01": 1.3520275466811,
+          "PZ02": 3.891699538291487
+        }
+      }
+    },
+    {
+      "check": "design_corridor_inside_park",
+      "status": "PASS",
+      "evidence": {
+        "minimum_boundary_clearance_m": 2.200777054989535,
+        "curve_length_m": 170.67424327864242,
+        "method": "100 subdivisions per Catmull-Rom span; centerline inside concave polygon and every segment farther than 12m from boundary"
+      }
+    },
+    {
+      "check": "design_only_two_existing_water_crossings",
+      "status": "PASS",
+      "evidence": {
+        "water_crossing_edges": [
+          "PKE02_S0",
+          "PKE07_S0"
+        ],
+        "affected_bank_edges": [
+          {
+            "edge": "PKE01_S0",
+            "wet_clearance_m": 0.7770580676993379,
+            "corridor_clearance_m": -6.222941932300662
+          },
+          {
+            "edge": "PKE02_S0",
+            "wet_clearance_m": -6.25,
+            "corridor_clearance_m": -13.25
+          },
+          {
+            "edge": "PKE07_S0",
+            "wet_clearance_m": -6.25,
+            "corridor_clearance_m": -13.25
+          },
+          {
+            "edge": "PKE08_S0",
+            "wet_clearance_m": 3.8707766120098768,
+            "corridor_clearance_m": -3.1292233879901232
+          },
+          {
+            "edge": "PK_LOOP_S1",
+            "wet_clearance_m": 3.8707766120098768,
+            "corridor_clearance_m": -3.1292233879901232
+          }
+        ],
+        "qualification": "Bridge and bank approach construction required; this is not a collision-free NPC runtime result."
+      }
+    },
+    {
+      "check": "no_exhibition_or_session_coordinates_assigned",
+      "status": "PASS",
+      "evidence": {
+        "map_version": null
+      }
+    }
+  ],
+  "status": "PASS_STATIC_ONLY"
+}

@@ -1,0 +1,139 @@
+{
+  "status": "implementation_design_reported_2026-10-15_not_exhibition_approval",
+  "layout_reference": "docs/planning/city_rebuild_v002/layout.json",
+  "map_version": null,
+  "coordinate_system": "Unity world metres X,Y,Z; plan points X,Z",
+  "control_points": [
+    [
+      127,
+      -12
+    ],
+    [
+      122,
+      15
+    ],
+    [
+      118,
+      45
+    ],
+    [
+      118,
+      75
+    ],
+    [
+      120,
+      104
+    ],
+    [
+      120,
+      125
+    ],
+    [
+      133,
+      155
+    ]
+  ],
+  "curve": "uniform_catmull_rom_endpoint_duplication",
+  "sample_step_m": 0.3,
+  "centerline_length_m": 170.674,
+  "water_width_m": 10,
+  "corridor_width_m": 24,
+  "bank_path_width_m": 2.4,
+  "bank_path_offsets_m": [
+    -10,
+    10
+  ],
+  "half_profile_offset_y": [
+    [
+      0,
+      -2
+    ],
+    [
+      3,
+      -2
+    ],
+    [
+      5,
+      -1.2
+    ],
+    [
+      6.5,
+      -0.45
+    ],
+    [
+      8.3,
+      -0.45
+    ],
+    [
+      8.8,
+      -0.43
+    ],
+    [
+      11.2,
+      -0.43
+    ],
+    [
+      12,
+      -0.02
+    ]
+  ],
+  "water_y": -1.2,
+  "bridge_deck_y": 0.14,
+  "bridge_clear_width_m": 3,
+  "ends": "Rounded bowl endbanks; northern spring and southern buffer pool. No vertical water cuts.",
+  "bridges": [
+    {
+      "id": "RIVER_BRIDGE_NORTH",
+      "original_edge": "PKE02",
+      "length_m": 28.7,
+      "endpoints": [
+        [
+          113.017,
+          145.351
+        ],
+        [
+          141.188,
+          139.899
+        ]
+      ],
+      "yaw_degrees": 100.954
+    },
+    {
+      "id": "RIVER_BRIDGE_SOUTH",
+      "original_edge": "PKE07",
+      "length_m": 32.1,
+      "endpoints": [
+        [
+          134.933,
+          20.518
+        ],
+        [
+          110.896,
+          -0.745
+        ]
+      ],
+      "yaw_degrees": -131.496
+    }
+  ],
+  "design_clearance_m": {
+    "park_boundary": 2.201,
+    "road_and_sidewalk": 21.381,
+    "building_envelope": 22.756,
+    "PM1": 0.479,
+    "PM2": 3.56,
+    "PZ01": 1.352,
+    "PZ02": 3.892
+  },
+  "implementation_requirements": [
+    "Cut visual and collision geometry of CityGround and EastPark_Lawn; no water plane over existing ground.",
+    "Keep all 69 building placements, roads and source layout unchanged.",
+    "Integrate river paths and bridge traversal as a scene graph extension; preserve source graph JSON/CSV.",
+    "Provide supported approach surfaces where existing PKE01/PKE08/PK_LOOP_S1 meet lowered river terrain.",
+    "Create railing entry gaps at actual old path and ramp connections; do not block side entries.",
+    "Exclude water and bed from walk support and routing; test NPC trajectories and capsule clearance.",
+    "Use 12m ramp run for .57m change where possible; inspect geometry and route heights.",
+    "Drive scene-local water color and smoothness with 0..100 city aggregate pollution without changing shared material assets.",
+    "10m width fixed: widening water to12m intersects adjacent PKE01 pedestrian envelope; revalidate all geometry before changing."
+  ],
+  "mesh_step_m": 2.0
+}

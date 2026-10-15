@@ -1,0 +1,80 @@
+{
+  "scope": "Independent static artifact checks only; PASS here does not prove Unity compile/load/Play Mode, animation, collision-free movement, camera or performance.",
+  "scene_sha256": "1ab548d80630023e9ebe5361643cea30d08235820feb35d5045e71770c2c98db",
+  "layout_sha256": "3e98ea485bd92dc9c2528d0420b5999a0336f700270c0f73f7630aa214fbd105",
+  "checks": [
+    {
+      "check": "phase47_protected_baseline",
+      "status": "PASS",
+      "evidence": {
+        "files": 2131,
+        "unexpected_changes": [],
+        "authorized_working_changes": [
+          "unity/Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity",
+          "unity/Assets/Scripts/CityPreviewCamera.cs",
+          "unity/Assets/Scripts/NpcOcclusionReveal.cs"
+        ],
+        "preexisting_dirty_state": " M assets/catalog/README.md\n M scripts/unity/check-city-rebuild-v002.py\n M unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Dense_Realistic_University_Map_03.blend.meta\n?? docs/verification/city-rebuild-v002-blender-fbx-audit.json\n?? docs/verification/city-rebuild-v002-blender.md\n?? docs/verification/city-rebuild-v002-campus-fbx-map.json\n?? docs/verification/city-rebuild-v002-campus-unity-import.json\n?? docs/verification/city-rebuild-v002-captures/\n?? docs/verification/city-rebuild-v002-external-entry-evidence.csv\n?? docs/verification/city-rebuild-v002-logs/\n?? docs/verification/city-rebuild-v002-phase3.md\n?? docs/verification/city-rebuild-v002-qa.md\n?? docs/verification/city-rebuild-v002-static-results.json\n?? docs/verification/city-rebuild-v002-surface-audit.json\n?? docs/verification/city-rebuild-v002-surface-results.json\n?? docs/verification/city-rebuild-v002-unity-results.json\n?? docs/verification/city-rebuild-v002-unity.md\n?? scripts/unity/check-city-rebuild-v002-surfaces.py\n?? unity/Assets/Editor/CityRebuildV002Setup.cs\n?? unity/Assets/Editor/CityRebuildV002Setup.cs.meta\n?? unity/Assets/Editor/CityRebuildV002SurfaceAudit.cs\n?? unity/Assets/Editor/CityRebuildV002SurfaceAudit.cs.meta\n?? unity/Assets/SIMUS/Scenes/city_rebuild_v002/\n"
+      }
+    },
+    {
+      "check": "approved_layout_immutable",
+      "status": "PASS",
+      "evidence": "3e98ea485bd92dc9c2528d0420b5999a0336f700270c0f73f7630aa214fbd105"
+    },
+    {
+      "check": "approved_graph_connected_388_409_17",
+      "status": "PASS",
+      "evidence": {
+        "nodes": 388,
+        "edges": 409,
+        "reachable": 388,
+        "crossings": 17,
+        "scope": "Design topology only, not NPC runtime"
+      }
+    },
+    {
+      "check": "scene_local_references",
+      "status": "PASS",
+      "evidence": {
+        "objects": 6382,
+        "dangling": []
+      }
+    },
+    {
+      "check": "scene_external_guids",
+      "status": "PASS",
+      "evidence": {
+        "missing": [],
+        "duplicates": {}
+      }
+    },
+    {
+      "check": "building_wrappers_14_plus_55",
+      "status": "PASS",
+      "evidence": {
+        "missing": [],
+        "total": 69
+      }
+    },
+    {
+      "check": "two_existing_park_fbx_referenced",
+      "status": "PASS",
+      "evidence": [
+        "unity/Assets/SIMUS/Art/vegetation/parks/COZY_NEIGHBORHOOD_PARK.fbx",
+        "unity/Assets/SIMUS/Art/vegetation/parks/MODERN_MINIMAL_PARK.fbx"
+      ]
+    },
+    {
+      "check": "generated_mesh_triangle_edges_below_500",
+      "status": "PASS",
+      "evidence": {
+        "triangles": 559012,
+        "max_edge_metres": 155.58920271021378,
+        "oversized": [],
+        "scope": "Serialized generated geometry excluding UV-bearing FBX-derived park parts; imported/scaled world collider triangles require Unity audit"
+      }
+    }
+  ],
+  "status": "PASS_STATIC_ONLY"
+}
