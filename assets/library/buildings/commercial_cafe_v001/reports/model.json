@@ -1,0 +1,395 @@
+{
+  "type": "Cafe",
+  "source": "COMMERCIAL_03_MODERN_CORNER",
+  "objects": 661,
+  "meshes": 644,
+  "triangles": 13772,
+  "materials": [
+    {
+      "name": "CAFE_Canvas_Sign",
+      "color": [
+        0.07000000029802322,
+        0.14000000059604645,
+        0.0949999988079071,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.6000000238418579,
+      "emission": 0.0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "CAFE_Equipment_Metal",
+      "color": [
+        0.4000000059604645,
+        0.4300000071525574,
+        0.4300000071525574,
+        1.0
+      ],
+      "metallic": 0.6000000238418579,
+      "roughness": 0.4000000059604645,
+      "emission": 0.0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "CAFE_Foliage",
+      "color": [
+        0.08500000089406967,
+        0.20000000298023224,
+        0.07500000298023224,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.6000000238418579,
+      "emission": 0.0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "CAFE_Glass",
+      "color": [
+        0.4000000059604645,
+        0.5400000214576721,
+        0.5600000023841858,
+        1.0
+      ],
+      "metallic": 0.05000000074505806,
+      "roughness": 0.17000000178813934,
+      "emission": 0.0,
+      "texture": null,
+      "glass": true
+    },
+    {
+      "name": "CAFE_Interior_Image",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.6000000238418579,
+      "emission": 0.699999988079071,
+      "texture": "Shop_Window_Illusion.png",
+      "glass": false
+    },
+    {
+      "name": "CAFE_Ivory_Plaster",
+      "color": [
+        0.6899999976158142,
+        0.6499999761581421,
+        0.5400000214576721,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.6000000238418579,
+      "emission": 0.0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "CAFE_Menu_Print",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.6000000238418579,
+      "emission": 0.0,
+      "texture": "Shop_Menu.png",
+      "glass": false
+    },
+    {
+      "name": "CAFE_Planter",
+      "color": [
+        0.30000001192092896,
+        0.20000000298023224,
+        0.11999999731779099,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.6000000238418579,
+      "emission": 0.0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "CAFE_Powder_Metal",
+      "color": [
+        0.04500000178813934,
+        0.05700000002980232,
+        0.04699999839067459,
+        1.0
+      ],
+      "metallic": 0.44999998807907104,
+      "roughness": 0.44999998807907104,
+      "emission": 0.0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "CAFE_Shadow",
+      "color": [
+        0.017999999225139618,
+        0.024000000208616257,
+        0.024000000208616257,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.6000000238418579,
+      "emission": 0.0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "CAFE_Sign_Print",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.6000000238418579,
+      "emission": 0.15000000596046448,
+      "texture": "Shop_Main_Sign.png",
+      "glass": false
+    },
+    {
+      "name": "CAFE_Warm_Light",
+      "color": [
+        1.0,
+        0.7200000286102295,
+        0.3700000047683716,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.6000000238418579,
+      "emission": 3.0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "CAFE_Warm_Timber",
+      "color": [
+        0.20000000298023224,
+        0.10499999672174454,
+        0.054999999701976776,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.6000000238418579,
+      "emission": 0.0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "MAT_AC_UNIT",
+      "color": [
+        0.5899999737739563,
+        0.6100000143051147,
+        0.5899999737739563,
+        1.0
+      ],
+      "metallic": 0,
+      "roughness": 0.6,
+      "emission": 0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "MAT_CONCRETE",
+      "color": [
+        0.5,
+        0.5099999904632568,
+        0.47999998927116394,
+        1.0
+      ],
+      "metallic": 0,
+      "roughness": 0.6,
+      "emission": 0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "MAT_GLASS_NEUTRAL",
+      "color": [
+        0.11999999731779099,
+        0.20999999344348907,
+        0.25,
+        1.0
+      ],
+      "metallic": 0,
+      "roughness": 0.6,
+      "emission": 0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "MAT_METAL_LIGHT",
+      "color": [
+        0.6499999761581421,
+        0.6899999976158142,
+        0.6899999976158142,
+        1.0
+      ],
+      "metallic": 0,
+      "roughness": 0.6,
+      "emission": 0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "MAT_ROOF",
+      "color": [
+        0.1899999976158142,
+        0.23000000417232513,
+        0.2199999988079071,
+        1.0
+      ],
+      "metallic": 0,
+      "roughness": 0.6,
+      "emission": 0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "MAT_SIGN_DARK",
+      "color": [
+        0.054999999701976776,
+        0.06499999761581421,
+        0.07500000298023224,
+        1.0
+      ],
+      "metallic": 0,
+      "roughness": 0.6,
+      "emission": 0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "MAT_SIGN_GREEN",
+      "color": [
+        0.12999999523162842,
+        0.3199999928474426,
+        0.2199999988079071,
+        1.0
+      ],
+      "metallic": 0,
+      "roughness": 0.6,
+      "emission": 0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "MAT_SIGN_WHITE",
+      "color": [
+        0.7599999904632568,
+        0.75,
+        0.6800000071525574,
+        1.0
+      ],
+      "metallic": 0,
+      "roughness": 0.6,
+      "emission": 0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "MAT_STONE_GRAY",
+      "color": [
+        0.3199999928474426,
+        0.3499999940395355,
+        0.36000001430511475,
+        1.0
+      ],
+      "metallic": 0,
+      "roughness": 0.6,
+      "emission": 0,
+      "texture": "TEX_STONE_GRAY.png",
+      "glass": false
+    },
+    {
+      "name": "MAT_WINDOW_FRAME",
+      "color": [
+        0.1599999964237213,
+        0.18000000715255737,
+        0.1899999976158142,
+        1.0
+      ],
+      "metallic": 0,
+      "roughness": 0.6,
+      "emission": 0,
+      "texture": null,
+      "glass": false
+    }
+  ],
+  "bounds_min": [
+    -7.199999809265137,
+    -9.0,
+    0.0
+  ],
+  "bounds_max": [
+    7.199999809265137,
+    9.0,
+    13.877999305725098
+  ],
+  "upper_preserved": 391,
+  "removed_ground_objects": [
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B0_Backing",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B0_DoorJamb",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B0_DoorPull",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B0_Frame",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B0_Glass",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B0_Head",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B0_Mullion_1",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B0_PierL",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B0_PierR",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B0_Sill",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B0_Transom",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B1_Backing",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B1_Frame",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B1_Glass",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B1_Head",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B1_Mullion_1",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B1_PierL",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B1_PierR",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B1_Sill",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B1_Transom",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B2_Backing",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B2_DoorJamb",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B2_DoorPull",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B2_Frame",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B2_Glass",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B2_Head",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B2_Mullion_1",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B2_PierL",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B2_PierR",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B2_Sill",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B2_Transom",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_Facade_Lamp_0",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_Facade_Lamp_1",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_Storefront_Canopy",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_SIGN_C03_01",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_SIGN_C03_02",
+    "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_SIGN_C03_05"
+  ],
+  "root_origin": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "front_axis": "-Y Blender / +Z Unity",
+  "facade": {
+    "left": -6.3,
+    "right": 3.96,
+    "front": -8.1,
+    "back": 8.1,
+    "height": 13.88
+  },
+  "door_x": 2.7
+}

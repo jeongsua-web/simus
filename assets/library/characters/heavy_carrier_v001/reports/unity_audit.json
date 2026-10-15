@@ -1,0 +1,40 @@
+{
+    "passed": true,
+    "avatarValid": true,
+    "avatarHuman": true,
+    "skinnedMeshes": 12,
+    "height": 1.60719633102417,
+    "error": "",
+    "clips": [
+        {
+            "name": "HEAVY_CARRY_WALK",
+            "seconds": 1.4000000953674317,
+            "loop": true,
+            "human": true
+        },
+        {
+            "name": "HEAVY_CARRY_IDLE",
+            "seconds": 4.0,
+            "loop": true,
+            "human": true
+        },
+        {
+            "name": "HEAVY_CARRY_STRUGGLE",
+            "seconds": 3.000000238418579,
+            "loop": false,
+            "human": true
+        },
+        {
+            "name": "HEAVY_CARRY_LOOK_AROUND",
+            "seconds": 2.500000238418579,
+            "loop": false,
+            "human": true
+        }
+    ],
+    "samples": [
+        "HEAVY_CARRY_WALK: 13 upright stationary-root samples; mid hands (-0.30, 0.82, 0.10) / (0.30, 0.82, 0.10)",
+        "HEAVY_CARRY_IDLE: 13 upright stationary-root samples; mid hands (-0.30, 0.82, 0.10) / (0.30, 0.82, 0.10)",
+        "HEAVY_CARRY_STRUGGLE: 13 upright stationary-root samples; mid hands (-0.30, 0.78, 0.10) / (0.30, 0.78, 0.10)",
+        "HEAVY_CARRY_LOOK_AROUND: 13 upright stationary-root samples; mid hands (-0.30, 0.82, 0.10) / (0.30, 0.82, 0.10)"
+    ]
+}

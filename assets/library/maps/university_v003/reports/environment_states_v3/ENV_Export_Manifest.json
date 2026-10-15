@@ -1,0 +1,1286 @@
+{
+  "objects": [
+    "STATE_OBJECTS",
+    "HAPPINESS",
+    "HAPPINESS_GOOD",
+    "HAPPINESS_GOOD__FLOWERBED_HEALTHY",
+    "HAPPINESS_GOOD__FLOWERBED_HEALTHY.001",
+    "HAPPINESS_GOOD__FLOWERBED_HEALTHY.002",
+    "HAPPINESS_GOOD__FLOWERBED_HEALTHY.003",
+    "HAPPINESS_GOOD__FLOWERBED_HEALTHY.004",
+    "HAPPINESS_GOOD__FESTIVAL_FLAGS",
+    "HAPPINESS_GOOD__FESTIVAL_FLAGS.001",
+    "HAPPINESS_GOOD__FESTIVAL_FLAGS.002",
+    "HAPPINESS_GOOD__BALLOON_CLUSTER",
+    "HAPPINESS_GOOD__BALLOON_CLUSTER.001",
+    "HAPPINESS_GOOD__BALLOON_CLUSTER.002",
+    "HAPPINESS_GOOD__DECOR_LIGHTS_ON",
+    "HAPPINESS_BAD",
+    "HAPPINESS_BAD__FLOWERBED_WITHERED",
+    "HAPPINESS_BAD__FLOWERBED_WITHERED.001",
+    "HAPPINESS_BAD__FLOWERBED_WITHERED.002",
+    "HAPPINESS_BAD__FLOWERBED_WITHERED.003",
+    "HAPPINESS_BAD__FLOWERBED_WITHERED.004",
+    "HAPPINESS_BAD__FESTIVAL_FLAGS_FADED",
+    "HAPPINESS_BAD__FESTIVAL_FLAGS_FADED.001",
+    "HAPPINESS_BAD__FESTIVAL_FLAGS_FADED.002",
+    "HAPPINESS_BAD__DECOR_LIGHTS_OFF",
+    "SAFETY",
+    "SAFETY_GOOD",
+    "SAFETY_GOOD__CCTV_KOREAN_POLE",
+    "SAFETY_GOOD__CCTV_KOREAN_POLE.001",
+    "SAFETY_GOOD__CCTV_KOREAN_POLE.002",
+    "SAFETY_GOOD__CCTV_KOREAN_POLE.003",
+    "SAFETY_GOOD__EMERGENCY_BELL",
+    "SAFETY_GOOD__EMERGENCY_BELL.001",
+    "SAFETY_GOOD__EMERGENCY_BELL.002",
+    "SAFETY_GOOD__FENCE_NORMAL",
+    "SAFETY_GOOD__FENCE_NORMAL.001",
+    "SAFETY_BAD",
+    "SAFETY_BAD__FENCE_BENT",
+    "SAFETY_BAD__FENCE_BENT.001",
+    "SAFETY_BAD__FALLEN_BICYCLE",
+    "SAFETY_BAD__ILLEGALLY_PARKED_CAR",
+    "D03_REUSED_BENCH_3_BAD",
+    "D03_LAMP_2_BAD",
+    "D03_LAMP_10_BAD",
+    "SAFETY_BAD__GRAFFITI_DECAL_01",
+    "SAFETY_BAD__GRAFFITI_DECAL_02",
+    "SAFETY_BAD__GRAFFITI_DECAL_03",
+    "SAFETY_BAD__GRAFFITI_DECAL_04",
+    "CLEANLINESS",
+    "CLEANLINESS_GOOD",
+    "CLEANLINESS_GOOD__RECYCLE_NORMAL",
+    "CLEANLINESS_GOOD__RECYCLE_NORMAL.001",
+    "CLEANLINESS_GOOD__RECYCLE_NORMAL.002",
+    "CLEANLINESS_BAD",
+    "D03_RECYCLE_0_BAD",
+    "CLEANLINESS_BAD__TRASH_PILE_SMALL",
+    "CLEANLINESS_BAD__CARDBOARD_STACK",
+    "CLEANLINESS_BAD__BROAD_GROUND_STAIN",
+    "CLEANLINESS_BAD__TRASH_PILE_MEDIUM",
+    "CLEANLINESS_BAD__CARDBOARD_STACK.001",
+    "CLEANLINESS_BAD__BROAD_GROUND_STAIN.001",
+    "CLEANLINESS_BAD__TRASH_PILE_LARGE",
+    "CLEANLINESS_BAD__CARDBOARD_STACK.002",
+    "CLEANLINESS_BAD__BROAD_GROUND_STAIN.002",
+    "CLEANLINESS_BAD__TRASH_PILE_SMALL.001",
+    "CLEANLINESS_BAD__CARDBOARD_STACK.003",
+    "CLEANLINESS_BAD__BROAD_GROUND_STAIN.003",
+    "CLEANLINESS_BAD__TRASH_PILE_MEDIUM.001",
+    "CLEANLINESS_BAD__CARDBOARD_STACK.004",
+    "CLEANLINESS_BAD__BROAD_GROUND_STAIN.004",
+    "CLEANLINESS_BAD__TRASH_PILE_LARGE.001",
+    "CLEANLINESS_BAD__CARDBOARD_STACK.005",
+    "CLEANLINESS_BAD__BROAD_GROUND_STAIN.005",
+    "CLEANLINESS_BAD__DIRTY_DRAIN",
+    "CLEANLINESS_BAD__DIRTY_DRAIN.001",
+    "CLEANLINESS_BAD__DIRTY_DRAIN.002",
+    "POLLUTION",
+    "POLLUTION_LOW",
+    "POLLUTION_LOW__HEALTHY_GRASS",
+    "POLLUTION_LOW__HEALTHY_GRASS.001",
+    "POLLUTION_LOW__HEALTHY_GRASS.002",
+    "POLLUTION_LOW__WATER_CLEAR",
+    "POLLUTION_HIGH",
+    "D03_TREE_2_BAD",
+    "D03_TREE_5_BAD",
+    "POLLUTION_HIGH__DIRTY_DRAIN",
+    "POLLUTION_HIGH__DIRTY_DRAIN.001",
+    "POLLUTION_HIGH__DIRTY_DRAIN.002",
+    "POLLUTION_HIGH__BROWN_GRASS",
+    "POLLUTION_HIGH__BROWN_GRASS.001",
+    "POLLUTION_HIGH__BROWN_GRASS.002",
+    "POLLUTION_HIGH__WATER_POLLUTED",
+    "POLLUTION_HIGH__EXHAUST_PUFFS",
+    "POLLUTION_HIGH__VENT_OUTLET",
+    "POLLUTION_HIGH__VENT_SMOKE",
+    "POLLUTION_HIGH__VENT_OUTLET.001",
+    "POLLUTION_HIGH__VENT_SMOKE.001",
+    "POLLUTION_HIGH__CONSTRUCTION_DUST",
+    "POLLUTION_HIGH__MAINTENANCE_DUST_BASE",
+    "POLLUTION_HIGH__EXHAUST_VEHICLE",
+    "STATE_REPLACEMENTS",
+    "D03_REUSED_BENCH_3_STATE",
+    "D03_REUSED_BENCH_3_NORMAL",
+    "D03_LAMP_2_STATE",
+    "D03_LAMP_2_NORMAL",
+    "D03_LAMP_10_STATE",
+    "D03_LAMP_10_NORMAL",
+    "D03_TREE_2_STATE",
+    "D03_TREE_2_NORMAL",
+    "D03_TREE_5_STATE",
+    "D03_TREE_5_NORMAL",
+    "D03_RECYCLE_0_STATE",
+    "D03_RECYCLE_0_NORMAL"
+  ],
+  "positions": {
+    "STATE_OBJECTS": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "HAPPINESS": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "HAPPINESS_GOOD": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "HAPPINESS_GOOD__FLOWERBED_HEALTHY": [
+      35.0,
+      -109.0,
+      0.18000000715255737
+    ],
+    "HAPPINESS_GOOD__FLOWERBED_HEALTHY.001": [
+      53.0,
+      -109.0,
+      0.18000000715255737
+    ],
+    "HAPPINESS_GOOD__FLOWERBED_HEALTHY.002": [
+      -120.0,
+      143.0,
+      0.18000000715255737
+    ],
+    "HAPPINESS_GOOD__FLOWERBED_HEALTHY.003": [
+      -53.0,
+      143.0,
+      0.18000000715255737
+    ],
+    "HAPPINESS_GOOD__FLOWERBED_HEALTHY.004": [
+      110.0,
+      136.0,
+      0.18000000715255737
+    ],
+    "HAPPINESS_GOOD__FESTIVAL_FLAGS": [
+      44.0,
+      -106.0,
+      0.18000000715255737
+    ],
+    "HAPPINESS_GOOD__FESTIVAL_FLAGS.001": [
+      -118.0,
+      145.0,
+      0.18000000715255737
+    ],
+    "HAPPINESS_GOOD__FESTIVAL_FLAGS.002": [
+      112.0,
+      139.0,
+      0.18000000715255737
+    ],
+    "HAPPINESS_GOOD__BALLOON_CLUSTER": [
+      36.0,
+      -109.0,
+      0.18000000715255737
+    ],
+    "HAPPINESS_GOOD__BALLOON_CLUSTER.001": [
+      52.0,
+      -109.0,
+      0.18000000715255737
+    ],
+    "HAPPINESS_GOOD__BALLOON_CLUSTER.002": [
+      -120.0,
+      145.0,
+      0.18000000715255737
+    ],
+    "HAPPINESS_GOOD__DECOR_LIGHTS_ON": [
+      44.0,
+      -105.0,
+      0.18000000715255737
+    ],
+    "HAPPINESS_BAD": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "HAPPINESS_BAD__FLOWERBED_WITHERED": [
+      35.0,
+      -109.0,
+      0.18000000715255737
+    ],
+    "HAPPINESS_BAD__FLOWERBED_WITHERED.001": [
+      53.0,
+      -109.0,
+      0.18000000715255737
+    ],
+    "HAPPINESS_BAD__FLOWERBED_WITHERED.002": [
+      -120.0,
+      143.0,
+      0.18000000715255737
+    ],
+    "HAPPINESS_BAD__FLOWERBED_WITHERED.003": [
+      -53.0,
+      143.0,
+      0.18000000715255737
+    ],
+    "HAPPINESS_BAD__FLOWERBED_WITHERED.004": [
+      110.0,
+      136.0,
+      0.18000000715255737
+    ],
+    "HAPPINESS_BAD__FESTIVAL_FLAGS_FADED": [
+      44.0,
+      -106.0,
+      0.18000000715255737
+    ],
+    "HAPPINESS_BAD__FESTIVAL_FLAGS_FADED.001": [
+      -118.0,
+      145.0,
+      0.18000000715255737
+    ],
+    "HAPPINESS_BAD__FESTIVAL_FLAGS_FADED.002": [
+      112.0,
+      139.0,
+      0.18000000715255737
+    ],
+    "HAPPINESS_BAD__DECOR_LIGHTS_OFF": [
+      44.0,
+      -105.0,
+      0.18000000715255737
+    ],
+    "SAFETY": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "SAFETY_GOOD": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "SAFETY_GOOD__CCTV_KOREAN_POLE": [
+      -90.80000305175781,
+      -48.0,
+      0.18000000715255737
+    ],
+    "SAFETY_GOOD__CCTV_KOREAN_POLE.001": [
+      96.30000305175781,
+      -38.0,
+      0.18000000715255737
+    ],
+    "SAFETY_GOOD__CCTV_KOREAN_POLE.002": [
+      30.0,
+      -125.0,
+      0.18000000715255737
+    ],
+    "SAFETY_GOOD__CCTV_KOREAN_POLE.003": [
+      -100.0,
+      -125.0,
+      0.18000000715255737
+    ],
+    "SAFETY_GOOD__EMERGENCY_BELL": [
+      -90.80000305175781,
+      -46.79999923706055,
+      0.18000000715255737
+    ],
+    "SAFETY_GOOD__EMERGENCY_BELL.001": [
+      96.30000305175781,
+      -36.79999923706055,
+      0.18000000715255737
+    ],
+    "SAFETY_GOOD__EMERGENCY_BELL.002": [
+      32.0,
+      -125.0,
+      0.18000000715255737
+    ],
+    "SAFETY_GOOD__FENCE_NORMAL": [
+      -120.0,
+      146.0,
+      0.18000000715255737
+    ],
+    "SAFETY_GOOD__FENCE_NORMAL.001": [
+      113.0,
+      139.0,
+      0.18000000715255737
+    ],
+    "SAFETY_BAD": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "SAFETY_BAD__FENCE_BENT": [
+      -120.0,
+      146.0,
+      0.18000000715255737
+    ],
+    "SAFETY_BAD__FENCE_BENT.001": [
+      113.0,
+      139.0,
+      0.18000000715255737
+    ],
+    "SAFETY_BAD__FALLEN_BICYCLE": [
+      -102.0,
+      -151.0,
+      0.18000000715255737
+    ],
+    "SAFETY_BAD__ILLEGALLY_PARKED_CAR": [
+      138.0,
+      -150.0,
+      0.18000000715255737
+    ],
+    "D03_REUSED_BENCH_3_BAD": [
+      -122.0,
+      140.0,
+      0.18000000715255737
+    ],
+    "D03_LAMP_2_BAD": [
+      -100.0,
+      -124.69999694824219,
+      0.18000000715255737
+    ],
+    "D03_LAMP_10_BAD": [
+      97.0,
+      -95.0,
+      0.18000000715255737
+    ],
+    "SAFETY_BAD__GRAFFITI_DECAL_01": [
+      -110.0,
+      -69.46600341796875,
+      0.6499999761581421
+    ],
+    "SAFETY_BAD__GRAFFITI_DECAL_02": [
+      -110.0,
+      6.473999977111816,
+      0.6499999761581421
+    ],
+    "SAFETY_BAD__GRAFFITI_DECAL_03": [
+      -110.0,
+      81.8499984741211,
+      0.6499999761581421
+    ],
+    "SAFETY_BAD__GRAFFITI_DECAL_04": [
+      -139.0,
+      -90.19400024414062,
+      0.6499999761581421
+    ],
+    "CLEANLINESS": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "CLEANLINESS_GOOD": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "CLEANLINESS_GOOD__RECYCLE_NORMAL": [
+      -138.0,
+      -151.0,
+      0.18000000715255737
+    ],
+    "CLEANLINESS_GOOD__RECYCLE_NORMAL.001": [
+      -48.0,
+      -151.0,
+      0.18000000715255737
+    ],
+    "CLEANLINESS_GOOD__RECYCLE_NORMAL.002": [
+      22.0,
+      -151.0,
+      0.18000000715255737
+    ],
+    "CLEANLINESS_BAD": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "D03_RECYCLE_0_BAD": [
+      -140.0,
+      -151.0,
+      0.18000000715255737
+    ],
+    "CLEANLINESS_BAD__TRASH_PILE_SMALL": [
+      -139.0,
+      -151.0,
+      0.18000000715255737
+    ],
+    "CLEANLINESS_BAD__CARDBOARD_STACK": [
+      -138.1999969482422,
+      -151.0,
+      0.18000000715255737
+    ],
+    "CLEANLINESS_BAD__BROAD_GROUND_STAIN": [
+      -139.0,
+      -151.0,
+      0.1850000023841858
+    ],
+    "CLEANLINESS_BAD__TRASH_PILE_MEDIUM": [
+      -49.0,
+      -151.0,
+      0.18000000715255737
+    ],
+    "CLEANLINESS_BAD__CARDBOARD_STACK.001": [
+      -48.20000076293945,
+      -151.0,
+      0.18000000715255737
+    ],
+    "CLEANLINESS_BAD__BROAD_GROUND_STAIN.001": [
+      -49.0,
+      -151.0,
+      0.1850000023841858
+    ],
+    "CLEANLINESS_BAD__TRASH_PILE_LARGE": [
+      21.0,
+      -151.0,
+      0.18000000715255737
+    ],
+    "CLEANLINESS_BAD__CARDBOARD_STACK.002": [
+      21.799999237060547,
+      -151.0,
+      0.18000000715255737
+    ],
+    "CLEANLINESS_BAD__BROAD_GROUND_STAIN.002": [
+      21.0,
+      -151.0,
+      0.1850000023841858
+    ],
+    "CLEANLINESS_BAD__TRASH_PILE_SMALL.001": [
+      76.0,
+      -151.0,
+      0.18000000715255737
+    ],
+    "CLEANLINESS_BAD__CARDBOARD_STACK.003": [
+      76.80000305175781,
+      -151.0,
+      0.18000000715255737
+    ],
+    "CLEANLINESS_BAD__BROAD_GROUND_STAIN.003": [
+      76.0,
+      -151.0,
+      0.1850000023841858
+    ],
+    "CLEANLINESS_BAD__TRASH_PILE_MEDIUM.001": [
+      -115.0,
+      148.0,
+      0.18000000715255737
+    ],
+    "CLEANLINESS_BAD__CARDBOARD_STACK.004": [
+      -114.19999694824219,
+      148.0,
+      0.18000000715255737
+    ],
+    "CLEANLINESS_BAD__BROAD_GROUND_STAIN.004": [
+      -115.0,
+      148.0,
+      0.1850000023841858
+    ],
+    "CLEANLINESS_BAD__TRASH_PILE_LARGE.001": [
+      -44.0,
+      149.0,
+      0.18000000715255737
+    ],
+    "CLEANLINESS_BAD__CARDBOARD_STACK.005": [
+      -43.20000076293945,
+      149.0,
+      0.18000000715255737
+    ],
+    "CLEANLINESS_BAD__BROAD_GROUND_STAIN.005": [
+      -44.0,
+      149.0,
+      0.1850000023841858
+    ],
+    "CLEANLINESS_BAD__DIRTY_DRAIN": [
+      -139.0,
+      -150.0,
+      0.18000000715255737
+    ],
+    "CLEANLINESS_BAD__DIRTY_DRAIN.001": [
+      21.0,
+      -150.0,
+      0.18000000715255737
+    ],
+    "CLEANLINESS_BAD__DIRTY_DRAIN.002": [
+      -44.0,
+      148.0,
+      0.18000000715255737
+    ],
+    "POLLUTION": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "POLLUTION_LOW": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "POLLUTION_LOW__HEALTHY_GRASS": [
+      77.0,
+      -88.0,
+      0.18000000715255737
+    ],
+    "POLLUTION_LOW__HEALTHY_GRASS.001": [
+      77.0,
+      -65.0,
+      0.18000000715255737
+    ],
+    "POLLUTION_LOW__HEALTHY_GRASS.002": [
+      77.0,
+      44.0,
+      0.18000000715255737
+    ],
+    "POLLUTION_LOW__WATER_CLEAR": [
+      -141.0,
+      -150.0,
+      0.1899999976158142
+    ],
+    "POLLUTION_HIGH": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "D03_TREE_2_BAD": [
+      79.9000015258789,
+      -40.0,
+      -0.019999999552965164
+    ],
+    "D03_TREE_5_BAD": [
+      79.9000015258789,
+      45.0,
+      -0.019999999552965164
+    ],
+    "POLLUTION_HIGH__DIRTY_DRAIN": [
+      -138.0,
+      -150.0,
+      0.18000000715255737
+    ],
+    "POLLUTION_HIGH__DIRTY_DRAIN.001": [
+      22.0,
+      -150.0,
+      0.18000000715255737
+    ],
+    "POLLUTION_HIGH__DIRTY_DRAIN.002": [
+      -43.0,
+      148.0,
+      0.18000000715255737
+    ],
+    "POLLUTION_HIGH__BROWN_GRASS": [
+      77.0,
+      -88.0,
+      0.18000000715255737
+    ],
+    "POLLUTION_HIGH__BROWN_GRASS.001": [
+      77.0,
+      -65.0,
+      0.18000000715255737
+    ],
+    "POLLUTION_HIGH__BROWN_GRASS.002": [
+      77.0,
+      44.0,
+      0.18000000715255737
+    ],
+    "POLLUTION_HIGH__WATER_POLLUTED": [
+      -141.0,
+      -150.0,
+      0.1899999976158142
+    ],
+    "POLLUTION_HIGH__EXHAUST_PUFFS": [
+      128.10000610351562,
+      -149.42999267578125,
+      0.49000000953674316
+    ],
+    "POLLUTION_HIGH__VENT_OUTLET": [
+      -142.0,
+      -151.0,
+      0.18000000715255737
+    ],
+    "POLLUTION_HIGH__VENT_SMOKE": [
+      -142.0,
+      -150.75999450683594,
+      1.0499999523162842
+    ],
+    "POLLUTION_HIGH__VENT_OUTLET.001": [
+      23.0,
+      -151.0,
+      0.18000000715255737
+    ],
+    "POLLUTION_HIGH__VENT_SMOKE.001": [
+      23.0,
+      -150.75999450683594,
+      1.0499999523162842
+    ],
+    "POLLUTION_HIGH__CONSTRUCTION_DUST": [
+      -145.0,
+      -150.0,
+      0.18000000715255737
+    ],
+    "POLLUTION_HIGH__MAINTENANCE_DUST_BASE": [
+      -145.0,
+      -150.0,
+      0.18000000715255737
+    ],
+    "POLLUTION_HIGH__EXHAUST_VEHICLE": [
+      130.0,
+      -150.0,
+      0.18000000715255737
+    ],
+    "STATE_REPLACEMENTS": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "D03_REUSED_BENCH_3_STATE": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "D03_REUSED_BENCH_3_NORMAL": [
+      -122.0,
+      140.0,
+      0.18000000715255737
+    ],
+    "D03_LAMP_2_STATE": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "D03_LAMP_2_NORMAL": [
+      -100.0,
+      -124.69999694824219,
+      0.18000000715255737
+    ],
+    "D03_LAMP_10_STATE": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "D03_LAMP_10_NORMAL": [
+      97.0,
+      -95.0,
+      0.18000000715255737
+    ],
+    "D03_TREE_2_STATE": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "D03_TREE_2_NORMAL": [
+      79.9000015258789,
+      -40.0,
+      -0.019999999552965164
+    ],
+    "D03_TREE_5_STATE": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "D03_TREE_5_NORMAL": [
+      79.9000015258789,
+      45.0,
+      -0.019999999552965164
+    ],
+    "D03_RECYCLE_0_STATE": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "D03_RECYCLE_0_NORMAL": [
+      -140.0,
+      -151.0,
+      0.18000000715255737
+    ]
+  },
+  "meshes": {
+    "HAPPINESS_GOOD__FLOWERBED_HEALTHY": {
+      "materials": [
+        "ENV3_white",
+        "ENV3_soil",
+        "ENV3_green",
+        "ENV3_gold",
+        "ENV3_pink",
+        "ENV3_blue"
+      ]
+    },
+    "HAPPINESS_GOOD__FLOWERBED_HEALTHY.001": {
+      "materials": [
+        "ENV3_white",
+        "ENV3_soil",
+        "ENV3_green",
+        "ENV3_gold",
+        "ENV3_pink",
+        "ENV3_blue"
+      ]
+    },
+    "HAPPINESS_GOOD__FLOWERBED_HEALTHY.002": {
+      "materials": [
+        "ENV3_white",
+        "ENV3_soil",
+        "ENV3_green",
+        "ENV3_gold",
+        "ENV3_pink",
+        "ENV3_blue"
+      ]
+    },
+    "HAPPINESS_GOOD__FLOWERBED_HEALTHY.003": {
+      "materials": [
+        "ENV3_white",
+        "ENV3_soil",
+        "ENV3_green",
+        "ENV3_gold",
+        "ENV3_pink",
+        "ENV3_blue"
+      ]
+    },
+    "HAPPINESS_GOOD__FLOWERBED_HEALTHY.004": {
+      "materials": [
+        "ENV3_white",
+        "ENV3_soil",
+        "ENV3_green",
+        "ENV3_gold",
+        "ENV3_pink",
+        "ENV3_blue"
+      ]
+    },
+    "HAPPINESS_GOOD__FESTIVAL_FLAGS": {
+      "materials": [
+        "ENV3_metal",
+        "ENV3_red",
+        "ENV3_gold",
+        "ENV3_blue"
+      ]
+    },
+    "HAPPINESS_GOOD__FESTIVAL_FLAGS.001": {
+      "materials": [
+        "ENV3_metal",
+        "ENV3_red",
+        "ENV3_gold",
+        "ENV3_blue"
+      ]
+    },
+    "HAPPINESS_GOOD__FESTIVAL_FLAGS.002": {
+      "materials": [
+        "ENV3_metal",
+        "ENV3_red",
+        "ENV3_gold",
+        "ENV3_blue"
+      ]
+    },
+    "HAPPINESS_GOOD__BALLOON_CLUSTER": {
+      "materials": [
+        "ENV3_red",
+        "ENV3_white",
+        "ENV3_blue",
+        "ENV3_gold"
+      ]
+    },
+    "HAPPINESS_GOOD__BALLOON_CLUSTER.001": {
+      "materials": [
+        "ENV3_red",
+        "ENV3_white",
+        "ENV3_blue",
+        "ENV3_gold"
+      ]
+    },
+    "HAPPINESS_GOOD__BALLOON_CLUSTER.002": {
+      "materials": [
+        "ENV3_red",
+        "ENV3_white",
+        "ENV3_blue",
+        "ENV3_gold"
+      ]
+    },
+    "HAPPINESS_GOOD__DECOR_LIGHTS_ON": {
+      "materials": [
+        "ENV3_metal",
+        "ENV3_Festival_Bulb"
+      ]
+    },
+    "HAPPINESS_BAD__FLOWERBED_WITHERED": {
+      "materials": [
+        "ENV3_white",
+        "ENV3_soil",
+        "ENV3_dead"
+      ]
+    },
+    "HAPPINESS_BAD__FLOWERBED_WITHERED.001": {
+      "materials": [
+        "ENV3_white",
+        "ENV3_soil",
+        "ENV3_dead"
+      ]
+    },
+    "HAPPINESS_BAD__FLOWERBED_WITHERED.002": {
+      "materials": [
+        "ENV3_white",
+        "ENV3_soil",
+        "ENV3_dead"
+      ]
+    },
+    "HAPPINESS_BAD__FLOWERBED_WITHERED.003": {
+      "materials": [
+        "ENV3_white",
+        "ENV3_soil",
+        "ENV3_dead"
+      ]
+    },
+    "HAPPINESS_BAD__FLOWERBED_WITHERED.004": {
+      "materials": [
+        "ENV3_white",
+        "ENV3_soil",
+        "ENV3_dead"
+      ]
+    },
+    "HAPPINESS_BAD__FESTIVAL_FLAGS_FADED": {
+      "materials": [
+        "ENV3_metal",
+        "ENV3_dead"
+      ]
+    },
+    "HAPPINESS_BAD__FESTIVAL_FLAGS_FADED.001": {
+      "materials": [
+        "ENV3_metal",
+        "ENV3_dead"
+      ]
+    },
+    "HAPPINESS_BAD__FESTIVAL_FLAGS_FADED.002": {
+      "materials": [
+        "ENV3_metal",
+        "ENV3_dead"
+      ]
+    },
+    "HAPPINESS_BAD__DECOR_LIGHTS_OFF": {
+      "materials": [
+        "ENV3_metal",
+        "ENV3_dead"
+      ]
+    },
+    "SAFETY_GOOD__CCTV_KOREAN_POLE": {
+      "materials": [
+        "ENV3_metal",
+        "ENV3_white",
+        "ENV3_lens"
+      ]
+    },
+    "SAFETY_GOOD__CCTV_KOREAN_POLE.001": {
+      "materials": [
+        "ENV3_metal",
+        "ENV3_white",
+        "ENV3_lens"
+      ]
+    },
+    "SAFETY_GOOD__CCTV_KOREAN_POLE.002": {
+      "materials": [
+        "ENV3_metal",
+        "ENV3_white",
+        "ENV3_lens"
+      ]
+    },
+    "SAFETY_GOOD__CCTV_KOREAN_POLE.003": {
+      "materials": [
+        "ENV3_metal",
+        "ENV3_white",
+        "ENV3_lens"
+      ]
+    },
+    "SAFETY_GOOD__EMERGENCY_BELL": {
+      "materials": [
+        "ENV3_white",
+        "ENV3_blue",
+        "ENV3_red"
+      ]
+    },
+    "SAFETY_GOOD__EMERGENCY_BELL.001": {
+      "materials": [
+        "ENV3_white",
+        "ENV3_blue",
+        "ENV3_red"
+      ]
+    },
+    "SAFETY_GOOD__EMERGENCY_BELL.002": {
+      "materials": [
+        "ENV3_white",
+        "ENV3_blue",
+        "ENV3_red"
+      ]
+    },
+    "SAFETY_GOOD__FENCE_NORMAL": {
+      "materials": [
+        "ENV3_metal"
+      ]
+    },
+    "SAFETY_GOOD__FENCE_NORMAL.001": {
+      "materials": [
+        "ENV3_metal"
+      ]
+    },
+    "SAFETY_BAD__FENCE_BENT": {
+      "materials": [
+        "ENV3_metal"
+      ]
+    },
+    "SAFETY_BAD__FENCE_BENT.001": {
+      "materials": [
+        "ENV3_metal"
+      ]
+    },
+    "SAFETY_BAD__FALLEN_BICYCLE": {
+      "materials": [
+        "ENV3_rubber",
+        "ENV3_white",
+        "ENV3_blue",
+        "ENV3_metal"
+      ]
+    },
+    "SAFETY_BAD__ILLEGALLY_PARKED_CAR": {
+      "materials": [
+        "ENV3_white",
+        "ENV3_blue",
+        "ENV3_rubber",
+        "ENV3_metal",
+        "ENV3_gold",
+        "ENV3_red"
+      ]
+    },
+    "D03_REUSED_BENCH_3_BAD": {
+      "materials": [
+        "ENV3_Reuse_SP_Reclaimed",
+        "ENV3_Reuse_SP_Metal"
+      ]
+    },
+    "D03_LAMP_2_BAD": {
+      "materials": [
+        "ENV3_Reuse_SP_Metal",
+        "ENV3_Reuse_SP_Glow"
+      ]
+    },
+    "D03_LAMP_10_BAD": {
+      "materials": [
+        "ENV3_Reuse_SP_Metal",
+        "ENV3_Reuse_SP_Glow"
+      ]
+    },
+    "SAFETY_BAD__GRAFFITI_DECAL_01": {
+      "materials": [
+        "ENV3_blue",
+        "ENV3_pink"
+      ]
+    },
+    "SAFETY_BAD__GRAFFITI_DECAL_02": {
+      "materials": [
+        "ENV3_blue",
+        "ENV3_pink"
+      ]
+    },
+    "SAFETY_BAD__GRAFFITI_DECAL_03": {
+      "materials": [
+        "ENV3_blue",
+        "ENV3_pink"
+      ]
+    },
+    "SAFETY_BAD__GRAFFITI_DECAL_04": {
+      "materials": [
+        "ENV3_blue",
+        "ENV3_pink"
+      ]
+    },
+    "CLEANLINESS_GOOD__RECYCLE_NORMAL": {
+      "materials": [
+        "ENV3_Reuse_KH_Metal"
+      ]
+    },
+    "CLEANLINESS_GOOD__RECYCLE_NORMAL.001": {
+      "materials": [
+        "ENV3_Reuse_KH_Metal"
+      ]
+    },
+    "CLEANLINESS_GOOD__RECYCLE_NORMAL.002": {
+      "materials": [
+        "ENV3_Reuse_KH_Metal"
+      ]
+    },
+    "D03_RECYCLE_0_BAD": {
+      "materials": [
+        "ENV3_metal",
+        "ENV3_green",
+        "ENV3_bag",
+        "ENV3_white"
+      ]
+    },
+    "CLEANLINESS_BAD__TRASH_PILE_SMALL": {
+      "materials": [
+        "ENV3_bag",
+        "ENV3_white",
+        "ENV3_kraft",
+        "ENV3_stain"
+      ]
+    },
+    "CLEANLINESS_BAD__CARDBOARD_STACK": {
+      "materials": [
+        "ENV3_kraft"
+      ]
+    },
+    "CLEANLINESS_BAD__BROAD_GROUND_STAIN": {
+      "materials": [
+        "ENV3_stain"
+      ]
+    },
+    "CLEANLINESS_BAD__TRASH_PILE_MEDIUM": {
+      "materials": [
+        "ENV3_bag",
+        "ENV3_white",
+        "ENV3_kraft",
+        "ENV3_stain"
+      ]
+    },
+    "CLEANLINESS_BAD__CARDBOARD_STACK.001": {
+      "materials": [
+        "ENV3_kraft"
+      ]
+    },
+    "CLEANLINESS_BAD__BROAD_GROUND_STAIN.001": {
+      "materials": [
+        "ENV3_stain"
+      ]
+    },
+    "CLEANLINESS_BAD__TRASH_PILE_LARGE": {
+      "materials": [
+        "ENV3_bag",
+        "ENV3_white",
+        "ENV3_kraft",
+        "ENV3_stain"
+      ]
+    },
+    "CLEANLINESS_BAD__CARDBOARD_STACK.002": {
+      "materials": [
+        "ENV3_kraft"
+      ]
+    },
+    "CLEANLINESS_BAD__BROAD_GROUND_STAIN.002": {
+      "materials": [
+        "ENV3_stain"
+      ]
+    },
+    "CLEANLINESS_BAD__TRASH_PILE_SMALL.001": {
+      "materials": [
+        "ENV3_bag",
+        "ENV3_white",
+        "ENV3_kraft",
+        "ENV3_stain"
+      ]
+    },
+    "CLEANLINESS_BAD__CARDBOARD_STACK.003": {
+      "materials": [
+        "ENV3_kraft"
+      ]
+    },
+    "CLEANLINESS_BAD__BROAD_GROUND_STAIN.003": {
+      "materials": [
+        "ENV3_stain"
+      ]
+    },
+    "CLEANLINESS_BAD__TRASH_PILE_MEDIUM.001": {
+      "materials": [
+        "ENV3_bag",
+        "ENV3_white",
+        "ENV3_kraft",
+        "ENV3_stain"
+      ]
+    },
+    "CLEANLINESS_BAD__CARDBOARD_STACK.004": {
+      "materials": [
+        "ENV3_kraft"
+      ]
+    },
+    "CLEANLINESS_BAD__BROAD_GROUND_STAIN.004": {
+      "materials": [
+        "ENV3_stain"
+      ]
+    },
+    "CLEANLINESS_BAD__TRASH_PILE_LARGE.001": {
+      "materials": [
+        "ENV3_bag",
+        "ENV3_white",
+        "ENV3_kraft",
+        "ENV3_stain"
+      ]
+    },
+    "CLEANLINESS_BAD__CARDBOARD_STACK.005": {
+      "materials": [
+        "ENV3_kraft"
+      ]
+    },
+    "CLEANLINESS_BAD__BROAD_GROUND_STAIN.005": {
+      "materials": [
+        "ENV3_stain"
+      ]
+    },
+    "CLEANLINESS_BAD__DIRTY_DRAIN": {
+      "materials": [
+        "ENV3_metal",
+        "ENV3_rubber",
+        "ENV3_stain"
+      ]
+    },
+    "CLEANLINESS_BAD__DIRTY_DRAIN.001": {
+      "materials": [
+        "ENV3_metal",
+        "ENV3_rubber",
+        "ENV3_stain"
+      ]
+    },
+    "CLEANLINESS_BAD__DIRTY_DRAIN.002": {
+      "materials": [
+        "ENV3_metal",
+        "ENV3_rubber",
+        "ENV3_stain"
+      ]
+    },
+    "POLLUTION_LOW__HEALTHY_GRASS": {
+      "materials": [
+        "ENV3_green"
+      ]
+    },
+    "POLLUTION_LOW__HEALTHY_GRASS.001": {
+      "materials": [
+        "ENV3_green"
+      ]
+    },
+    "POLLUTION_LOW__HEALTHY_GRASS.002": {
+      "materials": [
+        "ENV3_green"
+      ]
+    },
+    "POLLUTION_LOW__WATER_CLEAR": {
+      "materials": [
+        "ENV3_water"
+      ]
+    },
+    "D03_TREE_2_BAD": {
+      "materials": [
+        "ENV3_dead",
+        "ENV3_Reuse_trunk"
+      ]
+    },
+    "D03_TREE_5_BAD": {
+      "materials": [
+        "ENV3_dead",
+        "ENV3_Reuse_trunk"
+      ]
+    },
+    "POLLUTION_HIGH__DIRTY_DRAIN": {
+      "materials": [
+        "ENV3_metal",
+        "ENV3_rubber",
+        "ENV3_stain"
+      ]
+    },
+    "POLLUTION_HIGH__DIRTY_DRAIN.001": {
+      "materials": [
+        "ENV3_metal",
+        "ENV3_rubber",
+        "ENV3_stain"
+      ]
+    },
+    "POLLUTION_HIGH__DIRTY_DRAIN.002": {
+      "materials": [
+        "ENV3_metal",
+        "ENV3_rubber",
+        "ENV3_stain"
+      ]
+    },
+    "POLLUTION_HIGH__BROWN_GRASS": {
+      "materials": [
+        "ENV3_dead"
+      ]
+    },
+    "POLLUTION_HIGH__BROWN_GRASS.001": {
+      "materials": [
+        "ENV3_dead"
+      ]
+    },
+    "POLLUTION_HIGH__BROWN_GRASS.002": {
+      "materials": [
+        "ENV3_dead"
+      ]
+    },
+    "POLLUTION_HIGH__WATER_POLLUTED": {
+      "materials": [
+        "ENV3_murky"
+      ]
+    },
+    "POLLUTION_HIGH__EXHAUST_PUFFS": {
+      "materials": [
+        "ENV3_smoke"
+      ]
+    },
+    "POLLUTION_HIGH__VENT_OUTLET": {
+      "materials": [
+        "ENV3_metal"
+      ]
+    },
+    "POLLUTION_HIGH__VENT_SMOKE": {
+      "materials": [
+        "ENV3_smoke"
+      ]
+    },
+    "POLLUTION_HIGH__VENT_OUTLET.001": {
+      "materials": [
+        "ENV3_metal"
+      ]
+    },
+    "POLLUTION_HIGH__VENT_SMOKE.001": {
+      "materials": [
+        "ENV3_smoke"
+      ]
+    },
+    "POLLUTION_HIGH__CONSTRUCTION_DUST": {
+      "materials": [
+        "ENV3_dust"
+      ]
+    },
+    "POLLUTION_HIGH__MAINTENANCE_DUST_BASE": {
+      "materials": [
+        "ENV3_dust",
+        "ENV3_rubber",
+        "ENV3_red",
+        "ENV3_white"
+      ]
+    },
+    "POLLUTION_HIGH__EXHAUST_VEHICLE": {
+      "materials": [
+        "ENV3_white",
+        "ENV3_blue",
+        "ENV3_rubber",
+        "ENV3_metal",
+        "ENV3_gold",
+        "ENV3_red"
+      ]
+    },
+    "D03_REUSED_BENCH_3_NORMAL": {
+      "materials": [
+        "ENV3_Reuse_SP_Reclaimed",
+        "ENV3_Reuse_SP_Metal"
+      ]
+    },
+    "D03_LAMP_2_NORMAL": {
+      "materials": [
+        "ENV3_Reuse_SP_Metal",
+        "ENV3_Reuse_SP_Glow"
+      ]
+    },
+    "D03_LAMP_10_NORMAL": {
+      "materials": [
+        "ENV3_Reuse_SP_Metal",
+        "ENV3_Reuse_SP_Glow"
+      ]
+    },
+    "D03_TREE_2_NORMAL": {
+      "materials": [
+        "ENV3_Reuse_tree",
+        "ENV3_Reuse_trunk"
+      ]
+    },
+    "D03_TREE_5_NORMAL": {
+      "materials": [
+        "ENV3_Reuse_tree",
+        "ENV3_Reuse_trunk"
+      ]
+    },
+    "D03_RECYCLE_0_NORMAL": {
+      "materials": [
+        "ENV3_Reuse_KH_Metal"
+      ]
+    }
+  }
+}

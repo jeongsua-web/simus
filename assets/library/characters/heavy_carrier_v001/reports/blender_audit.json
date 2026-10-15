@@ -1,0 +1,165 @@
+{
+  "meshes": {
+    "HEAVY_CARRIER_BODY": {
+      "vertices": 42,
+      "triangles": 80,
+      "boundary_edges": 0,
+      "negative_scale": false,
+      "material_count": 1
+    },
+    "HEAVY_CARRIER_HEAD": {
+      "vertices": 250,
+      "triangles": 488,
+      "boundary_edges": 0,
+      "negative_scale": false,
+      "material_count": 1
+    },
+    "HEAVY_CARRIER_EYES": {
+      "vertices": 52,
+      "triangles": 96,
+      "boundary_edges": 0,
+      "negative_scale": false,
+      "material_count": 1
+    },
+    "HEAVY_CARRIER_GLOVES": {
+      "vertices": 100,
+      "triangles": 192,
+      "boundary_edges": 0,
+      "negative_scale": false,
+      "material_count": 1
+    },
+    "HEAVY_CARRIER_OUTFIT_TOP": {
+      "vertices": 572,
+      "triangles": 1132,
+      "boundary_edges": 0,
+      "negative_scale": false,
+      "material_count": 1
+    },
+    "HEAVY_CARRIER_OUTFIT_BOTTOM": {
+      "vertices": 456,
+      "triangles": 900,
+      "boundary_edges": 0,
+      "negative_scale": false,
+      "material_count": 1
+    },
+    "HEAVY_CARRIER_SHOES": {
+      "vertices": 120,
+      "triangles": 232,
+      "boundary_edges": 0,
+      "negative_scale": false,
+      "material_count": 2
+    },
+    "PROP_HEAVY_BOX": {
+      "vertices": 32,
+      "triangles": 60,
+      "boundary_edges": 0,
+      "negative_scale": false,
+      "material_count": 1
+    },
+    "HEAVY_CARRIER_FACE": {
+      "vertices": 88,
+      "triangles": 164,
+      "boundary_edges": 0,
+      "negative_scale": false,
+      "material_count": 1
+    },
+    "HEAVY_CARRIER_NOSE": {
+      "vertices": 86,
+      "triangles": 168,
+      "boundary_edges": 0,
+      "negative_scale": false,
+      "material_count": 1
+    },
+    "HEAVY_CARRIER_HAIR": {
+      "vertices": 482,
+      "triangles": 940,
+      "boundary_edges": 0,
+      "negative_scale": false,
+      "material_count": 1
+    },
+    "HEAVY_CARRIER_CUFFS": {
+      "vertices": 64,
+      "triangles": 120,
+      "boundary_edges": 0,
+      "negative_scale": false,
+      "material_count": 1
+    },
+    "PROP_HEAVY_BOX_TAPE": {
+      "vertices": 36,
+      "triangles": 18,
+      "boundary_edges": 36,
+      "negative_scale": false,
+      "material_count": 1
+    },
+    "PROP_HEAVY_BOX_LABEL": {
+      "vertices": 18,
+      "triangles": 12,
+      "boundary_edges": 18,
+      "negative_scale": false,
+      "material_count": 1
+    },
+    "HEAVY_CARRIER_GLOVE_FINGERS": {
+      "vertices": 256,
+      "triangles": 480,
+      "boundary_edges": 0,
+      "negative_scale": false,
+      "material_count": 1
+    }
+  },
+  "clips": {
+    "HEAVY_CARRY_IDLE": {
+      "seconds": 4.0,
+      "frames_checked": 121,
+      "loop": true,
+      "root_motion_m": 0,
+      "wrist_box_offset_error_m": 3.746093836419742e-07,
+      "loop_matrix_error": 1.9582353289093013e-18
+    },
+    "HEAVY_CARRY_LOOK_AROUND": {
+      "seconds": 2.5,
+      "frames_checked": 76,
+      "loop": false,
+      "root_motion_m": 0,
+      "wrist_box_offset_error_m": 3.500980175873855e-07,
+      "loop_matrix_error": 1.9582353289093013e-18
+    },
+    "HEAVY_CARRY_STRUGGLE": {
+      "seconds": 3.0,
+      "frames_checked": 91,
+      "loop": false,
+      "root_motion_m": 0,
+      "wrist_box_offset_error_m": 3.332000937312528e-07,
+      "loop_matrix_error": 1.9582353289093013e-18
+    },
+    "HEAVY_CARRY_WALK": {
+      "seconds": 1.4,
+      "frames_checked": 43,
+      "loop": true,
+      "root_motion_m": 0,
+      "wrist_box_offset_error_m": 3.674277068954096e-07,
+      "loop_matrix_error": 4.897388163888592e-18
+    }
+  },
+  "bones": 25,
+  "map_placed": false,
+  "triangles": 5082,
+  "materials": [
+    "Heavy_Cardboard",
+    "Heavy_Face",
+    "Heavy_Gloves",
+    "Heavy_Hair",
+    "Heavy_Label",
+    "Heavy_Pants",
+    "Heavy_Shoes",
+    "Heavy_Skin",
+    "Heavy_Sole",
+    "Heavy_Tape",
+    "Heavy_Top"
+  ],
+  "height_m": 1.644,
+  "box_dimensions_m": [
+    0.7,
+    0.48,
+    0.52
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "reference": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_NORMAL_01.fbx",
+  "uniform_bin_scale": 1.45,
+  "bin_gap_m": 0.15,
+  "front_clear_walkway_m": 1.2,
+  "lods": 1,
+  "map_placed": false,
+  "materials": [
+    "ENV3_Bin_Green",
+    "ENV3_Bin_Inside",
+    "ENV3_white",
+    "RST_Frame",
+    "RST_Hardware",
+    "RST_Light",
+    "RST_Panel",
+    "RST_Perforated",
+    "RST_Roof",
+    "RST_Sign"
+  ],
+  "missing_materials": [],
+  "nonmanifold_meshes": [
+    "RST_Bin_Normal_01",
+    "RST_Bin_Normal_02",
+    "RST_Bin_Normal_03",
+    "RST_Bin_Normal_04",
+    "RST_Bin_Normal_05"
+  ],
+  "bounds": [
+    [
+      -2.424999952316284,
+      2.424999952316284
+    ],
+    [
+      -1.3600000143051147,
+      1.2025035619735718
+    ],
+    [
+      -8.994278033469527e-08,
+      2.5407800674438477
+    ]
+  ],
+  "meshes": 30,
+  "triangles": 12706,
+  "objects": 54,
+  "colliders": 8,
+  "negative_scales": []
+}

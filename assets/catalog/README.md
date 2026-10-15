@@ -80,3 +80,29 @@
 ## 2026-10-14 독립 시내버스·택시
 
 [시내버스 v001](../library/props/city_bus_v001/README.md) · [택시 v001](../library/props/taxi_v001/README.md). Blender 원본, FBX, 재질·텍스처, 바퀴·문·등화 제어 프리팹 및 LOD0/1을 제작했습니다. received이며 기존 맵에는 배치하지 않았습니다.
+
+## 2026-10-14 독립 재활용 분리수거장
+
+[원본·사용 안내·검수](../library/props/recycle_station_v001/README.md). 기존 정상 통 5개를 재사용하고 지붕·가림막·조명·슬롯을 새로 제작했습니다. 구조물/완성형 FBX·프리팹 제공, 15개 상태 교체 검사. received이며 맵에는 배치하지 않았습니다.
+
+## 2026-10-14 대기환경 시설 원본 접수
+
+[대기오염측정시설](../library/props/air_quality_monitoring_station_v001/README.md) · [미세먼지 알리미 신호등](../library/props/fine_dust_indicator_light_v001/README.md). 받은 Blender 파일을 이름 변경하여 보존했습니다. received, Unity 내보내기 및 맵 배치 미실행.
+
+## 2026-10-14 카페·식당 상가 파생 에셋
+
+[카페](../library/buildings/commercial_cafe_v001/README.md) · [식당](../library/buildings/commercial_restaurant_v001/README.md). 서로 다른 기존 상가를 보존한 1층 외관 파생본입니다. Blender·FBX·재질·텍스처·Unity 프리팹·검수 이미지 제공. received, 기존 맵 미배치.
+
+## 2026-10-15 울고 있는 아이 NPC
+
+[crying_child_v001](../library/characters/crying_child_v001/README.md). 아이 체형, Humanoid, 울음4클립, 독립 프리팹, GIF·이미지 검수 제공. received, 기존 맵 미배치.
+
+## 2026-10-15 무거운 짐 운반 시민
+
+[heavy_carrier_v001](../library/characters/heavy_carrier_v001/README.md) · [heavy_box_v001](../library/props/heavy_box_v001/README.md). 성인 Humanoid, 운반4클립, 독립 상자 및 프리팹. received, 기존 맵 미배치.
+
+
+## 가상 지하철 출입구 신규 접수 (2026-10-15)
+
+- [subway_entrance_v001](../library/buildings/subway_entrance_v001/README.md): 유리 캐노피, 계단20단, 에스컬레이터2대, 짧은 지하 통로. received, 기존 맵 미배치.
+- Blender 원본·Unity FBX/프리팹·재질·표지 텍스처2장·검수 이미지18장과 설치 보고서 포함.

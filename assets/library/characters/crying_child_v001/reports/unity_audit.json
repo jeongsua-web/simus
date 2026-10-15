@@ -1,0 +1,41 @@
+{
+    "passed": true,
+    "avatarValid": true,
+    "avatarHuman": true,
+    "skinnedMeshes": 16,
+    "height": 1.25096595287323,
+    "error": "",
+    "clips": [
+        {
+            "name": "CHILD_WIPE_TEARS",
+            "seconds": 2.500000238418579,
+            "loop": false,
+            "human": true
+        },
+        {
+            "name": "CHILD_SOB_STRONG",
+            "seconds": 3.000000238418579,
+            "loop": true,
+            "human": true
+        },
+        {
+            "name": "CHILD_IDLE_SAD",
+            "seconds": 4.0,
+            "loop": true,
+            "human": true
+        },
+        {
+            "name": "CHILD_CRY_LOOP",
+            "seconds": 5.000000476837158,
+            "loop": true,
+            "human": true
+        }
+    ],
+    "samples": [
+        "CHILD_WIPE_TEARS: 13 upright stationary-root samples; mid hands (-0.08, 1.04, 0.20) / (0.10, 0.64, 0.10)",
+        "CHILD_SOB_STRONG: 13 upright stationary-root samples; mid hands (-0.09, 0.95, 0.19) / (0.09, 0.95, 0.19)",
+        "CHILD_IDLE_SAD: 13 upright stationary-root samples; mid hands (-0.11, 0.58, 0.09) / (0.10, 0.58, 0.09)",
+        "CHILD_CRY_LOOP: 13 upright stationary-root samples; mid hands (-0.08, 1.04, 0.20) / (0.10, 0.74, 0.13)",
+        "Controller CryLoop / complete WipeTears / SadIdle transitions verified"
+    ]
+}

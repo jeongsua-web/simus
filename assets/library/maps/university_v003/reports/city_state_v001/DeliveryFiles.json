@@ -1,0 +1,992 @@
+{
+  "copied": [
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Dense_Realistic_University_Map_03.blend",
+      "sha256": "b9f91053f9f16f7a635716a2c21425901842f4a8ee79328b377a22f0946049fa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Dense_Realistic_University_Map_03.fbx",
+      "sha256": "464f334610cd28c760219742a10d3d239069185b4f9e9786daa1c14d75ac4c1c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/CityStateBindings.json",
+      "sha256": "8f5cefbbade7f068dfda0afe3afdef66abedf82fa29ef0d4e484599e90066e1e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/CityStateBindings.json.meta",
+      "sha256": "22e132e5e97d421d1906596e074f539b47e054d69b8425cb33895187e2cc1550"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials.meta",
+      "sha256": "eb4c46ecb5a104a2f37199551513c8b4b454314324b3a16d239d8a3d189986c2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models.meta",
+      "sha256": "c434556da2092898fffe870d82ffd1cc48e7aa93c3bd7533cfb040a2fd281ad4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures.meta",
+      "sha256": "d41f9ca7e473be4a4e4c485a7498773d520df6ddafc5a5ae13caec0644677219"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_CLN_DRAIN_STAIN_01.mat",
+      "sha256": "e18b1f7f54f9389cf6b2f08b5353a7942238f9e8446fefb954399c4c678c7817"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_CLN_DRAIN_STAIN_01.mat.meta",
+      "sha256": "dfb530b2be68859e01623f286a8cd5f8f9c84e77da73f608a78dc6bbe3aca856"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_CLN_GROUND_STAIN_DARK_01.mat",
+      "sha256": "c6c6176da0480712336197628214ef6729852af46443086745f64e7b5236eb01"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_CLN_GROUND_STAIN_DARK_01.mat.meta",
+      "sha256": "014946801d0f38b5d030ebb5ca9daec917874f6b337ecbc22ab403fac682df11"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_CLN_GROUND_STAIN_DUST_01.mat",
+      "sha256": "32c0eb48bc8046d0996878e4b15460ad36e5231a77cca0ed8a94dc44f5083c50"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_CLN_GROUND_STAIN_DUST_01.mat.meta",
+      "sha256": "cab31fea0545e0eed2f3bd2c30d9a21829b3c036630f1cfa7499230af83a70a5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_CLN_GROUND_STAIN_SPILL_01.mat",
+      "sha256": "c8fe369c601e6532c2d8ec82758c45cc0e7b5cab81b873d03d184648ba13455d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_CLN_GROUND_STAIN_SPILL_01.mat.meta",
+      "sha256": "7c4d89acdd6461f751d40334f062f6381f18164adb5b4be04e2f0b7a2f97cd7c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_HAP_BANNER_ACTIVE_01.mat",
+      "sha256": "29eeeddf31fd5eb51d744c8341f09e1a620ed7ef1692affb01e2668df3bb8765"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_HAP_BANNER_ACTIVE_01.mat.meta",
+      "sha256": "cabaa38fca0e403e9a1d7868c664218febd0acda8225c9c0a6a4e482cab98904"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_HAP_BANNER_FADED_01.mat",
+      "sha256": "74eef0151e286295c409d8abee913f7d193d471f660707231660516ab438662f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_HAP_BANNER_FADED_01.mat.meta",
+      "sha256": "7035adb5d9b68dbee582a1714c3221aec556e0f0bf4468e98f2d9bf3d4ba6857"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_HAP_SIGN_CLOSED_01.mat",
+      "sha256": "a5f14ecb03f4d7817321f98a712b2f4709a2e0af8353fcea43c23d6d321d386f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_HAP_SIGN_CLOSED_01.mat.meta",
+      "sha256": "6f421951232dd47b5e615b8e99c1a37386ff96affe61db150b15287808338030"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_HAP_SIGN_TEMPORARY_CLOSED_01.mat",
+      "sha256": "984b9b958a068f9a9a8d75e455f1522ca93c164e759a03ad6ee244e417e19c0a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_HAP_SIGN_TEMPORARY_CLOSED_01.mat.meta",
+      "sha256": "6d423ed38e176f9a45fd642e693773730d469eb9bb6a80b5e355366f553baec7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_SAF_BROKEN_GLASS_DECAL_01.mat",
+      "sha256": "c68fa9b79242663e9f6064ae56ede402406c78f1ad8e28b37e22236b2e27d8de"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_SAF_BROKEN_GLASS_DECAL_01.mat.meta",
+      "sha256": "2e1278a8f832f29617cb6ddac75e62523dedac8db4b0308af7c161b26bd07da2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_SAF_BROKEN_GLASS_DECAL_02.mat",
+      "sha256": "a48200c163bf3c37a553bdf7631416b26fb7fe2a11fd2bcf13b6c70cc817882b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_SAF_BROKEN_GLASS_DECAL_02.mat.meta",
+      "sha256": "7917bb5bd9169e07e5fa5e785f38524f1639e95229a7e4431c532fed2f3d680e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_SAF_BROKEN_GLASS_DECAL_03.mat",
+      "sha256": "6c67c080d7e549bd2a29d650c2c5aa8e451d88245fea625d54deda75ccaf2996"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_SAF_BROKEN_GLASS_DECAL_03.mat.meta",
+      "sha256": "3d1e92b3b8e0aa01210f218d2abe5158bd392fc16c15ca190eea04a31496749d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_SAF_GRAFFITI_DECAL_01.mat",
+      "sha256": "12a62f2f94fd592d9dcbadcb9d0e5b94a02c3afe3db56b69528f22b87c926e4d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_SAF_GRAFFITI_DECAL_01.mat.meta",
+      "sha256": "50e07b5e79cf876aac00ce5e66d39dd1258841cba0f2b8866a1b7c49e8a29e22"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_SAF_GRAFFITI_DECAL_02.mat",
+      "sha256": "558b34ce198896d64534caa5f2b138d46dc2d2ebd2c401f750dd47a2562e830f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_SAF_GRAFFITI_DECAL_02.mat.meta",
+      "sha256": "b0b43f1a53648a4924fe2d0d3b56c40cc5cbcead6bc0e5844337dc29ca2c93bc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_SAF_GRAFFITI_DECAL_03.mat",
+      "sha256": "6d354f5d1e0b8966f5e82145f63d607b8ea0980368c7201e3dd28b529754201d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_SAF_GRAFFITI_DECAL_03.mat.meta",
+      "sha256": "6b8c30cab118918c97808eb4f4458a8149398d379a53efc83c400be9bc172bca"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_SAF_GRAFFITI_DECAL_04.mat",
+      "sha256": "6571c520f8c6227ef1c0d24d3cc021badea86cba762d8cdd1bd500e571fe1eaa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/materials/MAT_SAF_GRAFFITI_DECAL_04.mat.meta",
+      "sha256": "0fa89714556f122bafbbfa0aec669f0ce76082f9c1ca5b0d70dc8cd5ce1c7c08"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_HALF_01.fbx",
+      "sha256": "d938b74cca316d96d161435a78c526217c4da13b42df4c938f6c57e7c8161156"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_HALF_01.fbx.meta",
+      "sha256": "ea1eb45fe2999b18418db2c51e8dfd8e36d19b68ef0f7486d167161d9d68b976"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_NORMAL_01.fbx",
+      "sha256": "ddc1b880820a0af4211fc79f0626ff602df2b341f06a28aaaf97075ad5039349"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_NORMAL_01.fbx.meta",
+      "sha256": "40109bf08cb8362b83035568999fba39fac9fe5c51db0d483918923d90c06761"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_OVERFLOW_01.fbx",
+      "sha256": "6e35e6cdbfe220c7e71cea190ef8f576197905b315ffdc4b8798b7db2ed493b2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_OVERFLOW_01.fbx.meta",
+      "sha256": "52393d1218ec45d152e40de8b0fc7357daa28c593911d0f12f326e8fc0fad225"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_SPILL_01.fbx",
+      "sha256": "97f4873db3c299297b6e85a9a01279b64b6e2636126376026beeefda4df85108"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_SPILL_01.fbx.meta",
+      "sha256": "8b3705403b0c9e754df922e48e4b4a2e3bd6471259144277d67b70a5f69684de"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_CARDBOARD_01.fbx",
+      "sha256": "65bbe66cd6d2d5e6b2d5df857c6b796c8352bc0607c21d10b8045569d7ce78eb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_CARDBOARD_01.fbx.meta",
+      "sha256": "09f20dcc9f4b2c6d045ddec61dd2bde83dcfcea629def1e81bb5b0c29f726681"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_DRAIN_STAIN_01.fbx",
+      "sha256": "b5e5c132866ed927843f2a82c27a6a4444be9e625d141f746f15af01921242c1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_DRAIN_STAIN_01.fbx.meta",
+      "sha256": "e2bc10f5ca12bbc05ab1495c94e2ee814e7a0805ac35f4d3f751089e36f0c3a1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GARBAGE_BAG_01.fbx",
+      "sha256": "abb3b299fff03455608aed3cff1b5ea7948d9fd7c789dbfbccba6bf965e237d4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GARBAGE_BAG_01.fbx.meta",
+      "sha256": "8a5520bf63a7c408c92a1a2e54f63218261e456d83898505d0cb0ac61d20c3bd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GARBAGE_BAG_02.fbx",
+      "sha256": "fe3302c2f0b4a8b8922dc610557baec01bac833490b4cb29da3ebbe8ed177904"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GARBAGE_BAG_02.fbx.meta",
+      "sha256": "900561db9d747a9c2b817661015b2a1f4c549499a700cbe823e2d77561b83284"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GARBAGE_BAG_GROUP_01.fbx",
+      "sha256": "2ed993e9abf195f3f07af681e618cf8475b7be48916d25badf3b7fdc98426c83"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GARBAGE_BAG_GROUP_01.fbx.meta",
+      "sha256": "812c703cdb60eb7ce1cec849eaccdd6e5b51bbf1693c4be09ab8adf1af2ea64e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GROUND_STAIN_DARK_01.fbx",
+      "sha256": "f9dcb7eedea85075ddfe8f8d840a5e642cef0ada645093675ec6e49f454e6e4d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GROUND_STAIN_DARK_01.fbx.meta",
+      "sha256": "e0406f89d490d822eb7997377463be81519b80daf194b8f365b9a1f7b5b58e05"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GROUND_STAIN_DUST_01.fbx",
+      "sha256": "f6011c9c7f1427a525f1d1508fc9671eb7b65a84c0f7cae416a3291202c9e8a1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GROUND_STAIN_DUST_01.fbx.meta",
+      "sha256": "4ba41fb7815759d29c71ddc41e7e64d7736aa846fd421dc5b9994af3fbdd468d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GROUND_STAIN_SPILL_01.fbx",
+      "sha256": "11513fa513f6e0050cbedf525e30c108a3a5a37fe589608c52b1a5852db59dbc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GROUND_STAIN_SPILL_01.fbx.meta",
+      "sha256": "07714ee8523bfdc5b37c44e776537652ee162e15737626106adc27a4d68f5c51"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_BOTTLE_01.fbx",
+      "sha256": "f17a02f10614201f5d18644c884f73b5c948c1ec3a68f390847a88576283daad"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_BOTTLE_01.fbx.meta",
+      "sha256": "5de38557dbafffc3dfafe3d7dc615ffae91922b6e110d060a5917a4350330ae6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_CAN_01.fbx",
+      "sha256": "5c3d8c3be8412f79fc8f58e236308a5715f7cb52cf28bc4922c1c932710e2770"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_CAN_01.fbx.meta",
+      "sha256": "ce1305eb4cfbe03e3de2111c12cd85df8825fce6abe88fc966103e964ea1c46d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_CUP_01.fbx",
+      "sha256": "e26f7fab091a061b0a8c31755c12b7023febdad5a3857659ba7cbfbfb67302b5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_CUP_01.fbx.meta",
+      "sha256": "a0b421ac404bb0ba167b0bc46e981d74ed157fd17426b43795f3da33cdcc0905"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PAPER_01.fbx",
+      "sha256": "8ba0e2f74c68fe1b99081e6f891b4271784ca9f65df011687b116c5262b660c8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PAPER_01.fbx.meta",
+      "sha256": "1f86501f17546bbf888163bd1f4bb4c29b0fe97bcd3ee9d8517bb8807e181750"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PILE_LARGE_01.fbx",
+      "sha256": "29b5ebcfc91b40d08d23e558f5f2f8d706a4993ece59a7347b30e314728db3e4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PILE_LARGE_01.fbx.meta",
+      "sha256": "19614cc131777f49ef4a38ee044d4b531fefff43213ab54350a9971c1951264f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PILE_MEDIUM_01.fbx",
+      "sha256": "b79c228ae9023d4371102e9e633765ddb1e570e179746e139c48ef128316e894"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PILE_MEDIUM_01.fbx.meta",
+      "sha256": "e8a208506e954521c2b54ee201bdbd294a7503c58ce1992ab00a0236c7860c57"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PILE_SMALL_01.fbx",
+      "sha256": "acbc77c686d16cc404e4fcad02ff73c5a8facfc8e53177daec8be09c2e08aed4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PILE_SMALL_01.fbx.meta",
+      "sha256": "f0a46c41c2047674a9d3a00b7436b13d520a19cc7a553043fe8b2850e8b3c4ca"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PLASTIC_BAG_01.fbx",
+      "sha256": "0b13ec99295db00f74f7fa769c56588e0034c9a9843a29883bfb7c912f1f6814"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PLASTIC_BAG_01.fbx.meta",
+      "sha256": "42c687bffa310a35426787987dc35b3129e51b1d763aa0d31923e002b69610ff"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_WRAPPER_01.fbx",
+      "sha256": "e5132cabadce68e9dde9ac51c743525cb1b9b7cd0c2aa5ce0d7a5c96bb2b8963"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_WRAPPER_01.fbx.meta",
+      "sha256": "0a6e3fc4b3e0398c60fd1aefedf108b0699f7a30ea1999d221228979971ba8e7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_BANNER_ACTIVE_01.fbx",
+      "sha256": "228c58047ba0dff386d48b867a308ba2e564b88d02877526ce040e0e82d44f1c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_BANNER_ACTIVE_01.fbx.meta",
+      "sha256": "9d85a41cc146ac86ed8f198ad49baf423d77d5f870b2a74eb381f1d87d56c910"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_BANNER_FADED_01.fbx",
+      "sha256": "c56b2e48036f22e3fdf4050211867c594d4cedae8f86c9c1d39e3c687864ef13"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_BANNER_FADED_01.fbx.meta",
+      "sha256": "1ab3c9124f97f350406fdbd8f2a1ac8b4c690e9c88509414f3156f7c7e0a1a7e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_DECOR_LIGHTS_01.fbx",
+      "sha256": "f705119f601375d30ee94f8bf25d10ab9f7bc9d4c3cac0eb835ceac1df35ba86"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_DECOR_LIGHTS_01.fbx.meta",
+      "sha256": "4138da8e6e8058e5298f4b1b97a133572a41090a4894b8a537e2884f09bdc7dd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_FLAGS_01.fbx",
+      "sha256": "9c3230b99df19beddb5739fdd98b4d97aba5d65df8c94a0a6a9ae6198877cfa7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_FLAGS_01.fbx.meta",
+      "sha256": "9e633e81d3a0b072080eb66268af1cdf7cd5ddbc9235d559afd65d0abb53f2a4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_PLANTER_EMPTY_01.fbx",
+      "sha256": "e56802096aebbded1c93ca03bbdc61e6bef71f724eb8864b66e58fcfada61803"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_PLANTER_EMPTY_01.fbx.meta",
+      "sha256": "8d69a90582b94d85cacc9f3c394d14c540074f08e8ac9f96de45cc7aab9ce151"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_PLANTER_HEALTHY_01.fbx",
+      "sha256": "33c3a5fae5150ca2b2ecb56128547539e830c773968afe6cc6535a1fb5db474e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_PLANTER_HEALTHY_01.fbx.meta",
+      "sha256": "5f33c39076fd67ef56bbc8bcb47f7a6800b1f4ef0003012823f25eaf15dba457"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_PLANTER_WITHERED_01.fbx",
+      "sha256": "50337fc1f3c5430a9bede196f76d074beee6ef41c4626c3092e633a21ac7b52e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_PLANTER_WITHERED_01.fbx.meta",
+      "sha256": "b1254bf29257f7fd4e1510ca97f84fac2c3578ef881afec661a6fffc6a48e259"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_SIGN_CLOSED_01.fbx",
+      "sha256": "5d47916c74976e107015b88a28c9ed35587bde6bf5914ef017347d5104f5b5a2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_SIGN_CLOSED_01.fbx.meta",
+      "sha256": "5afc794e56d2431511cf439079b5fd46114486655edf93097bb0ffb5b266b019"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_SIGN_TEMPORARY_CLOSED_01.fbx",
+      "sha256": "ddecce8164776759ff30193acec199d2051d8f902e8cc228edd93df7b4dbda40"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_SIGN_TEMPORARY_CLOSED_01.fbx.meta",
+      "sha256": "4005b21b5a80c661deaacbc75dae2bc6246026e93792df06abb3f9ac3160c1ac"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_GRASS_BROWN_01.fbx",
+      "sha256": "c5ebe61c086e0c45afa8373400fe1126322d8e4366c611c51a9d86aa4f4cc312"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_GRASS_BROWN_01.fbx.meta",
+      "sha256": "645ebab44d15d64e5333ff94a2a14b0939249d43fa47735a3c6dcfc8493a6d1a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_GRASS_HEALTHY_01.fbx",
+      "sha256": "7fa8332b00079f63d73c7492db060f02d8cde52360b666e4b7ccba1a3a9c0fbc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_GRASS_HEALTHY_01.fbx.meta",
+      "sha256": "ce6ebd87aeaf659bc26ac1f750f65f6601f9f4c3c5e826bf6d01da2e50ac604b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_ROOFTOP_VENT_01.fbx",
+      "sha256": "44f1db449096acd604f9141653b06db9d447380d8edbe1c843b2901b157b39f7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_ROOFTOP_VENT_01.fbx.meta",
+      "sha256": "9f1c82dfede281bb811dfc09bca850528fea794597d1b1f28118051c6f3a9fdc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_TREE_DEAD_01.fbx",
+      "sha256": "6fc54381bc01543fb8fc1260894821c306397339567d75407d003f030b57e749"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_TREE_DEAD_01.fbx.meta",
+      "sha256": "ab637c3b2607001239390657ce324f1e5fe88ecfe4ba464a8c4f0c4a2b9b15cc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_TREE_HEALTHY_01.fbx",
+      "sha256": "40d155ab52c2e4d39d548e0275ec93af07f3ce4ed2b3ea3130e970f184a88deb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_TREE_HEALTHY_01.fbx.meta",
+      "sha256": "0fe715beaf59f2825fe56b1b8ee16fe2953725dc894c54176f96370e20f04f92"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_TREE_WITHERED_01.fbx",
+      "sha256": "8a1cf857cf288b80bb3f4d5511f143479682382ffe326c1bfa85459084671930"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_TREE_WITHERED_01.fbx.meta",
+      "sha256": "a681313c04f8b6dcd919c5d0badc7b74852ca4eabb83d1608155ed09908552aa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BENCH_BROKEN_01.fbx",
+      "sha256": "befe95e48811fc6fead2d24f30ae52760e91701acb3a79190cc2ea6cea63133f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BENCH_BROKEN_01.fbx.meta",
+      "sha256": "1a8982618d0e0844bf9a606f3877d270533f05b8f5aac48026f8a6a1b78b312e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BENCH_NORMAL_01.fbx",
+      "sha256": "c3069095374c24611fa67fa9b7edcb7628625b395d2daa07cca1329c86c00238"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BENCH_NORMAL_01.fbx.meta",
+      "sha256": "4a3afebb014cc8ae1b169d97d21b80863d37f6e237c820acd95c4658072b713a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BROKEN_GLASS_DECAL_01.fbx",
+      "sha256": "336ccca70e60c227131ab5a354aa9cd1c5e7764c58771ea6ef95adaeef207b56"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BROKEN_GLASS_DECAL_01.fbx.meta",
+      "sha256": "dc7d03b977cfc53bc82d45771011d8d4c50eee1e94353be6a7ddbc0962a92be9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BROKEN_GLASS_DECAL_02.fbx",
+      "sha256": "4aebd167e4c6dfc6ead107314fc53a97d415395206e0dfb96a2ce0e78244f9ae"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BROKEN_GLASS_DECAL_02.fbx.meta",
+      "sha256": "ebda2c53ff2b295b475111606bddfd708b627166d9d66e51299a345b8212ff8f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BROKEN_GLASS_DECAL_03.fbx",
+      "sha256": "0156ad85a3b98ca2fe2108807da75c42c4f28531cba04963114101e24761fbf0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BROKEN_GLASS_DECAL_03.fbx.meta",
+      "sha256": "f1da2874ff6fc2603f10061b0050bf2c176d96c30cd365bac5be520e4161f284"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_CAR_NORMAL_01.fbx",
+      "sha256": "7f9dea131c95252e55b6d118fb0a9acf3d26ebd9888d6d4dc341c1efe7d6f26c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_CAR_NORMAL_01.fbx.meta",
+      "sha256": "8b42c979b4a856f051c2df819e563b8a8beb3f3b39b4f52a06d78f9a45976c66"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_CCTV_01.fbx",
+      "sha256": "bc83cb88eeebedd4131708c8bf6af3f60c0963083dc1f8d1fd6efcb5dc36a66a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_CCTV_01.fbx.meta",
+      "sha256": "df7e2936dbdba558dfc952c0291def988623c61ded5d30d707bf499bb0ef1b37"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_DAMAGED_CAR_01.fbx",
+      "sha256": "af4a70d97cf6c2e3b8b998771529c4888c87508608b96a9acb12806b0b9f475e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_DAMAGED_CAR_01.fbx.meta",
+      "sha256": "c91b5eb0f65d6216e575d4611161770a8b25bc1e83de530d388dbc9bede5493c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_DAMAGED_CAR_02.fbx",
+      "sha256": "c6eccb45d4c3799b35c094f68cd82918901e275b41016ad824a6443331c4111d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_DAMAGED_CAR_02.fbx.meta",
+      "sha256": "2e2676d4044d19b9403dba4f4dfe2e23649cadea4160edf97376083d2530103f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_EMERGENCY_BELL_01.fbx",
+      "sha256": "92f8e6ad80512cd1d6df3478b1d8d878d005c8186df9abb6e8333d18827a635e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_EMERGENCY_BELL_01.fbx.meta",
+      "sha256": "532f03c63f19d91cec6b8a7ded35ef8503771cf72325c849fbcd2563f38b05ec"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_FALLEN_BICYCLE_01.fbx",
+      "sha256": "e680b2f938250f9c25f115cbba0e3e39cb5cfdc2b5e2e0fe5c902a50da1a9732"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_FALLEN_BICYCLE_01.fbx.meta",
+      "sha256": "7a99cf6a8b1e72544c76d2e6ead339b5df7897953ef6a51b006a9b47ce7a2d78"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_FENCE_BROKEN_01.fbx",
+      "sha256": "39ff3cc6d87b43e23075e358d2d5004ec3a6c24b0f6b38e21e98c67ed11ff4c1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_FENCE_BROKEN_01.fbx.meta",
+      "sha256": "1abeccef283c1f69e46db614b86b7d5d4b49ad60b28d44853cae05fe6f4eb0e7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_FENCE_NORMAL_01.fbx",
+      "sha256": "b51733da102038fd3dc5bf4a86fb403333682cec7312467ecfa17b3fecec6d81"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_FENCE_NORMAL_01.fbx.meta",
+      "sha256": "047edbb8fb7cf7a8b4f86242fad5c0304df89ca64ef30548190573856acad602"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_GRAFFITI_DECAL_01.fbx",
+      "sha256": "0d1e45d94b6f235f6de6d35baefa526f7d5820ac5254c16b44ec95b3eec1cb56"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_GRAFFITI_DECAL_01.fbx.meta",
+      "sha256": "e04de981ce3016ff32c26f4e23d4abf1bba593be6820802b4c42578bf43985d3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_GRAFFITI_DECAL_02.fbx",
+      "sha256": "e8102b5341b6c1db3be1548a33d717430df84fa11600ca8205ce44fee876e11e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_GRAFFITI_DECAL_02.fbx.meta",
+      "sha256": "969a8e2336c03f0a8de599adb27474156cf2aa5af14c9a45e81028fde0d9769d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_GRAFFITI_DECAL_03.fbx",
+      "sha256": "cf97b7496cf6ad1e51437d14f4ae74e3c416807ee0137a8cbce952b98ceb7558"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_GRAFFITI_DECAL_03.fbx.meta",
+      "sha256": "6f66899d7b6a4e0bb0dae42db923d54c36d57bb7ca9750468661659a3ac0f6cf"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_GRAFFITI_DECAL_04.fbx",
+      "sha256": "2a6fe7d0b11756958b2bb280e99dd4ea1c9491881fcf6ac8df424e79f49cf00c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_GRAFFITI_DECAL_04.fbx.meta",
+      "sha256": "00863c91df0fdacddc769f4f40f62b1694d1c9ce6c0ce8f18ec0a5fd9561f506"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_LAMP_BROKEN_01.fbx",
+      "sha256": "b64f6f78a94c30805cd558cf22626822499062978e7a7f490ba0fdcba6419213"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_LAMP_BROKEN_01.fbx.meta",
+      "sha256": "07eb0033f3cf45181323a4ede2a66003dde6969f033884a534bebab4537a714b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_LAMP_NORMAL_01.fbx",
+      "sha256": "c955263f2ca331cbcd8fd7dd2e105fa070c1fcd6573c7fa079386b3d62a9bf4e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_LAMP_NORMAL_01.fbx.meta",
+      "sha256": "e86117b6dd23caa2b85f934a285941e2cfaf04023a0ebbd5962cae46389128b9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_POLICE_CAR_01.fbx",
+      "sha256": "4adc90023e4e04adbded72d5e44603debeff494c688b5c2762d3460dfe91b73b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_POLICE_CAR_01.fbx.meta",
+      "sha256": "545a6286465c8b601158976e82eee747c55f2ce447e73f65d83354624287ff3f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_POLICE_LIGHTBAR_01.fbx",
+      "sha256": "37ae8d4f3ee4e7afeda641bd05401f58d028b8634c1fdff8b71af58532c24dbc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_POLICE_LIGHTBAR_01.fbx.meta",
+      "sha256": "8252a6af4103a6895efd762374e9cbd18616bede71ca99c955e411c012cfbd37"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/CLN_DRAIN_STAIN_01.png",
+      "sha256": "2cceca85bdc6d6b475afbe7ef90aa75b79ed21d6deda6eb879b612b8cb05480a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/CLN_DRAIN_STAIN_01.png.meta",
+      "sha256": "fb9e1a01024b95db3b87e22cc74c874a070c38b74ccd133f7baf0f0ab6c82b21"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/CLN_GROUND_STAIN_DARK_01.png",
+      "sha256": "2ef2c18579ecbc4113ede4e8e0a9a3f68165236e2d4b07839810be0fd4b799e5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/CLN_GROUND_STAIN_DARK_01.png.meta",
+      "sha256": "16d6d557975ac473ebb5b89c48ea933591ef6b90b82f0ea27257b1ab215b7378"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/CLN_GROUND_STAIN_DUST_01.png",
+      "sha256": "2f519b20f97344ecae0a78dd1a41279e39f9bfa1cca0a4679e8ee3a96f9c62c0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/CLN_GROUND_STAIN_DUST_01.png.meta",
+      "sha256": "248a95083253e8c83da861ebd94d3bdb20fe606d726c4bb8e8e7446b11861280"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/CLN_GROUND_STAIN_SPILL_01.png",
+      "sha256": "837c286dd3ebae29d69f7a27ebb3e5c4689dad047e1948cef08e2652fdc09e85"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/CLN_GROUND_STAIN_SPILL_01.png.meta",
+      "sha256": "457e15b08f0feb284fe0b6f4a0d7bba28bd5f3db7fd45839588a3c297f79c764"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/HAP_BANNER_ACTIVE_01.png",
+      "sha256": "aa5c20e163d8cd0d8f21fb7dabfb4c26bb5d221ceedacd08de3f75a4f2d36e89"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/HAP_BANNER_ACTIVE_01.png.meta",
+      "sha256": "c2fe824d7e7a84f57914250d374f7d37c421f997ccd5453c60e2ee34c35151bc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/HAP_BANNER_FADED_01.png",
+      "sha256": "5fd39f3a3ccb89de1f3076d99e361893a92291b43da5e71901c4d45a6f1c2c4d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/HAP_BANNER_FADED_01.png.meta",
+      "sha256": "b6c3fd99bfbf29d2980ae8260a475e080e800bd3e9e23393ad2b7f85e86b361a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/HAP_SIGN_CLOSED_01.png",
+      "sha256": "01a6d43a957b5430e08f1ffd8bd03a0bf7d2bac7d45f615b34adba9a4a46fecb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/HAP_SIGN_CLOSED_01.png.meta",
+      "sha256": "50cf033a7585ce5a0cecf8f2c1564deaa3d6921747040605ef48e33fbc7e1eb4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/HAP_SIGN_TEMPORARY_CLOSED_01.png",
+      "sha256": "4356aa455eb4d07b33347948cd10cf82c30a96dd317be6eb9e7b570291ec01cb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/HAP_SIGN_TEMPORARY_CLOSED_01.png.meta",
+      "sha256": "2427d0f8c0d81ac00397cfcdc11dfa9b944abf6f586b0340820607dfe3e56da7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/SAF_BROKEN_GLASS_DECAL_01.png",
+      "sha256": "939fceafe21d82a0d55a2b0aeeeb287ca5feeb16f41dc4f6bbf57c835dc9bf44"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/SAF_BROKEN_GLASS_DECAL_01.png.meta",
+      "sha256": "cc880e84eb629306bacf08e3a490209a9ea7c1efa3791f985e8ab51f96ae175a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/SAF_BROKEN_GLASS_DECAL_02.png",
+      "sha256": "01d83d61116bf87388fd368f7e376dc63081b54f2f190d19ba7126bee252e06a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/SAF_BROKEN_GLASS_DECAL_02.png.meta",
+      "sha256": "1f5ec18842b36ea75f20b50ffab1e955a12bd1c1953e7653a030e319d35e2347"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/SAF_BROKEN_GLASS_DECAL_03.png",
+      "sha256": "078190533145917fed05c3727fac53ba2aad6be9a2546442f7831a9256e50f20"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/SAF_BROKEN_GLASS_DECAL_03.png.meta",
+      "sha256": "5c094a2d6cee804fde79f37af0c6941ec8639056fe380ba5842f064d0514fbc7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/SAF_GRAFFITI_DECAL_01.png",
+      "sha256": "51a3675d3a238e6ba7e9cb9459a31d0f0072e511323185acfd79f4aa5bb0c9ea"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/SAF_GRAFFITI_DECAL_01.png.meta",
+      "sha256": "205cd289912bcbefbcfd13ee1b48410abb5a0820656da8f1d2f0f2fd0e28697b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/SAF_GRAFFITI_DECAL_02.png",
+      "sha256": "8f677989efbebb42867bfdfcc92c0e96bf669fbc89856b4bd4fda2815fcf01f4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/SAF_GRAFFITI_DECAL_02.png.meta",
+      "sha256": "e62b1234e7ad856cb4ea70681d1c2e85a7ff8ca9d5d1a785c2b6579a50586933"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/SAF_GRAFFITI_DECAL_03.png",
+      "sha256": "e1099b3ae1499256701892d315bc47fc28375b838bea966bca467610d9acc322"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/SAF_GRAFFITI_DECAL_03.png.meta",
+      "sha256": "2002b05822fd20875f5415906b4dbeb8ec4568cfc47b4c52a9e42f6b859180ec"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/SAF_GRAFFITI_DECAL_04.png",
+      "sha256": "e4d4ffe4d6448a653b748cab4b2f390057bd3a89da0eb2b913fc03c6596493df"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/textures/SAF_GRAFFITI_DECAL_04.png.meta",
+      "sha256": "e0ce42794f14dbd692a07bb046147d8de6951721aee81a0f7b2e7f6739ae35d9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001.meta",
+      "sha256": "1f81ce03eb87b1678b3012c6689b17e9f47806da73bf1f0c5b5ff0e98be48f0d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityStateAssets.cs",
+      "sha256": "d311e62644ff269b7e6c961245afe476b4d9383f4bdbda800ea9906da1db6f35"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityStateAssets.cs.meta",
+      "sha256": "39ea851858cdb66e8d459206015f04a60f742be0640c6b7ca149667c7666d0f4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityStateAnchor.cs",
+      "sha256": "26bde24e2fd2fcc354026cfcf892ee024f0cb584306c2b66513553ee257b5ca2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/CityStateAnchor.cs.meta",
+      "sha256": "1bd0727790489c0b47ea211e593bee58959e567dfaef8cb701b4ba02be89e8d3"
+    },
+    {
+      "path": "unity/Assets/Editor/CityStateAssetImporter.cs",
+      "sha256": "21cd7f0e541e46b355a067e4be20c34500c5a8072251f6bab77116e9aa6df403"
+    },
+    {
+      "path": "unity/Assets/Editor/CityStateAssetImporter.cs.meta",
+      "sha256": "cec33f7be10ce06305bd57568969ccaa1f1ba71f42c3249ec6253b834eb670a6"
+    },
+    {
+      "path": "unity/Assets/Scripts/NpcOcclusionReveal.cs",
+      "sha256": "ac2e47f2a9af5ebc568916cdc0dc00521d382b0630f67690305d17a64fc0caec"
+    },
+    {
+      "path": "assets/library/props/city_state_v001/source/SIMUS_City_State_Assets.blend",
+      "sha256": "32e4d66defca2a4e98325729dccb31ee4d729e0c0eb971f9c206181405647cee"
+    },
+    {
+      "path": "assets/library/maps/university_v003/reports/city_state_v001/AssetAudit.json",
+      "sha256": "1152629ba335eb601f5e21b7ed6992439b9bde3985f166fbfd08197667d5d6b8"
+    },
+    {
+      "path": "assets/library/maps/university_v003/reports/city_state_v001/CityStateBindings.json",
+      "sha256": "8f5cefbbade7f068dfda0afe3afdef66abedf82fa29ef0d4e484599e90066e1e"
+    },
+    {
+      "path": "assets/library/maps/university_v003/reports/city_state_v001/Delivery_Report.md",
+      "sha256": "552421dcb66f28a2d1d9c9f1bf5bd797f04749f213f434f884a868f4f1dbb4fd"
+    },
+    {
+      "path": "assets/library/maps/university_v003/reports/city_state_v001/FBXRoundtrip.json",
+      "sha256": "4e89547f4ca698096ccb2ce7815d647a87694b4daa3f82a86787fc95f2d92c07"
+    },
+    {
+      "path": "assets/library/maps/university_v003/reports/city_state_v001/IndividualFBXAudit.json",
+      "sha256": "2608f707d687f1e6df9e3336378233ac43001ba36eabe3b97cc467c4402bb35b"
+    },
+    {
+      "path": "assets/library/maps/university_v003/reports/city_state_v001/PlacementAudit.json",
+      "sha256": "cca29c8643096bc479aefd0a1341e3136e0a6665c68efa2771874d3ae238c9d0"
+    },
+    {
+      "path": "assets/library/maps/university_v003/reports/city_state_v001/PlacementInventory.csv",
+      "sha256": "759877f951cdf0ad79fc2a0d9c67cb7b619be2b109c404de34bda421be7ac8fd"
+    },
+    {
+      "path": "assets/library/maps/university_v003/reports/city_state_v001/StageActivation.csv",
+      "sha256": "d3fa3616dc7f72be5082caf3d2aa3b68ebd7702dc68d0cbd7568c9e803f0260f"
+    },
+    {
+      "path": "assets/library/maps/university_v003/reports/city_state_v001/Unity_EditMode.txt",
+      "sha256": "7146a267b82a4dc8f01e243d5f76f6e9009d54e235f6cbf07bfe655366142c09"
+    },
+    {
+      "path": "assets/library/maps/university_v003/reports/city_state_v001/Unity_Passed.json",
+      "sha256": "a7969ee4f61bec380d7ce3ebcbd585773514757c23be1317585162c91acc29a2"
+    },
+    {
+      "path": "assets/library/maps/university_v003/reports/city_state_v001/Unity_PlayMode.txt",
+      "sha256": "48471fd0eb2c8e166e346cd80aa50ea2b6b29089ea4173aae4509b3463d73149"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/01_Base_City.png",
+      "sha256": "bee7b84f159644545d11d3e6d70e0592ba19a61e12daef67bcb9f61d45f2cdaa"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/01_Base_City_Detail.png",
+      "sha256": "6240be42ba313e7bf5db3ba250d304812173ce712d993a98b1e9a1e99650d4fd"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/02_Happiness_High.png",
+      "sha256": "2ae917bd7c6310351004e62e9eae0a409076fd20e737d3b82ffae800e904746c"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/02_Happiness_High_Detail.png",
+      "sha256": "d48e4bc61d83a2a2d10bb39fce90182cee2a87943007782838f854d5ee9e324d"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/03_Happiness_Low.png",
+      "sha256": "d674d201f2017915287a97623a756441d3d773ae6d9a10b63e75778c4e93ce44"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/03_Happiness_Low_Detail.png",
+      "sha256": "4c4b7b746c53dddec147e21ecbbe9b78f19950f4db4f03f520bb92516c1c6459"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/04_Safety_High.png",
+      "sha256": "6e8b3b691220828904e4e15d8e2898ea12d670bd1a581e3405edb2c7f72f63b4"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/04_Safety_High_Detail.png",
+      "sha256": "8890f18a1fa62cde375a71ea7c12dd0996fecf3bb46c9ad2d5bc395f79ab191d"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/05_Safety_Low.png",
+      "sha256": "b4980c0718ca0ad34c6696248ca163a359b395091914bf5dff8efba01494d957"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/05_Safety_Low_Detail.png",
+      "sha256": "aee1a279c3d2339c60f75f979d326ac91eec1ec2191b4681bb755bbf2ab38369"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/06_Cleanliness_High.png",
+      "sha256": "51d6c104c487b25d8a7ee4524a6746540c1a6f4c35a61fe67e351dceedd28d5d"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/06_Cleanliness_High_Detail.png",
+      "sha256": "ff8b082ce9948c2adf07bc27d50e088055b79dccdc32804f632fa9e7a81078c3"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/07_Cleanliness_Low.png",
+      "sha256": "dc7e5f4f739a7d1d32649daac058ac469758c99887d85f9bc91576f7e7303f5d"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/07_Cleanliness_Low_Detail.png",
+      "sha256": "885eda4fc81f73cd0ea3de13eb22ac4a3d6c4af7550fef5a472ea0ebb532ad0f"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/08_Pollution_Low.png",
+      "sha256": "e81a8fd03f14df09f4474c2afbe0a840c6216ea9f29faf9aa269dadf4d065482"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/08_Pollution_Low_Detail.png",
+      "sha256": "3506523b63d15fa707c872a36cb8cf3d115442ed3e4f7467f17d493ae99a76be"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/09_Pollution_High.png",
+      "sha256": "1608a5b9f370ec99b1a726952ba5412a49cc21f8fb720ce1d543ed9c26982e5c"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/09_Pollution_High_Detail.png",
+      "sha256": "054ab537ad9ed04212b94b10777741a8a4a192005e4d865d741754c920f18665"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/10_Mixed.png",
+      "sha256": "b11d6a6ed6d706c0c1ab47cb888696ff31e1a83ae02b4333880c5a5c5f0df09e"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/10_Mixed_Detail.png",
+      "sha256": "79761d546e6fac27f27141ffe314de8bd8608ffb947e8124640c0188682cf2ba"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/11_Normal.png",
+      "sha256": "5ab2daff628f7d982332d0fa3cb58e3905be742348c8629241667333f0c2e84a"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/11_Normal_Detail.png",
+      "sha256": "3a7eac6d20d6f2d84fdb97969b0824bb69783ab8045b72e15ff0e7ddb0f54572"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/12_Happy_Unsafe.png",
+      "sha256": "79e6a9d1a875607bf289653d56c631247adf562c56ee29c306705299c4926fbb"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/12_Happy_Unsafe_Detail.png",
+      "sha256": "96a6bc9cb7f1398a0a1b7c621505e5247c27b03a5e8569970c3c002ecbc2fa2e"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/13_Dirty_Unpolluted.png",
+      "sha256": "f4cca2e7cef216c5f3731c6c5ca5a3818609878b08a99b501d153755fd6f1c74"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/13_Dirty_Unpolluted_Detail.png",
+      "sha256": "59ec362c2ae4a6a3141c468206ea8d69271471f1878f43f065e64195408d6d1c"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/14_Clean_Polluted.png",
+      "sha256": "1949c1633f7d99e3d96bb7ae25105e6536239a792fe9c4ea9c98b10dda17307a"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/14_Clean_Polluted_Detail.png",
+      "sha256": "bf619aaca02846219d0ccfc23e81c80ef1975d341ff35556427d31401bc32c77"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/15_Best.png",
+      "sha256": "1876b57c95fef18ce3d93be394b06bcc522b2ee9c9e1995276f240a1bfab09c5"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/15_Best_Detail.png",
+      "sha256": "7b02c2e4710a8ea6e6fa3fb19a7f2d1b8bb6c652d393b219fdeb255ddefa100e"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/16_Worst.png",
+      "sha256": "e0d2ab331968f1076f9ade6f320ec89a8d3309d91a38905695aad29d57b29a48"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/16_Worst_Detail.png",
+      "sha256": "22efacf0fa587ad8932138c900f79dea71a4a8c7a9325590ba81002446ec8675"
+    },
+    {
+      "path": "assets/library/props/city_state_v001/previews/Assets_A_Planters.png",
+      "sha256": "0d18608f727fa7e6f0183f1281abbc9ceb4174ba9f6cb7ed13246728074af7b5"
+    },
+    {
+      "path": "assets/library/props/city_state_v001/previews/Assets_B_Vehicles.png",
+      "sha256": "0894511c03304b936c746cd79175ed39578d0ffd5ee2af79976585b276187874"
+    },
+    {
+      "path": "assets/library/props/city_state_v001/previews/Assets_ContactSheet.png",
+      "sha256": "d646c58eca1663fb3c28e744db6dcb3613671265a374bb0303f0061c0a921642"
+    },
+    {
+      "path": "assets/library/props/city_state_v001/previews/Assets_C_Bins.png",
+      "sha256": "b00d25485f21063116e49f0454f5d5c078aa0bcc5de9a57c1793559d1b49b592"
+    },
+    {
+      "path": "assets/library/props/city_state_v001/previews/Assets_D_Ground.png",
+      "sha256": "a21d0798c2465e815df2fc89b4d775a9601163e4173c4f0d09e0c7c591ccc7c6"
+    },
+    {
+      "path": "assets/library/props/city_state_v001/previews/Assets_E_Trees.png",
+      "sha256": "4ad8b4ff1d3207b23d9f56af89f195e54ba46549fe524929aa2d50270c3802ed"
+    },
+    {
+      "path": "assets/library/props/city_state_v001/previews/Assets_F_Water.png",
+      "sha256": "bc1ff0840722102e9647fa7a54e9097c364acc147fa3b547ea1ff18411aae20e"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/Best_Worst_Comparison.png",
+      "sha256": "8697e56f346db13e9645bb28ba940e0d324ea700113b1cbd30fe0b9f3a8fef06"
+    },
+    {
+      "path": "assets/library/maps/university_v003/previews/city_state_v001/State_Overview_ContactSheet.png",
+      "sha256": "0035590b16ef7a75c4d3d11f577263940f0234ad53dc0b4ede28ee8e6c2ff37f"
+    },
+    {
+      "path": "assets/library/maps/university_v003/reports/city_state_v001/ActualProjectValidation.txt",
+      "sha256": "122d988e5ec109c072d8cbc3fb04c952acbfbcf474886a1bb21f5e135d80d5d6"
+    },
+    {
+      "path": "assets/library/maps/university_v003/reports/city_state_v001/CatalogAudit.md",
+      "sha256": "b3d9b64fa9b3bd096ba5f69f4f928d36007d4bbeb54e60f527d6adb6886b32b2"
+    }
+  ],
+  "removed": [
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Environmental_State_Assets_v3.fbx",
+      "sha256": "00d916f2c92c07c0f39321e1c64fed98c5411f34daa7374fa03679dd34a5f548"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Environmental_State_Assets_v3.fbx.meta",
+      "sha256": "1c1c5c58af2f2ed4cbc4bf87687a52b1267eef0b616cf452e0f43b6cc93467f7"
+    }
+  ],
+  "externalBackup": "C:\\Project\\simus_backups\\city_state_20261013_145427",
+  "final_verified": "2026-10-14"
+}

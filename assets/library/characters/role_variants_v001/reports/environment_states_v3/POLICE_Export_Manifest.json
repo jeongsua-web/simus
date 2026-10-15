@@ -1,0 +1,216 @@
+{
+  "objects": [
+    "NPC_POLICE",
+    "POLICE_ARMATURE",
+    "POLICE_BODY",
+    "POLICE_OUTFIT_TOP",
+    "POLICE_OUTFIT_BOTTOM",
+    "POLICE_SHOES",
+    "POLICE_HAIR_06_CAP_PONYTAIL",
+    "POLICE_Collar_-1",
+    "POLICE_Collar_1",
+    "POLICE_Thin_Placket",
+    "POLICE_Shirt_Button",
+    "POLICE_Shirt_Button.001",
+    "POLICE_Shirt_Button.002",
+    "POLICE_Shirt_Button.003",
+    "POLICE_Shield_Badge",
+    "POLICE_Nameplate",
+    "POLICE_Shoulder_Epaulette_-1",
+    "POLICE_Shoulder_Epaulette_1",
+    "POLICE_Full_Duty_Belt",
+    "POLICE_Close_Radio",
+    "POLICE_Belt_Pouch",
+    "POLICE_Arm_Patch",
+    "POLICE_Arm_Patch.001",
+    "POLICE_Ankle_Boot_Cuffs"
+  ],
+  "bones": [
+    "Root",
+    "Hips",
+    "Spine",
+    "Chest",
+    "Neck",
+    "Head",
+    "LeftShoulder",
+    "LeftUpperArm",
+    "LeftLowerArm",
+    "LeftHand",
+    "RightShoulder",
+    "RightUpperArm",
+    "RightLowerArm",
+    "RightHand",
+    "LeftUpperLeg",
+    "LeftLowerLeg",
+    "LeftFoot",
+    "LeftToes",
+    "RightUpperLeg",
+    "RightLowerLeg",
+    "RightFoot",
+    "RightToes"
+  ],
+  "clips": [
+    "Idle",
+    "Walk",
+    "Interact",
+    "Wave"
+  ],
+  "meshes": {
+    "POLICE_BODY": {
+      "vertices": 444,
+      "materials": [
+        "MAT_SKIN",
+        "MAT_EYES"
+      ],
+      "skinned": true
+    },
+    "POLICE_OUTFIT_TOP": {
+      "vertices": 572,
+      "materials": [
+        "ENV3_NPC_POLICE_OUTFIT_TOP"
+      ],
+      "skinned": true
+    },
+    "POLICE_OUTFIT_BOTTOM": {
+      "vertices": 456,
+      "materials": [
+        "ENV3_NPC_POLICE_OUTFIT_BOTTOM"
+      ],
+      "skinned": true
+    },
+    "POLICE_SHOES": {
+      "vertices": 120,
+      "materials": [
+        "ENV3_NPC_POLICE_SHOES"
+      ],
+      "skinned": true
+    },
+    "POLICE_HAIR_06_CAP_PONYTAIL": {
+      "vertices": 1412,
+      "materials": [
+        "MAT_HAIR",
+        "ENV3_NPC_POLICE_CAP"
+      ],
+      "skinned": true
+    },
+    "POLICE_Collar_-1": {
+      "vertices": 145,
+      "materials": [
+        "ENV3_NPC_Police_Collar"
+      ],
+      "skinned": true
+    },
+    "POLICE_Collar_1": {
+      "vertices": 145,
+      "materials": [
+        "ENV3_NPC_Police_Collar"
+      ],
+      "skinned": true
+    },
+    "POLICE_Thin_Placket": {
+      "vertices": 145,
+      "materials": [
+        "ENV3_NPC_Police_Collar"
+      ],
+      "skinned": true
+    },
+    "POLICE_Shirt_Button": {
+      "vertices": 145,
+      "materials": [
+        "ENV3_NPC_Silver_Badge"
+      ],
+      "skinned": true
+    },
+    "POLICE_Shirt_Button.001": {
+      "vertices": 145,
+      "materials": [
+        "ENV3_NPC_Silver_Badge"
+      ],
+      "skinned": true
+    },
+    "POLICE_Shirt_Button.002": {
+      "vertices": 145,
+      "materials": [
+        "ENV3_NPC_Silver_Badge"
+      ],
+      "skinned": true
+    },
+    "POLICE_Shirt_Button.003": {
+      "vertices": 145,
+      "materials": [
+        "ENV3_NPC_Silver_Badge"
+      ],
+      "skinned": true
+    },
+    "POLICE_Shield_Badge": {
+      "vertices": 181,
+      "materials": [
+        "ENV3_NPC_Shield"
+      ],
+      "skinned": true
+    },
+    "POLICE_Nameplate": {
+      "vertices": 145,
+      "materials": [
+        "ENV3_NPC_Silver_Badge"
+      ],
+      "skinned": true
+    },
+    "POLICE_Shoulder_Epaulette_-1": {
+      "vertices": 145,
+      "materials": [
+        "ENV3_NPC_Police_Collar"
+      ],
+      "skinned": true
+    },
+    "POLICE_Shoulder_Epaulette_1": {
+      "vertices": 145,
+      "materials": [
+        "ENV3_NPC_Police_Collar"
+      ],
+      "skinned": true
+    },
+    "POLICE_Full_Duty_Belt": {
+      "vertices": 96,
+      "materials": [
+        "ENV3_NPC_Duty_Belt"
+      ],
+      "skinned": true
+    },
+    "POLICE_Close_Radio": {
+      "vertices": 78,
+      "materials": [
+        "ENV3_NPC_Duty_Belt"
+      ],
+      "skinned": true
+    },
+    "POLICE_Belt_Pouch": {
+      "vertices": 74,
+      "materials": [
+        "ENV3_NPC_Duty_Belt"
+      ],
+      "skinned": true
+    },
+    "POLICE_Arm_Patch": {
+      "vertices": 4,
+      "materials": [
+        "ENV3_NPC_Shield"
+      ],
+      "skinned": true
+    },
+    "POLICE_Arm_Patch.001": {
+      "vertices": 4,
+      "materials": [
+        "ENV3_NPC_Shield"
+      ],
+      "skinned": true
+    },
+    "POLICE_Ankle_Boot_Cuffs": {
+      "vertices": 144,
+      "materials": [
+        "ENV3_NPC_POLICE_SHOES"
+      ],
+      "skinned": true
+    }
+  }
+}

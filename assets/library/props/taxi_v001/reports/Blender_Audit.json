@@ -1,0 +1,75 @@
+{
+  "lods": {
+    "0": {
+      "meshes": 33,
+      "triangles": 17060,
+      "bounds": [
+        [
+          -1.1090000867843628,
+          1.1090000867843628
+        ],
+        [
+          -2.4559998512268066,
+          2.437999963760376
+        ],
+        [
+          0.0,
+          1.6299999952316284
+        ]
+      ]
+    },
+    "1": {
+      "meshes": 28,
+      "triangles": 1544,
+      "bounds": [
+        [
+          -1.1090000867843628,
+          1.1090000867843628
+        ],
+        [
+          -2.4559998512268066,
+          2.437999963760376
+        ],
+        [
+          0.0,
+          1.6299999952316284
+        ]
+      ]
+    }
+  },
+  "negative_scales": [],
+  "missing_materials": [],
+  "open_meshes": [],
+  "front": "Blender -Y; Unity +Z",
+  "wheel_spin_axis_blender": "X",
+  "body_ground_origin": [
+    0,
+    0,
+    0
+  ],
+  "materials": 13,
+  "wheel_centers": {
+    "WHEEL_FL": [
+      0.7850000262260437,
+      -1.4800000190734863,
+      0.32499998807907104
+    ],
+    "WHEEL_RL": [
+      0.7850000262260437,
+      1.399999976158142,
+      0.32499998807907104
+    ],
+    "WHEEL_FR": [
+      -0.7850000262260437,
+      -1.4800000190734863,
+      0.32499998807907104
+    ],
+    "WHEEL_RR": [
+      -0.7850000262260437,
+      1.399999976158142,
+      0.32499998807907104
+    ]
+  },
+  "colliders": 2,
+  "optimization": "Same-parent same-material rigid pieces merged per LOD; wheels, doors, lamps and signs remain independently controlled."
+}

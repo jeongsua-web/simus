@@ -1,0 +1,190 @@
+{
+  "objects": [
+    "NPC_CLEANER",
+    "CLEANER_ARMATURE",
+    "CLEANER_BODY",
+    "CLEANER_OUTFIT_TOP",
+    "CLEANER_OUTFIT_BOTTOM",
+    "CLEANER_SHOES",
+    "CLEANER_HAIR_11_CAP_CURLY_BOB",
+    "CLEANER_Safety_Vest",
+    "CLEANER_Reflective_Waist",
+    "CLEANER_Reflective_Waist.001",
+    "CLEANER_Reflective_Shoulder",
+    "CLEANER_Reflective_Shoulder.001",
+    "CLEANER_Reflective_Shoulder.002",
+    "CLEANER_Reflective_Shoulder.003",
+    "CLEANER_Flat_Vest_Pocket",
+    "CLEANER_Flat_Vest_Pocket.001",
+    "CLEANER_Vest_Front_Opening",
+    "CLEANER_Ankle_Boot_Cuffs",
+    "CLEANER_Collection_Cart",
+    "CLEANER_Broom_Hand_Held"
+  ],
+  "bones": [
+    "Root",
+    "Hips",
+    "Spine",
+    "Chest",
+    "Neck",
+    "Head",
+    "LeftShoulder",
+    "LeftUpperArm",
+    "LeftLowerArm",
+    "LeftHand",
+    "RightShoulder",
+    "RightUpperArm",
+    "RightLowerArm",
+    "RightHand",
+    "LeftUpperLeg",
+    "LeftLowerLeg",
+    "LeftFoot",
+    "LeftToes",
+    "RightUpperLeg",
+    "RightLowerLeg",
+    "RightFoot",
+    "RightToes"
+  ],
+  "clips": [
+    "Idle",
+    "Walk",
+    "Interact",
+    "Wave"
+  ],
+  "meshes": {
+    "CLEANER_BODY": {
+      "vertices": 444,
+      "materials": [
+        "MAT_SKIN",
+        "MAT_EYES",
+        "ENV3_NPC_Work_Gloves"
+      ],
+      "skinned": true
+    },
+    "CLEANER_OUTFIT_TOP": {
+      "vertices": 392,
+      "materials": [
+        "ENV3_NPC_CLEANER_OUTFIT_TOP"
+      ],
+      "skinned": true
+    },
+    "CLEANER_OUTFIT_BOTTOM": {
+      "vertices": 456,
+      "materials": [
+        "ENV3_NPC_CLEANER_OUTFIT_BOTTOM"
+      ],
+      "skinned": true
+    },
+    "CLEANER_SHOES": {
+      "vertices": 120,
+      "materials": [
+        "ENV3_NPC_CLEANER_SHOES"
+      ],
+      "skinned": true
+    },
+    "CLEANER_HAIR_11_CAP_CURLY_BOB": {
+      "vertices": 1988,
+      "materials": [
+        "MAT_HAIR",
+        "ENV3_NPC_CLEANER_CAP"
+      ],
+      "skinned": true
+    },
+    "CLEANER_Safety_Vest": {
+      "vertices": 180,
+      "materials": [
+        "ENV3_NPC_HiVis_Orange"
+      ],
+      "skinned": true
+    },
+    "CLEANER_Reflective_Waist": {
+      "vertices": 96,
+      "materials": [
+        "ENV3_NPC_Reflective_Tape"
+      ],
+      "skinned": true
+    },
+    "CLEANER_Reflective_Waist.001": {
+      "vertices": 96,
+      "materials": [
+        "ENV3_NPC_Reflective_Tape"
+      ],
+      "skinned": true
+    },
+    "CLEANER_Reflective_Shoulder": {
+      "vertices": 145,
+      "materials": [
+        "ENV3_NPC_Reflective_Tape"
+      ],
+      "skinned": true
+    },
+    "CLEANER_Reflective_Shoulder.001": {
+      "vertices": 145,
+      "materials": [
+        "ENV3_NPC_Reflective_Tape"
+      ],
+      "skinned": true
+    },
+    "CLEANER_Reflective_Shoulder.002": {
+      "vertices": 145,
+      "materials": [
+        "ENV3_NPC_Reflective_Tape"
+      ],
+      "skinned": true
+    },
+    "CLEANER_Reflective_Shoulder.003": {
+      "vertices": 145,
+      "materials": [
+        "ENV3_NPC_Reflective_Tape"
+      ],
+      "skinned": true
+    },
+    "CLEANER_Flat_Vest_Pocket": {
+      "vertices": 145,
+      "materials": [
+        "ENV3_NPC_Vest_Edge"
+      ],
+      "skinned": true
+    },
+    "CLEANER_Flat_Vest_Pocket.001": {
+      "vertices": 145,
+      "materials": [
+        "ENV3_NPC_Vest_Edge"
+      ],
+      "skinned": true
+    },
+    "CLEANER_Vest_Front_Opening": {
+      "vertices": 145,
+      "materials": [
+        "ENV3_NPC_Vest_Edge"
+      ],
+      "skinned": true
+    },
+    "CLEANER_Ankle_Boot_Cuffs": {
+      "vertices": 144,
+      "materials": [
+        "ENV3_NPC_CLEANER_SHOES"
+      ],
+      "skinned": true
+    },
+    "CLEANER_Collection_Cart": {
+      "vertices": 558,
+      "materials": [
+        "ENV3_NPC_Cart_Frame",
+        "ENV3_NPC_Cart_Tire",
+        "ENV3_NPC_Cart_Bin",
+        "ENV3_bag",
+        "ENV3_white"
+      ],
+      "skinned": false
+    },
+    "CLEANER_Broom_Hand_Held": {
+      "vertices": 188,
+      "materials": [
+        "ENV3_NPC_Broom_Handle",
+        "ENV3_NPC_Broom_Bristles"
+      ],
+      "skinned": true
+    }
+  }
+}

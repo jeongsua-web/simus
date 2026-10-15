@@ -1,0 +1,26 @@
+{
+  "scene": "SIMUS_HEAVY_CARRIER",
+  "asset_objects": 24,
+  "scene_objects": 35,
+  "actions": [
+    "HEAVY_CARRY_IDLE",
+    "HEAVY_CARRY_LOOK_AROUND",
+    "HEAVY_CARRY_STRUGGLE",
+    "HEAVY_CARRY_WALK"
+  ],
+  "weights_unassigned": {
+    "HEAVY_CARRIER_BODY": 0,
+    "HEAVY_CARRIER_HEAD": 0,
+    "HEAVY_CARRIER_EYES": 0,
+    "HEAVY_CARRIER_GLOVES": 0,
+    "HEAVY_CARRIER_OUTFIT_TOP": 0,
+    "HEAVY_CARRIER_OUTFIT_BOTTOM": 0,
+    "HEAVY_CARRIER_SHOES": 0,
+    "HEAVY_CARRIER_FACE": 0,
+    "HEAVY_CARRIER_NOSE": 0,
+    "HEAVY_CARRIER_HAIR": 0,
+    "HEAVY_CARRIER_CUFFS": 0,
+    "HEAVY_CARRIER_GLOVE_FINGERS": 0
+  },
+  "evaluated_triangles": 5220
+}

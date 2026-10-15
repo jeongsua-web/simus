@@ -1,0 +1,88 @@
+{
+    "passed": true,
+    "avatarValid": true,
+    "avatarHuman": true,
+    "skinnedMeshes": 21,
+    "missingBones": [],
+    "clips": [
+        {
+            "name": "HAPPY_CHEER",
+            "seconds": 2.0,
+            "loop": false,
+            "humanMotion": true
+        },
+        {
+            "name": "HAPPY_IDLE",
+            "seconds": 3.000000238418579,
+            "loop": true,
+            "humanMotion": true
+        },
+        {
+            "name": "HAPPY_WALK",
+            "seconds": 1.0,
+            "loop": true,
+            "humanMotion": true
+        },
+        {
+            "name": "HAPPY_WAVE",
+            "seconds": 2.0,
+            "loop": false,
+            "humanMotion": true
+        },
+        {
+            "name": "Idle",
+            "seconds": 2.0,
+            "loop": true,
+            "humanMotion": true
+        },
+        {
+            "name": "Interact",
+            "seconds": 2.0,
+            "loop": false,
+            "humanMotion": true
+        },
+        {
+            "name": "NEUTRAL_IDLE",
+            "seconds": 3.000000238418579,
+            "loop": true,
+            "humanMotion": true
+        },
+        {
+            "name": "NEUTRAL_WALK",
+            "seconds": 1.0,
+            "loop": true,
+            "humanMotion": true
+        },
+        {
+            "name": "SAD_IDLE",
+            "seconds": 4.0,
+            "loop": true,
+            "humanMotion": true
+        },
+        {
+            "name": "SAD_SIGH",
+            "seconds": 3.000000238418579,
+            "loop": false,
+            "humanMotion": true
+        },
+        {
+            "name": "SAD_WALK",
+            "seconds": 1.4000000953674317,
+            "loop": true,
+            "humanMotion": true
+        },
+        {
+            "name": "Walk",
+            "seconds": 1.0,
+            "loop": true,
+            "humanMotion": true
+        },
+        {
+            "name": "Wave",
+            "seconds": 1.5000001192092896,
+            "loop": false,
+            "humanMotion": true
+        }
+    ],
+    "error": ""
+}

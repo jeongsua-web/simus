@@ -1,0 +1,31 @@
+{
+  "bridge_live": true,
+  "type": "Cafe",
+  "new_solids_normals_recalculated": 100,
+  "unexpected_open_new_meshes": [],
+  "negative_scales": [],
+  "missing_materials": [],
+  "root_origin": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "groups": [
+    "CAFE_AC_UNIT",
+    "CAFE_AWNING",
+    "CAFE_BUILDING_BODY",
+    "CAFE_COLLIDER",
+    "CAFE_DOOR",
+    "CAFE_GROUND_FACADE",
+    "CAFE_INTERIOR_ILLUSION",
+    "CAFE_MAIN_SIGN",
+    "CAFE_MENU_BOARD",
+    "CAFE_OUTDOOR_FURNITURE",
+    "CAFE_PLANTERS",
+    "CAFE_PROJECTING_SIGN",
+    "CAFE_WALL_LIGHTS",
+    "CAFE_WINDOWS"
+  ],
+  "mesh_count": 644,
+  "static_asset": true
+}

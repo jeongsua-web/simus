@@ -1,0 +1,119 @@
+{
+  "roles": {
+    "path": "C:/Project/simus/assets/library/characters/role_variants_v001/source/SIMUS_NPC_Role_Variants.blend",
+    "actions": [
+      "Wave",
+      "Walk",
+      "Interact",
+      "Idle"
+    ],
+    "armatures": [
+      "SIMUS_MODULAR_SKELETON.004",
+      "SIMUS_MODULAR_SKELETON.003",
+      "SIMUS_MODULAR_SKELETON.002"
+    ],
+    "collections": [
+      "ROLE_PREVIEW_ONLY",
+      "NPC_POLICE",
+      "NPC_CRIMINAL",
+      "NPC_CLEANER"
+    ],
+    "objects": [
+      "ROLE_Rim",
+      "ROLE_REVIEW_CAMERA",
+      "ROLE_Key",
+      "ROLE_Fill",
+      "POLICE_Thin_Placket",
+      "POLICE_Shoulder_Epaulette_1",
+      "POLICE_Shoulder_Epaulette_-1",
+      "POLICE_SHOES",
+      "POLICE_Shirt_Button.003",
+      "POLICE_Shirt_Button.002",
+      "POLICE_Shirt_Button.001",
+      "POLICE_Shirt_Button",
+      "POLICE_Shield_Badge",
+      "POLICE_OUTFIT_TOP",
+      "POLICE_OUTFIT_BOTTOM",
+      "POLICE_Nameplate",
+      "POLICE_HAIR_06_CAP_PONYTAIL",
+      "POLICE_Full_Duty_Belt",
+      "POLICE_Collar_1",
+      "POLICE_Collar_-1",
+      "POLICE_Close_Radio",
+      "POLICE_BODY",
+      "POLICE_Belt_Pouch",
+      "POLICE_ARMATURE",
+      "POLICE_Arm_Patch.001",
+      "POLICE_Arm_Patch",
+      "POLICE_Ankle_Boot_Cuffs",
+      "NPC_POLICE",
+      "NPC_CRIMINAL",
+      "NPC_CLEANER",
+      "CRIMINAL_Strap_Returns",
+      "CRIMINAL_SHOES",
+      "CRIMINAL_OUTFIT_TOP",
+      "CRIMINAL_OUTFIT_BOTTOM",
+      "CRIMINAL_Kangaroo_Fabric_Pocket"
+    ]
+  },
+  "happiness": {
+    "path": "C:/Project/simus/unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Happiness_Animations.blend",
+    "actions": [
+      "Wave",
+      "Walk",
+      "SAD_WALK",
+      "SAD_SIGH",
+      "SAD_IDLE",
+      "NEUTRAL_WALK",
+      "NEUTRAL_IDLE",
+      "Interact",
+      "Idle",
+      "HAPPY_WAVE",
+      "HAPPY_WALK",
+      "HAPPY_IDLE",
+      "HAPPY_CHEER"
+    ],
+    "armatures": [
+      "SIMUS_MODULAR_SKELETON.001"
+    ],
+    "collections": [
+      "PREVIEW_ONLY",
+      "MODULAR_CHARACTER"
+    ],
+    "objects": [
+      "SIMUS_CHARACTER_ROOT",
+      "SHOES",
+      "OUTFIT_TOP",
+      "OUTFIT_BOTTOM",
+      "LGT_Modular_Key",
+      "LGT_Modular_Fill",
+      "LGT_Catalog_Key",
+      "HAIR_ROOT",
+      "HAIR_16_LOW_SHORT_PONYTAIL",
+      "HAIR_15_SHORT_BANGS",
+      "HAIR_14_LONG_CURLY",
+      "HAIR_13_BALD",
+      "HAIR_12_BUN_NO_BANGS",
+      "HAIR_11_CAP_CURLY_BOB",
+      "HAIR_10_LONG_STRAIGHT_NO_BANGS",
+      "HAIR_09_LONG_STRAIGHT_BANGS",
+      "HAIR_08_SIDE_TAIL_BANGS",
+      "HAIR_07_TWIN_TAIL_BANGS",
+      "HAIR_06_CAP_PONYTAIL",
+      "HAIR_05_PONYTAIL_BANGS",
+      "HAIR_04_BOB_NO_BANGS",
+      "HAIR_03_BOB_BANGS",
+      "HAIR_02_BEANIE_SHORT",
+      "HAIR_01_PARTED_SHORT",
+      "GLASSES_SQUARE",
+      "GLASSES_ROUND",
+      "CAM_Modular_Side",
+      "CAM_Modular_Head",
+      "CAM_Modular_Front",
+      "CAM_Hair_Catalog",
+      "BODY",
+      "ARMATURE",
+      "ACCESSORY_ROOT"
+    ]
+  }
+}

@@ -1,0 +1,529 @@
+{
+  "objects": 94,
+  "render_meshes": 53,
+  "triangles": 16648,
+  "meshes": [
+    {
+      "name": "SUBWAY_BASE_FRAME",
+      "triangles": 432,
+      "boundary_edges": 0,
+      "material": "Metro_Stone"
+    },
+    {
+      "name": "SUBWAY_LOW_WALL_LEFT",
+      "triangles": 108,
+      "boundary_edges": 0,
+      "material": "Metro_Stone"
+    },
+    {
+      "name": "SUBWAY_LOW_WALL_RIGHT",
+      "triangles": 108,
+      "boundary_edges": 0,
+      "material": "Metro_Stone"
+    },
+    {
+      "name": "SUBWAY_CANOPY_FRAME",
+      "triangles": 300,
+      "boundary_edges": 0,
+      "material": "Metro_Frame"
+    },
+    {
+      "name": "SUBWAY_CANOPY_GLASS_ROOF",
+      "triangles": 216,
+      "boundary_edges": 0,
+      "material": "Metro_Glass"
+    },
+    {
+      "name": "SUBWAY_CANOPY_GLASS_LEFT",
+      "triangles": 72,
+      "boundary_edges": 0,
+      "material": "Metro_Glass"
+    },
+    {
+      "name": "SUBWAY_CANOPY_GLASS_RIGHT",
+      "triangles": 72,
+      "boundary_edges": 0,
+      "material": "Metro_Glass"
+    },
+    {
+      "name": "SUBWAY_STAIRS",
+      "triangles": 168,
+      "boundary_edges": 0,
+      "material": "Metro_Concrete"
+    },
+    {
+      "name": "ESC_UP_STEPS",
+      "triangles": 168,
+      "boundary_edges": 0,
+      "material": "Metro_Escalator"
+    },
+    {
+      "name": "ESC_UP_SIDE_LEFT",
+      "triangles": 44,
+      "boundary_edges": 0,
+      "material": "Metro_Escalator"
+    },
+    {
+      "name": "ESC_UP_SIDE_RIGHT",
+      "triangles": 44,
+      "boundary_edges": 0,
+      "material": "Metro_Escalator"
+    },
+    {
+      "name": "ESC_UP_TOP_PLATE",
+      "triangles": 108,
+      "boundary_edges": 0,
+      "material": "Metro_Escalator"
+    },
+    {
+      "name": "ESC_UP_BOTTOM_PLATE",
+      "triangles": 108,
+      "boundary_edges": 0,
+      "material": "Metro_Escalator"
+    },
+    {
+      "name": "ESC_DOWN_STEPS",
+      "triangles": 168,
+      "boundary_edges": 0,
+      "material": "Metro_Escalator"
+    },
+    {
+      "name": "ESC_DOWN_SIDE_LEFT",
+      "triangles": 44,
+      "boundary_edges": 0,
+      "material": "Metro_Escalator"
+    },
+    {
+      "name": "ESC_DOWN_SIDE_RIGHT",
+      "triangles": 44,
+      "boundary_edges": 0,
+      "material": "Metro_Escalator"
+    },
+    {
+      "name": "ESC_DOWN_TOP_PLATE",
+      "triangles": 108,
+      "boundary_edges": 0,
+      "material": "Metro_Escalator"
+    },
+    {
+      "name": "ESC_DOWN_BOTTOM_PLATE",
+      "triangles": 108,
+      "boundary_edges": 0,
+      "material": "Metro_Escalator"
+    },
+    {
+      "name": "SUBWAY_UNDERGROUND_CORRIDOR",
+      "triangles": 48,
+      "boundary_edges": 0,
+      "material": "Metro_Stone"
+    },
+    {
+      "name": "SUBWAY_DARK_PORTAL",
+      "triangles": 12,
+      "boundary_edges": 0,
+      "material": "Metro_Dark"
+    },
+    {
+      "name": "SUBWAY_REAR_WALL",
+      "triangles": 108,
+      "boundary_edges": 0,
+      "material": "Metro_Stone"
+    },
+    {
+      "name": "SUBWAY_REAR_GLASS",
+      "triangles": 12,
+      "boundary_edges": 0,
+      "material": "Metro_Glass"
+    },
+    {
+      "name": "SUBWAY_SIGN_PILLAR",
+      "triangles": 108,
+      "boundary_edges": 0,
+      "material": "Metro_Sign"
+    },
+    {
+      "name": "SUBWAY_SIGN_HORIZONTAL",
+      "triangles": 108,
+      "boundary_edges": 0,
+      "material": "Metro_Sign"
+    },
+    {
+      "name": "SIGN_HANGER_-2.1",
+      "triangles": 12,
+      "boundary_edges": 0,
+      "material": "Metro_Frame"
+    },
+    {
+      "name": "SIGN_HANGER_2.1",
+      "triangles": 12,
+      "boundary_edges": 0,
+      "material": "Metro_Frame"
+    },
+    {
+      "name": "SUBWAY_GLASS_SHOES",
+      "triangles": 1944,
+      "boundary_edges": 0,
+      "material": "Metro_Frame"
+    },
+    {
+      "name": "SUBWAY_STAIR_EDGES",
+      "triangles": 240,
+      "boundary_edges": 0,
+      "material": "Metro_Rubber"
+    },
+    {
+      "name": "SUBWAY_HANDRAIL_LEFT",
+      "triangles": 216,
+      "boundary_edges": 0,
+      "material": "Metro_Escalator"
+    },
+    {
+      "name": "SUBWAY_HANDRAIL_RIGHT",
+      "triangles": 216,
+      "boundary_edges": 0,
+      "material": "Metro_Escalator"
+    },
+    {
+      "name": "ESC_UP_BELT_LEFT",
+      "triangles": 204,
+      "boundary_edges": 0,
+      "material": "Metro_Rubber"
+    },
+    {
+      "name": "ESC_UP_BELT_RIGHT",
+      "triangles": 204,
+      "boundary_edges": 0,
+      "material": "Metro_Rubber"
+    },
+    {
+      "name": "ESC_UP_TREAD_GROOVES",
+      "triangles": 2904,
+      "boundary_edges": 0,
+      "material": "Metro_Drain"
+    },
+    {
+      "name": "ESC_DOWN_BELT_LEFT",
+      "triangles": 204,
+      "boundary_edges": 0,
+      "material": "Metro_Rubber"
+    },
+    {
+      "name": "ESC_DOWN_BELT_RIGHT",
+      "triangles": 204,
+      "boundary_edges": 0,
+      "material": "Metro_Rubber"
+    },
+    {
+      "name": "ESC_DOWN_TREAD_GROOVES",
+      "triangles": 2904,
+      "boundary_edges": 0,
+      "material": "Metro_Drain"
+    },
+    {
+      "name": "SUBWAY_TACTILE_PAVING",
+      "triangles": 2976,
+      "boundary_edges": 0,
+      "material": "Metro_Tactile"
+    },
+    {
+      "name": "SUBWAY_DRAINAGE",
+      "triangles": 848,
+      "boundary_edges": 0,
+      "material": "Metro_Drain"
+    },
+    {
+      "name": "SUBWAY_CEILING_LIGHT_0",
+      "triangles": 12,
+      "boundary_edges": 0,
+      "material": "Metro_Light"
+    },
+    {
+      "name": "SUBWAY_CEILING_LIGHT_1",
+      "triangles": 12,
+      "boundary_edges": 0,
+      "material": "Metro_Light"
+    },
+    {
+      "name": "SUBWAY_CEILING_LIGHT_2",
+      "triangles": 12,
+      "boundary_edges": 0,
+      "material": "Metro_Light"
+    },
+    {
+      "name": "SUBWAY_WALL_LIGHT_0",
+      "triangles": 12,
+      "boundary_edges": 0,
+      "material": "Metro_Light"
+    },
+    {
+      "name": "SUBWAY_WALL_LIGHT_1",
+      "triangles": 12,
+      "boundary_edges": 0,
+      "material": "Metro_Light"
+    },
+    {
+      "name": "SUBWAY_WALL_LIGHT_2",
+      "triangles": 12,
+      "boundary_edges": 0,
+      "material": "Metro_Light"
+    },
+    {
+      "name": "SUBWAY_UNDERGROUND_LIGHT",
+      "triangles": 12,
+      "boundary_edges": 0,
+      "material": "Metro_Light"
+    },
+    {
+      "name": "SUBWAY_STONE_JOINTS",
+      "triangles": 360,
+      "boundary_edges": 0,
+      "material": "Metro_Drain"
+    },
+    {
+      "name": "SUBWAY_STATION_NAME_PANEL",
+      "triangles": 12,
+      "boundary_edges": 0,
+      "material": "Metro_STATION_NAME_PANEL"
+    },
+    {
+      "name": "SUBWAY_EXIT_NUMBER",
+      "triangles": 12,
+      "boundary_edges": 0,
+      "material": "Metro_EXIT_NUMBER"
+    },
+    {
+      "name": "ESC_UP_DIRECTION_FACE",
+      "triangles": 108,
+      "boundary_edges": 0,
+      "material": "Metro_Sign"
+    },
+    {
+      "name": "ESC_UP_DIRECTION_ARROW",
+      "triangles": 24,
+      "boundary_edges": 0,
+      "material": "Metro_Light"
+    },
+    {
+      "name": "ESC_DOWN_DIRECTION_FACE",
+      "triangles": 108,
+      "boundary_edges": 0,
+      "material": "Metro_Sign"
+    },
+    {
+      "name": "ESC_DOWN_DIRECTION_ARROW",
+      "triangles": 24,
+      "boundary_edges": 0,
+      "material": "Metro_Light"
+    },
+    {
+      "name": "SUBWAY_REAR_SERVICE_APRON",
+      "triangles": 12,
+      "boundary_edges": 0,
+      "material": "Metro_Stone"
+    }
+  ],
+  "materials": [
+    {
+      "name": "Metro_Tactile",
+      "color": [
+        0.8799999952316284,
+        0.5600000023841858,
+        0.05999999865889549,
+        1.0
+      ],
+      "roughness": 0.75,
+      "metallic": 0,
+      "emission": 0,
+      "glass": false,
+      "texture": ""
+    },
+    {
+      "name": "Metro_EXIT_NUMBER",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.65,
+      "metallic": 0,
+      "emission": 0.35,
+      "glass": false,
+      "texture": "Metro_Pillar.png"
+    },
+    {
+      "name": "Metro_Drain",
+      "color": [
+        0.10999999940395355,
+        0.12999999523162842,
+        0.14000000059604645,
+        1.0
+      ],
+      "roughness": 0.65,
+      "metallic": 0.4,
+      "emission": 0,
+      "glass": false,
+      "texture": ""
+    },
+    {
+      "name": "Metro_Stone",
+      "color": [
+        0.25999999046325684,
+        0.2800000011920929,
+        0.30000001192092896,
+        1.0
+      ],
+      "roughness": 0.85,
+      "metallic": 0,
+      "emission": 0,
+      "glass": false,
+      "texture": ""
+    },
+    {
+      "name": "Metro_Glass",
+      "color": [
+        0.6499999761581421,
+        0.800000011920929,
+        0.8399999737739563,
+        0.12999999523162842
+      ],
+      "roughness": 0.2,
+      "metallic": 0,
+      "emission": 0,
+      "glass": true,
+      "texture": ""
+    },
+    {
+      "name": "Metro_Dark",
+      "color": [
+        0.03500000014901161,
+        0.03999999910593033,
+        0.04500000178813934,
+        1.0
+      ],
+      "roughness": 1,
+      "metallic": 0,
+      "emission": 0,
+      "glass": false,
+      "texture": ""
+    },
+    {
+      "name": "Metro_Rubber",
+      "color": [
+        0.02500000037252903,
+        0.03099999949336052,
+        0.03500000014901161,
+        1.0
+      ],
+      "roughness": 0.7,
+      "metallic": 0,
+      "emission": 0,
+      "glass": false,
+      "texture": ""
+    },
+    {
+      "name": "Metro_Concrete",
+      "color": [
+        0.44999998807907104,
+        0.46000000834465027,
+        0.44999998807907104,
+        1.0
+      ],
+      "roughness": 0.9,
+      "metallic": 0,
+      "emission": 0,
+      "glass": false,
+      "texture": ""
+    },
+    {
+      "name": "Metro_Escalator",
+      "color": [
+        0.47999998927116394,
+        0.5199999809265137,
+        0.550000011920929,
+        1.0
+      ],
+      "roughness": 0.4,
+      "metallic": 0.65,
+      "emission": 0,
+      "glass": false,
+      "texture": ""
+    },
+    {
+      "name": "Metro_Sign",
+      "color": [
+        0.02500000037252903,
+        0.05999999865889549,
+        0.07999999821186066,
+        1.0
+      ],
+      "roughness": 0.6,
+      "metallic": 0,
+      "emission": 0,
+      "glass": false,
+      "texture": ""
+    },
+    {
+      "name": "Metro_STATION_NAME_PANEL",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.65,
+      "metallic": 0,
+      "emission": 0.35,
+      "glass": false,
+      "texture": "Metro_Station.png"
+    },
+    {
+      "name": "Metro_Light",
+      "color": [
+        0.800000011920929,
+        0.8999999761581421,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.4,
+      "metallic": 0,
+      "emission": 2.5,
+      "glass": false,
+      "texture": ""
+    },
+    {
+      "name": "Metro_Frame",
+      "color": [
+        0.18000000715255737,
+        0.2199999988079071,
+        0.25,
+        1.0
+      ],
+      "roughness": 0.5,
+      "metallic": 0.5,
+      "emission": 0,
+      "glass": false,
+      "texture": ""
+    }
+  ],
+  "bounds_min": [
+    -3.0,
+    -12.699999809265137,
+    -3.6500000953674316
+  ],
+  "bounds_max": [
+    3.0,
+    1.7999999523162842,
+    3.6500000953674316
+  ],
+  "stair_risers": 20,
+  "riser_m": 0.17,
+  "tread_m": 0.3,
+  "stair_width_m": 2.1,
+  "escalators": 2,
+  "cutout_m": [
+    5.3,
+    10.5,
+    3.65
+  ]
+}

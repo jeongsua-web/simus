@@ -1,0 +1,364 @@
+{
+  "type": "Restaurant",
+  "source": "COMMERCIAL_01_OLD_MULTI_TENANT",
+  "objects": 661,
+  "meshes": 644,
+  "triangles": 16136,
+  "materials": [
+    {
+      "name": "MAT_AC_UNIT",
+      "color": [
+        0.5899999737739563,
+        0.6100000143051147,
+        0.5899999737739563,
+        1.0
+      ],
+      "metallic": 0,
+      "roughness": 0.6,
+      "emission": 0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "MAT_CONCRETE",
+      "color": [
+        0.5,
+        0.5099999904632568,
+        0.47999998927116394,
+        1.0
+      ],
+      "metallic": 0,
+      "roughness": 0.6,
+      "emission": 0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "MAT_GLASS_NEUTRAL",
+      "color": [
+        0.11999999731779099,
+        0.20999999344348907,
+        0.25,
+        1.0
+      ],
+      "metallic": 0,
+      "roughness": 0.6,
+      "emission": 0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "MAT_ROOF",
+      "color": [
+        0.1899999976158142,
+        0.23000000417232513,
+        0.2199999988079071,
+        1.0
+      ],
+      "metallic": 0,
+      "roughness": 0.6,
+      "emission": 0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "MAT_SIGN_BLUE",
+      "color": [
+        0.09000000357627869,
+        0.2199999988079071,
+        0.4000000059604645,
+        1.0
+      ],
+      "metallic": 0,
+      "roughness": 0.6,
+      "emission": 0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "MAT_SIGN_DARK",
+      "color": [
+        0.054999999701976776,
+        0.06499999761581421,
+        0.07500000298023224,
+        1.0
+      ],
+      "metallic": 0,
+      "roughness": 0.6,
+      "emission": 0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "MAT_SIGN_RED",
+      "color": [
+        0.47999998927116394,
+        0.11999999731779099,
+        0.10000000149011612,
+        1.0
+      ],
+      "metallic": 0,
+      "roughness": 0.6,
+      "emission": 0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "MAT_TILE_OFFWHITE",
+      "color": [
+        0.6600000262260437,
+        0.6299999952316284,
+        0.550000011920929,
+        1.0
+      ],
+      "metallic": 0,
+      "roughness": 0.6,
+      "emission": 0,
+      "texture": "TEX_TILE_OFFWHITE.png",
+      "glass": false
+    },
+    {
+      "name": "MAT_WINDOW_FRAME",
+      "color": [
+        0.1599999964237213,
+        0.18000000715255737,
+        0.1899999976158142,
+        1.0
+      ],
+      "metallic": 0,
+      "roughness": 0.6,
+      "emission": 0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "RESTAURANT_Canvas_Sign",
+      "color": [
+        0.28999999165534973,
+        0.07500000298023224,
+        0.03500000014901161,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.6000000238418579,
+      "emission": 0.0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "RESTAURANT_Equipment_Metal",
+      "color": [
+        0.4000000059604645,
+        0.4300000071525574,
+        0.4300000071525574,
+        1.0
+      ],
+      "metallic": 0.6000000238418579,
+      "roughness": 0.4000000059604645,
+      "emission": 0.0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "RESTAURANT_Frosted_Sheet",
+      "color": [
+        0.6000000238418579,
+        0.5899999737739563,
+        0.4699999988079071,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.75,
+      "emission": 0.0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "RESTAURANT_Glass",
+      "color": [
+        0.4000000059604645,
+        0.5400000214576721,
+        0.5600000023841858,
+        1.0
+      ],
+      "metallic": 0.05000000074505806,
+      "roughness": 0.17000000178813934,
+      "emission": 0.0,
+      "texture": null,
+      "glass": true
+    },
+    {
+      "name": "RESTAURANT_Interior_Image",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.6000000238418579,
+      "emission": 1.0,
+      "texture": "Shop_Window_Illusion.png",
+      "glass": false
+    },
+    {
+      "name": "RESTAURANT_Ivory_Plaster",
+      "color": [
+        0.6899999976158142,
+        0.6499999761581421,
+        0.5400000214576721,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.6000000238418579,
+      "emission": 0.0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "RESTAURANT_Menu_Print",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.6000000238418579,
+      "emission": 0.0,
+      "texture": "Shop_Menu.png",
+      "glass": false
+    },
+    {
+      "name": "RESTAURANT_Powder_Metal",
+      "color": [
+        0.04500000178813934,
+        0.05700000002980232,
+        0.04699999839067459,
+        1.0
+      ],
+      "metallic": 0.44999998807907104,
+      "roughness": 0.44999998807907104,
+      "emission": 0.0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "RESTAURANT_Shadow",
+      "color": [
+        0.017999999225139618,
+        0.024000000208616257,
+        0.024000000208616257,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.6000000238418579,
+      "emission": 0.0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "RESTAURANT_Sign_Print",
+      "color": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.6000000238418579,
+      "emission": 0.15000000596046448,
+      "texture": "Shop_Main_Sign.png",
+      "glass": false
+    },
+    {
+      "name": "RESTAURANT_Warm_Light",
+      "color": [
+        1.0,
+        0.7200000286102295,
+        0.3700000047683716,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.6000000238418579,
+      "emission": 3.0,
+      "texture": null,
+      "glass": false
+    },
+    {
+      "name": "RESTAURANT_Warm_Timber",
+      "color": [
+        0.20000000298023224,
+        0.10499999672174454,
+        0.054999999701976776,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.6000000238418579,
+      "emission": 0.0,
+      "texture": null,
+      "glass": false
+    }
+  ],
+  "bounds_min": [
+    -6.299999713897705,
+    -8.550000190734863,
+    0.0
+  ],
+  "bounds_max": [
+    6.299999713897705,
+    8.550000190734863,
+    16.488000869750977
+  ],
+  "upper_preserved": 423,
+  "removed_ground_objects": [
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B0_Backing",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B0_DoorJamb",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B0_DoorPull",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B0_Frame",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B0_Glass",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B0_Head",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B0_Mullion_1",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B0_PierL",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B0_PierR",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B0_Sill",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B0_Transom",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B1_Backing",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B1_Frame",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B1_Glass",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B1_Head",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B1_Mullion_1",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B1_PierL",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B1_PierR",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B1_Sill",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B1_Transom",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B2_Backing",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B2_DoorPull",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B2_Frame",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B2_Glass",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B2_Head",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B2_PierL",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B2_PierR",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B2_Sill",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B2_Transom",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_Facade_Lamp_0",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_Facade_Lamp_1",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_Storefront_Canopy",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_SIGN_C01_01",
+    "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_SIGN_C01_02"
+  ],
+  "root_origin": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "front_axis": "-Y Blender / +Z Unity",
+  "facade": {
+    "left": -4.05,
+    "right": 5.4,
+    "front": -7.65,
+    "back": 7.65,
+    "height": 16.49
+  },
+  "door_x": -2.8
+}
