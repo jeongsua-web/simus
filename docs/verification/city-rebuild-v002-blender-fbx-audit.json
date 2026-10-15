@@ -1,0 +1,1457 @@
+{
+  "schema": "simus.city-rebuild-v002.blender-fbx-audit.v1",
+  "engine": "Blender 5.2.2 LTS",
+  "operation": "read_factory_settings / import_scene.fbx / AABB and material slots only. No save/export operation",
+  "exit_code": 0,
+  "sandbox_first_attempt_exit_code": 139,
+  "reference_coordinates": "Blender X,Y ground plane / Z elevation. Runtime Unity handedness needs Unity import verification.",
+  "files": [
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_A_MIDRISE.fbx",
+      "source": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_A_MIDRISE.blend",
+      "source_sha256_current": "6238ce305407a8f3dbdf4628ff2febc2fa056a8236d9abbc948f9fc7f7824f12",
+      "fbx_sha256_before": "12537f53d5defe04a4c93cd8395780f759a205b1358b41950fc9dc9f450040e5",
+      "fbx_sha256_after": "12537f53d5defe04a4c93cd8395780f759a205b1358b41950fc9dc9f450040e5",
+      "fbx_unchanged_during_read": true,
+      "mesh_count": 1,
+      "bounds_blender_xyz": {
+        "min": [
+          -7.470005,
+          -17.090008,
+          -3e-06
+        ],
+        "max": [
+          7.469997,
+          17.09,
+          43.480003
+        ]
+      },
+      "material_slot_count": 8,
+      "source_matches_approved_measurement_hash": true,
+      "fbx_matches_approved_measurement_hash": true,
+      "approved_dimensions_blender_xyz": [
+        14.94,
+        34.18,
+        43.48
+      ],
+      "actual_dimensions_blender_xyz": [
+        14.940002,
+        34.180008,
+        43.480006
+      ],
+      "max_dimension_deviation_m": 8.000000001118224e-06,
+      "entry_mesh_evidence": [
+        {
+          "name": "ASSET_APARTMENT_A_MIDRISE__R02_VARIANT_FIX_A_Core_Front_L1_Entry_Glass",
+          "parent": "ASSET_ROOT_APARTMENT_A_MIDRISE",
+          "dimensions": [
+            0.025,
+            2.33,
+            2.38
+          ],
+          "min": [
+            4.147,
+            -1.165,
+            0.285
+          ],
+          "max": [
+            4.172,
+            1.165,
+            2.665
+          ],
+          "origin": [
+            4.16,
+            0.0,
+            1.475
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "source_matches_v002_qa_baseline": true,
+      "fbx_matches_v002_qa_baseline": true
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_B_MIDRISE.fbx",
+      "source": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_B_MIDRISE.blend",
+      "source_sha256_current": "842dbd9cd80c3ff440ea9a88e371cc45c1d48583790f87f919d23e3f1c089fa5",
+      "fbx_sha256_before": "cd0386c38331d5c7c515d0916fa160eb83ec59fda4f2cbc4b2c5ac2148e682c6",
+      "fbx_sha256_after": "cd0386c38331d5c7c515d0916fa160eb83ec59fda4f2cbc4b2c5ac2148e682c6",
+      "fbx_unchanged_during_read": true,
+      "mesh_count": 1,
+      "bounds_blender_xyz": {
+        "min": [
+          -11.09,
+          -11.445005,
+          -3e-06
+        ],
+        "max": [
+          11.090005,
+          11.445004,
+          49.600006
+        ]
+      },
+      "material_slot_count": 9,
+      "source_matches_approved_measurement_hash": true,
+      "fbx_matches_approved_measurement_hash": true,
+      "approved_dimensions_blender_xyz": [
+        22.18,
+        22.89,
+        49.6
+      ],
+      "actual_dimensions_blender_xyz": [
+        22.180005,
+        22.890009,
+        49.600009
+      ],
+      "max_dimension_deviation_m": 8.999999998593466e-06,
+      "entry_mesh_evidence": [
+        {
+          "name": "ASSET_APARTMENT_B_MIDRISE__R02_VARIANT_FIX_B_Recessed_Core_L1_Central_Entry_Glass",
+          "parent": "ASSET_ROOT_APARTMENT_B_MIDRISE",
+          "dimensions": [
+            2.73,
+            0.025,
+            2.38
+          ],
+          "min": [
+            -1.365,
+            -5.497,
+            0.285
+          ],
+          "max": [
+            1.365,
+            -5.472,
+            2.665
+          ],
+          "origin": [
+            0.0,
+            -5.485,
+            1.475
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "source_matches_v002_qa_baseline": true,
+      "fbx_matches_v002_qa_baseline": true
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_C_MIDRISE.fbx",
+      "source": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_C_MIDRISE.blend",
+      "source_sha256_current": "eceb39e842884155caea6b99ccf0413adb31e270e9860c9a64b18cccc4c2c1f4",
+      "fbx_sha256_before": "dc42968bec87d27fa922ef5535d23902b127594186a94ec442a8d1cdd0859816",
+      "fbx_sha256_after": "dc42968bec87d27fa922ef5535d23902b127594186a94ec442a8d1cdd0859816",
+      "fbx_unchanged_during_read": true,
+      "mesh_count": 1,
+      "bounds_blender_xyz": {
+        "min": [
+          -10.089995,
+          -15.044999,
+          -3e-06
+        ],
+        "max": [
+          10.090007,
+          15.045008,
+          37.600002
+        ]
+      },
+      "material_slot_count": 8,
+      "source_matches_approved_measurement_hash": true,
+      "fbx_matches_approved_measurement_hash": true,
+      "approved_dimensions_blender_xyz": [
+        20.18,
+        30.09,
+        37.6
+      ],
+      "actual_dimensions_blender_xyz": [
+        20.180002,
+        30.090007,
+        37.600005
+      ],
+      "max_dimension_deviation_m": 7.000000000090267e-06,
+      "entry_mesh_evidence": [
+        {
+          "name": "ASSET_APARTMENT_C_MIDRISE__R02_VARIANT_FIX_C_South_Joined_Facade_L1_Shared_Entry_Glass",
+          "parent": "ASSET_ROOT_APARTMENT_C_MIDRISE",
+          "dimensions": [
+            2.73,
+            0.025,
+            2.38
+          ],
+          "min": [
+            1.135,
+            -8.897,
+            0.285
+          ],
+          "max": [
+            3.865,
+            -8.872,
+            2.665
+          ],
+          "origin": [
+            2.5,
+            -8.885,
+            1.475
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "source_matches_v002_qa_baseline": true,
+      "fbx_matches_v002_qa_baseline": true
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+      "source": "unity/Assets/SIMUS/Art/buildings/campus/Campus.blend",
+      "source_sha256_current": "c99bc316cffb670ae564aebc92ecdff80f98651a15c7558fb167cf8fb21e7456",
+      "fbx_sha256_before": "a424e0e33dcc7d3a2d0a3da918d064414bbf141f3f9c4e9da803a8f2c80f5d96",
+      "fbx_sha256_after": "a424e0e33dcc7d3a2d0a3da918d064414bbf141f3f9c4e9da803a8f2c80f5d96",
+      "fbx_unchanged_during_read": true,
+      "mesh_count": 487,
+      "bounds_blender_xyz": {
+        "min": [
+          -78.119995,
+          -106.092674,
+          -2.796024
+        ],
+        "max": [
+          78.120003,
+          106.092682,
+          19.224003
+        ]
+      },
+      "material_slot_count": 487,
+      "source_matches_approved_measurement_hash": true,
+      "fbx_matches_approved_measurement_hash": true,
+      "approved_dimensions_blender_xyz": [
+        156.24,
+        212.186,
+        22.02
+      ],
+      "actual_dimensions_blender_xyz": [
+        156.239998,
+        212.185356,
+        22.020027
+      ],
+      "max_dimension_deviation_m": 0.0006439999999940937,
+      "entry_mesh_evidence": [
+        {
+          "name": "ASSET_Campus__D03_ENTRY_GLASS_0",
+          "parent": null,
+          "dimensions": [
+            2.289,
+            0.349,
+            2.3
+          ],
+          "min": [
+            -25.213,
+            91.634,
+            0.444
+          ],
+          "max": [
+            -22.924,
+            91.983,
+            2.744
+          ],
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "ASSET_Campus__D03_ENTRY_GLASS_1",
+          "parent": null,
+          "dimensions": [
+            2.294,
+            0.3,
+            2.3
+          ],
+          "min": [
+            -71.174,
+            72.398,
+            0.444
+          ],
+          "max": [
+            -68.88,
+            72.698,
+            2.744
+          ],
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "ASSET_Campus__D03_ENTRY_GLASS_10",
+          "parent": null,
+          "dimensions": [
+            2.301,
+            0.13,
+            2.3
+          ],
+          "min": [
+            42.532,
+            -66.597,
+            0.444
+          ],
+          "max": [
+            44.832,
+            -66.467,
+            2.744
+          ],
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "ASSET_Campus__D03_ENTRY_GLASS_11",
+          "parent": null,
+          "dimensions": [
+            2.3,
+            0.077,
+            2.3
+          ],
+          "min": [
+            -43.57,
+            -101.791,
+            0.444
+          ],
+          "max": [
+            -41.269,
+            -101.714,
+            2.744
+          ],
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "ASSET_Campus__D03_ENTRY_GLASS_12",
+          "parent": null,
+          "dimensions": [
+            2.3,
+            0.06,
+            2.3
+          ],
+          "min": [
+            -23.11,
+            -95.362,
+            0.444
+          ],
+          "max": [
+            -20.81,
+            -95.302,
+            2.744
+          ],
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "ASSET_Campus__D03_ENTRY_GLASS_13",
+          "parent": null,
+          "dimensions": [
+            2.3,
+            0.06,
+            2.3
+          ],
+          "min": [
+            45.41,
+            -82.762,
+            0.444
+          ],
+          "max": [
+            47.71,
+            -82.702,
+            2.744
+          ],
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "ASSET_Campus__D03_ENTRY_GLASS_2",
+          "parent": null,
+          "dimensions": [
+            2.301,
+            0.091,
+            2.3
+          ],
+          "min": [
+            -64.389,
+            53.782,
+            0.444
+          ],
+          "max": [
+            -62.089,
+            53.873,
+            2.744
+          ],
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "ASSET_Campus__D03_ENTRY_GLASS_3",
+          "parent": null,
+          "dimensions": [
+            2.294,
+            0.301,
+            2.3
+          ],
+          "min": [
+            10.486,
+            70.898,
+            0.444
+          ],
+          "max": [
+            12.78,
+            71.198,
+            2.744
+          ],
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "ASSET_Campus__D03_ENTRY_GLASS_4",
+          "parent": null,
+          "dimensions": [
+            2.287,
+            0.373,
+            2.3
+          ],
+          "min": [
+            -42.312,
+            5.342,
+            0.444
+          ],
+          "max": [
+            -40.025,
+            5.715,
+            2.744
+          ],
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "ASSET_Campus__D03_ENTRY_GLASS_5",
+          "parent": null,
+          "dimensions": [
+            2.289,
+            0.347,
+            2.3
+          ],
+          "min": [
+            -27.733,
+            0.975,
+            0.444
+          ],
+          "max": [
+            -25.443,
+            1.322,
+            2.744
+          ],
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "ASSET_Campus__D03_ENTRY_GLASS_6",
+          "parent": null,
+          "dimensions": [
+            2.291,
+            0.328,
+            2.3
+          ],
+          "min": [
+            -12.973,
+            2.304,
+            0.444
+          ],
+          "max": [
+            -10.682,
+            2.632,
+            2.744
+          ],
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "ASSET_Campus__D03_ENTRY_GLASS_7",
+          "parent": null,
+          "dimensions": [
+            2.301,
+            0.112,
+            2.3
+          ],
+          "min": [
+            34.371,
+            -7.608,
+            0.444
+          ],
+          "max": [
+            36.672,
+            -7.496,
+            2.744
+          ],
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "ASSET_Campus__D03_ENTRY_GLASS_8",
+          "parent": null,
+          "dimensions": [
+            2.201,
+            0.784,
+            2.3
+          ],
+          "min": [
+            46.819,
+            -43.821,
+            0.444
+          ],
+          "max": [
+            49.02,
+            -43.037,
+            2.744
+          ],
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "ASSET_Campus__D03_ENTRY_GLASS_9",
+          "parent": null,
+          "dimensions": [
+            2.3,
+            0.06,
+            2.3
+          ],
+          "min": [
+            70.85,
+            -67.642,
+            0.444
+          ],
+          "max": [
+            73.15,
+            -67.582,
+            2.744
+          ],
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "source_matches_v002_qa_baseline": true,
+      "fbx_matches_v002_qa_baseline": true
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx",
+      "source": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.blend",
+      "source_sha256_current": "5f006182397eb92b6e17ecf9e4878e1ab3bacc733d16086a9b9d636545563dd0",
+      "fbx_sha256_before": "dc4e0d842bd4e0e1ca224ab42ddda094c9c1fc81b7d9bc6a8e8add8de98aac06",
+      "fbx_sha256_after": "dc4e0d842bd4e0e1ca224ab42ddda094c9c1fc81b7d9bc6a8e8add8de98aac06",
+      "fbx_unchanged_during_read": true,
+      "mesh_count": 1,
+      "bounds_blender_xyz": {
+        "min": [
+          -6.300002,
+          -8.549992,
+          -2e-06
+        ],
+        "max": [
+          6.3,
+          8.550011,
+          16.488003
+        ]
+      },
+      "material_slot_count": 9,
+      "source_matches_approved_measurement_hash": true,
+      "fbx_matches_approved_measurement_hash": true,
+      "approved_dimensions_blender_xyz": [
+        12.6,
+        17.1,
+        16.488
+      ],
+      "actual_dimensions_blender_xyz": [
+        12.600002,
+        17.100003,
+        16.488005
+      ],
+      "max_dimension_deviation_m": 5.000000001587068e-06,
+      "entry_mesh_evidence": [
+        {
+          "name": "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_E0_F1_B0_DoorPull",
+          "parent": "ASSET_ROOT_COMMERCIAL_01_OLD_MULTI_TENANT",
+          "dimensions": [
+            0.036,
+            0.031,
+            0.36
+          ],
+          "min": [
+            -3.02,
+            -7.652,
+            1.008
+          ],
+          "max": [
+            -2.984,
+            -7.621,
+            1.368
+          ],
+          "origin": [
+            0.0,
+            0.0,
+            0.108
+          ],
+          "scale": [
+            0.8999999761581421,
+            0.8999999761581421,
+            0.8999999761581421
+          ]
+        },
+        {
+          "name": "ASSET_COMMERCIAL_01_OLD_MULTI_TENANT__R02_SOURCE_C01_L0_Entry_Ramp",
+          "parent": "ASSET_ROOT_COMMERCIAL_01_OLD_MULTI_TENANT",
+          "dimensions": [
+            1.35,
+            0.855,
+            0.108
+          ],
+          "min": [
+            3.15,
+            -8.505,
+            0.108
+          ],
+          "max": [
+            4.5,
+            -7.65,
+            0.216
+          ],
+          "origin": [
+            0.0,
+            0.0,
+            0.108
+          ],
+          "scale": [
+            0.8999999761581421,
+            0.8999999761581421,
+            0.8999999761581421
+          ]
+        }
+      ],
+      "source_matches_v002_qa_baseline": true,
+      "fbx_matches_v002_qa_baseline": true
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_02_NEIGHBORHOOD_CENTER.fbx",
+      "source": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_02_NEIGHBORHOOD_CENTER.blend",
+      "source_sha256_current": "daa269a28e7495ac0690afc3da7ac52a9269af2a8a13107d357de7033ff7ad30",
+      "fbx_sha256_before": "a62574005414ccb75b884b9da044f6833618ba40ddcaa526dae7914255165472",
+      "fbx_sha256_after": "a62574005414ccb75b884b9da044f6833618ba40ddcaa526dae7914255165472",
+      "fbx_unchanged_during_read": true,
+      "mesh_count": 1,
+      "bounds_blender_xyz": {
+        "min": [
+          -10.124999,
+          -9.899987,
+          -2e-06
+        ],
+        "max": [
+          10.125002,
+          9.900014,
+          13.383002
+        ]
+      },
+      "material_slot_count": 10,
+      "source_matches_approved_measurement_hash": true,
+      "fbx_matches_approved_measurement_hash": true,
+      "approved_dimensions_blender_xyz": [
+        20.25,
+        19.8,
+        13.383
+      ],
+      "actual_dimensions_blender_xyz": [
+        20.250001,
+        19.800001,
+        13.383004
+      ],
+      "max_dimension_deviation_m": 4.000000000559112e-06,
+      "entry_mesh_evidence": [
+        {
+          "name": "ASSET_COMMERCIAL_02_NEIGHBORHOOD_CENTER__R02_SOURCE_C02_L0_E0_F1_B0_DoorPull",
+          "parent": "ASSET_ROOT_COMMERCIAL_02_NEIGHBORHOOD_CENTER",
+          "dimensions": [
+            0.036,
+            0.031,
+            0.36
+          ],
+          "min": [
+            -8.194,
+            -8.552,
+            1.008
+          ],
+          "max": [
+            -8.158,
+            -8.521,
+            1.368
+          ],
+          "origin": [
+            -2.025,
+            0.0,
+            0.108
+          ],
+          "scale": [
+            0.8999999761581421,
+            0.8999999761581421,
+            0.8999999761581421
+          ]
+        },
+        {
+          "name": "ASSET_COMMERCIAL_02_NEIGHBORHOOD_CENTER__R02_SOURCE_C02_L0_Entry_Ramp",
+          "parent": "ASSET_ROOT_COMMERCIAL_02_NEIGHBORHOOD_CENTER",
+          "dimensions": [
+            1.35,
+            0.855,
+            0.108
+          ],
+          "min": [
+            -7.5,
+            -9.405,
+            0.108
+          ],
+          "max": [
+            -6.15,
+            -8.55,
+            0.216
+          ],
+          "origin": [
+            -2.025,
+            0.0,
+            0.108
+          ],
+          "scale": [
+            0.8999999761581421,
+            0.8999999761581421,
+            0.8999999761581421
+          ]
+        }
+      ],
+      "source_matches_v002_qa_baseline": true,
+      "fbx_matches_v002_qa_baseline": true
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx",
+      "source": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.blend",
+      "source_sha256_current": "8e66eafbd405eac73c60b13f290cd42049e87073d5c419acb9a0dbe044a0b411",
+      "fbx_sha256_before": "30ddd89e46c9134b96ec9de93850584f825a2d0b9894469bd797c261cfd9ec93",
+      "fbx_sha256_after": "30ddd89e46c9134b96ec9de93850584f825a2d0b9894469bd797c261cfd9ec93",
+      "fbx_unchanged_during_read": true,
+      "mesh_count": 1,
+      "bounds_blender_xyz": {
+        "min": [
+          -7.200003,
+          -8.999995,
+          -2e-06
+        ],
+        "max": [
+          7.199998,
+          9.000007,
+          13.878001
+        ]
+      },
+      "material_slot_count": 10,
+      "source_matches_approved_measurement_hash": true,
+      "fbx_matches_approved_measurement_hash": true,
+      "approved_dimensions_blender_xyz": [
+        14.4,
+        18.0,
+        13.878
+      ],
+      "actual_dimensions_blender_xyz": [
+        14.400001,
+        18.000002,
+        13.878003
+      ],
+      "max_dimension_deviation_m": 2.9999999995311555e-06,
+      "entry_mesh_evidence": [
+        {
+          "name": "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_E0_F1_B0_DoorPull",
+          "parent": "ASSET_ROOT_COMMERCIAL_03_MODERN_CORNER",
+          "dimensions": [
+            0.036,
+            0.031,
+            0.36
+          ],
+          "min": [
+            -5.269,
+            -8.102,
+            1.008
+          ],
+          "max": [
+            -5.234,
+            -8.071,
+            1.368
+          ],
+          "origin": [
+            0.0,
+            0.0,
+            0.108
+          ],
+          "scale": [
+            0.8999999761581421,
+            0.8999999761581421,
+            0.8999999761581421
+          ]
+        },
+        {
+          "name": "ASSET_COMMERCIAL_03_MODERN_CORNER__R02_SOURCE_C03_L0_Entry_Ramp",
+          "parent": "ASSET_ROOT_COMMERCIAL_03_MODERN_CORNER",
+          "dimensions": [
+            1.559,
+            1.559,
+            0.108
+          ],
+          "min": [
+            4.653,
+            -8.012,
+            0.108
+          ],
+          "max": [
+            6.212,
+            -6.453,
+            0.216
+          ],
+          "origin": [
+            0.0,
+            0.0,
+            0.108
+          ],
+          "scale": [
+            0.8999999761581421,
+            0.8999999761581421,
+            0.8999999761581421
+          ]
+        }
+      ],
+      "source_matches_v002_qa_baseline": true,
+      "fbx_matches_v002_qa_baseline": true
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/department_store/DEPARTMENT.fbx",
+      "source": "unity/Assets/SIMUS/Art/buildings/department_store/DEPARTMENT.blend",
+      "source_sha256_current": "63f41143e2b1e716fc4d2a494555346115f1d5dd67ba84182957821dc5633ac3",
+      "fbx_sha256_before": "548356718cefd78fa5065fee83339bf3a02112b31827563b736ee4ad97a7f4e7",
+      "fbx_sha256_after": "548356718cefd78fa5065fee83339bf3a02112b31827563b736ee4ad97a7f4e7",
+      "fbx_unchanged_during_read": true,
+      "mesh_count": 1,
+      "bounds_blender_xyz": {
+        "min": [
+          -12.205002,
+          -9.400002,
+          -3e-06
+        ],
+        "max": [
+          12.205001,
+          9.4,
+          13.740003
+        ]
+      },
+      "material_slot_count": 14,
+      "source_matches_approved_measurement_hash": true,
+      "fbx_matches_approved_measurement_hash": true,
+      "approved_dimensions_blender_xyz": [
+        24.41,
+        18.8,
+        13.74
+      ],
+      "actual_dimensions_blender_xyz": [
+        24.410003,
+        18.800002,
+        13.740006
+      ],
+      "max_dimension_deviation_m": 5.999999999062311e-06,
+      "entry_mesh_evidence": [
+        {
+          "name": "ASSET_DEPARTMENT__R02_SOURCE_entry door handles",
+          "parent": "ASSET_ROOT_DEPARTMENT",
+          "dimensions": [
+            0.08,
+            0.07,
+            0.37
+          ],
+          "min": [
+            -1.185,
+            -7.005,
+            1.155
+          ],
+          "max": [
+            -1.105,
+            -6.935,
+            1.525
+          ],
+          "origin": [
+            -1.145,
+            -6.97,
+            1.34
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "name": "ASSET_DEPARTMENT__R02_SOURCE_entry door handles.001",
+          "parent": "ASSET_ROOT_DEPARTMENT",
+          "dimensions": [
+            0.08,
+            0.07,
+            0.37
+          ],
+          "min": [
+            1.115,
+            -7.005,
+            1.155
+          ],
+          "max": [
+            1.195,
+            -6.935,
+            1.525
+          ],
+          "origin": [
+            1.155,
+            -6.97,
+            1.34
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "source_matches_v002_qa_baseline": true,
+      "fbx_matches_v002_qa_baseline": true
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx",
+      "source": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.blend",
+      "source_sha256_current": "0f55bda83224b668b67c22976bb3b9fde25c5217826a628464345c679418c6eb",
+      "fbx_sha256_before": "40f37e299f6a047facc69973de312c8c7566a92ff6be2430a0d547a3426160eb",
+      "fbx_sha256_after": "40f37e299f6a047facc69973de312c8c7566a92ff6be2430a0d547a3426160eb",
+      "fbx_unchanged_during_read": true,
+      "mesh_count": 1,
+      "bounds_blender_xyz": {
+        "min": [
+          -5.725002,
+          -7.699999,
+          -2e-06
+        ],
+        "max": [
+          5.725003,
+          7.700004,
+          9.755002
+        ]
+      },
+      "material_slot_count": 13,
+      "source_matches_approved_measurement_hash": true,
+      "fbx_matches_approved_measurement_hash": true,
+      "approved_dimensions_blender_xyz": [
+        11.45,
+        15.4,
+        9.755
+      ],
+      "actual_dimensions_blender_xyz": [
+        11.450005,
+        15.400003,
+        9.755004
+      ],
+      "max_dimension_deviation_m": 5.000000001587068e-06,
+      "entry_mesh_evidence": [
+        {
+          "name": "ASSET_HOUSE_01_URBAN_MODERN__R02_SOURCE_KH_H1_Entry_Ramp",
+          "parent": "ASSET_ROOT_HOUSE_01_URBAN_MODERN",
+          "dimensions": [
+            1.8,
+            1.8,
+            0.27
+          ],
+          "min": [
+            -3.725,
+            2.7,
+            0.085
+          ],
+          "max": [
+            -1.925,
+            4.5,
+            0.355
+          ],
+          "origin": [
+            -2.825,
+            3.6,
+            0.17
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "source_matches_v002_qa_baseline": true,
+      "fbx_matches_v002_qa_baseline": true
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx",
+      "source": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.blend",
+      "source_sha256_current": "f5a6882376285c2b030480eb313c4f086dd769caadd1b6fab6750b99c3eeb7af",
+      "fbx_sha256_before": "66c9f21a9c087cdbdd224c2387eee85ffbe7b154b22d23573eb244035e61aabe",
+      "fbx_sha256_after": "66c9f21a9c087cdbdd224c2387eee85ffbe7b154b22d23573eb244035e61aabe",
+      "fbx_unchanged_during_read": true,
+      "mesh_count": 1,
+      "bounds_blender_xyz": {
+        "min": [
+          -6.875,
+          -7.795001,
+          -2e-06
+        ],
+        "max": [
+          6.875,
+          7.795008,
+          7.57055
+        ]
+      },
+      "material_slot_count": 14,
+      "source_matches_approved_measurement_hash": true,
+      "fbx_matches_approved_measurement_hash": true,
+      "approved_dimensions_blender_xyz": [
+        13.75,
+        15.59,
+        7.571
+      ],
+      "actual_dimensions_blender_xyz": [
+        13.75,
+        15.590009,
+        7.570552
+      ],
+      "max_dimension_deviation_m": 0.00044799999999955986,
+      "entry_mesh_evidence": [
+        {
+          "name": "ASSET_HOUSE_02_OLD_BRICK__R02_SOURCE_KH_H2_Entrance_Ramp",
+          "parent": "ASSET_ROOT_HOUSE_02_OLD_BRICK",
+          "dimensions": [
+            1.6,
+            1.8,
+            0.27
+          ],
+          "min": [
+            -1.925,
+            2.295,
+            0.085
+          ],
+          "max": [
+            -0.325,
+            4.095,
+            0.355
+          ],
+          "origin": [
+            -1.125,
+            3.195,
+            0.17
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "source_matches_v002_qa_baseline": true,
+      "fbx_matches_v002_qa_baseline": true
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.fbx",
+      "source": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.blend",
+      "source_sha256_current": "7104a4b3304aa9e9f9e98c383c21868b8801987aa83642b8dc69e4972e2a40c4",
+      "fbx_sha256_before": "e39bcb769d024c20a5be16a32707344a82c042b05a06f7235115b9e72a672dfa",
+      "fbx_sha256_after": "e39bcb769d024c20a5be16a32707344a82c042b05a06f7235115b9e72a672dfa",
+      "fbx_unchanged_during_read": true,
+      "mesh_count": 1,
+      "bounds_blender_xyz": {
+        "min": [
+          -5.724998,
+          -6.541839,
+          -2e-06
+        ],
+        "max": [
+          5.725007,
+          6.541847,
+          9.605002
+        ]
+      },
+      "material_slot_count": 14,
+      "source_matches_approved_measurement_hash": true,
+      "fbx_matches_approved_measurement_hash": true,
+      "approved_dimensions_blender_xyz": [
+        11.45,
+        13.084,
+        9.605
+      ],
+      "actual_dimensions_blender_xyz": [
+        11.450005,
+        13.083686,
+        9.605004
+      ],
+      "max_dimension_deviation_m": 0.00031399999999948136,
+      "entry_mesh_evidence": [
+        {
+          "name": "ASSET_HOUSE_03_NARROW_HOUSE__R02_SOURCE_KH_H3_Entry_Ramp",
+          "parent": "ASSET_ROOT_HOUSE_03_NARROW_HOUSE",
+          "dimensions": [
+            1.6,
+            2.0,
+            0.27
+          ],
+          "min": [
+            -2.375,
+            3.038,
+            0.085
+          ],
+          "max": [
+            -0.775,
+            5.038,
+            0.355
+          ],
+          "origin": [
+            -1.575,
+            4.038,
+            0.17
+          ],
+          "scale": [
+            1.0,
+            1.0,
+            1.0
+          ]
+        }
+      ],
+      "source_matches_v002_qa_baseline": true,
+      "fbx_matches_v002_qa_baseline": true
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx",
+      "source": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.blend",
+      "source_sha256_current": "2102aad849d295c047ec395073a7c8532898d86bb7bc564c503d93540217d90d",
+      "fbx_sha256_before": "65601c83435281e1b1bf4851b3ed65d1e8f1b50c7f82bfaf0c772c8b275ff5a1",
+      "fbx_sha256_after": "65601c83435281e1b1bf4851b3ed65d1e8f1b50c7f82bfaf0c772c8b275ff5a1",
+      "fbx_unchanged_during_read": true,
+      "mesh_count": 1,
+      "bounds_blender_xyz": {
+        "min": [
+          -10.236599,
+          -8.394201,
+          -2e-06
+        ],
+        "max": [
+          10.236605,
+          8.394198,
+          17.291304
+        ]
+      },
+      "material_slot_count": 14,
+      "source_matches_approved_measurement_hash": true,
+      "fbx_matches_approved_measurement_hash": true,
+      "approved_dimensions_blender_xyz": [
+        20.474,
+        16.788,
+        17.291
+      ],
+      "actual_dimensions_blender_xyz": [
+        20.473204,
+        16.788399,
+        17.291306
+      ],
+      "max_dimension_deviation_m": 0.0007960000000011291,
+      "entry_mesh_evidence": [
+        {
+          "name": "ASSET_VILLA_01_PILOTI_BRICK__R02_SOURCE_KH_V1_Accessible_Entry",
+          "parent": "ASSET_ROOT_VILLA_01_PILOTI_BRICK",
+          "dimensions": [
+            2.726,
+            1.692,
+            0.254
+          ],
+          "min": [
+            7.464,
+            0.987,
+            0.08
+          ],
+          "max": [
+            10.19,
+            2.679,
+            0.333
+          ],
+          "origin": [
+            8.827,
+            1.833,
+            0.16
+          ],
+          "scale": [
+            0.9399999976158142,
+            0.9399999976158142,
+            0.9399999976158142
+          ]
+        }
+      ],
+      "source_matches_v002_qa_baseline": true,
+      "fbx_matches_v002_qa_baseline": true
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.fbx",
+      "source": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.blend",
+      "source_sha256_current": "247eb4e45bab8d6f738700157e68fddc43db3343999d902757b4a9b358c91661",
+      "fbx_sha256_before": "b6dc05e3f4b6764d0059f386e83cd23883b149f15a52fbecb4a2e1ae6322af76",
+      "fbx_sha256_after": "b6dc05e3f4b6764d0059f386e83cd23883b149f15a52fbecb4a2e1ae6322af76",
+      "fbx_unchanged_during_read": true,
+      "mesh_count": 1,
+      "bounds_blender_xyz": {
+        "min": [
+          -10.706599,
+          -9.3342,
+          -2e-06
+        ],
+        "max": [
+          10.706608,
+          9.334198,
+          14.527702
+        ]
+      },
+      "material_slot_count": 13,
+      "source_matches_approved_measurement_hash": true,
+      "fbx_matches_approved_measurement_hash": true,
+      "approved_dimensions_blender_xyz": [
+        21.414,
+        18.668,
+        14.528
+      ],
+      "actual_dimensions_blender_xyz": [
+        21.413207,
+        18.668398,
+        14.527704
+      ],
+      "max_dimension_deviation_m": 0.000793000000001598,
+      "entry_mesh_evidence": [
+        {
+          "name": "ASSET_VILLA_02_STONE_MODERN__R02_SOURCE_KH_V2_Accessible_Entry",
+          "parent": "ASSET_ROOT_VILLA_02_STONE_MODERN",
+          "dimensions": [
+            6.345,
+            1.786,
+            0.254
+          ],
+          "min": [
+            4.315,
+            -0.893,
+            0.08
+          ],
+          "max": [
+            10.66,
+            0.893,
+            0.334
+          ],
+          "origin": [
+            7.487,
+            0.0,
+            0.16
+          ],
+          "scale": [
+            0.9399999976158142,
+            0.9399999976158142,
+            0.9399999976158142
+          ]
+        }
+      ],
+      "source_matches_v002_qa_baseline": true,
+      "fbx_matches_v002_qa_baseline": true
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx",
+      "source": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.blend",
+      "source_sha256_current": "0f4b0e6927ac9738d5c74d7077d9f8212451525c959c09f18eafa2b51d380963",
+      "fbx_sha256_before": "a035520c65fb1adbae7e7cb79720bffdafde936e9595f2e8ed50f3a2af4e9c1b",
+      "fbx_sha256_after": "a035520c65fb1adbae7e7cb79720bffdafde936e9595f2e8ed50f3a2af4e9c1b",
+      "fbx_unchanged_during_read": true,
+      "mesh_count": 1,
+      "bounds_blender_xyz": {
+        "min": [
+          -9.273105,
+          -9.710203,
+          -2e-06
+        ],
+        "max": [
+          9.273105,
+          9.710198,
+          11.895701
+        ]
+      },
+      "material_slot_count": 15,
+      "source_matches_approved_measurement_hash": true,
+      "fbx_matches_approved_measurement_hash": true,
+      "approved_dimensions_blender_xyz": [
+        18.546,
+        19.42,
+        11.896
+      ],
+      "actual_dimensions_blender_xyz": [
+        18.54621,
+        19.420401,
+        11.895703
+      ],
+      "max_dimension_deviation_m": 0.000400999999996543,
+      "entry_mesh_evidence": [
+        {
+          "name": "ASSET_VILLA_03_CORNER_MIXED__R02_SOURCE_KH_V3_Accessible_Entry",
+          "parent": "ASSET_ROOT_VILLA_03_CORNER_MIXED",
+          "dimensions": [
+            2.726,
+            1.786,
+            0.254
+          ],
+          "min": [
+            6.547,
+            -6.345,
+            0.08
+          ],
+          "max": [
+            9.273,
+            -4.559,
+            0.333
+          ],
+          "origin": [
+            7.91,
+            -5.452,
+            0.16
+          ],
+          "scale": [
+            0.9399999976158142,
+            0.9399999976158142,
+            0.9399999976158142
+          ]
+        }
+      ],
+      "source_matches_v002_qa_baseline": true,
+      "fbx_matches_v002_qa_baseline": true
+    }
+  ],
+  "campus_name_map": "city-rebuild-v002-campus-fbx-map.json",
+  "external_entry_note": "Entry evidence reused from prior source world bounds. Ramp/canopy or glass/jamb location is geometric evidence, not a traversable entrance, confirmed outward normal, or NavMesh test."
+}

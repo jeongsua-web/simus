@@ -1,0 +1,582 @@
+{
+  "method": "Python standard library binary FBX metadata read only; not Blender or Unity import execution",
+  "assets": [
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/COZY_NEIGHBORHOOD_PARK.fbx",
+      "sha256": "7b0290b9d91ba9eb771b4fb641ab843c81e6795d530693481135e341a55ad057",
+      "fbx_version": 7400,
+      "settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          -1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          -1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          100.0
+        ],
+        "OriginalUnitScaleFactor": [
+          100.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "model_count": 1,
+      "mesh_model_count": 1,
+      "models": [
+        {
+          "name": "UNITY_ASSET_COZY_NEIGHBORHOOD_PARK",
+          "kind": "Mesh",
+          "transforms_fbx": {
+            "Lcl Translation": [
+              0.0,
+              0.30000001192092896,
+              0.0
+            ],
+            "Lcl Rotation": [
+              90.00000933466734,
+              -0.0,
+              180.00000500895632
+            ]
+          }
+        }
+      ],
+      "geometries": [
+        {
+          "name": "R02_UNITY_MESH_COZY_NEIGHBORHOOD_PARK",
+          "vertex_count": 17460,
+          "local_bounds_fbx": {
+            "min": [
+              -6.0,
+              -6.0,
+              -0.30000001192092896
+            ],
+            "max": [
+              6.0,
+              6.0,
+              4.353670597076416
+            ]
+          }
+        }
+      ],
+      "matches_approved_measurement_hash": true
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/parks/MODERN_MINIMAL_PARK.fbx",
+      "sha256": "310d3617f9e8ea83bc075f75ff54cfdb80a25e840fe66480e65040b863dd989e",
+      "fbx_version": 7400,
+      "settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          -1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          -1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          100.0
+        ],
+        "OriginalUnitScaleFactor": [
+          100.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "model_count": 1,
+      "mesh_model_count": 1,
+      "models": [
+        {
+          "name": "UNITY_ASSET_MODERN_MINIMAL_PARK",
+          "kind": "Mesh",
+          "transforms_fbx": {
+            "Lcl Translation": [
+              0.0,
+              0.30000001192092896,
+              0.0
+            ],
+            "Lcl Rotation": [
+              90.00000933466734,
+              -0.0,
+              180.00000500895632
+            ]
+          }
+        }
+      ],
+      "geometries": [
+        {
+          "name": "R02_UNITY_MESH_MODERN_MINIMAL_PARK",
+          "vertex_count": 5768,
+          "local_bounds_fbx": {
+            "min": [
+              -6.0,
+              -6.0,
+              -0.30000001192092896
+            ],
+            "max": [
+              6.0,
+              6.0,
+              3.5308454036712646
+            ]
+          }
+        }
+      ],
+      "matches_approved_measurement_hash": true
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_TREE_HEALTHY_01.fbx",
+      "sha256": "40d155ab52c2e4d39d548e0275ec93af07f3ce4ed2b3ea3130e970f184a88deb",
+      "fbx_version": 7400,
+      "settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          -1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          -1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          1.0
+        ],
+        "OriginalUnitScaleFactor": [
+          1.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "model_count": 1,
+      "mesh_model_count": 1,
+      "models": [
+        {
+          "name": "POL_TREE_HEALTHY_01",
+          "kind": "Mesh",
+          "transforms_fbx": {
+            "Lcl Rotation": [
+              90.00000933466734,
+              -0.0,
+              180.00000500895632
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        }
+      ],
+      "geometries": [
+        {
+          "name": "TREE_HEALTHY_Mesh.001",
+          "vertex_count": 26,
+          "local_bounds_fbx": {
+            "min": [
+              -1.341637372970581,
+              -1.275960087776184,
+              -3.869366338449254e-08
+            ],
+            "max": [
+              1.341637372970581,
+              1.275960087776184,
+              4.6875
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BENCH_NORMAL_01.fbx",
+      "sha256": "c3069095374c24611fa67fa9b7edcb7628625b395d2daa07cca1329c86c00238",
+      "fbx_version": 7400,
+      "settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          -1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          -1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          1.0
+        ],
+        "OriginalUnitScaleFactor": [
+          1.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "model_count": 1,
+      "mesh_model_count": 1,
+      "models": [
+        {
+          "name": "SAF_BENCH_NORMAL_01",
+          "kind": "Mesh",
+          "transforms_fbx": {
+            "Lcl Rotation": [
+              90.00000933466734,
+              -0.0,
+              180.00000500895632
+            ],
+            "Lcl Scaling": [
+              100.0,
+              100.0,
+              100.0
+            ]
+          }
+        }
+      ],
+      "geometries": [
+        {
+          "name": "BENCH_CLEAN_Mesh.001",
+          "vertex_count": 120,
+          "local_bounds_fbx": {
+            "min": [
+              -0.9000015258789062,
+              -0.2837495803833008,
+              0.0
+            ],
+            "max": [
+              0.899993896484375,
+              0.2837505340576172,
+              0.9725000262260437
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/STREET_TREE.fbx",
+      "sha256": "1fe983174c830fc869b774e86cafd474aaa64bdabcd167ab47c77bfba0b2a75e",
+      "fbx_version": 7400,
+      "settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          -1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          -1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          100.0
+        ],
+        "OriginalUnitScaleFactor": [
+          100.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "model_count": 1,
+      "mesh_model_count": 1,
+      "models": [
+        {
+          "name": "UNITY_ASSET_STREET_TREE",
+          "kind": "Mesh",
+          "transforms_fbx": {
+            "Lcl Rotation": [
+              90.00000933466734,
+              -0.0,
+              180.00000500895632
+            ],
+            "Lcl Scaling": [
+              1.0142760276794434,
+              1.0142760276794434,
+              1.0142760276794434
+            ]
+          }
+        }
+      ],
+      "geometries": [
+        {
+          "name": "R02_UNITY_MESH_STREET_TREE",
+          "vertex_count": 26,
+          "local_bounds_fbx": {
+            "min": [
+              -1.3416430950164795,
+              -1.2759677171707153,
+              8.051562616628871e-08
+            ],
+            "max": [
+              1.3416316509246826,
+              1.2759524583816528,
+              4.6875
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/props/REUSED_BENCH.fbx",
+      "sha256": "7c0a9c5ef0d532c782e8e4b4f34390da534f577eae9f35f2e573b073b451b3cb",
+      "fbx_version": 7400,
+      "settings": {
+        "UpAxis": [
+          1
+        ],
+        "UpAxisSign": [
+          1
+        ],
+        "FrontAxis": [
+          2
+        ],
+        "FrontAxisSign": [
+          -1
+        ],
+        "CoordAxis": [
+          0
+        ],
+        "CoordAxisSign": [
+          -1
+        ],
+        "OriginalUpAxis": [
+          -1
+        ],
+        "OriginalUpAxisSign": [
+          1
+        ],
+        "UnitScaleFactor": [
+          100.0
+        ],
+        "OriginalUnitScaleFactor": [
+          100.0
+        ],
+        "AmbientColor": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "DefaultCamera": [
+          "Producer Perspective"
+        ],
+        "TimeMode": [
+          11
+        ],
+        "TimeSpanStart": [
+          0
+        ],
+        "TimeSpanStop": [
+          46186158000
+        ],
+        "CustomFrameRate": [
+          24.0
+        ]
+      },
+      "model_count": 1,
+      "mesh_model_count": 1,
+      "models": [
+        {
+          "name": "UNITY_ASSET_REUSED_BENCH",
+          "kind": "Mesh",
+          "transforms_fbx": {
+            "Lcl Rotation": [
+              90.00000933466734,
+              -0.0,
+              180.00000500895632
+            ]
+          }
+        }
+      ],
+      "geometries": [
+        {
+          "name": "R02_UNITY_MESH_REUSED_BENCH",
+          "vertex_count": 840,
+          "local_bounds_fbx": {
+            "min": [
+              -0.9000015258789062,
+              -0.2837486267089844,
+              1.4901161193847656e-08
+            ],
+            "max": [
+              0.899993896484375,
+              0.28375720977783203,
+              0.9724999666213989
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "city_ground": {
+    "dimensions_m": [
+      436,
+      451
+    ],
+    "quad_triangle_max_edge_m": 627.2933922814747,
+    "warning_mesh_name": "CityGround",
+    "warning_source": "Unity Editor.log line 1435 observed at audit start",
+    "remedy": "Tessellate only generated Unity CityGround into smaller grid cells; preserve footprint and height."
+  }
+}

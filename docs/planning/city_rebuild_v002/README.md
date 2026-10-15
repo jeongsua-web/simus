@@ -4,6 +4,8 @@
 
 ## 검토할 산출물
 
+2026-10-15 Phase 4 확장: [하천 설계](river-design.md) · [하천 평면/단면도](river-design.png) · [구현 입력](river-design.json). 기존 도시 배치를 유지하고 동쪽 공원 내부에 폭 10m 곡선 하천, 양안 산책로, 보행교 2개를 추가한다. 이 확장은 전시 map_version/상황 좌표 확정과 별개다.
+
 | 요청 산출물 | 파일 |
 |---|---|
 | 실측 기반 도시 탑뷰 | [PNG](top-view.png) · [확대 가능한 SVG](top-view.svg) |

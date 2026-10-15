@@ -1,0 +1,38 @@
+[
+  {
+    "stage": "build",
+    "method": "CityRebuildV002Setup.Build",
+    "exit_code": 0,
+    "full_log": "/tmp/simus-v002-build-verified.log",
+    "log_sha256": "a804a3285362e8b8d73d428eab0f776079132f4a85632cc9f05e78c97b752011",
+    "milestones": [
+      "Unity Editor version:    6000.3.24f1 (4e7b9b5b6244)",
+      "CITY_REBUILD_V002_PHASE3_READY Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity external=55 campus=14 phases4to7=NOT_TESTED",
+      "Exiting batchmode successfully now!"
+    ]
+  },
+  {
+    "stage": "surface",
+    "method": "CityRebuildV002SurfaceAudit.Run",
+    "exit_code": 0,
+    "full_log": "/tmp/simus-v002-surface-verified.log",
+    "log_sha256": "e52c0987cb29fd9a3b843f9d87c240d89f5a433620e5ec0e24b131873f3735f8",
+    "milestones": [
+      "Unity Editor version:    6000.3.24f1 (4e7b9b5b6244)",
+      "CITY_REBUILD_V002_SURFACE_AUDIT PASS samples=10517 missing=0 buildingHits=0",
+      "Exiting batchmode successfully now!"
+    ]
+  },
+  {
+    "stage": "capture",
+    "method": "CityRebuildV002Setup.CaptureInspectionViews",
+    "exit_code": 0,
+    "full_log": "/tmp/simus-v002-capture-verified.log",
+    "log_sha256": "ad1306430ece6b555e239478d9f026ebf4483bc665bd14a0f1511d1248d36ee5",
+    "milestones": [
+      "Unity Editor version:    6000.3.24f1 (4e7b9b5b6244)",
+      "CITY_REBUILD_V002_EDITOR_CAPTURES_READY ../docs/verification/city-rebuild-v002-captures",
+      "Exiting batchmode successfully now!"
+    ]
+  }
+]

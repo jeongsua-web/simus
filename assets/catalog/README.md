@@ -2,6 +2,10 @@
 
 [정리 규칙](../ASSET_RULES.md) · [납품·승인 목록](../manifest.csv) · [전체 파일 목록](inventory.json) · [2026-10-08 이동 이력](moves-2026-10-08.json)
 
+## 2026-10-14 승인된 v002 Unity 구현 — Phase 1~3
+
+[CityRebuild_v002 작업 씬](../../unity/Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity)은 [승인된 v002 layout](../../docs/planning/city_rebuild_v002/layout.json)을 Unity에서 조립한 검토용 도시다. 캠퍼스 14동·외부 건물 55개와 운동장·농구장·테니스장은 기존 FBX 메시를 재사용하며, 도로·보도·교차로 메시와 재질은 작업 씬 폴더에 보관한다. 원본 Blender·FBX를 재내보내거나 자산 승인 상태를 변경하지 않았다. [구현 기록](../../docs/verification/city-rebuild-v002-unity.md) · [QA 및 미검증 항목](../../docs/verification/city-rebuild-v002-qa.md). Phase 4~7의 공원 장식·NPC 보행망 연결·카메라/성능 검증은 후속 범위다.
+
 ## 2026-10-13 도로·구역 리빌드 초안
 
 [수정용 복제 씬](../../unity/Assets/SIMUS/Scenes/map_rebuild_draft/map_rebuild_draft.unity)과 [배치 원본](../../unity/Assets/SIMUS/Scenes/map_rebuild_draft/layout.json)은 Unity 기준의 임시 도로·학교·상가·주거·공원 배치다. [전용 생성기](../../unity/Assets/Editor/MapRebuildDraftSetup.cs)가 배치 원본을 읽는다. 기존 활성 씬과 전시 데이터의 대체본이나 승인된 맵이 아니다. [Blender 실측 조사](../../docs/verification/map-rebuild-blender-2026-10-13.md)와 [Unity 작업·검증 기록](../../docs/verification/map-rebuild-unity-2026-10-13.md)을 함께 확인한다.

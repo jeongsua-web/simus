@@ -15,13 +15,16 @@ namespace Simus
         private static readonly int Direction = Shader.PropertyToID("_SimusRevealDirection");
         private static readonly int Radius = Shader.PropertyToID("_SimusRevealRadius");
 
-        public void Initialize(Shader shader)
+        public void Initialize(Shader shader, Transform root = null)
         {
-            var map = GameObject.Find("SIMUS Completed Map 03");
+            var map = root != null ? root.gameObject : GameObject.Find("SIMUS Completed Map 03");
             if (map == null || shader == null) return;
             var cache = new Dictionary<Material, Material>();
             foreach (var renderer in map.GetComponentsInChildren<Renderer>(true))
             {
+                // A supplied city root can also contain runtime route actors. Their
+                // skinned meshes retain their original animation materials.
+                if (root != null && (renderer is SkinnedMeshRenderer || renderer.GetComponentInParent<Animator>() != null)) continue;
                 var source = renderer.sharedMaterials;
                 // State props, transparent decals and animated pond materials must keep their shaders.
                 bool preserveStateMaterial = renderer.name.StartsWith("PLACED_", System.StringComparison.Ordinal);
