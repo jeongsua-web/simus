@@ -5434,6 +5434,377 @@
       "sha256": "97b7f558ee04e0815a30c3e594daa68a266bbf6e04e6c4cbf0bbece90d68c243"
     },
     {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/README.md",
+      "role": "support",
+      "location": "library",
+      "bytes": 1769,
+      "sha256": "272d2e487dc80adcd7415d1a83d6569a1fde192269eed198d8113e90c5cb19df"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/previews/01_Front.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 881193,
+      "sha256": "dedb4d014f9131db6190141141ab1b10aaf6812b355c648ba6115ad87bc730eb"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/previews/02_Side.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 866650,
+      "sha256": "32cfba30cccae5a6a9f42c20cde4194d175e1d480840cc9fd8fb3183bf422045"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/previews/03_Back.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 859181,
+      "sha256": "03acf3c09c8373d679ac53036320d34a6c9fda4cb452d9421e22430260d038ac"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/previews/04_Head.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 939695,
+      "sha256": "ed4e1baf9f2642b19f4df82e0ea579424d9e1c49078a66aeaaf1010e8b9bcd44"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/previews/05_Green.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 946758,
+      "sha256": "cd7857eeb5c2c074a56873b29c79d18d7d3647bfe6688056c8033421478da812"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/previews/06_Oblique.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 881997,
+      "sha256": "dbfd05852222b386fbabf46e2be43e644993b5f2e02667dd86a10a47eb5a0d79"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/previews/07_Adult_Comparison.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 897913,
+      "sha256": "05d22aa8de118eec9101af5ce901462182bd33b9b3b1e8a77a2e70f9d40594e1"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/previews/09_Night.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 871280,
+      "sha256": "4e2d4f98c321338906aa366ea8aac1e4eeb8eb0c902ba86f7a65dbef702b4a10"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/previews/Green_Blink.gif",
+      "role": "support",
+      "location": "library",
+      "bytes": 13601,
+      "sha256": "be9d143419e06c21c5c7cf8a225e36180b0ecf1f5d60e0629aa0ef81534eeb3e"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/previews/Overview.jpg",
+      "role": "image",
+      "location": "library",
+      "bytes": 76377,
+      "sha256": "0694ecc35d3ec1374ff661b1c2065d7f7fb48e90801b8fb8823987ff6d9bb278"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/previews/Unity_ALL_OFF.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 18391,
+      "sha256": "cd840a7ce713ba61dad11116cc4bc86f6663991f5e7f62892cc9de80e832e04b"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/previews/Unity_Full.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 19204,
+      "sha256": "aee82a15e60923c3636c7d3cd41b21532b3741bc91684a01bdbc19229bef7bcd"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/previews/Unity_GREEN_BLINK.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 20584,
+      "sha256": "f56ff7de1e96d1102aa93b5a73d39030f21a5376d9230b24cd821c2e29fc8354"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/previews/Unity_GREEN_BLINK_OFF.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 18391,
+      "sha256": "cd840a7ce713ba61dad11116cc4bc86f6663991f5e7f62892cc9de80e832e04b"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/previews/Unity_GREEN_WALK.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 20584,
+      "sha256": "f56ff7de1e96d1102aa93b5a73d39030f21a5376d9230b24cd821c2e29fc8354"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/previews/Unity_Independent_Instances.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 22042,
+      "sha256": "6e8e3dfcd67383698779df7e111da990946f0ed50b3107710cc34d4d36c4f6ad"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/previews/Unity_Night.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 18796,
+      "sha256": "2cd7cfffa0cfdf3f805c70faa8cd235af30549ce14031f92c0d095221caa53e1"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/previews/Unity_RED_STAND.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 19418,
+      "sha256": "23ccee2a18c3a27ca0c751bb3920a926cb60b784f5a8eba8a7cc01595b76a1e6"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/reports/Delivery_Report.md",
+      "role": "support",
+      "location": "library",
+      "bytes": 6146,
+      "sha256": "aadceaa04ecb69fe663261f7abf0d7c2f7e52745c18410298fe0074150004b52"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/reports/Pedestrian_audit.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 3915,
+      "sha256": "1ff57c85705bcd8de7665dfc027364b08364e06607711c1f7d294cf7bd27c81c"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/reports/Pedestrian_unity.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 200,
+      "sha256": "215d6da596f11da07463349541646a0d81a2a8337cf919fb3f8fa125dceea35b"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/reports/baseline_errors.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 522,
+      "sha256": "10604fd5f79eaeb293c65f7146db34e15becaae403fd3c299395795b7c2f65e3"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/reports/passport.md",
+      "role": "support",
+      "location": "library",
+      "bytes": 1428,
+      "sha256": "5eb5b68ada7989de925edfca245c92ddb61409ac23283fa660f7164b3df5cd00"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/reports/playmode.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 103,
+      "sha256": "771762b722548ea69c8c5f002423004c163cc0dcb5a03a7fc4b926d424c5e6f9"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_pedestrian_v001/source/SIMUS_TrafficSignal_Pedestrian.blend",
+      "role": "source",
+      "location": "library",
+      "bytes": 932988,
+      "sha256": "6bfb89bd62fb20488ae01f0d96febc47063689eb81739ef28b7ef5c7c0dc790c"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/README.md",
+      "role": "support",
+      "location": "library",
+      "bytes": 1772,
+      "sha256": "0408bc5bb7cc4a27717475073e53ac0b5b260c2a015985b5fe2f8447bece811b"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/previews/01_Front.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 875985,
+      "sha256": "1326d9c294b88c212c5a8503dd9a32d27ca67e77c1b2213d354288b8bcaa58de"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/previews/02_Side.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 871891,
+      "sha256": "f18e1c5b2817792f9a0d5bd30ca2d122e99432ee03a8bd393469d521c2211de0"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/previews/03_Back.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 882576,
+      "sha256": "be031d21ced4633f4efef9029703b7d8b7c03d3de125e2a5475e1cafc1033500"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/previews/04_Head.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 907199,
+      "sha256": "34d0073e6c3d1d665cdb57def497d96f03865e837765ba26dacb82779aea9ed2"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/previews/05_Green.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 908952,
+      "sha256": "53f6689dfb966c16abd73eb1e44e0bd5d6e35341a028e2f477734558bb452dd2"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/previews/06_Oblique.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 923176,
+      "sha256": "5d45528403e131e92ee74630df745678f2b3cbf7ec3f322ae6859450b4050ea7"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/previews/07_Adult_Comparison.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 917163,
+      "sha256": "9c176404e10d121ed010767f05d997050f979f86ff7ba35e2e7b81144957d675"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/previews/08_Car_Comparison.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 971242,
+      "sha256": "2f9bed303f51563554360397319385b4dd88a1ecff3065727f3fdbf052752680"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/previews/09_Night.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 855269,
+      "sha256": "bcd73ca33be6a468528374b92a0d7fb938a020a35304e0fbfa299a179cba3859"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/previews/Overview.jpg",
+      "role": "image",
+      "location": "library",
+      "bytes": 100634,
+      "sha256": "809d961d27edf7f1ed967e2189c26d09635c4a2ffa43d627d3161bde4bfac0de"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/previews/Unity_ALL_OFF.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 25969,
+      "sha256": "0a15017a5ad16292b620b952436465881a20552a5baa009fe99f2660dcfde190"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/previews/Unity_Full.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 22738,
+      "sha256": "d2d78fc910d2a049613796d7c6d5ee1c3f12e733c1870c407d90e5225f242249"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/previews/Unity_GREEN_LEFT.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 26322,
+      "sha256": "5e48bd97dc14b5e31b531010281c43837979f9afb98e4d205b652662540ff225"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/previews/Unity_GREEN_STRAIGHT.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 26846,
+      "sha256": "768b8c955335c6b1bb8089bb0dcd4bc74f359a3f4030309163847f20c29a7949"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/previews/Unity_GREEN_STRAIGHT_LEFT.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 27152,
+      "sha256": "c8523e70a9cf18ecc9315375f32f2d4399b910ef0711f7780417fba9d7199d3c"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/previews/Unity_Independent_Instances.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 26426,
+      "sha256": "7f69f35c0bab690d4436f080f3fca4766bd561f6b23b54abc274d4eb4e6455ec"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/previews/Unity_Night.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 22248,
+      "sha256": "aa7468826a5eaaba17ffb6d89e8748b243a8f0f7f599c9f54b72d2b91fb41dd0"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/previews/Unity_RED.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 26742,
+      "sha256": "bb4521825dd4e7f180b10ce45c3135b01c00fd78aee16c1866c740a425887040"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/previews/Unity_YELLOW.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 26868,
+      "sha256": "379cc373f6c531435b58106b2c88dcd129e173f417c68090cf0bf9c4728fa3ae"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/reports/Delivery_Report.md",
+      "role": "support",
+      "location": "library",
+      "bytes": 6146,
+      "sha256": "56940b2d62d1fbbb0ebf0c4ff4db94ad9dcc5cea1efa8737c78f5ec32a213287"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/reports/Vehicle_audit.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 4888,
+      "sha256": "a389f1ce5e7d324c2810dbbe035df6a3c15e93d4faf7a723c5f8ec51ceaa1840"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/reports/Vehicle_unity.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 200,
+      "sha256": "ba074fbb639278a145d98ceaa32147d41213a6f9444452dc64aa6c6c55a9c548"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/reports/baseline_errors.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 522,
+      "sha256": "10604fd5f79eaeb293c65f7146db34e15becaae403fd3c299395795b7c2f65e3"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/reports/passport.md",
+      "role": "support",
+      "location": "library",
+      "bytes": 1428,
+      "sha256": "5eb5b68ada7989de925edfca245c92ddb61409ac23283fa660f7164b3df5cd00"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/reports/playmode.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 103,
+      "sha256": "771762b722548ea69c8c5f002423004c163cc0dcb5a03a7fc4b926d424c5e6f9"
+    },
+    {
+      "path": "assets/library/props/traffic_signal_vehicle_v001/source/SIMUS_TrafficSignal_Vehicle.blend",
+      "role": "source",
+      "location": "library",
+      "bytes": 1074020,
+      "sha256": "a96011edcf4d412f5e3c648747d60626cf23539711aa3c1e49f23085f466098f"
+    },
+    {
       "path": "assets/library/roads/parking_lot/README.md",
       "role": "support",
       "location": "library",
@@ -13344,6 +13715,174 @@
       "sha256": "90a0a9ef5946b875f798e41144f07754e5e7fa92ec19a8b7b002b4e2e8bbc2f4"
     },
     {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_pedestrian_v001.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "b6a33963b3be5d294870c6306a551cd542f7a25726b17b2217953faf03a066af"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_pedestrian_v001/models.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "cbbfdc00047135e121f18016d0b73253ed0a0d9336119f835fb8c9a7170c7594"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_pedestrian_v001/models/SIMUS_TrafficSignal_Pedestrian.fbx",
+      "role": "export",
+      "location": "unity_existing",
+      "bytes": 63868,
+      "sha256": "b61c4198214601c8dabcb05128847976cfa3392114cf3461e11092e9140e317c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_pedestrian_v001/models/SIMUS_TrafficSignal_Pedestrian.fbx.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 4273,
+      "sha256": "e884a9b7ee4d6bf5fefc0d634937ad4b6ab768af497ca32fd9b174b5a7ae60b2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_shared_v001.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "488667cd218077c6a0940f1dd60699b330839e5d95bf109206f4f0c8347dc225"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_shared_v001/materials.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "160eb7a488160c551dc56bf69bb78889dcb11ba33c8bc8bb64edf98a002e558e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_shared_v001/materials/Signal_Green.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2252,
+      "sha256": "fa5c089d67baabcdd495769d36563c36ba8788243489c7e2874f7915c40e9f61"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_shared_v001/materials/Signal_Green.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "639dd6647c63927dee78f4a680450fda0064ff11f877bf89994abad2dcaed919"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_shared_v001/materials/Signal_Housing.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2229,
+      "sha256": "224bf8133136a35a69c676e09fca9e5730e6a1a9871346490f5d6a179d5b418a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_shared_v001/materials/Signal_Housing.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "e2f098d76dca0084d702ba9219768de606c7580181314bb4409421a232d0dfc3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_shared_v001/materials/Signal_Off.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2216,
+      "sha256": "bff567ed049f5fb49f4ca1b808b3ac5345bfd69e79eaadaea4eba3691c4f0a73"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_shared_v001/materials/Signal_Off.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "c96aa3db9296908a959fda21848ccb481f455a7ae98d3d4241f3f44f63b71a29"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_shared_v001/materials/Signal_Pole.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2217,
+      "sha256": "e47b4242432d307ff830273b4206e411c3394a44c5ad4088bf7b5fdb6cdc558c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_shared_v001/materials/Signal_Pole.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "5c509421d16ca8c2abf990f3da13ff3cf92dfe60722521c0f37a5b0c4509380f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_shared_v001/materials/Signal_Red.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2248,
+      "sha256": "ace4d1212f551c1b3bbcd532f4b2ab31bf5a892a7b7150bd10cfb6bafc6d9e51"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_shared_v001/materials/Signal_Red.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "3a423485626d8d259646e5f0a457866c8ccbeca2106e867b043362fcd93eff11"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_shared_v001/materials/Signal_Rubber.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2220,
+      "sha256": "881688bd4a9c08a3f2fcab392536781b6b56ff5f9f4c28bf491b7fc5b69962eb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_shared_v001/materials/Signal_Rubber.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "7c3fc1041beb845934c3fe2b28ab56e34feedca2c0e94d76365d4a536baaa55c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_shared_v001/materials/Signal_Yellow.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2245,
+      "sha256": "c6dbb67a6e127331a4924f2576719e5d28c7151b539d0b31e2201d0cdc535067"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_shared_v001/materials/Signal_Yellow.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "e08e9f73313dce73e8b223c0c74c3bad3c62af00f9202f504e5a74c6d8d525df"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_vehicle_v001.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "89cf1344a22c04da6f7cc501f0809988efc88771e73914f26ca0e85a36a2ce65"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_vehicle_v001/models.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "96c8149e23f7ee7be818143c9c1b1d05a45a809e83daa4f7a2f9c3e38f7eb150"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_vehicle_v001/models/SIMUS_TrafficSignal_Vehicle.fbx",
+      "role": "export",
+      "location": "unity_existing",
+      "bytes": 96444,
+      "sha256": "722bd09573d746163e79bb0f9ba329c5fcff7d614b8fa250095f93251b8885a3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/traffic_signal_vehicle_v001/models/SIMUS_TrafficSignal_Vehicle.fbx.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 4252,
+      "sha256": "88542dfd745db701608002d78305a790e054ceae7fb58391df2c1249529ec175"
+    },
+    {
       "path": "unity/Assets/SIMUS/Art/roads.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
@@ -13841,6 +14380,76 @@
       "sha256": "2fa4dc76460999538358094728ca858501cf69ccd7485aeaa0aa979e52291fd6"
     },
     {
+      "path": "unity/Assets/SIMUS/Prefabs/props/traffic_signal_pedestrian_v001.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "934bbf4ddd89cd750ab5567eb30a5d6b42313e4ed400d43ab261c6aa9e21c142"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/props/traffic_signal_pedestrian_v001/SIMUS_TrafficSignal_Pedestrian.prefab",
+      "role": "prefab",
+      "location": "unity_existing",
+      "bytes": 44847,
+      "sha256": "86db23aae2c3c96fa52f5947e3efcde167cfd0f09fe871a95fa71c40a83431b2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/props/traffic_signal_pedestrian_v001/SIMUS_TrafficSignal_Pedestrian.prefab.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 154,
+      "sha256": "cc1ed46c51ecd2b3fbe6764bf7cf5e007785a143f6829968046d42400f267013"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/props/traffic_signal_pedestrian_v001/SIMUS_TrafficSignal_Pedestrian_Head.prefab",
+      "role": "prefab",
+      "location": "unity_existing",
+      "bytes": 25878,
+      "sha256": "2cfa5cebb370014036570b7ccf57a7967039d95e41551514700c9b668291ee3e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/props/traffic_signal_pedestrian_v001/SIMUS_TrafficSignal_Pedestrian_Head.prefab.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 154,
+      "sha256": "59032902d4672195e2f10843f4c8f626e7653a9c480b46cdab715ba4804befce"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/props/traffic_signal_vehicle_v001.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "f5809bbb9d9fbced96c19eece31c291864a5baa3d8e5a1bba0df2bb5f2a08e62"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/props/traffic_signal_vehicle_v001/SIMUS_TrafficSignal_Vehicle.prefab",
+      "role": "prefab",
+      "location": "unity_existing",
+      "bytes": 73430,
+      "sha256": "d2d5a7b9999ca0b8abcc947de882f8516edb7fefb3f424c7e828c4f9aebf0b5c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/props/traffic_signal_vehicle_v001/SIMUS_TrafficSignal_Vehicle.prefab.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 154,
+      "sha256": "b1bf24e10bc77cefb590deb235f0cc84a49249ee683c09bb6b8bbd3df3afcce9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/props/traffic_signal_vehicle_v001/SIMUS_TrafficSignal_Vehicle_Head.prefab",
+      "role": "prefab",
+      "location": "unity_existing",
+      "bytes": 47246,
+      "sha256": "fc16dea4d845c711951cf50b33ce2a82db6473f884372d445d97bdea5748c608"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/props/traffic_signal_vehicle_v001/SIMUS_TrafficSignal_Vehicle_Head.prefab.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 154,
+      "sha256": "3a2e570f8d8f9800ab24416a12e9bb36c2136a0f8f3d05865f2f88769d509c05"
+    },
+    {
       "path": "unity/Assets/SIMUS/Runtime.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
@@ -14105,6 +14714,20 @@
       "location": "unity_existing",
       "bytes": 173,
       "sha256": "b585f83be88fcdfc42ffd5ecceafa61a62e9d29560dadcea2a6498f1b314a5da"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/SignalDisplay.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 2802,
+      "sha256": "9923e17e4b1ad9f04adc51e9fca75a3d66de6f5a925071c44ca20728b98d91d2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/SignalDisplay.cs.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 59,
+      "sha256": "b93beecca736aad349a2b2d88b86f580d60deccc9f8ca7d6506e1f3ed5ebee7b"
     },
     {
       "path": "unity/Assets/SIMUS/Runtime/TransitVehicleRig.cs",
@@ -15340,10 +15963,24 @@
       ]
     },
     {
+      "sha256": "cd840a7ce713ba61dad11116cc4bc86f6663991f5e7f62892cc9de80e832e04b",
+      "paths": [
+        "assets/library/props/traffic_signal_pedestrian_v001/previews/Unity_ALL_OFF.png",
+        "assets/library/props/traffic_signal_pedestrian_v001/previews/Unity_GREEN_BLINK_OFF.png"
+      ]
+    },
+    {
       "sha256": "e3aff8372ffd47b04ad7dc85afe57b2d8de03dd0dda58b8c4b37d009858d396e",
       "paths": [
         "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_STRUGGLE.png",
         "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_STRUGGLE_6.png"
+      ]
+    },
+    {
+      "sha256": "f56ff7de1e96d1102aa93b5a73d39030f21a5376d9230b24cd821c2e29fc8354",
+      "paths": [
+        "assets/library/props/traffic_signal_pedestrian_v001/previews/Unity_GREEN_BLINK.png",
+        "assets/library/props/traffic_signal_pedestrian_v001/previews/Unity_GREEN_WALK.png"
       ]
     }
   ]

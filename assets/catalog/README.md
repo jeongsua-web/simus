@@ -102,3 +102,10 @@
 
 - [subway_entrance_v001](../library/buildings/subway_entrance_v001/README.md): 유리 캐노피, 계단20단, 에스컬레이터2대, 짧은 지하 통로. received, 기존 맵 미배치.
 - Blender 원본·Unity FBX/프리팹·재질·표지 텍스처2장·검수 이미지18장과 설치 보고서 포함.
+
+
+## 차량용·보행자용 신호등 신규 접수 (2026-10-16)
+
+- [차량용 4구 신호등](../library/props/traffic_signal_vehicle_v001/README.md)
+- [보행자 신호등](../library/props/traffic_signal_pedestrian_v001/README.md)
+- 각 전체·헤드 프리팹, 공유 재질7개, SignalDisplay 상태 제어. 기본 빨간불, LOD0, 기존 맵 미배치. Unity 재생 모드에서 독립 제어와 깜빡임 검수. received.

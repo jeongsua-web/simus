@@ -1,0 +1,176 @@
+{
+  "kind": "Pedestrian",
+  "objects": 19,
+  "render_meshes": 13,
+  "triangles": 1464,
+  "meshes": [
+    {
+      "name": "PEDESTRIAN_SIGNAL_POLE",
+      "boundary_edges": 0,
+      "triangles": 76
+    },
+    {
+      "name": "PEDESTRIAN_SIGNAL_BASE",
+      "boundary_edges": 0,
+      "triangles": 108
+    },
+    {
+      "name": "PEDESTRIAN_ANCHOR_BOLTS",
+      "boundary_edges": 0,
+      "triangles": 80
+    },
+    {
+      "name": "PEDESTRIAN_POLE_HATCH",
+      "boundary_edges": 0,
+      "triangles": 108
+    },
+    {
+      "name": "PEDESTRIAN_SIGNAL_HEAD",
+      "boundary_edges": 0,
+      "triangles": 108
+    },
+    {
+      "name": "PEDESTRIAN_SIGNAL_BACK_COVER",
+      "boundary_edges": 0,
+      "triangles": 108
+    },
+    {
+      "name": "PEDESTRIAN_SIGNAL_BRACKETS",
+      "boundary_edges": 0,
+      "triangles": 24
+    },
+    {
+      "name": "PEDESTRIAN_LENS_RED",
+      "boundary_edges": 0,
+      "triangles": 108
+    },
+    {
+      "name": "PEDESTRIAN_LENS_GREEN",
+      "boundary_edges": 0,
+      "triangles": 108
+    },
+    {
+      "name": "PEDESTRIAN_EMITTER_RED",
+      "boundary_edges": 0,
+      "triangles": 140
+    },
+    {
+      "name": "PEDESTRIAN_EMITTER_GREEN",
+      "boundary_edges": 0,
+      "triangles": 152
+    },
+    {
+      "name": "PEDESTRIAN_BACK_FASTENERS",
+      "boundary_edges": 0,
+      "triangles": 80
+    },
+    {
+      "name": "PEDESTRIAN_SIGNAL_VISORS",
+      "boundary_edges": 0,
+      "triangles": 264
+    }
+  ],
+  "materials": [
+    {
+      "role": "Pole",
+      "source_name": "Signal_Pole_Pedestrian",
+      "color": [
+        0.28999999165534973,
+        0.3199999928474426,
+        0.3400000035762787,
+        1.0
+      ],
+      "metallic": 0.44999998807907104,
+      "roughness": 0.5,
+      "emission": 0.0
+    },
+    {
+      "role": "Housing",
+      "source_name": "Signal_Housing_Pedestrian",
+      "color": [
+        0.04500000178813934,
+        0.05999999865889549,
+        0.06700000166893005,
+        1.0
+      ],
+      "metallic": 0.18000000715255737,
+      "roughness": 0.6499999761581421,
+      "emission": 0.0
+    },
+    {
+      "role": "Rubber",
+      "source_name": "Signal_Rubber_Pedestrian",
+      "color": [
+        0.017999999225139618,
+        0.023000000044703484,
+        0.02800000086426735,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.550000011920929,
+      "emission": 0.0
+    },
+    {
+      "role": "Off",
+      "source_name": "Signal_Off_Pedestrian",
+      "color": [
+        0.03500000014901161,
+        0.04500000178813934,
+        0.05000000074505806,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.550000011920929,
+      "emission": 0.0
+    },
+    {
+      "role": "Red",
+      "source_name": "Signal_Red_Pedestrian",
+      "color": [
+        0.6499999761581421,
+        0.006000000052154064,
+        0.004000000189989805,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.550000011920929,
+      "emission": 1.600000023841858
+    },
+    {
+      "role": "Yellow",
+      "source_name": "Signal_Yellow_Pedestrian",
+      "color": [
+        0.75,
+        0.30000001192092896,
+        0.004999999888241291,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.550000011920929,
+      "emission": 1.600000023841858
+    },
+    {
+      "role": "Green",
+      "source_name": "Signal_Green_Pedestrian",
+      "color": [
+        0.004999999888241291,
+        0.550000011920929,
+        0.09000000357627869,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.550000011920929,
+      "emission": 1.600000023841858
+    }
+  ],
+  "bounds_min": [
+    -0.16200000047683716,
+    -0.4099999964237213,
+    0.0
+  ],
+  "bounds_max": [
+    0.16200000047683716,
+    0.15000000596046448,
+    2.950000047683716
+  ]
+}
