@@ -96,3 +96,9 @@
 ## 2026-10-15 무거운 짐 운반 시민
 
 [heavy_carrier_v001](../library/characters/heavy_carrier_v001/README.md) · [heavy_box_v001](../library/props/heavy_box_v001/README.md). 성인 Humanoid, 운반4클립, 독립 상자 및 프리팹. received, 기존 맵 미배치.
+
+
+## 가상 지하철 출입구 신규 접수 (2026-10-15)
+
+- [subway_entrance_v001](../library/buildings/subway_entrance_v001/README.md): 유리 캐노피, 계단20단, 에스컬레이터2대, 짧은 지하 통로. received, 기존 맵 미배치.
+- Blender 원본·Unity FBX/프리팹·재질·표지 텍스처2장·검수 이미지18장과 설치 보고서 포함.
