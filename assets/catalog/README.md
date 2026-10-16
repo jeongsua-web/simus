@@ -113,3 +113,10 @@
 - [차량용 4구 신호등](../library/props/traffic_signal_vehicle_v001/README.md)
 - [보행자 신호등](../library/props/traffic_signal_pedestrian_v001/README.md)
 - 각 전체·헤드 프리팹, 공유 재질7개, SignalDisplay 상태 제어. 기본 빨간불, LOD0, 기존 맵 미배치. Unity 재생 모드에서 독립 제어와 깜빡임 검수. received.
+
+
+## 2026-10-16 도로 통제 소품·정체불명의 상자
+
+- [바리케이드·고깔콘·연결봉 세트](../library/props/road_control_v001/README.md): 독립모델8개, 프리팹8개, 경고등 별도.
+- [정체불명의 운송 상자](../library/props/mystery_crate_v001/README.md): 경첩85도, 닫힘/열림 프리팹2개, 선택적 내부 발광.
+- Blender 원본2개, Unity FBX9개, 개별 BoxCollider·공유재질·검수 이미지 및 보고서. received, LOD0, 기존 맵 미배치.

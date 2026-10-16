@@ -1,0 +1,322 @@
+{
+  "assets": [
+    {
+      "name": "SIMUS_Mystery_Crate",
+      "root": "MYSTERY_CRATE_ROOT",
+      "objects": 51,
+      "triangles": 6380,
+      "meshes": [
+        {
+          "name": "HANDLE_BRACKET_-0.421_-0.09",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "HANDLE_BRACKET_-0.421_0.09",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "HANDLE_BRACKET_0.421_-0.09",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "HANDLE_BRACKET_0.421_0.09",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "HINGE_BODY_LEAF_-0.25",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "HINGE_BODY_LEAF_0.25",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_BOARD_JOINTS",
+          "triangles": 72,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_BODY_BOTTOM",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_BODY_SIDE_-0.377",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_BODY_SIDE_0.377",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_BODY_WALL_-0.277",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_BODY_WALL_0.277",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_FOOT_-0.32_-0.23",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_FOOT_-0.32_0.23",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_FOOT_0.32_-0.23",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_FOOT_0.32_0.23",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_FRAME_RIVETS",
+          "triangles": 112,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_HANDLE_-0.421",
+          "triangles": 132,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_HANDLE_0.421",
+          "triangles": 132,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_HINGE_-0.25",
+          "triangles": 60,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_HINGE_0.25",
+          "triangles": 60,
+          "nonmanifold": 0
+        },
+        {
+          "name": "CRATE_GLOW_SEAM_-0.265",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "CRATE_GLOW_SEAM_0.265",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "CRATE_INNER_GLOW_PANEL",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_INTERIOR",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "HINGE_LID_LEAF_-0.25",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "HINGE_LID_LEAF_0.25",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_LID_PANEL",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_LID_RIM",
+          "triangles": 432,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_LOCK_HASP",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_LOCK_CATCH",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_LOCK_KEYHOLE",
+          "triangles": 44,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_METAL_FRAME",
+          "triangles": 1296,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_REPAIR_PLATE",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_SERIAL_ID",
+          "triangles": 804,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_SERIAL_PLATE",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_SYMBOL",
+          "triangles": 380,
+          "nonmanifold": 0
+        },
+        {
+          "name": "MYSTERY_CRATE_WEAR",
+          "triangles": 48,
+          "nonmanifold": 0
+        }
+      ],
+      "materials": [
+        {
+          "name": "RC_Frame",
+          "color": [
+            0.054999999701976776,
+            0.07500000298023224,
+            0.07699999958276749,
+            1.0
+          ],
+          "metallic": 0.6499999761581421,
+          "roughness": 0.550000011920929,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_Interior",
+          "color": [
+            0.02500000037252903,
+            0.03099999949336052,
+            0.026000000536441803,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8500000238418579,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_Wood.002",
+          "color": [
+            0.0949999988079071,
+            0.06499999761581421,
+            0.04100000113248825,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.7400000095367432,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_Rubber.002",
+          "color": [
+            0.02500000037252903,
+            0.029999999329447746,
+            0.03200000151991844,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8600000143051147,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_Lock",
+          "color": [
+            0.30000001192092896,
+            0.3400000035762787,
+            0.3199999928474426,
+            1.0
+          ],
+          "metallic": 0.800000011920929,
+          "roughness": 0.30000001192092896,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_Teal",
+          "color": [
+            0.014999999664723873,
+            0.2800000011920929,
+            0.2199999988079071,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.3499999940395355,
+          "emission": 0.699999988079071
+        },
+        {
+          "name": "RC_White",
+          "color": [
+            0.7799999713897705,
+            0.8100000023841858,
+            0.7799999713897705,
+            1.0
+          ],
+          "metallic": 0.05000000074505806,
+          "roughness": 0.3199999928474426,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_Metal",
+          "color": [
+            0.2199999988079071,
+            0.25999999046325684,
+            0.2800000011920929,
+            1.0
+          ],
+          "metallic": 0.699999988079071,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_WoodFaded",
+          "color": [
+            0.12999999523162842,
+            0.10499999672174454,
+            0.07000000029802322,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.800000011920929,
+          "emission": 0.0
+        }
+      ],
+      "bounds_min": [
+        -0.48131000995635986,
+        -0.33399999141693115,
+        0.0
+      ],
+      "bounds_max": [
+        0.48131000995635986,
+        0.328000009059906,
+        0.6679999828338623
+      ]
+    }
+  ]
+}
