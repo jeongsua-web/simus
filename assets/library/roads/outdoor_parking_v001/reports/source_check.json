@@ -1,0 +1,46 @@
+{
+  "scene": "PARKING_SCENE",
+  "scenes": [
+    "PARKING_SCENE"
+  ],
+  "objects": 521,
+  "duplicate_meshes": [],
+  "material_missing": [],
+  "negative_scales": [],
+  "missing_images": [],
+  "colliders": 107,
+  "motion_samples": [
+    {
+      "frame": 1,
+      "entry_radians": 0.0,
+      "exit_radians": 0.0
+    },
+    {
+      "frame": 24,
+      "entry_radians": 0.0,
+      "exit_radians": 0.0
+    },
+    {
+      "frame": 42,
+      "entry_radians": 0.7417649030685425,
+      "exit_radians": -0.7417649030685425
+    },
+    {
+      "frame": 60,
+      "entry_radians": 1.483529806137085,
+      "exit_radians": -1.483529806137085
+    },
+    {
+      "frame": 90,
+      "entry_radians": 1.483529806137085,
+      "exit_radians": -1.483529806137085
+    },
+    {
+      "frame": 120,
+      "entry_radians": 0.0,
+      "exit_radians": 0.0
+    }
+  ],
+  "preview_export_separation": true,
+  "intentional_overlap": "Occupancy_AVAILABLE and FULL are mutually exclusive state variants"
+}

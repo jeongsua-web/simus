@@ -1,0 +1,4603 @@
+{
+  "assets": [
+    {
+      "name": "SIMUS_Outdoor_ParkingLot_Complete",
+      "root": "PARKING_LOT_ROOT",
+      "objects": 521,
+      "triangles": 29724,
+      "materials": [
+        {
+          "name": "Parking_Asphalt",
+          "color": [
+            0.1899999976158142,
+            0.2199999988079071,
+            0.23999999463558197,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": "Parking_Asphalt_Albedo.png"
+        },
+        {
+          "name": "Parking_Concrete",
+          "color": [
+            0.5,
+            0.49000000953674316,
+            0.4399999976158142,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Blue",
+          "color": [
+            0.02500000037252903,
+            0.1899999976158142,
+            0.41999998688697815,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Teal",
+          "color": [
+            0.014999999664723873,
+            0.3499999940395355,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_White",
+          "color": [
+            0.8199999928474426,
+            0.8299999833106995,
+            0.7799999713897705,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Dark",
+          "color": [
+            0.02500000037252903,
+            0.03500000014901161,
+            0.041999999433755875,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6000000238418579,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Yellow",
+          "color": [
+            0.8299999833106995,
+            0.5,
+            0.03999999910593033,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.699999988079071,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Metal",
+          "color": [
+            0.23000000417232513,
+            0.28999999165534973,
+            0.3199999928474426,
+            1.0
+          ],
+          "metallic": 0.6499999761581421,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Grass",
+          "color": [
+            0.1899999976158142,
+            0.28999999165534973,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Shrub",
+          "color": [
+            0.07999999821186066,
+            0.2199999988079071,
+            0.09000000357627869,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Red",
+          "color": [
+            0.6499999761581421,
+            0.03500000014901161,
+            0.017999999225139618,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_RedGlow",
+          "color": [
+            0.699999988079071,
+            0.02500000037252903,
+            0.009999999776482582,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.5,
+          "texture": ""
+        },
+        {
+          "name": "Parking_GreenGlow",
+          "color": [
+            0.019999999552965164,
+            0.6499999761581421,
+            0.15000000596046448,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Screen",
+          "color": [
+            0.012000000104308128,
+            0.05000000074505806,
+            0.07000000029802322,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.3199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Glow",
+          "color": [
+            0.949999988079071,
+            0.7599999904632568,
+            0.44999998807907104,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Brushed metal",
+          "color": [
+            0.46000000834465027,
+            0.5299999713897705,
+            0.5400000214576721,
+            1.0
+          ],
+          "metallic": 0.699999988079071,
+          "roughness": 0.3499999940395355,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Blue charcoal powder coat",
+          "color": [
+            0.1599999964237213,
+            0.2199999988079071,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.44999998807907104,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Recess rubber",
+          "color": [
+            0.05999999865889549,
+            0.09000000357627869,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        }
+      ],
+      "bounds_min": [
+        -15.0,
+        -24.0,
+        -0.25999999046325684
+      ],
+      "bounds_max": [
+        15.0,
+        0.0,
+        5.927249908447266
+      ]
+    },
+    {
+      "name": "SIMUS_Parking_EntryGate",
+      "root": "PARKING_GATE_ENTRY",
+      "objects": 21,
+      "triangles": 1996,
+      "materials": [
+        {
+          "name": "Parking_Asphalt",
+          "color": [
+            0.1899999976158142,
+            0.2199999988079071,
+            0.23999999463558197,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": "Parking_Asphalt_Albedo.png"
+        },
+        {
+          "name": "Parking_Concrete",
+          "color": [
+            0.5,
+            0.49000000953674316,
+            0.4399999976158142,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Blue",
+          "color": [
+            0.02500000037252903,
+            0.1899999976158142,
+            0.41999998688697815,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Teal",
+          "color": [
+            0.014999999664723873,
+            0.3499999940395355,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_White",
+          "color": [
+            0.8199999928474426,
+            0.8299999833106995,
+            0.7799999713897705,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Dark",
+          "color": [
+            0.02500000037252903,
+            0.03500000014901161,
+            0.041999999433755875,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6000000238418579,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Yellow",
+          "color": [
+            0.8299999833106995,
+            0.5,
+            0.03999999910593033,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.699999988079071,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Metal",
+          "color": [
+            0.23000000417232513,
+            0.28999999165534973,
+            0.3199999928474426,
+            1.0
+          ],
+          "metallic": 0.6499999761581421,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Grass",
+          "color": [
+            0.1899999976158142,
+            0.28999999165534973,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Shrub",
+          "color": [
+            0.07999999821186066,
+            0.2199999988079071,
+            0.09000000357627869,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Red",
+          "color": [
+            0.6499999761581421,
+            0.03500000014901161,
+            0.017999999225139618,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_RedGlow",
+          "color": [
+            0.699999988079071,
+            0.02500000037252903,
+            0.009999999776482582,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.5,
+          "texture": ""
+        },
+        {
+          "name": "Parking_GreenGlow",
+          "color": [
+            0.019999999552965164,
+            0.6499999761581421,
+            0.15000000596046448,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Screen",
+          "color": [
+            0.012000000104308128,
+            0.05000000074505806,
+            0.07000000029802322,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.3199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Glow",
+          "color": [
+            0.949999988079071,
+            0.7599999904632568,
+            0.44999998807907104,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Brushed metal",
+          "color": [
+            0.46000000834465027,
+            0.5299999713897705,
+            0.5400000214576721,
+            1.0
+          ],
+          "metallic": 0.699999988079071,
+          "roughness": 0.3499999940395355,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Blue charcoal powder coat",
+          "color": [
+            0.1599999964237213,
+            0.2199999988079071,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.44999998807907104,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Recess rubber",
+          "color": [
+            0.05999999865889549,
+            0.09000000357627869,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        }
+      ],
+      "bounds_min": [
+        -3.0900001525878906,
+        -0.22499999403953552,
+        0.0
+      ],
+      "bounds_max": [
+        0.1850000023841858,
+        0.22499999403953552,
+        0.9100000262260437
+      ]
+    },
+    {
+      "name": "SIMUS_Parking_ExitGate",
+      "root": "PARKING_GATE_EXIT",
+      "objects": 21,
+      "triangles": 1996,
+      "materials": [
+        {
+          "name": "Parking_Asphalt",
+          "color": [
+            0.1899999976158142,
+            0.2199999988079071,
+            0.23999999463558197,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": "Parking_Asphalt_Albedo.png"
+        },
+        {
+          "name": "Parking_Concrete",
+          "color": [
+            0.5,
+            0.49000000953674316,
+            0.4399999976158142,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Blue",
+          "color": [
+            0.02500000037252903,
+            0.1899999976158142,
+            0.41999998688697815,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Teal",
+          "color": [
+            0.014999999664723873,
+            0.3499999940395355,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_White",
+          "color": [
+            0.8199999928474426,
+            0.8299999833106995,
+            0.7799999713897705,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Dark",
+          "color": [
+            0.02500000037252903,
+            0.03500000014901161,
+            0.041999999433755875,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6000000238418579,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Yellow",
+          "color": [
+            0.8299999833106995,
+            0.5,
+            0.03999999910593033,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.699999988079071,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Metal",
+          "color": [
+            0.23000000417232513,
+            0.28999999165534973,
+            0.3199999928474426,
+            1.0
+          ],
+          "metallic": 0.6499999761581421,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Grass",
+          "color": [
+            0.1899999976158142,
+            0.28999999165534973,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Shrub",
+          "color": [
+            0.07999999821186066,
+            0.2199999988079071,
+            0.09000000357627869,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Red",
+          "color": [
+            0.6499999761581421,
+            0.03500000014901161,
+            0.017999999225139618,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_RedGlow",
+          "color": [
+            0.699999988079071,
+            0.02500000037252903,
+            0.009999999776482582,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.5,
+          "texture": ""
+        },
+        {
+          "name": "Parking_GreenGlow",
+          "color": [
+            0.019999999552965164,
+            0.6499999761581421,
+            0.15000000596046448,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Screen",
+          "color": [
+            0.012000000104308128,
+            0.05000000074505806,
+            0.07000000029802322,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.3199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Glow",
+          "color": [
+            0.949999988079071,
+            0.7599999904632568,
+            0.44999998807907104,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Brushed metal",
+          "color": [
+            0.46000000834465027,
+            0.5299999713897705,
+            0.5400000214576721,
+            1.0
+          ],
+          "metallic": 0.699999988079071,
+          "roughness": 0.3499999940395355,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Blue charcoal powder coat",
+          "color": [
+            0.1599999964237213,
+            0.2199999988079071,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.44999998807907104,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Recess rubber",
+          "color": [
+            0.05999999865889549,
+            0.09000000357627869,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        }
+      ],
+      "bounds_min": [
+        -0.1850000023841858,
+        -0.22499999403953552,
+        0.0
+      ],
+      "bounds_max": [
+        3.0900001525878906,
+        0.22499999403953552,
+        0.9100000262260437
+      ]
+    },
+    {
+      "name": "SIMUS_Parking_TicketMachine",
+      "root": "PARKING_TICKET_MACHINE",
+      "objects": 12,
+      "triangles": 1276,
+      "materials": [
+        {
+          "name": "Parking_Asphalt",
+          "color": [
+            0.1899999976158142,
+            0.2199999988079071,
+            0.23999999463558197,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": "Parking_Asphalt_Albedo.png"
+        },
+        {
+          "name": "Parking_Concrete",
+          "color": [
+            0.5,
+            0.49000000953674316,
+            0.4399999976158142,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Blue",
+          "color": [
+            0.02500000037252903,
+            0.1899999976158142,
+            0.41999998688697815,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Teal",
+          "color": [
+            0.014999999664723873,
+            0.3499999940395355,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_White",
+          "color": [
+            0.8199999928474426,
+            0.8299999833106995,
+            0.7799999713897705,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Dark",
+          "color": [
+            0.02500000037252903,
+            0.03500000014901161,
+            0.041999999433755875,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6000000238418579,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Yellow",
+          "color": [
+            0.8299999833106995,
+            0.5,
+            0.03999999910593033,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.699999988079071,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Metal",
+          "color": [
+            0.23000000417232513,
+            0.28999999165534973,
+            0.3199999928474426,
+            1.0
+          ],
+          "metallic": 0.6499999761581421,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Grass",
+          "color": [
+            0.1899999976158142,
+            0.28999999165534973,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Shrub",
+          "color": [
+            0.07999999821186066,
+            0.2199999988079071,
+            0.09000000357627869,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Red",
+          "color": [
+            0.6499999761581421,
+            0.03500000014901161,
+            0.017999999225139618,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_RedGlow",
+          "color": [
+            0.699999988079071,
+            0.02500000037252903,
+            0.009999999776482582,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.5,
+          "texture": ""
+        },
+        {
+          "name": "Parking_GreenGlow",
+          "color": [
+            0.019999999552965164,
+            0.6499999761581421,
+            0.15000000596046448,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Screen",
+          "color": [
+            0.012000000104308128,
+            0.05000000074505806,
+            0.07000000029802322,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.3199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Glow",
+          "color": [
+            0.949999988079071,
+            0.7599999904632568,
+            0.44999998807907104,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Brushed metal",
+          "color": [
+            0.46000000834465027,
+            0.5299999713897705,
+            0.5400000214576721,
+            1.0
+          ],
+          "metallic": 0.699999988079071,
+          "roughness": 0.3499999940395355,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Blue charcoal powder coat",
+          "color": [
+            0.1599999964237213,
+            0.2199999988079071,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.44999998807907104,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Recess rubber",
+          "color": [
+            0.05999999865889549,
+            0.09000000357627869,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        }
+      ],
+      "bounds_min": [
+        -0.2549999952316284,
+        -0.23999999463558197,
+        0.0
+      ],
+      "bounds_max": [
+        0.18000000715255737,
+        0.23999999463558197,
+        1.2369999885559082
+      ]
+    },
+    {
+      "name": "SIMUS_Parking_PaymentMachine",
+      "root": "PARKING_PAYMENT_MACHINE",
+      "objects": 12,
+      "triangles": 1276,
+      "materials": [
+        {
+          "name": "Parking_Asphalt",
+          "color": [
+            0.1899999976158142,
+            0.2199999988079071,
+            0.23999999463558197,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": "Parking_Asphalt_Albedo.png"
+        },
+        {
+          "name": "Parking_Concrete",
+          "color": [
+            0.5,
+            0.49000000953674316,
+            0.4399999976158142,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Blue",
+          "color": [
+            0.02500000037252903,
+            0.1899999976158142,
+            0.41999998688697815,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Teal",
+          "color": [
+            0.014999999664723873,
+            0.3499999940395355,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_White",
+          "color": [
+            0.8199999928474426,
+            0.8299999833106995,
+            0.7799999713897705,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Dark",
+          "color": [
+            0.02500000037252903,
+            0.03500000014901161,
+            0.041999999433755875,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6000000238418579,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Yellow",
+          "color": [
+            0.8299999833106995,
+            0.5,
+            0.03999999910593033,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.699999988079071,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Metal",
+          "color": [
+            0.23000000417232513,
+            0.28999999165534973,
+            0.3199999928474426,
+            1.0
+          ],
+          "metallic": 0.6499999761581421,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Grass",
+          "color": [
+            0.1899999976158142,
+            0.28999999165534973,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Shrub",
+          "color": [
+            0.07999999821186066,
+            0.2199999988079071,
+            0.09000000357627869,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Red",
+          "color": [
+            0.6499999761581421,
+            0.03500000014901161,
+            0.017999999225139618,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_RedGlow",
+          "color": [
+            0.699999988079071,
+            0.02500000037252903,
+            0.009999999776482582,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.5,
+          "texture": ""
+        },
+        {
+          "name": "Parking_GreenGlow",
+          "color": [
+            0.019999999552965164,
+            0.6499999761581421,
+            0.15000000596046448,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Screen",
+          "color": [
+            0.012000000104308128,
+            0.05000000074505806,
+            0.07000000029802322,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.3199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Glow",
+          "color": [
+            0.949999988079071,
+            0.7599999904632568,
+            0.44999998807907104,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Brushed metal",
+          "color": [
+            0.46000000834465027,
+            0.5299999713897705,
+            0.5400000214576721,
+            1.0
+          ],
+          "metallic": 0.699999988079071,
+          "roughness": 0.3499999940395355,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Blue charcoal powder coat",
+          "color": [
+            0.1599999964237213,
+            0.2199999988079071,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.44999998807907104,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Recess rubber",
+          "color": [
+            0.05999999865889549,
+            0.09000000357627869,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        }
+      ],
+      "bounds_min": [
+        -0.18000000715255737,
+        -0.23999999463558197,
+        0.0
+      ],
+      "bounds_max": [
+        0.2549999952316284,
+        0.23999999463558197,
+        1.4170000553131104
+      ]
+    },
+    {
+      "name": "SIMUS_ParkingSpace_Standard",
+      "root": "SPACE_North1",
+      "objects": 2,
+      "triangles": 36,
+      "materials": [
+        {
+          "name": "Parking_Asphalt",
+          "color": [
+            0.1899999976158142,
+            0.2199999988079071,
+            0.23999999463558197,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": "Parking_Asphalt_Albedo.png"
+        },
+        {
+          "name": "Parking_Concrete",
+          "color": [
+            0.5,
+            0.49000000953674316,
+            0.4399999976158142,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Blue",
+          "color": [
+            0.02500000037252903,
+            0.1899999976158142,
+            0.41999998688697815,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Teal",
+          "color": [
+            0.014999999664723873,
+            0.3499999940395355,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_White",
+          "color": [
+            0.8199999928474426,
+            0.8299999833106995,
+            0.7799999713897705,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Dark",
+          "color": [
+            0.02500000037252903,
+            0.03500000014901161,
+            0.041999999433755875,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6000000238418579,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Yellow",
+          "color": [
+            0.8299999833106995,
+            0.5,
+            0.03999999910593033,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.699999988079071,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Metal",
+          "color": [
+            0.23000000417232513,
+            0.28999999165534973,
+            0.3199999928474426,
+            1.0
+          ],
+          "metallic": 0.6499999761581421,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Grass",
+          "color": [
+            0.1899999976158142,
+            0.28999999165534973,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Shrub",
+          "color": [
+            0.07999999821186066,
+            0.2199999988079071,
+            0.09000000357627869,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Red",
+          "color": [
+            0.6499999761581421,
+            0.03500000014901161,
+            0.017999999225139618,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_RedGlow",
+          "color": [
+            0.699999988079071,
+            0.02500000037252903,
+            0.009999999776482582,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.5,
+          "texture": ""
+        },
+        {
+          "name": "Parking_GreenGlow",
+          "color": [
+            0.019999999552965164,
+            0.6499999761581421,
+            0.15000000596046448,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Screen",
+          "color": [
+            0.012000000104308128,
+            0.05000000074505806,
+            0.07000000029802322,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.3199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Glow",
+          "color": [
+            0.949999988079071,
+            0.7599999904632568,
+            0.44999998807907104,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Brushed metal",
+          "color": [
+            0.46000000834465027,
+            0.5299999713897705,
+            0.5400000214576721,
+            1.0
+          ],
+          "metallic": 0.699999988079071,
+          "roughness": 0.3499999940395355,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Blue charcoal powder coat",
+          "color": [
+            0.1599999964237213,
+            0.2199999988079071,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.44999998807907104,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Recess rubber",
+          "color": [
+            0.05999999865889549,
+            0.09000000357627869,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        }
+      ],
+      "bounds_min": [
+        -1.25,
+        -2.5,
+        -0.0032500000670552254
+      ],
+      "bounds_max": [
+        1.25,
+        2.5,
+        0.015249999240040779
+      ]
+    },
+    {
+      "name": "SIMUS_ParkingSpace_Accessible",
+      "root": "PARKING_LOT_ACCESSIBLE",
+      "objects": 19,
+      "triangles": 1052,
+      "materials": [
+        {
+          "name": "Parking_Asphalt",
+          "color": [
+            0.1899999976158142,
+            0.2199999988079071,
+            0.23999999463558197,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": "Parking_Asphalt_Albedo.png"
+        },
+        {
+          "name": "Parking_Concrete",
+          "color": [
+            0.5,
+            0.49000000953674316,
+            0.4399999976158142,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Blue",
+          "color": [
+            0.02500000037252903,
+            0.1899999976158142,
+            0.41999998688697815,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Teal",
+          "color": [
+            0.014999999664723873,
+            0.3499999940395355,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_White",
+          "color": [
+            0.8199999928474426,
+            0.8299999833106995,
+            0.7799999713897705,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Dark",
+          "color": [
+            0.02500000037252903,
+            0.03500000014901161,
+            0.041999999433755875,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6000000238418579,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Yellow",
+          "color": [
+            0.8299999833106995,
+            0.5,
+            0.03999999910593033,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.699999988079071,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Metal",
+          "color": [
+            0.23000000417232513,
+            0.28999999165534973,
+            0.3199999928474426,
+            1.0
+          ],
+          "metallic": 0.6499999761581421,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Grass",
+          "color": [
+            0.1899999976158142,
+            0.28999999165534973,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Shrub",
+          "color": [
+            0.07999999821186066,
+            0.2199999988079071,
+            0.09000000357627869,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Red",
+          "color": [
+            0.6499999761581421,
+            0.03500000014901161,
+            0.017999999225139618,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_RedGlow",
+          "color": [
+            0.699999988079071,
+            0.02500000037252903,
+            0.009999999776482582,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.5,
+          "texture": ""
+        },
+        {
+          "name": "Parking_GreenGlow",
+          "color": [
+            0.019999999552965164,
+            0.6499999761581421,
+            0.15000000596046448,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Screen",
+          "color": [
+            0.012000000104308128,
+            0.05000000074505806,
+            0.07000000029802322,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.3199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Glow",
+          "color": [
+            0.949999988079071,
+            0.7599999904632568,
+            0.44999998807907104,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Brushed metal",
+          "color": [
+            0.46000000834465027,
+            0.5299999713897705,
+            0.5400000214576721,
+            1.0
+          ],
+          "metallic": 0.699999988079071,
+          "roughness": 0.3499999940395355,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Blue charcoal powder coat",
+          "color": [
+            0.1599999964237213,
+            0.2199999988079071,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.44999998807907104,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Recess rubber",
+          "color": [
+            0.05999999865889549,
+            0.09000000357627869,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        }
+      ],
+      "bounds_min": [
+        -1.75,
+        -2.5,
+        -0.11625000089406967
+      ],
+      "bounds_max": [
+        2.950000047683716,
+        2.9000000953674316,
+        0.12725000083446503
+      ]
+    },
+    {
+      "name": "SIMUS_ParkingSpace_EV",
+      "root": "PARKING_LOT_EV",
+      "objects": 5,
+      "triangles": 68,
+      "materials": [
+        {
+          "name": "Parking_Asphalt",
+          "color": [
+            0.1899999976158142,
+            0.2199999988079071,
+            0.23999999463558197,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": "Parking_Asphalt_Albedo.png"
+        },
+        {
+          "name": "Parking_Concrete",
+          "color": [
+            0.5,
+            0.49000000953674316,
+            0.4399999976158142,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Blue",
+          "color": [
+            0.02500000037252903,
+            0.1899999976158142,
+            0.41999998688697815,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Teal",
+          "color": [
+            0.014999999664723873,
+            0.3499999940395355,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_White",
+          "color": [
+            0.8199999928474426,
+            0.8299999833106995,
+            0.7799999713897705,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Dark",
+          "color": [
+            0.02500000037252903,
+            0.03500000014901161,
+            0.041999999433755875,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6000000238418579,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Yellow",
+          "color": [
+            0.8299999833106995,
+            0.5,
+            0.03999999910593033,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.699999988079071,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Metal",
+          "color": [
+            0.23000000417232513,
+            0.28999999165534973,
+            0.3199999928474426,
+            1.0
+          ],
+          "metallic": 0.6499999761581421,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Grass",
+          "color": [
+            0.1899999976158142,
+            0.28999999165534973,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Shrub",
+          "color": [
+            0.07999999821186066,
+            0.2199999988079071,
+            0.09000000357627869,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Red",
+          "color": [
+            0.6499999761581421,
+            0.03500000014901161,
+            0.017999999225139618,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_RedGlow",
+          "color": [
+            0.699999988079071,
+            0.02500000037252903,
+            0.009999999776482582,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.5,
+          "texture": ""
+        },
+        {
+          "name": "Parking_GreenGlow",
+          "color": [
+            0.019999999552965164,
+            0.6499999761581421,
+            0.15000000596046448,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Screen",
+          "color": [
+            0.012000000104308128,
+            0.05000000074505806,
+            0.07000000029802322,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.3199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Glow",
+          "color": [
+            0.949999988079071,
+            0.7599999904632568,
+            0.44999998807907104,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Brushed metal",
+          "color": [
+            0.46000000834465027,
+            0.5299999713897705,
+            0.5400000214576721,
+            1.0
+          ],
+          "metallic": 0.699999988079071,
+          "roughness": 0.3499999940395355,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Blue charcoal powder coat",
+          "color": [
+            0.1599999964237213,
+            0.2199999988079071,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.44999998807907104,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Recess rubber",
+          "color": [
+            0.05999999865889549,
+            0.09000000357627869,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        }
+      ],
+      "bounds_min": [
+        -1.25,
+        -2.5,
+        -0.005625000223517418
+      ],
+      "bounds_max": [
+        1.25,
+        2.5,
+        0.015249999240040779
+      ]
+    },
+    {
+      "name": "SIMUS_Parking_WheelStop",
+      "root": "WHEEL_STOP_North1",
+      "objects": 4,
+      "triangles": 132,
+      "materials": [
+        {
+          "name": "Parking_Asphalt",
+          "color": [
+            0.1899999976158142,
+            0.2199999988079071,
+            0.23999999463558197,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": "Parking_Asphalt_Albedo.png"
+        },
+        {
+          "name": "Parking_Concrete",
+          "color": [
+            0.5,
+            0.49000000953674316,
+            0.4399999976158142,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Blue",
+          "color": [
+            0.02500000037252903,
+            0.1899999976158142,
+            0.41999998688697815,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Teal",
+          "color": [
+            0.014999999664723873,
+            0.3499999940395355,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_White",
+          "color": [
+            0.8199999928474426,
+            0.8299999833106995,
+            0.7799999713897705,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Dark",
+          "color": [
+            0.02500000037252903,
+            0.03500000014901161,
+            0.041999999433755875,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6000000238418579,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Yellow",
+          "color": [
+            0.8299999833106995,
+            0.5,
+            0.03999999910593033,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.699999988079071,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Metal",
+          "color": [
+            0.23000000417232513,
+            0.28999999165534973,
+            0.3199999928474426,
+            1.0
+          ],
+          "metallic": 0.6499999761581421,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Grass",
+          "color": [
+            0.1899999976158142,
+            0.28999999165534973,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Shrub",
+          "color": [
+            0.07999999821186066,
+            0.2199999988079071,
+            0.09000000357627869,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Red",
+          "color": [
+            0.6499999761581421,
+            0.03500000014901161,
+            0.017999999225139618,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_RedGlow",
+          "color": [
+            0.699999988079071,
+            0.02500000037252903,
+            0.009999999776482582,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.5,
+          "texture": ""
+        },
+        {
+          "name": "Parking_GreenGlow",
+          "color": [
+            0.019999999552965164,
+            0.6499999761581421,
+            0.15000000596046448,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Screen",
+          "color": [
+            0.012000000104308128,
+            0.05000000074505806,
+            0.07000000029802322,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.3199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Glow",
+          "color": [
+            0.949999988079071,
+            0.7599999904632568,
+            0.44999998807907104,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Brushed metal",
+          "color": [
+            0.46000000834465027,
+            0.5299999713897705,
+            0.5400000214576721,
+            1.0
+          ],
+          "metallic": 0.699999988079071,
+          "roughness": 0.3499999940395355,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Blue charcoal powder coat",
+          "color": [
+            0.1599999964237213,
+            0.2199999988079071,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.44999998807907104,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Recess rubber",
+          "color": [
+            0.05999999865889549,
+            0.09000000357627869,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        }
+      ],
+      "bounds_min": [
+        -0.7961069345474243,
+        -0.10775140672922134,
+        0.0
+      ],
+      "bounds_max": [
+        0.7961070537567139,
+        0.10775140672922134,
+        0.13249999284744263
+      ]
+    },
+    {
+      "name": "SIMUS_Parking_Sign",
+      "root": "PARKING_SIGN_PARKING",
+      "objects": 4,
+      "triangles": 392,
+      "materials": [
+        {
+          "name": "Parking_Asphalt",
+          "color": [
+            0.1899999976158142,
+            0.2199999988079071,
+            0.23999999463558197,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": "Parking_Asphalt_Albedo.png"
+        },
+        {
+          "name": "Parking_Concrete",
+          "color": [
+            0.5,
+            0.49000000953674316,
+            0.4399999976158142,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Blue",
+          "color": [
+            0.02500000037252903,
+            0.1899999976158142,
+            0.41999998688697815,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Teal",
+          "color": [
+            0.014999999664723873,
+            0.3499999940395355,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_White",
+          "color": [
+            0.8199999928474426,
+            0.8299999833106995,
+            0.7799999713897705,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Dark",
+          "color": [
+            0.02500000037252903,
+            0.03500000014901161,
+            0.041999999433755875,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6000000238418579,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Yellow",
+          "color": [
+            0.8299999833106995,
+            0.5,
+            0.03999999910593033,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.699999988079071,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Metal",
+          "color": [
+            0.23000000417232513,
+            0.28999999165534973,
+            0.3199999928474426,
+            1.0
+          ],
+          "metallic": 0.6499999761581421,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Grass",
+          "color": [
+            0.1899999976158142,
+            0.28999999165534973,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Shrub",
+          "color": [
+            0.07999999821186066,
+            0.2199999988079071,
+            0.09000000357627869,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Red",
+          "color": [
+            0.6499999761581421,
+            0.03500000014901161,
+            0.017999999225139618,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_RedGlow",
+          "color": [
+            0.699999988079071,
+            0.02500000037252903,
+            0.009999999776482582,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.5,
+          "texture": ""
+        },
+        {
+          "name": "Parking_GreenGlow",
+          "color": [
+            0.019999999552965164,
+            0.6499999761581421,
+            0.15000000596046448,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Screen",
+          "color": [
+            0.012000000104308128,
+            0.05000000074505806,
+            0.07000000029802322,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.3199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Glow",
+          "color": [
+            0.949999988079071,
+            0.7599999904632568,
+            0.44999998807907104,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Brushed metal",
+          "color": [
+            0.46000000834465027,
+            0.5299999713897705,
+            0.5400000214576721,
+            1.0
+          ],
+          "metallic": 0.699999988079071,
+          "roughness": 0.3499999940395355,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Blue charcoal powder coat",
+          "color": [
+            0.1599999964237213,
+            0.2199999988079071,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.44999998807907104,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Recess rubber",
+          "color": [
+            0.05999999865889549,
+            0.09000000357627869,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        }
+      ],
+      "bounds_min": [
+        -0.375,
+        -0.03999999910593033,
+        0.0
+      ],
+      "bounds_max": [
+        0.375,
+        0.09680001437664032,
+        2.450000047683716
+      ]
+    },
+    {
+      "name": "SIMUS_Parking_EVCharger",
+      "root": "PARKING_EV_CHARGER",
+      "objects": 8,
+      "triangles": 864,
+      "materials": [
+        {
+          "name": "Parking_Asphalt",
+          "color": [
+            0.1899999976158142,
+            0.2199999988079071,
+            0.23999999463558197,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": "Parking_Asphalt_Albedo.png"
+        },
+        {
+          "name": "Parking_Concrete",
+          "color": [
+            0.5,
+            0.49000000953674316,
+            0.4399999976158142,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Blue",
+          "color": [
+            0.02500000037252903,
+            0.1899999976158142,
+            0.41999998688697815,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Teal",
+          "color": [
+            0.014999999664723873,
+            0.3499999940395355,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_White",
+          "color": [
+            0.8199999928474426,
+            0.8299999833106995,
+            0.7799999713897705,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Dark",
+          "color": [
+            0.02500000037252903,
+            0.03500000014901161,
+            0.041999999433755875,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6000000238418579,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Yellow",
+          "color": [
+            0.8299999833106995,
+            0.5,
+            0.03999999910593033,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.699999988079071,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Metal",
+          "color": [
+            0.23000000417232513,
+            0.28999999165534973,
+            0.3199999928474426,
+            1.0
+          ],
+          "metallic": 0.6499999761581421,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Grass",
+          "color": [
+            0.1899999976158142,
+            0.28999999165534973,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Shrub",
+          "color": [
+            0.07999999821186066,
+            0.2199999988079071,
+            0.09000000357627869,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Red",
+          "color": [
+            0.6499999761581421,
+            0.03500000014901161,
+            0.017999999225139618,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_RedGlow",
+          "color": [
+            0.699999988079071,
+            0.02500000037252903,
+            0.009999999776482582,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.5,
+          "texture": ""
+        },
+        {
+          "name": "Parking_GreenGlow",
+          "color": [
+            0.019999999552965164,
+            0.6499999761581421,
+            0.15000000596046448,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Screen",
+          "color": [
+            0.012000000104308128,
+            0.05000000074505806,
+            0.07000000029802322,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.3199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Glow",
+          "color": [
+            0.949999988079071,
+            0.7599999904632568,
+            0.44999998807907104,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Brushed metal",
+          "color": [
+            0.46000000834465027,
+            0.5299999713897705,
+            0.5400000214576721,
+            1.0
+          ],
+          "metallic": 0.699999988079071,
+          "roughness": 0.3499999940395355,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Blue charcoal powder coat",
+          "color": [
+            0.1599999964237213,
+            0.2199999988079071,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.44999998807907104,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Recess rubber",
+          "color": [
+            0.05999999865889549,
+            0.09000000357627869,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        }
+      ],
+      "bounds_min": [
+        -0.2150000035762787,
+        -0.2630000114440918,
+        0.0
+      ],
+      "bounds_max": [
+        0.41695529222488403,
+        0.16500000655651093,
+        1.4600000381469727
+      ]
+    },
+    {
+      "name": "SIMUS_Parking_ModularProps",
+      "root": "PARKING_MODULAR_PROPS",
+      "objects": 282,
+      "triangles": 20080,
+      "materials": [
+        {
+          "name": "Parking_Asphalt",
+          "color": [
+            0.1899999976158142,
+            0.2199999988079071,
+            0.23999999463558197,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": "Parking_Asphalt_Albedo.png"
+        },
+        {
+          "name": "Parking_Concrete",
+          "color": [
+            0.5,
+            0.49000000953674316,
+            0.4399999976158142,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Blue",
+          "color": [
+            0.02500000037252903,
+            0.1899999976158142,
+            0.41999998688697815,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Teal",
+          "color": [
+            0.014999999664723873,
+            0.3499999940395355,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_White",
+          "color": [
+            0.8199999928474426,
+            0.8299999833106995,
+            0.7799999713897705,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Dark",
+          "color": [
+            0.02500000037252903,
+            0.03500000014901161,
+            0.041999999433755875,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6000000238418579,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Yellow",
+          "color": [
+            0.8299999833106995,
+            0.5,
+            0.03999999910593033,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.699999988079071,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Metal",
+          "color": [
+            0.23000000417232513,
+            0.28999999165534973,
+            0.3199999928474426,
+            1.0
+          ],
+          "metallic": 0.6499999761581421,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Grass",
+          "color": [
+            0.1899999976158142,
+            0.28999999165534973,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Shrub",
+          "color": [
+            0.07999999821186066,
+            0.2199999988079071,
+            0.09000000357627869,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8999999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Red",
+          "color": [
+            0.6499999761581421,
+            0.03500000014901161,
+            0.017999999225139618,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_RedGlow",
+          "color": [
+            0.699999988079071,
+            0.02500000037252903,
+            0.009999999776482582,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.5,
+          "texture": ""
+        },
+        {
+          "name": "Parking_GreenGlow",
+          "color": [
+            0.019999999552965164,
+            0.6499999761581421,
+            0.15000000596046448,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Screen",
+          "color": [
+            0.012000000104308128,
+            0.05000000074505806,
+            0.07000000029802322,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.3199999928474426,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Parking_Glow",
+          "color": [
+            0.949999988079071,
+            0.7599999904632568,
+            0.44999998807907104,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Brushed metal",
+          "color": [
+            0.46000000834465027,
+            0.5299999713897705,
+            0.5400000214576721,
+            1.0
+          ],
+          "metallic": 0.699999988079071,
+          "roughness": 0.3499999940395355,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Blue charcoal powder coat",
+          "color": [
+            0.1599999964237213,
+            0.2199999988079071,
+            0.25,
+            1.0
+          ],
+          "metallic": 0.44999998807907104,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Recess rubber",
+          "color": [
+            0.05999999865889549,
+            0.09000000357627869,
+            0.10000000149011612,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        }
+      ],
+      "bounds_min": [
+        -15.0,
+        -24.0,
+        -0.06287500262260437
+      ],
+      "bounds_max": [
+        15.0,
+        0.0,
+        5.927249908447266
+      ]
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Asphalt_Tile_0_0",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Asphalt_Tile_1_0",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Asphalt_Tile_2_0",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Asphalt_Tile_3_0",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Asphalt_Tile_4_0",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Asphalt_Tile_0_1",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Asphalt_Tile_1_1",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Asphalt_Tile_2_1",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Asphalt_Tile_3_1",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Asphalt_Tile_4_1",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Asphalt_Tile_0_2",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Asphalt_Tile_1_2",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Asphalt_Tile_2_2",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Asphalt_Tile_3_2",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Asphalt_Tile_4_2",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Asphalt_Tile_0_3",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Asphalt_Tile_1_3",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Asphalt_Tile_2_3",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Asphalt_Tile_3_3",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Asphalt_Tile_4_3",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Walk_West",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Walk_Rear",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Walk_Front",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Walk_Entry",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Space_Colour_Accessible",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Space_Colour_EV",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Shared_Island",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "ENTRY_Arm",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EXIT_Arm",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_West_00",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_West_01",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_West_02",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_West_03",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_West_04",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_West_05",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_West_06",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_West_07",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_West_08",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_West_09",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_West_10",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_West_11",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Rear_00",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Rear_01",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Rear_02",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Rear_03",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Rear_04",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Rear_05",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Rear_06",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Rear_07",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Rear_08",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Rear_09",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Rear_10",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Rear_11",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Rear_12",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Rear_13",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Rear_14",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_East_00",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_East_01",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_East_02",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_East_03",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_East_04",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_East_05",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_East_06",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_East_07",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_East_08",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_East_09",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_East_10",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_East_11",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Front_00",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Front_01",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Front_02",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Front_03",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Front_04",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Front_05",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Front_06",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Front_07",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Front_08",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Curb_Front_09",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Corner_Curb_00",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Corner_Curb_01",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Corner_Curb_02",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Space_Lines_North1",
+      "triangles": 36,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Rubber_North1",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Reflector_North1",
+      "triangles": 24,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Space_Lines_North2",
+      "triangles": 36,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Rubber_North2",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Reflector_North2",
+      "triangles": 24,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Space_Lines_North3",
+      "triangles": 36,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Rubber_North3",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Reflector_North3",
+      "triangles": 24,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Space_Lines_North4",
+      "triangles": 36,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Rubber_North4",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Reflector_North4",
+      "triangles": 24,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Space_Lines_North5",
+      "triangles": 36,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Rubber_North5",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Reflector_North5",
+      "triangles": 24,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Space_Lines_North6",
+      "triangles": 36,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Rubber_North6",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Reflector_North6",
+      "triangles": 24,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Space_Lines_North7",
+      "triangles": 36,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Rubber_North7",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Reflector_North7",
+      "triangles": 24,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Space_Lines_North8",
+      "triangles": 36,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Rubber_North8",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Reflector_North8",
+      "triangles": 24,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Space_Lines_South1",
+      "triangles": 36,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Rubber_South1",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Reflector_South1",
+      "triangles": 24,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Space_Lines_South2",
+      "triangles": 36,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Rubber_South2",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Reflector_South2",
+      "triangles": 24,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Space_Lines_South3",
+      "triangles": 36,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Rubber_South3",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Reflector_South3",
+      "triangles": 24,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Space_Lines_South4",
+      "triangles": 36,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Rubber_South4",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Reflector_South4",
+      "triangles": 24,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Space_Lines_Accessible",
+      "triangles": 36,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Rubber_Accessible",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Reflector_Accessible",
+      "triangles": 24,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Space_Lines_EV",
+      "triangles": 36,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Rubber_EV",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "WheelStop_Reflector_EV",
+      "triangles": 24,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Access_Transfer_Aisle",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Access_Hatch_00",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Access_Hatch_01",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Access_Hatch_02",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Access_Hatch_03",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Access_Hatch_04",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Access_Hatch_05",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Access_Ramp",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Access_Wheel",
+      "triangles": 784,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Access_Head",
+      "triangles": 76,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Access_Symbol",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Access_Symbol.001",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Access_Symbol.002",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Access_Symbol.003",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EV_Bolt",
+      "triangles": 20,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Direction_00",
+      "triangles": 24,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Direction_01",
+      "triangles": 24,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Direction_02",
+      "triangles": 24,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Direction_03",
+      "triangles": 24,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Direction_04",
+      "triangles": 24,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Direction_05",
+      "triangles": 24,
+      "nonmanifold": 0
+    },
+    {
+      "name": "ENTRY_StopLine",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EXIT_StopLine",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "ENTRY_Ground_IN",
+      "triangles": 48,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EXIT_Ground_OUT",
+      "triangles": 720,
+      "nonmanifold": 0
+    },
+    {
+      "name": "LaneDivider_00",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "LaneDivider_01",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "LaneDivider_02",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Crossing_00",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Crossing_01",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Crossing_02",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Crossing_03",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Crossing_04",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Crossing_05",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Crossing_06",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Crossing_07",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Crossing_08",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Crossing_09",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Crossing_10",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Tactile_Base",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Tactile_Dots",
+      "triangles": 1008,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Tactile_Base.001",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Tactile_Dots.001",
+      "triangles": 1008,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Drain_Recess_0",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Drain_Grille_0",
+      "triangles": 120,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Drain_Recess_1",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Drain_Grille_1",
+      "triangles": 120,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Front_Green_Strip",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Front_Shrub_00",
+      "triangles": 20,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Front_Shrub_01",
+      "triangles": 20,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Front_Shrub_02",
+      "triangles": 20,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Front_Shrub_03",
+      "triangles": 20,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Front_Shrub_04",
+      "triangles": 20,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Front_Shrub_05",
+      "triangles": 20,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Pedestrian_Service_Plaza",
+      "triangles": 12,
+      "nonmanifold": 0
+    },
+    {
+      "name": "PARKING_GATE_ENTRY_BODY",
+      "triangles": 316,
+      "nonmanifold": 0
+    },
+    {
+      "name": "ENTRY_BaseGasket",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "ENTRY_ServiceSeam",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "ENTRY_ServiceDoor",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "ENTRY_HingeShaft",
+      "triangles": 92,
+      "nonmanifold": 0
+    },
+    {
+      "name": "ENTRY_Reflector_00",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "ENTRY_Reflector_01",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "ENTRY_Reflector_02",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "ENTRY_Reflector_03",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "ENTRY_Reflector_04",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "ENTRY_Reflector_05",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "ENTRY_Reflector_06",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "ENTRY_ArmEndCap",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "ENTRY_PivotCap",
+      "triangles": 76,
+      "nonmanifold": 0
+    },
+    {
+      "name": "ENTRY_Status_Red",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "ENTRY_Status_Green",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "PARKING_GATE_EXIT_BODY",
+      "triangles": 316,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EXIT_BaseGasket",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EXIT_ServiceSeam",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EXIT_ServiceDoor",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EXIT_HingeShaft",
+      "triangles": 92,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EXIT_Reflector_00",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EXIT_Reflector_01",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EXIT_Reflector_02",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EXIT_Reflector_03",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EXIT_Reflector_04",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EXIT_Reflector_05",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EXIT_Reflector_06",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EXIT_ArmEndCap",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EXIT_PivotCap",
+      "triangles": 76,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EXIT_Status_Red",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EXIT_Status_Green",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "TICKET_Housing",
+      "triangles": 364,
+      "nonmanifold": 0
+    },
+    {
+      "name": "TICKET_Foot",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "TICKET_ControlRecess",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "TICKET_Display",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "TICKET_ScreenLine",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "TICKET_CardSlot",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "TICKET_ReceiptSlot",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "TICKET_FlushButton",
+      "triangles": 76,
+      "nonmanifold": 0
+    },
+    {
+      "name": "TICKET_RainLip",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "TICKET_MountBolts",
+      "triangles": 80,
+      "nonmanifold": 0
+    },
+    {
+      "name": "PAYMENT_Housing",
+      "triangles": 364,
+      "nonmanifold": 0
+    },
+    {
+      "name": "PAYMENT_Foot",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "PAYMENT_ControlRecess",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "PAYMENT_Display",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "PAYMENT_ScreenLine",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "PAYMENT_CardSlot",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "PAYMENT_ReceiptSlot",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "PAYMENT_FlushButton",
+      "triangles": 76,
+      "nonmanifold": 0
+    },
+    {
+      "name": "PAYMENT_RainLip",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "PAYMENT_MountBolts",
+      "triangles": 80,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Bollard_0",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Bollard_Reflector_0",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Bollard_1",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Bollard_Reflector_1",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EV_Charger_Housing",
+      "triangles": 316,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EV_Control",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EV_Screen",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EV_Status",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EV_ChargeCable",
+      "triangles": 180,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EV_ChargePlug",
+      "triangles": 44,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_SignPole",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_SignPanel",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_SignText",
+      "triangles": 224,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Exit_SignPole",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Exit_SignPanel",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Exit_SignText",
+      "triangles": 720,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Accessible_SignPole",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Accessible_SignPanel",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Accessible_SignText",
+      "triangles": 1832,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_01_Anchor_bolt",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_01_Anchor_bolt.001",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_01_Anchor_bolt.002",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_01_Anchor_bolt.003",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_01_Foot_collar",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_01_Horizontal_arm",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_01_LED_diffuser",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_01_Lens_gasket",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_01_Luminaire_housing",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_01_Mounting_plate",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_01_Panel_latch",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_01_Service_panel",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_01_Tapered_pole",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_02_Anchor_bolt",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_02_Anchor_bolt.001",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_02_Anchor_bolt.002",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_02_Anchor_bolt.003",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_02_Foot_collar",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_02_Horizontal_arm",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_02_LED_diffuser",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_02_Lens_gasket",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_02_Luminaire_housing",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_02_Mounting_plate",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_02_Panel_latch",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_02_Service_panel",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_02_Tapered_pole",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_03_Anchor_bolt",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_03_Anchor_bolt.001",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_03_Anchor_bolt.002",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_03_Anchor_bolt.003",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_03_Foot_collar",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_03_Horizontal_arm",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_03_LED_diffuser",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_03_Lens_gasket",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_03_Luminaire_housing",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_03_Mounting_plate",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_03_Panel_latch",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_03_Service_panel",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_03_Tapered_pole",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_04_Anchor_bolt",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_04_Anchor_bolt.001",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_04_Anchor_bolt.002",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_04_Anchor_bolt.003",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_04_Foot_collar",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_04_Horizontal_arm",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_04_LED_diffuser",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_04_Lens_gasket",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_04_Luminaire_housing",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_04_Mounting_plate",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_04_Panel_latch",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_04_Service_panel",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Parking_Lamp_04_Tapered_pole",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "ENTRY_SignPole",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "ENTRY_SignPanel",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "ENTRY_Label",
+      "triangles": 48,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EV_SignPole",
+      "triangles": 60,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EV_SignPanel",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "EV_Label",
+      "triangles": 68,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Rate_Support",
+      "triangles": 44,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Rate_Support.001",
+      "triangles": 44,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Rate_Frame",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Rate_Replaceable_Face",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Occupancy_Housing",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Occupancy_AVAILABLE",
+      "triangles": 108,
+      "nonmanifold": 0
+    },
+    {
+      "name": "Occupancy_FULL",
+      "triangles": 108,
+      "nonmanifold": 0
+    }
+  ],
+  "total_triangles": 29724,
+  "asset_objects": 521,
+  "materials": 18
+}

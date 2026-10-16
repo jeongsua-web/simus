@@ -1,0 +1,164 @@
+{
+  "editor": "6000.3.24f1",
+  "assets": [
+    {
+      "name": "SIMUS_Outdoor_ParkingLot_Complete",
+      "size": {
+        "x": 30.0,
+        "y": 6.187250137329102,
+        "z": 24.0
+      },
+      "colliders": 107,
+      "renderers": 314,
+      "materials": 18,
+      "passed": true
+    },
+    {
+      "name": "SIMUS_Parking_EntryGate",
+      "size": {
+        "x": 3.2750000953674316,
+        "y": 0.9100000262260437,
+        "z": 0.44999998807907104
+      },
+      "colliders": 2,
+      "renderers": 17,
+      "materials": 18,
+      "passed": true
+    },
+    {
+      "name": "SIMUS_Parking_ExitGate",
+      "size": {
+        "x": 3.2750000953674316,
+        "y": 0.9100000262260437,
+        "z": 0.44999998807907104
+      },
+      "colliders": 2,
+      "renderers": 17,
+      "materials": 18,
+      "passed": true
+    },
+    {
+      "name": "SIMUS_Parking_TicketMachine",
+      "size": {
+        "x": 0.4350000023841858,
+        "y": 1.2369999885559082,
+        "z": 0.47999998927116394
+      },
+      "colliders": 1,
+      "renderers": 10,
+      "materials": 18,
+      "passed": true
+    },
+    {
+      "name": "SIMUS_Parking_PaymentMachine",
+      "size": {
+        "x": 0.4350000023841858,
+        "y": 1.4170000553131104,
+        "z": 0.47999998927116394
+      },
+      "colliders": 1,
+      "renderers": 10,
+      "materials": 18,
+      "passed": true
+    },
+    {
+      "name": "SIMUS_ParkingSpace_Standard",
+      "size": {
+        "x": 2.5,
+        "y": 0.01850000023841858,
+        "z": 5.0
+      },
+      "colliders": 0,
+      "renderers": 1,
+      "materials": 18,
+      "passed": true
+    },
+    {
+      "name": "SIMUS_ParkingSpace_Accessible",
+      "size": {
+        "x": 4.699999809265137,
+        "y": 0.2434999942779541,
+        "z": 5.400000095367432
+      },
+      "colliders": 1,
+      "renderers": 16,
+      "materials": 18,
+      "passed": true
+    },
+    {
+      "name": "SIMUS_ParkingSpace_EV",
+      "size": {
+        "x": 2.5,
+        "y": 0.020874999463558197,
+        "z": 5.0
+      },
+      "colliders": 0,
+      "renderers": 3,
+      "materials": 18,
+      "passed": true
+    },
+    {
+      "name": "SIMUS_Parking_WheelStop",
+      "size": {
+        "x": 1.5922139883041382,
+        "y": 0.13249999284744263,
+        "z": 0.2155028134584427
+      },
+      "colliders": 1,
+      "renderers": 2,
+      "materials": 18,
+      "passed": true
+    },
+    {
+      "name": "SIMUS_Parking_Sign",
+      "size": {
+        "x": 0.75,
+        "y": 2.450000047683716,
+        "z": 0.13680002093315125
+      },
+      "colliders": 0,
+      "renderers": 3,
+      "materials": 18,
+      "passed": true
+    },
+    {
+      "name": "SIMUS_Parking_EVCharger",
+      "size": {
+        "x": 0.6319552659988403,
+        "y": 1.4600000381469727,
+        "z": 0.4280000329017639
+      },
+      "colliders": 1,
+      "renderers": 6,
+      "materials": 18,
+      "passed": true
+    },
+    {
+      "name": "SIMUS_Parking_ModularProps",
+      "size": {
+        "x": 30.0,
+        "y": 5.990124702453613,
+        "z": 24.0
+      },
+      "colliders": 74,
+      "renderers": 172,
+      "materials": 18,
+      "passed": true
+    }
+  ],
+  "checks": [
+    "FBX actual import",
+    "bounds and metre scale",
+    "material texture assignment",
+    "collider conversion",
+    "gate opening axis and lift",
+    "preview exclusion",
+    "prefab save and Camera.Render"
+  ],
+  "not_tested": [
+    "game scene integration",
+    "target hardware performance",
+    "vehicle physics",
+    "NavMesh"
+  ]
+}

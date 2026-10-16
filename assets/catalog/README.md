@@ -126,3 +126,9 @@
 
 - [기본형·음식·게임·안내 부스](../library/props/festival_booth_v001/README.md): 공통 천막 구조, 기존 현수막·깃발·장식 조명 재사용.
 - Blender 원본1개, Unity FBX4개와 프리팹4개, 공유 재질·현수막 텍스처·검수 이미지. received, LOD0, 기존 맵 미배치.
+
+
+## 2026-10-16 한국형 야외 유료 주차장
+
+- [14면 주차장과 모듈](../library/roads/outdoor_parking_v001/README.md): 30×24m, 일반12·장애인1·EV1, 입출구 차단기·정산기·보행로·기존 가로등.
+- Blender 원본1개, Unity FBX12개와 프리팹12개, 재질·아스팔트 텍스처·검수 이미지. received, LOD0, 기존 맵 미배치.

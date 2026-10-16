@@ -6617,6 +6617,342 @@
       "sha256": "a96011edcf4d412f5e3c648747d60626cf23539711aa3c1e49f23085f466098f"
     },
     {
+      "path": "assets/library/roads/outdoor_parking_v001/README.md",
+      "role": "support",
+      "location": "library",
+      "bytes": 712,
+      "sha256": "4a479dc5f501d40e10013b69279f3ac00be149c635bde9664ddb8bcd3da33012"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Accessible_Space.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 1231933,
+      "sha256": "6de26fb39160068559ce10987c153cc26815c566827744f263ef73eb07e64ff4"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Aisle.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 1096174,
+      "sha256": "6bb899c956830cf838d17f3a89da52274913d232aa8361ca0d559468f60d6fd0"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Audit_KeyOnly.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 1212512,
+      "sha256": "1ce46122280515800cad18b445fcaa5ae6850148cfed812e9a459a20530eb1ff"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Audit_WorldOnly.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 1123775,
+      "sha256": "a9ffd643d464c66900eb17b5a05a8a0d1ef08c0f585933702980f2ed86cfacb9"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/ContactSheet.jpg",
+      "role": "image",
+      "location": "library",
+      "bytes": 291188,
+      "sha256": "2cd934647cfbca5f75f18929fbfe3beb5888efe2d6c06791654e75fd6e0b60d3"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/EV_Space.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 1227182,
+      "sha256": "53ff8bc7220ae2927d82e98ff4959cb9ffee3eac37e518215c0452a14d7eab1c"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Entry_Closed.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 1251840,
+      "sha256": "33ef6b5336a216a4864a6719e98f938f7c63a38139309d47d53eead0f69541e7"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Entry_Front.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 1094257,
+      "sha256": "853ac2ca78f14a8731e49d2c1534edd15a743b1bab0c274d2fe414f79e7411e9"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Entry_Open.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 1237940,
+      "sha256": "97b397f4ed95f1d26a241afeb47b1850d76968c1fa6aa10f4267272974c71843"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Exit_Front.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 1103961,
+      "sha256": "c4a8a4541551465f21082c741e83d6cccb1c74c3b5b50880703cdd920b239dc0"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Left_Oblique.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 1204596,
+      "sha256": "ba63ebc975049a8bfa5635caea99295ba63bb91c57eefacaaa8b4bf8629b27f0"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Night_Lighting.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 1197860,
+      "sha256": "05f59ab46891052a03fac3df19c9e831563fd4eec35da4e3a05f27441b8be135"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Path_Guides.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 1283625,
+      "sha256": "663ff7a5d70c1a67fe9e03109a1e325a87a2190a4a62247281237cd26e9422a1"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Payment_Close.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 1133259,
+      "sha256": "3129d127f362b807a109d6563d4eb70e4848591ccd49f97c06a545661026d549"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Pedestrian_NPC.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 1224586,
+      "sha256": "34cf2bdec4e391da8240f6e43060d5b752b8feb2de48406fd884304b2bf2f089"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Right_Oblique.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 1198208,
+      "sha256": "d86872d6b40fef5e5342809a3d8f58119c0cb40c6c8385e6fae64a69b64f45f2"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Standard_Space.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 1222096,
+      "sha256": "30726f38326fa2fcd2b7719b73a1bfeb8e4bd1705a84c55588acdd10f2512b2e"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Ticket_Close.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 1185503,
+      "sha256": "ffe1683e2ad19adf09c635911f0930278da1c84a9f3c55721ed2d8378b2b0fdb"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Top.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 1271040,
+      "sha256": "8a71edbaa70a6ec745667e36b10a33272dae46ec141c0df2cc4e055a58c89e7d"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Unity_SIMUS_Outdoor_ParkingLot_Complete.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 97504,
+      "sha256": "e6bbba51a38891aafec9411af6c266f6eabf25bc015f5494b258d935ecfa0d29"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Unity_SIMUS_Outdoor_ParkingLot_Complete_PARKING_GATE_ENTRY_ARM_Open.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 97774,
+      "sha256": "263554524e9ac871e90912d72778e83d5e8b4ca7f6cc9ae5e04c4c47fc4b8fa0"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Unity_SIMUS_Outdoor_ParkingLot_Complete_PARKING_GATE_EXIT_ARM_Open.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 97566,
+      "sha256": "dc40337259d3f95bcb270ecf79edf18de738897dcc1f74d5d5188557ac57694c"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Unity_SIMUS_ParkingSpace_Accessible.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 32650,
+      "sha256": "6c167713a50bc222a0145a119c717c87b39e94da92699d5aeaa41639d7e75ef0"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Unity_SIMUS_ParkingSpace_EV.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 31862,
+      "sha256": "b621d977585868574683abad5aabf6f72ec41a177983a8f4553eb6e207f33fbf"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Unity_SIMUS_ParkingSpace_Standard.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 23579,
+      "sha256": "6791fddd8a76a119711962b64d57ac7cd6273faaa91ae3df3643885f0175c5e1"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Unity_SIMUS_Parking_EVCharger.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 30806,
+      "sha256": "04e8ce66ed4af95309077c6de0680c468761367ff3cba32013a75f17f56bcd2b"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Unity_SIMUS_Parking_EntryGate.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 22131,
+      "sha256": "e46aec752ba76875124fc35a2bcc19efd3209a9e521f6318cc6c15992f1aa06a"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Unity_SIMUS_Parking_EntryGate_PARKING_GATE_ENTRY_ARM_Open.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 23450,
+      "sha256": "a2d79ebd3a6386a705491c9e98de0bfb6457c558e7217f727e1ffb3c28701fb4"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Unity_SIMUS_Parking_ExitGate.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 22361,
+      "sha256": "0979cdf83f0f5c3869bc454ad10b49568086bc0087fcf9cc5a883ab14f580e15"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Unity_SIMUS_Parking_ExitGate_PARKING_GATE_EXIT_ARM_Open.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 21507,
+      "sha256": "42fdcc2a1d3d2296a184da593c75aec4750094a00cece040775aa49d80c9b2c2"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Unity_SIMUS_Parking_ModularProps.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 32699,
+      "sha256": "7c13016b3bfa950480342123b88434c7e01572aa156ef0829269a73059f82ce5"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Unity_SIMUS_Parking_PaymentMachine.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 33331,
+      "sha256": "72c2a652beccb423080e21e2dcd2a958f16358edd4ac1d5341b6ad16858aced1"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Unity_SIMUS_Parking_Sign.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 19565,
+      "sha256": "d0386d439b838cf77fb769845eafd79a94411359eeb98712d8b365c667f6d958"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Unity_SIMUS_Parking_TicketMachine.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 32684,
+      "sha256": "55e85147d4bdfbe313ba0d3b951e5730cf20449c0844189efe8e7fd2eed291ba"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Unity_SIMUS_Parking_WheelStop.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 20768,
+      "sha256": "8b4c6d1c21b64feb55d248b678767e07b659059844e90644dc2bc2df579380ce"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/previews/Vehicle_Turn_Check.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 1395399,
+      "sha256": "12214b1368de194c2dd0dbbce16bc98ca34383cad8cd2915452c2b0bdbac453b"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/reports/Delivery_Report.md",
+      "role": "support",
+      "location": "library",
+      "bytes": 7439,
+      "sha256": "c36d4c907b89dee67dcc94a907679a65a500ef3dbff45bfa6a9a659c0df22e3f"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/reports/Grayscale.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 292608,
+      "sha256": "a9fbd0907887f556d5a98cc2445c92b5917512a8fefeb9bc709541d7a445d2dd"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/reports/Unity_Validation.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 3656,
+      "sha256": "0392d427470d0bb60ba44a6f75bf56c9cfd76f114c6565470d196c3675525c0c"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/reports/audit.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 109932,
+      "sha256": "4db0a308915348b239811a4e2db4294726f3743aa4e28d14bcc70229e548feb3"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/reports/baseline_errors.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 522,
+      "sha256": "10604fd5f79eaeb293c65f7146db34e15becaae403fd3c299395795b7c2f65e3"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/reports/existing_vehicle_sizes.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 507,
+      "sha256": "6dfde4c00ec9382f56182710fe848e5a6ce32a9caa19d1ac31317e2f3904c9ec"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/reports/passport.md",
+      "role": "support",
+      "location": "library",
+      "bytes": 3874,
+      "sha256": "e26392b612c5a69f0dd167cb7dedbdf88ce7c38290bfa7e11fb4163ad77ca0d3"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/reports/source_check.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 1016,
+      "sha256": "4cebbcde3a26c724eec539176099e5e38888bafce791e9edbfaf060cff31cb11"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/reports/turn_check.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 2560,
+      "sha256": "cd212bb63dd6cd790c686fec4c276fe4fbd246e0d2144238783fbfe6cb736a2e"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/reports/unity_gate_axes.txt",
+      "role": "support",
+      "location": "library",
+      "bytes": 1209,
+      "sha256": "c06fd5657b57b4357f271b1403f4c0368190b8a71066798c14f133673383cf10"
+    },
+    {
+      "path": "assets/library/roads/outdoor_parking_v001/source/SIMUS_Outdoor_Parking_Lot.blend",
+      "role": "source",
+      "location": "library",
+      "bytes": 6663924,
+      "sha256": "23d7829e26a120427cfd2feeac9554f8fde9371734b6010b5aa94d391745b03c"
+    },
+    {
       "path": "assets/library/roads/parking_lot/README.md",
       "role": "support",
       "location": "library",
@@ -15661,6 +15997,468 @@
       "sha256": "61f4aeac52628d394a6d3ff31c696830c66486d297ae81e4afb91d47bda6ac45"
     },
     {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "78267264db1446ed3991e78d289252f097d695c242090ea92d3718a2e2561c46"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "f44e51fa7a2a7283d4a5b65044b740a4c77b2d02655158f856fcf7c1373f30cc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Blue charcoal powder coat.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2238,
+      "sha256": "39e4f8ff650c86e10fe37d57e40b9d2842c35b11e238bc343ecd299d19f15710"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Blue charcoal powder coat.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "4330187185e6e9a3c3d195982ee971ba9ed44e8b4675b51c900356682ba413fd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Brushed metal.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2219,
+      "sha256": "4740c43a75b947dbeff96d438c5597c9d9e577d9b58d543ed4d5fbbb04906d69"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Brushed metal.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "f60b446074072fb22398ff85da49b1c196a33f6e548cd22bbda6a2c4746328cc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Asphalt.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2272,
+      "sha256": "89197aa127211df56ac9fdf64ccd4ba638ab8c99e70c93987517ad2ab9a80c90"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Asphalt.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "5d75de7092e22f387b9537b772aa5dda691b355289c13d6526bc046aef7338cb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Blue.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2223,
+      "sha256": "af3d797b9d7259e5d45d47986d06a1b7e1549b3f052e4e1698eaa09921c60ad5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Blue.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "530a2a641399a49cdd6b0b9e7554831de190717803e1a394cbef4ce73f0703d5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Concrete.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2219,
+      "sha256": "6f4f4c158fc9db79bd226cd47e89551ec9905405269cf6878563c066d6791264"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Concrete.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "c473fb437f915f144b705cf3ab2d972b1b71dca9637afbb28e90cef43fcddc99"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Dark.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2225,
+      "sha256": "b4226d226ed94745be05625441a381f04ff550940224b6063e7908b24e8e7385"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Dark.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "4bd0eb45320b466d2f66f3a0215fad5e96e6ff04db37cf002a3ebbc596e151bf"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Glow.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2240,
+      "sha256": "2b448910bbf13c0d4c27bb383a25022eb2e1d8509b49cba5fcdee874772570d4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Glow.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "34520ed87fa6fa20a4756415c54714252d2efbe278dc5c96287b56ac5d04ca73"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Grass.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2223,
+      "sha256": "889149691b0137a0bf50b21773bbef5d63ce025e1e37109b885039bc918b387a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Grass.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "adcfe5874382e04b308cbea0e1910bb0804551e8036e1c02d2c1d38fc4bdaaa9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_GreenGlow.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2250,
+      "sha256": "9c6923e6588b481333f79518a94fc6b5c65e83b511d39837516a1c0de949778d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_GreenGlow.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "47d4cbac9d3b561f96bccbb958b66435ea08067eb12dca50a56a2ccb18f10ae8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Metal.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2219,
+      "sha256": "71a4fa1fa5804adb8c123df51190f9be2a1505fde7414dcf90c7ffc7491ec7cd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Metal.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "9781f56e86e0e9efbd4d5858f1f5dfe249eb1a53e3ce503bb31e8cc229b97e82"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Red.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2216,
+      "sha256": "f4f619be67b1380cd2ae72135a95eef4e84b8e9c04380a5cff854962d9c233e6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Red.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "f1e0902e738a4b7f288fb78ff83e4c7f6645501ec3f2a1c9fcca38e974659158"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_RedGlow.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2243,
+      "sha256": "b82d10395b8e55db2c239099eed7585160f68f76947e3587fe08e6f76d4eddfe"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_RedGlow.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "e4d09401ee9c87b036fb379f5e45f961f964518e43fb01441718d56a3aa4d616"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Screen.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2219,
+      "sha256": "0fee6444b58ea9aa522a77826499eef2ac3e02ef3ac646e507ec62be1d62dc75"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Screen.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "3a995f2369432a202db58acede058f0491943e89bfd599ce8d73cf0477adab25"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Shrub.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2224,
+      "sha256": "4fbbce16e9015ff1ebb9971c77b5a01d18a472d18823bf95c09351cc87ac3d84"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Shrub.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "94a57e35a32d36719df80973783da7bc66b1e22b3c79b25dc97b95301933bc11"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Teal.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2223,
+      "sha256": "7e97df754705149401947749abdaef982c85e883d26c059e7999cbdbd4a0cb90"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Teal.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "e3df741481ba2cc4e3bbf2e202145e6971cdef70e6f4343b6a6daac8032b2827"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_White.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2223,
+      "sha256": "b13f42f9532aaab99901c5c3295da38bb4527fcdaaae97cc66a002dc190ddaa2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_White.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "b99e72d41257705175682ecb9369ef36190f496111a365d811f75c68cad0aaed"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Yellow.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2216,
+      "sha256": "49a3afec72a7d9d20f91b8f884aea44121df02616607de0826f5ba2ffea8fb0b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Parking_Yellow.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "afb4db9991dcde47832c2e154ebac1c6ad63c640b3609d6f3da42a1f7173860c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Recess rubber.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2222,
+      "sha256": "1822228ee70d776d10ac529db170b4a8925c4bc650187b7f6ae392d28450d769"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/materials/Recess rubber.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "6106e8ab782b37e948b5d0fda7cd70eba09fd280348531d210dff24c7c4de7b7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "17c8bf3312a5316f04e7f3542e98479994b24401e081131bd539e968d22e637c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Outdoor_ParkingLot_Complete.fbx",
+      "role": "export",
+      "location": "unity_existing",
+      "bytes": 1363180,
+      "sha256": "ad67bf0522a7d31b235a0fcf7212eabb805d7e6c385a180291ad2330da7b1394"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Outdoor_ParkingLot_Complete.fbx.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 6291,
+      "sha256": "1a0d0b69ab9b1a97dbf863c2446a7c8450dff426ab087ddccc558ad407ed0285"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_ParkingSpace_Accessible.fbx",
+      "role": "export",
+      "location": "unity_existing",
+      "bytes": 62956,
+      "sha256": "0577854263f0c7d656608abd71700052a76f4c491a3958d797b1241d94850548"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_ParkingSpace_Accessible.fbx.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 6291,
+      "sha256": "62891e7b717eb9c570aad6277f276e9d435e9070a66e330b9f518589b6738717"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_ParkingSpace_EV.fbx",
+      "role": "export",
+      "location": "unity_existing",
+      "bytes": 21660,
+      "sha256": "49298a4525df957f7956459f1a680d696dfada3b6a6ed69980fbea9a936a1d1b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_ParkingSpace_EV.fbx.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 6291,
+      "sha256": "30a174b2ad506d1d71168749c8656322b7e8bbb9c49430d49163e45874639f71"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_ParkingSpace_Standard.fbx",
+      "role": "export",
+      "location": "unity_existing",
+      "bytes": 16060,
+      "sha256": "d4f6c580d305a1ce275e14e0437d85e4d9be19ca38611e71c1ff1142b93610a8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_ParkingSpace_Standard.fbx.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 6291,
+      "sha256": "b6acdf4408611194aaf933643d0affe5a83d91fd73a72538894975af8a8940fc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_EVCharger.fbx",
+      "role": "export",
+      "location": "unity_existing",
+      "bytes": 43052,
+      "sha256": "aaaa219fe87b4dbe5212d0e2a43bc010ff03078d758b95de56b2df874aeca6e0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_EVCharger.fbx.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 6291,
+      "sha256": "f64d8237c5a958c607353743a5bba211e60c60983939d6b2239e0c317f860c03"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_EntryGate.fbx",
+      "role": "export",
+      "location": "unity_existing",
+      "bytes": 79388,
+      "sha256": "b6a468fefe18ea3518db00311bbebe758064bf65a0fe50154d5b497301276478"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_EntryGate.fbx.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 6291,
+      "sha256": "5d9bec950dc89ac14cf91e52a2ceb6b96c855032c1ae7e96110204e17e28135f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_ExitGate.fbx",
+      "role": "export",
+      "location": "unity_existing",
+      "bytes": 79420,
+      "sha256": "23dac42b8c77b49436744ade69961489f63347aa72a34d0ecd488ec6160e0a98"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_ExitGate.fbx.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 6291,
+      "sha256": "c3f365807b994cf70484e2ab89f9a8f5e75b8e4c7300dc8f32acd79111486593"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_ModularProps.fbx",
+      "role": "export",
+      "location": "unity_existing",
+      "bytes": 838300,
+      "sha256": "224d8965d55c0f5170f4f7aaf67f537690816aaa7b589e37dd17f92a54e3cf15"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_ModularProps.fbx.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 6291,
+      "sha256": "29f5921e8d96385eb5cdc73a3a36ff3cb48b52312a72ee0cf0e9f32fd526fe5c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_PaymentMachine.fbx",
+      "role": "export",
+      "location": "unity_existing",
+      "bytes": 53964,
+      "sha256": "e1e74c3e1cbda260fc6d35357e4dfd94c79b6f91910336463704d1dc298d023e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_PaymentMachine.fbx.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 6291,
+      "sha256": "e704081d1427059da3a43dfda1e750cc4b9a9e8090da849369b72b66cf96a652"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_Sign.fbx",
+      "role": "export",
+      "location": "unity_existing",
+      "bytes": 29756,
+      "sha256": "8f43ba71d148c998f767e67e81c0374ab26ee1f73ef2e2a5d1069051bda5ef83"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_Sign.fbx.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 6291,
+      "sha256": "89fe96baa500f98ebba01670fbcd8fac55fa293c3a33a586fce4c33f2336579e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_TicketMachine.fbx",
+      "role": "export",
+      "location": "unity_existing",
+      "bytes": 54028,
+      "sha256": "9f86a8516b7d8e426b7cbb26f649102b748901d09e2e296b76f8b0128e5fb538"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_TicketMachine.fbx.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 6291,
+      "sha256": "8219d01fcb5e55e0a9710763e91b194ef71662bb9685f685bc31c032f664e6f5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_WheelStop.fbx",
+      "role": "export",
+      "location": "unity_existing",
+      "bytes": 22380,
+      "sha256": "eb092464ee4651ecd201a824dbaeddc076f79979ad290e52126630bb83e0f9d6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_WheelStop.fbx.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 6291,
+      "sha256": "029af36c69c9caef31e2a2c9981825693d8409101370462e9726c3db3a82ea8b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/textures.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "e16870bff0008020bf8ebb07833afa5901ab221a44d7eb5e7047694737180d24"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/textures/Parking_Asphalt_Albedo.png",
+      "role": "image",
+      "location": "unity_existing",
+      "bytes": 1191559,
+      "sha256": "f86dd78313ac1ba0e8a212a9f671ca5761e781db59cd41311c7cb1cf755f5a4e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/textures/Parking_Asphalt_Albedo.png.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 3007,
+      "sha256": "2e5bc99d3f1e98c1ebd74df3548e5445c30e36f7fc4efaeb973e5b14bf09005a"
+    },
+    {
       "path": "unity/Assets/SIMUS/Art/vegetation.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
@@ -16401,6 +17199,181 @@
       "location": "unity_existing",
       "bytes": 154,
       "sha256": "3a2e570f8d8f9800ab24416a12e9bb36c2136a0f8f3d05865f2f88769d509c05"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "20e425c8b86165f413d0d69bffb3c724c2baf6f540cef3c2c5b71762854d702f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_Outdoor_ParkingLot_Complete.prefab",
+      "role": "prefab",
+      "location": "unity_existing",
+      "bytes": 1139067,
+      "sha256": "34894b5e1f61c904aa50c72b01634c2406f64f07c360da0ae1c2c22f8fe484a0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_Outdoor_ParkingLot_Complete.prefab.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 154,
+      "sha256": "a34a9a436d662c29d12b1f933b08aae27a1a23c3716e7a9ac48ad9976dfdb98a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_ParkingSpace_Accessible.prefab",
+      "role": "prefab",
+      "location": "unity_existing",
+      "bytes": 47667,
+      "sha256": "4291bb67cbfe96be32cef5986330c7d6dd72497b390533a23f05aceb7e196e89"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_ParkingSpace_Accessible.prefab.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 154,
+      "sha256": "1d68275c45e1c713eddc2f064f9ee3959681664854818bc7881392c78a26b91f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_ParkingSpace_EV.prefab",
+      "role": "prefab",
+      "location": "unity_existing",
+      "bytes": 10782,
+      "sha256": "4fe07d3db5c4806b9212387578fdb59b0f060763c8ed18e1abc5f2f56c6606ba"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_ParkingSpace_EV.prefab.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 154,
+      "sha256": "afeb0cb8b2cc63c850282641f4380b9f13c735fd5c406e9c98326a887008c7f0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_ParkingSpace_Standard.prefab",
+      "role": "prefab",
+      "location": "unity_existing",
+      "bytes": 4544,
+      "sha256": "ae42b90302251e429af50014d2e30e60805d89f86258d7d108797ecc1024970b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_ParkingSpace_Standard.prefab.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 154,
+      "sha256": "183225504ba5c2935438334f69a0cf8318903e75d580e0088e823595c114e5cb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_Parking_EVCharger.prefab",
+      "role": "prefab",
+      "location": "unity_existing",
+      "bytes": 19731,
+      "sha256": "78ce6747834a2d7604753b7627a1f9c90bde31ebe41fcbb59bfb5bf9c1ef6dca"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_Parking_EVCharger.prefab.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 154,
+      "sha256": "aa7e137dfcf08d5435a67643a2f9e317072227fed73f8287c0c29ba629a2c418"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_Parking_EntryGate.prefab",
+      "role": "prefab",
+      "location": "unity_existing",
+      "bytes": 51968,
+      "sha256": "b68058f101909f11e4a65d3a52b26f62e115532eced0dd8768a5f8e47eb3fc9b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_Parking_EntryGate.prefab.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 154,
+      "sha256": "456323b618f1468561a9215c0740d4027dd17557b0cfb0537b11a543b8cff67b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_Parking_ExitGate.prefab",
+      "role": "prefab",
+      "location": "unity_existing",
+      "bytes": 51936,
+      "sha256": "417fee91d449383e344c8519af063f025709fe8b83c49460f3f6c823731912bf"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_Parking_ExitGate.prefab.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 154,
+      "sha256": "a02bb87442cad037f7ed3f88f39165480ec51166cd3756be815b4aa89ec512c9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_Parking_ModularProps.prefab",
+      "role": "prefab",
+      "location": "unity_existing",
+      "bytes": 636429,
+      "sha256": "eebd188ddc65195a6a375026ec3d22a7316d7126ae196c857e56a6a1aced43a0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_Parking_ModularProps.prefab.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 154,
+      "sha256": "dc572c29e579a12a9016880fd32f02629db8e0124249b2db3da49d3457618d20"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_Parking_PaymentMachine.prefab",
+      "role": "prefab",
+      "location": "unity_existing",
+      "bytes": 30456,
+      "sha256": "772ddb392d3e5f2b50383029ef9ea2eba9e28e941fb30fae9919e239afca3d31"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_Parking_PaymentMachine.prefab.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 154,
+      "sha256": "4dc38c9bb69fe9efb45e8db912e6ae8bd3389e49335e5229ca7f9de8c953001f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_Parking_Sign.prefab",
+      "role": "prefab",
+      "location": "unity_existing",
+      "bytes": 9897,
+      "sha256": "bf92009856b34d0f72d5e414495a8e6803529f9721454b4510f9287798cdec72"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_Parking_Sign.prefab.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 154,
+      "sha256": "c728d8cf9b3f3d6ab6aa814239c8a4803600061fc7daf082cf3d6bc192443c46"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_Parking_TicketMachine.prefab",
+      "role": "prefab",
+      "location": "unity_existing",
+      "bytes": 30455,
+      "sha256": "ed4f25c48f5bea1a7137604a1bec8494e472856d5727eea172c0f218b2d74f3d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_Parking_TicketMachine.prefab.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 154,
+      "sha256": "e722993845e51002374ffcce838f865875e982eae5eaf480bd873322dca8478e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_Parking_WheelStop.prefab",
+      "role": "prefab",
+      "location": "unity_existing",
+      "bytes": 9094,
+      "sha256": "598b183c5ad5d7221ba06590a9001e5b8ea12949f8e47bea7b078493ba8b3b78"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_Parking_WheelStop.prefab.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 154,
+      "sha256": "1a9414882384eb6df7b979f673b7803c77d62e093d4f1f1a8b4db2a1d653ed13"
     },
     {
       "path": "unity/Assets/SIMUS/Runtime.meta",
