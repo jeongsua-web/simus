@@ -1,0 +1,12 @@
+[
+  {
+    "command": "python3 scripts/assets/catalog.py",
+    "exit_code": 1,
+    "output": "ERROR: modular_character_happiness_animations_v001: hash mismatch unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Happiness_Animations.blend\nERROR: crying_child_v001: hash mismatch assets/library/characters/crying_child_v001/source/SIMUS_NPC_CryingChild.blend\nERROR: heavy_carrier_v001: hash mismatch assets/library/characters/heavy_carrier_v001/source/SIMUS_NPC_HeavyCarrier.blend\nERROR: heavy_box_v001: hash mismatch assets/library/characters/heavy_carrier_v001/source/SIMUS_NPC_HeavyCarrier.blend\n4221 files; 20 identical-content groups; 4 errors\n"
+  },
+  {
+    "command": "python3 scripts/assets/catalog.py --check",
+    "exit_code": 1,
+    "output": "ERROR: modular_character_happiness_animations_v001: hash mismatch unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Happiness_Animations.blend\nERROR: crying_child_v001: hash mismatch assets/library/characters/crying_child_v001/source/SIMUS_NPC_CryingChild.blend\nERROR: heavy_carrier_v001: hash mismatch assets/library/characters/heavy_carrier_v001/source/SIMUS_NPC_HeavyCarrier.blend\nERROR: heavy_box_v001: hash mismatch assets/library/characters/heavy_carrier_v001/source/SIMUS_NPC_HeavyCarrier.blend\nERROR: inventory is stale; run python3 scripts/assets/catalog.py\n4221 files; 20 identical-content groups; 5 errors\n"
+  }
+]

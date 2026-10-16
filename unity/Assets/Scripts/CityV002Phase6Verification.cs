@@ -10,6 +10,7 @@ using Unity.Profiling;
 namespace Simus
 {
     /// <summary>Explicitly instantiated in Play Mode by the editor bridge. No serialized stress actors.</summary>
+    [DefaultExecutionOrder(200)]
     public sealed class CityV002Phase6Verification : MonoBehaviour
     {
         [Serializable] public sealed class CameraSample
@@ -21,6 +22,8 @@ namespace Simus
         [Serializable] public sealed class PerformanceSample
         {
             public int npcCount, frames, activeAnimators, activeGrounding, activePatrols, activeGraphAdapters;
+            public int sceneActivePatrols, movingActors;
+            public float minimumActorMovement, totalActorMovement;
             public string status, measurementScope;
             public float wallSeconds, framesPerSecond, averageFrameMs, p95FrameMs, editorProcessCpuMsPerFrame, mainThreadProfilerMeanMs;
             public long unityAllocatedBytes, unityReservedBytes, processWorkingSetBytes;
@@ -51,6 +54,9 @@ namespace Simus
         readonly List<string> logs = new List<string>();
         readonly List<CameraSample> cameraSamples = new List<CameraSample>();
         readonly List<PerformanceSample> performanceSamples = new List<PerformanceSample>();
+        CameraSample activeFollow;
+        Transform activeFollowTarget;
+        void LateUpdate() { if (activeFollow != null && activeFollowTarget != null) SampleFollow(activeFollow, activeFollowTarget); }
 
         void Awake()
         {
@@ -80,16 +86,22 @@ namespace Simus
             cameraSamples.Add(new CameraSample { mode = "isometric overview", status = Mathf.Abs(view.orthographicSize - 260f) < 1f ? "PASS" : "FAIL", capture = "overview-game-playmode.png", notes = "Actual Play Mode Game camera, overviewSize260 with maximumZoom350; visual readability reviewed separately.", frames = 1 });
             preview.TopView(); yield return new WaitForSecondsRealtime(.3f); Capture("top-view-game-playmode.png");
             cameraSamples.Add(new CameraSample { mode = "top view", status = Mathf.Abs(view.orthographicSize - 235f) < 1f ? "PASS" : "FAIL", capture = "top-view-game-playmode.png", frames = 1 });
+            preview.Overview(); preview.target = new Vector3(143, 0, 65); view.orthographicSize = 68;
+            preview.previewControls = false;
+            // Explicit close inspection uses the same camera, without changing serialized preview settings.
+            view.transform.position = new Vector3(143,0,65) - view.transform.forward * 360; Capture("park-game-playmode.png"); preview.previewControls = true;
             var actor = navigation.actors[0]; preview.SetFollowTarget(actor.transform);
             var follow = new CameraSample { mode = "moving NPC follow", status = "RUNNING", minimumNpcY = float.PositiveInfinity, notes = "Viewport center + ground position checked while the preserved route actor moves; occlusion rays recorded alongside active reveal materials." };
             float routeStarted = Time.realtimeSinceStartup, captureAt = routeStarted + 3;
             bool captured = false;
+            activeFollow = follow; activeFollowTarget = actor.transform;
             while (!navigation.AllArrived && Time.realtimeSinceStartup - routeStarted < 240)
             {
-                yield return new WaitForEndOfFrame(); SampleFollow(follow, actor.transform);
+                yield return null;
                 if (!captured && Time.realtimeSinceStartup >= captureAt) { Capture("npc-follow-game-playmode.png"); follow.capture = "npc-follow-game-playmode.png"; captured = true; }
                 if (Time.frameCount % 180 == 0) Save("RUNNING");
             }
+            activeFollow = null;
             if (!captured) { Capture("npc-follow-game-playmode.png"); follow.capture = "npc-follow-game-playmode.png"; }
             evidence.routeWallSeconds = Time.realtimeSinceStartup - routeStarted;
             follow.status = follow.targetOffscreenFrames == 0 && follow.groundBelowFrames == 0 && follow.frames > 0 ? "PASS" : "FAIL"; cameraSamples.Add(follow);
@@ -105,7 +117,9 @@ namespace Simus
             yield return new WaitForSecondsRealtime(.5f);
             var apartment = new CameraSample { mode = "residential apartment NPC follow", status = "RUNNING", minimumNpcY = float.PositiveInfinity, notes = "B16 exterior approach; world-space building occlusion ray plus retained NPC reveal shader. Human visual review required for final readability." };
             float followStarted = Time.realtimeSinceStartup;
-            while (Time.realtimeSinceStartup - followStarted < 2) { yield return new WaitForEndOfFrame(); SampleFollow(apartment, apartmentActor.transform); }
+            activeFollow = apartment; activeFollowTarget = apartmentActor.transform;
+            while (Time.realtimeSinceStartup - followStarted < 2) yield return null;
+            activeFollow = null;
             Capture("npc-follow-apartment-game-playmode.png"); apartment.capture = "npc-follow-apartment-game-playmode.png";
             apartment.status = apartment.targetOffscreenFrames == 0 && apartment.groundBelowFrames == 0 ? "PASS" : "FAIL"; cameraSamples.Add(apartment);
             Destroy(apartmentActor); yield return null;
@@ -147,6 +161,9 @@ namespace Simus
             sample.activeGrounding = group.GetComponentsInChildren<NpcGrounding>().Count(a => a.isActiveAndEnabled);
             sample.activePatrols = group.GetComponentsInChildren<TestNpcPatrol>().Count(a => a.isActiveAndEnabled);
             sample.activeGraphAdapters = group.GetComponentsInChildren<CityV002NpcRouteAdapter>().Count(a => a.isActiveAndEnabled);
+            sample.sceneActivePatrols = FindObjectsByType<TestNpcPatrol>(FindObjectsSortMode.None).Count(a => a.isActiveAndEnabled);
+            var actors = group.GetComponentsInChildren<CityV002NpcRouteAdapter>();
+            var positions = actors.Select(a => a.transform.position).ToArray(); var movements = new float[actors.Length];
             var process = System.Diagnostics.Process.GetCurrentProcess(); double cpuStart = process.TotalProcessorTime.TotalMilliseconds;
             var times = new List<float>(); float begun = Time.realtimeSinceStartup, previous = begun;
             using (var mainThread = ProfilerRecorder.StartNew(ProfilerCategory.Internal, "Main Thread", 1))
@@ -155,6 +172,7 @@ namespace Simus
                 while (Time.realtimeSinceStartup - begun < 5)
                 {
                     yield return null; float now = Time.realtimeSinceStartup; times.Add((now - previous) * 1000); previous = now;
+                    for (int i = 0; i < actors.Length; i++) { movements[i] += Vector3.Distance(positions[i], actors[i].transform.position); positions[i] = actors[i].transform.position; }
                     if (mainThread.Valid && mainThread.LastValue > 0) { mainTotal += mainThread.LastValue / 1000000.0; mainSamples++; }
                 }
                 sample.mainThreadProfilerMeanMs = mainSamples > 0 ? (float)(mainTotal / mainSamples) : -1;
@@ -164,7 +182,8 @@ namespace Simus
             times.Sort(); sample.p95FrameMs = times.Count > 0 ? times[Mathf.Min(times.Count - 1, Mathf.FloorToInt(times.Count * .95f))] : -1;
             sample.editorProcessCpuMsPerFrame = (float)((process.TotalProcessorTime.TotalMilliseconds - cpuStart) / Mathf.Max(1,sample.frames));
             sample.unityAllocatedBytes = Profiler.GetTotalAllocatedMemoryLong(); sample.unityReservedBytes = Profiler.GetTotalReservedMemoryLong(); process.Refresh(); sample.processWorkingSetBytes = process.WorkingSet64;
-            sample.status = sample.frames > 0 && sample.activePatrols == count && sample.activeAnimators == count ? "PASS: measured" : "FAIL: requested actor workload not active";
+            sample.movingActors = movements.Count(m => m > .01f); sample.minimumActorMovement = movements.Min(); sample.totalActorMovement = movements.Sum();
+            sample.status = sample.frames > 0 && sample.activePatrols == count && sample.activeAnimators == count && sample.activeGrounding == count && sample.activeGraphAdapters == count && sample.sceneActivePatrols == count && sample.movingActors == count ? "PASS: measured; no performance target asserted" : "FAIL: requested actor workload not active";
             performanceSamples.Add(sample); Debug.Log("CITY_V002_PERF count=" + count + " fps=" + sample.framesPerSecond + " cpu_ms_per_frame=" + sample.editorProcessCpuMsPerFrame); Save("RUNNING");
             Destroy(group); yield return null; yield return null;
         }

@@ -34,6 +34,8 @@ public static class CityRebuildV002Phase4Setup
             throw new InvalidOperationException("Approved v002 graph contract does not match.");
         var scene = EditorSceneManager.OpenScene(CityRebuildV002Setup.ScenePath);
         var city = scene.GetRootGameObjects().Single(g => g.name == "CityRebuild_v002");
+        if (city.transform.Find("12_River_Phase4") != null)
+            throw new InvalidOperationException("This scene already contains the excavated Phase 4 river. Use Apply Phase 4 River to update it; rebuilding the original park would overwrite its carved ground and trail approaches.");
         var buildingsBefore = BuildingSnapshot(city.transform);
         sportBounds.Clear();
         foreach (var r in city.transform.Find("07_CampusFacilities").GetComponentsInChildren<MeshRenderer>())
@@ -261,7 +263,8 @@ public static class CityRebuildV002Phase4Setup
         var asset = AssetDatabase.LoadAssetAtPath<GameObject>(path);
         if (asset == null) throw new InvalidOperationException("Missing actual prop FBX: " + path);
         var go = (GameObject)PrefabUtility.InstantiatePrefab(asset, parent); go.name = name;
-        go.transform.rotation = Quaternion.Euler(0, yaw + 180, 0);
+        // Retain the imported FBX axis conversion (props are authored Z-up).
+        go.transform.rotation = Quaternion.Euler(0, yaw + 180, 0) * asset.transform.localRotation;
         var b = Bounds(go); go.transform.position += new Vector3(p.x - b.center.x, groundY - b.min.y, p.y - b.center.z); b = Bounds(go);
         if (OverlapsWalk(b, .65f) || occupied.Any(o => IntersectsXZ(o, b, .8f)) || !ClearOfRoadsAndBuildings(p, Mathf.Max(b.extents.x, b.extents.z) + .7f))
         { UnityEngine.Object.DestroyImmediate(go); return false; }

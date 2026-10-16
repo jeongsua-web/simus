@@ -77,3 +77,37 @@ Use the existing CSV's projected candidates to locate real door/ramp geometry in
 | Warning disappearance after new mesh cook | NOT TESTED by this audit | Requires fresh Unity execution log |
 
 Catalog generation/check is coordinated by the main agent after all Unity scene assets settle, avoiding simultaneous inventory writes. This audit adds documentation and one inspection script; it does not alter logical asset registration or approval status.
+
+## 2026-10-16 Phase 4 resume — asset verification
+
+This continuation inspected the existing saved city and the river work already present in the working tree. No Blender source, export, importer metadata, GUID, original scene or building placement was edited by this asset audit. The Unity specialist owns the incremental scene corrections and fresh execution evidence. No Blender re-export is necessary for the issues below.
+
+The six binary FBX files listed above were **read again**, using the existing `read_fbx` implementation without calling its report-writing `main()`. All six current SHA-256 values match the existing [metadata evidence](city-rebuild-v002-phase4-fbx-metadata.json). Mesh/vertex counts remain PM1 1/17,460, PM2 1/5,768, city-state tree 1/26, city-state bench 1/120, street tree 1/26 and reused bench 1/840. This establishes current binary readability and unchanged geometry, not fresh Blender import or Unity Play Mode success.
+
+The current `Campus.fbx` SHA-256 also matches [the prior source-to-FBX map](city-rebuild-v002-campus-fbx-map.json). The saved city has actual `MeshFilter.m_Mesh` references to that FBX GUID `db95cddf399db4b02837fe4bb12a675e` for `Sports_field`, `Basketball_court`, `Tennis_court` and `Tennis_net`. These facilities are existing FBX meshes copied into editable scene objects; their reuse does not depend on introducing proxy boxes or repeating Blender conversion.
+
+### Tree orientation and missing benches found at resume
+
+Before the Unity specialist's new Apply, the saved scene contains **58 street-tree prefab instances and zero reused-bench prefab instances**. This matches the earlier Phase 4 report's 32 park + 14 campus + 12 roadside trees and `additional_benches=0`. The original park modules may contain bench-shaped connected parts, but this does not prove that recognizable benches survived the pedestrian-clearance extraction. The earlier assembly PASS is therefore insufficient evidence for completing the bench requirement. The revised Phase 4 code requires at least two independently placed actual bench FBXs; its execution and current scene result must be checked separately.
+
+The old `TryProp` assignment `go.transform.rotation = Quaternion.Euler(0, yaw + 180, 0)` replaces the imported prefab's native root orientation. Both `STREET_TREE.fbx` and `REUSED_BENCH.fbx` encode a binary model rotation approximately `(90,0,180)` and use importer `bakeAxisConversion=0`. The tree geometry's long axis is raw local Z. Discarding its imported rotation explains the sideways trees noted in [river QA](city-rebuild-v002-river-qa.md).
+
+Preserve the imported prefab's native local rotation/scale inside a separate yaw-only placement wrapper, or compose the yaw quaternion with `asset.transform.localRotation`. Keep the importer `.meta` unchanged. Then calculate loaded world bounds and ground the object again. Native geometry measurements provide useful sanity checks: the tree's raw X×Y×Z dimensions are approximately **2.6833×2.5519×4.6875m**, with uniform native scale **1.014276**, so its upright height is about **4.7544m**; the bench is approximately **1.8000×0.5675×0.9725m**, with upright height **0.9725m**. World footprint rotates with placement yaw, so compare vertical height and orientation rather than expecting an invariant axis-aligned X/Z extent. The tree-trunk and bench collision objects also need a world-upright frame after the visual orientation is restored.
+
+These findings and the existing door-marker evidence were sent directly to the Unity specialist. The saved scene must be corrected incrementally; rerunning the original city generator or replacing the existing river implementation is unnecessary.
+
+### Actual door access evidence to retain
+
+The [55-placement entry CSV](city-rebuild-v002-external-entry-evidence.csv) remains valid source-geometry evidence; it explicitly does not claim door threshold, outward-normal or walkability verification. For the 39 provisional approach-direction conflicts, retain the approved building position/yaw and create scene-only exterior connectors from the graph approach to the actual door/ramp. The source marker should be transformed using the calibrated imported-model frame, then checked against the visible door/ramp geometry, the building mesh collider and a body-width sweep. A straight connector through a footprint or a ray that lands on the broad city ground is insufficient. For campus buildings, the preserved individual `ENTRY_GLASS_i` and `ENTRY_STEP_i` FBX renderers permit direct scene-space marker inspection. No architectural source modification is justified by the existing evidence.
+
+| Resume asset inspection | Status | Limit |
+|---|---|---|
+| Six existing park/tree/bench FBX binaries readable and unchanged | PASS | Binary inspection only |
+| Existing sports facilities reference actual Campus FBX meshes | PASS | Saved scene serialization inspected |
+| Existing park modules reusable through connected-component derivatives | PASS | Original merged FBXs remain preserved |
+| Cause of sideways prop orientation identified | PASS | Native rotation overwritten in old placement code |
+| Recognizable upright trees and benches after scene correction | NOT TESTED by asset audit | Requires fresh Unity Apply and captures |
+| Actual door/ramp exterior connections and body clearance | NOT TESTED by asset audit | Unity runtime inspection required |
+| New Blender source/export required for Phase 4 | No | Existing FBX geometry is sufficient |
+
+Catalog generation and `--check` remain coordinated by the main agent after the scene/assets settle. Asset registration and `received`/`approved` states were not changed by this continuation.

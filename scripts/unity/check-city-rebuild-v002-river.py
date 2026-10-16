@@ -67,6 +67,21 @@ def scene_blocks(path):
     return text, blocks, names, transforms
 
 
+def height_at(point, triangles):
+    """Vertical triangle intersection, including boundary tolerance; not physics."""
+    x, z = point
+    result = []
+    for a, b, c in triangles:
+        denominator = (b[2]-c[2])*(a[0]-c[0]) + (c[0]-b[0])*(a[2]-c[2])
+        if abs(denominator) < 1e-10:
+            continue
+        u = ((b[2]-c[2])*(x-c[0]) + (c[0]-b[0])*(z-c[2])) / denominator
+        v = ((c[2]-a[2])*(x-c[0]) + (a[0]-c[0])*(z-c[2])) / denominator
+        if min(u, v, 1-u-v) >= -1e-5:
+            result.append(u*a[1] + v*b[1] + (1-u-v)*c[1])
+    return result
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--design-only', action='store_true')
@@ -180,6 +195,162 @@ def main():
         record('scene_asset_guids_resolve_uniquely', not missing and not duplicate, {'missing': missing, 'duplicates': duplicate})
         river_names = [name for name in names.values() if 'River' in name or 'RIVER_' in name]
         record('river_scene_objects_present', len(river_names) > 3, river_names)
+        surface_reader = module('v002_mesh_triangles', ROOT / 'scripts/unity/check-city-rebuild-v002-surfaces.py')
+        desired = {'CityGround': 'Carved_CityGround', 'EastPark_Lawn': 'Carved_EastPark_Lawn',
+                   'River_Water_Surface': 'River_Water_Surface', 'River_Excavated_Bed_Banks': 'River_Excavated_Bed_Banks',
+                   'River_W_BankTrail': 'River_W_BankTrail', 'River_E_BankTrail': 'River_E_BankTrail',
+                   'River_Closed_Bowl_0': 'River_Closed_Bowl_0', 'River_Closed_Bowl_1': 'River_Closed_Bowl_1',
+                   'River_Bridge_0_Deck': 'River_Bridge_0_Deck', 'River_Bridge_1_Deck': 'River_Bridge_1_Deck'}
+        geometry, mesh_references, issues = {}, {}, []
+        for object_name, asset_name in desired.items():
+            go = current_by_name.get(object_name)
+            path = SCENE.parent / 'river_meshes' / (asset_name + '.asset')
+            if go is None or not path.is_file():
+                issues.append(object_name + ': missing object or mesh')
+                continue
+            guid = re.search(r'^guid: ([0-9a-f]{32})$', Path(str(path)+'.meta').read_text(), re.M).group(1)
+            components = [(kind, body) for kind, body in blocks.values() if re.search(r'm_GameObject: \{fileID: ' + str(go) + r'\}', body)]
+            filters = [body for kind, body in components if kind == 33]
+            colliders = [body for kind, body in components if kind == 64]
+            if not re.search(r'^  m_IsActive: 1$', blocks[go][1], re.M) or any(not re.search(r'^  m_Enabled: 1$', body, re.M) for body in colliders):
+                issues.append(object_name + ': inactive object or disabled collider')
+            for body in filters + colliders:
+                match = re.search(r'm_Mesh: \{fileID: \d+, guid: ([0-9a-f]+), type: \d+\}', body)
+                if not match or match.group(1) != guid:
+                    issues.append(object_name + ': renderer/collider has unexpected mesh')
+            if len(filters) != 1 or (object_name != 'River_Water_Surface' and len(colliders) != 1) or (object_name == 'River_Water_Surface' and colliders):
+                issues.append(object_name + ': unexpected filter/collider count')
+            # All generated river surfaces are world-space meshes on identity transforms.
+            cursor = transforms[go][0]
+            while cursor:
+                body = blocks[cursor][1]
+                for key, expected in [('m_LocalPosition', (0,0,0)), ('m_LocalScale', (1,1,1)), ('m_LocalRotation', (0,0,0,1))]:
+                    match = re.search(r'^  ' + key + r': \{([^}]+)\}', body, re.M)
+                    actual = tuple(float(n) for n in re.findall(r': ([-+0-9.eE]+)', match.group(1)))
+                    if any(abs(a-b) > 1e-7 for a, b in zip(actual, expected)):
+                        issues.append(object_name + ': nonidentity ancestor ' + str(cursor))
+                cursor = int(re.search(r'm_Father: \{fileID: (-?\d+)\}', body).group(1))
+            _, triangles = surface_reader.triangles(path)
+            geometry[object_name] = triangles
+            mesh_references[object_name] = {'path': str(path.relative_to(ROOT)), 'sha256': sha(path), 'triangles': len(triangles)}
+        record('carved_meshes_and_water_collision_assignment', not issues and len(geometry) == len(desired), {'issues': issues, 'meshes': mesh_references, 'scope': 'Serialized generated meshes with identity world transform; water has no MeshCollider.'})
+        slivers=[]
+        for name in ['CityGround','EastPark_Lawn']:
+            for index,(a,b,c) in enumerate(geometry.get(name,[])):
+                longest=max(math.dist(a,b),math.dist(b,c),math.dist(c,a))
+                area2=abs((b[0]-a[0])*(c[2]-a[2])-(b[2]-a[2])*(c[0]-a[0]))
+                altitude=area2/max(longest,1e-15)
+                if altitude<.0001:slivers.append({'mesh':name,'triangle':index,'longest_edge':longest,'altitude_m':altitude})
+        record('carved_collider_has_no_thin_clipping_slivers',not slivers,{'minimum_triangle_altitude_m':.0001,'slivers':slivers,'reason':'Ray tests miss nearly collinear clipping remnants, but a walking capsule can collide with them.'})
+        area_meta = (ROOT / 'unity/Assets/Scripts/CityV002RiverArea.cs.meta').read_text()
+        area_guid = re.search(r'^guid: ([0-9a-f]+)$', area_meta, re.M).group(1)
+        area_body = next(body for kind, body in blocks.values() if kind == 114 and 'guid: '+area_guid in body)
+        serialized_line = re.search(r'^  centreline:\n(.*?)(?=^  \w)', area_body, re.M | re.S).group(1)
+        actual_line = [(float(x), float(z)) for x, y, z in re.findall(r'\{x: ([-+0-9.eE]+), y: ([-+0-9.eE]+), z: ([-+0-9.eE]+)\}', serialized_line)]
+        # Re-run interference checks using the coarser live serialized centerline.
+        segments = list(zip(actual_line, actual_line[1:]))
+        actual_clearances = {'park_boundary': distance_line(park+park[:1])-half,
+                             'roads': min(distance_line(r['points'])-half-r['carriageway_width']/2-max(r['sidewalk_left'],r['sidewalk_right']) for r in layout['roads']),
+                             'buildings': min(distance_poly(b['footprint_polygon'])-half for b in layout['buildings']+layout['campus']['components']),
+                             'park_modules': {m['id']: distance_poly(m['footprint_polygon'])-half for m in layout['park']['reuse_modules']}}
+        record('actual_serialized_curve_clearances', actual_clearances['park_boundary']>0 and actual_clearances['roads']>0 and actual_clearances['buildings']>0 and min(actual_clearances['park_modules'].values())>0,
+               actual_clearances)
+        profile_errors, retained_ground, sample_count = [], [], 0
+        at_grade_errors=[];at_grade_samples=0
+        if len(geometry) == len(desired) and actual_line:
+            # Span midpoints avoid touching the triangulation seam. Cross-section samples
+            # use the live serialized line rather than trusting planned control points.
+            for i, (a, b) in enumerate(zip(actual_line, actual_line[1:])):
+                length = math.dist(a, b)
+                normal = (-(b[1]-a[1])/length, (b[0]-a[0])/length)
+                center = ((a[0]+b[0])/2, (a[1]+b[1])/2)
+                for offset in [-4, 0, 4]:
+                    point = (center[0]+normal[0]*offset, center[1]+normal[1]*offset)
+                    sample_count += 1
+                    water_heights = height_at(point, geometry['River_Water_Surface'])
+                    bed_heights = height_at(point, geometry['River_Excavated_Bed_Banks'])
+                    if not water_heights or not bed_heights or min(bed_heights) >= min(water_heights)-.05:
+                        profile_errors.append({'segment': i, 'offset': offset, 'water': water_heights, 'bed': bed_heights})
+                    for name in ['CityGround', 'EastPark_Lawn']:
+                        if height_at(point, geometry[name]):
+                            retained_ground.append({'segment': i, 'offset': offset, 'object': name})
+                for offset, name in [(10, 'River_W_BankTrail'), (-10, 'River_E_BankTrail')]:
+                    point = (center[0]+normal[0]*offset, center[1]+normal[1]*offset)
+                    heights = height_at(point, geometry[name])
+                    if not heights or not (-.438 <= heights[0] <= .15):
+                        profile_errors.append({'segment': i, 'trail': name, 'heights': heights})
+                    nearest=min(qa.pt_seg(point,c,d) for e in layout['pedestrian_edges'] if e['kind']=='park_trail' for c,d in zip(e['points'],e['points'][1:]))
+                    if nearest<=1.0:
+                        at_grade_samples+=1
+                        if not heights or abs(heights[0]-.14)>.03:at_grade_errors.append({'segment':i,'trail':name,'height':heights,'existing_trail_distance':nearest})
+            cap_samples = 0
+            for end, index, neighbor in [(0,0,1),(1,len(actual_line)-1,len(actual_line)-2)]:
+                p, q = actual_line[index], actual_line[neighbor]
+                length = math.dist(p,q); outward = ((p[0]-q[0])/length,(p[1]-q[1])/length)
+                normal = (-outward[1],outward[0])
+                for angle in [math.pi*n/8 for n in range(1,8)]:
+                    for radius in [2,4]:
+                        point = (p[0]+radius*(normal[0]*math.cos(angle)+outward[0]*math.sin(angle)),p[1]+radius*(normal[1]*math.cos(angle)+outward[1]*math.sin(angle)))
+                        cap_samples += 1
+                        water_heights=height_at(point,geometry['River_Water_Surface'])
+                        bed_heights=height_at(point,geometry['River_Closed_Bowl_'+str(end)])
+                        if not water_heights or not bed_heights or min(bed_heights)>=min(water_heights)-.05:
+                            profile_errors.append({'cap':end,'point':point,'water':water_heights,'bed':bed_heights})
+                        for name in ['CityGround','EastPark_Lawn']:
+                            if height_at(point,geometry[name]): retained_ground.append({'cap':end,'point':point,'object':name})
+            slopes=[]
+            for name in ['River_W_BankTrail','River_E_BankTrail']:
+                for a,b,c in geometry[name]:
+                    u=[b[j]-a[j] for j in range(3)];v=[c[j]-a[j] for j in range(3)]
+                    nx,ny,nz=u[1]*v[2]-u[2]*v[1],u[2]*v[0]-u[0]*v[2],u[0]*v[1]-u[1]*v[0]
+                    if abs(ny)<1e-8: continue  # Vertical retaining sides are not walk surfaces.
+                    slopes.append(math.hypot(nx,nz)/abs(ny))
+            record('actual_bank_walkable_surface_grade', bool(slopes) and max(slopes)<=.06, {'maximum_grade': max(slopes) if slopes else None,'limit':.06,'surface_height_range_m':[-.428,.14],'reason':'Reported grading revision: raised at existing walk/deck crossings with 12m transition. Vertical retaining faces excluded.'})
+            record('bank_trails_meet_existing_walks_at_grade',at_grade_samples>0 and not at_grade_errors,{'samples':at_grade_samples,'expected_crossing_y':.14,'tolerance_m':.03,'errors':at_grade_errors})
+            record('actual_triangles_distinguish_bed_water_and_trails', not profile_errors, {'cross_section_water_samples': sample_count, 'endcap_water_samples':cap_samples, 'segments': len(actual_line)-1, 'errors': profile_errors[:30], 'water_y': -1.2, 'bed_center_y': -2, 'trail_y_range': [-.428,.14]})
+            record('no_old_ground_or_lawn_under_water', not retained_ground, {'samples': (sample_count+cap_samples)*2, 'retained_ground_hits': retained_ground[:30], 'qualification': 'Actual serialized visual and collision meshes agree; sampled interior water strip and both rounded endcaps.'})
+            graph_guid=re.search(r'^guid: ([0-9a-f]+)$',(ROOT/'unity/Assets/Scripts/CityV002PedestrianGraph.cs.meta').read_text(),re.M).group(1)
+            graph_body=next(body for kind,body in blocks.values() if kind==114 and 'guid: '+graph_guid in body)
+            edges_part=graph_body.split('  edges:\n',1)[1]
+            edge_blocks=re.split(r'^  - id: ',edges_part,flags=re.M)[1:]
+            serialized_edges={body.split('\n')[0]:[tuple(map(float,v)) for v in re.findall(r'\{x: ([-+0-9.eE]+), y: ([-+0-9.eE]+), z: ([-+0-9.eE]+)\}',body)] for body in edge_blocks}
+            graph_changes=[]
+            for edge in layout['pedestrian_edges']:
+                live=serialized_edges.get(edge['id'],[])
+                if len(live)!=len(edge['points']) or any(math.dist((v[0],v[2]),p)>.001 for v,p in zip(live,edge['points'])):
+                    graph_changes.append(edge['id'])
+            record('original_409_graph_paths_preserved',not graph_changes,{'source_edges':len(layout['pedestrian_edges']),'live_edges':len(serialized_edges),'changed_or_missing':graph_changes,'scope':'Existing path IDs and ordered XZ polyline points, including both original bridge-crossing paths.'})
+            wet_failures=[];bridge_support_failures=[];graph_samples=wet_samples=0
+            buried_ramps=[];ramp_samples=0
+            for edge_body in edge_blocks:
+                edge_id=edge_body.split('\n')[0]
+                edge_points=[tuple(map(float,v)) for v in re.findall(r'\{x: ([-+0-9.eE]+), y: ([-+0-9.eE]+), z: ([-+0-9.eE]+)\}',edge_body)]
+                for a,b in zip(edge_points,edge_points[1:]):
+                    if max(a[0],b[0])<100 or min(a[0],b[0])>151 or max(a[2],b[2])<-30 or min(a[2],b[2])>173:continue
+                    count=max(1,math.ceil(math.dist(a,b)/.3))
+                    for k in range(count+1):
+                        point=tuple(a[j]+(b[j]-a[j])*k/count for j in range(3));xz=(point[0],point[2]);graph_samples+=1
+                        if edge_id.startswith('RIVER_RAMP_'):
+                            run=math.hypot(b[0]-a[0],b[2]-a[2]);normal=(-(b[2]-a[2])/run,(b[0]-a[0])/run)
+                            for offset in [-1,0,1]:
+                                rp=(xz[0]+normal[0]*offset,xz[1]+normal[1]*offset);ramp_samples+=1
+                                for name in ['CityGround','EastPark_Lawn','River_Excavated_Bed_Banks']:
+                                    heights=height_at(rp,geometry[name])
+                                    if heights and max(heights)>point[1]-.02+.06:buried_ramps.append({'edge':edge_id,'point':rp,'expected_surface_y':point[1]-.02,'terrain':name,'terrain_height':max(heights)})
+                        distance=min(qa.pt_seg(xz,c,d) for c,d in segments)
+                        if distance>=wet+.35:continue
+                        wet_samples+=1
+                        allowed=[]
+                        for index,bridge in enumerate(design['bridges']):
+                            c,d=bridge['endpoints'];length=math.dist(c,d);direction=((d[0]-c[0])/length,(d[1]-c[1])/length);q=(xz[0]-c[0],xz[1]-c[1]);along=q[0]*direction[0]+q[1]*direction[1];across=abs(-q[0]*direction[1]+q[1]*direction[0])
+                            if -.35<=along<=length+.35 and across<=1.5-.35 and abs(point[1]-.16)<=.1:
+                                allowed.append(index)
+                        if not allowed:
+                            wet_failures.append({'edge':edge_id,'point':point})
+                        elif not any(any(abs(h-(point[1]-.02))<.06 for h in height_at(xz,geometry['River_Bridge_'+str(i)+'_Deck'])) for i in allowed):
+                            bridge_support_failures.append({'edge':edge_id,'point':point})
+            record('actual_graph_wet_crossings_have_supported_bridges',not wet_failures and not bridge_support_failures and wet_samples>0,{'graph_samples_near_river':graph_samples,'wet_crossing_samples':wet_samples,'npc_radius_m':.35,'sample_spacing_m':.3,'wet_failures':wet_failures[:20],'missing_bridge_support':bridge_support_failures[:20],'scope':'Serialized route centerlines expanded by NPC radius; actual deck mesh height required. Not a Play Mode trajectory or full path-width test.'})
+            record('bridge_ramp_width_not_buried_in_terrain',ramp_samples>0 and not buried_ramps,{'samples':ramp_samples,'sample_offsets_m':[-1,0,1],'buried_points':buried_ramps[:30],'scope':'Actual graph height versus generated ground/lawn/bed triangles; <=.3m along ramps and 0/+-1m lateral samples.'})
 
     result = {'scope': 'Independent sampled plan geometry and serialized artifact review only; no Unity physics/runtime or exhibition approval.', 'scene_sha256': sha(SCENE), 'design_sha256': sha(PLAN/'river-design.json'), 'checks': checks, 'status': 'FAIL' if any(c['status'] == 'FAIL' for c in checks) else 'PASS_STATIC_ONLY'}
     args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')

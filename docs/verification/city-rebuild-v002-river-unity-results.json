@@ -1,7 +1,7 @@
 {
   "status": "PASS: river assembled and graph/physics editor audit completed; Play Mode pending separately",
-  "scene_sha256": "992f8087fe5fd9480e9e2388dbddefb4d1eefc00db3b28a796fe2bbe79a1cd2c",
-  "design_sha256": "5eb5cbfc029b98bc567ba504d2d8e3df7ad660ef359599edc6dda2328b1f3265",
+  "scene_sha256": "876312dfcfc84528eee76637f56a0b29d52a6922511d5305cae2daa361a60798",
+  "design_sha256": "386f1189a99cadf0da7448d0aa2a5216ed504d0c99f92e089b04cfd51f18f1b5",
   "unity_version": "6000.3.24f1",
   "generated_assets": [
     "Assets/SIMUS/Scenes/city_rebuild_v002/river_materials/riverbed_ochre.mat",
@@ -20,6 +20,8 @@
     "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Water_Surface.asset",
     "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_W_BankTrail.asset",
     "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_E_BankTrail.asset",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Closed_Cap_Trail_0.asset",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Closed_Cap_Trail_1.asset",
     "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/Existing_Trail_Dry_Approach_Berms.asset",
     "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Bridge_0_Deck.asset",
     "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Ramp_0_0.asset",
@@ -403,8 +405,20 @@
       "length_m": 28.6937237,
       "deck_y": 0.14,
       "clear_width_m": 3,
-      "actual_fbx": "NOT YET AVAILABLE: procedural deck retained",
-      "rail_segments": 24,
+      "actual_fbx": "Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_FOOTBRIDGE_NORTH_28_70.fbx",
+      "rail_segments": 13,
+      "imported_deck_native_size": [
+        3.4,
+        0.400003374,
+        28.6999989
+      ],
+      "placed_visual_world_y_size": 0.400003374,
+      "placed_visual_deck_y": 0.148001716,
+      "rail_native_size": [
+        0.16,
+        1.1,
+        2.0
+      ],
       "polygon": [
         [
           112.693985,
@@ -430,8 +444,20 @@
       "length_m": 32.0919342,
       "deck_y": 0.14,
       "clear_width_m": 3,
-      "actual_fbx": "NOT YET AVAILABLE: procedural deck retained",
-      "rail_segments": 26,
+      "actual_fbx": "Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_FOOTBRIDGE_SOUTH_32_10.fbx",
+      "rail_segments": 19,
+      "imported_deck_native_size": [
+        3.4,
+        0.400003761,
+        32.0999947
+      ],
+      "placed_visual_world_y_size": 0.400003761,
+      "placed_visual_deck_y": 0.148001909,
+      "rail_native_size": [
+        0.16,
+        1.1,
+        2.0
+      ],
       "polygon": [
         [
           133.806641,
@@ -455,11 +481,38 @@
   "graph_audit": {
     "nodes": 572,
     "edges": 597,
-    "samples": 35635,
+    "samples": 35489,
+    "finite_width_samples": 7461,
+    "capsule_radius_m": 0.2,
+    "capsule_blocked": 0,
+    "actual_physical_bridge_hits": 665,
     "wet_violations": 0,
     "unsupported": 0,
     "maximum_support_height_error_m": 0.16
   },
+  "depth_audit": {
+    "axis_samples": 86,
+    "old_flat_ground_hits_beneath_water": 0,
+    "missing_bed_hits": 0,
+    "bed_y": -2,
+    "water_y": -1.2,
+    "ground_y": -0.02,
+    "water_has_collider": false
+  },
+  "preserved_inactive_trees_in_excavation": [
+    "ParkTree_3",
+    "ParkTree_6",
+    "ParkTree_9",
+    "ParkTree_11",
+    "ParkTree_12",
+    "ParkTree_14",
+    "ParkTree_17",
+    "ParkTree_22",
+    "ParkTree_23",
+    "ParkTree_25",
+    "ParkTree_26",
+    "ParkTree_28"
+  ],
   "building_transforms_unchanged": true,
   "protected_hashes": {
     "../docs/planning/city_rebuild_v002/layout.json": "3e98ea485bd92dc9c2528d0420b5999a0336f700270c0f73f7630aa214fbd105",

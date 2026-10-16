@@ -14,6 +14,8 @@ public static class CityRebuildV002Phase47Bridge
     const string Request = "/tmp/simus-v002-phase47-request.txt";
     const string Status = "/tmp/simus-v002-phase47-status.json";
     const string Pending = "Simus.V002.Phase47.Pending";
+    const string BatchPending = "Simus.V002.Phase47.BatchPending";
+    const string ExitCode = "Simus.V002.Phase47.ExitCode";
     static double nextPoll;
     static CityRebuildV002Phase47Bridge()
     {
@@ -21,6 +23,13 @@ public static class CityRebuildV002Phase47Bridge
         EditorApplication.playModeStateChanged += OnPlayState;
     }
     static void Write(string state, string detail) => File.WriteAllText(Status, new JObject { ["state"] = state, ["detail"] = detail, ["utc"] = DateTime.UtcNow.ToString("o") }.ToString());
+    public static void RunBatch()
+    {
+        CityRebuildV002Completion.Prepare();
+        SessionState.SetBool(BatchPending, true);
+        SessionState.SetBool(Pending, true);
+        EditorApplication.isPlaying = true;
+    }
     static void Poll()
     {
         if (EditorApplication.timeSinceStartup < nextPoll || EditorApplication.isCompiling || EditorApplication.isUpdating) return;
@@ -83,8 +92,14 @@ public static class CityRebuildV002Phase47Bridge
             FocusGameView();
             SessionState.SetBool(Pending, false);
             var runner = new GameObject("Phase47_RuntimeOnly_Verification").AddComponent<CityV002Phase6Verification>();
-            runner.Completed += detail => { Write("COMPLETE", detail); EditorApplication.delayCall += () => EditorApplication.isPlaying = false; };
+            runner.Completed += detail => { Write("COMPLETE", detail); SessionState.SetInt(ExitCode, detail.StartsWith("COMPLETE") ? 0 : 1); EditorApplication.delayCall += () => EditorApplication.isPlaying = false; };
             Write("RUNNING", "Route round trips then camera captures and 1/100/500/1000 NPC samples");
+        }
+        else if (state == PlayModeStateChange.EnteredEditMode && SessionState.GetBool(BatchPending, false))
+        {
+            SessionState.SetBool(BatchPending, false);
+            CityRebuildV002Completion.VerifyRuntimeInputs();
+            EditorApplication.Exit(SessionState.GetInt(ExitCode, 2));
         }
     }
     static void FocusGameView()
