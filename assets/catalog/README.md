@@ -124,3 +124,9 @@ Phase 4 공원 범위에 [하천 설계](../../docs/planning/city_rebuild_v002/r
 - [바리케이드·고깔콘·연결봉 세트](../library/props/road_control_v001/README.md): 독립모델8개, 프리팹8개, 경고등 별도.
 - [정체불명의 운송 상자](../library/props/mystery_crate_v001/README.md): 경첩85도, 닫힘/열림 프리팹2개, 선택적 내부 발광.
 - Blender 원본2개, Unity FBX9개, 개별 BoxCollider·공유재질·검수 이미지 및 보고서. received, LOD0, 기존 맵 미배치.
+
+
+## 2026-10-16 대학 축제 모듈형 부스
+
+- [기본형·음식·게임·안내 부스](../library/props/festival_booth_v001/README.md): 공통 천막 구조, 기존 현수막·깃발·장식 조명 재사용.
+- Blender 원본1개, Unity FBX4개와 프리팹4개, 공유 재질·현수막 텍스처·검수 이미지. received, LOD0, 기존 맵 미배치.
