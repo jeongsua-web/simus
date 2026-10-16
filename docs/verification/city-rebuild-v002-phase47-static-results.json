@@ -1,26 +1,43 @@
 {
   "scope": "Independent static artifact checks only; PASS here does not prove Unity compile/load/Play Mode, animation, collision-free movement, camera or performance.",
-  "scene_sha256": "1ab548d80630023e9ebe5361643cea30d08235820feb35d5045e71770c2c98db",
+  "scene_sha256": "06f7da70f08fbd16e4075441d596ca0add45b2d72cf8b0f01d68f047db187466",
   "layout_sha256": "3e98ea485bd92dc9c2528d0420b5999a0336f700270c0f73f7630aa214fbd105",
   "checks": [
     {
       "check": "phase47_protected_baseline",
       "status": "PASS",
       "evidence": {
-        "files": 2131,
+        "baseline": "docs/verification/city-rebuild-v002-phase47-continue-baseline.json",
+        "files": 2180,
         "unexpected_changes": [],
         "authorized_working_changes": [
+          "unity/Assets/Editor/CityRebuildV002Completion.cs",
+          "unity/Assets/Editor/CityRebuildV002Phase47Bridge.cs",
           "unity/Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity",
-          "unity/Assets/Scripts/CityPreviewCamera.cs",
+          "unity/Assets/SIMUS/Scenes/city_rebuild_v002/README.md",
+          "unity/Assets/Scripts/CityV002Phase6Verification.cs",
           "unity/Assets/Scripts/NpcOcclusionReveal.cs"
         ],
-        "preexisting_dirty_state": " M assets/catalog/README.md\n M scripts/unity/check-city-rebuild-v002.py\n M unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Dense_Realistic_University_Map_03.blend.meta\n?? docs/verification/city-rebuild-v002-blender-fbx-audit.json\n?? docs/verification/city-rebuild-v002-blender.md\n?? docs/verification/city-rebuild-v002-campus-fbx-map.json\n?? docs/verification/city-rebuild-v002-campus-unity-import.json\n?? docs/verification/city-rebuild-v002-captures/\n?? docs/verification/city-rebuild-v002-external-entry-evidence.csv\n?? docs/verification/city-rebuild-v002-logs/\n?? docs/verification/city-rebuild-v002-phase3.md\n?? docs/verification/city-rebuild-v002-qa.md\n?? docs/verification/city-rebuild-v002-static-results.json\n?? docs/verification/city-rebuild-v002-surface-audit.json\n?? docs/verification/city-rebuild-v002-surface-results.json\n?? docs/verification/city-rebuild-v002-unity-results.json\n?? docs/verification/city-rebuild-v002-unity.md\n?? scripts/unity/check-city-rebuild-v002-surfaces.py\n?? unity/Assets/Editor/CityRebuildV002Setup.cs\n?? unity/Assets/Editor/CityRebuildV002Setup.cs.meta\n?? unity/Assets/Editor/CityRebuildV002SurfaceAudit.cs\n?? unity/Assets/Editor/CityRebuildV002SurfaceAudit.cs.meta\n?? unity/Assets/SIMUS/Scenes/city_rebuild_v002/\n"
+        "preexisting_dirty_state": ""
       }
     },
     {
       "check": "approved_layout_immutable",
       "status": "PASS",
       "evidence": "3e98ea485bd92dc9c2528d0420b5999a0336f700270c0f73f7630aa214fbd105"
+    },
+    {
+      "check": "approved_csv_placements_match_layout",
+      "status": "PASS",
+      "evidence": []
+    },
+    {
+      "check": "approved_building_envelopes_nonoverlapping",
+      "status": "PASS",
+      "evidence": {
+        "overlaps": [],
+        "scope": "Approved envelopes only; preserved hierarchy and prior imported bounds are checked separately."
+      }
     },
     {
       "check": "approved_graph_connected_388_409_17",
@@ -37,7 +54,7 @@
       "check": "scene_local_references",
       "status": "PASS",
       "evidence": {
-        "objects": 6382,
+        "objects": 7547,
         "dangling": []
       }
     },
@@ -55,6 +72,574 @@
       "evidence": {
         "missing": [],
         "total": 69
+      }
+    },
+    {
+      "check": "all_69_buildings_reference_expected_fbx_in_hierarchy",
+      "status": "PASS",
+      "evidence": [
+        {
+          "id": "B01",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B02",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B03",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_02_NEIGHBORHOOD_CENTER.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_02_NEIGHBORHOOD_CENTER.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B04",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B05",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B06",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B07",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_02_NEIGHBORHOOD_CENTER.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_02_NEIGHBORHOOD_CENTER.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B08",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B09",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B10",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B11",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_02_NEIGHBORHOOD_CENTER.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_02_NEIGHBORHOOD_CENTER.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B12",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B13",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B14",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/department_store/DEPARTMENT.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/department_store/DEPARTMENT.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B15",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_A_MIDRISE.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_A_MIDRISE.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B16",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_B_MIDRISE.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_B_MIDRISE.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B17",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_C_MIDRISE.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_C_MIDRISE.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B18",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_A_MIDRISE.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_A_MIDRISE.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B19",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B20",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B21",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B22",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B23",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B24",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B25",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B26",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B27",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B28",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B29",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B30",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B31",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B32",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B33",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B34",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B35",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B36",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B37",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B38",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B39",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B40",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B41",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B42",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B43",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B44",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B45",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B46",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B47",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B48",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B49",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B50",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B51",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B52",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B53",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B54",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "B55",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "C00",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "C01",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "C02",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "C03",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "C04",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "C05",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "C06",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "C07",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "C08",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "C09",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "C10",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "C11",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "C12",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx"
+          ],
+          "matched": true
+        },
+        {
+          "id": "C13",
+          "expected_fbx": "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+          "actual_fbx": [
+            "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx"
+          ],
+          "matched": true
+        }
+      ]
+    },
+    {
+      "check": "existing_69_fbx_building_hierarchies_preserved",
+      "status": "PASS",
+      "evidence": {
+        "baseline_git_head": "cc8df47fe73519c57936adfd0c484fb6106c7891",
+        "compared": 69,
+        "modified": [],
+        "scope": "Exact serialized hierarchy, Transform, components and prefab overrides; original FBX/meta hashes protected separately. Does not replace a Unity import or physics test."
       }
     },
     {

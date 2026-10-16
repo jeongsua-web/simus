@@ -20,23 +20,34 @@ namespace Simus
             var map = root != null ? root.gameObject : GameObject.Find("SIMUS Completed Map 03");
             if (map == null || shader == null) return;
             var cache = new Dictionary<Material, Material>();
+            var campus = root != null ? root.Find("06_CampusBuildings_14") : null;
+            var external = root != null ? root.Find("08_ExternalBuildings_55") : null;
             foreach (var renderer in map.GetComponentsInChildren<Renderer>(true))
             {
                 // A supplied city root can also contain runtime route actors. Their
                 // skinned meshes retain their original animation materials.
-                if (root != null && (renderer is SkinnedMeshRenderer || renderer.GetComponentInParent<Animator>() != null)) continue;
+                if (root != null)
+                {
+                    // Imported static buildings may carry an FBX Animator. Only actual
+                    // NPCs are excluded; terrain/trails retain their original depth shader.
+                    if (renderer is SkinnedMeshRenderer || renderer.GetComponentInParent<TestNpcPatrol>() != null) continue;
+                    if ((campus != null || external != null) &&
+                        !(campus != null && renderer.transform.IsChildOf(campus)) &&
+                        !(external != null && renderer.transform.IsChildOf(external))) continue;
+                }
                 var source = renderer.sharedMaterials;
                 // State props, transparent decals and animated pond materials must keep their shaders.
                 bool preserveStateMaterial = renderer.name.StartsWith("PLACED_", System.StringComparison.Ordinal);
                 foreach (var material in source)
                     if (material != null && (material.renderQueue >= 3000 || material.name.ToLowerInvariant().Contains("water")))
                         preserveStateMaterial = true;
-                if (preserveStateMaterial) continue;
+                if (preserveStateMaterial && root == null) continue;
                 originals.Add(renderer, source);
                 var replacement = (Material[])source.Clone();
                 for (int i = 0; i < source.Length; i++)
                 {
                     if (source[i] == null) continue;
+                    if (root != null && (source[i].renderQueue >= 3000 || source[i].name.ToLowerInvariant().Contains("water"))) continue;
                     if (!cache.TryGetValue(source[i], out var material))
                     {
                         material = new Material(source[i]) { shader = shader, name = source[i].name + " (NPC reveal)" };

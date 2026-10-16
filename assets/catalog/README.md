@@ -1,5 +1,9 @@
 # 에셋 찾기
 
+## CityRebuild_v002 Phase 4–7 후속 구현
+
+[작업 씬](../../unity/Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity)에 공원·하천과 보행 그래프가 추가되었다. 기존 공원 FBX 2개, STREET_TREE와 REUSED_BENCH를 재사용하며, 나무 축 보정과 벤치 배치는 원본 모델을 바꾸지 않고 씬에서 수정한다. 아래 Phase 1–3 기록은 당시 인계 상태다. 현재 실행 결과와 미검증 범위는 [Phase 7 QA](../../docs/verification/city-rebuild-v002-phase7-qa.md)를 확인한다. 에셋 승인 상태와 전시 map_version은 이 작업으로 변경하지 않는다.
+
 ## 2026-10-15 CityRebuild_v002 하천
 
 Phase 4 공원 범위에 [하천 설계](../../docs/planning/city_rebuild_v002/river-design.md)를 추가했다. 동쪽 공원 안의 10m 수면, 절개 하상·둔치, 양안 산책로는 Unity 씬 전용 생성 메시다. 신규 제작 모델은 [보행교 kit v001](../library/props/river_footbridge_v001/README.md) 한 묶음이며, 28.70m/32.10m deck와 별도 난간 모듈을 사용한다. Blender 원본/실제 FBX 재가져오기 검증이 포함되어 있고 상태는 `received`다. 실제 씬·NPC 검증 범위는 [하천 QA](../../docs/verification/city-rebuild-v002-river-qa.md)에서 확인한다. 기존 건물·도로·원본 맵 FBX의 대체본이나 전시 승인 에셋을 의미하지 않는다.

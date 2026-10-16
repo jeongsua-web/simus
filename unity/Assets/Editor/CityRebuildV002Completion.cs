@@ -88,12 +88,70 @@ public static class CityRebuildV002Completion
         EditorSceneManager.SaveScene(scene, CityRebuildV002Setup.ScenePath); AssetDatabase.SaveAssets();
         File.WriteAllText("../docs/verification/city-rebuild-v002-phase4-completion.json", new JObject { ["status"] = "PASS_EDITOR_ASSEMBLY", ["utc"] = DateTime.UtcNow.ToString("o"), ["cause"] = "Yaw-only override erased imported prop FBX root axis conversion; restore prefab rotation in working scene only.", ["trees"] = evidence, ["benches"] = benches.childCount, ["graph_nodes"] = graph.nodes.Length, ["graph_edges"] = graph.edges.Length, ["scene_sha256"] = Hash(CityRebuildV002Setup.ScenePath), ["fbx_originals_unchanged"] = true }.ToString());
         Debug.Log("CITY_V002_PHASE4_COMPLETION trees=" + trees.Length + " benches=" + benches.childCount + " graph=" + graph.nodes.Length + "/" + graph.edges.Length);
+        EnsureNavigation(graph, city);
         CityRebuildV002Phase47Bridge.ApplyCamera();
+        AuditBuildings(layout);
         var files = Directory.GetFiles("Assets/Scripts", "*.cs").Concat(Directory.GetFiles("Assets/Editor", "CityRebuildV002*.cs"))
             .Concat(Directory.GetFiles(CityRebuildV002Setup.Folder, "*", SearchOption.AllDirectories).Where(p => !p.EndsWith(".meta")))
             .Concat(new[] { "../docs/planning/city_rebuild_v002/layout.json", "../docs/planning/city_rebuild_v002/buildings.csv", "../docs/planning/city_rebuild_v002/campus-placements.csv", "ProjectSettings/EditorBuildSettings.asset", Tree, Bench });
         var hashes = new JObject(); foreach (var path in files.Distinct()) hashes[path] = Hash(path);
         File.WriteAllText(Inputs, new JObject { ["utc"] = DateTime.UtcNow.ToString("o"), ["status"] = "READY", ["files"] = hashes }.ToString());
+    }
+    static void AuditBuildings(JObject layout)
+    {
+        var city = GameObject.Find("CityRebuild_v002").transform;
+        var rows = new JArray();
+        foreach (var item in layout["campus"]["components"].Concat(layout["buildings"]))
+        {
+            string id = (string)item["id"], name = id + "_" + (string)(id.StartsWith("C") ? item["name"] : item["type"]);
+            var group = city.Find((id.StartsWith("C") ? "06_CampusBuildings_14/" : "08_ExternalBuildings_55/") + name);
+            if (group == null) throw new InvalidOperationException("Missing actual building: " + name);
+            var b = BoundsOf(group.gameObject);
+            var polygon = item["footprint_polygon"].Select(p => new Vector2((float)p[0], (float)p[1])).ToArray();
+            float error = new[] { Mathf.Abs(b.min.x - polygon.Min(p => p.x)), Mathf.Abs(b.max.x - polygon.Max(p => p.x)),
+                Mathf.Abs(b.min.z - polygon.Min(p => p.y)), Mathf.Abs(b.max.z - polygon.Max(p => p.y)), Mathf.Abs(b.size.y - (float)item["height"]) }.Max();
+            var meshes = group.GetComponentsInChildren<MeshFilter>().Where(f => f.sharedMesh != null).ToArray();
+            var paths = meshes.Select(f => AssetDatabase.GetAssetPath(f.sharedMesh)).Distinct().ToArray();
+            if (error > .025f || meshes.Length == 0 || paths.Any(p => !p.EndsWith(".fbx", StringComparison.OrdinalIgnoreCase)))
+                throw new InvalidOperationException("Actual FBX provenance/envelope audit failed: " + id + " error=" + error);
+            rows.Add(new JObject { ["id"] = id, ["status"] = "PASS", ["maximum_envelope_error_m"] = error,
+                ["bounds_min"] = V(b.min), ["bounds_max"] = V(b.max), ["root_position"] = V(group.position),
+                ["root_euler"] = V(group.eulerAngles), ["actual_fbx_mesh_paths"] = new JArray(paths), ["mesh_count"] = meshes.Length });
+        }
+        File.WriteAllText("../docs/verification/city-rebuild-v002-phase47-building-audit.json", new JObject {
+            ["status"] = "PASS", ["scene_sha256"] = Hash(CityRebuildV002Setup.ScenePath), ["utc"] = DateTime.UtcNow.ToString("o"),
+            ["scope"] = "Saved scene loaded in Unity; actual FBX MeshFilter provenance and renderer world envelope matches approved polygon within 0.025m; collision-free approved envelopes separately checked by Python QA; actual door thresholds not tested", ["buildings"] = rows }.ToString());
+    }
+    static void EnsureNavigation(CityV002PedestrianGraph graph, Transform city)
+    {
+        var monitor = UnityEngine.Object.FindFirstObjectByType<CityV002NavigationVerification>();
+        if (monitor != null && monitor.actors.Length == 4 && monitor.actors.All(a => a != null)) return;
+        var source = UnityEngine.Object.FindObjectsByType<TestNpcPatrol>(FindObjectsSortMode.None)
+            .First(p => p.GetComponent<CityV002NpcRouteAdapter>() == null);
+        var root = new GameObject("13_Phase5_RouteVerification"); root.transform.SetParent(city, false);
+        monitor = root.AddComponent<CityV002NavigationVerification>();
+        var routes = new[] {
+            new[] { "school_commerce", "CAMPUS_PLAZA", "B04_ACCESS" },
+            new[] { "school_residential", "CAMPUS_PLAZA", "B16_ACCESS" },
+            new[] { "school_park", "CAMPUS_PLAZA", "PARK_REST_2" },
+            new[] { "residential_commerce", "B16_ACCESS", "B04_ACCESS" }
+        };
+        monitor.actors = new CityV002NpcRouteAdapter[routes.Length];
+        for (int i = 0; i < routes.Length; i++)
+        {
+            var actor = i == 0 ? source.gameObject : UnityEngine.Object.Instantiate(source.gameObject, root.transform);
+            if (i > 0) actor.name = "GraphProbe_" + routes[i][0];
+            var adapter = actor.GetComponent<CityV002NpcRouteAdapter>();
+            if (adapter == null) adapter = actor.AddComponent<CityV002NpcRouteAdapter>();
+            adapter.graph = graph; adapter.routeId = routes[i][0]; adapter.startNode = routes[i][1]; adapter.destinationNode = routes[i][2];
+            adapter.returnToStart = true; adapter.startAutomatically = true;
+            if (!graph.TryRoute(adapter.startNode, adapter.destinationNode, out var points, out _, out _))
+                throw new InvalidOperationException("Required connected route missing: " + adapter.routeId);
+            actor.transform.position = points[0]; monitor.actors[i] = adapter;
+        }
+        EditorSceneManager.MarkSceneDirty(graph.gameObject.scene);
+        EditorSceneManager.SaveScene(graph.gameObject.scene, CityRebuildV002Setup.ScenePath); AssetDatabase.SaveAssets();
+        Debug.Log("CITY_V002_INCREMENTAL_NAVIGATION_READY graph=" + graph.nodes.Length + "/" + graph.edges.Length + " probes=4");
     }
     static JArray V(Vector3 v) => new JArray(v.x,v.y,v.z);
     static float SegmentDistance(Vector3 p, Vector3 a, Vector3 b) { p.y = a.y = b.y = 0; var d = b - a; return Vector3.Distance(p, a + d * (d.sqrMagnitude > 0 ? Mathf.Clamp01(Vector3.Dot(p-a,d)/d.sqrMagnitude) : 0)); }

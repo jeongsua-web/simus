@@ -1,5 +1,13 @@
 # CityRebuild v002 — working scene
 
+## Phase 4–7 continuation
+
+Open `CityRebuild_v002.unity` directly. The original scene and build selection are preserved. The current scene includes the park, river and graph navigation additions; the Phase 1–3 notes below are historical, not the current feature list. Use `1` for overview, `2` for top view and `F` for NPC follow.
+
+Continue with `CityRebuildV002Completion.Prepare` and `CityRebuildV002Phase47Bridge.RunBatch` for incremental preparation and actual Play Mode verification. Do not use the full Phase 1–3 generator or the old Phase 4 apply command on this river scene: they rebuild earlier content. Preparation preserves the existing river graph and restores prop FBX axis rotations without editing source models. Runtime evidence, captures and limitations are tracked in [Phase 7 QA](../../../../../docs/verification/city-rebuild-v002-phase7-qa.md). A file's existence alone does not establish that its last test passed.
+
+The approved base graph remains 388 nodes / 409 edges; the river extension currently brings it to 572 / 597. These are scene-local test routes, not a finalized exhibition map version or event-location dataset. Existing MoveTowards, grounding, animation and 90-second event wait behavior are retained. NavMesh and actual doorway access require separate evidence from exterior approach-node traversal.
+
 ## Phase 4 river addition (2026-10-15)
 
 The eastern park now includes the river addition described in [the river design](../../../../../docs/planning/city_rebuild_v002/river-design.md). Use `SIMUS > City Rebuild v002 > Apply Phase 4 River` for its incremental generator. The hierarchy `12_River_Phase4` owns the excavated bed/banks, independent water surface, two bank trails, two bridges, connecting ramps and graph extension. `CityGround` and `EastPark_Lawn` reference carved scene-only meshes. Do not run the Phases 1–3 generator to edit this addition: it replaces the entire city root.

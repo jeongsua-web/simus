@@ -98,8 +98,9 @@ public static class CityRebuildV002Phase47Bridge
         else if (state == PlayModeStateChange.EnteredEditMode && SessionState.GetBool(BatchPending, false))
         {
             SessionState.SetBool(BatchPending, false);
-            CityRebuildV002Completion.VerifyRuntimeInputs();
-            EditorApplication.Exit(SessionState.GetInt(ExitCode, 2));
+            try { CityRebuildV002Completion.VerifyRuntimeInputs(); }
+            catch (Exception ex) { Debug.LogException(ex); SessionState.SetInt(ExitCode, 2); }
+            finally { EditorApplication.Exit(SessionState.GetInt(ExitCode, 2)); }
         }
     }
     static void FocusGameView()

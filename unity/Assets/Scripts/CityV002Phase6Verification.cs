@@ -79,6 +79,13 @@ namespace Simus
             preview = FindFirstObjectByType<CityPreviewCamera>(); navigation = FindFirstObjectByType<CityV002NavigationVerification>();
             if (preview == null || navigation == null) { Finish("FAIL: required camera/navigation monitor missing"); yield break; }
             view = preview.GetComponent<Camera>();
+            // The batch editor's tiny GameView has a different aspect than the
+            // submitted captures; evaluate the camera at the delivered resolution.
+            view.aspect = 1920f / 1080;
+            // Existing river probes remain serialized for their separate test. Isolate this
+            // workload in memory only so the 1/100/500/1000 actor counts are exact.
+            foreach (var patrol in FindObjectsByType<TestNpcPatrol>(FindObjectsSortMode.None))
+                if (!navigation.actors.Any(a => a.gameObject == patrol.gameObject)) patrol.gameObject.SetActive(false);
             // Event/production simulation code remains unchanged. Only local test route clocks are accelerated.
             Time.timeScale = 20f; evidence.routeTimeScale = Time.timeScale;
             preview.Overview(); yield return new WaitForSecondsRealtime(1);
@@ -102,6 +109,9 @@ namespace Simus
                 if (Time.frameCount % 180 == 0) Save("RUNNING");
             }
             activeFollow = null;
+            // Adapter completion happens in Update; the physics evidence is finalized
+            // by the navigation monitor in LateUpdate of that same frame.
+            yield return null;
             if (!captured) { Capture("npc-follow-game-playmode.png"); follow.capture = "npc-follow-game-playmode.png"; }
             evidence.routeWallSeconds = Time.realtimeSinceStartup - routeStarted;
             follow.status = follow.targetOffscreenFrames == 0 && follow.groundBelowFrames == 0 && follow.frames > 0 ? "PASS" : "FAIL"; cameraSamples.Add(follow);
@@ -113,7 +123,8 @@ namespace Simus
             foreach (var a in navigation.actors) a.gameObject.SetActive(false);
             var apartmentActor = Instantiate(actor.gameObject); apartmentActor.name = "ApartmentFollow_RuntimeOnly";
             var apartmentRoute = apartmentActor.GetComponent<CityV002NpcRouteAdapter>(); apartmentRoute.startNode = "B16_ACCESS"; apartmentRoute.destinationNode = "B04_ACCESS";
-            apartmentActor.SetActive(true); preview.SetFollowTarget(apartmentActor.transform);
+            apartmentActor.SetActive(true); yield return null;
+            preview.SetFollowTarget(apartmentActor.transform);
             yield return new WaitForSecondsRealtime(.5f);
             var apartment = new CameraSample { mode = "residential apartment NPC follow", status = "RUNNING", minimumNpcY = float.PositiveInfinity, notes = "B16 exterior approach; world-space building occlusion ray plus retained NPC reveal shader. Human visual review required for final readability." };
             float followStarted = Time.realtimeSinceStartup;
@@ -156,7 +167,7 @@ namespace Simus
                 npc.SetActive(true);
             }
             yield return new WaitForSecondsRealtime(2);
-            var sample = new PerformanceSample { npcCount = count, status = "RUNNING", measurementScope = "Uncapped Editor Game loop, timeScale1; 2 seconds warmup + 5 seconds sampled; editor process CPU and memory include editor overhead; active NPCs include animation and grounding" };
+            var sample = new PerformanceSample { npcCount = count, status = "RUNNING", measurementScope = "Uncapped batch Editor Game loop, timeScale1, explicit 1920x1080 Camera.Render each sampled frame; 2 seconds warmup + 5 seconds sampled; editor process CPU/memory include editor overhead; active NPC animation and grounding" };
             sample.activeAnimators = group.GetComponentsInChildren<Animator>().Count(a => a.isActiveAndEnabled);
             sample.activeGrounding = group.GetComponentsInChildren<NpcGrounding>().Count(a => a.isActiveAndEnabled);
             sample.activePatrols = group.GetComponentsInChildren<TestNpcPatrol>().Count(a => a.isActiveAndEnabled);
@@ -166,17 +177,20 @@ namespace Simus
             var positions = actors.Select(a => a.transform.position).ToArray(); var movements = new float[actors.Length];
             var process = System.Diagnostics.Process.GetCurrentProcess(); double cpuStart = process.TotalProcessorTime.TotalMilliseconds;
             var times = new List<float>(); float begun = Time.realtimeSinceStartup, previous = begun;
+            var renderTarget = RenderTexture.GetTemporary(1920, 1080, 24);
+            var oldTarget = view.targetTexture; view.targetTexture = renderTarget;
             using (var mainThread = ProfilerRecorder.StartNew(ProfilerCategory.Internal, "Main Thread", 1))
             {
                 double mainTotal = 0; int mainSamples = 0;
                 while (Time.realtimeSinceStartup - begun < 5)
                 {
-                    yield return null; float now = Time.realtimeSinceStartup; times.Add((now - previous) * 1000); previous = now;
+                    yield return null; view.Render(); float now = Time.realtimeSinceStartup; times.Add((now - previous) * 1000); previous = now;
                     for (int i = 0; i < actors.Length; i++) { movements[i] += Vector3.Distance(positions[i], actors[i].transform.position); positions[i] = actors[i].transform.position; }
                     if (mainThread.Valid && mainThread.LastValue > 0) { mainTotal += mainThread.LastValue / 1000000.0; mainSamples++; }
                 }
                 sample.mainThreadProfilerMeanMs = mainSamples > 0 ? (float)(mainTotal / mainSamples) : -1;
             }
+            view.targetTexture = oldTarget; RenderTexture.ReleaseTemporary(renderTarget);
             sample.frames = times.Count; sample.wallSeconds = Time.realtimeSinceStartup - begun;
             sample.framesPerSecond = sample.frames / sample.wallSeconds; sample.averageFrameMs = sample.wallSeconds * 1000 / Mathf.Max(1, sample.frames);
             times.Sort(); sample.p95FrameMs = times.Count > 0 ? times[Mathf.Min(times.Count - 1, Mathf.FloorToInt(times.Count * .95f))] : -1;

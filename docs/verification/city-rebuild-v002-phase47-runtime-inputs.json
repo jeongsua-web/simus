@@ -1,12 +1,12 @@
 {
-  "utc": "2026-10-16T02:41:23.150243Z",
-  "status": "UNCHANGED_DURING_PLAY",
+  "utc": "2026-10-16T08:37:29.449806Z",
+  "status": "FAIL_CHANGED",
   "files": {
     "Assets/Scripts/CityPreviewCamera.cs": "2ffe42cd38b85c6f7b810dbb4a95e243629d2daa3497a73a820e6dfa2e995f1a",
     "Assets/Scripts/CityV002NavigationVerification.cs": "0fb7fcf357a79ccc2ab03b4c02796d5195cb75383423de9d577b44149eab3c71",
     "Assets/Scripts/CityV002NpcRouteAdapter.cs": "b16df72c2efbc4b66ad9fd645a75a6984724ff50bd22e2019a5f046bceb7a4e1",
     "Assets/Scripts/CityV002PedestrianGraph.cs": "9c2d96e17d961aefbfc7314c78b3ebc11af9279d3c7027723a33e96b427f467a",
-    "Assets/Scripts/CityV002Phase6Verification.cs": "40a812679110162cb856c591edc5ced3b4f282bd18e46ce080b2522d76fc8509",
+    "Assets/Scripts/CityV002Phase6Verification.cs": "c81a121106c68f139357da62922fdd04770861087f255dae83c794d2c58823a2",
     "Assets/Scripts/CityV002RiverArea.cs": "9d5ae3b8b7d75f030105266bece0b38bb21832899e158f97cd236bf7ebc87d83",
     "Assets/Scripts/CityV002RiverGraphExtension.cs": "bab87c31e0a4da34c695464f6d221ff5bd7420aad3bc663c901ea586d57c5ed1",
     "Assets/Scripts/CityV002RiverGuard.cs": "d26234258e405348e413d8be74ec968d47259ac8ce7f220260f0985d77b94f1f",
@@ -16,7 +16,7 @@
     "Assets/Scripts/NpcOcclusionReveal.cs": "3c0a5580c7bc40d7a9e7eaa19be255f7eb6f32eab309b8bc83af4beb91b013ce",
     "Assets/Scripts/TestNpcPatrol.cs": "8bdc852b8d720407d1e206901429660f54433b7f32fae70d5e10d6bc2aff9b77",
     "Assets/Scripts/WebCityBridge.cs": "01aa7a1d26d393d4f7ffbf15de1efe12c509704933fc829c7acbef534f426122",
-    "Assets/Editor/CityRebuildV002Completion.cs": "21644b41441e9e51dcc69ea09a1411ebf7d24179ab402523b91434f798443887",
+    "Assets/Editor/CityRebuildV002Completion.cs": "394a0c792d8590fefdc205c7a4a25dd49f72fa4f05946d36347a7bf33d9e329a",
     "Assets/Editor/CityRebuildV002NavigationSetup.cs": "9bd90d9ce4dfe1bb3a2d4251ed3ca548d9d247ece4d163875530b4941c95ebf4",
     "Assets/Editor/CityRebuildV002Phase47Bridge.cs": "a108a723d7847ca7836f6da596ffcb0f261ae6db6dce6cb54008827e18009d38",
     "Assets/Editor/CityRebuildV002Phase4Setup.cs": "6db06892e3c572f8a465694bf2363bdf45b31d30f9fc9faae19383a2791111da",
@@ -24,7 +24,7 @@
     "Assets/Editor/CityRebuildV002RiverVerification.cs": "16da92e8c14fd1f43cdf2e853ba95361d55cb36e0a477b80e4eb358e6a026831",
     "Assets/Editor/CityRebuildV002Setup.cs": "5f3b02dd554c15c57fe5535b0cd53dfe2dae1e1252fd289d3b4d8429fb535c0e",
     "Assets/Editor/CityRebuildV002SurfaceAudit.cs": "a8286b089df31fd29c72f09bce996540e111f1318ada0bdd6531cb5d7b044482",
-    "Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity": "b54405e1b436f49ee144c2cbb8ca3e77687ee754be1cde726400d2a8dc0962ba",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity": "06f7da70f08fbd16e4075441d596ca0add45b2d72cf8b0f01d68f047db187466",
     "Assets/SIMUS/Scenes/city_rebuild_v002/README.md": "b28d91d86cff97629563f595a91ef93385632bf00464984b8848bbcea93326dd",
     "Assets/SIMUS/Scenes/city_rebuild_v002/materials/asphalt.mat": "461e085532bcd330663bc186d4dc76a87676cd4ba5c10d3b9dd1474d268f5324",
     "Assets/SIMUS/Scenes/city_rebuild_v002/materials/campus_walk.mat": "b32408aec1e09de8192122eb7164a27739ded22719e4ce7e4d65644dc17137d8",
@@ -1014,5 +1014,7 @@
     "Assets/SIMUS/Art/props/props/STREET_TREE.fbx": "1fe983174c830fc869b774e86cafd474aaa64bdabcd167ab47c77bfba0b2a75e",
     "Assets/SIMUS/Art/props/props/REUSED_BENCH.fbx": "7c0a9c5ef0d532c782e8e4b4f34390da534f577eae9f35f2e573b073b451b3cb"
   },
-  "changed": []
+  "changed": [
+    "Assets/SIMUS/Scenes/city_rebuild_v002/README.md"
+  ]
 }
