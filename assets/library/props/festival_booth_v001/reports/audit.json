@@ -1,0 +1,2125 @@
+{
+  "assets": [
+    {
+      "name": "SIMUS_Festival_Booth_Base",
+      "root": "FESTIVAL_BOOTH_ROOT",
+      "objects": 76,
+      "triangles": 8944,
+      "meshes": [
+        {
+          "name": "Cable_Cover",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Canopy_Hem_0_-1",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Canopy_Hem_0_1",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Canopy_Hem_1_-1",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Canopy_Hem_1_1",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_CANOPY_FABRIC",
+          "triangles": 672,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_COUNTER_FASCIA",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_COUNTER_FOLDING_LEGS",
+          "triangles": 248,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_COUNTER_TOP",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Flags_Mount_-1",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Flags_Mount_1",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Reused_HAP_FLAGS_01",
+          "triangles": 144,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_FLOOR_MAT_MESH",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_FRAME_METAL",
+          "triangles": 1808,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Panel_Tie_Collars",
+          "triangles": 1296,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Roof_Frame_Contact_Joints_FESTIVAL_BOOTH_ROOT",
+          "triangles": 220,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Main_Sign_Board",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Main_Sign_Letters",
+          "triangles": 692,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Sign_Bracket",
+          "triangles": 36,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Sign_Bracket.001",
+          "triangles": 36,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Sign_Light",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Menu_Frame",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Menu_Insert",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Menu_Support",
+          "triangles": 36,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Banner_Tie",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Banner_Tie.001",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_PANEL_BACK_FABRIC",
+          "triangles": 176,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Reused_HAP_BANNER_ACTIVE_01",
+          "triangles": 12,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_PANEL_LEFT_FABRIC",
+          "triangles": 176,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_PANEL_RIGHT_FABRIC",
+          "triangles": 176,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Counter_Work_Light",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Lights_Mount_-1",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Lights_Mount_1",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Reused_HAP_DECOR_LIGHTS_01",
+          "triangles": 604,
+          "nonmanifold": 0
+        },
+        {
+          "name": "String_Light_Sockets_FESTIVAL_BOOTH_ROOT",
+          "triangles": 252,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_TABLE_FOLDING_LEGS",
+          "triangles": 248,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_TABLE_TOP",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_WEIGHTS_BLOCKS",
+          "triangles": 432,
+          "nonmanifold": 0
+        }
+      ],
+      "materials": [
+        {
+          "name": "Booth_Dark",
+          "color": [
+            0.03500000014901161,
+            0.04899999871850014,
+            0.052000001072883606,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.75,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Fabric",
+          "color": [
+            0.7799999713897705,
+            0.7599999904632568,
+            0.6800000071525574,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8500000238418579,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Teal",
+          "color": [
+            0.05000000074505806,
+            0.4000000059604645,
+            0.3499999940395355,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6200000047683716,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Metal",
+          "color": [
+            0.3799999952316284,
+            0.4300000071525574,
+            0.4399999976158142,
+            1.0
+          ],
+          "metallic": 0.6499999761581421,
+          "roughness": 0.3799999952316284,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Wood",
+          "color": [
+            0.41999998688697815,
+            0.25,
+            0.11999999731779099,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6200000047683716,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "ENV3_metal",
+          "color": [
+            0.09000000357627869,
+            0.11999999731779099,
+            0.14000000059604645,
+            1.0
+          ],
+          "metallic": 0.6499999761581421,
+          "roughness": 0.5,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "ENV3_red",
+          "color": [
+            0.6499999761581421,
+            0.07500000298023224,
+            0.03799999877810478,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.699999988079071,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "ENV3_gold",
+          "color": [
+            0.9599999785423279,
+            0.550000011920929,
+            0.05999999865889549,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.75,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "ENV3_blue",
+          "color": [
+            0.03500000014901161,
+            0.3199999928474426,
+            0.46000000834465027,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.699999988079071,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Main_Sign_Board_Replaceable",
+          "color": [
+            0.05000000074505806,
+            0.4000000059604645,
+            0.3499999940395355,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6200000047683716,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Paper",
+          "color": [
+            0.8399999737739563,
+            0.8500000238418579,
+            0.800000011920929,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Glow",
+          "color": [
+            0.949999988079071,
+            0.6200000047683716,
+            0.25999999046325684,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Menu_Insert_Replaceable",
+          "color": [
+            0.8399999737739563,
+            0.8500000238418579,
+            0.800000011920929,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Reused_Banner",
+          "color": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8500000238418579,
+          "emission": 0.0,
+          "texture": "HAP_BANNER_ACTIVE_01.png"
+        },
+        {
+          "name": "ENV3_Festival_Bulb",
+          "color": [
+            0.949999988079071,
+            0.6700000166893005,
+            0.28999999165534973,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 2.0,
+          "texture": ""
+        }
+      ],
+      "bounds_min": [
+        -1.5759999752044678,
+        -1.597499966621399,
+        0.0
+      ],
+      "bounds_max": [
+        1.5759999752044678,
+        1.5260000228881836,
+        2.8919999599456787
+      ]
+    },
+    {
+      "name": "SIMUS_Festival_Booth_Food",
+      "root": "FESTIVAL_BOOTH_FOOD",
+      "objects": 99,
+      "triangles": 11408,
+      "meshes": [
+        {
+          "name": "Cable_Cover_Food",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Canopy_Hem_0_-1_Food",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Canopy_Hem_0_1_Food",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Canopy_Hem_1_-1_Food",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Canopy_Hem_1_1_Food",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_CANOPY_FABRIC_Food",
+          "triangles": 672,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_COUNTER_FASCIA_Food",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_COUNTER_FOLDING_LEGS_Food",
+          "triangles": 248,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_COUNTER_TOP_Food",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Flags_Mount_-1_Food",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Flags_Mount_1_Food",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Reused_HAP_FLAGS_01_Food",
+          "triangles": 144,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_FLOOR_MAT_MESH_Food",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Food_Bin",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Food_Bin_Lid",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Food_DrinkCup",
+          "triangles": 124,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Food_Glove_Opening",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Food_Gloves_Box",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Food_NapkinHolder",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Food_Napkins",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Food_PaperCup_0",
+          "triangles": 124,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Food_PaperCup_1",
+          "triangles": 124,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Food_PaperCup_2",
+          "triangles": 124,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Food_Sauce_Nozzle",
+          "triangles": 44,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Food_Sauce_Nozzle.001",
+          "triangles": 44,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Food_SauceBottle",
+          "triangles": 60,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Food_SauceBottle.001",
+          "triangles": 60,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Food_Stock_Box",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Food_Stock_Lid",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Food_Straw",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Food_Tray",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Food_Tray_Rim",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Food_Tray_Rim.001",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Food_Tray_Rim.002",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Food_Tray_Rim.003",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_FRAME_METAL_Food",
+          "triangles": 1808,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Panel_Tie_Collars_Food",
+          "triangles": 1296,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Roof_Frame_Contact_Joints_FESTIVAL_BOOTH_FOOD",
+          "triangles": 220,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Food_Sign_Letters",
+          "triangles": 1020,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Main_Sign_Board_Food",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Sign_Bracket.001_Food",
+          "triangles": 36,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Sign_Bracket_Food",
+          "triangles": 36,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Sign_Light_Food",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Menu_Frame_Food",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Menu_Insert_Food",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Menu_Support_Food",
+          "triangles": 36,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Banner_Tie.001_Food",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Banner_Tie_Food",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_PANEL_BACK_FABRIC_Food",
+          "triangles": 176,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Reused_HAP_BANNER_ACTIVE_01_Food",
+          "triangles": 12,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_PANEL_LEFT_FABRIC_Food",
+          "triangles": 176,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_PANEL_RIGHT_FABRIC_Food",
+          "triangles": 176,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Counter_Work_Light_Food",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Lights_Mount_-1_Food",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Lights_Mount_1_Food",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Reused_HAP_DECOR_LIGHTS_01_Food",
+          "triangles": 604,
+          "nonmanifold": 0
+        },
+        {
+          "name": "String_Light_Sockets_FESTIVAL_BOOTH_FOOD",
+          "triangles": 252,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_TABLE_FOLDING_LEGS_Food",
+          "triangles": 248,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_TABLE_TOP_Food",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_WEIGHTS_BLOCKS_Food",
+          "triangles": 432,
+          "nonmanifold": 0
+        }
+      ],
+      "materials": [
+        {
+          "name": "Booth_Dark",
+          "color": [
+            0.03500000014901161,
+            0.04899999871850014,
+            0.052000001072883606,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.75,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Fabric",
+          "color": [
+            0.7799999713897705,
+            0.7599999904632568,
+            0.6800000071525574,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8500000238418579,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Orange",
+          "color": [
+            0.75,
+            0.1599999964237213,
+            0.04500000178813934,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6000000238418579,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Metal",
+          "color": [
+            0.3799999952316284,
+            0.4300000071525574,
+            0.4399999976158142,
+            1.0
+          ],
+          "metallic": 0.6499999761581421,
+          "roughness": 0.3799999952316284,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Wood",
+          "color": [
+            0.41999998688697815,
+            0.25,
+            0.11999999731779099,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6200000047683716,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "ENV3_metal",
+          "color": [
+            0.09000000357627869,
+            0.11999999731779099,
+            0.14000000059604645,
+            1.0
+          ],
+          "metallic": 0.6499999761581421,
+          "roughness": 0.5,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "ENV3_red",
+          "color": [
+            0.6499999761581421,
+            0.07500000298023224,
+            0.03799999877810478,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.699999988079071,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "ENV3_gold",
+          "color": [
+            0.9599999785423279,
+            0.550000011920929,
+            0.05999999865889549,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.75,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "ENV3_blue",
+          "color": [
+            0.03500000014901161,
+            0.3199999928474426,
+            0.46000000834465027,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.699999988079071,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Paper",
+          "color": [
+            0.8399999737739563,
+            0.8500000238418579,
+            0.800000011920929,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Blue",
+          "color": [
+            0.03999999910593033,
+            0.2199999988079071,
+            0.4399999976158142,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6200000047683716,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Red",
+          "color": [
+            0.550000011920929,
+            0.05000000074505806,
+            0.04500000178813934,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.5,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Main_Sign_Board_Food_Replaceable",
+          "color": [
+            0.75,
+            0.1599999964237213,
+            0.04500000178813934,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6000000238418579,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Glow",
+          "color": [
+            0.949999988079071,
+            0.6200000047683716,
+            0.25999999046325684,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Menu_Insert_Food_Replaceable",
+          "color": [
+            0.8399999737739563,
+            0.8500000238418579,
+            0.800000011920929,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Reused_Banner",
+          "color": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8500000238418579,
+          "emission": 0.0,
+          "texture": "HAP_BANNER_ACTIVE_01.png"
+        },
+        {
+          "name": "ENV3_Festival_Bulb",
+          "color": [
+            0.949999988079071,
+            0.6700000166893005,
+            0.28999999165534973,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 2.0,
+          "texture": ""
+        }
+      ],
+      "bounds_min": [
+        -1.5759999752044678,
+        -1.597499966621399,
+        0.0
+      ],
+      "bounds_max": [
+        1.5759999752044678,
+        1.5260000228881836,
+        2.8919999599456787
+      ]
+    },
+    {
+      "name": "SIMUS_Festival_Booth_Game",
+      "root": "FESTIVAL_BOOTH_GAME",
+      "objects": 107,
+      "triangles": 11004,
+      "meshes": [
+        {
+          "name": "Cable_Cover_Game",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Canopy_Hem_0_-1_Game",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Canopy_Hem_0_1_Game",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Canopy_Hem_1_-1_Game",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Canopy_Hem_1_1_Game",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_CANOPY_FABRIC_Game",
+          "triangles": 672,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_COUNTER_Game_FOLDING_LEGS",
+          "triangles": 248,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_COUNTER_Game_TOP",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Counter_Fascia",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Flags_Mount_-1_Game",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Flags_Mount_1_Game",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Reused_HAP_FLAGS_01_Game",
+          "triangles": 144,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_FLOOR_MAT_MESH_Game",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_FRAME_METAL_Game",
+          "triangles": 1808,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Panel_Tie_Collars_Game",
+          "triangles": 1296,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Roof_Frame_Contact_Joints_FESTIVAL_BOOTH_GAME",
+          "triangles": 220,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Ball_0",
+          "triangles": 120,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Ball_1",
+          "triangles": 120,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Ball_2",
+          "triangles": 120,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Foot_Marker",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Foot_Marker.001",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Prize_0",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Prize_1",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Prize_2",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Shelf",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Shelf.001",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Shelf_Upright",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Shelf_Upright.001",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Raffle_Slot",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_RaffleBox",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Wheel_Sector_0",
+          "triangles": 20,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Wheel_Sector_1",
+          "triangles": 20,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Wheel_Sector_2",
+          "triangles": 20,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Wheel_Sector_3",
+          "triangles": 20,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Wheel_Sector_4",
+          "triangles": 20,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Wheel_Sector_5",
+          "triangles": 20,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Wheel_Sector_6",
+          "triangles": 20,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Wheel_Sector_7",
+          "triangles": 20,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Stamp_Handle",
+          "triangles": 44,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Stamp_Pad",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_StampBoard",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Wheel_Axle",
+          "triangles": 60,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Wheel_Base",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Wheel_Pointer",
+          "triangles": 8,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Wheel_Stand",
+          "triangles": 60,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Game_Sign_Letters",
+          "triangles": 548,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Main_Sign_Board_Game",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Sign_Bracket.001_Game",
+          "triangles": 36,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Sign_Bracket_Game",
+          "triangles": 36,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Sign_Light_Game",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Menu_Frame_Game",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Menu_Insert_Game",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Menu_Support_Game",
+          "triangles": 36,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Banner_Tie.001_Game",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Banner_Tie_Game",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_PANEL_BACK_FABRIC_Game",
+          "triangles": 176,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Reused_HAP_BANNER_ACTIVE_01_Game",
+          "triangles": 12,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_PANEL_LEFT_FABRIC_Game",
+          "triangles": 176,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_PANEL_RIGHT_FABRIC_Game",
+          "triangles": 176,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Counter_Work_Light_Game",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Lights_Mount_-1_Game",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Lights_Mount_1_Game",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Reused_HAP_DECOR_LIGHTS_01_Game",
+          "triangles": 604,
+          "nonmanifold": 0
+        },
+        {
+          "name": "String_Light_Sockets_FESTIVAL_BOOTH_GAME",
+          "triangles": 252,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_TABLE_FOLDING_LEGS_Game",
+          "triangles": 248,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_TABLE_TOP_Game",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_WEIGHTS_BLOCKS_Game",
+          "triangles": 432,
+          "nonmanifold": 0
+        }
+      ],
+      "materials": [
+        {
+          "name": "Booth_Dark",
+          "color": [
+            0.03500000014901161,
+            0.04899999871850014,
+            0.052000001072883606,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.75,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Fabric",
+          "color": [
+            0.7799999713897705,
+            0.7599999904632568,
+            0.6800000071525574,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8500000238418579,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Metal",
+          "color": [
+            0.3799999952316284,
+            0.4300000071525574,
+            0.4399999976158142,
+            1.0
+          ],
+          "metallic": 0.6499999761581421,
+          "roughness": 0.3799999952316284,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Wood",
+          "color": [
+            0.41999998688697815,
+            0.25,
+            0.11999999731779099,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6200000047683716,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Teal",
+          "color": [
+            0.05000000074505806,
+            0.4000000059604645,
+            0.3499999940395355,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6200000047683716,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "ENV3_metal",
+          "color": [
+            0.09000000357627869,
+            0.11999999731779099,
+            0.14000000059604645,
+            1.0
+          ],
+          "metallic": 0.6499999761581421,
+          "roughness": 0.5,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "ENV3_red",
+          "color": [
+            0.6499999761581421,
+            0.07500000298023224,
+            0.03799999877810478,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.699999988079071,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "ENV3_gold",
+          "color": [
+            0.9599999785423279,
+            0.550000011920929,
+            0.05999999865889549,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.75,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "ENV3_blue",
+          "color": [
+            0.03500000014901161,
+            0.3199999928474426,
+            0.46000000834465027,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.699999988079071,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Orange",
+          "color": [
+            0.75,
+            0.1599999964237213,
+            0.04500000178813934,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6000000238418579,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Blue",
+          "color": [
+            0.03999999910593033,
+            0.2199999988079071,
+            0.4399999976158142,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6200000047683716,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Red",
+          "color": [
+            0.550000011920929,
+            0.05000000074505806,
+            0.04500000178813934,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.5,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Paper",
+          "color": [
+            0.8399999737739563,
+            0.8500000238418579,
+            0.800000011920929,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Main_Sign_Board_Game_Replaceable",
+          "color": [
+            0.05000000074505806,
+            0.4000000059604645,
+            0.3499999940395355,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6200000047683716,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Glow",
+          "color": [
+            0.949999988079071,
+            0.6200000047683716,
+            0.25999999046325684,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Menu_Insert_Game_Replaceable",
+          "color": [
+            0.8399999737739563,
+            0.8500000238418579,
+            0.800000011920929,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Reused_Banner",
+          "color": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8500000238418579,
+          "emission": 0.0,
+          "texture": "HAP_BANNER_ACTIVE_01.png"
+        },
+        {
+          "name": "ENV3_Festival_Bulb",
+          "color": [
+            0.949999988079071,
+            0.6700000166893005,
+            0.28999999165534973,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 2.0,
+          "texture": ""
+        }
+      ],
+      "bounds_min": [
+        -1.5759999752044678,
+        -1.597499966621399,
+        0.0
+      ],
+      "bounds_max": [
+        1.5759999752044678,
+        1.5260000228881836,
+        2.8919999599456787
+      ]
+    },
+    {
+      "name": "SIMUS_Festival_Booth_Info",
+      "root": "FESTIVAL_BOOTH_INFO",
+      "objects": 109,
+      "triangles": 11540,
+      "meshes": [
+        {
+          "name": "Cable_Cover_Info",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Canopy_Hem_0_-1_Info",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Canopy_Hem_0_1_Info",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Canopy_Hem_1_-1_Info",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Canopy_Hem_1_1_Info",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_CANOPY_FABRIC_Info",
+          "triangles": 672,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_COUNTER_FASCIA_Info",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_COUNTER_FOLDING_LEGS_Info",
+          "triangles": 248,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_COUNTER_TOP_Info",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Flags_Mount_-1_Info",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Flags_Mount_1_Info",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Reused_HAP_FLAGS_01_Info",
+          "triangles": 144,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_FLOOR_MAT_MESH_Info",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_FRAME_METAL_Info",
+          "triangles": 1808,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Panel_Tie_Collars_Info",
+          "triangles": 1296,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Roof_Frame_Contact_Joints_FESTIVAL_BOOTH_INFO",
+          "triangles": 220,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Brochure_0",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Brochure_1",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Brochure_2",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Brochure_3",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Brochure_4",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_CardHolder",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Cards",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_DeskLamp_Arm",
+          "triangles": 44,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_DeskLamp_Base",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_DeskLamp_Emitter",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_DeskLamp_Shade",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Chair_Back",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Chair_Leg",
+          "triangles": 44,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Chair_Leg.001",
+          "triangles": 44,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Chair_Leg.002",
+          "triangles": 44,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Chair_Leg.003",
+          "triangles": 44,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Chair_Seat",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_LostProperty_Lid",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_LostPropertyBox",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Map_Block",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Map_Block.001",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Map_Block.002",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Map_Frame",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Map_Post",
+          "triangles": 44,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Map_Post.001",
+          "triangles": 44,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Map_Road",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Map_Road.001",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Map_Road.002",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Map_Surface",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Radio",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Radio_Antenna",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Info_Sign_Letters",
+          "triangles": 468,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Main_Sign_Board_Info",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Sign_Bracket.001_Info",
+          "triangles": 36,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Sign_Bracket_Info",
+          "triangles": 36,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Sign_Light_Info",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Menu_Frame_Info",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Menu_Insert_Info",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Menu_Support_Info",
+          "triangles": 36,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Banner_Tie.001_Info",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Banner_Tie_Info",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_PANEL_BACK_FABRIC_Info",
+          "triangles": 176,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Reused_HAP_BANNER_ACTIVE_01_Info",
+          "triangles": 12,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_PANEL_LEFT_FABRIC_Info",
+          "triangles": 176,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_PANEL_RIGHT_FABRIC_Info",
+          "triangles": 176,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Counter_Work_Light_Info",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Lights_Mount_-1_Info",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Lights_Mount_1_Info",
+          "triangles": 28,
+          "nonmanifold": 0
+        },
+        {
+          "name": "Reused_HAP_DECOR_LIGHTS_01_Info",
+          "triangles": 604,
+          "nonmanifold": 0
+        },
+        {
+          "name": "String_Light_Sockets_FESTIVAL_BOOTH_INFO",
+          "triangles": 252,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_TABLE_FOLDING_LEGS_Info",
+          "triangles": 248,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_TABLE_TOP_Info",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "FESTIVAL_BOOTH_WEIGHTS_BLOCKS_Info",
+          "triangles": 432,
+          "nonmanifold": 0
+        }
+      ],
+      "materials": [
+        {
+          "name": "Booth_Dark",
+          "color": [
+            0.03500000014901161,
+            0.04899999871850014,
+            0.052000001072883606,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.75,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Fabric",
+          "color": [
+            0.7799999713897705,
+            0.7599999904632568,
+            0.6800000071525574,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8500000238418579,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Blue",
+          "color": [
+            0.03999999910593033,
+            0.2199999988079071,
+            0.4399999976158142,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6200000047683716,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Metal",
+          "color": [
+            0.3799999952316284,
+            0.4300000071525574,
+            0.4399999976158142,
+            1.0
+          ],
+          "metallic": 0.6499999761581421,
+          "roughness": 0.3799999952316284,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Wood",
+          "color": [
+            0.41999998688697815,
+            0.25,
+            0.11999999731779099,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6200000047683716,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "ENV3_metal",
+          "color": [
+            0.09000000357627869,
+            0.11999999731779099,
+            0.14000000059604645,
+            1.0
+          ],
+          "metallic": 0.6499999761581421,
+          "roughness": 0.5,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "ENV3_red",
+          "color": [
+            0.6499999761581421,
+            0.07500000298023224,
+            0.03799999877810478,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.699999988079071,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "ENV3_gold",
+          "color": [
+            0.9599999785423279,
+            0.550000011920929,
+            0.05999999865889549,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.75,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "ENV3_blue",
+          "color": [
+            0.03500000014901161,
+            0.3199999928474426,
+            0.46000000834465027,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.699999988079071,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Paper",
+          "color": [
+            0.8399999737739563,
+            0.8500000238418579,
+            0.800000011920929,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Teal",
+          "color": [
+            0.05000000074505806,
+            0.4000000059604645,
+            0.3499999940395355,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6200000047683716,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Glow",
+          "color": [
+            0.949999988079071,
+            0.6200000047683716,
+            0.25999999046325684,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 1.7000000476837158,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Orange",
+          "color": [
+            0.75,
+            0.1599999964237213,
+            0.04500000178813934,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6000000238418579,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Main_Sign_Board_Info_Replaceable",
+          "color": [
+            0.03999999910593033,
+            0.2199999988079071,
+            0.4399999976158142,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6200000047683716,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Menu_Insert_Info_Replaceable",
+          "color": [
+            0.8399999737739563,
+            0.8500000238418579,
+            0.800000011920929,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.6499999761581421,
+          "emission": 0.0,
+          "texture": ""
+        },
+        {
+          "name": "Booth_Reused_Banner",
+          "color": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8500000238418579,
+          "emission": 0.0,
+          "texture": "HAP_BANNER_ACTIVE_01.png"
+        },
+        {
+          "name": "ENV3_Festival_Bulb",
+          "color": [
+            0.949999988079071,
+            0.6700000166893005,
+            0.28999999165534973,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.4000000059604645,
+          "emission": 2.0,
+          "texture": ""
+        }
+      ],
+      "bounds_min": [
+        -1.5759999752044678,
+        -1.597499966621399,
+        0.0
+      ],
+      "bounds_max": [
+        1.5759999752044678,
+        1.5260000228881836,
+        2.8919999599456787
+      ]
+    }
+  ]
+}

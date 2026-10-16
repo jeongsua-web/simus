@@ -1,0 +1,55 @@
+{
+    "assets": [
+        {
+            "name": "SIMUS_Festival_Booth_Base",
+            "size": {
+                "x": 3.1519999504089357,
+                "y": 2.8919999599456789,
+                "z": 3.123499870300293
+            },
+            "colliders": 9,
+            "renderers": 38,
+            "materials": 15,
+            "passed": true
+        },
+        {
+            "name": "SIMUS_Festival_Booth_Food",
+            "size": {
+                "x": 3.1519999504089357,
+                "y": 2.8919999599456789,
+                "z": 3.123499870300293
+            },
+            "colliders": 9,
+            "renderers": 60,
+            "materials": 17,
+            "passed": true
+        },
+        {
+            "name": "SIMUS_Festival_Booth_Game",
+            "size": {
+                "x": 3.1519999504089357,
+                "y": 2.8919999599456789,
+                "z": 3.123499870300293
+            },
+            "colliders": 9,
+            "renderers": 67,
+            "materials": 18,
+            "passed": true
+        },
+        {
+            "name": "SIMUS_Festival_Booth_Info",
+            "size": {
+                "x": 3.1519999504089357,
+                "y": 2.8919999599456789,
+                "z": 3.123499870300293
+            },
+            "colliders": 9,
+            "renderers": 69,
+            "materials": 17,
+            "passed": true
+        }
+    ],
+    "independentGlow": true,
+    "staffAnchorsClear": true,
+    "moduleTogglesVerified": true
+}
