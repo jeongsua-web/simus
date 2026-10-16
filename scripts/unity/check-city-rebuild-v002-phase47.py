@@ -180,13 +180,41 @@ def main():
         original_buildings = building_subtrees(original_scene)
         current_buildings = building_subtrees(text)
         modified_buildings = sorted(name for name in expected if original_buildings.get(name) != current_buildings.get(name))
-        record('existing_69_fbx_building_hierarchies_preserved', not modified_buildings,
-               {'baseline_git_head': baseline['git_head'], 'compared': len(expected), 'modified': modified_buildings,
-                'scope': 'Exact serialized hierarchy, Transform, components and prefab overrides; original FBX/meta hashes protected separately. Does not replace a Unity import or physics test.'})
+        # The continuation baseline already contains four misplaced FBX groups.
+        # Permit only their explicit restoration to the approved layout, and only
+        # when a fresh Unity world-bounds audit proves that restoration.
+        authorized_repair_ids = {'C11', 'B01', 'B31', 'B42'}
+        repaired = [name for name in modified_buildings if name.split('_')[0] in authorized_repair_ids]
+        unauthorized = [name for name in modified_buildings if name not in repaired]
+        audit_path = VERIFY/'city-rebuild-v002-phase47-building-audit.json'
+        audit = json.loads(audit_path.read_text(encoding='utf-8')) if audit_path.is_file() else {}
+        audited = audit.get('buildings', [])
+        expected_assets = {b['id']: b.get('asset', layout['campus']['asset']).removeprefix('unity/')
+                           for b in layout['buildings'] + layout['campus']['components']}
+        audit_errors = [b.get('id') for b in audited
+                        if b.get('status') != 'PASS' or b.get('maximum_envelope_error_m', float('inf')) > .025
+                        or b.get('mesh_count', 0) < 1
+                        or expected_assets.get(b.get('id')) not in b.get('actual_fbx_mesh_paths', [])]
+        audit_fresh = (audit.get('status') == 'PASS' and audit.get('scene_sha256') == sha(SCENE)
+                       and len(audited) == 69 and {b.get('id') for b in audited} == set(expected_assets)
+                       and not audit_errors)
+        record('building_hierarchies_preserved_except_four_verified_layout_repairs',
+               not unauthorized and (not repaired or audit_fresh),
+               {'baseline_git_head': baseline['git_head'], 'compared': len(expected),
+                'modified': modified_buildings, 'authorized_repair_ids': sorted(authorized_repair_ids),
+                'unauthorized_changes': unauthorized, 'repair_audit_current_and_passed': audit_fresh,
+                'scope': 'Exact serialized hierarchy comparison. Only C11/B01/B31/B42 may change to repair pre-existing bad placement; these exceptions require current-scene Unity world envelope/provenance PASS. Original FBX/meta hashes remain protected.'})
+        if args.runtime or repaired:
+            record('current_unity_69_fbx_envelopes_match_approved_layout', audit_fresh,
+                   {'audit': audit_path.relative_to(ROOT).as_posix(), 'status': audit.get('status'),
+                    'scene_sha256': audit.get('scene_sha256'), 'count': len(audited), 'failed_buildings': audit_errors,
+                    'scope': 'Actual imported FBX renderer envelopes within 0.025m, not doorway or NavMesh access.'})
     parkrefs={p.relative_to(ROOT).as_posix() for g in refs for p in guid_paths[g] if p.suffix.lower()=='.fbx' and 'parks' in p.parts}
     expectedparks={x['asset'] for x in layout['park']['reuse_modules']}
     record('two_existing_park_fbx_referenced',expectedparks<=parkrefs,sorted(parkrefs))
     spec=importlib.util.spec_from_file_location('surface_qa',ROOT/'scripts/unity/check-city-rebuild-v002-surfaces.py'); surfaces=importlib.util.module_from_spec(spec);spec.loader.exec_module(surfaces)
+    transform_audit = surfaces.generated_surface_transform_audit(text)
+    record('generated_surfaces_have_identity_world_coordinate_hierarchy', transform_audit['status'] == 'PASS', transform_audit)
     longest=0;oversized=[];count=0
     for p in sorted([* (SCENE.parent/'meshes').glob('*.asset'), * (SCENE.parent/'phase4_meshes').glob('*.asset')]):
         if '_FBXPart_' in p.name:continue  # Imported UV-bearing park extraction uses a different vertex layout; Unity audits its world collider edges.
@@ -201,12 +229,23 @@ def main():
         runtime_path = VERIFY/'city-rebuild-v002-phase6-runtime.json'
         navigation_path = VERIFY/'city-rebuild-v002-navigation-runtime.json'
         inputs_path = VERIFY/'city-rebuild-v002-phase47-runtime-inputs.json'
-        missing = [p.relative_to(ROOT).as_posix() for p in (runtime_path, navigation_path, inputs_path) if not p.is_file()]
+        physics_path = VERIFY/'city-rebuild-v002-final-physics.json'
+        missing = [p.relative_to(ROOT).as_posix() for p in (runtime_path, navigation_path, inputs_path, physics_path) if not p.is_file()]
         record('runtime_evidence_files_present', not missing, missing)
         if not missing:
             runtime = json.loads(runtime_path.read_text(encoding='utf-8'))
             navigation = json.loads(navigation_path.read_text(encoding='utf-8'))
             inputs = json.loads(inputs_path.read_text(encoding='utf-8'))
+            physics = json.loads(physics_path.read_text(encoding='utf-8'))
+            graph_physics = physics.get('graph', {})
+            depth = physics.get('river_depth', {})
+            record('current_scene_complete_graph_physics_support', physics.get('scene_sha256') == sha(SCENE) and
+                   graph_physics.get('nodes') == 572 and graph_physics.get('edges') == 597 and
+                   graph_physics.get('samples', 0) > 0 and graph_physics.get('unsupported') == 0 and
+                   graph_physics.get('finite_width_samples', 0) > 0 and graph_physics.get('capsule_blocked') == 0 and
+                   graph_physics.get('actual_physical_bridge_hits', 0) > 0 and graph_physics.get('wet_violations') == 0 and
+                   depth.get('axis_samples', 0) > 0 and depth.get('old_flat_ground_hits_beneath_water') == 0 and depth.get('missing_bed_hits') == 0,
+                   physics)
             changed = [name for name, expected_hash in inputs['files'].items()
                        if not (ROOT/'unity'/name).is_file() or sha(ROOT/'unity'/name) != expected_hash]
             scene_key = SCENE.relative_to(ROOT/'unity').as_posix()

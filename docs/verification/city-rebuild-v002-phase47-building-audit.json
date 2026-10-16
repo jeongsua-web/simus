@@ -1,13 +1,8 @@
 {
-  "status": "FAIL",
-  "failures": [
-    "C11",
-    "B01",
-    "B31",
-    "B42"
-  ],
-  "scene_sha256": "eb143f0f8fd43e5f5de673fe03bb68dee5baf8a8f19c6d9a44c2652fd8230057",
-  "utc": "2026-10-16T13:03:43.1212817Z",
+  "status": "PASS",
+  "failures": [],
+  "scene_sha256": "763654d0c15377cc79ba9b0919e180e47dd20ef3be0d0202a82d714635575555",
+  "utc": "2026-10-16T13:57:11.0269880Z",
   "scope": "Saved scene loaded in Unity; actual FBX MeshFilter provenance and renderer world envelope matches approved polygon within 0.025m; collision-free approved envelopes separately checked by Python QA; actual door thresholds not tested",
   "buildings": [
     {
@@ -3727,16 +3722,16 @@
     },
     {
       "id": "C11",
-      "status": "FAIL",
-      "maximum_envelope_error_m": 183.206009,
+      "status": "PASS",
+      "maximum_envelope_error_m": 0.000492095947,
       "bounds_min": [
-        -144.760559,
-        -183.206009,
+        -55.155014,
+        -1.57356262E-05,
         -38.1345062
       ],
       "bounds_max": [
-        -29.804,
-        11.8439941,
+        -29.8040085,
+        11.84399,
         -4.392334
       ],
       "root_position": [
@@ -3827,13 +3822,13 @@
         {
           "name": "PACKAGE_D03_UNITY_D03_CANOPY_11",
           "min": [
-            -138.1197,
-            -183.206009,
+            -44.1197128,
+            2.79398441,
             -38.1345062
           ],
           "max": [
-            -134.709732,
-            -183.086014,
+            -40.7097321,
+            2.91398525,
             -36.710083
           ],
           "mesh_path": "Assets/SIMUS/Art/buildings/campus/Campus.fbx"
@@ -4009,13 +4004,13 @@
         {
           "name": "PACKAGE_D03_UNITY_D03_PARAPET_11_18",
           "min": [
-            -128.200012,
-            -174.636017,
+            -34.20001,
+            11.3639832,
             -32.7423172
           ],
           "max": [
-            -123.880005,
-            -174.156,
+            -29.8800087,
+            11.8439827,
             -32.5923233
           ],
           "mesh_path": "Assets/SIMUS/Art/buildings/campus/Campus.fbx"
@@ -4023,13 +4018,13 @@
         {
           "name": "PACKAGE_D03_UNITY_D03_PARAPET_11_19",
           "min": [
-            -128.274979,
-            -174.636017,
+            -34.2749748,
+            11.3639822,
             -36.6295967
           ],
           "max": [
-            -128.005051,
-            -174.156,
+            -34.00504,
+            11.8439817,
             -32.66505
           ],
           "mesh_path": "Assets/SIMUS/Art/buildings/campus/Campus.fbx"
@@ -4037,13 +4032,13 @@
         {
           "name": "PACKAGE_D03_UNITY_D03_PARAPET_11_20",
           "min": [
-            -144.760559,
-            -174.636017,
+            -50.7605476,
+            11.3639822,
             -36.8223152
           ],
           "max": [
-            -128.079468,
-            -174.156,
+            -34.07947,
+            11.8439837,
             -36.55232
           ],
           "mesh_path": "Assets/SIMUS/Art/buildings/campus/Campus.fbx"
@@ -4758,16 +4753,16 @@
     },
     {
       "id": "B01",
-      "status": "FAIL",
-      "maximum_envelope_error_m": 94.0,
+      "status": "PASS",
+      "maximum_envelope_error_m": 1.90734863E-06,
       "bounds_min": [
-        -172.3,
-        -186.108,
+        -78.3,
+        0.0,
         -92.55
       ],
       "bounds_max": [
-        -159.7,
-        -169.62,
+        -65.7,
+        16.4880028,
         -75.45
       ],
       "root_position": [
@@ -4788,13 +4783,13 @@
         {
           "name": "COMMERCIAL_01_OLD_MULTI_TENANT",
           "min": [
-            -172.3,
-            -186.108,
+            -78.3,
+            0.0,
             -92.55
           ],
           "max": [
-            -159.7,
-            -169.62,
+            -65.7,
+            16.4880028,
             -75.45
           ],
           "mesh_path": "Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx"
@@ -6108,17 +6103,17 @@
     },
     {
       "id": "B31",
-      "status": "FAIL",
-      "maximum_envelope_error_m": 94.0000153,
+      "status": "PASS",
+      "maximum_envelope_error_m": 0.000448703766,
       "bounds_min": [
-        -259.795,
-        -186.045,
-        -182.875015
+        -165.795,
+        -3.81469727E-06,
+        -182.874985
       ],
       "bounds_max": [
-        -244.205,
-        -178.474442,
-        -169.125015
+        -150.205,
+        7.57054758,
+        -169.124985
       ],
       "root_position": [
         -158.0,
@@ -6138,14 +6133,14 @@
         {
           "name": "HOUSE_02_OLD_BRICK",
           "min": [
-            -259.795,
-            -186.045,
-            -182.875015
+            -165.795,
+            -3.81469727E-06,
+            -182.874985
           ],
           "max": [
-            -244.205,
-            -178.474442,
-            -169.125015
+            -150.205,
+            7.57054758,
+            -169.124985
           ],
           "mesh_path": "Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx"
         }
@@ -6603,17 +6598,17 @@
     },
     {
       "id": "B42",
-      "status": "FAIL",
-      "maximum_envelope_error_m": 94.0004,
+      "status": "PASS",
+      "maximum_envelope_error_m": 0.000396728516,
       "bounds_min": [
-        -282.2366,
-        -186.0423,
-        -217.39418
+        -188.2366,
+        -5.722046E-06,
+        -217.3942
       ],
       "bounds_max": [
-        -261.7634,
-        -168.751,
-        -200.605789
+        -167.7634,
+        17.2913,
+        -200.6058
       ],
       "root_position": [
         -178.0,
@@ -6633,14 +6628,14 @@
         {
           "name": "VILLA_01_PILOTI_BRICK",
           "min": [
-            -282.2366,
-            -186.0423,
-            -217.39418
+            -188.2366,
+            -5.722046E-06,
+            -217.3942
           ],
           "max": [
-            -261.7634,
-            -168.751,
-            -200.605789
+            -167.7634,
+            17.2913,
+            -200.6058
           ],
           "mesh_path": "Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx"
         }

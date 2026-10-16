@@ -90,12 +90,91 @@ public static class CityRebuildV002Completion
         Debug.Log("CITY_V002_PHASE4_COMPLETION trees=" + trees.Length + " benches=" + benches.childCount + " graph=" + graph.nodes.Length + "/" + graph.edges.Length);
         EnsureNavigation(graph, city);
         CityRebuildV002Phase47Bridge.ApplyCamera();
+        RestoreDisplacedBuildingChildren(layout);
+        RestoreSurfaceFrames(GameObject.Find("CityRebuild_v002").transform);
         AuditBuildings(layout);
+        var physical = new JObject { ["utc"] = DateTime.UtcNow.ToString("o"),
+            ["graph"] = CityRebuildV002RiverSetup.AuditGraph(UnityEngine.Object.FindFirstObjectByType<CityV002PedestrianGraph>()),
+            ["river_depth"] = CityRebuildV002RiverSetup.AuditDepth(), ["scene_sha256"] = Hash(CityRebuildV002Setup.ScenePath),
+            ["scope"] = "Actual saved Unity scene Physics: all active 597 graph edges; river finite-width capsule and bridge-deck tests. Existing river audit height tolerances retained." };
+        File.WriteAllText("../docs/verification/city-rebuild-v002-final-physics.json", physical.ToString());
         var files = Directory.GetFiles("Assets/Scripts", "*.cs").Concat(Directory.GetFiles("Assets/Editor", "CityRebuildV002*.cs"))
             .Concat(Directory.GetFiles(CityRebuildV002Setup.Folder, "*", SearchOption.AllDirectories).Where(p => !p.EndsWith(".meta")))
             .Concat(new[] { "../docs/planning/city_rebuild_v002/layout.json", "../docs/planning/city_rebuild_v002/buildings.csv", "../docs/planning/city_rebuild_v002/campus-placements.csv", "ProjectSettings/EditorBuildSettings.asset", Tree, Bench });
         var hashes = new JObject(); foreach (var path in files.Distinct()) hashes[path] = Hash(path);
         File.WriteAllText(Inputs, new JObject { ["utc"] = DateTime.UtcNow.ToString("o"), ["status"] = "READY", ["files"] = hashes }.ToString());
+    }
+    static void RestoreSurfaceFrames(Transform city)
+    {
+        var changes = new JArray();
+        foreach (string name in new[] { "01_Ground", "02_Roads", "03_TurningAndIntersections", "04_PedestrianSurfaces", "05_CrossingFacilities_17" })
+            foreach (var t in city.Find(name).GetComponentsInChildren<Transform>(true))
+            {
+                // Setup.Surface stores world x/y/z in the mesh vertices; every
+                // Group/Surface frame in these five roots is authored as identity.
+                if (t.localPosition.sqrMagnitude < .000001f && Quaternion.Angle(t.localRotation, Quaternion.identity) < .001f && Vector3.Distance(t.localScale, Vector3.one) < .00001f) continue;
+                changes.Add(new JObject { ["root"] = name, ["name"] = t.name, ["before_position"] = V(t.localPosition),
+                    ["before_rotation"] = V(t.localEulerAngles), ["before_scale"] = V(t.localScale) });
+                t.localPosition = Vector3.zero; t.localRotation = Quaternion.identity; t.localScale = Vector3.one;
+            }
+        Physics.SyncTransforms();
+        EditorSceneManager.SaveScene(city.gameObject.scene, CityRebuildV002Setup.ScenePath); AssetDatabase.SaveAssets();
+        string path = "../docs/verification/city-rebuild-v002-surface-recovery.json";
+        if (changes.Count > 0 || !File.Exists(path)) File.WriteAllText(path, new JObject {
+            ["utc"] = DateTime.UtcNow.ToString("o"), ["count"] = changes.Count, ["changes"] = changes,
+            ["basis"] = "Existing CityRebuildV002Setup Group and Surface create identity frames, with world-coordinate mesh vertices. Existing meshes, materials and collider references preserved." }.ToString());
+    }
+    static void RestoreDisplacedBuildingChildren(JObject layout)
+    {
+        // The saved scene contains seven child transforms displaced from the verified
+        // Phase 3 assembly. Recover from the native FBX and measured layout, never
+        // from a magic offset or a rewritten source asset.
+        var city = GameObject.Find("CityRebuild_v002").transform;
+        var changes = new JArray();
+        var baseline = JObject.Parse(File.ReadAllText("../docs/verification/city-rebuild-v002-unity-results.json"));
+        var calibration = baseline["campus_axis_calibration"];
+        var asset = AssetDatabase.LoadAssetAtPath<GameObject>("Assets/SIMUS/Art/buildings/campus/Campus.fbx");
+        var source = (GameObject)PrefabUtility.InstantiatePrefab(asset);
+        var e = calibration["rotation_euler"]; var s = calibration["native_adjusted_scale"];
+        source.transform.rotation = Quaternion.Euler((float)e[0], (float)e[1], (float)e[2]);
+        source.transform.localScale = new Vector3((float)s[0], (float)s[1], (float)s[2]);
+        try
+        {
+            var native = source.GetComponentsInChildren<MeshRenderer>(true).GroupBy(r => r.name).ToDictionary(g => g.Key, g => g.First());
+            foreach (var item in layout["campus"]["components"])
+            {
+                var group = city.Find("06_CampusBuildings_14/" + (string)item["id"] + "_" + (string)item["name"]);
+                foreach (var renderer in group.GetComponentsInChildren<MeshRenderer>())
+                {
+                    var expected = native[renderer.name].transform.position + group.position;
+                    if (Vector3.Distance(renderer.transform.position, expected) <= .025f) continue;
+                    changes.Add(new JObject { ["id"] = (string)item["id"], ["child"] = renderer.name,
+                        ["before_world_position"] = V(renderer.transform.position), ["restored_world_position"] = V(expected),
+                        ["basis"] = "Original FBX child world transform + Phase 3 campus axis calibration + approved placement wrapper" });
+                    renderer.transform.position = expected;
+                }
+            }
+        }
+        finally { UnityEngine.Object.DestroyImmediate(source); }
+        foreach (var item in layout["buildings"])
+        {
+            var group = city.Find("08_ExternalBuildings_55/" + (string)item["id"] + "_" + (string)item["type"]);
+            var b = BoundsOf(group.gameObject);
+            var delta = new Vector3((float)item["x"] - b.center.x, -b.min.y, (float)item["z"] - b.center.z);
+            if (delta.magnitude <= .025f) continue;
+            var model = group.GetChild(0);
+            changes.Add(new JObject { ["id"] = (string)item["id"], ["child"] = model.name,
+                ["before_world_position"] = V(model.position), ["restored_world_position"] = V(model.position + delta),
+                ["basis"] = "Approved footprint center and y=0 ground, native FBX dimensions and existing yaw preserved" });
+            model.position += delta;
+        }
+        Physics.SyncTransforms();
+        EditorSceneManager.SaveScene(city.gameObject.scene, CityRebuildV002Setup.ScenePath); AssetDatabase.SaveAssets();
+        string recovery = "../docs/verification/city-rebuild-v002-building-recovery.json";
+        if (changes.Count > 0 || !File.Exists(recovery)) File.WriteAllText(recovery, new JObject {
+            ["utc"] = DateTime.UtcNow.ToString("o"), ["changes"] = changes, ["count"] = changes.Count,
+            ["cause"] = "Saved working-scene child transforms differed from the verified original FBX assembly. Exact authoring cause unknown; source assets and approved wrappers preserved.",
+            ["verification"] = "Full actual FBX envelope audit immediately follows" }.ToString());
     }
     static void AuditBuildings(JObject layout)
     {

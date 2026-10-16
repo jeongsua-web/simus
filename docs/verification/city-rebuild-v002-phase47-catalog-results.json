@@ -1,0 +1,17 @@
+{
+  "utc": "2026-10-16T13:57:48.608683+00:00",
+  "runs": [
+    {
+      "command": "python3 scripts/assets/catalog.py",
+      "exit_code": 0,
+      "stdout": "4711 files; 24 identical-content groups; 0 errors\n",
+      "stderr": ""
+    },
+    {
+      "command": "python3 scripts/assets/catalog.py --check",
+      "exit_code": 0,
+      "stdout": "4711 files; 24 identical-content groups; 0 errors\n",
+      "stderr": ""
+    }
+  ]
+}

@@ -1,9 +1,15 @@
 {
-  "scope": "Actual serialized generated triangle support sampled at <=1m longitudinal spacing and center/±45% width, with 1mm edge distance tolerance; not Unity physics, NavMesh, thresholds, campus imported ground, or an exhaustive mesh union proof.",
+  "scope": "Serialized generated triangle support sampled at <=1m longitudinal spacing and center/±45% width, with 1mm edge tolerance. PASS requires identity scene transforms so mesh-local coordinates equal world coordinates. Not Unity physics, NavMesh, thresholds, campus imported ground, or an exhaustive mesh union proof.",
+  "scene_transform_audit": {
+    "status": "PASS",
+    "checked_transforms": 605,
+    "nonidentity": [],
+    "missing_groups": [],
+    "scope": "Identity hierarchy prerequisite for world-coordinate generated terrain/roads/walks/crossings; includes ancestors. Imported FBX transforms are excluded."
+  },
   "edge_tolerance_metres": 0.001,
-  "scene_sha256": "f130d18e40a517d87bbaa6fa39442a64d86850771d686aafc7d12158e7bb14c7",
+  "scene_sha256": "763654d0c15377cc79ba9b0919e180e47dd20ef3be0d0202a82d714635575555",
   "mesh_sha256": {
-    "surface_0000.asset": "6b40830f8afa083cc6a056ae7b61cc2eada9402469ca13f88282e378ddc93003",
     "surface_0001.asset": "4782ba5ed562e08ed35ebc211b91d4eaf681e1a40c093199192e01beadb7f184",
     "surface_0002.asset": "89fe1664cfc6276607bc07a352db187afcf020a7c42d305f32c522806c8ff88a",
     "surface_0003.asset": "fc4eb26604607b425cc5662be2c362aaf74c9f297494af587863347548335057",

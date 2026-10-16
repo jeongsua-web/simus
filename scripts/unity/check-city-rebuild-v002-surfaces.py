@@ -31,12 +31,64 @@ def triangles(path):
     return field(text, 'm_Name'), [[vertices[i] for i in indices[k:k + 3]] for k in range(0, len(indices), 3)]
 
 
+def generated_surface_transform_audit(scene_text):
+    """Generated surface vertices are world coordinates: identity is required.
+
+    Validate the saved hierarchy before treating mesh-local vertices as world
+    support. This deliberately rejects transforms instead of silently ignoring
+    them; imported campus/park FBXs use separate calibrated transforms.
+    """
+    groups = {'01_Ground', '02_Roads', '03_TurningAndIntersections',
+              '04_PedestrianSurfaces', '05_CrossingFacilities_17'}
+    blocks = re.findall(r'^--- !u!(\d+) &(-?\d+)(?: stripped)?\n(.*?)(?=^--- !u!|\Z)', scene_text, re.M | re.S)
+    names, transforms = {}, {}
+    for kind, fid, body in blocks:
+        if kind == '1':
+            match = re.search(r'^  m_Name: (.*)$', body, re.M)
+            if match:
+                name = match.group(1)
+                names[int(fid)] = json.loads(name) if name.startswith('"') else name
+        elif kind == '4' and 'm_LocalPosition:' in body:
+            go = int(re.search(r'm_GameObject: \{fileID: (-?\d+)\}', body).group(1))
+            parent = int(re.search(r'm_Father: \{fileID: (-?\d+)\}', body).group(1))
+            values = {}
+            for key in ('m_LocalPosition', 'm_LocalRotation', 'm_LocalScale'):
+                raw = re.search(key + r': (\{.*\})', body).group(1)
+                values[key] = json.loads(re.sub(r'([xyzw]):', r'"\1":', raw))
+            transforms[int(fid)] = {'go': go, 'parent': parent, 'values': values}
+    inspected, invalid, found_groups = set(), [], set()
+    defaults = {'m_LocalPosition': {'x': 0, 'y': 0, 'z': 0},
+                'm_LocalRotation': {'x': 0, 'y': 0, 'z': 0, 'w': 1},
+                'm_LocalScale': {'x': 1, 'y': 1, 'z': 1}}
+    for fid in transforms:
+        chain = []; at = fid
+        while at in transforms and at not in chain:
+            chain.append(at); at = transforms[at]['parent']
+        path = [names.get(transforms[n]['go'], '?') for n in reversed(chain)]
+        matched = groups.intersection(path)
+        if not matched: continue
+        found_groups.update(matched)
+        for ancestor in chain:
+            if ancestor in inspected: continue
+            inspected.add(ancestor)
+            values = transforms[ancestor]['values']
+            if any(abs(values[key][axis] - expected) > .000001
+                   for key, axes in defaults.items() for axis, expected in axes.items()):
+                invalid.append({'transform': ancestor, 'name': names.get(transforms[ancestor]['go']),
+                                'discovered_from': '/'.join(path), **values})
+    missing = sorted(groups - found_groups)
+    return {'status': 'PASS' if not invalid and not missing else 'FAIL',
+            'checked_transforms': len(inspected), 'nonidentity': invalid, 'missing_groups': missing,
+            'scope': 'Identity hierarchy prerequisite for world-coordinate generated terrain/roads/walks/crossings; includes ancestors. Imported FBX transforms are excluded.'}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, default=ROOT / 'docs/verification/city-rebuild-v002-surface-results.json')
     args = parser.parse_args()
     layout = json.loads((ROOT / 'docs/planning/city_rebuild_v002/layout.json').read_text(encoding='utf-8'))
     scene_text = (FOLDER / 'CityRebuild_v002.unity').read_text(encoding='utf-8')
+    transform_audit = generated_surface_transform_audit(scene_text)
     referenced_guids = set(re.findall(r'guid: ([0-9a-f]{32})', scene_text))
     bins = collections.defaultdict(list)
     mesh_count = triangle_count = 0
@@ -96,14 +148,18 @@ def main():
         return {'samples': count, 'unsupported': len(misses), 'misses': misses,
                 'boundary_tolerance_samples': tolerance_samples}
 
-    result = {'scope': 'Actual serialized generated triangle support sampled at <=1m longitudinal spacing and center/±45% width, with 1mm edge distance tolerance; not Unity physics, NavMesh, thresholds, campus imported ground, or an exhaustive mesh union proof.',
+    result = {'scope': 'Serialized generated triangle support sampled at <=1m longitudinal spacing and center/±45% width, with 1mm edge tolerance. PASS requires identity scene transforms so mesh-local coordinates equal world coordinates. Not Unity physics, NavMesh, thresholds, campus imported ground, or an exhaustive mesh union proof.',
+              'scene_transform_audit': transform_audit,
               'edge_tolerance_metres': .001,
               'scene_sha256': hashlib.sha256((FOLDER/'CityRebuild_v002.unity').read_bytes()).hexdigest(),
               'mesh_sha256': hashes, 'surface_meshes': mesh_count, 'surface_triangles': triangle_count,
               'roads': sample(layout['roads'],'carriageway_width'), 'walks': sample(layout['pedestrian_edges'],'width')}
-    result['status'] = 'PASS' if result['roads']['unsupported'] == 0 and result['walks']['unsupported'] == 0 else 'FAIL'
+    result['status'] = 'PASS' if transform_audit['status'] == 'PASS' and result['roads']['unsupported'] == 0 and result['walks']['unsupported'] == 0 else 'FAIL'
     args.output.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n', encoding='utf-8')
-    print(json.dumps({key:value for key,value in result.items() if key not in ['mesh_sha256','roads','walks']},ensure_ascii=False,indent=2))
+    summary = {key:value for key,value in result.items() if key not in ['mesh_sha256','roads','walks','scene_transform_audit']}
+    summary['scene_transform_audit'] = {key:value for key,value in transform_audit.items() if key != 'nonidentity'}
+    summary['scene_transform_audit']['nonidentity_count'] = len(transform_audit['nonidentity'])
+    print(json.dumps(summary,ensure_ascii=False,indent=2))
     for key in ['roads','walks']:
         print(key, result[key]['samples'], 'samples;', result[key]['unsupported'], 'unsupported')
     return int(result['status'] != 'PASS')

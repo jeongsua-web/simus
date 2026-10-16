@@ -1,0 +1,113 @@
+{
+  "utc": "2026-10-16T13:54:36.3332850Z",
+  "changes": [
+    {
+      "id": "C11",
+      "child": "PACKAGE_D03_UNITY_D03_CANOPY_11",
+      "before_world_position": [
+        -94.0,
+        -186.18,
+        65.0
+      ],
+      "restored_world_position": [
+        0.0,
+        -0.18,
+        65.0
+      ],
+      "basis": "Original FBX child world transform + Phase 3 campus axis calibration + approved placement wrapper"
+    },
+    {
+      "id": "C11",
+      "child": "PACKAGE_D03_UNITY_D03_PARAPET_11_18",
+      "before_world_position": [
+        -94.0,
+        -186.18,
+        65.0
+      ],
+      "restored_world_position": [
+        0.0,
+        -0.18,
+        65.0
+      ],
+      "basis": "Original FBX child world transform + Phase 3 campus axis calibration + approved placement wrapper"
+    },
+    {
+      "id": "C11",
+      "child": "PACKAGE_D03_UNITY_D03_PARAPET_11_19",
+      "before_world_position": [
+        -94.0,
+        -186.18,
+        65.0
+      ],
+      "restored_world_position": [
+        0.0,
+        -0.18,
+        65.0
+      ],
+      "basis": "Original FBX child world transform + Phase 3 campus axis calibration + approved placement wrapper"
+    },
+    {
+      "id": "C11",
+      "child": "PACKAGE_D03_UNITY_D03_PARAPET_11_20",
+      "before_world_position": [
+        -94.0,
+        -186.18,
+        65.0
+      ],
+      "restored_world_position": [
+        0.0,
+        -0.18,
+        65.0
+      ],
+      "basis": "Original FBX child world transform + Phase 3 campus axis calibration + approved placement wrapper"
+    },
+    {
+      "id": "B01",
+      "child": "COMMERCIAL_01_OLD_MULTI_TENANT",
+      "before_world_position": [
+        -166.0,
+        -186.0,
+        -83.99999
+      ],
+      "restored_world_position": [
+        -72.0,
+        0.108001709,
+        -83.99999
+      ],
+      "basis": "Approved footprint center and y=0 ground, native FBX dimensions and existing yaw preserved"
+    },
+    {
+      "id": "B31",
+      "child": "HOUSE_02_OLD_BRICK",
+      "before_world_position": [
+        -252.0,
+        -186.0,
+        -176.0
+      ],
+      "restored_world_position": [
+        -158.0,
+        0.04499817,
+        -175.999985
+      ],
+      "basis": "Approved footprint center and y=0 ground, native FBX dimensions and existing yaw preserved"
+    },
+    {
+      "id": "B42",
+      "child": "VILLA_01_PILOTI_BRICK",
+      "before_world_position": [
+        -272.0,
+        -186.0,
+        -208.999985
+      ],
+      "restored_world_position": [
+        -178.0,
+        0.0422973633,
+        -209.0
+      ],
+      "basis": "Approved footprint center and y=0 ground, native FBX dimensions and existing yaw preserved"
+    }
+  ],
+  "count": 7,
+  "cause": "Saved working-scene child transforms differed from the verified original FBX assembly. Exact authoring cause unknown; source assets and approved wrappers preserved.",
+  "verification": "Full actual FBX envelope audit immediately follows"
+}
