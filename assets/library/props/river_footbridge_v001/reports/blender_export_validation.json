@@ -1,0 +1,228 @@
+{
+  "method": "Blender source creation and actual binary FBX export/reimport; Unity import is separate",
+  "blender_version": "5.2.2 LTS",
+  "asset_key": "river_footbridge_v001",
+  "assets": [
+    {
+      "name": "RIVER_FOOTBRIDGE_NORTH_28_70",
+      "export": "assets/library/props/river_footbridge_v001/exports/RIVER_FOOTBRIDGE_NORTH_28_70.fbx",
+      "unity_copy": "unity/Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_FOOTBRIDGE_NORTH_28_70.fbx",
+      "source_bounds_blender_xyz_m": {
+        "min": [
+          -1.7000000476837158,
+          -14.350000381469727,
+          -0.3999999761581421
+        ],
+        "max": [
+          1.7000000476837158,
+          14.350000381469727,
+          0.0
+        ],
+        "size": [
+          3.4000000953674316,
+          28.700000762939453,
+          0.3999999761581421
+        ]
+      },
+      "roundtrip_bounds_blender_xyz_m": {
+        "min": [
+          -1.7000000476837158,
+          -14.350000381469727,
+          -0.40000230073928833
+        ],
+        "max": [
+          1.7000000476837158,
+          14.350000381469727,
+          2.3379118374577956e-06
+        ],
+        "size": [
+          3.4000000953674316,
+          28.700000762939453,
+          0.4000046386511258
+        ]
+      },
+      "maximum_bounds_delta_m": 4.66249298369803e-06,
+      "vertices": 2264,
+      "triangles": 4148,
+      "materials": [
+        "RFB_Edge_Timber",
+        "RFB_Steel_Forest",
+        "RFB_Wood_Honey",
+        "RFB_Wood_Light",
+        "RFB_Wood_Weathered"
+      ],
+      "roundtrip_materials": [
+        "RFB_Edge_Timber",
+        "RFB_Steel_Forest",
+        "RFB_Wood_Honey",
+        "RFB_Wood_Light",
+        "RFB_Wood_Weathered"
+      ],
+      "mesh_objects": 1,
+      "sha256": "d2cfc74c0c7095370ae8669c90cc63ca1105041ddc5dd025affc87cdcbe6b65b"
+    },
+    {
+      "name": "RIVER_FOOTBRIDGE_SOUTH_32_10",
+      "export": "assets/library/props/river_footbridge_v001/exports/RIVER_FOOTBRIDGE_SOUTH_32_10.fbx",
+      "unity_copy": "unity/Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_FOOTBRIDGE_SOUTH_32_10.fbx",
+      "source_bounds_blender_xyz_m": {
+        "min": [
+          -1.7000000476837158,
+          -16.049999237060547,
+          -0.3999999761581421
+        ],
+        "max": [
+          1.7000000476837158,
+          16.049999237060547,
+          0.0
+        ],
+        "size": [
+          3.4000000953674316,
+          32.099998474121094,
+          0.3999999761581421
+        ]
+      },
+      "roundtrip_bounds_blender_xyz_m": {
+        "min": [
+          -1.7000000476837158,
+          -16.049999237060547,
+          -0.4000025987625122
+        ],
+        "max": [
+          1.7000000476837158,
+          16.049999237060547,
+          2.614876848383574e-06
+        ],
+        "size": [
+          3.4000000953674316,
+          32.099998474121094,
+          0.4000052136393606
+        ]
+      },
+      "maximum_bounds_delta_m": 5.237481218500761e-06,
+      "vertices": 2504,
+      "triangles": 4588,
+      "materials": [
+        "RFB_Edge_Timber",
+        "RFB_Steel_Forest",
+        "RFB_Wood_Honey",
+        "RFB_Wood_Light",
+        "RFB_Wood_Weathered"
+      ],
+      "roundtrip_materials": [
+        "RFB_Edge_Timber",
+        "RFB_Steel_Forest",
+        "RFB_Wood_Honey",
+        "RFB_Wood_Light",
+        "RFB_Wood_Weathered"
+      ],
+      "mesh_objects": 1,
+      "sha256": "13d89f5a9c3579d3230d98e2340866d11e575292e421657c6de1e1ee626cf300"
+    },
+    {
+      "name": "RIVER_RAIL_MODULE_2M",
+      "export": "assets/library/props/river_footbridge_v001/exports/RIVER_RAIL_MODULE_2M.fbx",
+      "unity_copy": "unity/Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_RAIL_MODULE_2M.fbx",
+      "source_bounds_blender_xyz_m": {
+        "min": [
+          -0.07999999821186066,
+          -1.0,
+          0.0
+        ],
+        "max": [
+          0.07999999821186066,
+          1.0,
+          1.0999999046325684
+        ],
+        "size": [
+          0.1599999964237213,
+          2.0,
+          1.0999999046325684
+        ]
+      },
+      "roundtrip_bounds_blender_xyz_m": {
+        "min": [
+          -0.07999999821186066,
+          -1.0,
+          -1.6292068494294654e-07
+        ],
+        "max": [
+          0.07999999821186066,
+          1.000000238418579,
+          1.100000023841858
+        ],
+        "size": [
+          0.1599999964237213,
+          2.000000238418579,
+          1.1000001867625429
+        ]
+      },
+      "maximum_bounds_delta_m": 2.821299744937278e-07,
+      "vertices": 336,
+      "triangles": 616,
+      "materials": [
+        "RFB_Steel_Forest",
+        "RFB_Wood_Light"
+      ],
+      "roundtrip_materials": [
+        "RFB_Steel_Forest",
+        "RFB_Wood_Light"
+      ],
+      "mesh_objects": 1,
+      "sha256": "f006089184f025cc3a3f71bb0d723f7883c1091d23b47c86d30fff19540721d0"
+    },
+    {
+      "name": "RIVER_RAIL_END_POST",
+      "export": "assets/library/props/river_footbridge_v001/exports/RIVER_RAIL_END_POST.fbx",
+      "unity_copy": "unity/Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_RAIL_END_POST.fbx",
+      "source_bounds_blender_xyz_m": {
+        "min": [
+          -0.07000000029802322,
+          -0.07000000029802322,
+          0.0
+        ],
+        "max": [
+          0.07000000029802322,
+          0.07000000029802322,
+          1.100000023841858
+        ],
+        "size": [
+          0.14000000059604645,
+          0.14000000059604645,
+          1.100000023841858
+        ]
+      },
+      "roundtrip_bounds_blender_xyz_m": {
+        "min": [
+          -0.07000000029802322,
+          -0.07000000029802322,
+          -1.1404448052587668e-08
+        ],
+        "max": [
+          0.07000000029802322,
+          0.07000017911195755,
+          1.100000023841858
+        ],
+        "size": [
+          0.14000000059604645,
+          0.14000017940998077,
+          1.100000035246306
+        ]
+      },
+      "maximum_bounds_delta_m": 1.7881393432617188e-07,
+      "vertices": 24,
+      "triangles": 44,
+      "materials": [
+        "RFB_Steel_Forest"
+      ],
+      "roundtrip_materials": [
+        "RFB_Steel_Forest"
+      ],
+      "mesh_objects": 1,
+      "sha256": "db0d08f1c6849faf258d9ee6b6711deecec18fd81361c2ec9398abf1adc767aa"
+    }
+  ],
+  "source": "assets/library/props/river_footbridge_v001/source/SIMUS_River_Footbridge_v001.blend",
+  "source_sha256": "d099548ab0723fd40d8711013ac7eaac1fd36f45331bb0fb7c57b6173c14b38a",
+  "status": "PASS: actual FBX export/reimport bounds and material names match; Unity validation separate"
+}

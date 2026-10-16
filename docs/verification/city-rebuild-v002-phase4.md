@@ -2,6 +2,8 @@
 
 2026-10-15 확장: 사용자 요청으로 **하천 구현을 Phase 4에 포함**한다. [하천 위치·단면·보행 연결 설계](../planning/city_rebuild_v002/river-design.md)를 먼저 보고하고 기존 구현 위에 증분 적용한다. 아래는 기존 공원 작업 기록이며 하천의 실행 완료를 의미하지 않는다. 현재 `phase4-results.json`에는 기존 공원 증분 Apply PASS가 있으므로 하단의 초기 “통합 실행 대기” 표현은 당시 상태다.
 
+2026-10-16 하천 완료: 폭 10m 곡선 하천, 실제 지면 절개, 양안 둔치·산책로, 보행교 2개와 기존 NPC 보행망 연결, 오염도 머티리얼 제어를 구현했다. 5개 실제 NPC 왕복 경로와 8개 회귀 테스트가 통과했다. [최종 QA·화면·제한 사항](city-rebuild-v002-river-qa.md)을 현재 하천 상태의 기준으로 사용한다.
+
 승인된 v002의 기존 `CityRebuild_v002.unity`에 증분 편집을 적용한다. 전체 generator를 재실행하지 않으며 `layout.json`, 14동/55개 건물 배치, 원본 Blender/FBX, 원본 씬, 빌드 설정을 보호한다. 실행 메서드는 `CityRebuildV002Phase4Setup.Apply`, 메뉴는 `SIMUS > City Rebuild v002 > Apply Phase 4 Park and Greenery`다.
 
 ## 보행로와 공원

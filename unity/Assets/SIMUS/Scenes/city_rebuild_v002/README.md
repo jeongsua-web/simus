@@ -1,4 +1,16 @@
-# CityRebuild v002 — Unity phases 1–3
+# CityRebuild v002 — working scene
+
+## Phase 4 river addition (2026-10-15)
+
+The eastern park now includes the river addition described in [the river design](../../../../../docs/planning/city_rebuild_v002/river-design.md). Use `SIMUS > City Rebuild v002 > Apply Phase 4 River` for its incremental generator. The hierarchy `12_River_Phase4` owns the excavated bed/banks, independent water surface, two bank trails, two bridges, connecting ramps and graph extension. `CityGround` and `EastPark_Lawn` reference carved scene-only meshes. Do not run the Phases 1–3 generator to edit this addition: it replaces the entire city root.
+
+Select `River_Water_Surface` and its `CityV002RiverWater` component to inspect the water appearance. Disable `followCityState` for a manual test, then set `pollution` from 0 (clean) to 100 (polluted), or call `SetPollution(float)`. With `followCityState` enabled at runtime, an available `CityStatePoller` city aggregate takes priority, then `CityStateAssets.pollution`; without either source the local value remains. Unknown server regions are not guessed. Renderer property blocks keep the shared material unchanged.
+
+The water width is fixed at 10m, the bank corridor is 24m and the two riverside trails are 2.4m wide. Water width changes require a new clearance check: a 12m water width intersects a neighboring existing pedestrian envelope. The layout JSON/CSVs, buildings, roads and exhibition identifiers remain separate protected inputs. See [river QA](../../../../../docs/verification/city-rebuild-v002-river-qa.md) for final verification scope and remaining limitations.
+
+## Original Phase 1–3 handoff
+
+The following records the original handoff before subsequent park and river additions.
 
 Open `CityRebuild_v002.unity` in Unity 6000.3.24f1. The scene is assembled in Unity from the approved `docs/planning/city_rebuild_v002/layout.json`; the CSV placement tables are cross-checked by the independent QA checker. The earlier 2×2 draft is not used.
 

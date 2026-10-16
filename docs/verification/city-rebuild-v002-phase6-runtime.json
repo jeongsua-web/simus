@@ -1,0 +1,19 @@
+{
+    "scope": "Unity Editor actual Play Mode, Camera.Render from the active Game camera; no editor inspection or animation sampling",
+    "unityVersion": "6000.3.24f1",
+    "runtimeStatus": "FAIL: required camera/navigation monitor missing",
+    "navigationFile": "",
+    "logFile": "../docs/verification/city-rebuild-v002-logs/phase47-playmode.log",
+    "performanceScope": "Editor on this machine, actual FBX skinned NPC + Animator + TestNpcPatrol + NpcGrounding + graph waypoint adapter. Not a player/WebGL/production crowd benchmark; no crowd avoidance or event/backend workload.",
+    "routeTimeScale": 0.0,
+    "routeWallSeconds": 0.0,
+    "elapsedWallSeconds": 0.11233127117156983,
+    "compileErrors": 0,
+    "runtimeErrors": 0,
+    "warnings": 0,
+    "largeTriangleWarnings": 0,
+    "performanceVSyncCount": 0,
+    "performanceTargetFrameRate": 0,
+    "cameras": [],
+    "performance": []
+}

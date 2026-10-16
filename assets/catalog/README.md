@@ -1,5 +1,9 @@
 # 에셋 찾기
 
+## 2026-10-15 CityRebuild_v002 하천
+
+Phase 4 공원 범위에 [하천 설계](../../docs/planning/city_rebuild_v002/river-design.md)를 추가했다. 동쪽 공원 안의 10m 수면, 절개 하상·둔치, 양안 산책로는 Unity 씬 전용 생성 메시다. 신규 제작 모델은 [보행교 kit v001](../library/props/river_footbridge_v001/README.md) 한 묶음이며, 28.70m/32.10m deck와 별도 난간 모듈을 사용한다. Blender 원본/실제 FBX 재가져오기 검증이 포함되어 있고 상태는 `received`다. 실제 씬·NPC 검증 범위는 [하천 QA](../../docs/verification/city-rebuild-v002-river-qa.md)에서 확인한다. 기존 건물·도로·원본 맵 FBX의 대체본이나 전시 승인 에셋을 의미하지 않는다.
+
 [정리 규칙](../ASSET_RULES.md) · [납품·승인 목록](../manifest.csv) · [전체 파일 목록](inventory.json) · [2026-10-08 이동 이력](moves-2026-10-08.json)
 
 ## 2026-10-14 승인된 v002 Unity 구현 — Phase 1~3

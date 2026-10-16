@@ -51,6 +51,9 @@ namespace Simus
             patrol.startPoint = waypoint; patrol.endPoint = waypoint;
             transform.position = points[0];
             var grounding = GetComponent<NpcGrounding>(); if (grounding != null) transform.position = grounding.Project(transform.position);
+            var riverGuard = GetComponent<CityV002RiverGuard>();
+            if (riverGuard != null && !riverGuard.ResetSafePosition(transform.position))
+            { Error = "Route start overlaps river: " + startNode; Debug.LogError(Error, this); return false; }
             WaypointIndex = 1; waypoint.position = points[1];
             patrol.enabled = true; Started = true; Completed = false; Error = null; ArrivalCount = 0;
             ReachedWaypoints = 1; OutboundSimulationSeconds = 0; startedAt = Time.time;
@@ -63,7 +66,13 @@ namespace Simus
             // The ground plane exists beneath the raised sidewalk. Give the unchanged grounding
             // component the graph's pedestrian-height reference, preventing its nearest-height
             // rule from selecting hidden ground when stepping up from the asphalt.
-            var reference = transform.position; reference.y = Waypoints[WaypointIndex].y; transform.position = reference;
+            var reference = transform.position;
+            var segmentStart = Waypoints[Mathf.Max(0, WaypointIndex - 1)];
+            var segmentEnd = Waypoints[WaypointIndex];
+            var flatSegment = segmentEnd - segmentStart; flatSegment.y = 0;
+            var flatOffset = reference - segmentStart; flatOffset.y = 0;
+            float progress = flatSegment.sqrMagnitude > .000001f ? Mathf.Clamp01(Vector3.Dot(flatOffset, flatSegment) / flatSegment.sqrMagnitude) : 1;
+            reference.y = Mathf.Lerp(segmentStart.y, segmentEnd.y, progress); transform.position = reference;
             var delta = waypoint.position - transform.position; delta.y = 0;
             // TestNpcPatrol's 5 cm arrival threshold remains the authoritative local motion tolerance.
             if (delta.sqrMagnitude >= .0025f) return;

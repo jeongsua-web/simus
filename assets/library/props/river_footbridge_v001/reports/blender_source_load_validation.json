@@ -1,0 +1,127 @@
+{
+  "status": "PASS",
+  "method": "Actual Blender open_mainfile of final saved source; no resave",
+  "blender_version": "5.2.2 LTS",
+  "source": "assets/library/props/river_footbridge_v001/source/SIMUS_River_Footbridge_v001.blend",
+  "source_sha256": "d099548ab0723fd40d8711013ac7eaac1fd36f45331bb0fb7c57b6173c14b38a",
+  "assets": [
+    {
+      "scene": "SOURCE_NORTH_28_70m",
+      "object": "RIVER_DECK_NORTH_28_70",
+      "dimensions_blender_xyz_m": [
+        3.4000000953674316,
+        28.700000762939453,
+        0.3999999761581421
+      ],
+      "bounds_min": [
+        -1.7000000476837158,
+        -14.350000381469727,
+        -0.3999999761581421
+      ],
+      "bounds_max": [
+        1.7000000476837158,
+        14.350000381469727,
+        0.0
+      ],
+      "pivot_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "materials": [
+        "RFB_Edge_Timber",
+        "RFB_Steel_Forest",
+        "RFB_Wood_Honey",
+        "RFB_Wood_Light",
+        "RFB_Wood_Weathered"
+      ]
+    },
+    {
+      "scene": "SOURCE_SOUTH_32_10m",
+      "object": "RIVER_DECK_SOUTH_32_10",
+      "dimensions_blender_xyz_m": [
+        3.4000000953674316,
+        32.099998474121094,
+        0.3999999761581421
+      ],
+      "bounds_min": [
+        -1.7000000476837158,
+        -16.049999237060547,
+        -0.3999999761581421
+      ],
+      "bounds_max": [
+        1.7000000476837158,
+        16.049999237060547,
+        0.0
+      ],
+      "pivot_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "materials": [
+        "RFB_Edge_Timber",
+        "RFB_Steel_Forest",
+        "RFB_Wood_Honey",
+        "RFB_Wood_Light",
+        "RFB_Wood_Weathered"
+      ]
+    },
+    {
+      "scene": "SOURCE_RAIL_MODULE_2m",
+      "object": "RIVER_RAIL_MODULE_2M",
+      "dimensions_blender_xyz_m": [
+        0.1599999964237213,
+        2.0,
+        1.0999999046325684
+      ],
+      "bounds_min": [
+        -0.07999999821186066,
+        -1.0,
+        0.0
+      ],
+      "bounds_max": [
+        0.07999999821186066,
+        1.0,
+        1.0999999046325684
+      ],
+      "pivot_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "materials": [
+        "RFB_Steel_Forest",
+        "RFB_Wood_Light"
+      ]
+    },
+    {
+      "scene": "SOURCE_RAIL_END_POST",
+      "object": "RIVER_RAIL_END_POST",
+      "dimensions_blender_xyz_m": [
+        0.14000000059604645,
+        0.14000000059604645,
+        1.100000023841858
+      ],
+      "bounds_min": [
+        -0.07000000029802322,
+        -0.07000000029802322,
+        0.0
+      ],
+      "bounds_max": [
+        0.07000000029802322,
+        0.07000000029802322,
+        1.100000023841858
+      ],
+      "pivot_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "materials": [
+        "RFB_Steel_Forest"
+      ]
+    }
+  ],
+  "preview_scene": true
+}

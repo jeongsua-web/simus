@@ -21,17 +21,21 @@ def sha(p):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output', type=Path, default=VERIFY/'city-rebuild-v002-phase47-static-results.json')
+    parser.add_argument('--baseline', type=Path, default=VERIFY/'city-rebuild-v002-phase47-resume-baseline.json',
+                        help='Current resumption baseline; original phase47 baseline remains available for historical comparison.')
     args = parser.parse_args()
     checks = []
     def record(name, passed, evidence):
         checks.append({'check':name, 'status':'PASS' if passed else 'FAIL', 'evidence':evidence})
-    baseline = json.loads((VERIFY/'city-rebuild-v002-phase47-baseline.json').read_text())
+    baseline = json.loads(args.baseline.read_text())
     allowed = {
         'unity/Assets/Editor/CityRebuildV002Setup.cs':'Phase4-7 scene generation',
         'unity/Assets/Editor/CityRebuildV002SurfaceAudit.cs':'Extended surface QA',
         'unity/Assets/Scripts/CityPreviewCamera.cs':'User-authorized camera settings/compatibility; separate diff review required',
         'assets/catalog/README.md':'Usage documentation',
         'unity/Assets/Scripts/NpcOcclusionReveal.cs':'User-authorized v002 occlusion root extension; null default retains original behavior; separate review required',
+        'unity/Assets/Scripts/CityV002Phase6Verification.cs':'Actual runtime camera/performance evidence harness; separately reviewed',
+        'unity/Assets/Scripts/CityV002NavigationVerification.cs':'Runtime route evidence harness; separately reviewed',
     }
     changed, unexpected = [], []
     for item in baseline['files']:
@@ -41,7 +45,7 @@ def main():
         changed.append(item['path'])
         if item['path'] not in allowed and not item['path'].startswith('unity/Assets/SIMUS/Scenes/city_rebuild_v002/'):
             unexpected.append(item['path'])
-    record('phase47_protected_baseline',not unexpected, {'files':len(baseline['files']),'unexpected_changes':unexpected,'authorized_working_changes':sorted(set(changed)-set(unexpected)),'preexisting_dirty_state':baseline['git_status']})
+    record('phase47_protected_baseline',not unexpected, {'baseline':str(args.baseline.relative_to(ROOT)) if args.baseline.is_relative_to(ROOT) else str(args.baseline),'files':len(baseline['files']),'unexpected_changes':unexpected,'authorized_working_changes':sorted(set(changed)-set(unexpected)),'preexisting_dirty_state':baseline['git_status']})
     lp=ROOT/'docs/planning/city_rebuild_v002/layout.json'; layout=json.loads(lp.read_text())
     record('approved_layout_immutable',sha(lp)=='3e98ea485bd92dc9c2528d0420b5999a0336f700270c0f73f7630aa214fbd105',sha(lp))
     nodes={n['id'] for n in layout['pedestrian_nodes']}; edges=layout['pedestrian_edges']; adj=collections.defaultdict(set)

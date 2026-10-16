@@ -16,6 +16,7 @@ namespace Simus
             var ids=graph.nodes.Select((n,i)=>new{n.id,i}).ToDictionary(n=>n.id,n=>n.i);
             for(int i=0;i<edges.Length;i++){edges[i].from=ids[fromIds[i]];edges[i].to=ids[toIds[i]];}
             graph.edges=graph.edges.Where(e=>!e.id.StartsWith("RIVER_")).Concat(edges).ToArray();
+            foreach(var actor in GetComponentsInChildren<CityV002NpcRouteAdapter>(true))actor.graph=graph;
         }
     }
 }

@@ -135,5 +135,11 @@
     "Drive scene-local water color and smoothness with 0..100 city aggregate pollution without changing shared material assets.",
     "10m width fixed: widening water to12m intersects adjacent PKE01 pedestrian envelope; revalidate all geometry before changing."
   ],
-  "mesh_step_m": 2.0
+  "mesh_step_m": 2.0,
+  "bank_trail_grading": {
+    "nominal_surface_y": -0.428,
+    "crossing_surface_y": 0.14,
+    "transition_run_m": 12,
+    "purpose": "At-grade connections to existing park trails and bridge decks; avoid headroom conflicts beneath raised crossings."
+  }
 }

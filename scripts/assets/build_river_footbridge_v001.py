@@ -5,7 +5,6 @@ Blender source Z is height and Y is bridge length; FBX uses -Z forward / Y up.
 All meshes have applied transforms and centered deck pivots at deck-top height 0.
 """
 import bpy
-import csv
 import hashlib
 import json
 import math
@@ -21,6 +20,7 @@ for folder in [SOURCE.parent, BUNDLE / "exports", BUNDLE / "previews", BUNDLE / 
     folder.mkdir(parents=True, exist_ok=True)
 
 bpy.ops.wm.read_factory_settings(use_empty=True)
+bpy.context.preferences.filepaths.save_version = 0
 bpy.context.scene.unit_settings.system = "METRIC"
 bpy.context.scene.unit_settings.scale_length = 1.0
 
@@ -114,7 +114,7 @@ def rail(scene):
     activate(scene)
     parts = [
         # One start post per module avoids coincident end posts when repeated.
-        box("Start_post", (0, -0.93, 0.55), (0.14, 0.14, 1.1), 4, 0.006),
+        box("Start_post", (0, -0.93, 0.505), (0.14, 0.14, 1.01), 4, 0.006),
         box("Warm_wood_handrail", (0, 0, 1.055), (0.16, 2, 0.09), 1, 0.008),
         box("Lower_steel_rail", (0, 0, 0.19), (0.07, 2, 0.07), 4, 0.003),
         box("Upper_steel_rail", (0, 0, 0.94), (0.07, 2, 0.06), 4, 0.003),
@@ -241,7 +241,8 @@ camera.data.type = "ORTHO"
 camera.data.ortho_scale = 34
 camera.rotation_euler = (Vector((0, 0, 0)) - camera.location).to_track_quat("-Z", "Y").to_euler()
 showcase.camera = camera
-showcase.render.engine = "BLENDER_EEVEE_NEXT"
+engines = {item.identifier for item in showcase.render.bl_rna.properties["engine"].enum_items}
+showcase.render.engine = "BLENDER_EEVEE" if "BLENDER_EEVEE" in engines else "BLENDER_EEVEE_NEXT"
 showcase.render.resolution_x, showcase.render.resolution_y = 1600, 1000
 showcase.render.resolution_percentage = 100
 showcase.render.image_settings.file_format = "PNG"
