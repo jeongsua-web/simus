@@ -32,7 +32,7 @@ def main():
     def record(name, passed, evidence):
         checks.append({'check': name, 'status': 'PASS' if passed else 'FAIL', 'evidence': evidence})
 
-    baseline = json.loads((VERIFY / 'city-rebuild-v002-protected-baseline.json').read_text())
+    baseline = json.loads((VERIFY / 'city-rebuild-v002-protected-baseline.json').read_text(encoding='utf-8'))
     documented_exceptions = {
         'docs/planning/city_rebuild_v002/README.md': 'Coordinator recorded user approval and implementation start; design JSON/CSV remain protected.',
         'assets/catalog/README.md': 'Coordinator documented the new v002 scene usage; asset sources and approval states remain protected.'
@@ -44,7 +44,7 @@ def main():
     record('protected_existing_files', not unexpected, {'count': len(protected), 'excluded_generated_cache_files': len(baseline['files']) - len(protected), 'unexpected_changes': unexpected,
            'documented_changes': {path: documented_exceptions[path] for path in changed if path in documented_exceptions}})
     layout_path = PLAN / 'layout.json'
-    layout = json.loads(layout_path.read_text())
+    layout = json.loads(layout_path.read_text(encoding='utf-8'))
     record('approved_layout_hash', sha(layout_path) == '3e98ea485bd92dc9c2528d0420b5999a0336f700270c0f73f7630aa214fbd105', sha(layout_path))
     spec = importlib.util.spec_from_file_location('v002_design_qa', PLAN / 'qa-check.py')
     design = importlib.util.module_from_spec(spec)
@@ -54,7 +54,7 @@ def main():
            {'external': len(layout['buildings']), 'campus': len(layout['campus']['components'])})
     errors = []
     for filename, group in [('buildings.csv', layout['buildings']), ('campus-placements.csv', layout['campus']['components'])]:
-        rows = list(csv.DictReader((PLAN / filename).open(newline='')))
+        rows = list(csv.DictReader((PLAN / filename).open(encoding='utf-8', newline='')))
         indexed = {row['id']: row for row in rows}
         if len(rows) != len(group) or set(indexed) != {b['id'] for b in group}:
             errors.append(filename + ': IDs/count')
@@ -76,11 +76,11 @@ def main():
            {'map_version': layout['metadata']['map_version'], 'max_wait_seconds': layout['metadata']['npc_max_event_wait_seconds']})
 
     scenes = list((ROOT / 'unity/Assets/SIMUS/Scenes').rglob('CityRebuild_v002.unity'))
-    scene = args.scene or (scenes[0] if len(scenes) == 1 else None)
+    scene = args.scene.resolve() if args.scene else (scenes[0] if len(scenes) == 1 else None)
     if not scene or not scene.is_file():
         checks.append({'check': 'serialized_unity_scene', 'status': 'NOT TESTED', 'evidence': 'No generated CityRebuild_v002.unity found'})
     else:
-        text = scene.read_text()
+        text = scene.read_text(encoding='utf-8')
         blocks = re.findall(r'^--- !u!(\d+) &(-?\d+)(?: stripped)?\n(.*?)(?=^--- !u!|\Z)', text, re.M | re.S)
         ids = [int(block[1]) for block in blocks]
         record('unique_local_file_ids', bool(ids) and len(ids) == len(set(ids)), {'count': len(ids)})
@@ -97,20 +97,20 @@ def main():
         record('local_file_ids_resolve', not dangling, dangling)
         guid_paths = {}
         for meta in (ROOT / 'unity/Assets').rglob('*.meta'):
-            match = re.search(r'^guid: ([0-9a-f]{32})$', meta.read_text(errors='replace'), re.M)
+            match = re.search(r'^guid: ([0-9a-f]{32})$', meta.read_text(encoding='utf-8', errors='replace'), re.M)
             if match:
-                guid_paths.setdefault(match.group(1), []).append(str(meta.relative_to(ROOT))[:-5])
+                guid_paths.setdefault(match.group(1), []).append(meta.relative_to(ROOT).as_posix()[:-5])
         references = set(re.findall(r'guid: ([0-9a-f]{32})', text))
         unresolved = sorted(guid for guid in references if guid not in guid_paths and not guid.startswith('0000000000000000'))
         duplicates = {guid: guid_paths[guid] for guid in references if len(guid_paths.get(guid, [])) > 1}
         record('external_scene_guids_resolve', not unresolved and not duplicates, {'missing': unresolved, 'duplicate_guid_paths': duplicates})
         fbx_refs = sorted({path for guid in references for path in guid_paths.get(guid, []) if path.lower().endswith('.fbx')})
         record('scene_references_actual_fbx', bool(fbx_refs), fbx_refs)
-        record('new_scene_has_meta', Path(str(scene) + '.meta').is_file(), str(scene.relative_to(ROOT)))
+        record('new_scene_has_meta', Path(str(scene) + '.meta').is_file(), scene.relative_to(ROOT).as_posix())
 
         evidence_path = VERIFY / 'city-rebuild-v002-unity-results.json'
         if evidence_path.is_file():
-            evidence = json.loads(evidence_path.read_text())
+            evidence = json.loads(evidence_path.read_text(encoding='utf-8'))
             record('unity_evidence_matches_layout', evidence.get('layout_sha256') == sha(layout_path), evidence.get('layout_sha256'))
             record('unity_evidence_matches_saved_scene', evidence.get('scene_sha256') == sha(scene),
                    {'reported': evidence.get('scene_sha256'), 'actual': sha(scene)})
@@ -123,7 +123,7 @@ def main():
                    {'count': len(instances), 'missing': sorted(set(polygons) - set(by_id)), 'unexpected': sorted(set(by_id) - set(polygons))})
             errors = []
             actual_polys = {}
-            measurements = json.loads((PLAN / 'asset_measurements.json').read_text())
+            measurements = json.loads((PLAN / 'asset_measurements.json').read_text(encoding='utf-8'))
             campus_measurements = {b['id']: b for b in measurements['campus']['components']}
             for b in buildings:
                 inst = by_id.get(b['id'])
@@ -132,7 +132,7 @@ def main():
                 expected_asset = b.get('asset', layout['campus']['asset'])
                 if 'unity/' + inst['asset'] != expected_asset:
                     errors.append([b['id'], 'wrong source FBX'])
-                source_guid = re.search(r'^guid: (\w+)$', (ROOT / (expected_asset + '.meta')).read_text(), re.M).group(1)
+                source_guid = re.search(r'^guid: (\w+)$', (ROOT / (expected_asset + '.meta')).read_text(encoding='utf-8'), re.M).group(1)
                 if inst['asset_guid'] != source_guid:
                     errors.append([b['id'], 'wrong source GUID'])
                 bounds = inst['world_bounds']
@@ -158,7 +158,7 @@ def main():
               'layout_sha256': sha(layout_path), 'checks': checks,
               'status': 'FAIL' if any(c['status'] == 'FAIL' for c in checks) else 'PASS_STATIC_ONLY'}
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
+    args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(json.dumps({'status': result['status'], 'checks': [{k: c[k] for k in ('check', 'status')} for c in checks]}, ensure_ascii=False, indent=2))
     return int(result['status'] == 'FAIL')
 

@@ -5504,32 +5504,74 @@
       "sha256": "4aaf534c9d6367d57de75241a49fca81213cb6e58cd6e1b2cbaf262113de482a"
     },
     {
+      "path": "assets/library/props/river_footbridge_v001/README.md",
+      "role": "support",
+      "location": "library",
+      "bytes": 5580,
+      "sha256": "8c72d6e41c517a042e38a9db10f7882141e0f1429ee93ff2827d96c2eb5a0b9f"
+    },
+    {
       "path": "assets/library/props/river_footbridge_v001/exports/RIVER_FOOTBRIDGE_NORTH_28_70.fbx",
       "role": "export",
       "location": "library",
       "bytes": 71740,
-      "sha256": "39f70677652ce15038a3d02c8f5a70f0c8b567756d35577740c2255142f34c49"
+      "sha256": "d2cfc74c0c7095370ae8669c90cc63ca1105041ddc5dd025affc87cdcbe6b65b"
     },
     {
       "path": "assets/library/props/river_footbridge_v001/exports/RIVER_FOOTBRIDGE_SOUTH_32_10.fbx",
       "role": "export",
       "location": "library",
       "bytes": 76748,
-      "sha256": "5dc24602f93db37f21ae72a98d90d5c6834eae21f2d73cb79e3315b548a27399"
+      "sha256": "13d89f5a9c3579d3230d98e2340866d11e575292e421657c6de1e1ee626cf300"
     },
     {
       "path": "assets/library/props/river_footbridge_v001/exports/RIVER_RAIL_END_POST.fbx",
       "role": "export",
       "location": "library",
       "bytes": 16188,
-      "sha256": "abdb0b4712e8be874464f3637348d7186019f8839285f55ee4d6291584555cb1"
+      "sha256": "db0d08f1c6849faf258d9ee6b6711deecec18fd81361c2ec9398abf1adc767aa"
     },
     {
       "path": "assets/library/props/river_footbridge_v001/exports/RIVER_RAIL_MODULE_2M.fbx",
       "role": "export",
       "location": "library",
-      "bytes": 25372,
-      "sha256": "aee1369eaea79e2883d7ff7dda31fa076233c6e8404b621f356f5f13a6392ea9"
+      "bytes": 25356,
+      "sha256": "f006089184f025cc3a3f71bb0d723f7883c1091d23b47c86d30fff19540721d0"
+    },
+    {
+      "path": "assets/library/props/river_footbridge_v001/previews/assembled_south_bridge.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 1748266,
+      "sha256": "af11bf72293c10ca68b817845a625e57d181bc2e6c40b5b3025f6dc43f3f9e73"
+    },
+    {
+      "path": "assets/library/props/river_footbridge_v001/previews/deck_and_rail_detail.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 1879729,
+      "sha256": "1dbca6265cc984ba55ce369b4604bcf9fe9d36d709f23e95293a1b80c4bfea9b"
+    },
+    {
+      "path": "assets/library/props/river_footbridge_v001/reports/blender_export_validation.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 6729,
+      "sha256": "9d7416ac2d39a34d4ee86dd599cd3a958dfcdc07244837f5b1103adc3e340582"
+    },
+    {
+      "path": "assets/library/props/river_footbridge_v001/reports/blender_source_load_validation.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 2955,
+      "sha256": "efe48db7245c69b5591726118135526ab5dd3860fd944754980e47f2ea45f949"
+    },
+    {
+      "path": "assets/library/props/river_footbridge_v001/source/SIMUS_River_Footbridge_v001.blend",
+      "role": "source",
+      "location": "library",
+      "bytes": 187786,
+      "sha256": "d099548ab0723fd40d8711013ac7eaac1fd36f45331bb0fb7c57b6173c14b38a"
     },
     {
       "path": "assets/library/props/road_control_v001/README.md",
@@ -7373,6 +7415,20 @@
       "sha256": "cccb6ab6330335b56683661673c029c3982ef62e0a28267aefb022fa84bdb852"
     },
     {
+      "path": "unity/Assets/Editor/CityRebuildV002Completion.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 13912,
+      "sha256": "ca2040188e2ef58b74ebbee72f1dd16c1b5d2e3909a02a83fb76e8f643faab85"
+    },
+    {
+      "path": "unity/Assets/Editor/CityRebuildV002Completion.cs.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 60,
+      "sha256": "4bf994e50d0ed17706fcf0f1687c9709ee71b58b9932656256c9f5d8239e850a"
+    },
+    {
       "path": "unity/Assets/Editor/CityRebuildV002NavigationSetup.cs",
       "role": "code",
       "location": "unity_existing",
@@ -7390,8 +7446,8 @@
       "path": "unity/Assets/Editor/CityRebuildV002Phase47Bridge.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 5458,
-      "sha256": "29bc8a789aa0630dd720d23ab4961dfde256e14124bfe26c116979423b53ad2b"
+      "bytes": 6405,
+      "sha256": "7e187e58a107384852680f04518e66bdce9fed43d6af3d727625318b1760da67"
     },
     {
       "path": "unity/Assets/Editor/CityRebuildV002Phase47Bridge.cs.meta",
@@ -7404,8 +7460,8 @@
       "path": "unity/Assets/Editor/CityRebuildV002Phase4Setup.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 32644,
-      "sha256": "85b18c9a359094d83ccc2725aa3f93c6257d1c6193f8b51c1829eeba44f4762c"
+      "bytes": 33049,
+      "sha256": "b0f4993ec6e1979615e4546c9e5c79ff99f6d704079fc42dd9d722cc65777628"
     },
     {
       "path": "unity/Assets/Editor/CityRebuildV002Phase4Setup.cs.meta",
@@ -7418,8 +7474,8 @@
       "path": "unity/Assets/Editor/CityRebuildV002RiverSetup.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 28771,
-      "sha256": "4fbaf5c720b15125dc4628aee2f19e5acdfa949d6f01fc7138ca51742c8e9af3"
+      "bytes": 38257,
+      "sha256": "08b84a6999f720ce561d1f617dd2e0aeb09568292397782f23c3f20f04bdd4d4"
     },
     {
       "path": "unity/Assets/Editor/CityRebuildV002RiverSetup.cs.meta",
@@ -7427,6 +7483,20 @@
       "location": "unity_existing",
       "bytes": 60,
       "sha256": "6e4ba73bc2c1b0ceba8b21dafd54ecc3d0558d951ca7e2558f50458bf082dc01"
+    },
+    {
+      "path": "unity/Assets/Editor/CityRebuildV002RiverVerification.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 4638,
+      "sha256": "2a839635ddb26fd05840f995bf9d2af2dd6a597c74429fcf9eaa7eda9758db80"
+    },
+    {
+      "path": "unity/Assets/Editor/CityRebuildV002RiverVerification.cs.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 60,
+      "sha256": "a53afec184a1cccd2cce2c9e62e7959b9f6e70e3223b1a4e24af3c9434b37ac0"
     },
     {
       "path": "unity/Assets/Editor/CityRebuildV002Setup.cs",
@@ -15290,32 +15360,74 @@
       "sha256": "fb5bfd2cc1243621acaad8c4cc5bbe93b02fe3e7db7c45ea3c01672ab7e4d232"
     },
     {
+      "path": "unity/Assets/SIMUS/Art/props/river_footbridge_v001.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 180,
+      "sha256": "d2522895d1091bf502cd64e674757597f302d80e84fc68b43e38a5d297ef0c41"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/river_footbridge_v001/models.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 180,
+      "sha256": "1e25bb49bdb31a76abf4c81534ab657dfd22deba8e2489b46c7f07f31542e3f3"
+    },
+    {
       "path": "unity/Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_FOOTBRIDGE_NORTH_28_70.fbx",
       "role": "export",
       "location": "unity_existing",
       "bytes": 71740,
-      "sha256": "39f70677652ce15038a3d02c8f5a70f0c8b567756d35577740c2255142f34c49"
+      "sha256": "d2cfc74c0c7095370ae8669c90cc63ca1105041ddc5dd025affc87cdcbe6b65b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_FOOTBRIDGE_NORTH_28_70.fbx.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 3002,
+      "sha256": "c643503360433e0c6d0851a6df6a37cd20c9fbd6b615f25b014ba2557d7cbbfe"
     },
     {
       "path": "unity/Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_FOOTBRIDGE_SOUTH_32_10.fbx",
       "role": "export",
       "location": "unity_existing",
       "bytes": 76748,
-      "sha256": "5dc24602f93db37f21ae72a98d90d5c6834eae21f2d73cb79e3315b548a27399"
+      "sha256": "13d89f5a9c3579d3230d98e2340866d11e575292e421657c6de1e1ee626cf300"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_FOOTBRIDGE_SOUTH_32_10.fbx.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 3002,
+      "sha256": "55a3054564974640df71dd2349f879dbca66887f6fef851567ec63228bdb5e4c"
     },
     {
       "path": "unity/Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_RAIL_END_POST.fbx",
       "role": "export",
       "location": "unity_existing",
       "bytes": 16188,
-      "sha256": "abdb0b4712e8be874464f3637348d7186019f8839285f55ee4d6291584555cb1"
+      "sha256": "db0d08f1c6849faf258d9ee6b6711deecec18fd81361c2ec9398abf1adc767aa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_RAIL_END_POST.fbx.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 3002,
+      "sha256": "7f7c192eb62831448ae134300a289d6d6a4b57b193cd0bfc6bbaf176cfa6a493"
     },
     {
       "path": "unity/Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_RAIL_MODULE_2M.fbx",
       "role": "export",
       "location": "unity_existing",
-      "bytes": 25372,
-      "sha256": "aee1369eaea79e2883d7ff7dda31fa076233c6e8404b621f356f5f13a6392ea9"
+      "bytes": 25356,
+      "sha256": "f006089184f025cc3a3f71bb0d723f7883c1091d23b47c86d30fff19540721d0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_RAIL_MODULE_2M.fbx.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 3002,
+      "sha256": "f2ccb206d60a5989ebffefc870d2ba59b94e9c841b2cba4facbc4c41f7777f9e"
     },
     {
       "path": "unity/Assets/SIMUS/Art/props/road_control_v001.meta",
@@ -16683,6 +16795,13 @@
       "sha256": "56fd3b782772c4d83f08dbeb389b75d57623b263bcf643bab40de53c1c69ee39"
     },
     {
+      "path": "unity/Assets/SIMUS/Prefabs/buildings.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 180,
+      "sha256": "e31b40a87428610c53665e201e4aa95ca98a46f63ca9de1f4d3376702d635a1b"
+    },
+    {
       "path": "unity/Assets/SIMUS/Prefabs/buildings/commercial_cafe_v001.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
@@ -16744,6 +16863,13 @@
       "location": "unity_existing",
       "bytes": 154,
       "sha256": "2806e543e3cf07988930ea09f493f99d9d209931ded853133b4aa586e56a0c41"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/characters.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 180,
+      "sha256": "fa18913734b351470fd97a5078ac1340cd9a6c6c93c46b6e759cc234822dcbe1"
     },
     {
       "path": "unity/Assets/SIMUS/Prefabs/characters/crying_child_v001.meta",
@@ -17199,6 +17325,13 @@
       "location": "unity_existing",
       "bytes": 154,
       "sha256": "3a2e570f8d8f9800ab24416a12e9bb36c2136a0f8f3d05865f2f88769d509c05"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Prefabs/roads.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 180,
+      "sha256": "d4c78a54e428c6ceca5cb37f064bdd4f637f1984fb9924b4046b6552458a2a9c"
     },
     {
       "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001.meta",
@@ -17722,8 +17855,8 @@
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity",
       "role": "scene",
       "location": "unity_existing",
-      "bytes": 5361965,
-      "sha256": "cab6f6778a8ac91fc2dea609246205b2f6642d1ae59d7d297a38699f29899b79"
+      "bytes": 5582862,
+      "sha256": "17686c34c94bd9bc2cbeb5a75ec187f028bed82c5aafd7c58b07787bdf587075"
     },
     {
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity.meta",
@@ -17736,8 +17869,8 @@
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/README.md",
       "role": "support",
       "location": "unity_existing",
-      "bytes": 3537,
-      "sha256": "41ca3a6bdaa0c14ebaddef99834cedf0a4cafff8b4edf72b18c9ff01ceda9f04"
+      "bytes": 6592,
+      "sha256": "12d46ce9aae3f13592f6d0cd4f34a97d03a1a21071c932789f685b83466b6905"
     },
     {
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/README.md.meta",
@@ -31197,8 +31330,8 @@
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/river_materials/river_trail_gravel.mat",
       "role": "material",
       "location": "unity_existing",
-      "bytes": 2306,
-      "sha256": "97e3234ea9ef97d733780075654c7e25cf59f847b380195093587263075f639f"
+      "bytes": 2311,
+      "sha256": "5771405549e2dfdc6b8a1c4ea8e4a7d282ff5fae4ffbde1a99f296740416fbb4"
     },
     {
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/river_materials/river_trail_gravel.mat.meta",
@@ -31260,8 +31393,8 @@
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/Carved_CityGround.asset",
       "role": "support",
       "location": "unity_existing",
-      "bytes": 149784,
-      "sha256": "c92fb89d094e64005ce23bc43a0a48a5dee596b46b74e95faf25b3aa69a6e70b"
+      "bytes": 147096,
+      "sha256": "080eee393eb4a50f2e1c0c90f3614efa7358efe607312f7983016d33a187ee84"
     },
     {
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/Carved_CityGround.asset.meta",
@@ -31274,8 +31407,8 @@
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/Carved_EastPark_Lawn.asset",
       "role": "support",
       "location": "unity_existing",
-      "bytes": 199849,
-      "sha256": "e8d960537db382f99e6078cddd3892796f0cf8c0dbebd79f2e75e1700b92606d"
+      "bytes": 197497,
+      "sha256": "0a07e7627b4d4a610c2a0b7531d02800816dd5c3786d52039a4f01e1e8ed6c20"
     },
     {
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/Carved_EastPark_Lawn.asset.meta",
@@ -31355,11 +31488,39 @@
       "sha256": "a883486c33934bbaf347ec33c0acbf37aeaf427f06810292dd324e1f1f77a094"
     },
     {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Closed_Cap_Trail_0.asset",
+      "role": "support",
+      "location": "unity_existing",
+      "bytes": 9070,
+      "sha256": "3c164fb589ddc47d01cf7a446fff7954e94dda5f9a4025de1ec9a9005abc22dc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Closed_Cap_Trail_0.asset.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 196,
+      "sha256": "1b5fc4b4e7fed375c5e85c8788f5ff43472aa39aef50bf8a56b838041c098443"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Closed_Cap_Trail_1.asset",
+      "role": "support",
+      "location": "unity_existing",
+      "bytes": 9066,
+      "sha256": "9c818d14321847041a5d39b96eb21979a63847774fc98de4785ed412f00c7448"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Closed_Cap_Trail_1.asset.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 196,
+      "sha256": "2f44a84e52d26fb02bfcde4e8b97f5ca5fbaf27043d5cca849c6a18aa6d1a13c"
+    },
+    {
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_E_BankTrail.asset",
       "role": "support",
       "location": "unity_existing",
-      "bytes": 33227,
-      "sha256": "dda87b6ab59b993dfb5de827029ab267875d89a05ea471b176d741b260570077"
+      "bytes": 92384,
+      "sha256": "11c7eae9fe58a7aa2ebd19ad3c44f53f9060937f37ff72a608e0e90e449f949e"
     },
     {
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_E_BankTrail.asset.meta",
@@ -31400,8 +31561,8 @@
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Ramp_0_0.asset",
       "role": "support",
       "location": "unity_existing",
-      "bytes": 3992,
-      "sha256": "ebd1ba4598ec56c37acb787bb9af1b59fd82c2a8a1fec78ebf662a924fb9c902"
+      "bytes": 4014,
+      "sha256": "1642f8b17c987a42950139c2fde5d4eb0893df9c53b5314c6b85684c62373788"
     },
     {
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Ramp_0_0.asset.meta",
@@ -31414,8 +31575,8 @@
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Ramp_0_1.asset",
       "role": "support",
       "location": "unity_existing",
-      "bytes": 3988,
-      "sha256": "6ca2d126183dc96d8088fa84ccc8492370b5eb9833189e829b4c745bb578077b"
+      "bytes": 3984,
+      "sha256": "ac0d3909ffb844031f66e355c201a3b2a21b8ae24fe23b408ad3a8bf9de0bea0"
     },
     {
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Ramp_0_1.asset.meta",
@@ -31428,8 +31589,8 @@
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Ramp_1_0.asset",
       "role": "support",
       "location": "unity_existing",
-      "bytes": 3992,
-      "sha256": "159c677e67b02977888074087d09ef972f502fca1ab023be1aeb7b27eab607ef"
+      "bytes": 3982,
+      "sha256": "76448a8176402b027a926781d91e4a161c19066519453ed49f46c2c888952346"
     },
     {
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Ramp_1_0.asset.meta",
@@ -31442,8 +31603,8 @@
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Ramp_1_1.asset",
       "role": "support",
       "location": "unity_existing",
-      "bytes": 3988,
-      "sha256": "5df319dac170740a1ee9645500f0d3ee6aea7348d373d24f7da16fd711f625f8"
+      "bytes": 3986,
+      "sha256": "46ec802797c8b965d02ec57e5b62619a6a66118b541878ced16fad7e09cc41a5"
     },
     {
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Ramp_1_1.asset.meta",
@@ -31456,8 +31617,8 @@
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_W_BankTrail.asset",
       "role": "support",
       "location": "unity_existing",
-      "bytes": 33223,
-      "sha256": "7880f535b6b54c66947c7779f64e2213d9151a32ca5c42208694da906c9fbae0"
+      "bytes": 92380,
+      "sha256": "f7a98cab314e825fd277d02c73cb0c3f32e2f28dc8220d593aa5771e5d833e68"
     },
     {
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_W_BankTrail.asset.meta",
@@ -31761,6 +31922,34 @@
       "sha256": "ed6278a2ee984b4f963c3e0b68d3464e296b93594632a809b58d5494389d777b"
     },
     {
+      "path": "unity/Assets/SIMUS/Tests/Editor/CityV002RiverAreaTests.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 3011,
+      "sha256": "fe91b7b391884668e704ba1b8e4f3aae40fb5db9d077fc99fe70f5658eca21df"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/CityV002RiverAreaTests.cs.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 62,
+      "sha256": "d0154b0ba3893844f76692241540c89af90855dbad463c48429e31e3bde1696e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/CityV002RiverGradingTests.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 3172,
+      "sha256": "87335f723f4d3bb6c5f407547853c9964ef5feb52bf4099b86afe4058f8776e7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/CityV002RiverGradingTests.cs.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 62,
+      "sha256": "524bf7f910fcd5261731ba10d85893803a531661eede84ca4bb788aaf8280335"
+    },
+    {
       "path": "unity/Assets/SIMUS/Tests/Editor/CityV002RiverWaterTests.cs",
       "role": "code",
       "location": "unity_existing",
@@ -31862,8 +32051,8 @@
       "path": "unity/Assets/Scripts/CityV002NpcRouteAdapter.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 4948,
-      "sha256": "4ced7a0fa00d12abfc61d739bb47aabf03a3815c174c82097f1c2f36899075c6"
+      "bytes": 5688,
+      "sha256": "27ad33b133b391885a54160971ad0bd910aee7cdceba61d7d22d1be5a7f74689"
     },
     {
       "path": "unity/Assets/Scripts/CityV002NpcRouteAdapter.cs.meta",
@@ -31890,8 +32079,8 @@
       "path": "unity/Assets/Scripts/CityV002Phase6Verification.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 16126,
-      "sha256": "abc1dc7cf97c8e79a2aa286414ce8ffa814009b750578e1e604c42087cb256a4"
+      "bytes": 19019,
+      "sha256": "ffaf9698eaf667b06b1d26472d7ba2a655044f96a597a0d0803dab549262c6a8"
     },
     {
       "path": "unity/Assets/Scripts/CityV002Phase6Verification.cs.meta",
@@ -31904,8 +32093,8 @@
       "path": "unity/Assets/Scripts/CityV002RiverArea.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 1942,
-      "sha256": "a73c287ddc89ec0b51b388b0111559b85e208128baaf2e90462d820f41deb4ff"
+      "bytes": 2851,
+      "sha256": "0f2240462dee37f46e9a6f3d440bd86ba5a2f8e56699c4371e0d2656439a4442"
     },
     {
       "path": "unity/Assets/Scripts/CityV002RiverArea.cs.meta",
@@ -31918,8 +32107,8 @@
       "path": "unity/Assets/Scripts/CityV002RiverGraphExtension.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 941,
-      "sha256": "5e4e237d0417825926cb10842a29a37f62bc46052c7ff15756b9d1e5adb18dde"
+      "bytes": 1049,
+      "sha256": "d84f3e0fb030fc74a21785471c051227e0c75f6f06d120679390ee186a45eb14"
     },
     {
       "path": "unity/Assets/Scripts/CityV002RiverGraphExtension.cs.meta",
@@ -31932,8 +32121,8 @@
       "path": "unity/Assets/Scripts/CityV002RiverGuard.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 766,
-      "sha256": "2f2524a117af56ec28f0c4e678ceb3bbe9e548b629e196942100c286dedcf31f"
+      "bytes": 1162,
+      "sha256": "7dfb3da70679971c4f253e88c8af735a7975a96388372de668cdffb2573f8a3e"
     },
     {
       "path": "unity/Assets/Scripts/CityV002RiverGuard.cs.meta",
@@ -31941,6 +32130,20 @@
       "location": "unity_existing",
       "bytes": 60,
       "sha256": "8e5720f3b78fc5e4a76fa686b34ca7841bff6283ebc73a54086f6bfd53c5afe9"
+    },
+    {
+      "path": "unity/Assets/Scripts/CityV002RiverRuntimeVerification.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 11832,
+      "sha256": "93d953f3de2067be5c380ee90255e68d2926f1ddb0666aa3ac11edac7fc6c5e3"
+    },
+    {
+      "path": "unity/Assets/Scripts/CityV002RiverRuntimeVerification.cs.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 60,
+      "sha256": "c072bf60db7cd05a1e406b0f921d4d7dd8872569ea6a34a1fb4b202b2f34ed9d"
     },
     {
       "path": "unity/Assets/Scripts/CityV002RiverWater.cs",
@@ -31974,8 +32177,8 @@
       "path": "unity/Assets/Scripts/NpcOcclusionReveal.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 3834,
-      "sha256": "eb015628a7b9b48f1b0765890ae69d5e4409158c70fde272832d8dc097ae56f8"
+      "bytes": 4657,
+      "sha256": "d49c15a106ea3c3575a06ef119a2cd34112fba8b7e44ad08047e6ed0fa7c1431"
     },
     {
       "path": "unity/Assets/Scripts/NpcOcclusionReveal.cs.meta",
@@ -31983,6 +32186,20 @@
       "location": "unity_existing",
       "bytes": 62,
       "sha256": "be31934d009169e497410ee7f50abe81a58881e6a79d73e21be0535965a28a68"
+    },
+    {
+      "path": "unity/Assets/Scripts/RiverTrailSurface.shader",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 885,
+      "sha256": "71b060293dcbd80ea0ee41feb24566e60ba1f4699a86d2dc40d1bb1b875a7a9e"
+    },
+    {
+      "path": "unity/Assets/Scripts/RiverTrailSurface.shader.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 213,
+      "sha256": "37c4824164c600f897f7a20687b6eccaf0240ebac4174a33bf7cb3f592f948f8"
     },
     {
       "path": "unity/Assets/Scripts/TestNpcPatrol.cs",
@@ -32701,6 +32918,13 @@
       ]
     },
     {
+      "sha256": "13d89f5a9c3579d3230d98e2340866d11e575292e421657c6de1e1ee626cf300",
+      "paths": [
+        "assets/library/props/river_footbridge_v001/exports/RIVER_FOOTBRIDGE_SOUTH_32_10.fbx",
+        "unity/Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_FOOTBRIDGE_SOUTH_32_10.fbx"
+      ]
+    },
+    {
       "sha256": "1c28ccf329ceed8ae2c73486888f58a34cf384113e7dd0067b955a588232609f",
       "paths": [
         "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_WALK.png",
@@ -32729,13 +32953,6 @@
       ]
     },
     {
-      "sha256": "39f70677652ce15038a3d02c8f5a70f0c8b567756d35577740c2255142f34c49",
-      "paths": [
-        "assets/library/props/river_footbridge_v001/exports/RIVER_FOOTBRIDGE_NORTH_28_70.fbx",
-        "unity/Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_FOOTBRIDGE_NORTH_28_70.fbx"
-      ]
-    },
-    {
       "sha256": "4d48a40f4142af0628288fb4c919a4bb9c6cdb4f5aeca4895ea58eb9f5f6156e",
       "paths": [
         "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_WALK_0.png",
@@ -32747,13 +32964,6 @@
       "paths": [
         "unity/Assets/SIMUS/Art/buildings/commercial_cafe_v001/materials/MAT_AC_UNIT.mat",
         "unity/Assets/SIMUS/Art/buildings/commercial_restaurant_v001/materials/MAT_AC_UNIT.mat"
-      ]
-    },
-    {
-      "sha256": "5dc24602f93db37f21ae72a98d90d5c6834eae21f2d73cb79e3315b548a27399",
-      "paths": [
-        "assets/library/props/river_footbridge_v001/exports/RIVER_FOOTBRIDGE_SOUTH_32_10.fbx",
-        "unity/Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_FOOTBRIDGE_SOUTH_32_10.fbx"
       ]
     },
     {
@@ -32792,20 +33002,6 @@
       ]
     },
     {
-      "sha256": "abdb0b4712e8be874464f3637348d7186019f8839285f55ee4d6291584555cb1",
-      "paths": [
-        "assets/library/props/river_footbridge_v001/exports/RIVER_RAIL_END_POST.fbx",
-        "unity/Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_RAIL_END_POST.fbx"
-      ]
-    },
-    {
-      "sha256": "aee1369eaea79e2883d7ff7dda31fa076233c6e8404b621f356f5f13a6392ea9",
-      "paths": [
-        "assets/library/props/river_footbridge_v001/exports/RIVER_RAIL_MODULE_2M.fbx",
-        "unity/Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_RAIL_MODULE_2M.fbx"
-      ]
-    },
-    {
       "sha256": "c0512e3dbbd55c4266d4f383ec4b6c7e04238a112ee5bc60f421b22a5696881f",
       "paths": [
         "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_IDLE.png",
@@ -32840,10 +33036,31 @@
       ]
     },
     {
+      "sha256": "d2cfc74c0c7095370ae8669c90cc63ca1105041ddc5dd025affc87cdcbe6b65b",
+      "paths": [
+        "assets/library/props/river_footbridge_v001/exports/RIVER_FOOTBRIDGE_NORTH_28_70.fbx",
+        "unity/Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_FOOTBRIDGE_NORTH_28_70.fbx"
+      ]
+    },
+    {
+      "sha256": "db0d08f1c6849faf258d9ee6b6711deecec18fd81361c2ec9398abf1adc767aa",
+      "paths": [
+        "assets/library/props/river_footbridge_v001/exports/RIVER_RAIL_END_POST.fbx",
+        "unity/Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_RAIL_END_POST.fbx"
+      ]
+    },
+    {
       "sha256": "e3aff8372ffd47b04ad7dc85afe57b2d8de03dd0dda58b8c4b37d009858d396e",
       "paths": [
         "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_STRUGGLE.png",
         "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_STRUGGLE_6.png"
+      ]
+    },
+    {
+      "sha256": "f006089184f025cc3a3f71bb0d723f7883c1091d23b47c86d30fff19540721d0",
+      "paths": [
+        "assets/library/props/river_footbridge_v001/exports/RIVER_RAIL_MODULE_2M.fbx",
+        "unity/Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_RAIL_MODULE_2M.fbx"
       ]
     },
     {

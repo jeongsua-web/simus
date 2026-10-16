@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Sample actual serialized Unity mesh triangles, independent of ribbon generator."""
+import argparse
 import collections
 import hashlib
 import json
@@ -17,7 +18,7 @@ def field(text, key):
 
 
 def triangles(path):
-    text = path.read_text()
+    text = path.read_text(encoding='utf-8')
     count = int(field(text, 'm_VertexCount'))
     blob = bytes.fromhex(field(text, '_typelessdata'))
     # Generated meshes contain position float3, normal float3 in stream 0.
@@ -31,14 +32,17 @@ def triangles(path):
 
 
 def main():
-    layout = json.loads((ROOT / 'docs/planning/city_rebuild_v002/layout.json').read_text())
-    scene_text = (FOLDER / 'CityRebuild_v002.unity').read_text()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output', type=Path, default=ROOT / 'docs/verification/city-rebuild-v002-surface-results.json')
+    args = parser.parse_args()
+    layout = json.loads((ROOT / 'docs/planning/city_rebuild_v002/layout.json').read_text(encoding='utf-8'))
+    scene_text = (FOLDER / 'CityRebuild_v002.unity').read_text(encoding='utf-8')
     referenced_guids = set(re.findall(r'guid: ([0-9a-f]{32})', scene_text))
     bins = collections.defaultdict(list)
     mesh_count = triangle_count = 0
     hashes = {}
     for path in sorted((FOLDER / 'meshes').glob('*.asset')):
-        guid = re.search(r'^guid: ([0-9a-f]{32})$', Path(str(path)+'.meta').read_text(), re.M).group(1)
+        guid = re.search(r'^guid: ([0-9a-f]{32})$', Path(str(path)+'.meta').read_text(encoding='utf-8'), re.M).group(1)
         if guid not in referenced_guids:
             continue
         name, tris = triangles(path)
@@ -98,8 +102,7 @@ def main():
               'mesh_sha256': hashes, 'surface_meshes': mesh_count, 'surface_triangles': triangle_count,
               'roads': sample(layout['roads'],'carriageway_width'), 'walks': sample(layout['pedestrian_edges'],'width')}
     result['status'] = 'PASS' if result['roads']['unsupported'] == 0 and result['walks']['unsupported'] == 0 else 'FAIL'
-    output = ROOT / 'docs/verification/city-rebuild-v002-surface-results.json'
-    output.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+    args.output.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n', encoding='utf-8')
     print(json.dumps({key:value for key,value in result.items() if key not in ['mesh_sha256','roads','walks']},ensure_ascii=False,indent=2))
     for key in ['roads','walks']:
         print(key, result[key]['samples'], 'samples;', result[key]['unsupported'], 'unsupported')

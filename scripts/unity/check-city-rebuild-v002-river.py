@@ -51,7 +51,7 @@ def inside(point, polygon):
 
 
 def scene_blocks(path):
-    text = path.read_text()
+    text = path.read_text(encoding='utf-8')
     blocks = {int(i): (int(kind), body) for kind, i, body in re.findall(r'^--- !u!(\d+) &(-?\d+)(?: stripped)?\n(.*?)(?=^--- !u!|\Z)', text, re.M | re.S)}
     names, transforms = {}, {}
     for fid, (kind, body) in blocks.items():
@@ -93,8 +93,8 @@ def main():
         checks.append({'check': name, 'status': 'PASS' if passed else 'FAIL', 'evidence': evidence})
 
     qa = module('v002_geometry', PLAN / 'qa-check.py')
-    layout = json.loads((PLAN / 'layout.json').read_text())
-    design = json.loads((PLAN / 'river-design.json').read_text())
+    layout = json.loads((PLAN / 'layout.json').read_text(encoding='utf-8'))
+    design = json.loads((PLAN / 'river-design.json').read_text(encoding='utf-8'))
     points = curve(design['control_points'])
     segments = list(zip(points, points[1:]))
     half = design['corridor_width_m'] / 2
@@ -126,72 +126,77 @@ def main():
     record('no_exhibition_or_session_coordinates_assigned', design.get('map_version') is None and layout['metadata'].get('map_version') is None, {'map_version': design.get('map_version')})
 
     if not args.design_only:
-        baseline = json.loads((VERIFY / 'city-rebuild-v002-river-baseline.json').read_text())
+        baseline = json.loads((VERIFY / 'city-rebuild-v002-river-baseline.json').read_text(encoding='utf-8'))
         changes = [p for p, digest in baseline['files'].items() if not (ROOT/p).is_file() or sha(ROOT/p) != digest]
-        working_scene = str(SCENE.relative_to(ROOT))
+        working_scene = SCENE.relative_to(ROOT).as_posix()
         unexpected = [p for p in changes if p != working_scene]
         record('protected_baseline_files', not unexpected, {'checked': len(baseline['files']), 'unexpected': unexpected, 'authorized_scene_change': working_scene in changes})
         text, blocks, names, transforms = scene_blocks(SCENE)
-        _, oldblocks, oldnames, oldtransforms = scene_blocks(Path(baseline['scene_backup']))
-        wanted = {b['id'] + '_' + (b['name'] if b['id'].startswith('C') else b['type']) for b in layout['buildings'] + layout['campus']['components']}
         current_by_name = {name: go for go, name in names.items()}
-        original_by_name = {name: go for go, name in oldnames.items()}
-        changed_placements = []
-        placement_ancestors = set()
-        for name in wanted:
-            before = oldtransforms[original_by_name[name]][1]
-            ancestor = int(re.search(r'm_Father: \{fileID: (-?\d+)\}', before).group(1))
-            while ancestor:
-                placement_ancestors.add(ancestor)
-                ancestor = int(re.search(r'm_Father: \{fileID: (-?\d+)\}', oldblocks[ancestor][1]).group(1))
-            if name not in current_by_name:
-                changed_placements.append(name + ': missing')
-                continue
-            after = transforms[current_by_name[name]][1]
-            for key in ['m_LocalRotation', 'm_LocalPosition', 'm_LocalScale', 'm_Father']:
-                pattern = r'^  ' + key + r': (.*)$'
-                if re.search(pattern, before, re.M).group(1) != re.search(pattern, after, re.M).group(1):
-                    changed_placements.append(name + ': ' + key)
-        for fid in placement_ancestors:
-            if fid not in blocks:
-                changed_placements.append('ancestor missing: ' + str(fid))
-                continue
-            for key in ['m_LocalRotation', 'm_LocalPosition', 'm_LocalScale', 'm_Father']:
-                pattern = r'^  ' + key + r': (.*)$'
-                if re.search(pattern, oldblocks[fid][1], re.M).group(1) != re.search(pattern, blocks[fid][1], re.M).group(1):
-                    changed_placements.append('ancestor ' + str(fid) + ': ' + key)
-        record('building_69_transforms_preserved', not changed_placements and len(wanted) == 69, changed_placements)
-        # Compare every serialized object below road/intersection roots, excluding root's
-        # parent transform; reparenting or deleting a road component cannot silently pass.
-        transform_to_go = {fid: go for go, (fid, _) in oldtransforms.items()}
-        parent = {fid: int(re.search(r'm_Father: \{fileID: (-?\d+)\}', body).group(1)) for fid, body in oldtransforms.values()}
-        roots = {fid for go, (fid, _) in oldtransforms.items() if oldnames.get(go) in ['02_Roads', '03_TurningAndIntersections']}
-        road_gos = set()
-        for fid, go in transform_to_go.items():
-            cursor = fid
-            while cursor:
-                if cursor in roots:
-                    road_gos.add(go)
-                    break
-                cursor = parent.get(cursor, 0)
-        changed_roads = []
-        for fid, value in oldblocks.items():
-            match = re.search(r'm_GameObject: \{fileID: (-?\d+)\}', value[1])
-            if (value[0] == 1 and fid in road_gos) or (match and int(match.group(1)) in road_gos):
-                if blocks.get(fid) != value:
-                    changed_roads.append(fid)
-        record('road_and_intersection_serialization_preserved', not changed_roads, {'objects': len(road_gos), 'changed_component_ids': changed_roads})
+        backup = Path(baseline['scene_backup'])
+        if backup.is_file():
+            _, oldblocks, oldnames, oldtransforms = scene_blocks(Path(baseline['scene_backup']))
+            wanted = {b['id'] + '_' + (b['name'] if b['id'].startswith('C') else b['type']) for b in layout['buildings'] + layout['campus']['components']}
+            original_by_name = {name: go for go, name in oldnames.items()}
+            changed_placements = []
+            placement_ancestors = set()
+            for name in wanted:
+                before = oldtransforms[original_by_name[name]][1]
+                ancestor = int(re.search(r'm_Father: \{fileID: (-?\d+)\}', before).group(1))
+                while ancestor:
+                    placement_ancestors.add(ancestor)
+                    ancestor = int(re.search(r'm_Father: \{fileID: (-?\d+)\}', oldblocks[ancestor][1]).group(1))
+                if name not in current_by_name:
+                    changed_placements.append(name + ': missing')
+                    continue
+                after = transforms[current_by_name[name]][1]
+                for key in ['m_LocalRotation', 'm_LocalPosition', 'm_LocalScale', 'm_Father']:
+                    pattern = r'^  ' + key + r': (.*)$'
+                    if re.search(pattern, before, re.M).group(1) != re.search(pattern, after, re.M).group(1):
+                        changed_placements.append(name + ': ' + key)
+            for fid in placement_ancestors:
+                if fid not in blocks:
+                    changed_placements.append('ancestor missing: ' + str(fid))
+                    continue
+                for key in ['m_LocalRotation', 'm_LocalPosition', 'm_LocalScale', 'm_Father']:
+                    pattern = r'^  ' + key + r': (.*)$'
+                    if re.search(pattern, oldblocks[fid][1], re.M).group(1) != re.search(pattern, blocks[fid][1], re.M).group(1):
+                        changed_placements.append('ancestor ' + str(fid) + ': ' + key)
+            record('building_69_transforms_preserved', not changed_placements and len(wanted) == 69, changed_placements)
+            # Compare every serialized object below road/intersection roots, excluding root's
+            # parent transform; reparenting or deleting a road component cannot silently pass.
+            transform_to_go = {fid: go for go, (fid, _) in oldtransforms.items()}
+            parent = {fid: int(re.search(r'm_Father: \{fileID: (-?\d+)\}', body).group(1)) for fid, body in oldtransforms.values()}
+            roots = {fid for go, (fid, _) in oldtransforms.items() if oldnames.get(go) in ['02_Roads', '03_TurningAndIntersections']}
+            road_gos = set()
+            for fid, go in transform_to_go.items():
+                cursor = fid
+                while cursor:
+                    if cursor in roots:
+                        road_gos.add(go)
+                        break
+                    cursor = parent.get(cursor, 0)
+            changed_roads = []
+            for fid, value in oldblocks.items():
+                match = re.search(r'm_GameObject: \{fileID: (-?\d+)\}', value[1])
+                if (value[0] == 1 and fid in road_gos) or (match and int(match.group(1)) in road_gos):
+                    if blocks.get(fid) != value:
+                        changed_roads.append(fid)
+            record('road_and_intersection_serialization_preserved', not changed_roads, {'objects': len(road_gos), 'changed_component_ids': changed_roads})
+        else:
+            for check in ('building_69_transforms_preserved', 'road_and_intersection_serialization_preserved'):
+                checks.append({'check': check, 'status': 'NOT TESTED', 'evidence': {'missing_historical_scene_backup': str(backup)}})
         ids = set(blocks)
         dangling = sorted({int(m.group(1)) for m in re.finditer(r'\{fileID: (-?\d+)\}', text) if int(m.group(1)) and int(m.group(1)) not in ids})
         record('scene_local_references', not dangling, dangling)
         guid_paths = collections.defaultdict(list)
         for path in (ROOT / 'unity/Assets').rglob('*.meta'):
-            match = re.search(r'^guid: ([0-9a-f]{32})$', path.read_text(errors='replace'), re.M)
+            match = re.search(r'^guid: ([0-9a-f]{32})$', path.read_text(encoding='utf-8', errors='replace'), re.M)
             if match:
                 guid_paths[match.group(1)].append(path.with_suffix(''))
         refs = set(re.findall(r'guid: ([0-9a-f]{32})', text))
         missing = sorted(g for g in refs if g not in guid_paths and not g.startswith('0000000000000000'))
-        duplicate = {g: [str(p.relative_to(ROOT)) for p in guid_paths[g]] for g in refs if len(guid_paths[g]) > 1}
+        duplicate = {g: [p.relative_to(ROOT).as_posix() for p in guid_paths[g]] for g in refs if len(guid_paths[g]) > 1}
         record('scene_asset_guids_resolve_uniquely', not missing and not duplicate, {'missing': missing, 'duplicates': duplicate})
         river_names = [name for name in names.values() if 'River' in name or 'RIVER_' in name]
         record('river_scene_objects_present', len(river_names) > 3, river_names)
@@ -208,7 +213,7 @@ def main():
             if go is None or not path.is_file():
                 issues.append(object_name + ': missing object or mesh')
                 continue
-            guid = re.search(r'^guid: ([0-9a-f]{32})$', Path(str(path)+'.meta').read_text(), re.M).group(1)
+            guid = re.search(r'^guid: ([0-9a-f]{32})$', Path(str(path)+'.meta').read_text(encoding='utf-8'), re.M).group(1)
             components = [(kind, body) for kind, body in blocks.values() if re.search(r'm_GameObject: \{fileID: ' + str(go) + r'\}', body)]
             filters = [body for kind, body in components if kind == 33]
             colliders = [body for kind, body in components if kind == 64]
@@ -232,7 +237,7 @@ def main():
                 cursor = int(re.search(r'm_Father: \{fileID: (-?\d+)\}', body).group(1))
             _, triangles = surface_reader.triangles(path)
             geometry[object_name] = triangles
-            mesh_references[object_name] = {'path': str(path.relative_to(ROOT)), 'sha256': sha(path), 'triangles': len(triangles)}
+            mesh_references[object_name] = {'path': path.relative_to(ROOT).as_posix(), 'sha256': sha(path), 'triangles': len(triangles)}
         record('carved_meshes_and_water_collision_assignment', not issues and len(geometry) == len(desired), {'issues': issues, 'meshes': mesh_references, 'scope': 'Serialized generated meshes with identity world transform; water has no MeshCollider.'})
         slivers=[]
         for name in ['CityGround','EastPark_Lawn']:
@@ -242,7 +247,7 @@ def main():
                 altitude=area2/max(longest,1e-15)
                 if altitude<.0001:slivers.append({'mesh':name,'triangle':index,'longest_edge':longest,'altitude_m':altitude})
         record('carved_collider_has_no_thin_clipping_slivers',not slivers,{'minimum_triangle_altitude_m':.0001,'slivers':slivers,'reason':'Ray tests miss nearly collinear clipping remnants, but a walking capsule can collide with them.'})
-        area_meta = (ROOT / 'unity/Assets/Scripts/CityV002RiverArea.cs.meta').read_text()
+        area_meta = (ROOT / 'unity/Assets/Scripts/CityV002RiverArea.cs.meta').read_text(encoding='utf-8')
         area_guid = re.search(r'^guid: ([0-9a-f]+)$', area_meta, re.M).group(1)
         area_body = next(body for kind, body in blocks.values() if kind == 114 and 'guid: '+area_guid in body)
         serialized_line = re.search(r'^  centreline:\n(.*?)(?=^  \w)', area_body, re.M | re.S).group(1)
@@ -309,7 +314,7 @@ def main():
             record('bank_trails_meet_existing_walks_at_grade',at_grade_samples>0 and not at_grade_errors,{'samples':at_grade_samples,'expected_crossing_y':.14,'tolerance_m':.03,'errors':at_grade_errors})
             record('actual_triangles_distinguish_bed_water_and_trails', not profile_errors, {'cross_section_water_samples': sample_count, 'endcap_water_samples':cap_samples, 'segments': len(actual_line)-1, 'errors': profile_errors[:30], 'water_y': -1.2, 'bed_center_y': -2, 'trail_y_range': [-.428,.14]})
             record('no_old_ground_or_lawn_under_water', not retained_ground, {'samples': (sample_count+cap_samples)*2, 'retained_ground_hits': retained_ground[:30], 'qualification': 'Actual serialized visual and collision meshes agree; sampled interior water strip and both rounded endcaps.'})
-            graph_guid=re.search(r'^guid: ([0-9a-f]+)$',(ROOT/'unity/Assets/Scripts/CityV002PedestrianGraph.cs.meta').read_text(),re.M).group(1)
+            graph_guid=re.search(r'^guid: ([0-9a-f]+)$',(ROOT/'unity/Assets/Scripts/CityV002PedestrianGraph.cs.meta').read_text(encoding='utf-8'),re.M).group(1)
             graph_body=next(body for kind,body in blocks.values() if kind==114 and 'guid: '+graph_guid in body)
             edges_part=graph_body.split('  edges:\n',1)[1]
             edge_blocks=re.split(r'^  - id: ',edges_part,flags=re.M)[1:]
@@ -352,10 +357,10 @@ def main():
             record('actual_graph_wet_crossings_have_supported_bridges',not wet_failures and not bridge_support_failures and wet_samples>0,{'graph_samples_near_river':graph_samples,'wet_crossing_samples':wet_samples,'npc_radius_m':.35,'sample_spacing_m':.3,'wet_failures':wet_failures[:20],'missing_bridge_support':bridge_support_failures[:20],'scope':'Serialized route centerlines expanded by NPC radius; actual deck mesh height required. Not a Play Mode trajectory or full path-width test.'})
             record('bridge_ramp_width_not_buried_in_terrain',ramp_samples>0 and not buried_ramps,{'samples':ramp_samples,'sample_offsets_m':[-1,0,1],'buried_points':buried_ramps[:30],'scope':'Actual graph height versus generated ground/lawn/bed triangles; <=.3m along ramps and 0/+-1m lateral samples.'})
 
-    result = {'scope': 'Independent sampled plan geometry and serialized artifact review only; no Unity physics/runtime or exhibition approval.', 'scene_sha256': sha(SCENE), 'design_sha256': sha(PLAN/'river-design.json'), 'checks': checks, 'status': 'FAIL' if any(c['status'] == 'FAIL' for c in checks) else 'PASS_STATIC_ONLY'}
-    args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
+    result = {'scope': 'Independent sampled plan geometry and serialized artifact review only; no Unity physics/runtime or exhibition approval.', 'scene_sha256': sha(SCENE), 'design_sha256': sha(PLAN/'river-design.json'), 'checks': checks, 'status': 'FAIL' if any(c['status'] == 'FAIL' for c in checks) else ('NOT TESTED' if any(c['status'] == 'NOT TESTED' for c in checks) else 'PASS_STATIC_ONLY')}
+    args.output.write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
     print(json.dumps({'status': result['status'], 'checks': [{k: c[k] for k in ['check', 'status']} for c in checks]}, indent=2))
-    return int(result['status'] == 'FAIL')
+    return int(result['status'] in ('FAIL', 'NOT TESTED'))
 
 
 if __name__ == '__main__':

@@ -31,7 +31,7 @@ def main():
     checks = []
     def record(name, passed, evidence):
         checks.append({'check':name, 'status':'PASS' if passed else 'FAIL', 'evidence':evidence})
-    baseline = json.loads(args.baseline.read_text())
+    baseline = json.loads(args.baseline.read_text(encoding='utf-8'))
     allowed = {
         'unity/Assets/Editor/CityRebuildV002Setup.cs':'Phase4-7 scene generation',
         'unity/Assets/Editor/CityRebuildV002SurfaceAudit.cs':'Extended surface QA',
@@ -53,11 +53,11 @@ def main():
         if item['path'] not in allowed and not item['path'].startswith('unity/Assets/SIMUS/Scenes/city_rebuild_v002/'):
             unexpected.append(item['path'])
     record('phase47_protected_baseline',not unexpected, {'baseline':str(args.baseline.relative_to(ROOT)) if args.baseline.is_relative_to(ROOT) else str(args.baseline),'files':len(baseline['files']),'unexpected_changes':unexpected,'authorized_working_changes':sorted(set(changed)-set(unexpected)),'preexisting_dirty_state':baseline['git_status']})
-    lp=ROOT/'docs/planning/city_rebuild_v002/layout.json'; layout=json.loads(lp.read_text())
+    lp=ROOT/'docs/planning/city_rebuild_v002/layout.json'; layout=json.loads(lp.read_text(encoding='utf-8'))
     record('approved_layout_immutable',sha(lp)=='3e98ea485bd92dc9c2528d0420b5999a0336f700270c0f73f7630aa214fbd105',sha(lp))
     csv_errors = []
     for filename, buildings in [('buildings.csv', layout['buildings']), ('campus-placements.csv', layout['campus']['components'])]:
-        with (lp.parent/filename).open(newline='') as stream:
+        with (lp.parent/filename).open(encoding='utf-8', newline='') as stream:
             rows = list(csv.DictReader(stream))
         indexed = {row['id']: row for row in rows}
         if len(rows) != len(buildings) or set(indexed) != {b['id'] for b in buildings}: csv_errors.append(filename + ': IDs/count')
@@ -80,15 +80,15 @@ def main():
         if n in seen:continue
         seen.add(n);pending.extend(adj[n]-seen)
     record('approved_graph_connected_388_409_17',len(nodes)==388 and len(edges)==409 and seen==nodes and len(layout['crossing_facilities'])==17,{'nodes':len(nodes),'edges':len(edges),'reachable':len(seen),'crossings':len(layout['crossing_facilities']),'scope':'Design topology only, not NPC runtime'})
-    text=SCENE.read_text(); blocks=re.findall(r'^--- !u!(\d+) &(-?\d+)(?: stripped)?\n(.*?)(?=^--- !u!|\Z)',text,re.M|re.S)
+    text=SCENE.read_text(encoding='utf-8'); blocks=re.findall(r'^--- !u!(\d+) &(-?\d+)(?: stripped)?\n(.*?)(?=^--- !u!|\Z)',text,re.M|re.S)
     ids={int(b[1]) for b in blocks}; dangling=sorted({int(m.group(1)) for m in re.finditer(r'\{fileID: (-?\d+)\}',text) if int(m.group(1)) and int(m.group(1)) not in ids})
     record('scene_local_references',not dangling and len(ids)==len(blocks),{'objects':len(ids),'dangling':dangling})
     guid_paths=collections.defaultdict(list)
     for p in (ROOT/'unity/Assets').rglob('*.meta'):
-        match=re.search(r'^guid: ([0-9a-f]{32})$',p.read_text(errors='replace'),re.M)
+        match=re.search(r'^guid: ([0-9a-f]{32})$',p.read_text(encoding='utf-8', errors='replace'),re.M)
         if match:guid_paths[match.group(1)].append(p.with_suffix(''))
     refs=set(re.findall(r'guid: ([0-9a-f]{32})',text)); unresolved=sorted(g for g in refs if g not in guid_paths and not g.startswith('0000000000000000'))
-    duplicates={g:[str(p.relative_to(ROOT)) for p in guid_paths[g]] for g in refs if len(guid_paths[g])>1}
+    duplicates={g:[p.relative_to(ROOT).as_posix() for p in guid_paths[g]] for g in refs if len(guid_paths[g])>1}
     record('scene_external_guids',not unresolved and not duplicates,{'missing':unresolved,'duplicates':duplicates})
     names=[json.loads(n) if n.startswith('"') else n for n in re.findall(r'^  m_Name: (.*)$',text,re.M)]
     expected={b['id']+'_'+(b['name'] if b['id'].startswith('C') else b['type']) for b in layout['buildings']+layout['campus']['components']}
@@ -134,11 +134,11 @@ def main():
         gos = [go for go, saved_name in go_names.items() if saved_name == name]
         refs_for_building = set().union(*(descendants.get(go_transforms.get(go), set()) for go in gos))
         expected_asset = building.get('asset', layout['campus']['asset'])
-        paths = {str(p.relative_to(ROOT)) for guid in refs_for_building for p in guid_paths[guid] if p.suffix.lower() == '.fbx'}
+        paths = {p.relative_to(ROOT).as_posix() for guid in refs_for_building for p in guid_paths[guid] if p.suffix.lower() == '.fbx'}
         proof.append({'id': building['id'], 'expected_fbx': expected_asset, 'actual_fbx': sorted(paths), 'matched': expected_asset in paths})
     record('all_69_buildings_reference_expected_fbx_in_hierarchy',all(p['matched'] for p in proof),proof)
     if baseline.get('git_head'):
-        original_scene = subprocess.check_output(['git', 'show', baseline['git_head'] + ':' + str(SCENE.relative_to(ROOT))], cwd=ROOT, text=True)
+        original_scene = subprocess.check_output(['git', 'show', baseline['git_head'] + ':' + SCENE.relative_to(ROOT).as_posix()], cwd=ROOT, text=True, encoding='utf-8')
         def building_subtrees(serialized):
             parsed = re.findall(r'^--- !u!(\d+) &(-?\d+)(?: stripped)?\n(.*?)(?=^--- !u!|\Z)', serialized, re.M | re.S)
             by_id = {int(fid): (kind, body) for kind, fid, body in parsed}
@@ -183,14 +183,14 @@ def main():
         record('existing_69_fbx_building_hierarchies_preserved', not modified_buildings,
                {'baseline_git_head': baseline['git_head'], 'compared': len(expected), 'modified': modified_buildings,
                 'scope': 'Exact serialized hierarchy, Transform, components and prefab overrides; original FBX/meta hashes protected separately. Does not replace a Unity import or physics test.'})
-    parkrefs={str(p.relative_to(ROOT)) for g in refs for p in guid_paths[g] if p.suffix.lower()=='.fbx' and 'parks' in p.parts}
+    parkrefs={p.relative_to(ROOT).as_posix() for g in refs for p in guid_paths[g] if p.suffix.lower()=='.fbx' and 'parks' in p.parts}
     expectedparks={x['asset'] for x in layout['park']['reuse_modules']}
     record('two_existing_park_fbx_referenced',expectedparks<=parkrefs,sorted(parkrefs))
     spec=importlib.util.spec_from_file_location('surface_qa',ROOT/'scripts/unity/check-city-rebuild-v002-surfaces.py'); surfaces=importlib.util.module_from_spec(spec);spec.loader.exec_module(surfaces)
     longest=0;oversized=[];count=0
     for p in sorted([* (SCENE.parent/'meshes').glob('*.asset'), * (SCENE.parent/'phase4_meshes').glob('*.asset')]):
         if '_FBXPart_' in p.name:continue  # Imported UV-bearing park extraction uses a different vertex layout; Unity audits its world collider edges.
-        meta=Path(str(p)+'.meta');match=re.search(r'^guid: ([0-9a-f]{32})$',meta.read_text(),re.M)
+        meta=Path(str(p)+'.meta');match=re.search(r'^guid: ([0-9a-f]{32})$',meta.read_text(encoding='utf-8'),re.M)
         if match.group(1) not in refs:continue
         name,tris=surfaces.triangles(p)
         for tri in tris:
@@ -201,15 +201,15 @@ def main():
         runtime_path = VERIFY/'city-rebuild-v002-phase6-runtime.json'
         navigation_path = VERIFY/'city-rebuild-v002-navigation-runtime.json'
         inputs_path = VERIFY/'city-rebuild-v002-phase47-runtime-inputs.json'
-        missing = [str(p.relative_to(ROOT)) for p in (runtime_path, navigation_path, inputs_path) if not p.is_file()]
+        missing = [p.relative_to(ROOT).as_posix() for p in (runtime_path, navigation_path, inputs_path) if not p.is_file()]
         record('runtime_evidence_files_present', not missing, missing)
         if not missing:
-            runtime = json.loads(runtime_path.read_text())
-            navigation = json.loads(navigation_path.read_text())
-            inputs = json.loads(inputs_path.read_text())
+            runtime = json.loads(runtime_path.read_text(encoding='utf-8'))
+            navigation = json.loads(navigation_path.read_text(encoding='utf-8'))
+            inputs = json.loads(inputs_path.read_text(encoding='utf-8'))
             changed = [name for name, expected_hash in inputs['files'].items()
                        if not (ROOT/'unity'/name).is_file() or sha(ROOT/'unity'/name) != expected_hash]
-            scene_key = str(SCENE.relative_to(ROOT/'unity'))
+            scene_key = SCENE.relative_to(ROOT/'unity').as_posix()
             record('runtime_inputs_match_current_scene_and_sources', not changed and inputs.get('status') == 'UNCHANGED_DURING_PLAY' and inputs['files'].get(scene_key) == sha(SCENE),
                    {'snapshot_status': inputs.get('status'), 'file_count': len(inputs['files']), 'changed': changed})
             record('runtime_completed_without_reported_errors', runtime.get('runtimeStatus') == 'COMPLETE' and
@@ -244,5 +244,5 @@ def main():
                    {'failed_workloads': workload_errors, 'performance_scope': runtime.get('performanceScope'), 'samples': performance})
     scope = ('Independent review of saved artifacts and reported runtime measurements bound to input hashes; this checker does not execute Unity. Visual readability and production performance acceptance require separate review.' if args.runtime else 'Independent static artifact checks only; PASS here does not prove Unity compile/load/Play Mode, animation, collision-free movement, camera or performance.')
     result={'scope':scope,'scene_sha256':sha(SCENE),'layout_sha256':sha(lp),'checks':checks,'status':'FAIL' if any(x['status']=='FAIL' for x in checks) else ('PASS_EVIDENCE_REVIEW' if args.runtime else 'PASS_STATIC_ONLY')}
-    args.output.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n');print(json.dumps({'status':result['status'],'checks':[{k:c[k] for k in ['check','status']} for c in checks]},indent=2));return int(result['status']=='FAIL')
+    args.output.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n', encoding='utf-8');print(json.dumps({'status':result['status'],'checks':[{k:c[k] for k in ['check','status']} for c in checks]},indent=2));return int(result['status']=='FAIL')
 if __name__=='__main__':raise SystemExit(main())

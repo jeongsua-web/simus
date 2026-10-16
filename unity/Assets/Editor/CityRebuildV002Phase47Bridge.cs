@@ -11,8 +11,8 @@ using UnityEngine;
 [InitializeOnLoad]
 public static class CityRebuildV002Phase47Bridge
 {
-    const string Request = "/tmp/simus-v002-phase47-request.txt";
-    const string Status = "/tmp/simus-v002-phase47-status.json";
+    static readonly string Request = Path.Combine(Path.GetTempPath(), "simus-v002-phase47-request.txt");
+    static readonly string Status = Path.Combine(Path.GetTempPath(), "simus-v002-phase47-status.json");
     const string Pending = "Simus.V002.Phase47.Pending";
     const string BatchPending = "Simus.V002.Phase47.BatchPending";
     const string ExitCode = "Simus.V002.Phase47.ExitCode";

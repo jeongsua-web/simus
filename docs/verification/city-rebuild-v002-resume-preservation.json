@@ -1,0 +1,261 @@
+{
+  "utc": "2026-10-16T13:03:15.780535+00:00",
+  "scope": "Independent cross-platform preservation explanation. LF normalization is CRLF to LF only; never substitutes for raw Unity runtime input hashes. Historical raw failures remain in original check outputs. Missing historical files are not declared preserved.",
+  "historical_baseline": {
+    "path": "docs/verification/city-rebuild-v002-phase47-continue-baseline.json",
+    "counts": {
+      "lf_only_matches": 1588,
+      "raw_matches": 545,
+      "other_changes": 7,
+      "missing": 40
+    },
+    "residual": [
+      {
+        "path": "unity/Assets/Editor/CityRebuildV002Completion.cs",
+        "status": "DIFFERENT",
+        "raw_sha256": "ca2040188e2ef58b74ebbee72f1dd16c1b5d2e3909a02a83fb76e8f643faab85",
+        "lf_sha256": "a815b4f083beffb12b5edc4574e13b591955b1c7c2e7cae1178d5c90e4860d1c",
+        "historical_sha256": "21644b41441e9e51dcc69ea09a1411ebf7d24179ab402523b91434f798443887"
+      },
+      {
+        "path": "unity/Assets/Editor/CityRebuildV002Phase47Bridge.cs",
+        "status": "DIFFERENT",
+        "raw_sha256": "7e187e58a107384852680f04518e66bdce9fed43d6af3d727625318b1760da67",
+        "lf_sha256": "f48dfc550431d88ada1f46bceeb5dcaf72c429c7a3433cc4ecd4934fe48b2831",
+        "historical_sha256": "a108a723d7847ca7836f6da596ffcb0f261ae6db6dce6cb54008827e18009d38"
+      },
+      {
+        "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity",
+        "status": "DIFFERENT",
+        "raw_sha256": "17686c34c94bd9bc2cbeb5a75ec187f028bed82c5aafd7c58b07787bdf587075",
+        "lf_sha256": "17686c34c94bd9bc2cbeb5a75ec187f028bed82c5aafd7c58b07787bdf587075",
+        "historical_sha256": "b54405e1b436f49ee144c2cbb8ca3e77687ee754be1cde726400d2a8dc0962ba"
+      },
+      {
+        "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/README.md",
+        "status": "DIFFERENT",
+        "raw_sha256": "12d46ce9aae3f13592f6d0cd4f34a97d03a1a21071c932789f685b83466b6905",
+        "lf_sha256": "e10f47c0bd4e64f2eb68821463997687175f5bf29b9652fb73312b55ce04baf8",
+        "historical_sha256": "b28d91d86cff97629563f595a91ef93385632bf00464984b8848bbcea93326dd"
+      },
+      {
+        "path": "unity/Assets/Scripts/CityV002Phase6Verification.cs",
+        "status": "DIFFERENT",
+        "raw_sha256": "ffaf9698eaf667b06b1d26472d7ba2a655044f96a597a0d0803dab549262c6a8",
+        "lf_sha256": "c6944191e17fd9bc39fa05df1140b88d821d1f01bd3647f84714820a87ed2a64",
+        "historical_sha256": "40a812679110162cb856c591edc5ced3b4f282bd18e46ce080b2522d76fc8509"
+      },
+      {
+        "path": "unity/Assets/Scripts/NpcOcclusionReveal.cs",
+        "status": "DIFFERENT",
+        "raw_sha256": "d49c15a106ea3c3575a06ef119a2cd34112fba8b7e44ad08047e6ed0fa7c1431",
+        "lf_sha256": "b5e4b932b2b675253c596e53590e1a72530be0b5d1afa1a9b9c3811aa32fd109",
+        "historical_sha256": "3c0a5580c7bc40d7a9e7eaa19be255f7eb6f32eab309b8bc83af4beb91b013ce"
+      },
+      {
+        "path": "web/.DS_Store",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.demo/admin-token.txt",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.demo/check-live-unity.mjs",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.demo/env.local",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.demo/start-dev-round.cjs",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.env.local",
+        "status": "DIFFERENT",
+        "raw_sha256": "46e1a8045371681d91ec8612ec702947feda5d628a4632f1e66a014b4c28ce9a",
+        "lf_sha256": "46e1a8045371681d91ec8612ec702947feda5d628a4632f1e66a014b4c28ce9a",
+        "historical_sha256": "a38a7ec91bd3fd870062e649e49403f9d7345a9c42ae2016803a4aa36710bdbb"
+      },
+      {
+        "path": "web/.unity-deploy-backups/city-before-character-1791867226314699000/Build/development_city.data",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.unity-deploy-backups/city-before-character-1791867226314699000/Build/development_city.framework.js",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.unity-deploy-backups/city-before-character-1791867226314699000/Build/development_city.loader.js",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.unity-deploy-backups/city-before-character-1791867226314699000/Build/development_city.wasm",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.unity-deploy-backups/city-before-character-1791867226314699000/bridge.js",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.unity-deploy-backups/city-before-character-1791867226314699000/build.json",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.unity-deploy-backups/city-before-character-1791867226314699000/index.html",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.unity-deploy-backups/city-before-character-1791869370007058000/Build/development_city.data",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.unity-deploy-backups/city-before-character-1791869370007058000/Build/development_city.framework.js",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.unity-deploy-backups/city-before-character-1791869370007058000/Build/development_city.loader.js",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.unity-deploy-backups/city-before-character-1791869370007058000/Build/development_city.wasm",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.unity-deploy-backups/city-before-character-1791869370007058000/bridge.js",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.unity-deploy-backups/city-before-character-1791869370007058000/build.json",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.unity-deploy-backups/city-before-character-1791869370007058000/index.html",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.unity-deploy-backups/city-before-character-1791871742295733000/Build/development_city.data",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.unity-deploy-backups/city-before-character-1791871742295733000/Build/development_city.framework.js",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.unity-deploy-backups/city-before-character-1791871742295733000/Build/development_city.loader.js",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.unity-deploy-backups/city-before-character-1791871742295733000/Build/development_city.wasm",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.unity-deploy-backups/city-before-character-1791871742295733000/bridge.js",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.unity-deploy-backups/city-before-character-1791871742295733000/build.json",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/.unity-deploy-backups/city-before-character-1791871742295733000/index.html",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/public/city/Build/development_city.data",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/public/city/Build/development_city.framework.js",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/public/city/Build/development_city.loader.js",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/public/city/Build/development_city.wasm",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/public/city/bridge.js",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/public/city/build.json",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/public/city/index.html",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/public/unity-preview/Build/npc_follow_preview.data",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/public/unity-preview/Build/npc_follow_preview.framework.js",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/public/unity-preview/Build/npc_follow_preview.loader.js",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/public/unity-preview/Build/npc_follow_preview.wasm",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/public/unity-preview/build.json",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/public/unity-preview/index.html",
+        "status": "MISSING"
+      },
+      {
+        "path": "web/tsconfig.tsbuildinfo",
+        "status": "MISSING"
+      }
+    ]
+  },
+  "approved_layout": {
+    "raw_sha256": "e668ce0563fcdee037d0a5f2fae53f47cbc6865b7f4534d29c8c9e342d0b0569",
+    "lf_sha256": "3e98ea485bd92dc9c2528d0420b5999a0336f700270c0f73f7630aa214fbd105",
+    "approved_sha256": "3e98ea485bd92dc9c2528d0420b5999a0336f700270c0f73f7630aa214fbd105",
+    "raw_match": false,
+    "lf_match": true
+  },
+  "original_scenes_and_build_settings_vs_head": [
+    {
+      "path": "unity/Assets/SIMUS/Scenes/bridge_test/simus_bridge_test.unity",
+      "raw_sha256": "d7a30d996b55d2a3505d594511f0e466f346bdb33e7ce38671bc99af0ac0b876",
+      "git_blob_sha256": "ed55614d1a80b465f9d166fc35fc7fbd3514e87a9824345816bc5264d8f4a7de",
+      "raw_equal": false,
+      "lf_equal": true
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft/map_rebuild_draft.unity",
+      "raw_sha256": "bc6818f66bfc7be6441fb4db499e9c6fa4bd2ae6c71e04d6b264838cb7adc134",
+      "git_blob_sha256": "9d17bbcf3e1ede5ef134cec44662dfe62d964eaee10af0c5512f3fc67510a80b",
+      "raw_equal": false,
+      "lf_equal": true
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/npc_follow_test/CompletedMapNpcFollow.unity",
+      "raw_sha256": "0c0bb8b3c4b689a89f96c0be35327ee84940eec6a40ef030b0ba5cc01b13a966",
+      "git_blob_sha256": "0c0bb8b3c4b689a89f96c0be35327ee84940eec6a40ef030b0ba5cc01b13a966",
+      "raw_equal": true,
+      "lf_equal": true
+    },
+    {
+      "path": "unity/ProjectSettings/EditorBuildSettings.asset",
+      "raw_sha256": "1c1bdd435c027c66cc7c6ce1bd8c903ed84c454feff3d40783ee4225786d91bf",
+      "git_blob_sha256": "2cd022cef03df022746b9ab3e571ab35ae423c7a10bf896bbef3cd0b4342ca20",
+      "raw_equal": false,
+      "lf_equal": true
+    }
+  ]
+}

@@ -101,6 +101,7 @@ public static class CityRebuildV002Completion
     {
         var city = GameObject.Find("CityRebuild_v002").transform;
         var rows = new JArray();
+        var failures = new JArray();
         foreach (var item in layout["campus"]["components"].Concat(layout["buildings"]))
         {
             string id = (string)item["id"], name = id + "_" + (string)(id.StartsWith("C") ? item["name"] : item["type"]);
@@ -112,15 +113,17 @@ public static class CityRebuildV002Completion
                 Mathf.Abs(b.min.z - polygon.Min(p => p.y)), Mathf.Abs(b.max.z - polygon.Max(p => p.y)), Mathf.Abs(b.size.y - (float)item["height"]) }.Max();
             var meshes = group.GetComponentsInChildren<MeshFilter>().Where(f => f.sharedMesh != null).ToArray();
             var paths = meshes.Select(f => AssetDatabase.GetAssetPath(f.sharedMesh)).Distinct().ToArray();
-            if (error > .025f || meshes.Length == 0 || paths.Any(p => !p.EndsWith(".fbx", StringComparison.OrdinalIgnoreCase)))
-                throw new InvalidOperationException("Actual FBX provenance/envelope audit failed: " + id + " error=" + error);
-            rows.Add(new JObject { ["id"] = id, ["status"] = "PASS", ["maximum_envelope_error_m"] = error,
+            bool passed = error <= .025f && meshes.Length > 0 && paths.All(p => p.EndsWith(".fbx", StringComparison.OrdinalIgnoreCase));
+            if (!passed) failures.Add(id);
+            rows.Add(new JObject { ["id"] = id, ["status"] = passed ? "PASS" : "FAIL", ["maximum_envelope_error_m"] = error,
                 ["bounds_min"] = V(b.min), ["bounds_max"] = V(b.max), ["root_position"] = V(group.position),
-                ["root_euler"] = V(group.eulerAngles), ["actual_fbx_mesh_paths"] = new JArray(paths), ["mesh_count"] = meshes.Length });
+                ["root_euler"] = V(group.eulerAngles), ["actual_fbx_mesh_paths"] = new JArray(paths), ["mesh_count"] = meshes.Length,
+                ["renderers"] = new JArray(group.GetComponentsInChildren<MeshRenderer>().Select(r => new JObject { ["name"] = r.name, ["min"] = V(r.bounds.min), ["max"] = V(r.bounds.max), ["mesh_path"] = AssetDatabase.GetAssetPath(r.GetComponent<MeshFilter>().sharedMesh) })) });
         }
         File.WriteAllText("../docs/verification/city-rebuild-v002-phase47-building-audit.json", new JObject {
-            ["status"] = "PASS", ["scene_sha256"] = Hash(CityRebuildV002Setup.ScenePath), ["utc"] = DateTime.UtcNow.ToString("o"),
+            ["status"] = failures.Count == 0 ? "PASS" : "FAIL", ["failures"] = failures, ["scene_sha256"] = Hash(CityRebuildV002Setup.ScenePath), ["utc"] = DateTime.UtcNow.ToString("o"),
             ["scope"] = "Saved scene loaded in Unity; actual FBX MeshFilter provenance and renderer world envelope matches approved polygon within 0.025m; collision-free approved envelopes separately checked by Python QA; actual door thresholds not tested", ["buildings"] = rows }.ToString());
+        if (failures.Count > 0) throw new InvalidOperationException("Actual FBX provenance/envelope audit failed: " + failures);
     }
     static void EnsureNavigation(CityV002PedestrianGraph graph, Transform city)
     {

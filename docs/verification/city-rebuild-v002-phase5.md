@@ -1,5 +1,7 @@
 # City Rebuild v002 — Phase 5 NPC 보행 연결
 
+> 2026-10-16 재개: 이 문서의 아래 `통합 Play Mode 대기` 표시는 최초 구현 당시 기록이다. 현재 씬에는 하천 확장까지 포함한 572 nodes / 597 edges와 구역 간 이동 검증 코드가 있다. 최신 실행 판정과 남은 실제 문앞 접근·NavMesh 범위는 [Phase 7 통합 결과](city-rebuild-v002-phase7-qa.md)를 기준으로 확인한다. 과거 실행 결과가 존재한다는 이유만으로 현재 씬의 실행 성공을 판단하지 않는다.
+
 ## 적용 범위
 
 승인된 `docs/planning/city_rebuild_v002/layout.json`의 388개 노드, 409개 엣지와 엣지별 실제 polyline을 새 `CityV002PedestrianGraph` 컴포넌트로 복사한다. 원본 설계 JSON은 수정하지 않는다. `CityRebuildV002NavigationSetup.Apply()`는 기존 `CityRebuild_v002.unity`에 네비게이션 컴포넌트와 검증 NPC를 증분 추가한다. 도시 건물·도로를 재생성하지 않는다.
