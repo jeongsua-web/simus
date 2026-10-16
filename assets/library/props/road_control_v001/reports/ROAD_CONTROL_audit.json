@@ -1,0 +1,706 @@
+{
+  "assets": [
+    {
+      "name": "SIMUS_Barricade_01",
+      "root": "BARRICADE_01_ROOT",
+      "objects": 15,
+      "triangles": 904,
+      "meshes": [
+        {
+          "name": "BARRICADE_01_BOARD",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "BARRICADE_01_FASTENERS",
+          "triangles": 112,
+          "nonmanifold": 0
+        },
+        {
+          "name": "BARRICADE_01_FOOT_-0.77",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "BARRICADE_01_FOOT_0.77",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "BARRICADE_01_LOWER_BRACE",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "BARRICADE_01_POST_-0.77",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "BARRICADE_01_POST_0.77",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "BARRICADE_01_REFLECTIVE",
+          "triangles": 144,
+          "nonmanifold": 0
+        }
+      ],
+      "materials": [
+        {
+          "name": "RC_Orange.001",
+          "color": [
+            0.8500000238418579,
+            0.11500000208616257,
+            0.012000000104308128,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.47999998927116394,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_Metal.001",
+          "color": [
+            0.2199999988079071,
+            0.25999999046325684,
+            0.2800000011920929,
+            1.0
+          ],
+          "metallic": 0.699999988079071,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_Rubber.001",
+          "color": [
+            0.02500000037252903,
+            0.029999999329447746,
+            0.03200000151991844,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8600000143051147,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_White",
+          "color": [
+            0.7799999713897705,
+            0.8100000023841858,
+            0.7799999713897705,
+            1.0
+          ],
+          "metallic": 0.05000000074505806,
+          "roughness": 0.3199999928474426,
+          "emission": 0.0
+        }
+      ],
+      "bounds_min": [
+        -1.0,
+        -0.2750000059604645,
+        0.0
+      ],
+      "bounds_max": [
+        1.0,
+        0.2750000059604645,
+        1.0299999713897705
+      ]
+    },
+    {
+      "name": "SIMUS_Barricade_02",
+      "root": "BARRICADE_02_ROOT",
+      "objects": 23,
+      "triangles": 2092,
+      "meshes": [
+        {
+          "name": "BARRICADE_02_BOARD",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "BARRICADE_02_COUPLER_-1.045_0.73",
+          "triangles": 288,
+          "nonmanifold": 0
+        },
+        {
+          "name": "BARRICADE_02_COUPLER_-1.045_0.9",
+          "triangles": 288,
+          "nonmanifold": 0
+        },
+        {
+          "name": "BARRICADE_02_COUPLER_1.045_0.81",
+          "triangles": 288,
+          "nonmanifold": 0
+        },
+        {
+          "name": "BARRICADE_02_COUPLER_BRACKET_-1.045_0.73",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "BARRICADE_02_COUPLER_BRACKET_-1.045_0.9",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "BARRICADE_02_COUPLER_BRACKET_1.045_0.81",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "BARRICADE_02_FASTENERS",
+          "triangles": 112,
+          "nonmanifold": 0
+        },
+        {
+          "name": "BARRICADE_02_FOOT_-0.77",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "BARRICADE_02_FOOT_0.77",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "BARRICADE_02_LOWER_BRACE",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "BARRICADE_02_POST_-0.77",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "BARRICADE_02_POST_0.77",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "BARRICADE_02_REFLECTIVE",
+          "triangles": 144,
+          "nonmanifold": 0
+        }
+      ],
+      "materials": [
+        {
+          "name": "RC_Orange.001",
+          "color": [
+            0.8500000238418579,
+            0.11500000208616257,
+            0.012000000104308128,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.47999998927116394,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_Metal.001",
+          "color": [
+            0.2199999988079071,
+            0.25999999046325684,
+            0.2800000011920929,
+            1.0
+          ],
+          "metallic": 0.699999988079071,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_Rubber.001",
+          "color": [
+            0.02500000037252903,
+            0.029999999329447746,
+            0.03200000151991844,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8600000143051147,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_White",
+          "color": [
+            0.7799999713897705,
+            0.8100000023841858,
+            0.7799999713897705,
+            1.0
+          ],
+          "metallic": 0.05000000074505806,
+          "roughness": 0.3199999928474426,
+          "emission": 0.0
+        }
+      ],
+      "bounds_min": [
+        -1.0959999561309814,
+        -0.2750000059604645,
+        0.0
+      ],
+      "bounds_max": [
+        1.0959999561309814,
+        0.2750000059604645,
+        1.0299999713897705
+      ]
+    },
+    {
+      "name": "SIMUS_Barricade_WarningLight",
+      "root": "BARRICADE_WARNING_LIGHT",
+      "objects": 8,
+      "triangles": 460,
+      "meshes": [
+        {
+          "name": "WARNING_EMITTER",
+          "triangles": 92,
+          "nonmanifold": 0
+        },
+        {
+          "name": "WARNING_HOUSING",
+          "triangles": 92,
+          "nonmanifold": 0
+        },
+        {
+          "name": "WARNING_LENS",
+          "triangles": 92,
+          "nonmanifold": 0
+        },
+        {
+          "name": "WARNING_MOUNT_CLAMP",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "WARNING_STEM",
+          "triangles": 76,
+          "nonmanifold": 0
+        }
+      ],
+      "materials": [
+        {
+          "name": "RC_Amber",
+          "color": [
+            0.949999988079071,
+            0.3400000035762787,
+            0.008999999612569809,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.30000001192092896,
+          "emission": 1.399999976158142
+        },
+        {
+          "name": "RC_Rubber.001",
+          "color": [
+            0.02500000037252903,
+            0.029999999329447746,
+            0.03200000151991844,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8600000143051147,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_Yellow",
+          "color": [
+            0.800000011920929,
+            0.47999998927116394,
+            0.014999999664723873,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.44999998807907104,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_Metal.001",
+          "color": [
+            0.2199999988079071,
+            0.25999999046325684,
+            0.2800000011920929,
+            1.0
+          ],
+          "metallic": 0.699999988079071,
+          "roughness": 0.4000000059604645,
+          "emission": 0.0
+        }
+      ],
+      "bounds_min": [
+        -0.08500000089406967,
+        -0.05999999865889549,
+        0.0
+      ],
+      "bounds_max": [
+        0.08500000089406967,
+        0.05999999865889549,
+        0.2549999952316284
+      ]
+    },
+    {
+      "name": "SIMUS_ConeConnector",
+      "root": "CONE_CONNECTOR_BAR",
+      "objects": 13,
+      "triangles": 1116,
+      "meshes": [
+        {
+          "name": "CONNECTOR_END_-0.8",
+          "triangles": 288,
+          "nonmanifold": 0
+        },
+        {
+          "name": "CONNECTOR_END_0.8",
+          "triangles": 288,
+          "nonmanifold": 0
+        },
+        {
+          "name": "CONNECTOR_INNER",
+          "triangles": 60,
+          "nonmanifold": 0
+        },
+        {
+          "name": "CONNECTOR_STRIPE_00",
+          "triangles": 60,
+          "nonmanifold": 0
+        },
+        {
+          "name": "CONNECTOR_STRIPE_01",
+          "triangles": 60,
+          "nonmanifold": 0
+        },
+        {
+          "name": "CONNECTOR_STRIPE_02",
+          "triangles": 60,
+          "nonmanifold": 0
+        },
+        {
+          "name": "CONNECTOR_STRIPE_03",
+          "triangles": 60,
+          "nonmanifold": 0
+        },
+        {
+          "name": "CONNECTOR_STRIPE_04",
+          "triangles": 60,
+          "nonmanifold": 0
+        },
+        {
+          "name": "CONNECTOR_STRIPE_05",
+          "triangles": 60,
+          "nonmanifold": 0
+        },
+        {
+          "name": "CONNECTOR_STRIPE_06",
+          "triangles": 60,
+          "nonmanifold": 0
+        },
+        {
+          "name": "CONNECTOR_STRIPE_07",
+          "triangles": 60,
+          "nonmanifold": 0
+        }
+      ],
+      "materials": [
+        {
+          "name": "RC_Rubber.001",
+          "color": [
+            0.02500000037252903,
+            0.029999999329447746,
+            0.03200000151991844,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8600000143051147,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_Yellow",
+          "color": [
+            0.800000011920929,
+            0.47999998927116394,
+            0.014999999664723873,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.44999998807907104,
+          "emission": 0.0
+        }
+      ],
+      "bounds_min": [
+        -0.8610000014305115,
+        -0.061000000685453415,
+        0.656000018119812
+      ],
+      "bounds_max": [
+        0.8610000014305115,
+        0.061000000685453415,
+        0.7039999961853027
+      ]
+    },
+    {
+      "name": "SIMUS_TrafficCone_01",
+      "root": "TRAFFIC_CONE_01_ROOT",
+      "objects": 6,
+      "triangles": 488,
+      "meshes": [
+        {
+          "name": "TRAFFIC_CONE_01_BASE",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "TRAFFIC_CONE_01_BODY",
+          "triangles": 380,
+          "nonmanifold": 0
+        }
+      ],
+      "materials": [
+        {
+          "name": "RC_Rubber.001",
+          "color": [
+            0.02500000037252903,
+            0.029999999329447746,
+            0.03200000151991844,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8600000143051147,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_Orange.001",
+          "color": [
+            0.8500000238418579,
+            0.11500000208616257,
+            0.012000000104308128,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.47999998927116394,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_White",
+          "color": [
+            0.7799999713897705,
+            0.8100000023841858,
+            0.7799999713897705,
+            1.0
+          ],
+          "metallic": 0.05000000074505806,
+          "roughness": 0.3199999928474426,
+          "emission": 0.0
+        }
+      ],
+      "bounds_min": [
+        -0.20000000298023224,
+        -0.20000000298023224,
+        0.0
+      ],
+      "bounds_max": [
+        0.20000000298023224,
+        0.20000000298023224,
+        0.699999988079071
+      ]
+    },
+    {
+      "name": "SIMUS_TrafficCone_02",
+      "root": "TRAFFIC_CONE_02_ROOT",
+      "objects": 6,
+      "triangles": 488,
+      "meshes": [
+        {
+          "name": "TRAFFIC_CONE_02_BASE",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "TRAFFIC_CONE_02_BODY",
+          "triangles": 380,
+          "nonmanifold": 0
+        }
+      ],
+      "materials": [
+        {
+          "name": "RC_Rubber.001",
+          "color": [
+            0.02500000037252903,
+            0.029999999329447746,
+            0.03200000151991844,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8600000143051147,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_Orange.001",
+          "color": [
+            0.8500000238418579,
+            0.11500000208616257,
+            0.012000000104308128,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.47999998927116394,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_White",
+          "color": [
+            0.7799999713897705,
+            0.8100000023841858,
+            0.7799999713897705,
+            1.0
+          ],
+          "metallic": 0.05000000074505806,
+          "roughness": 0.3199999928474426,
+          "emission": 0.0
+        }
+      ],
+      "bounds_min": [
+        -0.12800000607967377,
+        -0.12800000607967377,
+        0.0
+      ],
+      "bounds_max": [
+        0.12800000607967377,
+        0.12800000607967377,
+        0.4479999840259552
+      ]
+    },
+    {
+      "name": "SIMUS_TrafficCone_Fallen",
+      "root": "TRAFFIC_CONE_FALLEN_ROOT",
+      "objects": 4,
+      "triangles": 488,
+      "meshes": [
+        {
+          "name": "TRAFFIC_CONE_FALLEN_BASE",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "TRAFFIC_CONE_FALLEN_BODY",
+          "triangles": 380,
+          "nonmanifold": 0
+        }
+      ],
+      "materials": [
+        {
+          "name": "RC_Rubber.001",
+          "color": [
+            0.02500000037252903,
+            0.029999999329447746,
+            0.03200000151991844,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8600000143051147,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_Orange.001",
+          "color": [
+            0.8500000238418579,
+            0.11500000208616257,
+            0.012000000104308128,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.47999998927116394,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_White",
+          "color": [
+            0.7799999713897705,
+            0.8100000023841858,
+            0.7799999713897705,
+            1.0
+          ],
+          "metallic": 0.05000000074505806,
+          "roughness": 0.3199999928474426,
+          "emission": 0.0
+        }
+      ],
+      "bounds_min": [
+        -0.20000000298023224,
+        -0.36482590436935425,
+        0.003125664545223117
+      ],
+      "bounds_max": [
+        0.20000000298023224,
+        0.36170023679733276,
+        0.39947986602783203
+      ]
+    },
+    {
+      "name": "SIMUS_TrafficCone_Tilted",
+      "root": "TRAFFIC_CONE_TILTED_ROOT",
+      "objects": 4,
+      "triangles": 488,
+      "meshes": [
+        {
+          "name": "TRAFFIC_CONE_TILTED_BASE",
+          "triangles": 108,
+          "nonmanifold": 0
+        },
+        {
+          "name": "TRAFFIC_CONE_TILTED_BODY",
+          "triangles": 380,
+          "nonmanifold": 0
+        }
+      ],
+      "materials": [
+        {
+          "name": "RC_Rubber.001",
+          "color": [
+            0.02500000037252903,
+            0.029999999329447746,
+            0.03200000151991844,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.8600000143051147,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_Orange.001",
+          "color": [
+            0.8500000238418579,
+            0.11500000208616257,
+            0.012000000104308128,
+            1.0
+          ],
+          "metallic": 0.0,
+          "roughness": 0.47999998927116394,
+          "emission": 0.0
+        },
+        {
+          "name": "RC_White",
+          "color": [
+            0.7799999713897705,
+            0.8100000023841858,
+            0.7799999713897705,
+            1.0
+          ],
+          "metallic": 0.05000000074505806,
+          "roughness": 0.3199999928474426,
+          "emission": 0.0
+        }
+      ],
+      "bounds_min": [
+        -0.20000000298023224,
+        -0.19708490371704102,
+        0.0037424108013510704
+      ],
+      "bounds_max": [
+        0.20000000298023224,
+        0.19708490371704102,
+        0.7329388856887817
+      ]
+    }
+  ]
+}

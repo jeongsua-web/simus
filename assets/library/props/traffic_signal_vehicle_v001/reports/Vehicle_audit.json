@@ -1,0 +1,226 @@
+{
+  "kind": "Vehicle",
+  "objects": 30,
+  "render_meshes": 23,
+  "triangles": 2856,
+  "meshes": [
+    {
+      "name": "VEHICLE_SIGNAL_POLE",
+      "boundary_edges": 0,
+      "triangles": 76
+    },
+    {
+      "name": "VEHICLE_SIGNAL_BASE",
+      "boundary_edges": 0,
+      "triangles": 108
+    },
+    {
+      "name": "VEHICLE_ANCHOR_BOLTS",
+      "boundary_edges": 0,
+      "triangles": 80
+    },
+    {
+      "name": "VEHICLE_POLE_HATCH",
+      "boundary_edges": 0,
+      "triangles": 108
+    },
+    {
+      "name": "VEHICLE_SIGNAL_HEAD",
+      "boundary_edges": 0,
+      "triangles": 108
+    },
+    {
+      "name": "VEHICLE_SIGNAL_BACK_COVER",
+      "boundary_edges": 0,
+      "triangles": 108
+    },
+    {
+      "name": "VEHICLE_SIGNAL_ARM",
+      "boundary_edges": 0,
+      "triangles": 76
+    },
+    {
+      "name": "VEHICLE_ARM_COLLAR",
+      "boundary_edges": 0,
+      "triangles": 76
+    },
+    {
+      "name": "VEHICLE_SIGNAL_BRACKETS",
+      "boundary_edges": 0,
+      "triangles": 24
+    },
+    {
+      "name": "VEHICLE_RIM_RED",
+      "boundary_edges": 0,
+      "triangles": 124
+    },
+    {
+      "name": "VEHICLE_LENS_RED",
+      "boundary_edges": 0,
+      "triangles": 124
+    },
+    {
+      "name": "VEHICLE_RIM_YELLOW",
+      "boundary_edges": 0,
+      "triangles": 124
+    },
+    {
+      "name": "VEHICLE_LENS_YELLOW",
+      "boundary_edges": 0,
+      "triangles": 124
+    },
+    {
+      "name": "VEHICLE_RIM_LEFT",
+      "boundary_edges": 0,
+      "triangles": 124
+    },
+    {
+      "name": "VEHICLE_LENS_LEFT",
+      "boundary_edges": 0,
+      "triangles": 124
+    },
+    {
+      "name": "VEHICLE_RIM_GREEN",
+      "boundary_edges": 0,
+      "triangles": 124
+    },
+    {
+      "name": "VEHICLE_LENS_GREEN",
+      "boundary_edges": 0,
+      "triangles": 124
+    },
+    {
+      "name": "VEHICLE_EMITTER_RED",
+      "boundary_edges": 0,
+      "triangles": 156
+    },
+    {
+      "name": "VEHICLE_EMITTER_YELLOW",
+      "boundary_edges": 0,
+      "triangles": 156
+    },
+    {
+      "name": "VEHICLE_EMITTER_GREEN",
+      "boundary_edges": 0,
+      "triangles": 156
+    },
+    {
+      "name": "VEHICLE_EMITTER_LEFT",
+      "boundary_edges": 0,
+      "triangles": 24
+    },
+    {
+      "name": "VEHICLE_BACK_FASTENERS",
+      "boundary_edges": 0,
+      "triangles": 80
+    },
+    {
+      "name": "VEHICLE_SIGNAL_VISORS",
+      "boundary_edges": 0,
+      "triangles": 528
+    }
+  ],
+  "materials": [
+    {
+      "role": "Pole",
+      "source_name": "Signal_Pole_Vehicle",
+      "color": [
+        0.28999999165534973,
+        0.3199999928474426,
+        0.3400000035762787,
+        1.0
+      ],
+      "metallic": 0.44999998807907104,
+      "roughness": 0.5,
+      "emission": 0.0
+    },
+    {
+      "role": "Housing",
+      "source_name": "Signal_Housing_Vehicle",
+      "color": [
+        0.04500000178813934,
+        0.05999999865889549,
+        0.06700000166893005,
+        1.0
+      ],
+      "metallic": 0.18000000715255737,
+      "roughness": 0.6499999761581421,
+      "emission": 0.0
+    },
+    {
+      "role": "Rubber",
+      "source_name": "Signal_Rubber_Vehicle",
+      "color": [
+        0.017999999225139618,
+        0.023000000044703484,
+        0.02800000086426735,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.550000011920929,
+      "emission": 0.0
+    },
+    {
+      "role": "Off",
+      "source_name": "Signal_Off_Vehicle",
+      "color": [
+        0.03500000014901161,
+        0.04500000178813934,
+        0.05000000074505806,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.550000011920929,
+      "emission": 0.0
+    },
+    {
+      "role": "Red",
+      "source_name": "Signal_Red_Vehicle",
+      "color": [
+        0.6499999761581421,
+        0.006000000052154064,
+        0.004000000189989805,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.550000011920929,
+      "emission": 1.600000023841858
+    },
+    {
+      "role": "Yellow",
+      "source_name": "Signal_Yellow_Vehicle",
+      "color": [
+        0.75,
+        0.30000001192092896,
+        0.004999999888241291,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.550000011920929,
+      "emission": 1.600000023841858
+    },
+    {
+      "role": "Green",
+      "source_name": "Signal_Green_Vehicle",
+      "color": [
+        0.004999999888241291,
+        0.550000011920929,
+        0.09000000357627869,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.550000011920929,
+      "emission": 1.600000023841858
+    }
+  ],
+  "bounds_min": [
+    -0.20999999344348907,
+    -0.28999999165534973,
+    0.0
+  ],
+  "bounds_max": [
+    3.799999952316284,
+    0.20999999344348907,
+    5.929999828338623
+  ]
+}

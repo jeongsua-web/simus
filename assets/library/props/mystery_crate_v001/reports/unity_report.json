@@ -1,0 +1,114 @@
+{
+    "assets": [
+        {
+            "name": "SIMUS_Barricade_01",
+            "size": {
+                "x": 2.0,
+                "y": 1.0299999713897706,
+                "z": 0.550000011920929
+            },
+            "colliders": 5,
+            "renderers": 8,
+            "materials": 4,
+            "passed": true
+        },
+        {
+            "name": "SIMUS_Barricade_02",
+            "size": {
+                "x": 2.191999912261963,
+                "y": 1.0299999713897706,
+                "z": 0.550000011920929
+            },
+            "colliders": 5,
+            "renderers": 14,
+            "materials": 4,
+            "passed": true
+        },
+        {
+            "name": "SIMUS_Barricade_WarningLight",
+            "size": {
+                "x": 0.17000000178813935,
+                "y": 0.2549999952316284,
+                "z": 0.11999999731779099
+            },
+            "colliders": 1,
+            "renderers": 5,
+            "materials": 4,
+            "passed": true
+        },
+        {
+            "name": "SIMUS_ConeConnector",
+            "size": {
+                "x": 1.722000002861023,
+                "y": 0.04799997806549072,
+                "z": 0.12200000137090683
+            },
+            "colliders": 1,
+            "renderers": 11,
+            "materials": 2,
+            "passed": true
+        },
+        {
+            "name": "SIMUS_TrafficCone_01",
+            "size": {
+                "x": 0.4000000059604645,
+                "y": 0.699999988079071,
+                "z": 0.4000000059604645
+            },
+            "colliders": 3,
+            "renderers": 2,
+            "materials": 3,
+            "passed": true
+        },
+        {
+            "name": "SIMUS_TrafficCone_02",
+            "size": {
+                "x": 0.25600001215934756,
+                "y": 0.4479999840259552,
+                "z": 0.25600001215934756
+            },
+            "colliders": 3,
+            "renderers": 2,
+            "materials": 3,
+            "passed": true
+        },
+        {
+            "name": "SIMUS_TrafficCone_Fallen",
+            "size": {
+                "x": 0.4000000059604645,
+                "y": 0.39635419845581057,
+                "z": 0.726526141166687
+            },
+            "colliders": 1,
+            "renderers": 2,
+            "materials": 3,
+            "passed": true
+        },
+        {
+            "name": "SIMUS_TrafficCone_Tilted",
+            "size": {
+                "x": 0.4000000059604645,
+                "y": 0.7291964888572693,
+                "z": 0.39416980743408205
+            },
+            "colliders": 1,
+            "renderers": 2,
+            "materials": 3,
+            "passed": true
+        },
+        {
+            "name": "SIMUS_Mystery_Crate",
+            "size": {
+                "x": 0.9626200199127197,
+                "y": 0.6679999828338623,
+                "z": 0.6620000004768372
+            },
+            "colliders": 6,
+            "renderers": 38,
+            "materials": 9,
+            "passed": true
+        }
+    ],
+    "crateHingeVerified": true,
+    "independentGlow": true
+}
