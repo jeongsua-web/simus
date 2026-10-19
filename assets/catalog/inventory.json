@@ -7593,8 +7593,8 @@
       "path": "unity/Assets/Editor/CityRebuildV002WebGLBuild.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 4390,
-      "sha256": "2933839c1e28905434953499a1ed6b27593b96d8a2493eb7b01d834eba365fcd"
+      "bytes": 5731,
+      "sha256": "780564e31c1d3ff4e09d42088389704163b08c90b01d378a3a0be6bb350aa3ce"
     },
     {
       "path": "unity/Assets/Editor/CityRebuildV002WebGLBuild.cs.meta",
@@ -35418,8 +35418,8 @@
       "path": "unity/Assets/Scripts/CityPreviewCamera.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 10378,
-      "sha256": "781ad7e1f165bc74d43411727978fd069ddda6ed7d0e232626443dd52abeb2dd"
+      "bytes": 10746,
+      "sha256": "ae83569938a2d10b5c842a1dc6c129c9cfc7217cc5691b41c91fd9c7c83f0263"
     },
     {
       "path": "unity/Assets/Scripts/CityPreviewCamera.cs.meta",
@@ -35628,8 +35628,8 @@
       "path": "unity/Assets/Scripts/WebCityBridge.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 9309,
-      "sha256": "e5cf4953834ad9883d9fb6012b66c24d0932fc61862f6be24035e9f773d185dd"
+      "bytes": 10817,
+      "sha256": "afb8aaaaac7f0f7ccee5f911ce195b117233b5f12f4a9137bb6504a2963406e9"
     },
     {
       "path": "unity/Assets/Scripts/WebCityBridge.cs.meta",
@@ -35691,8 +35691,8 @@
       "path": "unity/Assets/WebGLTemplates/simus_city/bridge.js",
       "role": "support",
       "location": "unity_existing",
-      "bytes": 3512,
-      "sha256": "0f3b72662cc12879951e99d3a23ee22c26eb7b981c5b694115a7f8a01044521c"
+      "bytes": 5884,
+      "sha256": "70d23e67cfad185da55829586a27d69759813f582dc28059d78bf2a24f665a29"
     },
     {
       "path": "unity/Assets/WebGLTemplates/simus_city/bridge.js.meta",
@@ -36309,6 +36309,55 @@
       "location": "web_runtime",
       "bytes": 1656,
       "sha256": "71bb3bce460ac5e76c7d77b850e8065265e41cb83ea73fc7ba52c3646f27e8d7"
+    },
+    {
+      "path": "web/public/city-rebuild-v002/Build/city_rebuild_v002_character_zoom.data",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 61270274,
+      "sha256": "7298124f64a5d75547dd222f58ed4e36e04e04e2c00deeac88ec4b8d85087cc6"
+    },
+    {
+      "path": "web/public/city-rebuild-v002/Build/city_rebuild_v002_character_zoom.framework.js",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 413204,
+      "sha256": "8fc81fca14ab0d03713374e001dd5986c5edd0e2b8e8924ea2a21a483340dd2b"
+    },
+    {
+      "path": "web/public/city-rebuild-v002/Build/city_rebuild_v002_character_zoom.loader.js",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 26983,
+      "sha256": "498e251d06036bcbffac60f84c5b39175176eea9f707e5245c368ed2443629e8"
+    },
+    {
+      "path": "web/public/city-rebuild-v002/Build/city_rebuild_v002_character_zoom.wasm",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 26693655,
+      "sha256": "ea63da7ebcab167458f5d807be6a66cc84b8c03838f380971047493aa5cc7dc2"
+    },
+    {
+      "path": "web/public/city-rebuild-v002/bridge.js",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 5884,
+      "sha256": "70d23e67cfad185da55829586a27d69759813f582dc28059d78bf2a24f665a29"
+    },
+    {
+      "path": "web/public/city-rebuild-v002/build.json",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 208,
+      "sha256": "ca34f16097db103596d9455aecc632dacd4d1b822a09c4b0b4657ffca32f15f6"
+    },
+    {
+      "path": "web/public/city-rebuild-v002/index.html",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 1660,
+      "sha256": "229d94ad9bf63d743c9096ebf9f8c73ff94303cfbdb66aafc006d8b543861f51"
     },
     {
       "path": "web/public/city/Build/development_city.data",

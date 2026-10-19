@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Runtime.InteropServices;
 using Newtonsoft.Json.Linq;
 using Simus.City;
@@ -34,7 +35,7 @@ namespace Simus
             gameObject.name = "SIMUS Web Bridge";
             state = new WebBridgeState(mapVersion);
             Application.targetFrameRate = 30;
-            Emit(new JObject { ["type"] = "READY", ["map_version"] = mapVersion });
+            Emit(new JObject { ["type"] = "READY", ["map_version"] = mapVersion, ["camera_zoom"] = true });
         }
         public void Receive(string json)
         {
@@ -147,6 +148,12 @@ namespace Simus
             active.Dispose();
             if (ReferenceEquals(request, active)) request = null;
         }
+        public void SetZoom(string value)
+        {
+            if (disposed || state?.Own == null || followCamera == null) return;
+            if (float.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var zoom))
+                followCamera.SetFollowZoom(zoom);
+        }
         public void SetVisibility(string value)
         {
             if (disposed) return;
@@ -172,6 +179,23 @@ namespace Simus
 
         }
         private void OnDestroy() { DisposeBridge(); }
+        // Read-only runtime inspection for same-origin integration/visual QA. No polling or game-state writes.
+        public void InspectBridge()
+        {
+            if (disposed || state?.Own == null || !actors.TryGetValue(state.OwnNpcId, out var actor)) return;
+            var p = actor.transform.position;
+            var renderers = actor.GetComponentsInChildren<Renderer>();
+            Emit(new JObject {
+                ["type"] = "INSPECTION", ["session_id"] = state.SessionId, ["npc_id"] = state.OwnNpcId,
+                ["position"] = new JArray(p.x, p.y, p.z), ["active"] = actor.activeInHierarchy,
+                ["renderer_count"] = renderers.Length,
+                ["following"] = followCamera != null && followCamera.IsFollowing,
+                ["follow_size"] = followCamera != null ? followCamera.followSize : 0,
+                ["zoom"] = followCamera != null ? followCamera.FollowZoom : 1,
+                ["camera_size"] = followCamera != null ? followCamera.GetComponent<Camera>().orthographicSize : 0,
+                ["smooth_transitions"] = followCamera != null && followCamera.smoothFollowTransitions
+            });
+        }
         private void Fail(string code) { Emit(new JObject { ["type"] = "ERROR", ["code"] = code }); DisposeBridge(); }
         private void Emit(JObject message)
         {

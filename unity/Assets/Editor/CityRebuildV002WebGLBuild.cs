@@ -7,7 +7,7 @@ using UnityEditor.Build.Reporting;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
-// Phase 1 only. The version below identifies a test build, not exhibition coordinates.
+// Separate map-only and session builds. Neither establishes exhibition approval.
 public static class CityRebuildV002WebGLBuild
 {
     public const string MapVersion = "test-only-city-rebuild-v002-webgl-v1";
@@ -15,7 +15,19 @@ public static class CityRebuildV002WebGLBuild
     [MenuItem("SIMUS/City Rebuild v002/Build map-only WebGL")]
     public static void Build()
     {
-        var output = Path.GetFullPath(Environment.GetEnvironmentVariable("SIMUS_V002_WEBGL_OUTPUT") ?? "Builds/city_rebuild_v002_test");
+        BuildVersion(false);
+    }
+
+    [MenuItem("SIMUS/City Rebuild v002/Build session WebGL")]
+    public static void BuildSession()
+    {
+        BuildVersion(true);
+    }
+
+    private static void BuildVersion(bool sessionEnabled)
+    {
+        var output = Path.GetFullPath(Environment.GetEnvironmentVariable("SIMUS_V002_WEBGL_OUTPUT") ??
+            (sessionEnabled ? "Builds/city_rebuild_v002_session" : "Builds/city_rebuild_v002_test"));
         if (Directory.Exists(output) && Directory.EnumerateFileSystemEntries(output).Any())
             throw new InvalidOperationException("Use an empty test output directory; existing builds are protected.");
         if (!BuildPipeline.IsBuildTargetSupported(BuildTargetGroup.WebGL, BuildTarget.WebGL))
@@ -42,11 +54,27 @@ public static class CityRebuildV002WebGLBuild
             var verifications = roots.SelectMany(root => root.GetComponentsInChildren<CityV002NavigationVerification>(true)).ToArray();
             foreach (var verification in verifications) UnityEngine.Object.DestroyImmediate(verification);
             foreach (var adapter in adapters) UnityEngine.Object.DestroyImmediate(adapter);
-            foreach (var patrol in patrols) if (patrol != null) UnityEngine.Object.DestroyImmediate(patrol.gameObject);
+            GameObject npcTemplate = null;
+            foreach (var patrol in patrols)
+            {
+                if (patrol == null) continue;
+                if (sessionEnabled && npcTemplate == null)
+                {
+                    npcTemplate = patrol.gameObject;
+                    UnityEngine.Object.DestroyImmediate(patrol);
+                    npcTemplate.name = "SIMUS Animated NPC Template";
+                    npcTemplate.transform.position = Vector3.zero;
+                    npcTemplate.transform.rotation = Quaternion.identity;
+                    npcTemplate.SetActive(false);
+                }
+                else UnityEngine.Object.DestroyImmediate(patrol.gameObject);
+            }
+            if (sessionEnabled && npcTemplate == null) throw new InvalidOperationException("Animated NPC template missing.");
             var bridge = new GameObject("SIMUS Web Bridge").AddComponent<WebCityBridge>();
             bridge.mapVersion = MapVersion;
             bridge.followCamera = camera;
-            bridge.mapDisplayOnly = true;
+            bridge.mapDisplayOnly = !sessionEnabled;
+            bridge.npcTemplate = npcTemplate;
             EditorSceneManager.SaveScene(scene, temporaryScene);
             PlayerSettings.WebGL.template = "PROJECT:simus_city";
             PlayerSettings.WebGL.compressionFormat = WebGLCompressionFormat.Disabled;
@@ -55,7 +83,9 @@ public static class CityRebuildV002WebGLBuild
                 target = BuildTarget.WebGL, options = BuildOptions.None
             });
             if (report.summary.result != BuildResult.Succeeded) throw new InvalidOperationException("CityRebuild_v002 WebGL failed: " + report.summary.result);
-            File.WriteAllText(Path.Combine(output, "build.json"), "{\"protocol_version\":1,\"map_version\":\"" + MapVersion + "\",\"kind\":\"city-rebuild-v002-map-only\",\"npc_motion_enabled\":false,\"exhibition_ready\":false}\n");
+            File.WriteAllText(Path.Combine(output, "build.json"), sessionEnabled
+                ? "{\"protocol_version\":1,\"map_version\":\"" + MapVersion + "\",\"kind\":\"city-rebuild-v002-session\",\"path_versions\":[\"city-rebuild-v002-walk-v1\"],\"npc_motion_enabled\":true,\"exhibition_ready\":false}\n"
+                : "{\"protocol_version\":1,\"map_version\":\"" + MapVersion + "\",\"kind\":\"city-rebuild-v002-map-only\",\"npc_motion_enabled\":false,\"exhibition_ready\":false}\n");
         }
         finally
         {

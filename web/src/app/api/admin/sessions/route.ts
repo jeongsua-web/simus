@@ -14,6 +14,7 @@ export async function GET(request: NextRequest) {
     const payload = await transaction(async db => {
       await requireAdmin(db, subject);
       const sessions = await db.query(`SELECT s.id,s.name,s.status,s.starts_at,s.scheduled_end_at,
+          s.npc_motion->>'map_version' AS map_version,s.npc_motion->>'path_version' AS path_version,
           s.scheduled_end_at-s.admission_buffer AS auto_cutoff_at,s.end_requested_at,s.finalized_at,s.end_mode,
           (SELECT duration_seconds FROM simus.session_creation_requests WHERE session_id=s.id) AS duration_seconds,
           (SELECT count(*)::int FROM simus.participant_sessions WHERE session_id=s.id) AS participant_count,

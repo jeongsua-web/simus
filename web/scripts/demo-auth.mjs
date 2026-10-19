@@ -9,7 +9,7 @@ const { privateKey, publicKey } = await generateKeyPair('RS256');
 const jwk = { ...await exportJWK(publicKey), kid: 'local-demo' };
 const token = await new SignJWT({}).setProtectedHeader({ alg: 'RS256', kid: jwk.kid })
   .setIssuer('simus-local-demo').setAudience('simus-local-demo')
-  .setSubject('dev-admin').setIssuedAt().setExpirationTime('8h').sign(privateKey);
+  .setSubject('dev-admin').setIssuedAt().setExpirationTime('7d').sign(privateKey);
 const env = [
   'DATABASE_URL=postgresql://simus:simus_dev_password@localhost:5432/simus_demo',
   'ADMIN_TOKEN_ISSUER=simus-local-demo',
@@ -20,4 +20,4 @@ const env = [
 ].join('\n');
 await writeFile(new URL('env.local', directory), env, { mode: 0o600 });
 await writeFile(new URL('admin-token.txt', directory), token, { mode: 0o600 });
-console.log('Local-only settings: .demo/env.local; 8-hour token: .demo/admin-token.txt. No private key saved.');
+console.log('Local-only settings: .demo/env.local; 7-day token: .demo/admin-token.txt. No private key saved.');

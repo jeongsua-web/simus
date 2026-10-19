@@ -1,7 +1,10 @@
+import { runV002SessionBrowser } from './v002-session-browser.mjs';
+import { runSessionBuildIntegration } from './session-build.integration.mjs';
+import { runCityV002Events } from './city-v002-events.integration.mjs';
 import { runEventBrowser } from './event-browser.mjs';
 import { runNpcEventIntegration } from './npc-events.integration.mjs';
 // Creates a NEW cluster. Never reads DATABASE_URL or connects to a development DB.
-import { mkdtemp, readFile } from 'node:fs/promises';
+import { mkdtemp, readFile, mkdir, writeFile, cp, symlink } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -61,6 +64,20 @@ const env = { ...process.env, NODE_ENV: 'production', NEXT_TELEMETRY_DISABLED: '
 // disable the remote resolver so this disposable test uses only its own JWK.
 env.ADMIN_JWKS_URL = '';
 env.TEST_DATABASE_URL = env.DATABASE_URL;
+env.SIMUS_WEBGL_PUBLIC_ROOT = path.join(root, 'webgl');
+// API-only synthetic fixtures get isolated deployment metadata, never /public/city writes.
+const fixtureCity = path.join(env.SIMUS_WEBGL_PUBLIC_ROOT, 'city');
+await mkdir(path.join(fixtureCity, 'Build'), { recursive: true });
+for (const name of ['index.html','bridge.js','Build/test.loader.js','Build/test.framework.js','Build/test.wasm','Build/test.data'])
+  await writeFile(path.join(fixtureCity, name), 'API fixture only; not a rendered Unity build');
+async function fixtureBuild(map = 'test-fixture-v1', route = 'test-path-v1') {
+  await writeFile(path.join(fixtureCity, 'build.json'), JSON.stringify({protocol_version:1,map_version:map,path_versions:[route],npc_motion_enabled:true}));
+}
+await fixtureBuild();
+const v002 = path.join(env.SIMUS_WEBGL_PUBLIC_ROOT, 'city-rebuild-v002');
+await mkdir(v002);
+for (const name of ['build.json','index.html','bridge.js']) await cp(path.join(web,'public/city-rebuild-v002',name),path.join(v002,name));
+await symlink(path.join(web,'public/city-rebuild-v002/Build'),path.join(v002,'Build'), 'dir');
 let server, running = false, pool;
 async function stopServer() {
   if (server && server.exitCode === null) { const ended = once(server, 'exit'); server.kill(); await ended; }
@@ -90,6 +107,7 @@ try {
   await pool.query(await readFile(path.join(web, '../db/012_running_common_events.sql'), 'utf8'));
   await pool.query(await readFile(path.join(web, '../db/013_participant_characters.sql'), 'utf8'));
   await pool.query(await readFile(path.join(web, '../db/014_participant_glasses.sql'), 'utf8'));
+  await pool.query(await readFile(path.join(web, '../db/015_npc_graph_guidance.sql'), 'utf8'));
   await pool.query((await readFile(path.join(web, '../db/verify_schema.sql'), 'utf8')).replace(/^\\set.*$/gm, ''));
   // Synthetic geometry belongs only to this disposable test cluster. Production has no route default.
   await pool.query(`CREATE FUNCTION simus.test_fixture_npc_motion() RETURNS trigger LANGUAGE plpgsql AS $$
@@ -103,7 +121,7 @@ try {
   await pool.query(await readFile(path.join(web, '../db/seed_exhibition.sql'), 'utf8'));
   const demoToken = await new SignJWT({}).setProtectedHeader({ alg: 'RS256', kid: publicJwk.kid })
     .setIssuer(env.ADMIN_TOKEN_ISSUER).setAudience(env.ADMIN_TOKEN_AUDIENCE)
-    .setSubject('dev-admin').setIssuedAt().setExpirationTime('5m').sign(privateKey);
+    .setSubject('dev-admin').setIssuedAt().setExpirationTime('30m').sign(privateKey);
   const demoHeaders = { authorization: `Bearer ${demoToken}`, 'content-type': 'application/json' };
   const demoId = '10000000-0000-0000-0000-000000000001';
   const demoList = await (await fetch(env.TEST_API_URL + '/api/admin/sessions', { headers: demoHeaders })).json();
@@ -150,13 +168,20 @@ try {
   assert.equal((await pool.query('SELECT impact_scale::float8 FROM simus.simulation_sessions WHERE id=$1', [neighborhoodId])).rows[0].impact_scale, 0.1);
   console.log('PASS: migrated neighborhood WASTE seed/readiness and original scoring');
   await runDepartmentIntegration({ pool, env, token: demoToken, templateId: demoId });
+  await fixtureBuild('sync-test-only', 'polyline-v1');
   await runNpcPositionIntegration({ pool, env, token: demoToken, templateId: demoId });
+  await fixtureBuild();
   await runProfileIntegration({ pool, env, token: demoToken, templateId: demoId });
   await runDepartmentStatisticsIntegration({ pool, env, token: demoToken, templateId: demoId });
   await runResultLinksIntegration({ pool, env, token: demoToken, templateId: demoId });
   await runStageIntegration({ pool, env, token: demoToken, demoId });
   await runExhibitionContentIntegration({ pool, env, token: demoToken });
+  await runSessionBuildIntegration({ pool, env, token: demoToken, templateId: demoId });
+  await runCityV002Events({ pool, env, token: demoToken, templateId: demoId, stopServer, startServer });
+  await fixtureBuild('event-test-only', 'synthetic-v1');
   await runNpcEventIntegration({ pool, env, token: demoToken, templateId: demoId, stopServer, startServer });
+  await fixtureBuild();
+  await runV002SessionBrowser({ pool, env, token: demoToken, templateId: demoId, root });
   await runEventBrowser({ pool, env, token: demoToken, templateId: demoId });
   const originProbe = await fetch(env.TEST_API_URL + '/api/city-state', { headers: { Origin: 'https://different-origin.invalid' } });
   assert.equal(originProbe.status, 200);

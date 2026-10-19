@@ -46,7 +46,14 @@ export async function runStageIntegration({ pool, env, token, demoId }) {
   const joins = await Promise.all([call(joinUrl, { data: {}, cookie }), call(joinUrl, { data: {}, cookie })]);
   assert.deepEqual(joins.map(x => x.status).sort(), [200, 201]);
   const ownNpc = joins[0].body.npcs[0];
-  assert.deepEqual(joins[1].body.npcs[0], ownNpc);
+  // The background event ticker may initialize a WAITING motion projection
+  // between requests. Compare stable identity/route, normalizing timestamp
+  // precision; the revision is runtime metadata, not the membership snapshot.
+  const stableNpc = npc => {
+    const motion = { ...npc.motion }; delete motion.revision;
+    return { ...npc, epoch: new Date(npc.epoch).toISOString(), motion };
+  };
+  assert.deepEqual(stableNpc(joins[1].body.npcs[0]), stableNpc(ownNpc));
   assert.equal((await call(`/api/sessions/${sid}/npc`, { auth: false })).status, 401);
   const secondParticipant = await fetch(env.TEST_API_URL + '/api/participants', { method: 'POST' });
   const secondCookie = secondParticipant.headers.get('set-cookie').split(';')[0];
@@ -58,7 +65,9 @@ export async function runStageIntegration({ pool, env, token, demoId }) {
   assert.equal(crowd.npcs.length, 2);
   assert.equal(crowd.frozen, false);
   assert.deepEqual(Object.keys(crowd.npcs[0]).sort(), ['character_id', 'epoch', 'glasses_id', 'motion', 'npc_id']);
-  assert.deepEqual((await call(`/api/sessions/${sid}/npc`, { cookie })).body.npcs, [ownNpc]);
+  assert.deepEqual((await call(`/api/sessions/${sid}/npc`, { cookie })).body.npcs.map(stableNpc), [stableNpc(ownNpc)]);
+  assert.deepEqual((await pool.query('SELECT npc_motion FROM simus.participant_sessions WHERE session_id=$1 AND npc_id=$2', [sid,ownNpc.npc_id])).rows[0].npc_motion,
+    stableNpc(ownNpc).motion, 'membership route remains immutable while runtime metadata initializes');
   assert.equal((await pool.query('SELECT count(*) FROM simus.choice_records WHERE session_id=$1', [sid])).rows[0].count, '0');
   await assert.rejects(pool.query("UPDATE simus.participant_sessions SET npc_id=gen_random_uuid() WHERE session_id=$1", [sid]), /immutable/);
   const situation = await fixtureSituation(pool, sid);

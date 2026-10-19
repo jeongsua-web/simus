@@ -52,6 +52,14 @@ namespace Simus
         private float yaw = -36f;
         private float pitch = 55f;
         private float size;
+        public float FollowZoom { get; private set; } = 1f;
+
+        public void SetFollowZoom(float zoom)
+        {
+            if (float.IsNaN(zoom) || float.IsInfinity(zoom)) return;
+            FollowZoom = Mathf.Clamp(zoom, .5f, 4f);
+            if (followEnabled) size = Mathf.Max(1f, followSize / FollowZoom);
+        }
         private GUIStyle titleStyle;
         private GUIStyle noteStyle;
 
@@ -92,7 +100,7 @@ namespace Simus
             followEnabled = true;
             pitch = followPitch;
             yaw = followYaw;
-            size = followSize;
+            size = Mathf.Max(1f, followSize / FollowZoom);
             if(smoothFollowTransitions){target=transform.position+transform.forward*360f;zoomVelocity=0;lastFollowPoseTime=Time.realtimeSinceStartupAsDouble;followPoseDelta=0;}
             activeTarget = null;
             acquiring = smoothFollowTransitions;
@@ -172,7 +180,7 @@ namespace Simus
                     if (activeTarget != next)
                     {
                         followVelocity = Vector3.zero;
-                        size = Mathf.Max(1f, followSize);
+                        size = Mathf.Max(1f, followSize / FollowZoom);
                         acquiring = smoothFollowTransitions;
                         if (!smoothFollowTransitions) target = destination;
                     }
