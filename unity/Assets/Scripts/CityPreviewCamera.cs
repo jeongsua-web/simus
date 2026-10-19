@@ -22,11 +22,26 @@ namespace Simus
         public string followNpcId;
         public Simus.City.NeighborhoodLife npcSource;
         [Min(0.01f)] public float followSmoothTime = 0.25f;
+        [Tooltip("Opt-in easing for target acquisition, view rotation and zoom; existing scenes retain instant acquisition.")]
+        public bool smoothFollowTransitions;
+        [Min(.05f)] public float acquisitionSmoothTime = .6f;
+        [Min(1f)] public float acquisitionPanSpeed = 40f;
+        [Min(1f)] public float acquisitionAngularSpeed = 20f;
+        [Min(1f)] public float acquisitionZoomSpeed = 120f;
+        public bool IsTransitioning => smoothFollowTransitions && followEnabled && (acquiring || (view != null && (Quaternion.Angle(transform.rotation,Quaternion.Euler(pitch,yaw,0))>.001f || Mathf.Abs(view.orthographicSize-size)>.001f)));
+        private bool acquiring;
+        private float zoomVelocity;
+        private double lastFollowPoseTime;
+        private float followPoseDelta;
         [Min(1f)] public float followSize = 18f;
         public float followPitch = 28.85f;
         public float followYaw = -131.64f;
         public Shader occlusionShader;
         public Transform occlusionRoot;
+        [Tooltip("Scene opt-in: smoothly reveal road context through tall nearby buildings.")]
+        public bool contextBuildingFade;
+        public float contextFadeRadius = 14f;
+        [Range(0,1)] public float contextBuildingVisibility = .12f;
         [Min(0.1f)] public float revealRadius = 3.5f;
         private NpcOcclusionReveal reveal;
         public Vector3 followOffset = new Vector3(0f, 1f, 0f);
@@ -53,6 +68,7 @@ namespace Simus
             {
                 reveal = gameObject.AddComponent<NpcOcclusionReveal>();
                 reveal.Initialize(occlusionShader, occlusionRoot);
+                reveal.contextFadeEnabled=contextBuildingFade; reveal.contextRadius=contextFadeRadius; reveal.contextVisibility=contextBuildingVisibility;
             }
             Follow();
         }
@@ -77,7 +93,9 @@ namespace Simus
             pitch = followPitch;
             yaw = followYaw;
             size = followSize;
+            if(smoothFollowTransitions){target=transform.position+transform.forward*360f;zoomVelocity=0;lastFollowPoseTime=Time.realtimeSinceStartupAsDouble;followPoseDelta=0;}
             activeTarget = null;
+            acquiring = smoothFollowTransitions;
             followVelocity = Vector3.zero;
         }
 
@@ -133,6 +151,12 @@ namespace Simus
 
         private void LateUpdate()
         {
+            if(smoothFollowTransitions && followEnabled)
+            {
+                double now=Time.realtimeSinceStartupAsDouble;
+                followPoseDelta=(float)System.Math.Min(1.0/30.0,System.Math.Max(0,now-lastFollowPoseTime));
+                lastFollowPoseTime=now;
+            }
             if (followEnabled)
             {
                 Transform next = followTarget;
@@ -147,14 +171,18 @@ namespace Simus
                     var destination = next.position + followOffset;
                     if (activeTarget != next)
                     {
-                        // Snap once on acquisition, then smooth after the NPC's Update.
-                        target = destination;
                         followVelocity = Vector3.zero;
                         size = Mathf.Max(1f, followSize);
+                        acquiring = smoothFollowTransitions;
+                        if (!smoothFollowTransitions) target = destination;
                     }
-                    else
+                    if (smoothFollowTransitions || activeTarget == next)
+                    {
                         target = Vector3.SmoothDamp(target, destination, ref followVelocity,
-                            Mathf.Max(0.01f, followSmoothTime), Mathf.Infinity, Time.unscaledDeltaTime);
+                            Mathf.Max(.01f, acquiring ? acquisitionSmoothTime : followSmoothTime),
+                            acquiring ? acquisitionPanSpeed : Mathf.Infinity, smoothFollowTransitions?followPoseDelta:Time.unscaledDeltaTime);
+                        if(acquiring && Vector3.Distance(target,destination)<.05f)acquiring=false;
+                    }
                     activeTarget = next;
                 }
                 else
@@ -170,10 +198,13 @@ namespace Simus
         private void ApplyPose()
         {
             if (view == null) view = GetComponent<Camera>();
-            transform.rotation = Quaternion.Euler(pitch, yaw, 0f);
-            transform.position = target - transform.forward * 360f;
-            // Preserve a useful overview when the Game window becomes narrow.
-            view.orthographicSize = size * (followEnabled ? 1f : Mathf.Max(1f, 1.25f / view.aspect));
+            var desiredRotation=Quaternion.Euler(pitch,yaw,0);
+            bool ease=smoothFollowTransitions && followEnabled;
+            transform.rotation=ease?Quaternion.RotateTowards(transform.rotation,desiredRotation,acquisitionAngularSpeed*followPoseDelta):desiredRotation;
+            transform.position=target-transform.forward*360f;
+            float desiredSize=size*(followEnabled?1f:Mathf.Max(1f,1.25f/view.aspect));
+            view.orthographicSize=ease?Mathf.SmoothDamp(view.orthographicSize,desiredSize,ref zoomVelocity,Mathf.Max(.05f,acquisitionSmoothTime),acquisitionZoomSpeed,followPoseDelta):desiredSize;
+            if(!ease)zoomVelocity=0;
         }
 
         private void OnGUI()

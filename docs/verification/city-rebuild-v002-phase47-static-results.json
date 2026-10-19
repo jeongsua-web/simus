@@ -1,6 +1,6 @@
 {
-  "scope": "Independent static artifact checks only; PASS here does not prove Unity compile/load/Play Mode, animation, collision-free movement, camera or performance.",
-  "scene_sha256": "06f7da70f08fbd16e4075441d596ca0add45b2d72cf8b0f01d68f047db187466",
+  "scope": "Independent review of saved artifacts and reported runtime measurements bound to input hashes; this checker does not execute Unity. Visual readability and production performance acceptance require separate review.",
+  "scene_sha256": "763654d0c15377cc79ba9b0919e180e47dd20ef3be0d0202a82d714635575555",
   "layout_sha256": "3e98ea485bd92dc9c2528d0420b5999a0336f700270c0f73f7630aa214fbd105",
   "checks": [
     {
@@ -633,13 +633,38 @@
       ]
     },
     {
-      "check": "existing_69_fbx_building_hierarchies_preserved",
+      "check": "building_hierarchies_preserved_except_four_verified_layout_repairs",
       "status": "PASS",
       "evidence": {
         "baseline_git_head": "cc8df47fe73519c57936adfd0c484fb6106c7891",
         "compared": 69,
-        "modified": [],
-        "scope": "Exact serialized hierarchy, Transform, components and prefab overrides; original FBX/meta hashes protected separately. Does not replace a Unity import or physics test."
+        "modified": [
+          "B01_commercial",
+          "B31_residential",
+          "B42_residential",
+          "C11_체육관"
+        ],
+        "authorized_repair_ids": [
+          "B01",
+          "B31",
+          "B42",
+          "C11"
+        ],
+        "unauthorized_changes": [],
+        "repair_audit_current_and_passed": true,
+        "scope": "Exact serialized hierarchy comparison. Only C11/B01/B31/B42 may change to repair pre-existing bad placement; these exceptions require current-scene Unity world envelope/provenance PASS. Original FBX/meta hashes remain protected."
+      }
+    },
+    {
+      "check": "current_unity_69_fbx_envelopes_match_approved_layout",
+      "status": "PASS",
+      "evidence": {
+        "audit": "docs/verification/city-rebuild-v002-phase47-building-audit.json",
+        "status": "PASS",
+        "scene_sha256": "763654d0c15377cc79ba9b0919e180e47dd20ef3be0d0202a82d714635575555",
+        "count": 69,
+        "failed_buildings": [],
+        "scope": "Actual imported FBX renderer envelopes within 0.025m, not doorway or NavMesh access."
       }
     },
     {
@@ -651,6 +676,17 @@
       ]
     },
     {
+      "check": "generated_surfaces_have_identity_world_coordinate_hierarchy",
+      "status": "PASS",
+      "evidence": {
+        "status": "PASS",
+        "checked_transforms": 605,
+        "nonidentity": [],
+        "missing_groups": [],
+        "scope": "Identity hierarchy prerequisite for world-coordinate generated terrain/roads/walks/crossings; includes ancestors. Imported FBX transforms are excluded."
+      }
+    },
+    {
       "check": "generated_mesh_triangle_edges_below_500",
       "status": "PASS",
       "evidence": {
@@ -659,7 +695,435 @@
         "oversized": [],
         "scope": "Serialized generated geometry excluding UV-bearing FBX-derived park parts; imported/scaled world collider triangles require Unity audit"
       }
+    },
+    {
+      "check": "runtime_evidence_files_present",
+      "status": "PASS",
+      "evidence": []
+    },
+    {
+      "check": "current_scene_complete_graph_physics_support",
+      "status": "PASS",
+      "evidence": {
+        "utc": "2026-10-16T13:57:11.0351120Z",
+        "graph": {
+          "nodes": 572,
+          "edges": 597,
+          "samples": 35489,
+          "finite_width_samples": 7461,
+          "capsule_radius_m": 0.2,
+          "capsule_blocked": 0,
+          "actual_physical_bridge_hits": 665,
+          "wet_violations": 0,
+          "unsupported": 0,
+          "maximum_support_height_error_m": 0.12
+        },
+        "river_depth": {
+          "axis_samples": 86,
+          "old_flat_ground_hits_beneath_water": 0,
+          "missing_bed_hits": 0,
+          "bed_y": -2,
+          "water_y": -1.2,
+          "ground_y": -0.02,
+          "water_has_collider": false
+        },
+        "scene_sha256": "763654d0c15377cc79ba9b0919e180e47dd20ef3be0d0202a82d714635575555",
+        "scope": "Actual saved Unity scene Physics: all active 597 graph edges; river finite-width capsule and bridge-deck tests. Existing river audit height tolerances retained."
+      }
+    },
+    {
+      "check": "runtime_inputs_match_current_scene_and_sources",
+      "status": "PASS",
+      "evidence": {
+        "snapshot_status": "UNCHANGED_DURING_PLAY",
+        "file_count": 1011,
+        "changed": []
+      }
+    },
+    {
+      "check": "runtime_completed_without_reported_errors",
+      "status": "PASS",
+      "evidence": {
+        "runtimeStatus": "COMPLETE",
+        "runtimeErrors": 0,
+        "warnings": 0,
+        "largeTriangleWarnings": 0,
+        "elapsedWallSeconds": 67.38541412353516
+      }
+    },
+    {
+      "check": "four_real_round_trips_with_ground_and_collision_samples",
+      "status": "PASS",
+      "evidence": {
+        "failed_routes": [],
+        "scope": "Unity Play Mode, retained TestNpcPatrol and NpcGrounding",
+        "maximum_time_scale": 20.0,
+        "routes": [
+          {
+            "routeId": "school_commerce",
+            "startNode": "CAMPUS_PLAZA",
+            "destinationNode": "B04_ACCESS",
+            "status": "PASS",
+            "error": "",
+            "frames": 5782,
+            "waypointCount": 13,
+            "reachedWaypoints": 13,
+            "supportSamples": 5835,
+            "missingSupportSamples": 0,
+            "groundMismatchSamples": 0,
+            "buildingPenetrationSamples": 0,
+            "arrivalCount": 2,
+            "lengthMeters": 195.27236938476562,
+            "expectedRoundTripMeters": 390.54473876953125,
+            "distanceMovedMeters": 390.3333740234375,
+            "elapsedSimulationSeconds": 278.8331298828125,
+            "outboundSimulationSeconds": 139.4557342529297,
+            "speedMetersPerSecond": 1.399999976158142,
+            "maximumGroundError": 3.725290298461914e-09,
+            "roundTrip": true,
+            "startPosition": {
+              "x": 8.0,
+              "y": 0.1599999964237213,
+              "z": 115.0
+            },
+            "finalPosition": {
+              "x": 7.999333381652832,
+              "y": 0.1599999964237213,
+              "z": 114.95286560058594
+            },
+            "edgeIds": [
+              "B04_ACCESS_EDGE_S0",
+              "B04_BRANCH_S0",
+              "MAIN_SOUTH_JOIN_ZERO",
+              "X_GATE_S2",
+              "X_GATE_S1",
+              "X_GATE_S0",
+              "C_GATE_LINK_S0",
+              "C_SPINE_S0",
+              "C_SPINE_S1"
+            ],
+            "firstViolations": []
+          },
+          {
+            "routeId": "school_residential",
+            "startNode": "CAMPUS_PLAZA",
+            "destinationNode": "B16_ACCESS",
+            "status": "PASS",
+            "error": "",
+            "frames": 14698,
+            "waypointCount": 35,
+            "reachedWaypoints": 35,
+            "supportSamples": 14757,
+            "missingSupportSamples": 0,
+            "groundMismatchSamples": 0,
+            "buildingPenetrationSamples": 0,
+            "arrivalCount": 2,
+            "lengthMeters": 484.3909606933594,
+            "expectedRoundTripMeters": 968.7819213867188,
+            "distanceMovedMeters": 968.3211059570312,
+            "elapsedSimulationSeconds": 693.539306640625,
+            "outboundSimulationSeconds": 347.7100830078125,
+            "speedMetersPerSecond": 1.399999976158142,
+            "maximumGroundError": 3.725290298461914e-09,
+            "roundTrip": true,
+            "startPosition": {
+              "x": 8.0,
+              "y": 0.1599999964237213,
+              "z": 115.0
+            },
+            "finalPosition": {
+              "x": 7.975496768951416,
+              "y": 0.1599999964237213,
+              "z": 115.03245544433594
+            },
+            "edgeIds": [
+              "B16_ACCESS_EDGE_S0",
+              "B16_BRANCH_S0",
+              "R04RE01_S0",
+              "R04RE00_S1",
+              "R04RE00_S0",
+              "J02_CORNER_1_S0",
+              "J02_CORNER_2_S0",
+              "J02_CORNER_2_S1",
+              "R02RE00_S1",
+              "R02RE00_S0",
+              "BACK_NEIGHBORHOOD_S4",
+              "BACK_NEIGHBORHOOD_S3",
+              "BACK_NEIGHBORHOOD_S2",
+              "BACK_NEIGHBORHOOD_S1",
+              "BACK_NEIGHBORHOOD_S0",
+              "C_BACK_S2",
+              "C_BACK_S1",
+              "C_BACK_S0"
+            ],
+            "firstViolations": []
+          },
+          {
+            "routeId": "school_park",
+            "startNode": "CAMPUS_PLAZA",
+            "destinationNode": "PARK_REST_2",
+            "status": "PASS",
+            "error": "",
+            "frames": 6896,
+            "waypointCount": 13,
+            "reachedWaypoints": 13,
+            "supportSamples": 6949,
+            "missingSupportSamples": 0,
+            "groundMismatchSamples": 0,
+            "buildingPenetrationSamples": 0,
+            "arrivalCount": 2,
+            "lengthMeters": 228.13807678222656,
+            "expectedRoundTripMeters": 456.2761535644531,
+            "distanceMovedMeters": 456.046630859375,
+            "elapsedSimulationSeconds": 325.7733154296875,
+            "outboundSimulationSeconds": 162.87533569335938,
+            "speedMetersPerSecond": 1.399999976158142,
+            "maximumGroundError": 3.725290298461914e-09,
+            "roundTrip": true,
+            "startPosition": {
+              "x": 8.0,
+              "y": 0.1599999964237213,
+              "z": 115.0
+            },
+            "finalPosition": {
+              "x": 8.0,
+              "y": 0.1599999964237213,
+              "z": 115.0
+            },
+            "edgeIds": [
+              "REST_2_LINK_S0",
+              "PKE03_S0",
+              "PKE02_S0",
+              "PKE01_S0",
+              "PKE00_S0",
+              "PK_ENTRY_ZERO",
+              "C_PARK_S0"
+            ],
+            "firstViolations": []
+          },
+          {
+            "routeId": "residential_commerce",
+            "startNode": "B16_ACCESS",
+            "destinationNode": "B04_ACCESS",
+            "status": "PASS",
+            "error": "",
+            "frames": 12580,
+            "waypointCount": 43,
+            "reachedWaypoints": 43,
+            "supportSamples": 12635,
+            "missingSupportSamples": 0,
+            "groundMismatchSamples": 0,
+            "buildingPenetrationSamples": 0,
+            "arrivalCount": 2,
+            "lengthMeters": 405.7001647949219,
+            "expectedRoundTripMeters": 811.4003295898438,
+            "distanceMovedMeters": 811.0472412109375,
+            "elapsedSimulationSeconds": 581.023681640625,
+            "outboundSimulationSeconds": 291.11553955078125,
+            "speedMetersPerSecond": 1.399999976158142,
+            "maximumGroundError": 3.725290298461914e-09,
+            "roundTrip": true,
+            "startPosition": {
+              "x": -164.0,
+              "y": 0.1599999964237213,
+              "z": 124.3550033569336
+            },
+            "finalPosition": {
+              "x": -164.0,
+              "y": 0.1599999964237213,
+              "z": 124.3550033569336
+            },
+            "edgeIds": [
+              "B04_ACCESS_EDGE_S0",
+              "B04_BRANCH_S0",
+              "R01RE02_S3",
+              "R01RE02_S2",
+              "R01RE02_S1",
+              "R01RE02_S0",
+              "J01_CORNER_3_S2",
+              "J01_CORNER_3_S1",
+              "J01_CORNER_3_S0",
+              "R02LE02_S1",
+              "R02LE02_S0",
+              "R02LE01_S0",
+              "J02_CORNER_3_S2",
+              "J02_CORNER_3_S1",
+              "J02_CORNER_3_S0",
+              "J02_CORNER_1_S0",
+              "R04RE00_S0",
+              "R04RE00_S1",
+              "R04RE01_S0",
+              "B16_BRANCH_S0",
+              "B16_ACCESS_EDGE_S0"
+            ],
+            "firstViolations": []
+          }
+        ]
+      }
+    },
+    {
+      "check": "runtime_camera_numeric_checks_and_captures",
+      "status": "PASS",
+      "evidence": {
+        "samples": [
+          {
+            "mode": "isometric overview",
+            "status": "PASS",
+            "capture": "overview-game-playmode.png",
+            "notes": "Actual Play Mode Game camera, overviewSize260 with maximumZoom350; visual readability reviewed separately.",
+            "frames": 1,
+            "targetOffscreenFrames": 0,
+            "groundBelowFrames": 0,
+            "occludedFrames": 0,
+            "revealFrames": 0,
+            "maximumFollowCenterError": 0.0,
+            "minimumNpcY": 0.0
+          },
+          {
+            "mode": "top view",
+            "status": "PASS",
+            "capture": "top-view-game-playmode.png",
+            "notes": "",
+            "frames": 1,
+            "targetOffscreenFrames": 0,
+            "groundBelowFrames": 0,
+            "occludedFrames": 0,
+            "revealFrames": 0,
+            "maximumFollowCenterError": 0.0,
+            "minimumNpcY": 0.0
+          },
+          {
+            "mode": "moving NPC follow",
+            "status": "PASS",
+            "capture": "npc-follow-game-playmode.png",
+            "notes": "Viewport center + ground position checked while the preserved route actor moves; occlusion rays recorded alongside active reveal materials.",
+            "frames": 14660,
+            "targetOffscreenFrames": 0,
+            "groundBelowFrames": 0,
+            "occludedFrames": 350,
+            "revealFrames": 14660,
+            "maximumFollowCenterError": 0.14442244172096252,
+            "minimumNpcY": 0.03999999910593033
+          },
+          {
+            "mode": "residential apartment NPC follow",
+            "status": "PASS",
+            "capture": "npc-follow-apartment-game-playmode.png",
+            "notes": "B16 exterior approach; world-space building occlusion ray plus retained NPC reveal shader. Human visual review required for final readability.",
+            "frames": 320,
+            "targetOffscreenFrames": 0,
+            "groundBelowFrames": 0,
+            "occludedFrames": 320,
+            "revealFrames": 320,
+            "maximumFollowCenterError": 0.007016119547188282,
+            "minimumNpcY": 0.15999998152256012
+          }
+        ],
+        "scope": "Numeric checks and capture presence only; image readability/occlusion requires separate visual review."
+      }
+    },
+    {
+      "check": "measured_1_100_500_1000_moving_npc_workloads",
+      "status": "PASS",
+      "evidence": {
+        "failed_workloads": [],
+        "performance_scope": "Editor on this machine, actual FBX skinned NPC + Animator + TestNpcPatrol + NpcGrounding + graph waypoint adapter. Not a player/WebGL/production crowd benchmark; no crowd avoidance or event/backend workload.",
+        "samples": [
+          {
+            "npcCount": 1,
+            "frames": 313,
+            "activeAnimators": 1,
+            "activeGrounding": 1,
+            "activePatrols": 1,
+            "activeGraphAdapters": 1,
+            "sceneActivePatrols": 1,
+            "movingActors": 1,
+            "minimumActorMovement": 7.0258469581604,
+            "totalActorMovement": 7.0258469581604,
+            "status": "PASS: measured; no performance target asserted",
+            "measurementScope": "Uncapped batch Editor Game loop, timeScale1, explicit 1920x1080 Camera.Render each sampled frame; 2 seconds warmup + 5 seconds sampled; editor process CPU/memory include editor overhead; active NPC animation and grounding",
+            "wallSeconds": 5.01593017578125,
+            "framesPerSecond": 62.401187896728516,
+            "averageFrameMs": 16.02533531188965,
+            "p95FrameMs": 18.199920654296875,
+            "editorProcessCpuMsPerFrame": 18.310449600219727,
+            "mainThreadProfilerMeanMs": 15.93908977508545,
+            "unityAllocatedBytes": 430859648,
+            "unityReservedBytes": 705888256,
+            "processWorkingSetBytes": 192380928
+          },
+          {
+            "npcCount": 100,
+            "frames": 209,
+            "activeAnimators": 100,
+            "activeGrounding": 100,
+            "activePatrols": 100,
+            "activeGraphAdapters": 100,
+            "sceneActivePatrols": 100,
+            "movingActors": 100,
+            "minimumActorMovement": 7.01028299331665,
+            "totalActorMovement": 701.0302734375,
+            "status": "PASS: measured; no performance target asserted",
+            "measurementScope": "Uncapped batch Editor Game loop, timeScale1, explicit 1920x1080 Camera.Render each sampled frame; 2 seconds warmup + 5 seconds sampled; editor process CPU/memory include editor overhead; active NPC animation and grounding",
+            "wallSeconds": 5.011192321777344,
+            "framesPerSecond": 41.706642150878906,
+            "averageFrameMs": 23.97699737548828,
+            "p95FrameMs": 27.21405029296875,
+            "editorProcessCpuMsPerFrame": 35.951602935791016,
+            "mainThreadProfilerMeanMs": 23.97056007385254,
+            "unityAllocatedBytes": 445733717,
+            "unityReservedBytes": 706428928,
+            "processWorkingSetBytes": 206471168
+          },
+          {
+            "npcCount": 500,
+            "frames": 76,
+            "activeAnimators": 500,
+            "activeGrounding": 500,
+            "activePatrols": 500,
+            "activeGraphAdapters": 500,
+            "sceneActivePatrols": 500,
+            "movingActors": 500,
+            "minimumActorMovement": 7.0497894287109375,
+            "totalActorMovement": 3524.905517578125,
+            "status": "PASS: measured; no performance target asserted",
+            "measurementScope": "Uncapped batch Editor Game loop, timeScale1, explicit 1920x1080 Camera.Render each sampled frame; 2 seconds warmup + 5 seconds sampled; editor process CPU/memory include editor overhead; active NPC animation and grounding",
+            "wallSeconds": 5.037910461425781,
+            "framesPerSecond": 15.08561897277832,
+            "averageFrameMs": 66.28829193115234,
+            "p95FrameMs": 74.45907592773438,
+            "editorProcessCpuMsPerFrame": 112.03631591796875,
+            "mainThreadProfilerMeanMs": 66.26380157470703,
+            "unityAllocatedBytes": 506097429,
+            "unityReservedBytes": 760430592,
+            "processWorkingSetBytes": 363167744
+          },
+          {
+            "npcCount": 1000,
+            "frames": 42,
+            "activeAnimators": 1000,
+            "activeGrounding": 1000,
+            "activePatrols": 1000,
+            "activeGraphAdapters": 1000,
+            "sceneActivePatrols": 1000,
+            "movingActors": 1000,
+            "minimumActorMovement": 7.0500078201293945,
+            "totalActorMovement": 7108.33056640625,
+            "status": "PASS: measured; no performance target asserted",
+            "measurementScope": "Uncapped batch Editor Game loop, timeScale1, explicit 1920x1080 Camera.Render each sampled frame; 2 seconds warmup + 5 seconds sampled; editor process CPU/memory include editor overhead; active NPC animation and grounding",
+            "wallSeconds": 5.0884246826171875,
+            "framesPerSecond": 8.2540283203125,
+            "averageFrameMs": 121.15296936035156,
+            "p95FrameMs": 124.57656860351562,
+            "editorProcessCpuMsPerFrame": 213.3547821044922,
+            "mainThreadProfilerMeanMs": 121.1381607055664,
+            "unityAllocatedBytes": 577406287,
+            "unityReservedBytes": 872628224,
+            "processWorkingSetBytes": 586448896
+          }
+        ]
+      }
     }
   ],
-  "status": "PASS_STATIC_ONLY"
+  "status": "PASS_EVIDENCE_REVIEW"
 }

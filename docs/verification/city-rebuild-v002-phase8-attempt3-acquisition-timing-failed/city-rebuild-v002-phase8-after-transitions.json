@@ -1,0 +1,49 @@
+{
+    "scope": "Actual real-time Unity Play Mode; samples after previous LateUpdate, timeScale0 for stationary acquisition; default legacy behavior unchanged",
+    "samples": [
+        {
+            "label": "static-view-to-campus",
+            "status": "FAIL",
+            "frames": 318,
+            "seconds": 5.284210681915283,
+            "maxCameraStep": 7.948493480682373,
+            "maxPanSpeed": 522.9552001953125,
+            "maxAngularSpeed": 1392.4437255859375,
+            "maxZoomSpeed": 1568.8388671875,
+            "finalTargetError": 0.048284973949193957
+        },
+        {
+            "label": "campus-to-apartment",
+            "status": "FAIL",
+            "frames": 371,
+            "seconds": 6.174222469329834,
+            "maxCameraStep": 1.0755363702774048,
+            "maxPanSpeed": 64.5811538696289,
+            "maxAngularSpeed": 0.0,
+            "maxZoomSpeed": 0.00011452785838628188,
+            "finalTargetError": 0.049190159887075427
+        },
+        {
+            "label": "apartment-to-route-start",
+            "status": "FAIL",
+            "frames": 370,
+            "seconds": 6.150849342346191,
+            "maxCameraStep": 1.535759449005127,
+            "maxPanSpeed": 92.29484558105469,
+            "maxAngularSpeed": 0.0,
+            "maxZoomSpeed": 0.00011462631664471701,
+            "finalTargetError": 0.04818100482225418
+        },
+        {
+            "label": "route-end-to-apartment",
+            "status": "PASS",
+            "frames": 375,
+            "seconds": 6.246883392333984,
+            "maxCameraStep": 0.6620413661003113,
+            "maxPanSpeed": 40.4908332824707,
+            "maxAngularSpeed": 0.0,
+            "maxZoomSpeed": 0.0,
+            "finalTargetError": 0.049174509942531589
+        }
+    ]
+}

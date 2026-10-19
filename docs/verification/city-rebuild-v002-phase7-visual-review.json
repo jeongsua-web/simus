@@ -1,0 +1,34 @@
+{
+  "review_date_kst": "2026-10-17",
+  "scene_sha256": "763654d0c15377cc79ba9b0919e180e47dd20ef3be0d0202a82d714635575555",
+  "method": "Independent direct image inspection; not inferred from camera numeric PASS",
+  "captures": [
+    {
+      "file": "npc-follow-apartment-game-playmode.png",
+      "sha256": "3b2c3715ab3d0e70f6a09a105317a2b779b6e268c3d4322d0f8ee37a9a23b7d3"
+    },
+    {
+      "file": "npc-follow-game-playmode.png",
+      "sha256": "e52713bcd13a203617627f0cd9ec598e0425f4ebcc92f6298154ac3bbbb50566"
+    },
+    {
+      "file": "overview-game-playmode.png",
+      "sha256": "d1c99786c85b5ee3224c1a47d0336f2724d81aeaf4ef9d2619940b2e7f03f007"
+    },
+    {
+      "file": "park-game-playmode.png",
+      "sha256": "f1b33c68ac93cf8e04db3515078bcc45349d139304a2cf74070a8d03bc4be37d"
+    },
+    {
+      "file": "top-view-game-playmode.png",
+      "sha256": "225712d1aba3a9bb86dfee3b79a05d45638f288167175f444b865adbc1d9a84b"
+    }
+  ],
+  "overview": "PASS: complete city visible; no detached turning pad remains outside terrain",
+  "top_view": "PASS: overall roads, buildings, campus and eastern park readable",
+  "park": "PASS: upright sparse trees, two module/rest areas and benches visible",
+  "npc_follow": "PASS: full NPC visible on walkway",
+  "apartment_npc_visibility": "PASS: NPC visible through reveal aperture",
+  "apartment_context_readability": "FAIL: apartment occupies most of frame; surrounding streets/city context largely hidden",
+  "limits": "Still images do not establish continuous visibility at every location or target display usability."
+}

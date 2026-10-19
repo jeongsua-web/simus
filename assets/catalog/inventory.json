@@ -4559,6 +4559,41 @@
       "sha256": "32e4d66defca2a4e98325729dccb31ee4d729e0c0eb971f9c206181405647cee"
     },
     {
+      "path": "assets/library/props/city_v002_phase8_street_kit_v001/README.md",
+      "role": "support",
+      "location": "library",
+      "bytes": 2418,
+      "sha256": "4fdee6d36a9de3c1916d13a2c784885d665166c41983b39c6e968a2405e22d1d"
+    },
+    {
+      "path": "assets/library/props/city_v002_phase8_street_kit_v001/exports/phase8_street_kit.fbx",
+      "role": "export",
+      "location": "library",
+      "bytes": 53724,
+      "sha256": "0186bbf0402804322ed1ac80c6c10e97af0b679fd084529a740f052e32417cf3"
+    },
+    {
+      "path": "assets/library/props/city_v002_phase8_street_kit_v001/previews/phase8_street_kit.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 924479,
+      "sha256": "e53baa4ca4d145735afbf2001d352433de8d931c04b28cee04e7efdd82897593"
+    },
+    {
+      "path": "assets/library/props/city_v002_phase8_street_kit_v001/reports/blender-validation.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 2236,
+      "sha256": "cda48e5de18a027992c4be3404880702542cb2f3d247b441e4eddad6ff8895d2"
+    },
+    {
+      "path": "assets/library/props/city_v002_phase8_street_kit_v001/source/phase8_street_kit.blend",
+      "role": "source",
+      "location": "library",
+      "bytes": 117566,
+      "sha256": "624f3f2c9ac1e418e3ac11c8287dfc24d442ba46e7e23b75520766149c66ae84"
+    },
+    {
       "path": "assets/library/props/festival_booth_v001/README.md",
       "role": "support",
       "location": "library",
@@ -7469,6 +7504,34 @@
       "location": "unity_existing",
       "bytes": 59,
       "sha256": "997b1d6420944a0033c4cb3dd4b324a18d09ce445aa495ebdb71833dbafb1012"
+    },
+    {
+      "path": "unity/Assets/Editor/CityRebuildV002Phase8Bridge.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 3223,
+      "sha256": "d4d9588f6fc2b6ea8aab2db539654a344b4eb84986d0aa7fa8187ac815a3e039"
+    },
+    {
+      "path": "unity/Assets/Editor/CityRebuildV002Phase8Bridge.cs.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 59,
+      "sha256": "543607fb3b1e87853a9de3e5abcfe1e16600c3c53997a4f6515b64726183df5c"
+    },
+    {
+      "path": "unity/Assets/Editor/CityRebuildV002Phase8Setup.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 25821,
+      "sha256": "aa4448e857d4519008c4694795b8f673b7eb63723bab7a8c320e8fc53e8fb58f"
+    },
+    {
+      "path": "unity/Assets/Editor/CityRebuildV002Phase8Setup.cs.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 59,
+      "sha256": "66e3a944335b5a077addb7ad00166ce83ae9b7ecf10b57173d78f8b920d990fd"
     },
     {
       "path": "unity/Assets/Editor/CityRebuildV002RiverSetup.cs",
@@ -14135,6 +14198,27 @@
       "sha256": "e0ce42794f14dbd692a07bb046147d8de6951721aee81a0f7b2e7f6739ae35d9"
     },
     {
+      "path": "unity/Assets/SIMUS/Art/props/city_v002_phase8.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "4797c78bfe47c42ad44389b6835f12ea0a84bfca8bc42ca9b884bb9fd1330569"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_v002_phase8/phase8_street_kit.fbx",
+      "role": "export",
+      "location": "unity_existing",
+      "bytes": 53724,
+      "sha256": "0186bbf0402804322ed1ac80c6c10e97af0b679fd084529a740f052e32417cf3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/props/city_v002_phase8/phase8_street_kit.fbx.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 2891,
+      "sha256": "bd3ec48af7afbf6e36eff699a5d013ce83f0b81cbb687b4fc6dac58604d7a57a"
+    },
+    {
       "path": "unity/Assets/SIMUS/Art/props/festival_booth_v001.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
@@ -17855,8 +17939,8 @@
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity",
       "role": "scene",
       "location": "unity_existing",
-      "bytes": 5582560,
-      "sha256": "763654d0c15377cc79ba9b0919e180e47dd20ef3be0d0202a82d714635575555"
+      "bytes": 6149004,
+      "sha256": "4f41426a9078ff372bd31168977f074cea8128a9093a70da8ab9c0142a2dc219"
     },
     {
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity.meta",
@@ -31292,6 +31376,3289 @@
       "sha256": "677af00651e3894a6654825cbefd4551291d0465210a6be0b802ae835d96ceec"
     },
     {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "17b9b11e339c764799e7e8f521ea3c0560505949f7c179dbdc7792cdb911d1f5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "311f0e9ce8b479b692da4c82fc27d07ac11bc0735a58a84e6154a42641b37048"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Asphalt.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2228,
+      "sha256": "3658806e89e688ccb8724aa8260f4d0992d7a38700f082dd3f28f74367fed957"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Asphalt.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "8b62fc12c03235baf6c2932821f0d1b5ffa000ed3627db8b694bcb5f045e1d27"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/BlueSlate.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "3e13bf6adf55533bee8eac9597a3b7d9d727f6d4b8bc9845811a30368a7256c3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/BlueSlate.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "241fb599bc5185354b2c4ba0c238943ba81762439e2fc83ee3cefce8d9a51fce"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Commerce.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2229,
+      "sha256": "ed480e7c97cbc859d2e4302a2e246bda43be30e92a1807c98dbf8007937d72b2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Commerce.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "a8176b1e47cbe0aa482675e9934880d1ff60dcdfe11b1e105f0b0633651df464"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Cream.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2225,
+      "sha256": "d7f554f8a63e39512263ffbf619d5d34fcab4ed38f3afbb7b0e4bc6f4a2f3d08"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Cream.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "91b43799ca6b0edfb4f331e29929bf8e1d01bb6e016f191e5fa277a92520fec4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Grass.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2226,
+      "sha256": "9edc85ff06611b759e40bbebf8a69cfda00ac0fb1ebbad7dc86cd2591fedea1e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Grass.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "fdd9f1f2a09e82846dd66b4e64ceda4c35c9a8a7159a8669135731b8bbd90c41"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Lawn.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2225,
+      "sha256": "af2330b52decf69dd01496fe2227101962edac92069fd71c3fa7fe775ce7c5aa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Lawn.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "75d66ad6b10b40b52680aeb890a0fff5e367d4930a288bd83ae4ec237627fac3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Line.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2224,
+      "sha256": "32554b36bd65d4ac9953707738f6b667c8937344986fbafea2076139aa48f4ec"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Line.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "642f543a9557a48b09c9073f3cea7b3b739c3a829af648a0feb4bd01a9722259"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Paving.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2227,
+      "sha256": "9fe675ef8d6539f9a4cb6f1723241983406c9438cef5c31767bbf906b5308f25"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Paving.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "d4ab97eb59890e0f0590deddcddbb0e0723a3fa5080f493491c4ffdbc634b504"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Residential.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "a5489fafefd5fdf46eb74c436f14f611e9b39879aae96e279bb8f1f3a2d1486e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Residential.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "227e0ef48017615ccd6d703fd3c39992dc0e0b63c5ff99785494a4acf25d734d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Shrub.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2227,
+      "sha256": "8e9310748ba0b55633e5d67407c2abd70a51fb5db3be570a87e8cdac7494fcac"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Shrub.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "049ef52fe2ce78f3cef5cb901baf60b8571dd4356aa8c73900393c02202e7eac"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Terracotta.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "e5ae2b27f33671451993e461aa1d29453391e9cad303da6040b3f5f8be44a756"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Terracotta.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "3cb21529bf96c73e7dab6ca13735b87d2cb753da2582fd826e7fe88cae66101c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_000.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "80054d6d9c89fea8915782850dd87d71a7a12f13615f7f6f7256b96f69b3a608"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_000.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "4374d4fda9e8671ef2fcd1b852f0c4689d5d704ade47ada9b0a7edf46aeab3ed"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_001.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "d62a5b4871813f1ec14949866e5481fba1f1f9e9e55fd9cfd3cd0e28aefd6cbd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_001.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "485c0fd58ed394c9ce90a3de5983e5a18a28e1a2ae18c1d8e530911a434774cb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_002.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "5735bbb0ec60d4f470bfe5a2fb47873a8225a7241f6e57809337231663f97711"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_002.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "f6a585f8aaf93e644a2ec437831178e45224edfe92762c269d3634a9cc6d6750"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_003.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "019d7ff34a06e23515ea5f7fd75bd20d60441aec0ea8809de8527a7c46ddf749"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_003.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "d700bbd4210686d241150197e27a139f8ba2329a4e05c2438aca4a614fbd3313"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_004.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "a147a605f550681ce247a7d6547f5185e0b11d529bfd81dcde07069715c4859d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_004.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "545d3c2d9b1b0de73c61020b51b4ad26f1087a560d3f992dd9670b52c6fea318"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_005.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "05a7ae0319b5f5d01f0ac41468201b1a889d7289fa8d975c27f9b987994e5dff"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_005.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "d57bc3c0eade3ac2b38f868890958e7c0acd7d6422b2f5877484645abd486811"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_006.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2227,
+      "sha256": "00f419ede9e78298a8c9983533a9dc16b99977fe2fc56535dcb2a1199ee240ee"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_006.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "92b04af079f4ab2c7472ee6b6127e6547b57b6511f53315c6652cbff6b7e33fc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_007.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "d9d4acd433f8cc280796e1ffff66a53e4dd33e00b916cfb3356c32a5099bf2ec"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_007.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "75a55d5380c5491d951c8f1d0fe2cb057cfff02ffc62c114428020641674e05c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_008.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "2d1405f5078be4df92dec59018155bc5d21a3f13e0c9cd29aa00223408da09a4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_008.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "d7aed6bbe5f6868aceeaa87aedc71bf826c0a094bb1e79145cd9ebc1bdcc1266"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_009.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "75a7540b29fcdc2e30c6eea5c96a3f77e61d6db3125f009fc5711f40abd55dc6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_009.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "ee69bfb287780c74c1c912d78ac2006ecc9166f1238105c681cbcac227f03b18"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_010.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "96383feaf89eda4ccac4cf9e10cbf9b5b7951fc674cced34acdb0a55af0c31d3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_010.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "0ee8e770833fdf30f04866e037a06d4c8d9cb447dc4e05bf085fd29f9fc1868c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_011.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "591168036fa6459d512c4ff8b8c3623c728aad27222ffe322766306a3b0bb1d2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_011.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "884d4b901b07bf947e3e5ba1ed7187e65a92dd96ca517e25df9b6ce163d5ea13"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_012.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2229,
+      "sha256": "a751af65b2851c99554c578828301a94eee08cba1091e130cb3b8226a777f29c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_012.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "8a0008c40c76217446460f468aa92ecea159faf93354d483b4a2f91912bcef90"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_013.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "2d1e35aeeeb6c76d831b7fa504be5c66d5df6fb6c6cfe99cb8097caf1c8218f2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_013.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "1826a97d4df2c4bfde1e710d61b8b76e3989214ef7ad9eff3414e50fe53ed7f3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_014.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "5ac321e176cd2d4709dc6fef0634f75c9c6e6b856b5ab5bc34b44b87af9dd876"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_014.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "b65dcd7c9bfb38b762c2cfbe726e26037bdd780f482f5df265050a2bd17343fe"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_015.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "42c8ec9d1c0beac92a4282c8b160e51b4215d0dc6363e3af94306a13346dc1cf"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_015.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "0496909ef5f1804c39dc5db09dafb097a6743fa0a95441e4620632fdc9241893"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_016.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "c2ebd19b729752be55b32a09a43a0f1adfc4ddfa9aa484225bcdaec9f0983f31"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_016.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "4fae7a4f02c42c80c20882daee9dd52a0cf9cb35fa27473bc1f4b30df1bbb842"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_017.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "1ab940af5b13caaf2218172121112c1410e04fbc1da4d1879d3575bc6e868dc4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_017.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "fa32314d67085d65125a913535d8b6fef16468efcd59496bc71e5e564b9d565a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_018.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2230,
+      "sha256": "6848da146b36257103f673faab2e710323c3949abb1c9bc0064211e0f45ed2a6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_018.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "369f5b636448755ec7dcf8e01311cf5728eec3d51e8edb0f6d8c68d9f731872b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_019.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "87827f8466d5f27c26eda61875816b500a2f1e98f4fa0457472761c679f769c2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_019.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "94f2a3d207c0981a428bb63eaeefc42a4ab4b617d14aa3be9d6a2c3678c6e779"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_020.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "ff7f413b4080442eb5596a9e2c7bde065772ccb7f536aead19816aaeb3879ea2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_020.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "892af31c6b6214587b33680e188892a9ba446d053b009f1a4da816c4baa2d068"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_021.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "e4c41143623070ad19dec686dca02f04180f5fbfda63c4ab8bd3915c60c92ccb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_021.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "ef3178363039f9cd8a1106edd12a313b3dd06a05ffd68f56f8277820e7813ec1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_022.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "31f20f6915b1040d4bfc43ffb432b88244f4939721c855d5e47f8576d04fdc11"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_022.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "c46a63216fcaf77c2cfb552e1293249a54b1b6a8540e05dec3cefa1d9265681e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_023.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "a1586999251f021ed58cb09d1a43eaf1fd72319b10af30205c0b6a69b110306b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_023.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "30f0a5716352552af107f45c250a2d9f09cd98cebf0f27a4eb5fdb021ff65e7a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_024.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "93e75a3c236bf12d06c4af0f5c87d633670665708f58d8b54a7ab328d72a3a6e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_024.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "b44f78f8f6921cc4a2b5dd7952a94c355ef0286bc6c0b849eec7447f4bbd3a7f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_025.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "078ecf984af10ed22077d4479b430abfeda0f699d089bc093aebe4ccced3db14"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_025.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "5df158790a99030511f137c6fdf2885260673110380d2689c5b2321e4cc7834d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_026.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "8255085c4e5f7cf1340054f0f75ef34562aabd2f033f150fb3694bc0377ef918"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_026.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "4d1fbdba93e449b5a3e2aec27c59b881eb35993f0a261c563cddb19f58ea68d0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_027.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2230,
+      "sha256": "a1fb199a7e70197414e481800559ed05ddcf99bc1094d301f6478422bb4d4af1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_027.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "c2f4738ff845be99dcc42dbdaf0275a1f752c7ebed4621b7e6c3128f98f54582"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_028.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "6131ef64a4108401c74387e237a30fe250aaa045f4b41017a3ceb915cebbb966"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_028.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "9ac993d841974cf7a79d301aeb639f53c7b6644fa0d9d49dedd826fe8e6ffbc0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_029.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "f328a9686407ec9fe22a56f2bf87df2c588b2fce9222f63ecdabb9da6d264e40"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_029.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "fa68793673a6a1044495e3128aa58bcd1ceb5b3e36608f51aa36c686ade8d83e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_030.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "54a727aa265ac4a528c1edd6628f040480a02041344f471401ba33156fc5a4f5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_030.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "4fdfd5d046b21ddd39b75ed5729fd5aa6e70217e01f1f073cfe14ba51cf32552"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_031.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "1733e51dbabd00a8a47aff808d52b428f300f458da4b7b9b958d3f33faa64c61"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_031.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "5345e641d4dd830bf69f98e91cfe8ae98648aa8a3f39ad8e28a8f2b010b9cbdf"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_032.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "3207f3f8a4e72a79db011aaa84ad0a79469a01d85936494f61a27e615012e4a0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_032.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "9473b709b51d95202fb046c0518e6e2e143c1eabf82c1165be8b0b6502aa4718"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_033.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "0f60d0c28edda194066ecf30ffffecc2946d0cc4fc20bd782989b5f896fca319"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_033.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "7a53f8ae2dcca01ce8ad5e6c8a04ad413de4a5dbdb6a8c2dff47750953285108"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_034.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "0edff2a0317a135b1319d7e0d08dae986d90e11773386bc6b701ca3ec8586547"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_034.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "b5e124b3b77b99d88e4b2850050852b35d0d399653678874b356442e352b4548"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_035.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "d275bb010a1c0cb9a72d21ca5150a219819e6e567bfe5452bc8760224e7a17b3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_035.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "dd208f9323ea15afe269dd568eee0221eec1785fb8edec8d9a6eea9b10311442"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_036.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "e1baf000502d8ace1bdd37229303ee35a530ff8fc29467cafece3f1897c61bff"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_036.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "71ce2e488f45a6b0986b037ad85ac465e62306c429cc51a74f167fe2eb56e442"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_037.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2230,
+      "sha256": "23791e81a6fdae036604b55ac9e8b0501ff26588ea2a9a070153cd3894b9b535"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_037.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "0fc947e8067a95887e33c548797d8da5fb3829b140ffc860f4725f5a1a93ca9f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_038.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "942ca906437ccce9d3b8afe9722899c70510fd226e7293e71b64a2a330fa34be"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_038.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "97aef16719c3ba82a08e734c7a697cdc23d156931d87c41ce16870e0458cbaca"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_039.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "c0743c9641325baa5db9085db8da204d3506ee06af9d582af8fa10a48c9c16eb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_039.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "3fc50df9f3dc1216b38b0c9bca82b8fc131073d827308f00c52425d82b0a47ee"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_040.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "1202a8d4acc56fc0f7e073e71164657f179f92d600e124697fa2125c7c9e736e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_040.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "b8fab2f8e39852d0612b00b50dd7cc6163bc50638d8f7f8586c601e10564e206"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_041.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "0debd7a9a5d24f45270bc800552838132ae25a75647404bbba9a4d88e0c18fff"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_041.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "565f287a9bf0525adb346aec65c76a3dc0fb627105c1969c84dd606eb33ad31b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_042.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "04b7708a28af07ee6085ec090bedb3da20c8d8ab85a159e06de9cfdbc2ad7374"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_042.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "fc0f5e6c80252f67d47f01fb025994d3d98f49e2d1496b949066fe2291a14b62"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_043.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "ea55bd42620f8e61acf3412f14bc1f08c206f466027baf9cf77e9962fe1f33e6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_043.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "1e2715c5aca05518a792f4efe733684d667923b486e735b48abf141a8a02c3a8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_044.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "e80639230162d80b092abf4ef218a89e448aaf3571a9be64d091ea3db15cd25e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_044.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "9ac7937da38c5a201c9b47713dca1da2607fb3e20dde9b497cbe0c7499738b5b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_045.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "e65d01dc1c2f937cc92cd073461cc45c6df0cc270a2f229901a49e5059b4fb22"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_045.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "22e025a4722ed22046b7b5820ee451174b168b227f771a53037ac6e82e6fcbe5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_046.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "af30a5b9de13c2979122e500220b9c1ad8d2ffb3d316b05809fb41f772bb9c13"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_046.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "d6cf05fa4892dad61ac57e76ba5697a944fe5aeeebc930f84760d000709788e5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_047.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "65fa29802bd1ccc08dae7ee8c7b8446d5baf72a646da9e3ce39b80c35b08ccd7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_047.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "cab27acae5706b33387cdee119d496c834614ff9e151cdb291d0554da9eeadb6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_048.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "bcaf4ee406f72d12e1dbd4523d5deb15819856263e913a6f7c00e1a0b0289d02"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_048.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "94bba96f02ca3da5934498c421e82197035bd16e36ee53ce1d1a8b7ab3c69098"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_049.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "5da5d7b256fc80279379895502bc2af40b7da2332f5935833614e6136cf13804"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_049.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "23b53593d53a9d00140297a12d07036b685f58e05492a42dc014b1eae33f1640"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_050.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "06bd67560cbe4ac0765cc91967f8c4daa004343a0f6ba75768f4f13f01073c43"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_050.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "a97a5216d99fc858d4adc600f214ec01f8b9baef96ace12fed462baaf40d6713"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_051.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2230,
+      "sha256": "51787237b39addde7d13307be8319c9ad6ab911a5b2a03d77597d8f0d870c175"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_051.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "413b0aa7c7eb8008b4f7caf9ca40e5d7120c9633a9ab0c697fc0e24d88107211"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_052.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "214930f4375bda4e7c0fbff9cdb6a99b318dc6652e9d072f7716f6fad9fa40c3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_052.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "b1a17a8d631e8efb26e78dd60d5438ce20cf5dbc9f4c5d36b862102e290b097c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_053.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "2f4f2ccae182d4235b3cea1c3829d3a58f80fb34a61051c2ae99bb8e7eae949d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_053.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "bb7209d95f59abe8da3f5dda977d8da6570c72d79e82dabf230eac5713601584"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_054.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2256,
+      "sha256": "0c2aa66e097963937c4fe7e276469a9e57356665e65da02ec088736912e45006"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_054.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "2de20ecf382c2266f127d6823dfe78cad347353671f8640efc3862e2d1442823"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_055.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "67e1eee14ae09a29b9aa0dc2b1af779ed678f5c3ae82f4f19add17b85976aeaa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_055.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "e778e2e13dd4443695040b44ebb851df28a7d90790ca1c4e0a0970bdc604754c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_056.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "985cfb61427c4f3024dd877a6dd366e19e7ad196a63997424e54e96ceaec6117"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_056.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "3688acb918ce96b25792244a8a02d59115770f989cec539b9d19fffa5622cdad"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_057.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "93c86a2f08e2763747b638e4fd8e0996904dd39299bc42c6b2d390db722ae1c6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_057.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "1990fd76667a3ab8ce62b4dba56ac41d0486a91ae3c8660a3816e375e5bee286"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_058.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "80f64c63bcfb9d79aa68d7f59d479521173e0ebf5af213d2a602f9ff51b9ab7a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_058.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "696632b5b5e43cf26eb9e51b84053f90b246bcbd10ced7fb7dae018ca2230351"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_059.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "308fed6765d39dfed04392fe269ec04336b664bab70e3d368014492d44e886ee"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_059.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "e378459389f6a7acc91cef06bcfa3d413b58c25114313cbb35a8811e25e60401"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_060.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "54625991dcd1902c6f2cfa5b9812aa619ef83b20104cd825a31e362569af1fc8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_060.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "81a4ec03a98268091397ec5cc6255116d11fc8c02f612ab68e84c6a5d8d19bc0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_061.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "d05e2f38a89fafff329fd2f1a81c288ab064b55a13b6af4d29da8a4a9fa82a5c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_061.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "7822724201493826e944b3cbc3fe77145a2c4cfa494f51f3858dfa35febce1d0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_062.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "4afe55c7e3a750e2b0066685ada54ae0286a8f9fc292eb94524c82f7951dff7e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_062.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "41d153bfb874958405774caefb72cb000b8fbf295adc5c90024ef34fc2e9dd2a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_063.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "1eda60a706e315bd2b6b48720f4a24f77796ffdf1d73be27a2ca561d9d454048"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_063.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "7e051e7aac6aa0c11a23c9666d556ae2d7eaf7d9a7dcce34d39ebda96b369264"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_064.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "7db9fbbc1c99dc3170d1485f5094a784ff1c0e521ca517b210a5fb1be0e3cd6f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_064.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "4765ed87ba9e3eb3c8b6f2828dfa0d553fb50aeaf23b643857a49013ae17a169"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_065.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "6e3f948fcdc5ac9131b449d4dda2ef6f5b9ea3c7531a3167403b23a9b3cfb3c9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_065.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "9819fe8ed8d4b511a9dec1eb1db2d6ddb1fb73163f4f4e95ff73f5c9ca47afbe"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_066.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "ceb1f5076c4b01276183f292ce9f40153fdfe372c62179ba3e75dbc0021ebf41"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_066.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "583772400da0360e416c6881af1cceb8ebca639750223de2c3b130ebaad6c77d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_067.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "92be448ce3f9b62de7a80f2cc33a4c0ba35ef6d1f290535d601066e4dbb3e28d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_067.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "6a917a987b7c9cf2e220f84168d388b931f2dcb55f24dee1d4cf30c4f1906512"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_068.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "aec73947eb243f53a2b60443adea9e91b045d381eb1f8c45419aa1e897f580d5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_068.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "ee3d0c1da30f20d11ac9b5dd716a3b805d6d798f284fc4bba9293d5a2c44d1b3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_069.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "8c616d50859bf92cee8692b1a53a8c3f4b660bedd68c5dd200004f255452fac6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_069.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "ed74a6e6cd591f755134a55d73177c4861d25afaef432ed49942de0ff5893528"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_070.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "01ab478aa453d0df0d376d52d82a2ff8c1be6014edc6e08a7081c1336f5103b1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_070.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "86916cb08a21252968a6754f2452812655460f02e47d9415ed6df3c0557edba4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_071.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "9d38aba036a63bb8833f58e5983f3aafc43aa7f9682f7b11eee1e8428ace761d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_071.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "7e1aaafeacc8d5992ced533ca91691701ef9534eecbedbafa8ef019e4d1a0f61"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_072.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "544b555f04625e9e7bb6640b1e547f238c091e4e141e021aaf01b74b9ca6493f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_072.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "337fbaa691b966e9e10376e6108046bdb8ffca7a850f9d346fec2f0d57769dc0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_073.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "5015996cfaebe1884c69e0cd2a504ad6a7db50d1ff822b8fa3c5ab5f93a13ac8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_073.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "3f39e6663a5f0675f77601d42b5b42e187290443dc50afbac9c1a55b959b6672"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_074.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "ad6cadf919841591fc519a5b9d28f0a9f09876f6e404eb5e3e3295411bd2812d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_074.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "93310f78bf49818981225cbfd059e7945976b5aba65f9891b7fbd77d5979d9ae"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_075.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "a2c4b2e1b88ea84d28b0bdaf755fa6813e9c6f9c76fcb74a9915e0461fcdc760"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_075.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "f698c015673e6e402daf1f5b39aea2cb59f34f292d2bcd07a29e7e54fa396670"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_076.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "7aad87f478b24becd6b5962b61e34ca3650611594e8cc8d49a2c3109898e8f85"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_076.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "d024b2ea8f5cf4817318ec0043bef3c8c2e309693499f6f8bb4d3e5333686b16"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_077.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "b5062fee69966259b21f0adfaf5696c475942b73236f6085f3220b2f220f67d0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_077.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "2475836a549dd42ccdd6e0bf21454e54f0fc04350bb6bcda5f16204b51fc6f01"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_078.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "de029c659c919c7f33d959d93d8d93c8fa5a8618dd735e9b0d6db5fab8a4ca64"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_078.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "a421ddceaa2e30d47f51aafa70a7a5ea50dccc71711723f10894a9393115bffa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_079.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "44a2bd46b729bf369e25244b4e5037703ffda6fe425482311d258cc7f78270a9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_079.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "6a1270d94484ba761ba73cb8a3800f44fcd495079b6299e2b84abf5501bc9d50"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_080.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "8c13baea93a61004cdbcb201d6500319c1e462fe599b930689371d6178ba127e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_080.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "0fa1b60bc0a9ebf5decadc0ca3bbdd93681958ab8cb142a1f61a1683f062b171"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_081.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "c7dba1f6dd4bd96f10127d96d65d4491d2f5db1dd42d41b15320c70e009d40d6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_081.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "a23eb393d8943214528d8e35cc4ab09b79f7b2be74bfc55391970e5094e913b5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_082.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "140416f665a8ad0056a60f5c15f7ddda03b9159053961ef08bff8ccd1a3aa4f6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_082.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "4ac0f857f572cd7cc034ad21ccfcfb635acb72275716999aea0dcfa4a7cb3afc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_083.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "0e2a466243e4110784f607b3cd19e5c5ec4e87ad4d51bd63bb673fc940cf8249"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_083.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "50668392daa628975d6ae62f73918216cdf32df866cbb9693a8a9d6a335640f6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_084.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "251ada38b0a27e49aeea72b155ea3572b3e298ecd49e8aed7766678b7399c28b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_084.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "94e2c32a479aa69f16621dc3cdef60ac91455e0f4099718d1935cfc7c66631e2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_085.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "d488209332899e265f174869545e5701d384b862ea6caa4da225bb313b1de8fa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_085.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "941b11fe9047aa18abb4287a20f57afa8d5ad3854eff712af4cb9f91e62ea048"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_086.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2227,
+      "sha256": "c133880c692d77706ad82823706996950913c6e1ae382a980293e1aa64cce7a4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_086.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "75e0158f2d9cde0ad8551004524b2ec790819dfd5f2ac8ad933fdf578ddcfba8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_087.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "9b2626632414a508c846d8b8e248e0728f9b456879d1ef899722528b174fbb8d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_087.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "6efd82b88415188ecbeb02d3a20f8e46fe9a41f5b0b3933f3c6a2f418b772ccd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_088.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "20bc66cb323d3949e2c3d6f916b1bd31ce7748f87c40411be6bc255759d7de54"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_088.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "d4d98ae3558505bfef3bd89a323dbe73a20472215efcab803be91b8ec28b0899"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_089.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "8bc9b3c9802d9321e316966efcc329a8cc1c201df3bcedae364c2f40d05190a8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_089.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "942bc44e61dbde2f89a38f5d14fb895d6f0af274de5b04e9aaf49ae8712dfc43"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_090.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "2fffebea49461f0936c387b2dcf00e701f8108d0c6e7ff1a81f307cc196ee343"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_090.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "f82dff16da13f255ba7ba10026caea39f28024ee906ae532c0f2c1da594243c2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_091.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "6a3e4e1264f55573fb3a5c7c5864b12709205e932cf30ba6e4d6db5d3ee84db2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_091.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "734306ef7da7931341eb2cd6a7b5c660360211d4ba0389beceeae02fd04a6920"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_092.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2247,
+      "sha256": "96f581fb7ebe0b0af61e54f377aec5c03f279ede9c6a1c8a9996f66c8f0ada49"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_092.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "172300a799560b4b7f88a3f5fc930228b08bac8310e96d2fab216ddf891afd4a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_093.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "a8ea5d3996f4e7bd198826e903ddb137e845ca31f464bf811f4ea2c5dccf9734"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_093.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "cdbc39497940347d3348fa57326693349dc1eaec3532db69814f9571824119b5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_094.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "efa5f217c91bbcb8ce14c0b3d461cde4358cf92acd3af0bb80c4e61770266293"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_094.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "225ddd63bf8d0bc9353b1ad3f0e592c1ed53b26cb52d963a924be4f17f4cd7a2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_095.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "334341fde17ed08ad868f02e04d7db4b98d8fd39a3acae273d4fe94b071c2cfe"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_095.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "8d1b54bac5474aac8aab74006172241efeefc06b7695c3279ad1e48dda16a27c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_096.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "06cde1a2c01e942ca0e9b2a8084e463789a62171f6b4876bbfa93f81f51f8654"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_096.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "0008e270d27a6073541dd23c1b5a8d5c18dcba7fcc8354c49697579b8cc8d14e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_097.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "f7576e84810946995ab8986218ecc101653df5e00f7b98ced8f744d8841d5a83"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_097.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "f4a52f8959c55c6871effb8d3ccc861f508001a70cfb86b205fc06f9b63c5b16"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_098.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "9fade4591cae66d8f7159b6324f693ffe413acf8877d2b968167b06170e1160b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_098.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "849e3b007956a9ab8ae2d152508c967dba9e7d35de46a02a8ebc6a4560170f10"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_099.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2227,
+      "sha256": "b02acb4be9d6802df33d9c3fc2f9facc734390aff86728836afa97f1f082a0be"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_099.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "774ada59f6f62c59ac68e6c7862e6b12810c5c9b4f34c8fcc6da99f3da88ef32"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_100.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "e1e3cd00d4371444dc598e5efb53ff6e048547391c736c07dacb569be633f91a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_100.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "b13bcedaefbb1dd83935daa536dc8fe4cfbeb5f38f0846f509d8bc47b241701e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_101.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "946b5685623419bfd702ca7af83809f298a8acccef2d1918e89c6d9dc0084bf2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_101.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "327a3568c11a9af09b71faf5eba371ae58eee76552db0d0d3ec621ae3686de16"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_102.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "937ab60e41a7fd61aa65197d7a318c42874984783b534d7541567f455d8a0c43"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_102.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "594b8bc84f77ba2c1986d46d2a01510f023c1b1ca0646e5828574b75bb7173aa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_103.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "a61c35e1a7b57b82003faed91c98ad02f47bad6a19347c0feec9d2327786267e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_103.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "ec5e77f374e668a7cc0266af3282e2e3b38b22b4c28755e571e5e4af82600132"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_104.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "ba20c8aa21707237e7a7ac1a623c2b52502b7e50b69e5907605745fce6338c52"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_104.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "c52f290f7fde0e3ce0d4d1e2c21a2f0dd95c143b4889a0a32a01c8469d63663d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_105.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2247,
+      "sha256": "23d3756fb57ef8361bc9780529767bb4c93aa94f5fe681bec0ca94365ffe9d39"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_105.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "5385b38253d9d746269d4db7bd9ce81b992c565b8097d3394a4382a4233e7df1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_106.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "724e4ccbed06e2c17f68e21dd860e317b47823561d128dbc218c7b9970a9a801"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_106.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "cf28270f41bc27056344b96525e3127b1617faacbcd9dd45706b92a2f1569c00"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_107.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "7dd45c4f53945232d748b692248ec7b39ee6d7a52336e1972ccad7bb9e810093"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_107.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "016236cfd495cd6db068c1e26d5f4014775303ae3b3fae0485c6ca398110634b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_108.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "168516bab375df1e441344f43be5741e24576de9b521447ac6ad26e8b967124e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_108.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "bea949fe44a45a67b59f83f0097308ec8b4381544c0d1c412fc9ffaa87967d80"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_109.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "09499069f6ec856407f38cf859ab4e7f81f7456174b34303a04f6be5b636269e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_109.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "e62da79be706bb90e8591a1792edb8c81f919d9d499e0b98e2caa154cbe8a195"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_110.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "aaa89c91067a7afa588b4b2ac5a1650ea2f6f55576585df35cf2b7bdbe7a94de"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_110.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "07f9b8d1447a6c5c87bbc62db13a4a2e778157eb318ea13fc5b101b34ac5c2f6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_111.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "22e19906f6ee5d16518cb727da3b45690ba4fe510bf9e941e6390fdbdc165d06"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_111.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "d081a2ed478606148b7031badf0290f0f927532f97f0b65cf9479137eebf7c4d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_112.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "a81573a39303aa071492075ec9d4cb2e55a91010841b4811010254aa5e72d2d4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_112.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "2da85db5cf914bbf2ebd1c99740542822d3563a35b8a339beb3c5e7c20307ddc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_113.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2227,
+      "sha256": "c7c2c28eee7465f35773ba6abeb8fb4fec439fa4100147cbd3e728b0685cf8a6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_113.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "13f150d6c184e7ddd5f148da1b78d2f57e88e46c3b649740061f02d60f7bb6e6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_114.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "a6dd8ed7b44dc37e1cbef895b7d4b68467b2b84da45891312aa697f23b902835"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_114.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "cdf68bb5b191f5135b4e3f77c1ac75255db5a0bf07b95564ecc11124bf1c57e2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_115.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "6a61f4761c706d12559da75a283ac693b2d56f014e6b43f9b1d97579f7698066"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_115.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "77b5d05ff8e45dba00bd034c86052076958140a0a5443c9e0794a8ca5c4ba2b0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_116.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "a9949255504771b462c540072b76a5231943a85e62fe9574df55a1dac15c60de"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_116.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "0ee90676f76e87921ca8ef8ea26e238b802d611bba7b311453efcef53c2f4270"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_117.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "7c2a6ed5afaeed5e43de10876463a21810ee093cf65b746e839deea829c89029"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_117.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "33f39cf67db798d87060e5375950ba8e47dd28856e9569589981d09c04be4ce0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_118.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "87a0e64d69786dd03e5d3e7f4522c27b00ed73f3507d3a9fb5fa192db2e40d44"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_118.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "29a47b37fee76e16476938c9b0106536adb399b559c119c2288463b986b07200"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_119.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "a02ef067f15a7331d8f61e1b5a1d4ecdd75184db4bc765b65501d3a8ada956ba"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_119.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "2b1b44e9f4f0ea71d0e567579c4d6a692382699da4bb8229e6a7e253eef17d68"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_120.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2247,
+      "sha256": "c8ed360fe273a0cc214a278c1e2ab35e223080e0d1faf097f6bc107d33df7ab8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_120.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "853a65d13fad2efab6a21327f9e74e244d4f0dbae107ba6daef5659ddd17844f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_121.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "572d73124e4e9c9eec9226fab697086dbdff1881cd144d8a0ceb17d53d7dbd61"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_121.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "55d9b2d35b6d95c3ef902095093e7d2ba6edc336cb40426a21e1955873e0a5d3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_122.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "e542bb74427474bf051272c63bea23c03dbc0087eafb738ba9959dc07b4786b6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_122.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "0a054a4fe58da162af559589c246621a399410a00d3a4eb7350f4a36bf7e7bb2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_123.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "a66a9c5b92506bc09f437953ef99560d566b2aa38bbd68842b42514ed9934494"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_123.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "17b215ebce3fb39e377fdb29b9bab08346ee8ba5bb73e186771b7fedfdb17471"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_124.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "16f4605178b71476bc52d3045f11d761991910e04d73573d4b7192f065c5e939"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_124.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "89e827066f503763f4436015ebf78a98ebc9169c67351a53346413e015fda6db"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_125.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "c6e3a0b459732d1b8088d0063a2e24bbf5579d035f19b522443e60d16822855f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_125.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "1a9d6a03a204d2dcdbfb27f20baef8cfbc508c741665e3447f37dd0d54286f5b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_126.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "9bb3bc0044383066138ad30a34d02aec1ca9c27532656604f3b950a02faedb86"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_126.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "e33a6d4a94bc1ba56b846b662be3ccc2ab6d81d5ab4e8e7868681bacd2bd140f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_127.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2227,
+      "sha256": "52abc6e53a236ced3eca035132914176046261071cb38c650b331f970b2e12f9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_127.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "559c7451951dc7f66a7874978509f8f659d024432742b993d42a0983b13076d9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_128.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "866a5cdef5e822cb07ff9af46cda3b1d2240196bb53d576328bb14751dca935c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_128.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "916b44b83c407c214bc423999d7bf62962e4d6284ca34adff4b8de38f4e439be"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_129.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "076d16ae59aaa777f2748057846a1ffe09bb7c0e2367844e71267b39ddd744bb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_129.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "65351b0f8f6648cd4693dc72fd7fff3ccd73ea445aab3a216e2c80cc035d176e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_130.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "86fbc1c6aef359c40399bf4f5b50834e8f77cf188edfd2e32a7e883a62ad4d7d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_130.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "801bc9db8c8e89dd4444a74d6694326f802cf832dda0d6b957ab3b1df53b7759"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_131.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2234,
+      "sha256": "6b89aafca41c6a33d45f898038bb687ca1d4ec256aa8ea24f1af0c664d914835"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_131.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "59759b573daed9b40deadce63894e91d4d85783d03544e6da418e8c950f56742"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_132.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2247,
+      "sha256": "4a5a84567ed00a8c9eb614b6ee30fd9eb9a804c3f1eaa34116221e569a8ff1c6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_132.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "ce19b777bb3effa7d550d97719056d714c2c4ac901c8244e13ee454cb169f0c9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_133.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "c32d5d72813a92480b2ab26a4766a7baf5fd3b2c9f682c11113076e063fb3af9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_133.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "ed861ca4f428d7e262bcc6622490c034295e5753687b408aef505ac1a070eaf8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_134.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "fdcc24d35af4a74ef43cf82a6d3596fbe6a93691157f3633b48bdfe09d32e92d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_134.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "f89c1984b1f671744bc235563ebba72e5d64111807d32b73a8f46f76fac3a889"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_135.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "e41194f37176da3fde3a5862bb69f204323b210b4d8bace618c735fe81aba01d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_135.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "95e06d06eee289bde76037ea59b924f82525b4d2c484d5f860da2e75019d57ff"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_136.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "813e2ac803b76a033a0b0e170afc60d4e9ef3b7a3b42281107c8735133c294aa"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_136.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "e0822752b7269c8d912d17592406fcb2a9b7e542b0eff427f64c5fc71c3576d4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_137.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "6f3fe55ae4c5289058d6ac7f1d8a1bca81fa30bf48f9a83c28ef96b27a286f60"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_137.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "93db79556328cd31f7ffd50891cf153f0a83a867a7e7d9b08951e324f6c679dd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_138.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "636e324ff8a387947a9d800e8aa18da7d13a50b3fc059d732b84f4c40cddda24"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_138.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "82e6e3fb35797b867bb7e6fac984682633f70fe1d7b070f711a6242286a7b001"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_139.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "e17afc6a0b56031ad8ff7d4a6ddad1e40641537e95867c58cb1fb7aec8b4798c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_139.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "6f189e5066b78b9567059fed24e3adcddb7075d188f0d554fe3f3fc965e10d78"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_140.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "0de4fa7afd7eb757860dbad3fbd765c3996d688ad3fa93f13166cdb32e6c41c4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_140.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "d81a2799133968b097e22d82b818ea94f17b59ab1d7750254f12e9a0c5dfebd2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_141.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "aa4f5137d424bc56d5807224dc99f66beaca89ecf1ac4ff0966c99d3800fb0dc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_141.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "10de2f3d6227b80d9ab41c829b3d8f0b71e4512066655010c8b044dd00fa7e41"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_142.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "e4cc46b0a8e9254af36ab038585d610577a3c83fe700a6127d7c4b15c02e5eb5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_142.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "f972d185cb42ebd90f458a020feafdc34e3e6dd3982ae7bd3801f3b5c52d0600"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_143.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2227,
+      "sha256": "f340f0b2577faafecf624942ef76226405ffcc5faedeb8a0089e97411580f120"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_143.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "5729db97f17ce2c3e4f9dfee59de6fd3ec528ca74e40d4a9033bc849456cbcf0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_144.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "9335480e09573dada9eaeb7db65abe8d8316f3169be2f8540fae25e389b1959d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_144.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "427390db6d8ef1d62407595b985f7564bb6df1846a361d824b21771bfd7ba268"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_145.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "3d5234aed1dad7bd9fbcce5b4f0485708d4a6fad444e0d90f793463ff20d5453"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_145.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "965090792fb0d22cf7add5cfe9df6c81ea296266b970f3a3f1001c0dd648e348"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_146.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "77e4c0b41832aea5c64edf915d22d649a070599a9d122dc69effe4c282e68bfd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_146.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "fcda935a685265ff799f77ac6420eaf8a96a3ffa76134759b99b997f752c007e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_147.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2247,
+      "sha256": "f6431f011c82f3be1c428bf2aa983e0f89fc43ed0633d53b69d5ee9558572a1e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_147.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "3996e908a157ca220649077f59715c448fb858f22bc97da315aaa0b048a7af0a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_148.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "2c90f5e943c364f7dff8f72b197a8a0da7168575f5840662d39dbb3c9cbe173b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_148.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "51446ab6d9aadde990d2e6481566fe267c378ead6023c6478d8fa9e6027f13a6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_149.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "5373b21cc0d3814d38683199f0325c3d11af57ec134add510d8330644da30c56"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_149.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "f8bfb0fa6f293d49841f7941a03309b5afd73736b807279c5e92425ee7cfdcbe"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_150.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "16934ee4dfc363e9dccc62ad62436734478ff3ca0d0268cf0d529139ece911e2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_150.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "6f459129c536846aa5fee6ce7e68530d58614e7d6fc81e17a13723ce53be5911"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_151.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "ffda88ac88ce2dbf3b8bf73f3fecb0dbb0b5c9fed9c790fd110c51142b674cb2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_151.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "8ab4c2041cd77c945afad067d6800a7b3bd3edf8bda66ff02fe7ed4752c4fb92"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_152.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "c531abe306a5557361c6360883f3d0f52c49d4ca64223fb169bffc9c13041926"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_152.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "e546fbfb7541a3556a19a3cc40325cfdd261a45fcc3afa1fe0866089d7f6bee6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_153.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "c6de5d82333c641001d36cfbfcc034a0306288810c7a89f165143a12c5b7a82e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_153.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "00745c317b9f86a5e6ee9b2f763c9ac41c959993c5aba485a3fb9dbc5c6a7954"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_154.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2227,
+      "sha256": "c841b0432c92f57a2244d3139ce8901ca8c77326f3063fe61ef2388165db0984"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_154.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "0bfaf0dd800bad4a47467119d3207ee55123e2dc3a39588c16a574f2fe8e9797"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_155.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "ca9a70734a326f862c281837a72372df2f9cb355f595c96239446eb293f69d5d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_155.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "d3612690a03e7581840e98ce33a7e3505cd7b675bbaa02c0f56b4885a24b8f39"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_156.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "508370d47986f4e08b768f9c382f5e4a38cab871f21b6757b643cc1a2d054d34"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_156.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "9162546ac2e81ad8a2c641389f261ef1b8d9c4d480c1da9ad4fd8d5b28618abc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_157.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "6787b5cbf5de99af66aa86e32edff8fc7dfa3a784c2826fb4bbcd9ee756d0f10"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_157.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "bdab7b1a3ee65b9ec571a75380f5f6fd618ee2664b5ed57fbd702f267810148f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_158.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "7992ba64c9b23defa58183f5424baf1bf47fba597b10ffc6204858bda5953521"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_158.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "9a11175408e0b04a2b5d45c7f21d4fac64718dcb620bb90b71ecb19030c17c0b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_159.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "3e5021d7453871d07ebd54176b330467451b1948034cb554469bc5d72ca14fb8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_159.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "5f5887db175a2c688a9e7ca0efb03b32548290aac59698f3f4d8754eeb24bd8d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_160.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2247,
+      "sha256": "43a9c980495f5d911bd2cd6f3a5e50117f9f0442642a917216d75f75c6f5f10e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_160.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "41340d0c292ad728f30986eae02ace0e99bf373c49f4f517569797cda5a26fd6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_161.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "c625f9b4c5f221908f42ca9ebb0184835f1af726eb97b9ae90f699f9c61db5d8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_161.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "91e73f57c7ee2545692565aee4087a9bf870a09ca845184e5feb7a9f0cbaa5bd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_162.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "395f2ed7143a4d57859900cfe9e908f064f7ba481072e4c6c76ab40f30b422f6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_162.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "1af9bacf8973f8bb2baebd0c25fd17660c5ce7d492d20f1b8cb0943d500d7f1e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_163.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "3a197f46117bed1a464fd641daf0cd4b79d93f07a88dc20c1ffae04aba3fc1f2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_163.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "78137413b385cda6d4137a9008d33aee45646407818e8a12f9879220edc34ad4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_164.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "3bd325429b498ee79b0af951c0f365c184a3fe78b0c46ac02700629a2ef83c5f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_164.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "bfd0a8ead7ce7600c8db79eda07c827b238fce64556201732104768dccbb66dd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_165.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "2abff39ee1df04a792606f387a9ec63837365c2454828d5182280f8c337a1c3c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_165.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "347e183762bcf84f5ebac91d0b59375db6019fb69438acf05caf392a7ef16e3c"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_166.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "f4fd2987fe3fb3f6119aa2d9add2a2bf57ae0b63ffa228c381351df9fc06386b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_166.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "cee1464d5dee14a1f1fdc5282aba773b3bc864efc299ad771923c09039d04d63"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_167.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "48c3c6048f0f9cef3c72746f98b6014366ae46ebeedcd3f1d2ef00b9d898bc4f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_167.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "41415d5d96a221f0ff0eb635e04988361bc329e240c3c35dacfd202323989b29"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_168.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "6ba7f9b717d7e5312c1255a7ead3085cb428d6a9eaa1510e711624b640ad78ce"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_168.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "19fde38f454c839cba434b34438e748d019179c47521623b4d76b8147499c7ff"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_169.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "1872e4e8b0ec6ba901fd05c27294033cb9361ff7ede6e4563c5ca23061d18879"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_169.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "934bb3ea2ff2f2069ecf86b7eb9fc6bc6467072faf39263ed05993e7424c27b6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_170.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "ec3a22305637f7a90d8b66c12c766232ee8538eb6e5bbac5274bba5cc20aa3ed"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_170.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "6957e835bd93cbd2d949882ed9b98f5a91e84bf80e17a2339305c5d32e5372a6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_171.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "b41f9ab8e7dc3b50f2dd2565dbac4ed8731647ac72df76ca5e8e6063048979f8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_171.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "7a28949dd0f295e223466be23ae5ca78fba7bc7f1d3dcc16e91ee5a8789b60a9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_172.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "2f75b971b0514bae330e0d5700ffa3eaa0098826edf9b35b1251d7f4b5265395"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_172.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "62561e54236c650d15c9f9b54da81c85b80843e851b0ca4c0ecac52d7935d483"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_173.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "85a7dabbc48b40ee38fb6aa796825d6cec456ba0f8724dc156315fa6cb18e032"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_173.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "387ebbda22077e1bc6bebd9d45391a41392c74207421eb1b75ef3b0c82cb3ad5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_174.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2229,
+      "sha256": "46515bcc8b183caea48a3305a061d18ad318ce860d4cf1efbd785782fcdef9a6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_174.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "000d89f0a3353e87e2036ada6aee0782110e7bac8b7b479fe16a5451a66eb58a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_175.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2230,
+      "sha256": "3d29aee0eb2a539f8d01488ff663f95cf18071686fdd89bcceda38868fe5875b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_175.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "58b7df6bf30e68e9c40bce95f856fa9604a80094974ed2cf34b81a2f27a88ab6"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_176.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "2ccc7aedf1c231128d5ba72fab48b9fbccfba82a06a97643cc5d3109683342e8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_176.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "f867bf06c39098191f1f5bc99eefaddee5a214b4614845e4f97e6ce386b52582"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_177.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "f422e01d6c6510ec5c0f773b9335af30ff3412ad0d03cf630940496d72c03e09"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_177.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "f62a32bbdf0a26e89792dafe8b00a5a72d04338865036fd8fd107eddfdef8c3d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_178.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "bdea7018dcf4cd426ce7e4fc652de6f5cf1eba32ad0212a0debc160da30e3797"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_178.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "d6df1f952fdc076c82352340476415a689d403819a843406bf7ef6e28b3f5967"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_179.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2253,
+      "sha256": "963c3172d67d9a2dd7549273d49126acc390b401089ebfe1cac035f34b8e6891"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_179.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "98feb949098198e0aec68ad5a986bae4d6712432d9b2f672a29fb6b38d486936"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_180.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "2267d97decdbee7f0cf5fecf69c5dff83c313c2f5137a6297d645bb7159aae8d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_180.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "5a6f0c102ad9e0c5501cb0dd639094e3c9439900202e0a0fab8c1bf05be2de01"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_181.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "13be6248061d696898433d65b0bd20abfaf9391dfe74163de3989a37ded42509"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_181.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "6ed78e0c1ed9d7cf25ecbc6bfdfa321c7e54949a83c9aadcf023e5fa8e24cd9f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_182.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "48781679143c2e5f4f8f2202be0f1169491bf4ef0f0ac062600c0f699a709470"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_182.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "c08eb87b66c969a8d0d89280760f9f22d98320aaf862ec5d21df670fedbc5618"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_183.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "221f89b05bd2825a1be1d5d860994acc13716892d86dca73e049a69a8a7543f8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_183.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "44beff3682cf65fd4d1d032dbfaa258ed496c7353787954bd3a71446a7a573c9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_184.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "d439deedcaa9d5b0995859da97e2ba36a3797f8421154423ec78efd125829d6f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_184.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "914ed0ab5990c47b66782daca0797186e7b91102ea71ac043b13ff5cc3e93bd7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_185.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "0e7392adc623b023f5c8d033317ba5c120f317983a95bf3623f2075335ec86ec"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_185.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "6419fa3958710df11b19e916a5ba245a644b2a54e78046f5ee0c9436ee47e3f0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_186.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "8603b7873966d5a56c63a7c5d930a9cd9f1c6a4dd9b1498fea9ebbe6cf966405"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_186.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "f00e76bbd535feb56045465f9b6468e8f98bb1a386d4f6e8cd37248a372bdb26"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_187.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "bed4f0c5d2bd287944b0454132ed8f072f7541ad8a63d3fe0dd0facd0664e17d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_187.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "4233c4fcbad25547d2d77906f5bb20ce268e7f8333da8527f8448277eddef3d9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_188.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "5ce9dcb8a9a00c14987bcdfa2758c6ad44e08a383adba43b3658d9aef358164e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_188.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "7ac2c6d2200a05a4a39c16adb3eaba1765c4469b5f191b72baf68976f0cab452"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_189.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "c38e1d0abd8b70cad540b864bb1cd8989c19869ad2ce96aa48134a0fbcb6b2cf"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_189.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "46fcf6e7f5db2a3f9d139df849015aa3803271c99075eedc6e84223d7728e32b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_190.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "567aab44022ede7697fefbe3364c740017bb2f2852a8a5d8878a25a1b275ee5e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_190.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "1bc0b54868f403baa80eb8eccddea81d822ac75af188303bee9adc6ccddc65d1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_191.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "be4def49123b6233e3018cc4030465634340a0b1780629b2840e95798cfc1e3d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_191.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "41a7f42d171cabdc6e72371c48817f2ac6bbce68570cd5d86c25690f22917da3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_192.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "10b5eac9c570314830c8383bdbbda100820e1f639c17b7ea2f87460ebe8edf88"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_192.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "8cacb8cab41c98f25b5403970306380ce155dae40b21a364b04c9315f66848a9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_193.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "5184248fe28ad05a345b521f87e6b6db757cbb4a67a705fecfcc4a47bd60b193"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_193.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "4cf222ce33a1041ac59de037abc1418c4bf49bfbf5b7ac9e7677556bf20e5120"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_194.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "0f19e1db69139a9d69a922c35da186e69260f535475ae9eed254a7e0481b2659"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_194.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "53b5cbb7723826d592a03ffaeebf8372b4629412ef594bef05b7750033207aee"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_195.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2238,
+      "sha256": "a20d96a6fb6d0d9b8a5f6de3b87a51c63660b2c0dc17ee065cfd668e2d1c9756"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_195.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "96f30b220af623b8adb6efff34b31b888a4dff5fb4fdaa10bbb9795ca0f87070"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_196.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2232,
+      "sha256": "7bdbe839e96e096fef42b41209ade35bac18b1314a1c340087d494c920266231"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_196.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "9d3e56aae729074deed67d995c7306dcbe26811de6cb4f53af2720d5dd4ef92f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_197.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "81f4ff4c2b00c2dc1210701f45247498c5989b66b84c32ab1bfca4d5d7314a34"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_197.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "d23dfe8822db00d6abfde3114df61f443b9f0a3319c879cae6ed8b38dd0edcc4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_198.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "9009b93584dfec52e5b73ae2747433df2e34cb8294278abe9721a2d993b365f4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_198.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "de3524c2ac640886e91946cc61a55b46836901f6758b9a72665ce247119e78ed"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_199.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "ce5a2c94e749dfd82ebfc19e024b4390850441911d96464ea483d666633d3499"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_199.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "41e15a9751d22087e245fb72eb907103cacb7f88f659f07ee1e900b3c0c6723f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_200.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "5326760057011dfc3ec72f048573a82711bb5208f71600da694c4e910206fb8e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_200.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "6c2fb6c00b289af77a81c5d49288a5b41e99c106f06e2498c1fd6128ec344130"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_201.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2234,
+      "sha256": "c81a42b0f8525fd2ca9009fa4e0a4ab88bb71b403730c769caeebdc0304374eb"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_201.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "0e19d711e259a984a13d8934dcb26382dc45a33f94affbc968a661e2d3fe499e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_202.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2234,
+      "sha256": "42e02f42ab4ce737f0f74bef8ffc609bc1589040d16c58720d60a3c767573602"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_202.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "45f84031c09095ecf4bef92444c5bdf0b0bd1ba87f1701df715c39cfaa43f7dc"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_203.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "802c4ac811686087195cf8818054db145429d8af7ec86899983ed23f4a3a36b4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_203.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "b5ced3988001eb8557afc9de40b671038657bd9990a7c1e8b9143b1834eebc9f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_204.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "b3221c4189194d260655ae4914d95b4510789912d971f8981868add91d77a29a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_204.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "8605b76082098eb499f28a5bc2c919dd543ee7993e8728570a567d8d72edaf4b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_205.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2234,
+      "sha256": "d369f253c0873627531a1d5b25d740e17ef4c1bc6e7b489aee860fcabf8ce3b1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_205.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "c4ca05c145316f3f0d2580e20ea66bb3af99b920e9b8b951b02199d25365a8a7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_206.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "7e1e29e37f05cec1ded29d2143c41b349fa657deb5171abfa81f9bf2b930f9b4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_206.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "eba827fae7da5d185e99f85fc4d96d4f4e22c513f01fe180f2f7308b2ba52cf3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_207.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "672aa8ac0ffb55edaaa468ac39a3b6563e8d5238d88f1abf8cc8f15ab82000d2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_207.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "a2b5b7e64f76a75a26c50d44a0a6ba5f013aeab6a27aa0371ad335815640efb8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_208.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2231,
+      "sha256": "42e4732bbe81583c9fa796ec05df94f44eb376ec633bb0cb703e8559e498e30f"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_208.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "2c8c64fdcb0eae6f4fb21a52bbc47a024332897ae6bf730e123d1343eb5b2258"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_209.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2233,
+      "sha256": "f9b91a06414f7f3805012c57b408483bc8a5a088069415fd8491edc18e60f6dd"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_209.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "2e3e9007b799ba1fc12d1c5f8899d04eafbcfbf7cfd355b2221b28a6c3b9dcf4"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_210.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2234,
+      "sha256": "5e4fdd8b3d33267dbbcb1261b5cf19d14208bd84123b7e400072fbeb3a3ec28d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Variant_210.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "b29a1982ed0ae3c26a611df45d06ec584b3391d6badc469881742839c449da05"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Wood.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2225,
+      "sha256": "436645590a9f192a9e47ba145fbb6f7e86fe7c9efb3d364b4401420ba8984aa3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Wood.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "d55d40d7bc78db50dd99c6e5988542f3d3f72b3c0ee223fceec39a6f6b6b4594"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Yellow.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2227,
+      "sha256": "f660933a9376c562f39414b18b86feaee9efa8d40202b233a8f08ae011b8e208"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/materials/Yellow.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "14d1f3eaae7c844c5bdb31d0d1a6bff87d0f9d0772919469bf4265c4ac0d6dd1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/meshes.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "595deb508f9535cea5f0f93049898d0c700cfa4760c5464836728476cc37fa25"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/meshes/Asphalt.asset",
+      "role": "support",
+      "location": "unity_existing",
+      "bytes": 21400,
+      "sha256": "b310fede1e41a0ac24d7b61e55b30a926eb552feb41ff2d1b9c24303316ae731"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/meshes/Asphalt.asset.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "566ca62ae1e7a555091c2979ffc9588075e553048739d7a023f2fc613a204c76"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/meshes/BlueSlate.asset",
+      "role": "support",
+      "location": "unity_existing",
+      "bytes": 7492,
+      "sha256": "e4cfd2683677e03db30ac2daaa135bb3a5b6157b8d590ab2705d0fd9145f1732"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/meshes/BlueSlate.asset.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "9611718ddc11568b6c7605138cb62651490594d6ba706b5ed485e754313e2958"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/meshes/Commerce.asset",
+      "role": "support",
+      "location": "unity_existing",
+      "bytes": 3728,
+      "sha256": "ce41ddd306dc3770c4b03bb31a4ad323513a8cb38ee2ddf483a960e2125f8eb5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/meshes/Commerce.asset.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "880a19706bf5b048c6810558af46b434daab96f952f326814f08556723f749e7"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/meshes/Cream.asset",
+      "role": "support",
+      "location": "unity_existing",
+      "bytes": 25084,
+      "sha256": "0bfa3095ed3e8548fc7ec2d693b35a54e72dce3740d4f08a6f6dc0b09ceb88f1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/meshes/Cream.asset.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "f548df4a40be67fa6178f31838a922139af249545f65517f5e7ed2fc56adc7a9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/meshes/Lawn.asset",
+      "role": "support",
+      "location": "unity_existing",
+      "bytes": 25509,
+      "sha256": "321ddf0488b85c0910e74ef38bfe2bcbdfbf67b39685b6d149e3da938e519dc2"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/meshes/Lawn.asset.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "fd75c69eaf92fc11a0f7aa94e5f28c61c4f94ab86e4d316e33044f5857442b51"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/meshes/Line.asset",
+      "role": "support",
+      "location": "unity_existing",
+      "bytes": 327494,
+      "sha256": "0798f238dd91089f3e670dd2ef77099e3a3435739ccb9b418075f044b2c1c9f8"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/meshes/Line.asset.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "a32c5e7dd13138d2238e784b28e814d6a58ddb644363d5ed7e8dbf8d0ace7f8e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/meshes/Paving.asset",
+      "role": "support",
+      "location": "unity_existing",
+      "bytes": 11107,
+      "sha256": "7a44114548c294caa842506d609fe719292bc4ade8c147097790bae059df2f81"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/meshes/Paving.asset.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "064aa76d82939f9bc84d488de6d0e0e50e788a070401993635c6eb3607f7c05e"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/meshes/Residential.asset",
+      "role": "support",
+      "location": "unity_existing",
+      "bytes": 3990,
+      "sha256": "0f59e34870bc78eae7f055abfdd20dcc73b8276e338367e071c3d030c5a610e1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/meshes/Residential.asset.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "626522bd8ae68266dc961e7c0a68c9719a49b36b365a7dabf99a964f5c7eb1df"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/meshes/Yellow.asset",
+      "role": "support",
+      "location": "unity_existing",
+      "bytes": 57711,
+      "sha256": "5eef898ac80d749c004a8b67d7d23c1021df86a6a188886fe19491bef5de2478"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/meshes/Yellow.asset.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "2cb983af78ba77edc5bfe3b3184aa145dfd60670108e382fa3f333f671826c63"
+    },
+    {
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/river_materials.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
@@ -31978,6 +35345,20 @@
       "sha256": "9fceddcb272f3ef2722f2ea5d704ed3963e025e4d3122dfd762c43ac87550140"
     },
     {
+      "path": "unity/Assets/SIMUS/Tests/Editor/Phase8CameraTests.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 4176,
+      "sha256": "c5b6d96039f1c89b764571fdd4edd8b23afd43f102dd3d4dd7698a7e0ef93b37"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Tests/Editor/Phase8CameraTests.cs.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 59,
+      "sha256": "d97b8afbd62858dbe9ed12d8123078800c05ac974a65a29c9ec93e7c74f6b99f"
+    },
+    {
       "path": "unity/Assets/SIMUS/Tests/Editor/SIMUS.City.Tests.asmdef",
       "role": "support",
       "location": "unity_existing",
@@ -32023,8 +35404,8 @@
       "path": "unity/Assets/Scripts/CityPreviewCamera.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 7972,
-      "sha256": "2ffe42cd38b85c6f7b810dbb4a95e243629d2daa3497a73a820e6dfa2e995f1a"
+      "bytes": 10378,
+      "sha256": "781ad7e1f165bc74d43411727978fd069ddda6ed7d0e232626443dd52abeb2dd"
     },
     {
       "path": "unity/Assets/Scripts/CityPreviewCamera.cs.meta",
@@ -32088,6 +35469,20 @@
       "location": "unity_existing",
       "bytes": 59,
       "sha256": "f6176332bbedff5e84e25e47f3797b7fc8db6fafe2ed237c0f992ddf97eb7ff2"
+    },
+    {
+      "path": "unity/Assets/Scripts/CityV002Phase8Verification.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 16637,
+      "sha256": "8f9b97ed88c617217f596432b7187c39e5565b99852deaa4db9f88d78a147e4d"
+    },
+    {
+      "path": "unity/Assets/Scripts/CityV002Phase8Verification.cs.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 59,
+      "sha256": "102862b38accb3de5d9f4a855440adb411bf9b84364ef5a1e7e3d18d815a115b"
     },
     {
       "path": "unity/Assets/Scripts/CityV002RiverArea.cs",
@@ -32177,8 +35572,8 @@
       "path": "unity/Assets/Scripts/NpcOcclusionReveal.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 4570,
-      "sha256": "b5e4b932b2b675253c596e53590e1a72530be0b5d1afa1a9b9c3811aa32fd109"
+      "bytes": 7971,
+      "sha256": "0487fc6eb6ce4e5fb15e939e3f73ccfd5df54ef148bde9705f1ad532ff9aad05"
     },
     {
       "path": "unity/Assets/Scripts/NpcOcclusionReveal.cs.meta",
@@ -32254,8 +35649,8 @@
       "path": "unity/Assets/Shaders/NpcReveal.shader",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 2237,
-      "sha256": "ce9db1b0c453583a0270e1af0153381fc9cccec10b2a69d666e0bd65f87a90c7"
+      "bytes": 2604,
+      "sha256": "ceb8f5defde16e9f6a09d6f86a603cb22c262e06b984cc365e1edb7f797784fe"
     },
     {
       "path": "unity/Assets/Shaders/NpcReveal.shader.meta",
@@ -32987,6 +36382,13 @@
     }
   ],
   "identical_content_groups": [
+    {
+      "sha256": "0186bbf0402804322ed1ac80c6c10e97af0b679fd084529a740f052e32417cf3",
+      "paths": [
+        "assets/library/props/city_v002_phase8_street_kit_v001/exports/phase8_street_kit.fbx",
+        "unity/Assets/SIMUS/Art/props/city_v002_phase8/phase8_street_kit.fbx"
+      ]
+    },
     {
       "sha256": "08f20b05d932f1b31b22dc7d6cfd507477cdf9c6d902b96cd4d90c3e0c77c486",
       "paths": [

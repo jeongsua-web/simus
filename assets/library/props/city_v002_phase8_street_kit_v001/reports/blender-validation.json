@@ -1,0 +1,106 @@
+{
+  "blender_version": "5.2.2 LTS",
+  "source_reopen_meshes": [
+    "Phase8_Bench",
+    "Phase8_Planter",
+    "Phase8_Streetlamp"
+  ],
+  "fbx_sha256": "0186bbf0402804322ed1ac80c6c10e97af0b679fd084529a740f052e32417cf3",
+  "objects": [
+    {
+      "name": "Phase8_Bench",
+      "bounds_min_xyz": [
+        -1.0,
+        -0.3499999940395355,
+        -5.702224470383044e-08
+      ],
+      "bounds_max_xyz": [
+        1.0,
+        0.35000017285346985,
+        0.8500000834465027
+      ],
+      "dimensions_xyz": [
+        2.0,
+        0.7000001668930054,
+        0.8500001404687474
+      ],
+      "vertices": 408,
+      "triangles": 748,
+      "materials": [
+        "Phase8_DarkMetal",
+        "Phase8_HoneyWood"
+      ],
+      "object_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "finite_bounds": true
+    },
+    {
+      "name": "Phase8_Planter",
+      "bounds_min_xyz": [
+        -0.9000000357627869,
+        -0.3500000238418579,
+        -5.702224470383044e-08
+      ],
+      "bounds_max_xyz": [
+        0.9000000357627869,
+        0.35000014305114746,
+        0.8100000619888306
+      ],
+      "dimensions_xyz": [
+        1.8000000715255737,
+        0.7000001668930054,
+        0.8100001190110753
+      ],
+      "vertices": 224,
+      "triangles": 392,
+      "materials": [
+        "Phase8_WarmStone",
+        "Phase8_Soil",
+        "Phase8_LeafLight",
+        "Phase8_Leaf",
+        "Phase8_FlowerCream",
+        "Phase8_FlowerCoral"
+      ],
+      "object_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "finite_bounds": true
+    },
+    {
+      "name": "Phase8_Streetlamp",
+      "bounds_min_xyz": [
+        -0.19999998807907104,
+        -0.19999998807907104,
+        -3.258413627804657e-08
+      ],
+      "bounds_max_xyz": [
+        0.19999998807907104,
+        0.20000071823596954,
+        4.5
+      ],
+      "dimensions_xyz": [
+        0.3999999761581421,
+        0.4000007063150406,
+        4.500000032584136
+      ],
+      "vertices": 208,
+      "triangles": 376,
+      "materials": [
+        "Phase8_DarkMetal",
+        "Phase8_HoneyWood",
+        "Phase8_LampCream"
+      ],
+      "object_location": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "finite_bounds": true
+    }
+  ]
+}

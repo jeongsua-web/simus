@@ -1,0 +1,159 @@
+{
+  "scope": "Phase1-3 independent static QA. Does not establish Unity compile/load/Play Mode, actual imported bounds, mesh collision, NPC, camera or performance success.",
+  "layout_sha256": "3e98ea485bd92dc9c2528d0420b5999a0336f700270c0f73f7630aa214fbd105",
+  "checks": [
+    {
+      "check": "protected_existing_files",
+      "status": "PASS",
+      "evidence": {
+        "count": 991,
+        "excluded_generated_cache_files": 4,
+        "unexpected_changes": [],
+        "documented_changes": {
+          "docs/planning/city_rebuild_v002/README.md": "Coordinator recorded user approval and implementation start; design JSON/CSV remain protected."
+        }
+      }
+    },
+    {
+      "check": "approved_layout_hash",
+      "status": "PASS",
+      "evidence": "3e98ea485bd92dc9c2528d0420b5999a0336f700270c0f73f7630aa214fbd105"
+    },
+    {
+      "check": "approved_building_counts",
+      "status": "PASS",
+      "evidence": {
+        "external": 55,
+        "campus": 14
+      }
+    },
+    {
+      "check": "csv_matches_layout",
+      "status": "PASS",
+      "evidence": []
+    },
+    {
+      "check": "design_envelope_collision",
+      "status": "PASS",
+      "evidence": []
+    },
+    {
+      "check": "source_fbx_and_meta_present",
+      "status": "PASS",
+      "evidence": {
+        "unique_fbx": 14,
+        "missing": []
+      }
+    },
+    {
+      "check": "event_contract_unchanged_in_layout",
+      "status": "PASS",
+      "evidence": {
+        "map_version": null,
+        "max_wait_seconds": 90
+      }
+    },
+    {
+      "check": "unique_local_file_ids",
+      "status": "PASS",
+      "evidence": {
+        "count": 4630
+      }
+    },
+    {
+      "check": "serialized_building_wrapper_ids",
+      "status": "PASS",
+      "evidence": {
+        "count": 69,
+        "missing": []
+      }
+    },
+    {
+      "check": "serialized_crossing_facility_roots",
+      "status": "PASS",
+      "evidence": {
+        "count": 17
+      }
+    },
+    {
+      "check": "local_file_ids_resolve",
+      "status": "PASS",
+      "evidence": []
+    },
+    {
+      "check": "external_scene_guids_resolve",
+      "status": "PASS",
+      "evidence": {
+        "missing": [],
+        "duplicate_guid_paths": {}
+      }
+    },
+    {
+      "check": "scene_references_actual_fbx",
+      "status": "PASS",
+      "evidence": [
+        "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_A_MIDRISE.fbx",
+        "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_B_MIDRISE.fbx",
+        "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_C_MIDRISE.fbx",
+        "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+        "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx",
+        "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_02_NEIGHBORHOOD_CENTER.fbx",
+        "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx",
+        "unity/Assets/SIMUS/Art/buildings/department_store/DEPARTMENT.fbx",
+        "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx",
+        "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx",
+        "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.fbx",
+        "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx",
+        "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.fbx",
+        "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx",
+        "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Happiness_Animations.fbx"
+      ]
+    },
+    {
+      "check": "new_scene_has_meta",
+      "status": "PASS",
+      "evidence": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity"
+    },
+    {
+      "check": "unity_evidence_matches_layout",
+      "status": "PASS",
+      "evidence": "3e98ea485bd92dc9c2528d0420b5999a0336f700270c0f73f7630aa214fbd105"
+    },
+    {
+      "check": "unity_evidence_matches_saved_scene",
+      "status": "PASS",
+      "evidence": {
+        "reported": "f130d18e40a517d87bbaa6fa39442a64d86850771d686aafc7d12158e7bb14c7",
+        "actual": "f130d18e40a517d87bbaa6fa39442a64d86850771d686aafc7d12158e7bb14c7"
+      }
+    },
+    {
+      "check": "unity_evidence_matches_generator",
+      "status": "PASS",
+      "evidence": {
+        "reported": "5f3b02dd554c15c57fe5535b0cd53dfe2dae1e1252fd289d3b4d8429fb535c0e",
+        "actual": "5f3b02dd554c15c57fe5535b0cd53dfe2dae1e1252fd289d3b4d8429fb535c0e"
+      }
+    },
+    {
+      "check": "unity_report_instance_ids",
+      "status": "PASS",
+      "evidence": {
+        "count": 69,
+        "missing": [],
+        "unexpected": []
+      }
+    },
+    {
+      "check": "unity_report_fbx_provenance_and_bounds",
+      "status": "PASS",
+      "evidence": []
+    },
+    {
+      "check": "unity_report_world_envelope_collision",
+      "status": "PASS",
+      "evidence": []
+    }
+  ],
+  "status": "PASS_STATIC_ONLY"
+}

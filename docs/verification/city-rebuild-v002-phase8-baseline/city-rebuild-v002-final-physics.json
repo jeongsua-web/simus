@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-16T13:57:11.0351120Z",
+  "graph": {
+    "nodes": 572,
+    "edges": 597,
+    "samples": 35489,
+    "finite_width_samples": 7461,
+    "capsule_radius_m": 0.2,
+    "capsule_blocked": 0,
+    "actual_physical_bridge_hits": 665,
+    "wet_violations": 0,
+    "unsupported": 0,
+    "maximum_support_height_error_m": 0.12
+  },
+  "river_depth": {
+    "axis_samples": 86,
+    "old_flat_ground_hits_beneath_water": 0,
+    "missing_bed_hits": 0,
+    "bed_y": -2,
+    "water_y": -1.2,
+    "ground_y": -0.02,
+    "water_has_collider": false
+  },
+  "scene_sha256": "763654d0c15377cc79ba9b0919e180e47dd20ef3be0d0202a82d714635575555",
+  "scope": "Actual saved Unity scene Physics: all active 597 graph edges; river finite-width capsule and bridge-deck tests. Existing river audit height tolerances retained."
+}
