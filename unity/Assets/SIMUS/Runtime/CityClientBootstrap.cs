@@ -11,7 +11,7 @@ namespace Simus.City
             // The imported Neighborhood scene has its own map and preview camera.
             var sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
             // Web-bound scenes already own session polling and rendering.
-            if (sceneName == "simus_bridge_test" || sceneName == "DevelopmentCity") return;
+            if (sceneName == "simus_bridge_test" || sceneName == "DevelopmentCity" || sceneName == "CityRebuild_v002_WebGL_Test") return;
             if (sceneName == "Neighborhood" || sceneName == "CompletedMapNpcFollow") return;
             if (Object.FindObjectOfType<CityStatePoller>() != null ||
                 Object.FindObjectOfType<CityVisualization>() != null) return;

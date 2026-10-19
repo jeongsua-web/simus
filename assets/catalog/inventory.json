@@ -7590,6 +7590,20 @@
       "sha256": "69a56affc0b22fb91dc8d819bcab228c842628e4742330a4edc2db46b3dedebd"
     },
     {
+      "path": "unity/Assets/Editor/CityRebuildV002WebGLBuild.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 4390,
+      "sha256": "2933839c1e28905434953499a1ed6b27593b96d8a2493eb7b01d834eba365fcd"
+    },
+    {
+      "path": "unity/Assets/Editor/CityRebuildV002WebGLBuild.cs.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 59,
+      "sha256": "e588c9e5489652c70a2798f1af593ad54f6ab276e65a0c330dab9b4500ae4d68"
+    },
+    {
       "path": "unity/Assets/Editor/CityStateAssetImporter.cs",
       "role": "code",
       "location": "unity_existing",
@@ -17617,8 +17631,8 @@
       "path": "unity/Assets/SIMUS/Runtime/CityClientBootstrap.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 1173,
-      "sha256": "025087d0ac688ad622a11a1b09474a4734bf02571a27bba8ffd916a0faaf6344"
+      "bytes": 1219,
+      "sha256": "0f797fb68cbdc8ac8d636102ddeed759c0fefa6edfc6b331fc2755c358738dcc"
     },
     {
       "path": "unity/Assets/SIMUS/Runtime/CityClientBootstrap.cs.meta",
@@ -35614,8 +35628,8 @@
       "path": "unity/Assets/Scripts/WebCityBridge.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 8902,
-      "sha256": "01aa7a1d26d393d4f7ffbf15de1efe12c509704933fc829c7acbef534f426122"
+      "bytes": 9309,
+      "sha256": "e5cf4953834ad9883d9fb6012b66c24d0932fc61862f6be24035e9f773d185dd"
     },
     {
       "path": "unity/Assets/Scripts/WebCityBridge.cs.meta",
@@ -36246,6 +36260,55 @@
       "location": "web_runtime",
       "bytes": 178284,
       "sha256": "6e3da18b9327723a22c3cf39ddea6eacc0fce2afcad2c70a087a017735f2b34d"
+    },
+    {
+      "path": "web/public/city-rebuild-v002-test/Build/city_rebuild_v002_test_verified.data",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 60773798,
+      "sha256": "bae270ddfc1d254f1e52935b03e06bffb70ade01fbbeebe7bcbfc442df3b8bc7"
+    },
+    {
+      "path": "web/public/city-rebuild-v002-test/Build/city_rebuild_v002_test_verified.framework.js",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 413204,
+      "sha256": "90667dee49d653af934583602e8510b830a366cdc93ca3249490bf040f8a371f"
+    },
+    {
+      "path": "web/public/city-rebuild-v002-test/Build/city_rebuild_v002_test_verified.loader.js",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 26983,
+      "sha256": "c0769debd1f83f5d1c04896d2258487aa677025c642568825aa49602ce156c3b"
+    },
+    {
+      "path": "web/public/city-rebuild-v002-test/Build/city_rebuild_v002_test_verified.wasm",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 26598380,
+      "sha256": "fea353367e15aa473cbafe6797d99c7acb26629f943e705dfdac6d2b1e447d55"
+    },
+    {
+      "path": "web/public/city-rebuild-v002-test/bridge.js",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 3512,
+      "sha256": "0f3b72662cc12879951e99d3a23ee22c26eb7b981c5b694115a7f8a01044521c"
+    },
+    {
+      "path": "web/public/city-rebuild-v002-test/build.json",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 164,
+      "sha256": "e76dcea36474d3d798d715ffc5d9d02853a31b93c3da7e8ade2d53051cb98f7d"
+    },
+    {
+      "path": "web/public/city-rebuild-v002-test/index.html",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 1656,
+      "sha256": "71bb3bce460ac5e76c7d77b850e8065265e41cb83ea73fc7ba52c3646f27e8d7"
     },
     {
       "path": "web/public/city/Build/development_city.data",
