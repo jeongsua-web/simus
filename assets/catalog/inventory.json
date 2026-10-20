@@ -7975,6 +7975,20 @@
       "sha256": "cec33f7be10ce06305bd57568969ccaa1f1ba71f42c3249ec6253b834eb670a6"
     },
     {
+      "path": "unity/Assets/Editor/CityV002EventPlacement.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 18730,
+      "sha256": "52967ad9a1c839194dda3c6fd8c9d766c1cc892f5b19aeb16a83adfdd418a27e"
+    },
+    {
+      "path": "unity/Assets/Editor/CityV002EventPlacement.cs.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 60,
+      "sha256": "21d04708400e682d9817068162e883d831707b53925c61402df7fca05c4bbb70"
+    },
+    {
       "path": "unity/Assets/Editor/CompletedMapFollowSetup.cs",
       "role": "code",
       "location": "unity_existing",
@@ -17467,6 +17481,27 @@
       "sha256": "f98f8ee7c68db5ad754e34b1f0ccd7d42f20e73430ee2b1d82062c2e0464d690"
     },
     {
+      "path": "unity/Assets/SIMUS/Art/vegetation/street_landscape.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 180,
+      "sha256": "9831650cc674a23eaae645f85155df9f3ba6fd8da0206baae5cb16dc1bead216"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/street_landscape/SIMUS_Flowerbed.fbx",
+      "role": "export",
+      "location": "unity_existing",
+      "bytes": 134364,
+      "sha256": "8a0335db445b747d7b4306f9b34116518db09bd3223ddcedaebbf2fe7973b835"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Art/vegetation/street_landscape/SIMUS_Flowerbed.fbx.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 3002,
+      "sha256": "f69b617f131ca6723635e5a31b148dfafbd687362af8a9009181890bf742cf19"
+    },
+    {
       "path": "unity/Assets/SIMUS/Editor.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
@@ -18618,8 +18653,8 @@
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity",
       "role": "scene",
       "location": "unity_existing",
-      "bytes": 6349014,
-      "sha256": "51bc94b06d8f4a0a2700f0f06b2245763aaea88a4d9c0474b1909492026eb2c6"
+      "bytes": 6581423,
+      "sha256": "811e198574356248d25c182d43e871304ce8cf733168b208db985342ddda38b4"
     },
     {
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity.meta",
@@ -18641,6 +18676,97 @@
       "location": "unity_existing",
       "bytes": 165,
       "sha256": "4b4ae0180f715f8bce47a6ca96fd71b2545e1dec2f81e77d0de706ed01f2ee19"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/event_placement.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 180,
+      "sha256": "7229052990f08ac725cd3d170adf5f8e6ed242cecc5155df77a4888003087722"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/event_placement/city_citizen_1_walk.controller",
+      "role": "animation_controller",
+      "location": "unity_existing",
+      "bytes": 2114,
+      "sha256": "d1cde2ac26bfa8e4cd8ebdcb1ac781836ef8b283e2f514297c56d37751d81a3a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/event_placement/city_citizen_1_walk.controller.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 196,
+      "sha256": "80a98afa27e19ad5b978a15a828389758094b0f6e3bad5ee00f219eaac79b1c1"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/event_placement/city_citizen_2_walk.controller",
+      "role": "animation_controller",
+      "location": "unity_existing",
+      "bytes": 2112,
+      "sha256": "74b35db7168fb683c9ea12efca0892fd4792b2871816966eba7c451c3985177a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/event_placement/city_citizen_2_walk.controller.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 196,
+      "sha256": "c08af0b31744550b97a1f93446a617c366a4769459bdff0210dd0217f294dd3a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/event_placement/criminal_idle.controller",
+      "role": "animation_controller",
+      "location": "unity_existing",
+      "bytes": 2110,
+      "sha256": "5466bd1b31f5df8ed3f8df7116bb6e8be0ddde712ded989f2f357c6775bb7dd3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/event_placement/criminal_idle.controller.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 196,
+      "sha256": "22fd6a307cababb70b661e1fbc8ebae399f2a01f97d0453c613bd0770191c0a9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/event_placement/crying_child_scene.controller",
+      "role": "animation_controller",
+      "location": "unity_existing",
+      "bytes": 10250,
+      "sha256": "26d948e529c6ec4c30e4b37e2129f091f3b30350c7550d80c857214245d1b869"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/event_placement/crying_child_scene.controller.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 196,
+      "sha256": "5392ca30f7fea9b4d29ff15e34e0bed884a6a2ad99b6f487f2786450226946b3"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/event_placement/heavy_carrier_scene.controller",
+      "role": "animation_controller",
+      "location": "unity_existing",
+      "bytes": 8994,
+      "sha256": "df72f3311cd437065798dd83fd5866946c7e73865af953ac0680e3ab34170116"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/event_placement/heavy_carrier_scene.controller.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 196,
+      "sha256": "c174f29b66a5232fdbedaea9f0b24fff1be07fa76097d6eac76c8acd2e5e9569"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/event_placement/police_idle.controller",
+      "role": "animation_controller",
+      "location": "unity_existing",
+      "bytes": 2108,
+      "sha256": "acdd0df799bb8a09796f8381e4f07c5cc26875d70eb4a402089200b8a153a1d9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/event_placement/police_idle.controller.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 196,
+      "sha256": "4a346055d60d11343a84e8dd35602ce9c6b718be1cf2e5c8ec032b197e6f3aeb"
     },
     {
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/materials.meta",
@@ -37059,6 +37185,13 @@
       "paths": [
         "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_LOOK_AROUND.png",
         "assets/library/characters/heavy_carrier_v001/previews/Unity_HEAVY_CARRY_LOOK_AROUND_6.png"
+      ]
+    },
+    {
+      "sha256": "8a0335db445b747d7b4306f9b34116518db09bd3223ddcedaebbf2fe7973b835",
+      "paths": [
+        "assets/library/vegetation/street_landscape/exports/SIMUS_Flowerbed.fbx",
+        "unity/Assets/SIMUS/Art/vegetation/street_landscape/SIMUS_Flowerbed.fbx"
       ]
     },
     {
