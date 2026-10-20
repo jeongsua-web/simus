@@ -1,0 +1,27 @@
+# Admit only the Next.js build inputs. Keep the Unity/Blender source tree,
+# DB scripts, Git history, local credentials, and caches outside the context.
+**
+!web/
+!web/package.json
+!web/package-lock.json
+!web/next.config.ts
+!web/tsconfig.json
+!web/eslint.config.mjs
+!web/unity-build.lock.json
+!web/scripts/
+!web/scripts/unity-artifact.mjs
+!web/src/
+!web/src/**
+!web/public/
+!web/public/**
+
+# Include Release-hydrated builds and exclude unrelated local test output.
+web/public/city-rebuild-v002-test/
+web/public/.unity-preview-*/
+web/public/.unity-artifact-*/
+**/.env*
+**/.DS_Store
+**/*.pem
+**/*.p12
+**/*.pfx
+**/*.key

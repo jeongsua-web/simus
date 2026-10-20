@@ -1,0 +1,39 @@
+name: simus-prod
+
+services:
+  web:
+    image: ${SIMUS_IMAGE:?Set SIMUS_IMAGE to a GHCR sha tag or digest}
+    init: true
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      NEXT_TELEMETRY_DISABLED: "1"
+      HOSTNAME: 0.0.0.0
+      PORT: "3000"
+      DATABASE_URL: ${DATABASE_URL:?Set the production PostgreSQL URL}
+      ADMIN_TOKEN_ISSUER: ${ADMIN_TOKEN_ISSUER:?Set the administrator JWT issuer}
+      ADMIN_TOKEN_AUDIENCE: ${ADMIN_TOKEN_AUDIENCE:?Set the administrator JWT audience}
+      ADMIN_JWKS_URL: ${ADMIN_JWKS_URL:-}
+      ADMIN_JWKS_JSON: ${ADMIN_JWKS_JSON:-}
+      SESSION_JOB_TOKEN: ${SESSION_JOB_TOKEN:?Set a job token of at least 32 characters}
+      VAPID_PUBLIC_KEY: ${VAPID_PUBLIC_KEY:-}
+      VAPID_PRIVATE_KEY: ${VAPID_PRIVATE_KEY:-}
+      VAPID_SUBJECT: ${VAPID_SUBJECT:-}
+    ports:
+      - "${SIMUS_BIND_ADDRESS:-127.0.0.1}:${SIMUS_PORT:-3000}:3000"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/api/health',{signal:AbortSignal.timeout(4000)}).then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      start_period: 30s
+      retries: 3
+    stop_grace_period: 30s
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
