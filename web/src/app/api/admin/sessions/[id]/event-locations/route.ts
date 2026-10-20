@@ -1,8 +1,23 @@
 import { NextRequest } from "next/server";
 import { adminSubject, requireAdmin } from "@/lib/admin-auth";
 import { ApiError, body, checkOrigin, handle, json, transaction, uuid } from "@/lib/api";
+import { MAP_VERSION, locate, pedestrianGraph } from "@/lib/city-v002-graph.mjs";
 import { version } from "@/lib/npc-position-sync";
 export const runtime = "nodejs";
+
+export async function GET(request: NextRequest, context: { params: Promise<{ id: string }> }) {
+  return handle(async () => {
+    const subject = await adminSubject(request);
+    const sid = uuid((await context.params).id, "session_id");
+    return json(await transaction(async db => {
+      await requireAdmin(db, subject);
+      const session = await db.query("SELECT npc_motion FROM simus.simulation_sessions WHERE id=$1", [sid]);
+      if (!session.rowCount) throw new ApiError(404, "SESSION_NOT_FOUND", "회차를 찾을 수 없습니다.");
+      const situations = await db.query("SELECT id,code,title,is_generic,event_location FROM simus.session_situations WHERE session_id=$1 ORDER BY display_order,id", [sid]);
+      return { situations: situations.rows, anchors: session.rows[0].npc_motion?.map_version === MAP_VERSION ? pedestrianGraph.nodes : [] };
+    }));
+  });
+}
 
 export async function PUT(request: NextRequest, context: { params: Promise<{ id: string }> }) {
   return handle(async () => {
@@ -19,6 +34,10 @@ export async function PUT(request: NextRequest, context: { params: Promise<{ id:
           v.point.some(n => typeof n !== "number" || !Number.isFinite(n) || Math.abs(n) > 1e6) ||
           typeof v.radius_m !== "number" || !Number.isFinite(v.radius_m) || v.radius_m <= 0 || v.radius_m > 1e6)
         throw new ApiError(400, "INVALID_EVENT_LOCATION", "지도, 3차원 위치와 양수 반경을 지정해주세요.");
+      if (v.map_version === MAP_VERSION) {
+        try { locate(v.point); }
+        catch { throw new ApiError(400, "INVALID_GRAPH_LOCATION", "v002 이벤트 위치는 보행 그래프 위에 있어야 합니다."); }
+      }
       location = { map_version: version(v.map_version, "map_version"), point: v.point, radius_m: v.radius_m };
     } else if (input.event_location != null) throw new ApiError(400, "INVALID_EVENT_LOCATION", "공통 이벤트에는 특정 위치를 지정할 수 없습니다.");
     return json(await transaction(async db => {

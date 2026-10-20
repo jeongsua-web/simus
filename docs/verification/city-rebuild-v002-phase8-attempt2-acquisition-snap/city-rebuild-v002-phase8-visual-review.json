@@ -1,0 +1,138 @@
+{
+  "reviewed_utc": "2026-10-17T22:04:51.500192+00:00",
+  "reviewer": "Independent QA agent",
+  "source": "Actual Unity Camera.Render Play Mode evidence, not Blender illustration or composite",
+  "scene_sha256": "db8921643729a7f20de466bf4e9b9c3ea7ba43a4d0dc0c32e36bbeeed934fc54",
+  "views": [
+    {
+      "view": "01-city",
+      "status": "PASS",
+      "scope": "Direct visual review of actual saved Unity 1920x1080 Play Mode camera PNG; not continuous all-position guarantee",
+      "finding": "도시 전체가 프레임 안에 있으며 도로 차선, 구역별 바닥, 마당/주차 구획이 추가됨. 하천과 2개 교량 식별. 전시 미술 최종 승인은 사용자 검토 대상.",
+      "before": {
+        "path": "docs/verification/city-rebuild-v002-phase8-captures/before/01-city.png",
+        "sha256": "ae7c4fb61cc453b4f0b5facf52150671a15db148fe960069ad619bab2ec29f44"
+      },
+      "after": {
+        "path": "docs/verification/city-rebuild-v002-phase8-captures/after/01-city.png",
+        "sha256": "d0fb6f99cf1ee8a32f22daaff08f1ae741e966bd0c109430373c8757b8315555"
+      }
+    },
+    {
+      "view": "02-school",
+      "status": "PASS",
+      "scope": "Direct visual review of actual saved Unity 1920x1080 Play Mode camera PNG; not continuous all-position guarantee",
+      "finding": "캠퍼스 건물, 중앙광장 패턴, 운동장, 연결 보행로 및 벤치 식별. 정적 뷰에서 불필요한 건물 투명화 제거됨.",
+      "before": {
+        "path": "docs/verification/city-rebuild-v002-phase8-captures/before/02-school.png",
+        "sha256": "a61d05423ba2c15bd70aff56b8dfdd99e985671ba96c09182122bc17479e539f"
+      },
+      "after": {
+        "path": "docs/verification/city-rebuild-v002-phase8-captures/after/02-school.png",
+        "sha256": "d7e47d40b4cc613feb2bbe8bce312b128f2c6f3d1eec06879fdaa1ce5c1369b4"
+      }
+    },
+    {
+      "view": "03-commercial",
+      "status": "PASS",
+      "scope": "Direct visual review of actual saved Unity 1920x1080 Play Mode camera PNG; not continuous all-position guarantee",
+      "finding": "상가 전면 포장과 주차면, 차선, 가로등 추가. 기존 건물 위치/도로 구도 유지.",
+      "before": {
+        "path": "docs/verification/city-rebuild-v002-phase8-captures/before/03-commercial.png",
+        "sha256": "133acfd1e64fc9efe671c04bd94ef64687e9a23cdc682205e7f6727ea8161658"
+      },
+      "after": {
+        "path": "docs/verification/city-rebuild-v002-phase8-captures/after/03-commercial.png",
+        "sha256": "ebd7acac9b3cd28a600981121d768bbfe97490f50ded249950ae0a856a356ed4"
+      }
+    },
+    {
+      "view": "04-residential",
+      "status": "PASS",
+      "scope": "Direct visual review of actual saved Unity 1920x1080 Play Mode camera PNG; not continuous all-position guarantee",
+      "finding": "건물별 마당 패치, 소형 주차 구획, 화단/가로등이 추가됨. 도로/보행로 연결 구도 유지.",
+      "before": {
+        "path": "docs/verification/city-rebuild-v002-phase8-captures/before/04-residential.png",
+        "sha256": "1b91578042f5ac542254c07af78123dff93606120cac74636a2e2f2d9a004ee5"
+      },
+      "after": {
+        "path": "docs/verification/city-rebuild-v002-phase8-captures/after/04-residential.png",
+        "sha256": "35defa6b4f48913e2b34151d7ebd8f0d19fcf98b2e00d6b8792e6be128f1b57d"
+      }
+    },
+    {
+      "view": "05-park-river",
+      "status": "PASS",
+      "scope": "Direct visual review of actual saved Unity 1920x1080 Play Mode camera PNG; not continuous all-position guarantee",
+      "finding": "실패했던 물 덮임 수정. 수면 전 구간, 둔치/산책로, 2개 교량과 휴식 가구가 보임. 기존 공원 나무 유지.",
+      "before": {
+        "path": "docs/verification/city-rebuild-v002-phase8-captures/before/05-park-river.png",
+        "sha256": "0513c4d81f213318c0204233ec8e338d19a4ba1793dc69753dec672f4caecc04"
+      },
+      "after": {
+        "path": "docs/verification/city-rebuild-v002-phase8-captures/after/05-park-river.png",
+        "sha256": "286bf270ea4a3e4a882dae8e9a49b6870cffa4168bb1cf5c7afa5348b0382029"
+      }
+    },
+    {
+      "view": "06-npc-follow",
+      "status": "PASS",
+      "scope": "Direct visual review of actual saved Unity 1920x1080 Play Mode camera PNG; not continuous all-position guarantee",
+      "finding": "동일 CAMPUS_PLAZA의 단일 NPC 전신이 보임. 더 넓어진 광장/보행 맥락, 프레임 가장자리 건물 실루엣. 캐릭터는 이전보다 작음.",
+      "before": {
+        "path": "docs/verification/city-rebuild-v002-phase8-captures/before/06-npc-follow.png",
+        "sha256": "9af38551da3daf60b2297bffcf94667eb8e2b1075445b26662f7bc4a78f71cdf"
+      },
+      "after": {
+        "path": "docs/verification/city-rebuild-v002-phase8-captures/after/06-npc-follow.png",
+        "sha256": "403931b1765530e8964d6c63d115ead6dbf6b3ff91d6f3f6ae3e9c460b8962f1"
+      }
+    },
+    {
+      "view": "07-apartment-follow",
+      "status": "PASS",
+      "scope": "Direct visual review of actual saved Unity 1920x1080 Play Mode camera PNG; not continuous all-position guarantee",
+      "finding": "동일 B16_ACCESS의 NPC 전신, 도로와 보도/주차면을 함께 식별. 전체 건물 점유 문제 개선. 디더 투명화 점무늬 및 발코니 일부 윤곽은 잔여 미술 검토 사항.",
+      "before": {
+        "path": "docs/verification/city-rebuild-v002-phase8-captures/before/07-apartment-follow.png",
+        "sha256": "8a8c43b8274de5e2018af6ffabdc59a7079fb480aabd4deb7e3464ff69379bc7"
+      },
+      "after": {
+        "path": "docs/verification/city-rebuild-v002-phase8-captures/after/07-apartment-follow.png",
+        "sha256": "403a167c0addf452c1517fe3cb36c1579018ca85aaff9d10d7075b9d3bed8899"
+      }
+    }
+  ],
+  "alternatives": [
+    {
+      "path": "docs/verification/city-rebuild-v002-phase8-captures/before/alternative-02-pitch42-size17.png",
+      "sha256": "f4cfd9691adfc195d4cfee966a1e12cd122b2b6c7392353f1da243caf7617a29",
+      "finding": "Distance/pitch comparison retained; 42/17 and50/18 remain facade-dominated, 26m wide views shrink NPC. Context fade improves visibility but final view uses revised yaw-36/pitch48/size21."
+    },
+    {
+      "path": "docs/verification/city-rebuild-v002-phase8-captures/before/alternative-03-pitch50-size18.png",
+      "sha256": "5686d920cffb70d6d8f611fdae789bfef206b35d7c161d652883577e79997002",
+      "finding": "Distance/pitch comparison retained; 42/17 and50/18 remain facade-dominated, 26m wide views shrink NPC. Context fade improves visibility but final view uses revised yaw-36/pitch48/size21."
+    },
+    {
+      "path": "docs/verification/city-rebuild-v002-phase8-captures/before/alternative-04-pitch55-size26-yaw36.png",
+      "sha256": "26ce47cb82c19255bf87eecdba6fb1a2a2575d69908d62b5f036a45f8b337921",
+      "finding": "Distance/pitch comparison retained; 42/17 and50/18 remain facade-dominated, 26m wide views shrink NPC. Context fade improves visibility but final view uses revised yaw-36/pitch48/size21."
+    },
+    {
+      "path": "docs/verification/city-rebuild-v002-phase8-captures/before/alternative-05-pitch60-size26.png",
+      "sha256": "d45f0d9bce6b8fcf1d6ddc656ed0f3ac998f95977c2d3c9b063b9ad336846605",
+      "finding": "Distance/pitch comparison retained; 42/17 and50/18 remain facade-dominated, 26m wide views shrink NPC. Context fade improves visibility but final view uses revised yaw-36/pitch48/size21."
+    },
+    {
+      "path": "docs/verification/city-rebuild-v002-phase8-captures/before/alternative-06-context-fade-pitch42-size17.png",
+      "sha256": "82b4bf88f542a81d9337a2e542437711564db4a7d302322053275ed0166c7f41",
+      "finding": "Distance/pitch comparison retained; 42/17 and50/18 remain facade-dominated, 26m wide views shrink NPC. Context fade improves visibility but final view uses revised yaw-36/pitch48/size21."
+    }
+  ],
+  "limitations": [
+    "Initial camera acquisition still snaps; continuous-follow smoothness tested separately.",
+    "Dithered building outlines and small follow NPC should be reviewed on target exhibition display.",
+    "Phase8C lighting and Phase8D performance not performed."
+  ]
+}

@@ -57,10 +57,10 @@ export async function runNpcPositionIntegration({ pool, env, token, templateId }
   const again = (await call(`${positions}?map_version=${route.map_version}`)).body;
   assert.equal(frozen.frozen, true); assert.deepEqual(frozen.npcs, again.npcs); assert.equal(frozen.motion_time, again.motion_time);
   const missing = await create();
-  await call(`/api/admin/sessions/${missing}/start`, { method: 'POST', admin: true, data: { request_key: randomUUID() } });
-  assert.equal((await call(`/api/sessions/${missing}/join`, { method: 'POST', cookie: participant.cookie })).body.error.code, 'NPC_MOTION_NOT_CONFIGURED');
-  assert.equal((await call(`/api/sessions/${missing}/npc-positions?map_version=anything`)).body.error.code, 'NPC_MOTION_NOT_CONFIGURED');
+  assert.equal((await call(`/api/admin/sessions/${missing}/start`, { method: 'POST', admin: true, data: { request_key: randomUUID() } })).body.error.code, 'NPC_MOTION_NOT_CONFIGURED');
+  assert.equal((await call(`/api/sessions/${missing}/join`, { method: 'POST', cookie: participant.cookie })).body.error.code, 'SESSION_CLOSED');
+  assert.equal((await call(`/api/sessions/${missing}/npc-positions?map_version=anything`)).status, 404);
   assert.equal((await pool.query('SELECT count(*) FROM simus.participant_sessions WHERE session_id=$1', [missing])).rows[0].count, '0');
-  await call(`/api/admin/sessions/${missing}/end`, { method: 'POST', admin: true, data: { request_key: randomUUID() } });
+
   console.log('PASS: map-scoped canonical NPC positions, auth/validation, route immutability, freeze, pending-map join rejection');
 }

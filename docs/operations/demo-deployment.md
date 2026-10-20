@@ -86,7 +86,7 @@ node scripts/demo-auth.mjs
 ```
 
 이 도구는 `.demo/env.local`과 `.demo/admin-token.txt`를 생성한다. `.demo/`는 Git 제외 대상이다.
-개인 서명키는 메모리에만 존재하며 저장하지 않는다. JWT는 RS256, subject `dev-admin`, 만료 8시간이다.
+개인 서명키는 메모리에만 존재하며 저장하지 않는다. JWT는 RS256, subject `dev-admin`, 만료 7일이다.
 재실행하면 새 키/토큰으로 바뀌므로 설정 반영 후 서버도 재시작한다. 운영용 인증으로 사용하지 않는다.
 
 `.demo/env.local`의 DATABASE_URL을 위에서 만든 **시연 DB**에 맞게 편집한다.

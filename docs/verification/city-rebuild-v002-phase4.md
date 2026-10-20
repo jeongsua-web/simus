@@ -1,10 +1,12 @@
 # CityRebuild v002 — Phase 4 공원·녹지 구현
 
-2026-10-15 확장: 사용자 요청으로 **하천 구현을 Phase 4에 포함**한다. [하천 위치·단면·보행 연결 설계](../planning/city_rebuild_v002/river-design.md)를 먼저 보고하고 기존 구현 위에 증분 적용한다. 아래는 기존 공원 작업 기록이며 하천의 실행 완료를 의미하지 않는다. 현재 `phase4-results.json`에는 기존 공원 증분 Apply PASS가 있으므로 하단의 초기 “통합 실행 대기” 표현은 당시 상태다.
+2026-10-17 최종 상태: **Unity 씬 조립과 실제 Play Mode 검증 PASS**. 동쪽 공원 지면·산책로·공원 FBX 모듈 2개, 기존 나무 FBX 46개 인스턴스, 휴식 공간과 추가 벤치 FBX 2개를 유지했다. 하천 작업에서 제외한 식생은 기존 비활성 상태를 유지하므로 나무 46개는 전체 인스턴스 수다. 최종 씬과 실행 입력 해시는 [입력 기록](city-rebuild-v002-phase47-runtime-inputs.json), 실행 결과는 [Phase 6](city-rebuild-v002-phase6.md)을 기준으로 한다.
+
+2026-10-15 확장: 사용자 요청으로 **하천 구현을 Phase 4에 포함**했다. [하천 위치·단면·보행 연결](../planning/city_rebuild_v002/river-design.md)을 기존 구현 위에 증분 적용했다.
 
 2026-10-16 하천 완료: 폭 10m 곡선 하천, 실제 지면 절개, 양안 둔치·산책로, 보행교 2개와 기존 NPC 보행망 연결, 오염도 머티리얼 제어를 구현했다. 5개 실제 NPC 왕복 경로와 8개 회귀 테스트가 통과했다. [최종 QA·화면·제한 사항](city-rebuild-v002-river-qa.md)을 현재 하천 상태의 기준으로 사용한다.
 
-승인된 v002의 기존 `CityRebuild_v002.unity`에 증분 편집을 적용한다. 전체 generator를 재실행하지 않으며 `layout.json`, 14동/55개 건물 배치, 원본 Blender/FBX, 원본 씬, 빌드 설정을 보호한다. 실행 메서드는 `CityRebuildV002Phase4Setup.Apply`, 메뉴는 `SIMUS > City Rebuild v002 > Apply Phase 4 Park and Greenery`다.
+승인된 v002의 작업용 `CityRebuild_v002.unity`에 증분 편집을 적용했다. 전체 generator는 재실행하지 않았다. `layout.json`, 원본 Blender/FBX, 원본 씬, 빌드 설정을 보존했다. 최초 공원 생성 메서드는 `CityRebuildV002Phase4Setup.Apply`, 최종 증분 복구·검증 메서드는 `CityRebuildV002Phase47Bridge.RunBatch`다.
 
 ## 보행로와 공원
 
@@ -26,4 +28,10 @@ Phase 4는 현재 신규 씬의 MeshCollider 전체를 world triangle edge로 �
 
 ## 검증 상태
 
-코드 작성 시점: Unity 컴파일/Apply/Play Mode는 메인 에이전트의 통합 실행 대기 중이며 **NOT TESTED**다. 이 문서의 구현 설명은 실행 성공을 뜻하지 않는다. Apply는 생성 후 그래프 중심선과 장식 Collider 검사, 69개 건물 transform 비교, protected source/layout/CSV/build settings 해시 검사를 통과해야만 씬을 저장하고 PASS 실행 JSON을 생성한다. NPC 이동, Game 뷰, 성능은 Phase 5~7 결과에서 보고한다.
+최종 Unity 6000.3.24f1 실행은 컴파일·씬 로드·Play Mode를 통과했다. 나무의 FBX root 축 회전을 복구해 수직 배치와 지면 높이를 검사했고, 벤치 2개는 기존 FBX를 휴식 공간에 배치했다. [조립 기록](city-rebuild-v002-phase4-completion.json)의 scene hash는 조립 중간 시점이며, 최종 씬 해시는 위 입력 기록을 사용한다.
+
+실제 FBX envelope 검사에서 작업씬의 C11 처마·난간 4개와 B01/B31/B42 모델 자식 3개의 이동 손상을 발견했다. 원본 FBX 및 기존 축 보정과 승인 footprint에 근거해 자식 위치만 복구했다. [복구 근거](city-rebuild-v002-building-recovery.json)와 [69개 실제 FBX 전체 검사 PASS](city-rebuild-v002-phase47-building-audit.json)를 남겼다. 원래 손상을 발생시킨 편집 동작은 확인하지 못했다.
+
+전체 보기 캡처 검토에서 도로 밖 회차 조각을 발견해, 월드좌표 정점을 사용하는 도로·보도 생성 규칙과 어긋난 transform 66개(횡단 표시 50, 보행면 13, 교차·회차 3)를 identity로 복구했다. 메시·재질·Collider 참조는 유지했다. [복구 목록](city-rebuild-v002-surface-recovery.json), 실제 월드좌표 표면 QA와 [597개 활성 graph edge 물리 검사](city-rebuild-v002-final-physics.json)를 재실행했다. 최종 Play Mode에서는 큰 삼각형 경고 0, 수집된 런타임 오류·경고 0이다.
+
+실제 문턱 접근, NavMesh, 군중 회피와 목표 기기 성능은 **NOT TESTED**이며, 현재 그래프 왕복 이동과 카메라·단계별 성능 실측은 [Phase 5](city-rebuild-v002-phase5.md)·[Phase 6](city-rebuild-v002-phase6.md)에 기록했다.

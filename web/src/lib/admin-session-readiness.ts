@@ -1,11 +1,12 @@
 import type { PoolClient } from "pg";
 import { ApiError } from "./api";
 import { validateRules } from "./session-rules";
+import { assertEventLocations, assertSessionBuild } from "./session-build-readiness";
 
 export type ReadinessReason = { code: string; message: string };
 
 export async function inspectSessionReadiness(db: PoolClient, sessionId: string): Promise<ReadinessReason[]> {
-  const result = await db.query(`SELECT s.status,s.scheduled_end_at,s.admission_buffer,s.impact_scale,s.rules_snapshot,
+  const result = await db.query(`SELECT s.status,s.scheduled_end_at,s.admission_buffer,s.impact_scale,s.rules_snapshot,s.npc_motion,
       (SELECT array_agg(code ORDER BY code) FROM simus.session_regions WHERE session_id=s.id) AS region_codes,
       NOT EXISTS(SELECT 1 FROM simus.session_situations WHERE session_id=s.id) AS no_situations,
       EXISTS(SELECT 1 FROM simus.session_situations t WHERE t.session_id=s.id AND
@@ -26,6 +27,14 @@ export async function inspectSessionReadiness(db: PoolClient, sessionId: string)
   const row = result.rows[0];
   if (row.status !== "DRAFT") return [];
   const reasons: ReadinessReason[] = [];
+  try {
+    await assertSessionBuild(row.npc_motion);
+    const placements = await db.query("SELECT event_location FROM simus.session_situations WHERE session_id=$1 AND event_location IS NOT NULL", [sessionId]);
+    assertEventLocations(row.npc_motion, placements.rows.map(item => item.event_location));
+  } catch (error) {
+    if (!(error instanceof ApiError)) throw error;
+    reasons.push({ code: error.code, message: error.message });
+  }
   const regions = (row.region_codes ?? []) as string[];
   if (!regions.length) reasons.push({ code: "NO_REGIONS", message: "지역을 한 개 이상 등록해야 합니다." });
   if (row.no_situations) reasons.push({ code: "NO_SITUATIONS", message: "상황을 한 개 이상 등록해야 합니다." });

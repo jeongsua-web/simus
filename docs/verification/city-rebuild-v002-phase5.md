@@ -1,6 +1,6 @@
 # City Rebuild v002 — Phase 5 NPC 보행 연결
 
-> 2026-10-16 재개: 이 문서의 아래 `통합 Play Mode 대기` 표시는 최초 구현 당시 기록이다. 현재 씬에는 하천 확장까지 포함한 572 nodes / 597 edges와 구역 간 이동 검증 코드가 있다. 최신 실행 판정과 남은 실제 문앞 접근·NavMesh 범위는 [Phase 7 통합 결과](city-rebuild-v002-phase7-qa.md)를 기준으로 확인한다. 과거 실행 결과가 존재한다는 이유만으로 현재 씬의 실행 성공을 판단하지 않는다.
+2026-10-17 최종 상태: Unity 6000.3.24f1 실제 Play Mode에서 아래 4개 구역 간 경로의 왕복 이동이 모두 **PASS**다. 하천 확장까지 포함한 현재 씬은 572 nodes / 597 edges다. [실행 결과](city-rebuild-v002-navigation-runtime.json), [동일 실행 입력 해시](city-rebuild-v002-phase47-runtime-inputs.json), [Phase 7 QA](city-rebuild-v002-phase7-qa.md)를 함께 확인한다.
 
 ## 적용 범위
 
@@ -14,10 +14,10 @@
 
 | 검사 경로 | 출발 | 도착 | 실제 실행 상태 |
 |---|---|---|---|
-| 학교 ↔ 상업 | CAMPUS_PLAZA | B04_ACCESS | NOT TESTED: 통합 Play Mode 대기 |
-| 학교 ↔ 주거 | CAMPUS_PLAZA | B16_ACCESS | NOT TESTED: 통합 Play Mode 대기 |
-| 학교 ↔ 공원 | CAMPUS_PLAZA | PARK_REST_2 | NOT TESTED: 통합 Play Mode 대기 |
-| 주거 ↔ 상업 | B16_ACCESS | B04_ACCESS | NOT TESTED: 통합 Play Mode 대기 |
+| 학교 ↔ 상업 | CAMPUS_PLAZA | B04_ACCESS | PASS: 실제 왕복, 도착 2회 |
+| 학교 ↔ 주거 | CAMPUS_PLAZA | B16_ACCESS | PASS: 실제 왕복, 도착 2회 |
+| 학교 ↔ 공원 | CAMPUS_PLAZA | PARK_REST_2 | PASS: 실제 왕복, 도착 2회 |
+| 주거 ↔ 상업 | B16_ACCESS | B04_ACCESS | PASS: 실제 왕복, 도착 2회 |
 
 학교 ↔ 상업은 원본 추적 NPC가 이동한다. 각 NPC는 목적지에 실제 도착한 뒤 동일한 waypoint를 역순으로 따라 출발지로 돌아온다. 왕복 완료 시 도착 수는 2이며 원래 길이의 두 배를 검증한다. 나머지 세 경로는 동일 FBX/Humanoid 모델 복제본이 병렬 이동한다. 기본 속도는 원본 patrol 설정 그대로다. Play Mode 검증을 가속할 경우 `Time.timeScale` 변경은 테스트 harness가 담당하며 보고서의 `maximumTimeScale`에 기록한다. 가속해도 엣지 waypoint를 건너뛰거나 도착 위치로 teleport하지 않는다. 이동은 원본 MoveTowards의 프레임 업데이트를 통해 수행한다.
 
@@ -29,7 +29,10 @@
 
 - NavMesh: NOT TESTED. 현재 manifest에 Unity AI Navigation/AI 모듈이 없고 bake도 없다. 검증 없는 시스템 교체를 피하고 승인된 graph를 기존 로컬 이동 방식에 연결했다. NavMesh가 정상 연결되었다고 주장하지 않는다.
 - 실제 FBX 출입문·문턱 진입: NOT TESTED. B04/B16 목적지는 설계의 외부 approach anchor이다. 메쉬 출입문 좌표의 불일치 여부와 실내 진입은 별도 검증 대상이다.
-- 역방향 실제 이동: NOT TESTED: 통합 실행 대기. 각 검증 actor는 승인된 경로를 역순으로 따라 귀환하며 왕복을 완료해야 PASS가 가능하다.
 - NPC 상호 회피·군중 교통 제어: NOT TESTED. 기존 MoveTowards 로컬 테스트가 제공하지 않는 기능이며 이번 adapter에서 새 이벤트/교통 로직을 도입하지 않는다.
 
-Unity 컴파일과 Play Mode 실행은 메인 통합 에이전트가 수행한다. 정적 코드 작성·경로 선택만으로 Unity 실행 PASS를 기록하지 않는다.
+최종 실행에서 각 경로의 누락 지면·높이 오류·실제 건물 Collider 관통 샘플은 모두 0이고 전체 waypoint와 왕복 도착을 확인했다. 테스트 시계만 20배속이며 실제 원본 이동 속도는 1.4m/s다. 가장 긴 왕복 약 968.8m를 포함한 경로 구간은 실제 벽시계 약 33.8초 동안 진행했다. 이벤트 로직 및 90초 최대 대기 시간은 변경하지 않았다. 이벤트 서버 통합 시나리오는 실행하지 않았다.
+
+[최종 물리 검사](city-rebuild-v002-final-physics.json)는 활성 597개 edge를 35,489개 중심선 샘플로 검사해 unsupported/wet violation 0을 확인했다. 하천 근처 유효 보행 폭은 추가 7,461개 샘플과 반경 0.2m capsule로 검사해 막힘 0, 실제 교량 deck 지지 665회를 확인했다. 기존 검사 높이 허용치는 중심선 최대 0.23m, 하천 유효 폭 0.08m이며, 실제 관찰된 최대 중심선 오차는 횡단부 0.12m다. 이 검사는 실제 출입문·문턱 또는 NavMesh bake의 증거가 아니다.
+
+기존 NPC 이동 11개와 하천 8개 EditMode 회귀 테스트도 [최종 테스트 결과](city-rebuild-v002-final-tests.xml)에서 **19/19 PASS**다. 실제 장면의 왕복 이동은 별도 Play Mode 결과를 근거로 판정했다.

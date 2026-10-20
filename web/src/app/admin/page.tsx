@@ -2,10 +2,12 @@
 
 import { FormEvent, useCallback, useEffect, useState } from "react";
 import CreateSession from "./CreateSession";
+import EventLocations from "./EventLocations";
+import { V002_MAP_VERSION } from "@/lib/city-builds";
 import styles from "./admin.module.css";
 
 type Reason={code:string;message:string};
-type Session={id:string;name:string;status:"DRAFT"|"RUNNING"|"CLOSING"|"FINALIZED";starts_at:string|null;scheduled_end_at:string;duration_seconds:number|null;auto_cutoff_at:string;end_requested_at:string|null;finalized_at:string|null;end_mode:"AUTO"|"MANUAL"|null;participant_count:number;response_count:number;can_start:boolean;readiness:Reason[]};
+type Session={map_version:string|null;path_version:string|null;id:string;name:string;status:"DRAFT"|"RUNNING"|"CLOSING"|"FINALIZED";starts_at:string|null;scheduled_end_at:string;duration_seconds:number|null;auto_cutoff_at:string;end_requested_at:string|null;finalized_at:string|null;end_mode:"AUTO"|"MANUAL"|null;participant_count:number;response_count:number;can_start:boolean;readiness:Reason[]};
 const statusLabel={DRAFT:"시작 전",RUNNING:"진행 중",CLOSING:"종료 처리 중",FINALIZED:"최종 확정"};
 
 export default function AdminPage(){
@@ -25,6 +27,8 @@ export default function AdminPage(){
     <section className={styles.summary} aria-label="회차 상태 요약">{(["RUNNING","CLOSING","DRAFT","FINALIZED"] as const).map(status=><div key={status}><strong>{sessions.filter(s=>s.status===status).length}</strong><span>{statusLabel[status]}</span></div>)}</section>
     <section className={styles.list}>{sessions.map(session=><article key={session.id} className={styles.card}>
       <div className={styles.cardTop}><div><span className={styles.badge} data-status={session.status}>{statusLabel[session.status]}</span><h2>{session.name}</h2><code>{session.id}</code></div><div className={styles.counts}><span>참여자 <strong>{session.participant_count}</strong></span><span>응답 <strong>{session.response_count}</strong></span></div></div>
+      <p>맵: {session.map_version ?? "미설정"} · 경로: {session.path_version ?? "미설정"}</p>
+      {session.status==="DRAFT" && session.map_version===V002_MAP_VERSION && <EventLocations sessionId={session.id} mapVersion={session.map_version} token={token} onSaved={()=>load(token)}/>}
       <dl className={styles.meta}><div><dt>종료 예정</dt><dd>{session.status==="DRAFT" && session.duration_seconds ? `시작 후 ${session.duration_seconds}초` : new Date(session.scheduled_end_at).toLocaleString("ko-KR")}</dd></div>{session.finalized_at&&<div><dt>최종 확정</dt><dd>{new Date(session.finalized_at).toLocaleString("ko-KR")}</dd></div>}</dl>
       {session.status==="DRAFT"&&<div className={session.can_start?styles.ready:styles.reasons}><strong>{session.can_start?"시작 준비 완료":"시작 전 확인 필요"}</strong>{!session.can_start&&<ul>{session.readiness.map(reason=><li key={reason.code}>{reason.message}</li>)}</ul>}</div>}
       {session.status==="CLOSING"&&<div className={styles.processing}><span/><div><strong>종료 결과를 확정하는 중입니다</strong><p>중복 요청은 막혀 있으며 화면이 자동으로 상태를 확인합니다.</p></div></div>}

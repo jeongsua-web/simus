@@ -1,6 +1,8 @@
 import type { PoolClient } from "pg";
 import { randomInt } from "node:crypto";
 import { ApiError, transaction } from "./api";
+import { MAP_VERSION, routeBetween, pathLength } from "./city-v002-graph.mjs";
+import { guidanceMotion, guidancePosition, resumedNpc, returnMotion } from "./npc-graph-motion";
 import { npcPosition, type Npc } from "@/app/participate/npc-motion";
 
 type Point = number[];
@@ -8,6 +10,7 @@ type State = {
   waiting_since: Date; motion_epoch: Date; paused_ms: string;
   resume_motion: Npc["motion"] | null; guidance_point: Point | null;
   guidance_origin: Point | null; guidance_started_at: Date | null;
+  guidance_motion?: Npc["motion"] | null;
 };
 type Member = State & {
   participant_id: string; npc_id: string; npc_motion: Npc["motion"];
@@ -33,7 +36,7 @@ type World = {
 };
 type Transition = {
   participant_id: string; situation_id?: string; trigger_kind?: string;
-  started_at?: string; guidance_point?: Point; guidance_origin?: Point;
+  started_at?: string; guidance_point?: Point; guidance_origin?: Point; guidance_motion?: Npc["motion"];
 };
 const distance = (a: Point, b: Point) => Math.hypot(...a.map((n, i) => n - b[i]));
 const timestamp = (value: Date | string) => new Date(value).getTime();
@@ -63,6 +66,10 @@ async function readWorld(db: PoolClient, session: Session, participant?: string)
       AND e.participant_id=p.participant_id AND e.status='ACTIVE'
     WHERE p.session_id=$1 AND ($2::uuid IS NULL OR p.participant_id=$2)`,
   [session.id, participant ?? null]);
+  // Runtime routes can adjust speed while the joined motion snapshot stays immutable.
+  for (const member of members.rows) {
+    if (member.resume_motion) member.npc_motion = { ...member.npc_motion, speed_mps: member.resume_motion.speed_mps };
+  }
   // A ticker pass has no work when every participant is waiting for a decision.
   if (!participant && members.rows.every(p => p.active)) {
     return { session, members: members.rows, situations: [], answered: new Map() };
@@ -88,12 +95,21 @@ function transitionFor(world: World, p: Member): Transition | null {
   if (p.active || !isOpen(world.session)) return null;
   const now = timestamp(world.session.now);
   const fresh = world.situations.filter(t => !world.answered.get(p.participant_id)?.has(t.id));
-  const npc: Npc = { npc_id: p.npc_id, epoch: new Date(p.motion_epoch).toISOString(),
-    motion: p.resume_motion ?? p.npc_motion };
-  const point = p.guidance_point ? guidedPoint(p, p.npc_motion.speed_mps, now) :
-    npcPosition(npc, now - Number(p.paused_ms));
+  const npc = resumedNpc(p, p.npc_motion, now);
+  const point = p.guidance_point ? guidancePosition(p, p.npc_motion, now) : npcPosition(npc, now);
   const eligible = fresh.filter(t => t.event_location?.map_version === p.npc_motion.map_version);
-  let selected = pick(eligible.filter(t => point && distance(t.event_location!.point, point) <= t.event_location!.radius_m));
+  const routeTo = (target: Point) => {
+    if (!point) return null;
+    try { return p.npc_motion.map_version === MAP_VERSION ? routeBetween(point, target) : [point, target]; }
+    catch { return null; } // Off-graph or disconnected locations cannot create a chord.
+  };
+  const destinations = () => eligible.map(t => ({ situation: t, route: routeTo(t.event_location!.point) }))
+    .filter((t): t is { situation: Situation; route: Point[] } => t.route !== null);
+  let selected = pick(eligible.filter(t => {
+    if (!point || distance(point, t.event_location!.point) > t.event_location!.radius_m) return false;
+    const route = routeTo(t.event_location!.point);
+    return route && pathLength(route) <= t.event_location!.radius_m;
+  }));
   let trigger_kind = now - timestamp(p.waiting_since) >= 90000 ? "DEADLINE" : "LOCATION";
   if (!selected && now - timestamp(p.waiting_since) >= 90000) {
     // Until map placement is authored, unlocated content participates in the
@@ -104,14 +120,21 @@ function transitionFor(world: World, p: Member): Transition | null {
       (!hasAuthoredContent || !isPlaceholder(t))));
     trigger_kind = "DEADLINE";
   }
+  if (!selected && p.npc_motion.map_version === MAP_VERSION && now - timestamp(p.waiting_since) >= 90000)
+    selected = pick(destinations().map(t => t.situation)); // Deadline freezes the current graph pose, never teleports.
   if (selected) return {
     participant_id: p.participant_id, situation_id: selected.id, trigger_kind,
     // Keep actual delivery/pose time honest; deadline_at separately records the target.
     started_at: new Date(world.session.now).toISOString(),
   };
   if (!p.guidance_point && now - timestamp(p.waiting_since) >= 60000 && point && eligible.length) {
-    eligible.sort((a, b) => distance(a.event_location!.point, point) - distance(b.event_location!.point, point));
-    return { participant_id: p.participant_id, guidance_point: eligible[0].event_location!.point, guidance_origin: point };
+    if (p.npc_motion.map_version === MAP_VERSION && p.npc_motion.speed_mps === 0) return null;
+    const routes = destinations().sort((a, b) => pathLength(a.route) - pathLength(b.route));
+    if (!routes.length) return null;
+    const target = routes[0];
+    return { participant_id: p.participant_id, guidance_point: target.situation.event_location!.point, guidance_origin: point,
+      ...(p.npc_motion.map_version === MAP_VERSION ? { guidance_motion: guidanceMotion({ guidance_point: target.situation.event_location!.point, guidance_origin: point,
+        guidance_motion: { ...p.npc_motion, points: target.route, loop: false } }, p.npc_motion) } : {}) };
   }
   return null;
 }
@@ -133,14 +156,15 @@ async function applyTransitions(db: PoolClient, world: World) {
   }
   if (guidance.length) {
     await db.query(`UPDATE simus.npc_event_states st SET guidance_point=r.guidance_point,
-      guidance_origin=r.guidance_origin,guidance_started_at=$3,motion_revision=motion_revision+1
-      FROM jsonb_to_recordset($2::jsonb) AS r(participant_id uuid,guidance_point jsonb,guidance_origin jsonb)
+      guidance_origin=r.guidance_origin,guidance_motion=r.guidance_motion,guidance_started_at=$3,motion_revision=motion_revision+1
+      FROM jsonb_to_recordset($2::jsonb) AS r(participant_id uuid,guidance_point jsonb,guidance_origin jsonb,guidance_motion jsonb)
       WHERE st.session_id=$1 AND st.participant_id=r.participant_id`,
     [world.session.id, JSON.stringify(guidance), world.session.now]);
     for (const t of guidance) {
       const member = world.members.find(p => p.participant_id === t.participant_id)!;
       member.guidance_point = t.guidance_point!;
       member.guidance_origin = t.guidance_origin!;
+      member.guidance_motion = t.guidance_motion ?? null;
       member.guidance_started_at = world.session.now;
     }
   }
@@ -176,19 +200,16 @@ export async function completeEvent(db: PoolClient, sid: string, pid: string, ei
     FROM simus.npc_event_states st JOIN simus.participant_sessions p USING(session_id,participant_id)
     JOIN simus.npc_events e ON e.id=$3 WHERE st.session_id=$1 AND st.participant_id=$2`, [sid, pid, eid])).rows[0];
   if (row.guidance_point) {
-    const original = row.npc_motion;
-    const point = guidedPoint(row, original.speed_mps, timestamp(row.started_at));
-    const points = original.points;
-    let nearest = 0;
-    points.forEach((p, i) => { if (distance(p, point) < distance(points[nearest], point)) nearest = i; });
-    const route = [point, ...points.slice(nearest), ...(original.loop ? points.slice(0, nearest) : [])];
+    const original = { ...row.npc_motion, speed_mps: row.resume_motion?.speed_mps ?? row.npc_motion.speed_mps };
+    const point = guidancePosition(row, original, timestamp(row.started_at));
+    const route = returnMotion(original, point);
     await db.query(`UPDATE simus.npc_event_states SET resume_motion=$3,motion_epoch=clock_timestamp(),paused_ms=0
-      WHERE session_id=$1 AND participant_id=$2`, [sid, pid, JSON.stringify({ ...original, points: route })]);
+      WHERE session_id=$1 AND participant_id=$2`, [sid, pid, JSON.stringify(route)]);
   }
   await db.query(`UPDATE simus.npc_event_states st SET waiting_since=clock_timestamp(),
     motion_revision=motion_revision+1,paused_ms=CASE WHEN st.guidance_point IS NOT NULL THEN 0
       ELSE st.paused_ms+floor(extract(epoch FROM(clock_timestamp()-e.started_at))*1000)::bigint END,
-    guidance_point=NULL,guidance_origin=NULL,guidance_started_at=NULL
+    guidance_point=NULL,guidance_origin=NULL,guidance_started_at=NULL,guidance_motion=NULL
     FROM simus.npc_events e WHERE st.session_id=$1 AND st.participant_id=$2 AND e.id=$3`, [sid, pid, eid]);
   await db.query(`UPDATE simus.npc_events SET status='COMPLETED',completed_at=clock_timestamp() WHERE id=$1`, [eid]);
 }

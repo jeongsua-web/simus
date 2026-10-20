@@ -4,7 +4,7 @@ import { FormEvent, useRef, useState } from "react";
 import styles from "./admin.module.css";
 
 type Template = { id: string; name: string; status: string };
-type Creation = { template_session_id: string; name: string; duration_seconds: number; impact_scale: number; request_key: string };
+type Creation = { template_session_id: string; name: string; duration_seconds: number; impact_scale: number; request_key: string; npc_profile?: string };
 
 export default function CreateSession({ token, sessions, onCreated }: { token: string; sessions: Template[]; onCreated: () => Promise<void> }) {
   const [error, setError] = useState("");
@@ -19,6 +19,7 @@ export default function CreateSession({ token, sessions, onCreated }: { token: s
     const payload = pending ?? {
       template_session_id: String(form.get("template")), name: String(form.get("name")),
       duration_seconds: Number(form.get("duration")), impact_scale: Number(form.get("scale")), request_key: crypto.randomUUID(),
+      ...(form.get("map") === "city-rebuild-v002" ? { npc_profile: "city-rebuild-v002" } : {}),
     };
     inFlight.current = true;
     setBusy(true); setError(""); setPending(payload);
@@ -43,6 +44,8 @@ export default function CreateSession({ token, sessions, onCreated }: { token: s
       <fieldset disabled={busy || pending !== null}>
         <label>복사할 회차<select name="template" required>{templates.map(session => <option key={session.id} value={session.id}>{session.name} ({session.id.slice(0, 8)})</option>)}</select></label>
         <label>새 회차 이름<input name="name" required maxLength={120} defaultValue="새로운 도시의 하루" /></label>
+        <label>도시 맵<select name="map" defaultValue="city-rebuild-v002"><option value="city-rebuild-v002">CityRebuild_v002</option><option value="legacy">기존 회차 생성 방식</option></select></label>
+        <p>v002는 새 보행 경로를 적용합니다. 다른 맵의 상황 위치는 복사하지 않으며, 시작 전 상황 위치를 설정할 수 있습니다.</p>
         <label>진행 시간(초)<input name="duration" type="number" min={10} max={86400} step={1} required defaultValue={300} /></label>
         <label>도시 영향 배율<input name="scale" type="number" min={0} max={1} step="0.01" required defaultValue={0.1} /></label>
       </fieldset>

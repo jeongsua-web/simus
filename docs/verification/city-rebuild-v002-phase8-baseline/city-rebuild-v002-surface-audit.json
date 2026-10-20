@@ -1,0 +1,2061 @@
+{
+  "scene": "Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity",
+  "scene_sha256": "f130d18e40a517d87bbaa6fa39442a64d86850771d686aafc7d12158e7bb14c7",
+  "layout_sha256": "3e98ea485bd92dc9c2528d0420b5999a0336f700270c0f73f7630aa214fbd105",
+  "method": "409 saved graph edge centre-lines, <=1m sample spacing; real Unity Physics.RaycastAll on saved collider geometry, existing MoveTowards/NavMesh not invoked",
+  "samples": 10517,
+  "supported_samples": 10517,
+  "missing_surface_samples": 0,
+  "building_hit_samples": 0,
+  "result": "PASS",
+  "missing_surface": [],
+  "building_hits": [],
+  "edges": [
+    {
+      "id": "R01LE00_S0",
+      "samples": 95,
+      "missing_surface": 0
+    },
+    {
+      "id": "R01LE01_S0",
+      "samples": 38,
+      "missing_surface": 0
+    },
+    {
+      "id": "R01LE01_S1",
+      "samples": 6,
+      "missing_surface": 0
+    },
+    {
+      "id": "R01LE02_S0",
+      "samples": 6,
+      "missing_surface": 0
+    },
+    {
+      "id": "R01LE02_S1",
+      "samples": 92,
+      "missing_surface": 0
+    },
+    {
+      "id": "R01LE03_S0",
+      "samples": 111,
+      "missing_surface": 0
+    },
+    {
+      "id": "R01LE04_S0",
+      "samples": 92,
+      "missing_surface": 0
+    },
+    {
+      "id": "R01RE00_S0",
+      "samples": 94,
+      "missing_surface": 0
+    },
+    {
+      "id": "R01RE01_S0",
+      "samples": 36,
+      "missing_surface": 0
+    },
+    {
+      "id": "R01RE01_S1",
+      "samples": 7,
+      "missing_surface": 0
+    },
+    {
+      "id": "R01RE02_S0",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "R01RE02_S1",
+      "samples": 79,
+      "missing_surface": 0
+    },
+    {
+      "id": "R01RE02_S2",
+      "samples": 8,
+      "missing_surface": 0
+    },
+    {
+      "id": "R01RE02_S3",
+      "samples": 8,
+      "missing_surface": 0
+    },
+    {
+      "id": "R01RE03_S0",
+      "samples": 112,
+      "missing_surface": 0
+    },
+    {
+      "id": "R01RE04_S0",
+      "samples": 93,
+      "missing_surface": 0
+    },
+    {
+      "id": "R01_END_0_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R01_END_0_S1",
+      "samples": 11,
+      "missing_surface": 0
+    },
+    {
+      "id": "R01_END_0_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R01_END_-1_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R01_END_-1_S1",
+      "samples": 11,
+      "missing_surface": 0
+    },
+    {
+      "id": "R01_END_-1_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02LE00_S0",
+      "samples": 126,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02LE01_S0",
+      "samples": 71,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02LE02_S0",
+      "samples": 53,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02LE02_S1",
+      "samples": 6,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02LE03_S0",
+      "samples": 6,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02LE03_S1",
+      "samples": 81,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02LE03_S2",
+      "samples": 6,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02LE04_S0",
+      "samples": 4,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02LE04_S1",
+      "samples": 75,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02RE00_S0",
+      "samples": 123,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02RE00_S1",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02RE01_S0",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02RE01_S1",
+      "samples": 65,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02RE01_S2",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02RE02_S0",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02RE02_S1",
+      "samples": 50,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02RE02_S2",
+      "samples": 6,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02RE03_S0",
+      "samples": 6,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02RE03_S1",
+      "samples": 82,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02RE04_S0",
+      "samples": 75,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02_END_0_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02_END_0_S1",
+      "samples": 10,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02_END_0_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02_END_-1_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02_END_-1_S1",
+      "samples": 10,
+      "missing_surface": 0
+    },
+    {
+      "id": "R02_END_-1_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R03LE00_S0",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "R03LE00_S1",
+      "samples": 60,
+      "missing_surface": 0
+    },
+    {
+      "id": "R03LE01_S0",
+      "samples": 79,
+      "missing_surface": 0
+    },
+    {
+      "id": "R03LE02_S0",
+      "samples": 76,
+      "missing_surface": 0
+    },
+    {
+      "id": "R03LE02_S1",
+      "samples": 6,
+      "missing_surface": 0
+    },
+    {
+      "id": "R03LE03_S0",
+      "samples": 3,
+      "missing_surface": 0
+    },
+    {
+      "id": "R03LE03_S1",
+      "samples": 57,
+      "missing_surface": 0
+    },
+    {
+      "id": "R03RE00_S0",
+      "samples": 4,
+      "missing_surface": 0
+    },
+    {
+      "id": "R03RE00_S1",
+      "samples": 60,
+      "missing_surface": 0
+    },
+    {
+      "id": "R03RE01_S0",
+      "samples": 79,
+      "missing_surface": 0
+    },
+    {
+      "id": "R03RE02_S0",
+      "samples": 79,
+      "missing_surface": 0
+    },
+    {
+      "id": "R03RE03_S0",
+      "samples": 57,
+      "missing_surface": 0
+    },
+    {
+      "id": "R03_END_0_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R03_END_0_S1",
+      "samples": 8,
+      "missing_surface": 0
+    },
+    {
+      "id": "R03_END_0_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R03_END_-1_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R03_END_-1_S1",
+      "samples": 8,
+      "missing_surface": 0
+    },
+    {
+      "id": "R03_END_-1_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R04LE00_S0",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "R04LE00_S1",
+      "samples": 67,
+      "missing_surface": 0
+    },
+    {
+      "id": "R04LE01_S0",
+      "samples": 48,
+      "missing_surface": 0
+    },
+    {
+      "id": "R04LE02_S0",
+      "samples": 55,
+      "missing_surface": 0
+    },
+    {
+      "id": "R04RE00_S0",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "R04RE00_S1",
+      "samples": 64,
+      "missing_surface": 0
+    },
+    {
+      "id": "R04RE01_S0",
+      "samples": 43,
+      "missing_surface": 0
+    },
+    {
+      "id": "R04RE02_S0",
+      "samples": 52,
+      "missing_surface": 0
+    },
+    {
+      "id": "R04_END_0_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R04_END_0_S1",
+      "samples": 8,
+      "missing_surface": 0
+    },
+    {
+      "id": "R04_END_0_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R04_END_-1_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R04_END_-1_S1",
+      "samples": 8,
+      "missing_surface": 0
+    },
+    {
+      "id": "R04_END_-1_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R05LE00_S0",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "R05LE00_S1",
+      "samples": 57,
+      "missing_surface": 0
+    },
+    {
+      "id": "R05LE01_S0",
+      "samples": 46,
+      "missing_surface": 0
+    },
+    {
+      "id": "R05RE00_S0",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "R05RE00_S1",
+      "samples": 59,
+      "missing_surface": 0
+    },
+    {
+      "id": "R05RE01_S0",
+      "samples": 48,
+      "missing_surface": 0
+    },
+    {
+      "id": "R05_END_0_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R05_END_0_S1",
+      "samples": 7,
+      "missing_surface": 0
+    },
+    {
+      "id": "R05_END_0_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R05_END_-1_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R05_END_-1_S1",
+      "samples": 7,
+      "missing_surface": 0
+    },
+    {
+      "id": "R05_END_-1_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R06LE00_S0",
+      "samples": 64,
+      "missing_surface": 0
+    },
+    {
+      "id": "R06LE01_S0",
+      "samples": 44,
+      "missing_surface": 0
+    },
+    {
+      "id": "R06RE00_S0",
+      "samples": 69,
+      "missing_surface": 0
+    },
+    {
+      "id": "R06RE01_S0",
+      "samples": 49,
+      "missing_surface": 0
+    },
+    {
+      "id": "R06_END_0_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R06_END_0_S1",
+      "samples": 7,
+      "missing_surface": 0
+    },
+    {
+      "id": "R06_END_0_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R06_END_-1_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R06_END_-1_S1",
+      "samples": 7,
+      "missing_surface": 0
+    },
+    {
+      "id": "R06_END_-1_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R07LE00_S0",
+      "samples": 36,
+      "missing_surface": 0
+    },
+    {
+      "id": "R07LE01_S0",
+      "samples": 35,
+      "missing_surface": 0
+    },
+    {
+      "id": "R07LE02_S0",
+      "samples": 51,
+      "missing_surface": 0
+    },
+    {
+      "id": "R07LE02_S1",
+      "samples": 3,
+      "missing_surface": 0
+    },
+    {
+      "id": "R07RE00_S0",
+      "samples": 35,
+      "missing_surface": 0
+    },
+    {
+      "id": "R07RE01_S0",
+      "samples": 31,
+      "missing_surface": 0
+    },
+    {
+      "id": "R07RE02_S0",
+      "samples": 46,
+      "missing_surface": 0
+    },
+    {
+      "id": "R07RE02_S1",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "R07_END_0_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R07_END_0_S1",
+      "samples": 7,
+      "missing_surface": 0
+    },
+    {
+      "id": "R07_END_0_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R07_END_-1_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "R07_END_-1_S1",
+      "samples": 7,
+      "missing_surface": 0
+    },
+    {
+      "id": "R07_END_-1_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "J01_CORNER_1_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "J01_CORNER_1_S1",
+      "samples": 10,
+      "missing_surface": 0
+    },
+    {
+      "id": "J01_CORNER_1_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "J01_CORNER_2_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "J01_CORNER_2_S1",
+      "samples": 7,
+      "missing_surface": 0
+    },
+    {
+      "id": "J01_CORNER_2_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "J01_CORNER_3_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "J01_CORNER_3_S1",
+      "samples": 7,
+      "missing_surface": 0
+    },
+    {
+      "id": "J01_CORNER_3_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "J02_CORNER_1_S0",
+      "samples": 8,
+      "missing_surface": 0
+    },
+    {
+      "id": "J02_CORNER_2_S0",
+      "samples": 6,
+      "missing_surface": 0
+    },
+    {
+      "id": "J02_CORNER_2_S1",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "J02_CORNER_3_S0",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "J02_CORNER_3_S1",
+      "samples": 3,
+      "missing_surface": 0
+    },
+    {
+      "id": "J02_CORNER_3_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "J03_CORNER_1_S0",
+      "samples": 7,
+      "missing_surface": 0
+    },
+    {
+      "id": "J03_CORNER_2_S0",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "J03_CORNER_2_S1",
+      "samples": 3,
+      "missing_surface": 0
+    },
+    {
+      "id": "J03_CORNER_2_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "J03_CORNER_3_S0",
+      "samples": 6,
+      "missing_surface": 0
+    },
+    {
+      "id": "J03_CORNER_3_S1",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "J04_CORNER_1_S0",
+      "samples": 8,
+      "missing_surface": 0
+    },
+    {
+      "id": "J04_CORNER_2_S0",
+      "samples": 7,
+      "missing_surface": 0
+    },
+    {
+      "id": "J04_CORNER_2_S1",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "J04_CORNER_3_S0",
+      "samples": 4,
+      "missing_surface": 0
+    },
+    {
+      "id": "J04_CORNER_3_S1",
+      "samples": 3,
+      "missing_surface": 0
+    },
+    {
+      "id": "J04_CORNER_3_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "J05_JOIN_L_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "J05_JOIN_L_S1",
+      "samples": 4,
+      "missing_surface": 0
+    },
+    {
+      "id": "J05_JOIN_R_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "J05_JOIN_R_S1",
+      "samples": 4,
+      "missing_surface": 0
+    },
+    {
+      "id": "J05_MAIN_JOIN_S0",
+      "samples": 4,
+      "missing_surface": 0
+    },
+    {
+      "id": "J05_MAIN_JOIN_S1",
+      "samples": 9,
+      "missing_surface": 0
+    },
+    {
+      "id": "J06_CORNER_1_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "J06_CORNER_1_S1",
+      "samples": 7,
+      "missing_surface": 0
+    },
+    {
+      "id": "J06_CORNER_1_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "J06_CORNER_2_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "J06_CORNER_2_S1",
+      "samples": 7,
+      "missing_surface": 0
+    },
+    {
+      "id": "J06_CORNER_2_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "J06_CORNER_3_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "J06_CORNER_3_S1",
+      "samples": 4,
+      "missing_surface": 0
+    },
+    {
+      "id": "J06_CORNER_3_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "LWE00_S0",
+      "samples": 45,
+      "missing_surface": 0
+    },
+    {
+      "id": "LWE01_S0",
+      "samples": 47,
+      "missing_surface": 0
+    },
+    {
+      "id": "LWE02_S0",
+      "samples": 41,
+      "missing_surface": 0
+    },
+    {
+      "id": "LWE03_S0",
+      "samples": 19,
+      "missing_surface": 0
+    },
+    {
+      "id": "LWE03_S1",
+      "samples": 14,
+      "missing_surface": 0
+    },
+    {
+      "id": "LWE04_S0",
+      "samples": 12,
+      "missing_surface": 0
+    },
+    {
+      "id": "LWE04_S1",
+      "samples": 20,
+      "missing_surface": 0
+    },
+    {
+      "id": "LWE05_S0",
+      "samples": 37,
+      "missing_surface": 0
+    },
+    {
+      "id": "LWE06_S0",
+      "samples": 12,
+      "missing_surface": 0
+    },
+    {
+      "id": "LWE06_S1",
+      "samples": 29,
+      "missing_surface": 0
+    },
+    {
+      "id": "LWE07_S0",
+      "samples": 26,
+      "missing_surface": 0
+    },
+    {
+      "id": "LWE07_S1",
+      "samples": 14,
+      "missing_surface": 0
+    },
+    {
+      "id": "LOWER_CONNECT_ZERO",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "MAIN_NORTH_JOIN_ZERO",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "MAIN_SOUTH_JOIN_ZERO",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "X_GATE_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "X_GATE_S1",
+      "samples": 11,
+      "missing_surface": 0
+    },
+    {
+      "id": "X_GATE_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "MAIN_PARK_JOIN_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "C_GATE_LINK_S0",
+      "samples": 17,
+      "missing_surface": 0
+    },
+    {
+      "id": "C_SPINE_S0",
+      "samples": 11,
+      "missing_surface": 0
+    },
+    {
+      "id": "C_SPINE_S1",
+      "samples": 150,
+      "missing_surface": 0
+    },
+    {
+      "id": "C_BACK_S0",
+      "samples": 24,
+      "missing_surface": 0
+    },
+    {
+      "id": "C_BACK_S1",
+      "samples": 18,
+      "missing_surface": 0
+    },
+    {
+      "id": "C_BACK_S2",
+      "samples": 28,
+      "missing_surface": 0
+    },
+    {
+      "id": "C_PARK_S0",
+      "samples": 72,
+      "missing_surface": 0
+    },
+    {
+      "id": "BACK_NEIGHBORHOOD_S0",
+      "samples": 15,
+      "missing_surface": 0
+    },
+    {
+      "id": "BACK_NEIGHBORHOOD_S1",
+      "samples": 102,
+      "missing_surface": 0
+    },
+    {
+      "id": "BACK_NEIGHBORHOOD_S2",
+      "samples": 10,
+      "missing_surface": 0
+    },
+    {
+      "id": "BACK_NEIGHBORHOOD_S3",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "BACK_NEIGHBORHOOD_S4",
+      "samples": 6,
+      "missing_surface": 0
+    },
+    {
+      "id": "PKE00_S0",
+      "samples": 24,
+      "missing_surface": 0
+    },
+    {
+      "id": "PKE01_S0",
+      "samples": 35,
+      "missing_surface": 0
+    },
+    {
+      "id": "PKE02_S0",
+      "samples": 33,
+      "missing_surface": 0
+    },
+    {
+      "id": "PKE03_S0",
+      "samples": 42,
+      "missing_surface": 0
+    },
+    {
+      "id": "PKE04_S0",
+      "samples": 38,
+      "missing_surface": 0
+    },
+    {
+      "id": "PKE05_S0",
+      "samples": 39,
+      "missing_surface": 0
+    },
+    {
+      "id": "PKE06_S0",
+      "samples": 28,
+      "missing_surface": 0
+    },
+    {
+      "id": "PKE07_S0",
+      "samples": 36,
+      "missing_surface": 0
+    },
+    {
+      "id": "PKE08_S0",
+      "samples": 35,
+      "missing_surface": 0
+    },
+    {
+      "id": "PKE09_S0",
+      "samples": 31,
+      "missing_surface": 0
+    },
+    {
+      "id": "PK_ENTRY_ZERO",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "PK_COMMERCE_ZERO",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "PK_LOOP_S0",
+      "samples": 46,
+      "missing_surface": 0
+    },
+    {
+      "id": "PK_LOOP_S1",
+      "samples": 73,
+      "missing_surface": 0
+    },
+    {
+      "id": "REST_2_LINK_S0",
+      "samples": 31,
+      "missing_surface": 0
+    },
+    {
+      "id": "C00_LINK_S0",
+      "samples": 27,
+      "missing_surface": 0
+    },
+    {
+      "id": "C00_LINK_S1",
+      "samples": 24,
+      "missing_surface": 0
+    },
+    {
+      "id": "C01_LINK_S0",
+      "samples": 19,
+      "missing_surface": 0
+    },
+    {
+      "id": "C01_LINK_S1",
+      "samples": 35,
+      "missing_surface": 0
+    },
+    {
+      "id": "C01_LINK_S2",
+      "samples": 31,
+      "missing_surface": 0
+    },
+    {
+      "id": "C02_LINK_S0",
+      "samples": 12,
+      "missing_surface": 0
+    },
+    {
+      "id": "C02_LINK_S1",
+      "samples": 34,
+      "missing_surface": 0
+    },
+    {
+      "id": "C02_LINK_S2",
+      "samples": 30,
+      "missing_surface": 0
+    },
+    {
+      "id": "C03_LINK_S0",
+      "samples": 19,
+      "missing_surface": 0
+    },
+    {
+      "id": "C04_LINK_S0",
+      "samples": 9,
+      "missing_surface": 0
+    },
+    {
+      "id": "C04_LINK_S1",
+      "samples": 20,
+      "missing_surface": 0
+    },
+    {
+      "id": "C04_LINK_S2",
+      "samples": 14,
+      "missing_surface": 0
+    },
+    {
+      "id": "C04_LINK_S3",
+      "samples": 54,
+      "missing_surface": 0
+    },
+    {
+      "id": "C05_LINK_S0",
+      "samples": 12,
+      "missing_surface": 0
+    },
+    {
+      "id": "C05_LINK_S1",
+      "samples": 14,
+      "missing_surface": 0
+    },
+    {
+      "id": "C05_LINK_S2",
+      "samples": 54,
+      "missing_surface": 0
+    },
+    {
+      "id": "C06_LINK_S0",
+      "samples": 10,
+      "missing_surface": 0
+    },
+    {
+      "id": "C06_LINK_S1",
+      "samples": 54,
+      "missing_surface": 0
+    },
+    {
+      "id": "C07_LINK_S0",
+      "samples": 7,
+      "missing_surface": 0
+    },
+    {
+      "id": "C07_LINK_S1",
+      "samples": 66,
+      "missing_surface": 0
+    },
+    {
+      "id": "C08_LINK_S0",
+      "samples": 9,
+      "missing_surface": 0
+    },
+    {
+      "id": "C08_LINK_S1",
+      "samples": 107,
+      "missing_surface": 0
+    },
+    {
+      "id": "C09_LINK_S0",
+      "samples": 13,
+      "missing_surface": 0
+    },
+    {
+      "id": "C09_LINK_S1",
+      "samples": 18,
+      "missing_surface": 0
+    },
+    {
+      "id": "C09_LINK_S2",
+      "samples": 30,
+      "missing_surface": 0
+    },
+    {
+      "id": "C09_LINK_S3",
+      "samples": 107,
+      "missing_surface": 0
+    },
+    {
+      "id": "C10_LINK_S0",
+      "samples": 6,
+      "missing_surface": 0
+    },
+    {
+      "id": "C10_LINK_S1",
+      "samples": 15,
+      "missing_surface": 0
+    },
+    {
+      "id": "C10_LINK_S2",
+      "samples": 25,
+      "missing_surface": 0
+    },
+    {
+      "id": "C10_LINK_S3",
+      "samples": 135,
+      "missing_surface": 0
+    },
+    {
+      "id": "C11_LINK_S0",
+      "samples": 16,
+      "missing_surface": 0
+    },
+    {
+      "id": "C11_LINK_S1",
+      "samples": 35,
+      "missing_surface": 0
+    },
+    {
+      "id": "C11_LINK_S2",
+      "samples": 29,
+      "missing_surface": 0
+    },
+    {
+      "id": "C11_LINK_S3",
+      "samples": 29,
+      "missing_surface": 0
+    },
+    {
+      "id": "C11_LINK_S4",
+      "samples": 81,
+      "missing_surface": 0
+    },
+    {
+      "id": "C12_LINK_S0",
+      "samples": 8,
+      "missing_surface": 0
+    },
+    {
+      "id": "C12_LINK_S1",
+      "samples": 28,
+      "missing_surface": 0
+    },
+    {
+      "id": "C12_LINK_S2",
+      "samples": 29,
+      "missing_surface": 0
+    },
+    {
+      "id": "C12_LINK_S3",
+      "samples": 29,
+      "missing_surface": 0
+    },
+    {
+      "id": "C12_LINK_S4",
+      "samples": 81,
+      "missing_surface": 0
+    },
+    {
+      "id": "C13_LINK_S0",
+      "samples": 9,
+      "missing_surface": 0
+    },
+    {
+      "id": "C13_LINK_S1",
+      "samples": 28,
+      "missing_surface": 0
+    },
+    {
+      "id": "C13_LINK_S2",
+      "samples": 135,
+      "missing_surface": 0
+    },
+    {
+      "id": "B01_ACCESS_EDGE_S0",
+      "samples": 10,
+      "missing_surface": 0
+    },
+    {
+      "id": "B01_BRANCH_S0",
+      "samples": 21,
+      "missing_surface": 0
+    },
+    {
+      "id": "B01_BRANCH_S1",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "B02_ACCESS_EDGE_S0",
+      "samples": 9,
+      "missing_surface": 0
+    },
+    {
+      "id": "B02_BRANCH_S0",
+      "samples": 44,
+      "missing_surface": 0
+    },
+    {
+      "id": "B02_BRANCH_S1",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "B03_ACCESS_EDGE_S0",
+      "samples": 11,
+      "missing_surface": 0
+    },
+    {
+      "id": "B03_BRANCH_S0",
+      "samples": 68,
+      "missing_surface": 0
+    },
+    {
+      "id": "B03_BRANCH_S1",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "B04_ACCESS_EDGE_S0",
+      "samples": 8,
+      "missing_surface": 0
+    },
+    {
+      "id": "B04_BRANCH_S0",
+      "samples": 7,
+      "missing_surface": 0
+    },
+    {
+      "id": "B05_ACCESS_EDGE_S0",
+      "samples": 10,
+      "missing_surface": 0
+    },
+    {
+      "id": "B05_BRANCH_S0",
+      "samples": 32,
+      "missing_surface": 0
+    },
+    {
+      "id": "B06_ACCESS_EDGE_S0",
+      "samples": 8,
+      "missing_surface": 0
+    },
+    {
+      "id": "B06_BRANCH_S0",
+      "samples": 55,
+      "missing_surface": 0
+    },
+    {
+      "id": "B07_ACCESS_EDGE_S0",
+      "samples": 11,
+      "missing_surface": 0
+    },
+    {
+      "id": "B07_BRANCH_S0",
+      "samples": 82,
+      "missing_surface": 0
+    },
+    {
+      "id": "B08_ACCESS_EDGE_S0",
+      "samples": 15,
+      "missing_surface": 0
+    },
+    {
+      "id": "B08_BRANCH_S0",
+      "samples": 112,
+      "missing_surface": 0
+    },
+    {
+      "id": "B09_ACCESS_EDGE_S0",
+      "samples": 7,
+      "missing_surface": 0
+    },
+    {
+      "id": "B09_BRANCH_S0",
+      "samples": 11,
+      "missing_surface": 0
+    },
+    {
+      "id": "B10_ACCESS_EDGE_S0",
+      "samples": 6,
+      "missing_surface": 0
+    },
+    {
+      "id": "B10_BRANCH_S0",
+      "samples": 37,
+      "missing_surface": 0
+    },
+    {
+      "id": "B11_ACCESS_EDGE_S0",
+      "samples": 18,
+      "missing_surface": 0
+    },
+    {
+      "id": "B11_BRANCH_S0",
+      "samples": 69,
+      "missing_surface": 0
+    },
+    {
+      "id": "B12_ACCESS_EDGE_S0",
+      "samples": 8,
+      "missing_surface": 0
+    },
+    {
+      "id": "B12_BRANCH_S0",
+      "samples": 12,
+      "missing_surface": 0
+    },
+    {
+      "id": "B13_ACCESS_EDGE_S0",
+      "samples": 9,
+      "missing_surface": 0
+    },
+    {
+      "id": "B13_BRANCH_S0",
+      "samples": 8,
+      "missing_surface": 0
+    },
+    {
+      "id": "B14_ACCESS_EDGE_S0",
+      "samples": 136,
+      "missing_surface": 0
+    },
+    {
+      "id": "B14_BRANCH_S0",
+      "samples": 8,
+      "missing_surface": 0
+    },
+    {
+      "id": "B15_ACCESS_EDGE_S0",
+      "samples": 34,
+      "missing_surface": 0
+    },
+    {
+      "id": "B15_BRANCH_S0",
+      "samples": 73,
+      "missing_surface": 0
+    },
+    {
+      "id": "B16_ACCESS_EDGE_S0",
+      "samples": 24,
+      "missing_surface": 0
+    },
+    {
+      "id": "B16_BRANCH_S0",
+      "samples": 25,
+      "missing_surface": 0
+    },
+    {
+      "id": "B17_ACCESS_EDGE_S0",
+      "samples": 20,
+      "missing_surface": 0
+    },
+    {
+      "id": "B17_BRANCH_S0",
+      "samples": 7,
+      "missing_surface": 0
+    },
+    {
+      "id": "B18_ACCESS_EDGE_S0",
+      "samples": 115,
+      "missing_surface": 0
+    },
+    {
+      "id": "B18_BRANCH_S0",
+      "samples": 13,
+      "missing_surface": 0
+    },
+    {
+      "id": "B18_BRANCH_S1",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "B19_ACCESS_EDGE_S0",
+      "samples": 17,
+      "missing_surface": 0
+    },
+    {
+      "id": "B19_BRANCH_S0",
+      "samples": 32,
+      "missing_surface": 0
+    },
+    {
+      "id": "B19_BRANCH_S1",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "B20_ACCESS_EDGE_S0",
+      "samples": 11,
+      "missing_surface": 0
+    },
+    {
+      "id": "B20_BRANCH_S0",
+      "samples": 12,
+      "missing_surface": 0
+    },
+    {
+      "id": "B21_ACCESS_EDGE_S0",
+      "samples": 17,
+      "missing_surface": 0
+    },
+    {
+      "id": "B21_BRANCH_S0",
+      "samples": 29,
+      "missing_surface": 0
+    },
+    {
+      "id": "B21_BRANCH_S1",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "B22_ACCESS_EDGE_S0",
+      "samples": 22,
+      "missing_surface": 0
+    },
+    {
+      "id": "B22_BRANCH_S0",
+      "samples": 58,
+      "missing_surface": 0
+    },
+    {
+      "id": "B22_BRANCH_S1",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "B23_ACCESS_EDGE_S0",
+      "samples": 32,
+      "missing_surface": 0
+    },
+    {
+      "id": "B23_BRANCH_S0",
+      "samples": 67,
+      "missing_surface": 0
+    },
+    {
+      "id": "B23_BRANCH_S1",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "B24_ACCESS_EDGE_S0",
+      "samples": 54,
+      "missing_surface": 0
+    },
+    {
+      "id": "B24_BRANCH_S0",
+      "samples": 59,
+      "missing_surface": 0
+    },
+    {
+      "id": "B24_BRANCH_S1",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "B25_ACCESS_EDGE_S0",
+      "samples": 11,
+      "missing_surface": 0
+    },
+    {
+      "id": "B25_BRANCH_S0",
+      "samples": 29,
+      "missing_surface": 0
+    },
+    {
+      "id": "B25_BRANCH_S1",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "B26_ACCESS_EDGE_S0",
+      "samples": 12,
+      "missing_surface": 0
+    },
+    {
+      "id": "B26_ACCESS_EDGE_S1",
+      "samples": 29,
+      "missing_surface": 0
+    },
+    {
+      "id": "B26_ACCESS_EDGE_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "B26_ACCESS_EDGE_S3",
+      "samples": 7,
+      "missing_surface": 0
+    },
+    {
+      "id": "B26_ACCESS_EDGE_S4",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "B26_ACCESS_EDGE_S5",
+      "samples": 47,
+      "missing_surface": 0
+    },
+    {
+      "id": "B26_ACCESS_EDGE_S6",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "B26_BRANCH_S0",
+      "samples": 59,
+      "missing_surface": 0
+    },
+    {
+      "id": "B26_BRANCH_S1",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "B27_ACCESS_EDGE_S0",
+      "samples": 10,
+      "missing_surface": 0
+    },
+    {
+      "id": "B27_ACCESS_EDGE_S1",
+      "samples": 6,
+      "missing_surface": 0
+    },
+    {
+      "id": "B27_ACCESS_EDGE_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "B27_BRANCH_S0",
+      "samples": 46,
+      "missing_surface": 0
+    },
+    {
+      "id": "B28_ACCESS_EDGE_S0",
+      "samples": 9,
+      "missing_surface": 0
+    },
+    {
+      "id": "B28_ACCESS_EDGE_S1",
+      "samples": 19,
+      "missing_surface": 0
+    },
+    {
+      "id": "B28_ACCESS_EDGE_S2",
+      "samples": 11,
+      "missing_surface": 0
+    },
+    {
+      "id": "B28_BRANCH_S0",
+      "samples": 55,
+      "missing_surface": 0
+    },
+    {
+      "id": "B29_ACCESS_EDGE_S0",
+      "samples": 71,
+      "missing_surface": 0
+    },
+    {
+      "id": "B29_BRANCH_S0",
+      "samples": 22,
+      "missing_surface": 0
+    },
+    {
+      "id": "B30_ACCESS_EDGE_S0",
+      "samples": 68,
+      "missing_surface": 0
+    },
+    {
+      "id": "B30_BRANCH_S0",
+      "samples": 49,
+      "missing_surface": 0
+    },
+    {
+      "id": "B31_ACCESS_EDGE_S0",
+      "samples": 12,
+      "missing_surface": 0
+    },
+    {
+      "id": "B31_BRANCH_S0",
+      "samples": 50,
+      "missing_surface": 0
+    },
+    {
+      "id": "B32_ACCESS_EDGE_S0",
+      "samples": 19,
+      "missing_surface": 0
+    },
+    {
+      "id": "B32_BRANCH_S0",
+      "samples": 27,
+      "missing_surface": 0
+    },
+    {
+      "id": "B32_BRANCH_S1",
+      "samples": 4,
+      "missing_surface": 0
+    },
+    {
+      "id": "B33_ACCESS_EDGE_S0",
+      "samples": 25,
+      "missing_surface": 0
+    },
+    {
+      "id": "B33_BRANCH_S0",
+      "samples": 35,
+      "missing_surface": 0
+    },
+    {
+      "id": "B33_BRANCH_S1",
+      "samples": 4,
+      "missing_surface": 0
+    },
+    {
+      "id": "B34_ACCESS_EDGE_S0",
+      "samples": 15,
+      "missing_surface": 0
+    },
+    {
+      "id": "B34_BRANCH_S0",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "B35_ACCESS_EDGE_S0",
+      "samples": 43,
+      "missing_surface": 0
+    },
+    {
+      "id": "B35_BRANCH_S0",
+      "samples": 60,
+      "missing_surface": 0
+    },
+    {
+      "id": "B35_BRANCH_S1",
+      "samples": 4,
+      "missing_surface": 0
+    },
+    {
+      "id": "B36_ACCESS_EDGE_S0",
+      "samples": 29,
+      "missing_surface": 0
+    },
+    {
+      "id": "B36_BRANCH_ZERO",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "B37_ACCESS_EDGE_S0",
+      "samples": 18,
+      "missing_surface": 0
+    },
+    {
+      "id": "B37_BRANCH_S0",
+      "samples": 79,
+      "missing_surface": 0
+    },
+    {
+      "id": "B38_ACCESS_EDGE_S0",
+      "samples": 36,
+      "missing_surface": 0
+    },
+    {
+      "id": "B38_BRANCH_S0",
+      "samples": 79,
+      "missing_surface": 0
+    },
+    {
+      "id": "B39_ACCESS_EDGE_S0",
+      "samples": 61,
+      "missing_surface": 0
+    },
+    {
+      "id": "B39_BRANCH_S0",
+      "samples": 79,
+      "missing_surface": 0
+    },
+    {
+      "id": "B40_ACCESS_EDGE_S0",
+      "samples": 13,
+      "missing_surface": 0
+    },
+    {
+      "id": "B40_ACCESS_EDGE_S1",
+      "samples": 22,
+      "missing_surface": 0
+    },
+    {
+      "id": "B40_ACCESS_EDGE_S2",
+      "samples": 13,
+      "missing_surface": 0
+    },
+    {
+      "id": "B40_BRANCH_S0",
+      "samples": 15,
+      "missing_surface": 0
+    },
+    {
+      "id": "B41_ACCESS_EDGE_S0",
+      "samples": 10,
+      "missing_surface": 0
+    },
+    {
+      "id": "B41_BRANCH_S0",
+      "samples": 14,
+      "missing_surface": 0
+    },
+    {
+      "id": "B41_BRANCH_S1",
+      "samples": 26,
+      "missing_surface": 0
+    },
+    {
+      "id": "B42_ACCESS_EDGE_S0",
+      "samples": 13,
+      "missing_surface": 0
+    },
+    {
+      "id": "B42_ACCESS_EDGE_S1",
+      "samples": 12,
+      "missing_surface": 0
+    },
+    {
+      "id": "B42_BRANCH_S0",
+      "samples": 75,
+      "missing_surface": 0
+    },
+    {
+      "id": "B43_ACCESS_EDGE_S0",
+      "samples": 11,
+      "missing_surface": 0
+    },
+    {
+      "id": "B43_BRANCH_S0",
+      "samples": 75,
+      "missing_surface": 0
+    },
+    {
+      "id": "B43_BRANCH_S1",
+      "samples": 4,
+      "missing_surface": 0
+    },
+    {
+      "id": "B44_ACCESS_EDGE_S0",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "B44_BRANCH_S0",
+      "samples": 33,
+      "missing_surface": 0
+    },
+    {
+      "id": "B45_ACCESS_EDGE_S0",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "B45_BRANCH_S0",
+      "samples": 20,
+      "missing_surface": 0
+    },
+    {
+      "id": "B46_ACCESS_EDGE_S0",
+      "samples": 3,
+      "missing_surface": 0
+    },
+    {
+      "id": "B46_BRANCH_S0",
+      "samples": 8,
+      "missing_surface": 0
+    },
+    {
+      "id": "B47_ACCESS_EDGE_S0",
+      "samples": 7,
+      "missing_surface": 0
+    },
+    {
+      "id": "B47_BRANCH_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "B48_ACCESS_EDGE_S0",
+      "samples": 6,
+      "missing_surface": 0
+    },
+    {
+      "id": "B48_BRANCH_S0",
+      "samples": 14,
+      "missing_surface": 0
+    },
+    {
+      "id": "B48_BRANCH_S1",
+      "samples": 19,
+      "missing_surface": 0
+    },
+    {
+      "id": "B49_ACCESS_EDGE_S0",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "B49_BRANCH_S0",
+      "samples": 20,
+      "missing_surface": 0
+    },
+    {
+      "id": "B49_BRANCH_S1",
+      "samples": 12,
+      "missing_surface": 0
+    },
+    {
+      "id": "B50_ACCESS_EDGE_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "B50_BRANCH_S0",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "B51_ACCESS_EDGE_S0",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "B51_BRANCH_S0",
+      "samples": 28,
+      "missing_surface": 0
+    },
+    {
+      "id": "B51_BRANCH_S1",
+      "samples": 12,
+      "missing_surface": 0
+    },
+    {
+      "id": "B52_ACCESS_EDGE_S0",
+      "samples": 102,
+      "missing_surface": 0
+    },
+    {
+      "id": "B52_ACCESS_EDGE_S1",
+      "samples": 5,
+      "missing_surface": 0
+    },
+    {
+      "id": "B52_ACCESS_EDGE_S2",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "B52_ACCESS_EDGE_S3",
+      "samples": 7,
+      "missing_surface": 0
+    },
+    {
+      "id": "B52_ACCESS_EDGE_S4",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "B52_ACCESS_EDGE_S5",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "B52_ACCESS_EDGE_S6",
+      "samples": 79,
+      "missing_surface": 0
+    },
+    {
+      "id": "B52_ACCESS_EDGE_S7",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "B52_BRANCH_ZERO",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "B53_ACCESS_EDGE_S0",
+      "samples": 24,
+      "missing_surface": 0
+    },
+    {
+      "id": "B53_ACCESS_EDGE_S1",
+      "samples": 25,
+      "missing_surface": 0
+    },
+    {
+      "id": "B53_ACCESS_EDGE_S2",
+      "samples": 39,
+      "missing_surface": 0
+    },
+    {
+      "id": "B53_ACCESS_EDGE_S3",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "B53_ACCESS_EDGE_S4",
+      "samples": 8,
+      "missing_surface": 0
+    },
+    {
+      "id": "B53_ACCESS_EDGE_S5",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "B53_ACCESS_EDGE_S6",
+      "samples": 79,
+      "missing_surface": 0
+    },
+    {
+      "id": "B53_ACCESS_EDGE_S7",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "B53_BRANCH_S0",
+      "samples": 79,
+      "missing_surface": 0
+    },
+    {
+      "id": "B54_ACCESS_EDGE_S0",
+      "samples": 13,
+      "missing_surface": 0
+    },
+    {
+      "id": "B54_ACCESS_EDGE_S1",
+      "samples": 19,
+      "missing_surface": 0
+    },
+    {
+      "id": "B54_BRANCH_S0",
+      "samples": 34,
+      "missing_surface": 0
+    },
+    {
+      "id": "B55_ACCESS_EDGE_S0",
+      "samples": 40,
+      "missing_surface": 0
+    },
+    {
+      "id": "B55_ACCESS_EDGE_S1",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "B55_ACCESS_EDGE_S2",
+      "samples": 8,
+      "missing_surface": 0
+    },
+    {
+      "id": "B55_ACCESS_EDGE_S3",
+      "samples": 2,
+      "missing_surface": 0
+    },
+    {
+      "id": "B55_ACCESS_EDGE_S4",
+      "samples": 18,
+      "missing_surface": 0
+    },
+    {
+      "id": "B55_BRANCH_S0",
+      "samples": 14,
+      "missing_surface": 0
+    },
+    {
+      "id": "B55_BRANCH_S1",
+      "samples": 26,
+      "missing_surface": 0
+    }
+  ],
+  "limits": "No finite NPC radius, step/kerb accessibility, actual door-to-anchor gaps, graph controller traversal, NavMesh, animation, Play Mode or dynamic camera test"
+}

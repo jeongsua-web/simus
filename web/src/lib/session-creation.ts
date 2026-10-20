@@ -1,8 +1,12 @@
+import { defaultMotion, MAP_VERSION } from "./city-v002-graph.mjs";
 import { randomUUID } from "node:crypto";
 import { ApiError, transaction, uuid } from "./api";
 import { requireAdmin } from "./admin-auth";
 
 export async function createSession(subject: string, input: Record<string, unknown>) {
+  const profile = input.npc_profile;
+  if (profile !== undefined && profile !== "city-rebuild-v002")
+    throw new ApiError(400, "INVALID_NPC_PROFILE", "지원하지 않는 NPC 경로 프로필입니다.");
   const templateId = uuid(input.template_session_id, "template_session_id");
   const requestKey = uuid(input.request_key, "request_key");
   const name = typeof input.name === "string" ? input.name.trim() : "";
@@ -20,7 +24,8 @@ export async function createSession(subject: string, input: Record<string, unkno
       JOIN simus.simulation_sessions s ON s.id=r.session_id WHERE r.admin_id=$1 AND r.request_key=$2`, [adminId, requestKey]);
     if (prior.rowCount) {
       const row = prior.rows[0];
-      if (row.template_session_id !== templateId || row.name !== name || row.duration_seconds !== duration || Number(row.impact_scale) !== scale)
+      if (row.template_session_id !== templateId || row.name !== name || row.duration_seconds !== duration || Number(row.impact_scale) !== scale ||
+          (row.npc_profile ?? undefined) !== profile)
         throw new ApiError(409, "REQUEST_KEY_CONFLICT", "같은 요청 키를 다른 회차 설정에 사용할 수 없습니다.");
       return { session_id: row.session_id, status: row.status, replayed: true };
     }
@@ -37,19 +42,25 @@ export async function createSession(subject: string, input: Record<string, unkno
       SELECT $1,$2,clock_timestamp()+$3*interval '1 second',admission_buffer,expected_participants,
         expected_answers_per_person,$4,rules_snapshot,pollution_aggregation,$5
       FROM simus.simulation_sessions WHERE id=$6`, [id, name, duration, scale, adminId, templateId]);
+    if (profile === "city-rebuild-v002") {
+      await db.query("UPDATE simus.simulation_sessions SET npc_motion=$2 WHERE id=$1", [id, defaultMotion()]);
+    }
     // Composite keys allow stable content IDs across sessions; no runtime rows are copied.
     await db.query(`INSERT INTO simus.session_regions(session_id,id,code,name,aggregation_weight,map_metadata)
-      SELECT $1,id,code,name,aggregation_weight,map_metadata FROM simus.session_regions WHERE session_id=$2`, [id, templateId]);
+      SELECT $1,id,code,name,aggregation_weight,CASE WHEN $3 THEN '{}'::jsonb ELSE map_metadata END
+      FROM simus.session_regions WHERE session_id=$2`, [id, templateId, profile === "city-rebuild-v002"]);
     await db.query(`INSERT INTO simus.session_situations(session_id,id,code,title,body,display_order,event_location,is_generic)
-      SELECT $1,id,code,title,body,display_order,event_location,is_generic FROM simus.session_situations WHERE session_id=$2`, [id, templateId]);
+      SELECT $1,id,code,title,body,display_order,
+        CASE WHEN $3 AND event_location->>'map_version' IS DISTINCT FROM $4 THEN NULL ELSE event_location END,is_generic
+      FROM simus.session_situations WHERE session_id=$2`, [id, templateId, profile === "city-rebuild-v002", MAP_VERSION]);
     await db.query(`INSERT INTO simus.session_choices(session_id,situation_id,id,label,display_order,importance,
         alignment_dx,alignment_dy,happiness_base,safety_base,cleanliness_base)
       SELECT $1,situation_id,id,label,display_order,importance,alignment_dx,alignment_dy,happiness_base,safety_base,cleanliness_base
       FROM simus.session_choices WHERE session_id=$2`, [id, templateId]);
     await db.query(`INSERT INTO simus.choice_region_effects(session_id,situation_id,choice_id,region_id,pollution_base)
       SELECT $1,situation_id,choice_id,region_id,pollution_base FROM simus.choice_region_effects WHERE session_id=$2`, [id, templateId]);
-    await db.query(`INSERT INTO simus.session_creation_requests(admin_id,request_key,session_id,template_session_id,name,duration_seconds,impact_scale)
-      VALUES($1,$2,$3,$4,$5,$6,$7)`, [adminId, requestKey, id, templateId, name, duration, scale]);
+    await db.query(`INSERT INTO simus.session_creation_requests(admin_id,request_key,session_id,template_session_id,name,duration_seconds,impact_scale,npc_profile)
+      VALUES($1,$2,$3,$4,$5,$6,$7,$8)`, [adminId, requestKey, id, templateId, name, duration, scale, profile ?? null]);
     return { session_id: id, status: "DRAFT", replayed: false };
   });
 }

@@ -2,6 +2,7 @@ import type { PoolClient } from "pg";
 import { ApiError, transaction } from "./api";
 import { classifyAlignment, validateRules } from "./session-rules";
 import { ensureCommonEvent } from "./common-event";
+import { assertEventLocations, assertSessionBuild } from "./session-build-readiness";
 
 type Action = "START" | "END";
 
@@ -25,7 +26,7 @@ async function actionRow(db: PoolClient, adminId: string, sessionId: string, act
 export async function startSession(adminId: string, sessionId: string, requestKey: string) {
   return transaction(async db => {
     await assertActiveAdmin(db, adminId);
-    const session = await db.query(`SELECT id,status,scheduled_end_at,admission_buffer,impact_scale,rules_snapshot
+    const session = await db.query(`SELECT id,status,scheduled_end_at,admission_buffer,impact_scale,rules_snapshot,npc_motion
       FROM simus.simulation_sessions WHERE id=$1 FOR UPDATE`, [sessionId]);
     if (!session.rowCount) throw new ApiError(404, "SESSION_NOT_FOUND", "회차를 찾을 수 없습니다.");
     const action = await actionRow(db, adminId, sessionId, "START", requestKey);
@@ -35,6 +36,10 @@ export async function startSession(adminId: string, sessionId: string, requestKe
     }
     if (action.outcome !== "PENDING") throw new ApiError(409, "ACTION_NOT_RETRYABLE", "완료할 수 없는 관리자 작업입니다.");
     if (session.rows[0].status !== "DRAFT") throw new ApiError(409, "INVALID_SESSION_STATE", "DRAFT 회차만 시작할 수 있습니다.");
+
+    await assertSessionBuild(session.rows[0].npc_motion);
+    const placements = await db.query("SELECT event_location FROM simus.session_situations WHERE session_id=$1 AND event_location IS NOT NULL", [sessionId]);
+    assertEventLocations(session.rows[0].npc_motion, placements.rows.map(row => row.event_location));
 
     // Set the duration relative to the actual start, even if the draft was created days ago.
     await db.query(`UPDATE simus.simulation_sessions s

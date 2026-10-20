@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Runtime.InteropServices;
 using Newtonsoft.Json.Linq;
 using Simus.City;
@@ -14,6 +15,8 @@ namespace Simus
         public const string TestMapVersion = "test-only-bridge-v1";
         public string mapVersion = TestMapVersion;
         public CityPreviewCamera followCamera;
+        [Tooltip("Test-only map display: validate bindings but never spawn, move or poll NPCs.")]
+        public bool mapDisplayOnly;
         public CityStateStore City { get; } = new CityStateStore();
         private WebBridgeState state;
         private readonly Dictionary<string, GameObject> actors = new Dictionary<string, GameObject>();
@@ -32,7 +35,7 @@ namespace Simus
             gameObject.name = "SIMUS Web Bridge";
             state = new WebBridgeState(mapVersion);
             Application.targetFrameRate = 30;
-            Emit(new JObject { ["type"] = "READY", ["map_version"] = mapVersion });
+            Emit(new JObject { ["type"] = "READY", ["map_version"] = mapVersion, ["camera_zoom"] = true });
         }
         public void Receive(string json)
         {
@@ -40,6 +43,11 @@ namespace Simus
             try
             {
                 var bound = state.Apply(json, Time.realtimeSinceStartupAsDouble);
+                if (mapDisplayOnly)
+                {
+                    if (bound) Emit(new JObject { ["type"] = "BOUND", ["session_id"] = state.SessionId, ["npc_id"] = state.OwnNpcId });
+                    return;
+                }
                 var own = GetActor(state.OwnNpcId, true, state.Own.Npcs[0].CharacterId, state.Own.Npcs[0].GlassesId);
                 MoveActor(own, state.Own.Npcs[0].PositionAt(state.Own.MotionTime(Time.realtimeSinceStartupAsDouble)));
                 if (followCamera == null) throw new InvalidOperationException("CAMERA_MISSING");
@@ -73,7 +81,7 @@ namespace Simus
         }
         private void Update()
         {
-            if (disposed || !visible || state?.Own == null) return;
+            if (mapDisplayOnly || disposed || !visible || state?.Own == null) return;
             var now = Time.realtimeSinceStartupAsDouble;
             MoveActor(actors[state.OwnNpcId], state.Own.Npcs[0].PositionAt(state.Own.MotionTime(now)));
             if (crowd == null) return;
@@ -140,6 +148,12 @@ namespace Simus
             active.Dispose();
             if (ReferenceEquals(request, active)) request = null;
         }
+        public void SetZoom(string value)
+        {
+            if (disposed || state?.Own == null || followCamera == null) return;
+            if (float.TryParse(value, NumberStyles.Float, CultureInfo.InvariantCulture, out var zoom))
+                followCamera.SetFollowZoom(zoom);
+        }
         public void SetVisibility(string value)
         {
             if (disposed) return;
@@ -147,7 +161,7 @@ namespace Simus
             Application.targetFrameRate = visible ? 30 : 1;
             if (followCamera != null) followCamera.GetComponent<Camera>().enabled = visible;
             StopPolling();
-            if (visible && state?.Own != null) polling = StartCoroutine(Poll());
+            if (!mapDisplayOnly && visible && state?.Own != null) polling = StartCoroutine(Poll());
         }
         private void StopPolling()
         {
@@ -165,6 +179,23 @@ namespace Simus
 
         }
         private void OnDestroy() { DisposeBridge(); }
+        // Read-only runtime inspection for same-origin integration/visual QA. No polling or game-state writes.
+        public void InspectBridge()
+        {
+            if (disposed || state?.Own == null || !actors.TryGetValue(state.OwnNpcId, out var actor)) return;
+            var p = actor.transform.position;
+            var renderers = actor.GetComponentsInChildren<Renderer>();
+            Emit(new JObject {
+                ["type"] = "INSPECTION", ["session_id"] = state.SessionId, ["npc_id"] = state.OwnNpcId,
+                ["position"] = new JArray(p.x, p.y, p.z), ["active"] = actor.activeInHierarchy,
+                ["renderer_count"] = renderers.Length,
+                ["following"] = followCamera != null && followCamera.IsFollowing,
+                ["follow_size"] = followCamera != null ? followCamera.followSize : 0,
+                ["zoom"] = followCamera != null ? followCamera.FollowZoom : 1,
+                ["camera_size"] = followCamera != null ? followCamera.GetComponent<Camera>().orthographicSize : 0,
+                ["smooth_transitions"] = followCamera != null && followCamera.smoothFollowTransitions
+            });
+        }
         private void Fail(string code) { Emit(new JObject { ["type"] = "ERROR", ["code"] = code }); DisposeBridge(); }
         private void Emit(JObject message)
         {

@@ -1,6 +1,6 @@
 import type { PoolClient } from "pg";
 import { npcPosition, type Npc } from "@/app/participate/npc-motion";
-import { guidedPoint } from "./npc-events";
+import { guidanceMotion, guidancePosition, resumedNpc, projectedRevision } from "./npc-graph-motion";
 import { ApiError } from "./api";
 
 // Caller holds the session row lock, shared with choices and lifecycle transitions.
@@ -49,12 +49,12 @@ export async function readNpcs(db: PoolClient, sessionId: string, participantId?
     if(!st) return npc;
     npc={...npc,motion:st.resume_motion??npc.motion};
     const at=new Date(st.started_at??snapshot.motion_time).getTime();
-    const epoch=new Date(new Date(st.motion_epoch).getTime()+Number(st.paused_ms)).toISOString();
-    const revision=Number(st.motion_revision);
-    let projected={...npc,epoch,motion:{...npc.motion,revision}};
-    if(st.guidance_point) projected={...projected,epoch:new Date(st.guidance_started_at).toISOString(),motion:{...projected.motion,points:[st.guidance_origin,st.guidance_point],loop:false}};
+    const resumed = resumedNpc(st, npc.motion, at);
+    const revision=projectedRevision(st, npc.motion, at);
+    let projected={...npc,epoch:resumed.epoch,motion:{...resumed.motion,revision}};
+    if(st.guidance_point) projected={...projected,epoch:new Date(st.guidance_started_at).toISOString(),motion:{...guidanceMotion(st, npc.motion),revision}};
     if(st.started_at) {
-      const point=st.guidance_point?guidedPoint(st,npc.motion.speed_mps,at):npcPosition(projected as Parameters<typeof npcPosition>[0],at);
+      const point=st.guidance_point?guidancePosition(st,npc.motion,at):npcPosition(projected as Parameters<typeof npcPosition>[0],at);
       if(point) return {...projected,epoch:new Date(st.started_at).toISOString(),motion:{...projected.motion,points:[point,point],speed_mps:0,freeze_at:new Date(st.started_at).toISOString()}};
     }
     return projected;

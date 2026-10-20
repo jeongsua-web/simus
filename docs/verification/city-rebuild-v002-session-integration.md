@@ -1,0 +1,20 @@
+2026-10-19 · CityRebuild_v002 회차 통합 완료 — 격리 검증, 운영 DB 미변경.
+- 변경 UI: `web/src/app/admin/{CreateSession.tsx,EventLocations.tsx,page.tsx}`, `web/src/app/participate/UnityCity.tsx`.
+- 변경 API: `web/src/app/api/admin/sessions/route.ts`, `web/src/app/api/admin/sessions/[id]/event-locations/route.ts`.
+- 변경 서버: `web/src/lib/{city-builds.ts,session-build-readiness.ts,admin-session-readiness.ts,session-creation.ts,session-lifecycle.ts}`.
+- 변경 Unity/배포: `unity/Assets/Editor/CityRebuildV002WebGLBuild.cs`, `unity/Assets/Scripts/WebCityBridge.cs`, `unity/Assets/WebGLTemplates/simus_city/bridge.js`, `scripts/unity/deploy-city-rebuild-v002.mjs`.
+- 변경 검증/설정: `web/tests/{isolated-runner.mjs,session-build.integration.mjs,v002-session-browser.mjs,npc-positions.integration.mjs,stage-integration.mjs}`, `web/next.config.ts`, `.gitignore`, `assets/catalog/inventory.json`; 본 문서와 `city-rebuild-v002-session-evidence/` 추가. 기존 Phase 2 작업은 보존했다.
+- 관리자: v002 선택 → 새 DRAFT에 기본 그래프 경로 적용, 위치 편집 → 시작. 기존 회차·가입 스냅샷 보존 검증 통과. 같은 맵 템플릿 위치만 복사하며 다른 맵 위치·지역 좌표는 복사하지 않는다.
+- 계약: `map_version=test-only-city-rebuild-v002-webgl-v1`, `path_version=city-rebuild-v002-walk-v1`; 572노드/597간선 원본 해시·좌표 검사 통과. 전시 최종 버전으로 승격하지 않았다.
+- 배포: NPC 지원 `/city-rebuild-v002/` 추가, 기존 회차는 `/city/` 사용. 기존 `/city`, 지도 전용 미리보기, 원본 씬 15파일의 catalog 기준 SHA-256 동일; Phase 8 카메라 설정 보존.
+- 시작 차단: 맵·경로 불일치, NPC 비활성 빌드, 누락/손상 manifest, 그래프 밖 경로, 다른 맵 이벤트 좌표에서 409와 구체적 오류. 시작 상태·도시 상태·관리자 작업 전체 롤백 검증 통과.
+- 실제 API 통합 PASS: 새 DRAFT/입장/이동/유도/이벤트 정지·재시작 복구/동시 선택 멱등성/경로 복귀/종료, 90초 제한(격리 DB 시각 전진 검사), 기존 점수·도시·결과 회귀 통과.
+- 실제 브라우저+API+WebGL PASS: 관리자 생성·위치 저장·시작 → `/participate` 프로필·가입 → NPC 생성/렌더러/이동 → LOCATION 이벤트(실시간 41,113ms)·정지 → 선택 1건·도시 version 1 → 이동 재개 → 관리자 종료·API freeze·WebGL 해제.
+- Unity 실제 위치: 이동 구간 약 3.56m, 이벤트 정지 좌표 완전 동일, 선택 후 약 5.17m 재이동; 카메라 following=true, follow_size=21, smooth_transitions=true, 페이지/브리지 오류 0.
+- 범위 구분: 위 v002 브라우저는 응답 fixture·가짜 iframe·실행 시각 전진을 사용하지 않았다. 레거시 UI fixture 및 별도 Unity Editor Play 검사는 SKIP이며 PASS로 포함하지 않았다. 모바일 화면 크기 변경은 실기기 검증이 아니다.
+- 검사 PASS: `npm run build`, 변경 TypeScript ESLint, 브리지 단위 검사 2건, 그래프 검사, 격리 통합 전체, catalog 생성/검사(5,212파일·오류 0), `git diff --check`.
+- 실패 이력 보존: Unity IPC/라이선스 재시도, 기존 테스트의 revision/시각 표현 비교, 브라우저 select 식별자 및 제출 대기 오류를 수정했다. 마지막 새 클러스터 `simus-integration-UqyUaH`에서 전체 PASS 후 소유 서버·DB 종료.
+- 재현: `cd web && TEST_V002_PLAYWRIGHT_MODULE=<playwright/index.mjs> TEST_CHROMIUM_EXECUTABLE=<chromium> npm run test:integration` — 새 임시 PostgreSQL만 사용하며 `DATABASE_URL`을 테스트 연결로 사용하지 않는다.
+- 빌드/배포: 빈 `SIMUS_V002_WEBGL_OUTPUT`으로 Unity `CityRebuildV002WebGLBuild.BuildSession` 실행 후 `node scripts/unity/deploy-city-rebuild-v002.mjs <빌드 경로>`; 기존 대상 덮어쓰기는 거부한다. 현재 산출물은 `unity/Builds/city_rebuild_v002_session_verified`.
+- 남은 문제/운영 전환: 운영 전환은 아직 수행하지 않았다. 운영 DB의 `015_npc_graph_guidance.sql` 적용 여부 확인·별도 v002 경로와 서버 배포·상황 위치 검토가 필요하다. 최종 30개 배치, 전시 map_version 승인, Android/iOS 성능은 미확정/미검증이다.
+- 증거: [런타임·보존 해시·실패 이력](city-rebuild-v002-session-evidence/evidence.json), [데스크톱](city-rebuild-v002-session-evidence/moving-desktop.png), [모바일 위치 이벤트](city-rebuild-v002-session-evidence/event-mobile.png).

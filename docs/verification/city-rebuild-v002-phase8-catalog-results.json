@@ -1,0 +1,16 @@
+{
+  "checked_utc": "2026-10-18T14:27:22.718628+00:00",
+  "commands": [
+    {
+      "command": "python3 scripts/assets/catalog.py",
+      "exit_code": 0,
+      "output": "5196 files; 25 identical-content groups; 0 errors"
+    },
+    {
+      "command": "python3 scripts/assets/catalog.py --check",
+      "exit_code": 0,
+      "output": "5196 files; 25 identical-content groups; 0 errors"
+    }
+  ],
+  "inventory_sha256": "17d6173bd0a531bdf3e7744808009380feac8cc41971bb95210a41e2edd75896"
+}

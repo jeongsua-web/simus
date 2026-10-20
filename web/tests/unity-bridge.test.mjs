@@ -3,6 +3,12 @@ import { test } from 'node:test';
 import { readUnityEvent, matchesOwnSnapshot } from '../src/app/participate/unity-bridge.ts';
 
 const ready = { channel: 'simus-city', version: 1, bridge_id: 'attempt-1', type: 'READY', map_version: 'test-map' };
+test('zoom events accept only finite supported magnifications', () => {
+  const event = { ...ready, type: 'ZOOM_CHANGED', zoom: 2 };
+  assert.equal(readUnityEvent(event, 'attempt-1')?.zoom, 2);
+  for (const zoom of [NaN, Infinity, '2', null, .49, 4.01])
+    assert.equal(readUnityEvent({ ...event, zoom }, 'attempt-1'), null);
+});
 test('rejects messages from old attempts, incompatible protocols, and malformed events', () => {
   assert.equal(readUnityEvent(ready, 'attempt-1')?.type, 'READY');
   for (const input of [null, {}, { ...ready, version: 2 }, { ...ready, channel: 'other' }, { ...ready, map_version: null }, { ...ready, type: 'BOUND' }]) {

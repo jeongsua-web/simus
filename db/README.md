@@ -144,3 +144,9 @@ DB도 미설정 경로 및 회차 설정과 다른 스냅샷을 거절하며 기
 ## 모듈 안경 조합 (014)
 
 013 다음에 `014_participant_glasses.sql`을 한 번 적용한다. `character_id`는 16종 머리 모듈을 선택하고 `glasses_id`는 `none`, `square`, `round` 중 하나를 독립 저장한다. 기존 시민은 01 사각/04 원형/나머지 없음으로 보존한다. 발급 후 안경도 변경할 수 없다. 이전 클라이언트가 안경 필드를 생략하면 해당 머리의 기존 안경 기본값을 사용한다. 시민증·NPC 응답에 머리와 안경을 함께 전달한다.
+
+## v002 그래프 유도 (015)
+
+014 다음에 `015_npc_graph_guidance.sql`을 한 번 적용한 뒤 새 서버 코드를 배포한다. `npc_event_states.guidance_motion`과 생성 요청의 `npc_profile` nullable 열을 추가하며 기존 회차·가입 스냅샷은 갱신하지 않는다.
+관리자 회차 생성 본문에 `"npc_profile":"city-rebuild-v002"`를 지정한 새 DRAFT만 테스트용 v002 보행 경로를 갖는다. 이전 맵 이벤트 위치·지역 geometry는 복사하지 않는다. 프로필 생략 시 기존 동작을 유지한다.
+좌표·버전·유도·복귀·90초 정책과 검증 절차는 [Phase 2 기록](../docs/verification/city-rebuild-v002-webgl-phase2.md)을 참고한다. 전시 맵 승인이나 운영 `/city` 교체를 의미하지 않는다.

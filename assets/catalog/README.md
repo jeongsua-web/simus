@@ -1,5 +1,9 @@
 # 에셋 찾기
 
+## CityRebuild_v002 Phase 8-A/B 폴리싱
+
+카메라·도시 시각 개선은 기존 v002 배치를 유지하는 작업이다. 신규 [가로 소품 kit](../library/props/city_v002_phase8_street_kit_v001/README.md)은 별도 Blender 원본과 FBX로 제작한 화단·벤치·가로등이며 `received`다. 씬 전용 재질·장식 메시의 위치는 `unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/`다. 기존 Blender 원본과 기존 재질 자산을 덮어쓰지 않는다. [실제 Game 카메라 전후 비교](../../docs/verification/city-rebuild-v002-phase8-captures/index.html)의 최종 검증 여부는 [Phase 8 QA](../../docs/verification/city-rebuild-v002-phase8-qa.md)를 기준으로 확인한다. 조명·성능 최적화(8-C/D) 및 전시 승인과는 별개다.
+
 ## CityRebuild_v002 Phase 4–7 후속 구현
 
 [작업 씬](../../unity/Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity)에 공원·하천과 보행 그래프가 추가되었다. 기존 공원 FBX 2개, STREET_TREE와 REUSED_BENCH를 재사용하며, 나무 축 보정과 벤치 배치는 원본 모델을 바꾸지 않고 씬에서 수정한다. 아래 Phase 1–3 기록은 당시 인계 상태다. 현재 실행 결과와 미검증 범위는 [Phase 7 QA](../../docs/verification/city-rebuild-v002-phase7-qa.md)를 확인한다. 에셋 승인 상태와 전시 map_version은 이 작업으로 변경하지 않는다.

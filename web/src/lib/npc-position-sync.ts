@@ -1,4 +1,5 @@
 import { defaultCitizenGlasses } from "./citizen-characters";
+import { graphMotion } from "./city-v002-graph.mjs";
 import { ApiError } from "./api";
 import { npcPosition, type Npc, type NpcSnapshot } from "@/app/participate/npc-motion";
 
@@ -18,7 +19,10 @@ export function validateMotion(value: unknown, projection = false): Npc["motion"
   const points = m.points as number[][];
   if (!(projection && m.speed_mps === 0) && !points.some(p => p.some((n, i) => n !== points[0][i]))) throw new ApiError(400, "INVALID_NPC_MOTION", "경로 길이는 0보다 커야 합니다.");
   // Admin-authored routes cannot supply runtime freeze or revision metadata.
-  return { ...(projection ? m : {}), map_version, path_version, points, speed_mps: m.speed_mps, loop: m.loop } as Npc["motion"];
+  const motion = { ...(projection ? m : {}), map_version, path_version, points, speed_mps: m.speed_mps, loop: m.loop } as Npc["motion"];
+  if (projection) return motion;
+  try { return graphMotion(motion); }
+  catch { throw new ApiError(400, "INVALID_GRAPH_ROUTE", "v002 보행 그래프와 경로 버전을 확인해주세요."); }
 }
 export function positionSnapshot(snapshot: NpcSnapshot, map: string, path?: string) {
   const at = new Date(snapshot.motion_time).getTime();

@@ -1,0 +1,60 @@
+{
+    "MonoBehaviour": {
+        "m_Enabled": true,
+        "m_EditorHideFlags": 0,
+        "m_Name": "",
+        "m_EditorClassIdentifier": "Assembly-CSharp::Simus.CityPreviewCamera",
+        "previewControls": true,
+        "target": {
+            "x": -15.0,
+            "y": 0.0,
+            "z": -27.5
+        },
+        "overviewSize": 260.0,
+        "overviewTarget": {
+            "x": -15.0,
+            "y": 0.0,
+            "z": -27.5
+        },
+        "topViewSize": 235.0,
+        "maximumZoom": 350.0,
+        "clampPanToBounds": false,
+        "panMinimum": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "panMaximum": {
+            "x": 0.0,
+            "y": 0.0
+        },
+        "previewSubtitle": "CITY REBUILD v002 | RUNTIME PREVIEW",
+        "followTarget": {
+            "instanceID": 0
+        },
+        "followNpcId": "",
+        "npcSource": {
+            "instanceID": 0
+        },
+        "followSmoothTime": 0.25,
+        "followSize": 12.750889778137207,
+        "followPitch": 28.850000381469728,
+        "followYaw": -131.63999938964845,
+        "occlusionShader": {
+            "fileID": 4800000,
+            "guid": "61918c329cc44fa389c04d030ebc3eb9",
+            "type": 3
+        },
+        "occlusionRoot": {
+            "instanceID": 0
+        },
+        "contextBuildingFade": false,
+        "contextFadeRadius": 14.0,
+        "contextBuildingVisibility": 0.11999999731779099,
+        "revealRadius": 3.5,
+        "followOffset": {
+            "x": 0.0,
+            "y": 1.0,
+            "z": 0.0
+        }
+    }
+}

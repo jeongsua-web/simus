@@ -4,7 +4,8 @@ export const BRIDGE_CHANNEL = "simus-city";
 export const BRIDGE_VERSION = 1;
 export type UnityEvent = {
   channel: typeof BRIDGE_CHANNEL; version: 1; bridge_id: string;
-  type: "READY" | "BOUND" | "ERROR";
+  type: "READY" | "BOUND" | "ERROR" | "ZOOM_CHANGED";
+  camera_zoom?: boolean; zoom?: number;
   map_version?: string; session_id?: string; npc_id?: string;
 };
 
@@ -15,6 +16,7 @@ export function readUnityEvent(value: unknown, bridgeId: string): UnityEvent | n
   if (v.type === "READY" && typeof v.map_version === "string" && v.map_version.length > 0) return v as UnityEvent;
   if (v.type === "BOUND" && typeof v.session_id === "string" && typeof v.npc_id === "string") return v as UnityEvent;
   if (v.type === "ERROR") return v as UnityEvent;
+  if (v.type === "ZOOM_CHANGED" && typeof v.zoom === "number" && Number.isFinite(v.zoom) && v.zoom >= .5 && v.zoom <= 4) return v as UnityEvent;
   return null;
 }
 

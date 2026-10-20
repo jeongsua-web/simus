@@ -6,6 +6,7 @@ Shader "SIMUS/NPC Reveal"
         _MainTex ("Albedo", 2D) = "white" {}
         _Metallic ("Metallic", Range(0,1)) = 0
         _Glossiness ("Smoothness", Range(0,1)) = 0.22
+        _SimusContextVisibility ("Context visibility", Range(0,1)) = 1
     }
     SubShader
     {
@@ -16,7 +17,7 @@ Shader "SIMUS/NPC Reveal"
         #pragma target 3.0
         sampler2D _MainTex;
         fixed4 _Color;
-        half _Metallic, _Glossiness;
+        half _Metallic, _Glossiness, _SimusContextVisibility;
         float3 _SimusRevealCenter, _SimusRevealDirection;
         float _SimusRevealRadius;
         struct Input { float2 uv_MainTex; float3 worldPos; float4 screenPos; float facing : VFACE; };
@@ -25,6 +26,9 @@ Shader "SIMUS/NPC Reveal"
             // Remove only fragments between this camera and the NPC, never ground
             // or objects behind the NPC. Preserve normal shadow casting.
             #ifndef UNITY_PASS_SHADOWCASTER
+            float2 contextPixel=floor(IN.screenPos.xy / IN.screenPos.w * _ScreenParams.xy);
+            float contextThreshold=frac(52.9829189 * frac(dot(contextPixel,float2(0.06711056,0.00583715))));
+            clip(_SimusContextVisibility-max(.001,contextThreshold));
             float3 delta = IN.worldPos - _SimusRevealCenter;
             float depth = dot(delta, _SimusRevealDirection);
             float radial = length(delta - depth * _SimusRevealDirection);

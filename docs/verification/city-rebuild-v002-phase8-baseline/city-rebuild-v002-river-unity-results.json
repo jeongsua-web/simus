@@ -1,0 +1,525 @@
+{
+  "status": "PASS: river assembled and graph/physics editor audit completed; Play Mode pending separately",
+  "scene_sha256": "876312dfcfc84528eee76637f56a0b29d52a6922511d5305cae2daa361a60798",
+  "design_sha256": "386f1189a99cadf0da7448d0aa2a5216ed504d0c99f92e089b04cfd51f18f1b5",
+  "unity_version": "6000.3.24f1",
+  "generated_assets": [
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_materials/riverbed_ochre.mat",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_materials/riverbank_lawn.mat",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_materials/river_trail_gravel.mat",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_materials/river_water.mat",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_materials/bridge_timber.mat",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_materials/bridge_rail.mat",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/Carved_CityGround.asset",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/Carved_EastPark_Lawn.asset",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Excavated_Bed_Banks.asset",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_East_FloodBench.asset",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_West_FloodBench.asset",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Closed_Bowl_0.asset",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Closed_Bowl_1.asset",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Water_Surface.asset",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_W_BankTrail.asset",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_E_BankTrail.asset",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Closed_Cap_Trail_0.asset",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Closed_Cap_Trail_1.asset",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/Existing_Trail_Dry_Approach_Berms.asset",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Bridge_0_Deck.asset",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Ramp_0_0.asset",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Ramp_0_1.asset",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Bridge_1_Deck.asset",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Ramp_1_0.asset",
+    "Assets/SIMUS/Scenes/city_rebuild_v002/river_meshes/River_Ramp_1_1.asset"
+  ],
+  "cut_objects": [
+    "CityGround",
+    "EastPark_Lawn"
+  ],
+  "water_y": -1.2,
+  "bed_y": -2,
+  "bank_y": -0.45,
+  "trail_y": -0.43,
+  "water_width_m": 10,
+  "corridor_width_m": 24,
+  "centreline": [
+    [
+      127.0,
+      -12.0
+    ],
+    [
+      126.794456,
+      -10.9099855
+    ],
+    [
+      126.53936,
+      -9.586005
+    ],
+    [
+      126.241257,
+      -8.0543
+    ],
+    [
+      125.9067,
+      -6.34110737
+    ],
+    [
+      125.542274,
+      -4.472667
+    ],
+    [
+      125.154526,
+      -2.4752183
+    ],
+    [
+      124.75,
+      -0.375
+    ],
+    [
+      124.335274,
+      1.80174971
+    ],
+    [
+      123.916916,
+      4.02879047
+    ],
+    [
+      123.501457,
+      6.279885
+    ],
+    [
+      123.095482,
+      8.528789
+    ],
+    [
+      122.705536,
+      10.7492733
+    ],
+    [
+      122.338196,
+      12.9150858
+    ],
+    [
+      122.0,
+      15.0
+    ],
+    [
+      121.71521,
+      16.7926025
+    ],
+    [
+      121.424805,
+      18.6064453
+    ],
+    [
+      121.130981,
+      20.4393311
+    ],
+    [
+      120.835938,
+      22.2890625
+    ],
+    [
+      120.54187,
+      24.1534424
+    ],
+    [
+      120.250977,
+      26.0302734
+    ],
+    [
+      119.965454,
+      27.9173584
+    ],
+    [
+      119.6875,
+      29.8125
+    ],
+    [
+      119.419312,
+      31.713501
+    ],
+    [
+      119.163086,
+      33.6181641
+    ],
+    [
+      118.921021,
+      35.524292
+    ],
+    [
+      118.695313,
+      37.4296875
+    ],
+    [
+      118.488159,
+      39.3321533
+    ],
+    [
+      118.301758,
+      41.2294922
+    ],
+    [
+      118.138306,
+      43.1195068
+    ],
+    [
+      118.0,
+      45.0
+    ],
+    [
+      117.879707,
+      47.0020752
+    ],
+    [
+      117.784294,
+      49.0077
+    ],
+    [
+      117.712,
+      51.016
+    ],
+    [
+      117.661034,
+      53.0260735
+    ],
+    [
+      117.629631,
+      55.0370369
+    ],
+    [
+      117.616,
+      57.048
+    ],
+    [
+      117.61837,
+      59.058075
+    ],
+    [
+      117.634964,
+      61.0663719
+    ],
+    [
+      117.664,
+      63.072
+    ],
+    [
+      117.703705,
+      65.07407
+    ],
+    [
+      117.7523,
+      67.07171
+    ],
+    [
+      117.808,
+      69.064
+    ],
+    [
+      117.869041,
+      71.05007
+    ],
+    [
+      117.933632,
+      73.02904
+    ],
+    [
+      118.0,
+      75.0
+    ],
+    [
+      118.079407,
+      76.9789658
+    ],
+    [
+      118.181931,
+      78.97838
+    ],
+    [
+      118.304,
+      80.9920044
+    ],
+    [
+      118.442078,
+      83.01363
+    ],
+    [
+      118.5926,
+      85.03704
+    ],
+    [
+      118.752007,
+      87.05601
+    ],
+    [
+      118.91674,
+      89.06429
+    ],
+    [
+      119.08326,
+      91.05571
+    ],
+    [
+      119.248,
+      93.024
+    ],
+    [
+      119.40741,
+      94.96297
+    ],
+    [
+      119.557922,
+      96.86637
+    ],
+    [
+      119.696,
+      98.728
+    ],
+    [
+      119.818077,
+      100.541626
+    ],
+    [
+      119.920593,
+      102.301041
+    ],
+    [
+      120.0,
+      104.0
+    ],
+    [
+      120.0263,
+      106.175812
+    ],
+    [
+      119.945908,
+      108.183319
+    ],
+    [
+      119.792633,
+      110.06086
+    ],
+    [
+      119.6003,
+      111.846733
+    ],
+    [
+      119.40271,
+      113.579269
+    ],
+    [
+      119.233665,
+      115.296776
+    ],
+    [
+      119.126968,
+      117.037567
+    ],
+    [
+      119.116455,
+      118.839966
+    ],
+    [
+      119.235909,
+      120.7423
+    ],
+    [
+      119.519157,
+      122.782867
+    ],
+    [
+      120.0,
+      125.0
+    ],
+    [
+      120.447182,
+      126.579079
+    ],
+    [
+      121.013435,
+      128.30043
+    ],
+    [
+      121.682884,
+      130.140244
+    ],
+    [
+      122.439644,
+      132.0747
+    ],
+    [
+      123.26786,
+      134.079987
+    ],
+    [
+      124.151642,
+      136.132309
+    ],
+    [
+      125.0751,
+      138.207809
+    ],
+    [
+      126.022385,
+      140.282715
+    ],
+    [
+      126.977608,
+      142.333191
+    ],
+    [
+      127.9249,
+      144.335449
+    ],
+    [
+      128.848358,
+      146.265625
+    ],
+    [
+      129.732147,
+      148.099945
+    ],
+    [
+      130.560349,
+      149.814575
+    ],
+    [
+      131.317108,
+      151.385712
+    ],
+    [
+      131.986557,
+      152.789536
+    ],
+    [
+      132.552826,
+      154.002243
+    ],
+    [
+      133.0,
+      155.0
+    ]
+  ],
+  "bridges": [
+    {
+      "id": "RIVER_BRIDGE_NORTH",
+      "source_edge": "PKE02",
+      "length_m": 28.6937237,
+      "deck_y": 0.14,
+      "clear_width_m": 3,
+      "actual_fbx": "Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_FOOTBRIDGE_NORTH_28_70.fbx",
+      "rail_segments": 13,
+      "imported_deck_native_size": [
+        3.4,
+        0.400003374,
+        28.6999989
+      ],
+      "placed_visual_world_y_size": 0.400003374,
+      "placed_visual_deck_y": 0.148001716,
+      "rail_native_size": [
+        0.16,
+        1.1,
+        2.0
+      ],
+      "polygon": [
+        [
+          112.693985,
+          143.681961
+        ],
+        [
+          140.86499,
+          138.229965
+        ],
+        [
+          141.511017,
+          141.568039
+        ],
+        [
+          113.340012,
+          147.020035
+        ]
+      ]
+    },
+    {
+      "id": "RIVER_BRIDGE_SOUTH",
+      "source_edge": "PKE07",
+      "length_m": 32.0919342,
+      "deck_y": 0.14,
+      "clear_width_m": 3,
+      "actual_fbx": "Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_FOOTBRIDGE_SOUTH_32_10.fbx",
+      "rail_segments": 19,
+      "imported_deck_native_size": [
+        3.4,
+        0.400003761,
+        32.0999947
+      ],
+      "placed_visual_world_y_size": 0.400003761,
+      "placed_visual_deck_y": 0.148001909,
+      "rail_native_size": [
+        0.16,
+        1.1,
+        2.0
+      ],
+      "polygon": [
+        [
+          133.806641,
+          21.7913074
+        ],
+        [
+          109.769646,
+          0.5283072
+        ],
+        [
+          112.022362,
+          -2.01830721
+        ],
+        [
+          136.059357,
+          19.2446918
+        ]
+      ]
+    }
+  ],
+  "graph_audit": {
+    "nodes": 572,
+    "edges": 597,
+    "samples": 35489,
+    "finite_width_samples": 7461,
+    "capsule_radius_m": 0.2,
+    "capsule_blocked": 0,
+    "actual_physical_bridge_hits": 665,
+    "wet_violations": 0,
+    "unsupported": 0,
+    "maximum_support_height_error_m": 0.16
+  },
+  "depth_audit": {
+    "axis_samples": 86,
+    "old_flat_ground_hits_beneath_water": 0,
+    "missing_bed_hits": 0,
+    "bed_y": -2,
+    "water_y": -1.2,
+    "ground_y": -0.02,
+    "water_has_collider": false
+  },
+  "preserved_inactive_trees_in_excavation": [
+    "ParkTree_3",
+    "ParkTree_6",
+    "ParkTree_9",
+    "ParkTree_11",
+    "ParkTree_12",
+    "ParkTree_14",
+    "ParkTree_17",
+    "ParkTree_22",
+    "ParkTree_23",
+    "ParkTree_25",
+    "ParkTree_26",
+    "ParkTree_28"
+  ],
+  "building_transforms_unchanged": true,
+  "protected_hashes": {
+    "../docs/planning/city_rebuild_v002/layout.json": "3e98ea485bd92dc9c2528d0420b5999a0336f700270c0f73f7630aa214fbd105",
+    "../docs/planning/city_rebuild_v002/buildings.csv": "dbbfc28a6aa9864b3d8b82116f6326468822554749151e35e1461cd99a7a7fed",
+    "../docs/planning/city_rebuild_v002/campus-placements.csv": "931ef993ca6e6aaa1006fe7fceb83553c4f7cc72373c4e5f46e25b0dcb18451e",
+    "ProjectSettings/EditorBuildSettings.asset": "2cd022cef03df022746b9ab3e571ab35ae423c7a10bf896bbef3cd0b4342ca20",
+    "Assets/SIMUS/Scenes/npc_follow_test/CompletedMapNpcFollow.unity": "0c0bb8b3c4b689a89f96c0be35327ee84940eec6a40ef030b0ba5cc01b13a966"
+  },
+  "play_mode": "NOT TESTED by Apply"
+}

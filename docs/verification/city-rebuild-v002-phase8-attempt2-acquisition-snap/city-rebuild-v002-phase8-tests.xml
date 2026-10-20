@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<test-run id="2" testcasecount="22" result="Passed" total="22" passed="22" failed="0" inconclusive="0" skipped="0" asserts="0" engine-version="3.5.0.0" clr-version="4.0.30319.42000" start-time="2026-10-17 22:06:55Z" end-time="2026-10-17 22:06:56Z" duration="0.4456664">
+  <test-suite type="TestSuite" id="1000" name="unity" fullname="unity" runstate="Runnable" testcasecount="47" result="Passed" start-time="2026-10-17 22:06:55Z" end-time="2026-10-17 22:06:56Z" duration="0.445666" total="22" passed="22" failed="0" inconclusive="0" skipped="0" asserts="0">
+    <properties>
+      <property name="platform" value="EditMode" />
+    </properties>
+    <test-suite type="Assembly" id="1058" name="SIMUS.City.Tests.dll" fullname="/Users/jeongsua/dev/02_SIMUS/unity/Library/ScriptAssemblies/SIMUS.City.Tests.dll" runstate="Runnable" testcasecount="47" result="Passed" start-time="2026-10-17 22:06:55Z" end-time="2026-10-17 22:06:56Z" duration="0.440856" total="22" passed="22" failed="0" inconclusive="0" skipped="0" asserts="0">
+      <properties>
+        <property name="_PID" value="76342" />
+        <property name="_APPDOMAIN" value="Unity Child Domain" />
+        <property name="platform" value="EditMode" />
+        <property name="EditorOnly" value="True" />
+      </properties>
+      <test-suite type="TestSuite" id="1059" name="Simus" fullname="Simus" runstate="Runnable" testcasecount="47" result="Passed" start-time="2026-10-17 22:06:55Z" end-time="2026-10-17 22:06:56Z" duration="0.440527" total="22" passed="22" failed="0" inconclusive="0" skipped="0" asserts="0">
+        <properties />
+        <test-suite type="TestSuite" id="1060" name="City" fullname="Simus.City" runstate="Runnable" testcasecount="47" result="Passed" start-time="2026-10-17 22:06:55Z" end-time="2026-10-17 22:06:56Z" duration="0.438885" total="22" passed="22" failed="0" inconclusive="0" skipped="0" asserts="0">
+          <properties />
+          <test-suite type="TestSuite" id="1061" name="Tests" fullname="Simus.City.Tests" runstate="Runnable" testcasecount="47" result="Passed" start-time="2026-10-17 22:06:55Z" end-time="2026-10-17 22:06:56Z" duration="0.438538" total="22" passed="22" failed="0" inconclusive="0" skipped="0" asserts="0">
+            <properties />
+            <test-suite type="TestFixture" id="1023" name="CityV002RiverAreaTests" fullname="Simus.City.Tests.CityV002RiverAreaTests" classname="Simus.City.Tests.CityV002RiverAreaTests" runstate="Runnable" testcasecount="2" result="Passed" start-time="2026-10-17 22:06:55Z" end-time="2026-10-17 22:06:55Z" duration="0.017008" total="2" passed="2" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1024" name="DirectWaterCrossingIsRejectedWhileDeckCrossingIsAllowed" fullname="Simus.City.Tests.CityV002RiverAreaTests.DirectWaterCrossingIsRejectedWhileDeckCrossingIsAllowed" methodname="DirectWaterCrossingIsRejectedWhileDeckCrossingIsAllowed" classname="Simus.City.Tests.CityV002RiverAreaTests" runstate="Runnable" seed="720839558" result="Passed" start-time="2026-10-17 22:06:55Z" end-time="2026-10-17 22:06:55Z" duration="0.007019" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1025" name="GuardRejectsAnEntireStepAcrossTheWater" fullname="Simus.City.Tests.CityV002RiverAreaTests.GuardRejectsAnEntireStepAcrossTheWater" methodname="GuardRejectsAnEntireStepAcrossTheWater" classname="Simus.City.Tests.CityV002RiverAreaTests" runstate="Runnable" seed="1532386012" result="Passed" start-time="2026-10-17 22:06:55Z" end-time="2026-10-17 22:06:55Z" duration="0.003647" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1026" name="CityV002RiverGradingTests" fullname="Simus.City.Tests.CityV002RiverGradingTests" classname="Simus.City.Tests.CityV002RiverGradingTests" runstate="Runnable" testcasecount="1" result="Passed" start-time="2026-10-17 22:06:55Z" end-time="2026-10-17 22:06:55Z" duration="0.010049" total="1" passed="1" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1027" name="DownhillRouteReferenceKeepsTheActorOnTheRaisedTrail" fullname="Simus.City.Tests.CityV002RiverGradingTests.DownhillRouteReferenceKeepsTheActorOnTheRaisedTrail" methodname="DownhillRouteReferenceKeepsTheActorOnTheRaisedTrail" classname="Simus.City.Tests.CityV002RiverGradingTests" runstate="Runnable" seed="2106360593" result="Passed" start-time="2026-10-17 22:06:55Z" end-time="2026-10-17 22:06:55Z" duration="0.009546" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1028" name="CityV002RiverWaterTests" fullname="Simus.City.Tests.CityV002RiverWaterTests" classname="Simus.City.Tests.CityV002RiverWaterTests" runstate="Runnable" testcasecount="5" result="Passed" start-time="2026-10-17 22:06:55Z" end-time="2026-10-17 22:06:56Z" duration="0.312252" total="5" passed="5" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-suite type="ParameterizedMethod" id="1034" name="InvalidPollutionDoesNotPropagateToRenderer" fullname="Simus.City.Tests.CityV002RiverWaterTests.InvalidPollutionDoesNotPropagateToRenderer" classname="Simus.City.Tests.CityV002RiverWaterTests" runstate="Runnable" testcasecount="4" result="Passed" start-time="2026-10-17 22:06:55Z" end-time="2026-10-17 22:06:55Z" duration="0.004565" total="4" passed="4" failed="0" inconclusive="0" skipped="0" asserts="0">
+                <properties />
+                <test-case id="1030" name="InvalidPollutionDoesNotPropagateToRenderer(-1.0f,0.0f)" fullname="Simus.City.Tests.CityV002RiverWaterTests.InvalidPollutionDoesNotPropagateToRenderer(-1.0f,0.0f)" methodname="InvalidPollutionDoesNotPropagateToRenderer" classname="Simus.City.Tests.CityV002RiverWaterTests" runstate="Runnable" seed="1848160969" result="Passed" start-time="2026-10-17 22:06:55Z" end-time="2026-10-17 22:06:55Z" duration="0.001929" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1031" name="InvalidPollutionDoesNotPropagateToRenderer(101.0f,100.0f)" fullname="Simus.City.Tests.CityV002RiverWaterTests.InvalidPollutionDoesNotPropagateToRenderer(101.0f,100.0f)" methodname="InvalidPollutionDoesNotPropagateToRenderer" classname="Simus.City.Tests.CityV002RiverWaterTests" runstate="Runnable" seed="396515826" result="Passed" start-time="2026-10-17 22:06:55Z" end-time="2026-10-17 22:06:55Z" duration="0.000093" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1032" name="InvalidPollutionDoesNotPropagateToRenderer(float.NaN,0.0f)" fullname="Simus.City.Tests.CityV002RiverWaterTests.InvalidPollutionDoesNotPropagateToRenderer(float.NaN,0.0f)" methodname="InvalidPollutionDoesNotPropagateToRenderer" classname="Simus.City.Tests.CityV002RiverWaterTests" runstate="Runnable" seed="522555038" result="Passed" start-time="2026-10-17 22:06:55Z" end-time="2026-10-17 22:06:55Z" duration="0.000108" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+                <test-case id="1033" name="InvalidPollutionDoesNotPropagateToRenderer(float.PositiveInfinity,0.0f)" fullname="Simus.City.Tests.CityV002RiverWaterTests.InvalidPollutionDoesNotPropagateToRenderer(float.PositiveInfinity,0.0f)" methodname="InvalidPollutionDoesNotPropagateToRenderer" classname="Simus.City.Tests.CityV002RiverWaterTests" runstate="Runnable" seed="638182583" result="Passed" start-time="2026-10-17 22:06:55Z" end-time="2026-10-17 22:06:55Z" duration="0.000083" asserts="0">
+                  <properties>
+                    <property name="retryIteration" value="0" />
+                    <property name="repeatIteration" value="0" />
+                  </properties>
+                </test-case>
+              </test-suite>
+              <test-case id="1029" name="PollutionChangesOnlyTheTargetRendererAndCanReturnToClean" fullname="Simus.City.Tests.CityV002RiverWaterTests.PollutionChangesOnlyTheTargetRendererAndCanReturnToClean" methodname="PollutionChangesOnlyTheTargetRendererAndCanReturnToClean" classname="Simus.City.Tests.CityV002RiverWaterTests" runstate="Runnable" seed="1248249468" result="Passed" start-time="2026-10-17 22:06:55Z" end-time="2026-10-17 22:06:56Z" duration="0.306818" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1035" name="NpcMovementTests" fullname="Simus.City.Tests.NpcMovementTests" classname="Simus.City.Tests.NpcMovementTests" runstate="Runnable" testcasecount="11" result="Passed" start-time="2026-10-17 22:06:56Z" end-time="2026-10-17 22:06:56Z" duration="0.059587" total="11" passed="11" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1043" name="CameraAcquiresTargetAndUsesConfiguredOverviewCenter" fullname="Simus.City.Tests.NpcMovementTests.CameraAcquiresTargetAndUsesConfiguredOverviewCenter" methodname="CameraAcquiresTargetAndUsesConfiguredOverviewCenter" classname="Simus.City.Tests.NpcMovementTests" runstate="Runnable" seed="1019012821" result="Passed" start-time="2026-10-17 22:06:56Z" end-time="2026-10-17 22:06:56Z" duration="0.002031" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1044" name="CanonicalPositionAndRouteSnapshotAgree" fullname="Simus.City.Tests.NpcMovementTests.CanonicalPositionAndRouteSnapshotAgree" methodname="CanonicalPositionAndRouteSnapshotAgree" classname="Simus.City.Tests.NpcMovementTests" runstate="Runnable" seed="1102295917" result="Passed" start-time="2026-10-17 22:06:56Z" end-time="2026-10-17 22:06:56Z" duration="0.048765" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1039" name="DuplicateAndStationaryPointsDoNotDivideByZero" fullname="Simus.City.Tests.NpcMovementTests.DuplicateAndStationaryPointsDoNotDivideByZero" methodname="DuplicateAndStationaryPointsDoNotDivideByZero" classname="Simus.City.Tests.NpcMovementTests" runstate="Runnable" seed="509503270" result="Passed" start-time="2026-10-17 22:06:56Z" end-time="2026-10-17 22:06:56Z" duration="0.000155" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1042" name="EventPauseClampsOnlyItsNpcAndPreservesCanonicalPosition" fullname="Simus.City.Tests.NpcMovementTests.EventPauseClampsOnlyItsNpcAndPreservesCanonicalPosition" methodname="EventPauseClampsOnlyItsNpcAndPreservesCanonicalPosition" classname="Simus.City.Tests.NpcMovementTests" runstate="Runnable" seed="1361434414" result="Passed" start-time="2026-10-17 22:06:56Z" end-time="2026-10-17 22:06:56Z" duration="0.001697" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1036" name="GroundingUsesActualSurfaceAndIgnoresTriggersAndActorColliders" fullname="Simus.City.Tests.NpcMovementTests.GroundingUsesActualSurfaceAndIgnoresTriggersAndActorColliders" methodname="GroundingUsesActualSurfaceAndIgnoresTriggersAndActorColliders" classname="Simus.City.Tests.NpcMovementTests" runstate="Runnable" seed="464846877" result="Passed" start-time="2026-10-17 22:06:56Z" end-time="2026-10-17 22:06:56Z" duration="0.000856" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1040" name="NonfiniteRoutesAreRejected" fullname="Simus.City.Tests.NpcMovementTests.NonfiniteRoutesAreRejected" methodname="NonfiniteRoutesAreRejected" classname="Simus.City.Tests.NpcMovementTests" runstate="Runnable" seed="812363022" result="Passed" start-time="2026-10-17 22:06:56Z" end-time="2026-10-17 22:06:56Z" duration="0.000684" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1038" name="OpenRouteStopsAndClosedRouteTraversesClosingSegment" fullname="Simus.City.Tests.NpcMovementTests.OpenRouteStopsAndClosedRouteTraversesClosingSegment" methodname="OpenRouteStopsAndClosedRouteTraversesClosingSegment" classname="Simus.City.Tests.NpcMovementTests" runstate="Runnable" seed="130095382" result="Passed" start-time="2026-10-17 22:06:56Z" end-time="2026-10-17 22:06:56Z" duration="0.000177" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1045" name="RejectsIncorrectCanonicalPositionOrMixedMap" fullname="Simus.City.Tests.NpcMovementTests.RejectsIncorrectCanonicalPositionOrMixedMap" methodname="RejectsIncorrectCanonicalPositionOrMixedMap" classname="Simus.City.Tests.NpcMovementTests" runstate="Runnable" seed="173542953" result="Passed" start-time="2026-10-17 22:06:56Z" end-time="2026-10-17 22:06:56Z" duration="0.000627" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1046" name="RejectsMissingLoopOrNonNumericPoint" fullname="Simus.City.Tests.NpcMovementTests.RejectsMissingLoopOrNonNumericPoint" methodname="RejectsMissingLoopOrNonNumericPoint" classname="Simus.City.Tests.NpcMovementTests" runstate="Runnable" seed="244237708" result="Passed" start-time="2026-10-17 22:06:56Z" end-time="2026-10-17 22:06:56Z" duration="0.000189" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1037" name="RouteUsesMetersPerSecondAndNeverInventsLaneOffset" fullname="Simus.City.Tests.NpcMovementTests.RouteUsesMetersPerSecondAndNeverInventsLaneOffset" methodname="RouteUsesMetersPerSecondAndNeverInventsLaneOffset" classname="Simus.City.Tests.NpcMovementTests" runstate="Runnable" seed="1563363716" result="Passed" start-time="2026-10-17 22:06:56Z" end-time="2026-10-17 22:06:56Z" duration="0.000102" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1041" name="SnapshotFreezesAtServerDeadline" fullname="Simus.City.Tests.NpcMovementTests.SnapshotFreezesAtServerDeadline" methodname="SnapshotFreezesAtServerDeadline" classname="Simus.City.Tests.NpcMovementTests" runstate="Runnable" seed="1619012729" result="Passed" start-time="2026-10-17 22:06:56Z" end-time="2026-10-17 22:06:56Z" duration="0.000325" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+            </test-suite>
+            <test-suite type="TestFixture" id="1047" name="Phase8CameraTests" fullname="Simus.City.Tests.Phase8CameraTests" classname="Simus.City.Tests.Phase8CameraTests" runstate="Runnable" testcasecount="3" result="Passed" start-time="2026-10-17 22:06:56Z" end-time="2026-10-17 22:06:56Z" duration="0.037417" total="3" passed="3" failed="0" inconclusive="0" skipped="0" asserts="0">
+              <properties />
+              <test-case id="1048" name="ContextFadeIsOptInForExistingCameraScenes" fullname="Simus.City.Tests.Phase8CameraTests.ContextFadeIsOptInForExistingCameraScenes" methodname="ContextFadeIsOptInForExistingCameraScenes" classname="Simus.City.Tests.Phase8CameraTests" runstate="Runnable" seed="828989454" result="Passed" start-time="2026-10-17 22:06:56Z" end-time="2026-10-17 22:06:56Z" duration="0.000257" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1049" name="DisablingRevealRestoresVisibilityAndPreservesOtherPropertyBlockValues" fullname="Simus.City.Tests.Phase8CameraTests.DisablingRevealRestoresVisibilityAndPreservesOtherPropertyBlockValues" methodname="DisablingRevealRestoresVisibilityAndPreservesOtherPropertyBlockValues" classname="Simus.City.Tests.Phase8CameraTests" runstate="Runnable" seed="667691643" result="Passed" start-time="2026-10-17 22:06:56Z" end-time="2026-10-17 22:06:56Z" duration="0.035795" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+              </test-case>
+              <test-case id="1050" name="RevealShaderDefaultsToOpaqueContextForExistingScenes" fullname="Simus.City.Tests.Phase8CameraTests.RevealShaderDefaultsToOpaqueContextForExistingScenes" methodname="RevealShaderDefaultsToOpaqueContextForExistingScenes" classname="Simus.City.Tests.Phase8CameraTests" runstate="Runnable" seed="529147087" result="Passed" start-time="2026-10-17 22:06:56Z" end-time="2026-10-17 22:06:56Z" duration="0.000328" asserts="0">
+                <properties>
+                  <property name="retryIteration" value="0" />
+                  <property name="repeatIteration" value="0" />
+                </properties>
+                <output><![CDATA[Saving results to: /Users/jeongsua/dev/02_SIMUS/docs/verification/city-rebuild-v002-phase8-tests.xml
+]]></output>
+              </test-case>
+            </test-suite>
+          </test-suite>
+        </test-suite>
+      </test-suite>
+    </test-suite>
+  </test-suite>
+</test-run>

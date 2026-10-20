@@ -1,0 +1,65 @@
+{
+    "scope": "Actual real-time Unity Play Mode; samples in execution-order250 LateUpdate after camera, first visible pose included; production elapsed clock reset on acquisition and capped1/30s, timeScale0 for stationary acquisition; default legacy behavior unchanged",
+    "samples": [
+        {
+            "label": "static-view-to-campus",
+            "status": "PASS",
+            "frames": 325,
+            "seconds": 5.403489589691162,
+            "maxCameraStep": 2.3555264472961427,
+            "maxPanSpeed": 39.702613830566409,
+            "maxAngularSpeed": 20.05353546142578,
+            "maxZoomSpeed": 99.89183807373047,
+            "finalTargetError": 0.04958944767713547,
+            "firstCameraStep": 0.0139793511480093,
+            "firstPanSpeed": 0.015300878323614598,
+            "firstAngleDelta": 0.0,
+            "firstZoomDelta": 0.0
+        },
+        {
+            "label": "campus-to-apartment",
+            "status": "PASS",
+            "frames": 377,
+            "seconds": 6.273853302001953,
+            "maxCameraStep": 0.6641911268234253,
+            "maxPanSpeed": 39.7332763671875,
+            "maxAngularSpeed": 0.0,
+            "maxZoomSpeed": 0.0,
+            "finalTargetError": 0.04827390983700752,
+            "firstCameraStep": 0.0,
+            "firstPanSpeed": 0.00028561140061356127,
+            "firstAngleDelta": 0.0,
+            "firstZoomDelta": 0.0
+        },
+        {
+            "label": "apartment-to-route-start",
+            "status": "PASS",
+            "frames": 377,
+            "seconds": 6.267655372619629,
+            "maxCameraStep": 0.6623849868774414,
+            "maxPanSpeed": 39.65729904174805,
+            "maxAngularSpeed": 0.0,
+            "maxZoomSpeed": 0.0,
+            "finalTargetError": 0.04881705716252327,
+            "firstCameraStep": 0.0000152587890625,
+            "firstPanSpeed": 0.022848209366202356,
+            "firstAngleDelta": 0.0,
+            "firstZoomDelta": 0.0
+        },
+        {
+            "label": "route-end-to-apartment",
+            "status": "PASS",
+            "frames": 377,
+            "seconds": 6.2741851806640629,
+            "maxCameraStep": 0.6632711887359619,
+            "maxPanSpeed": 40.020023345947269,
+            "maxAngularSpeed": 0.0,
+            "maxZoomSpeed": 0.0,
+            "finalTargetError": 0.04809107631444931,
+            "firstCameraStep": 0.0,
+            "firstPanSpeed": 0.0002793337043840438,
+            "firstAngleDelta": 0.0,
+            "firstZoomDelta": 0.0
+        }
+    ]
+}
