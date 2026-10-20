@@ -31,6 +31,8 @@
 
 - [통합 실행 안내](operations/stage4-8-integration.md)
 - [시연·배포 가이드](operations/demo-deployment.md)
+- [Phase 2-B — Unity WebGL 산출물·버전·해시 검증](operations/unity-webgl-artifacts.md)
+- [Phase 2-C — Docker·GHCR·EC2 실행](operations/docker-ghcr-ec2.md)
 - [웹 운영 화면](../web/OPERATIONS.md)
 
 ## 검증과 Unity 자산

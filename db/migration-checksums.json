@@ -1,0 +1,18 @@
+{
+  "001_initial_schema.sql": "d226995cd801d37973ebd49d1cf41b3b47c92e59ec426bff180558199a61b38a",
+  "002_session_lifecycle.sql": "38bf4061edb69dca503b0df683c63dc828a2cb4e9eff18a0e90aca2520c94a46",
+  "003_session_creation.sql": "e83ba5c633796f9fe07f47fa6e6695f58e91983280993374ac153375f70309d9",
+  "004_participant_npcs.sql": "ab4b36dbf44a0b78a1646406c66e37f36aa4f6f6bbe23dcd2f6d2f9be60c887f",
+  "005_participant_departments.sql": "a4aca6c82b11857840445d87f8bcb15fb1d2639643d2da1eb46358327b792c67",
+  "006_content_score_range.sql": "1787d71b7ddb65de0661a897c4f62bf2d38038672e8cf9687e7090a9f08ff5c7",
+  "007_result_links.sql": "54790235559039cf5438121bdd5c86e0fbbea2bbb3ddc919b61eaed6b91a986b",
+  "008_web_push.sql": "b3cee84360ce22fd7b6fb90dec49926f07b8715e44097936a2ffdd4e3a89113f",
+  "009_participant_profiles.sql": "d9a2be4d295bf811bd112a501be63bc31632ee5d92607f6092884c0ca417fc4f",
+  "010_session_npc_motion.sql": "d47a6d3ec844ca5fec2b1445f43662114fb2851b18dcaa170484db8d2704bc7d",
+  "011_npc_events.sql": "59194302d5f560825a74aed3653f0efbda1a7305344a47bc7a1a2b05ffc0aebd",
+  "012_running_common_events.sql": "ca2c5fd70c1af2ab2ad49a4bcf96da05252293b6097d1c22d59ea4e4717f9f80",
+  "013_participant_characters.sql": "143e0af06699da56de806311cd9261821bb308fdd25a183831b915682420f25c",
+  "014_participant_glasses.sql": "445b204b6c94f33a6b7349f4fb704c9ed522938e6c07197bf136bcf4e06b5ac5",
+  "015_npc_graph_guidance.sql": "dd15a175bd257a99390eb314acc9ab9606fbb17e55846c1656b95d4fdcd6e15c",
+  "016_safe_participant_glasses.sql": "6a39edba20e3c3b547c0ef6771cbe884837f4d6ee9fa1278eb67a9c7f47d6522"
+}

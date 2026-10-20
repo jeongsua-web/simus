@@ -25,7 +25,8 @@ jobs:
       - name: Validate production Compose
         env:
           SIMUS_IMAGE: simus:ci
-          DATABASE_URL: postgresql://unused:unused@invalid:5432/unused
+          POSTGRES_PASSWORD: ci-admin-placeholder-not-a-production-secret
+          SIMUS_DB_PASSWORD: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
           ADMIN_TOKEN_ISSUER: https://auth.example.invalid
           ADMIN_TOKEN_AUDIENCE: simus-ci
           SESSION_JOB_TOKEN: ci-placeholder-with-at-least-32-characters

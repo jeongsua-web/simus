@@ -42,6 +42,7 @@ godot/builds/
 # 데이터베이스 백업
 *.dump
 *.backup
+/.prod-db/
 
 # IDE
 .idea/
