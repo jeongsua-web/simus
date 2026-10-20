@@ -1,0 +1,1218 @@
+{
+  "scene": "Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity",
+  "status": "SAVED_EDIT_MODE_PLACEMENT; QA awaits user approval",
+  "placement_count": 39,
+  "existing_crossing_groups": 17,
+  "river_reused": true,
+  "instances": [
+    {
+      "id": "ENV_VehicleSignal_J01_NE",
+      "category": "vehicle_signal",
+      "source": "Assets/SIMUS/Prefabs/props/traffic_signal_vehicle_v001/SIMUS_TrafficSignal_Vehicle.prefab",
+      "position": [
+        -88.4,
+        -0.02,
+        -53.2
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": -0.02,
+      "bounds_min": [
+        -92.2,
+        -0.01999998,
+        -53.41
+      ],
+      "bounds_max": [
+        -88.19,
+        5.909999,
+        -52.91
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_VehicleSignal_J01_NE",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_VehicleSignal_J01_SW",
+      "category": "vehicle_signal",
+      "source": "Assets/SIMUS/Prefabs/props/traffic_signal_vehicle_v001/SIMUS_TrafficSignal_Vehicle.prefab",
+      "position": [
+        -102.0,
+        -0.02,
+        -68.5
+      ],
+      "yaw": 180.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": -0.02,
+      "bounds_min": [
+        -102.210007,
+        -0.01999998,
+        -68.79001
+      ],
+      "bounds_max": [
+        -98.2,
+        5.909999,
+        -68.29001
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_VehicleSignal_J01_SW",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_PedSignal_Gate_N",
+      "category": "pedestrian_signal",
+      "source": "Assets/SIMUS/Prefabs/props/traffic_signal_pedestrian_v001/SIMUS_TrafficSignal_Pedestrian.prefab",
+      "position": [
+        2.1,
+        0.14,
+        -55.4
+      ],
+      "yaw": 180.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": 0.14,
+      "bounds_min": [
+        1.938,
+        0.139999986,
+        -55.8099976
+      ],
+      "bounds_max": [
+        2.26199985,
+        3.08999968,
+        -55.25
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_PedSignal_Gate_N",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_PedSignal_Gate_S",
+      "category": "pedestrian_signal",
+      "source": "Assets/SIMUS/Prefabs/props/traffic_signal_pedestrian_v001/SIMUS_TrafficSignal_Pedestrian.prefab",
+      "position": [
+        -2.1,
+        0.14,
+        -66.7
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": 0.14,
+      "bounds_min": [
+        -2.26199961,
+        0.139999986,
+        -66.84999
+      ],
+      "bounds_max": [
+        -1.9380002,
+        3.08999968,
+        -66.28999
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_PedSignal_Gate_S",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_BusStop_R01",
+      "category": "bus_stop",
+      "source": "Assets/SIMUS/Art/maps/university_v003/SIMUS_Dense_Realistic_University_Map_03.fbx",
+      "source_parts": [
+        "D03_UNITY_D03_BUS_PLATFORM",
+        "D03_UNITY_D03_REUSED_R02_BUS_BACK",
+        "D03_UNITY_D03_REUSED_R02_BUS_POST__28",
+        "D03_UNITY_D03_REUSED_R02_BUS_POST__34",
+        "D03_UNITY_D03_REUSED_R02_BUS_ROOF"
+      ],
+      "position": [
+        98.0,
+        0.170048371,
+        -163.999985
+      ],
+      "bounds_min": [
+        47.0,
+        0.139999986,
+        -56.2
+      ],
+      "bounds_max": [
+        61.0,
+        3.33000374,
+        -53.8
+      ],
+      "mode": "five existing model parts; original city coordinates discarded",
+      "path": "SIMUS_EventPlacement_20261020/ENV_BusStop_R01",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_Bin_ParkSouth",
+      "category": "trash_bin",
+      "source": "Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_NORMAL_01.fbx",
+      "position": [
+        142.0,
+        -0.012,
+        18.0
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": -0.012,
+      "bounds_min": [
+        141.775,
+        -0.0119999945,
+        17.73975
+      ],
+      "bounds_max": [
+        142.225,
+        0.638,
+        18.26025
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_Bin_ParkSouth",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_Bin_ParkNorth",
+      "category": "trash_bin",
+      "source": "Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_NORMAL_01.fbx",
+      "position": [
+        151.0,
+        -0.012,
+        119.0
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": -0.012,
+      "bounds_min": [
+        150.775,
+        -0.0119999945,
+        118.739754
+      ],
+      "bounds_max": [
+        151.225,
+        0.638,
+        119.260246
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_Bin_ParkNorth",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_Bin_Plaza",
+      "category": "trash_bin",
+      "source": "Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_NORMAL_01.fbx",
+      "position": [
+        14.0,
+        -0.02,
+        109.0
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": -0.02,
+      "bounds_min": [
+        13.775,
+        -0.01999998,
+        108.739754
+      ],
+      "bounds_max": [
+        14.225,
+        0.630000055,
+        109.260246
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_Bin_Plaza",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_Bin_BusStop",
+      "category": "trash_bin",
+      "source": "Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_NORMAL_01.fbx",
+      "position": [
+        60.0,
+        -0.02,
+        -54.0
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": -0.02,
+      "bounds_min": [
+        59.775,
+        -0.01999998,
+        -54.26025
+      ],
+      "bounds_max": [
+        60.225,
+        0.630000055,
+        -53.73975
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_Bin_BusStop",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_Bin_Residential",
+      "category": "trash_bin",
+      "source": "Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_NORMAL_01.fbx",
+      "position": [
+        -180.0,
+        0.14,
+        83.0
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": 0.14,
+      "bounds_min": [
+        -180.225,
+        0.139999986,
+        82.73975
+      ],
+      "bounds_max": [
+        -179.775,
+        0.79,
+        83.26025
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_Bin_Residential",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_Parking_EastCommercial_14Spaces",
+      "category": "parking_lot",
+      "source": "Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_Outdoor_ParkingLot_Complete.prefab",
+      "position": [
+        166.0,
+        -0.02,
+        -125.0
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": -0.02,
+      "bounds_min": [
+        151.0,
+        -0.01999998,
+        -137.0
+      ],
+      "bounds_max": [
+        181.0,
+        6.167248,
+        -113.0
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_Parking_EastCommercial_14Spaces",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_Cafe_EastCommercial",
+      "category": "cafe",
+      "source": "Assets/SIMUS/Prefabs/buildings/commercial_cafe_v001/SIMUS_Commercial_Cafe.prefab",
+      "position": [
+        140.0,
+        -0.02,
+        -78.0
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": -0.02,
+      "bounds_min": [
+        132.799988,
+        -0.01999998,
+        -87.0
+      ],
+      "bounds_max": [
+        147.200012,
+        13.858,
+        -69.0
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_Cafe_EastCommercial",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_Restaurant_EastCommercial",
+      "category": "restaurant",
+      "source": "Assets/SIMUS/Prefabs/buildings/commercial_restaurant_v001/SIMUS_Commercial_Restaurant.prefab",
+      "position": [
+        153.0,
+        -0.0199999977,
+        -99.0
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": -0.0199999977,
+      "bounds_min": [
+        146.699982,
+        -0.0199995041,
+        -107.55
+      ],
+      "bounds_max": [
+        159.300018,
+        16.4680023,
+        -90.45
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_Restaurant_EastCommercial",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_Subway_Entrance_SurfaceOnly",
+      "category": "subway",
+      "source": "Assets/SIMUS/Prefabs/buildings/subway_entrance_v001/SIMUS_Subway_Entrance.prefab",
+      "position": [
+        77.0,
+        -0.0199999977,
+        -47.0
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": -0.0199999977,
+      "bounds_min": [
+        75.2,
+        -3.66999984,
+        -50.0
+      ],
+      "bounds_max": [
+        89.7,
+        3.6299994,
+        -44.0
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_Subway_Entrance_SurfaceOnly",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_Recycle_ApartmentWest",
+      "category": "recycle_station",
+      "source": "Assets/SIMUS/Prefabs/props/recycle_station_v001/SIMUS_Recycle_Station_Complete.prefab",
+      "position": [
+        -174.0,
+        -0.0199999977,
+        119.0
+      ],
+      "yaw": 180.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": -0.0199999977,
+      "bounds_min": [
+        -176.424988,
+        -0.01999998,
+        117.71875
+      ],
+      "bounds_max": [
+        -171.575012,
+        2.5207808,
+        120.28125
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_Recycle_ApartmentWest",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_Recycle_SouthHousing",
+      "category": "recycle_station",
+      "source": "Assets/SIMUS/Prefabs/props/recycle_station_v001/SIMUS_Recycle_Station_Complete.prefab",
+      "position": [
+        53.0,
+        -0.02,
+        -216.0
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": -0.02,
+      "bounds_min": [
+        50.5749969,
+        -0.01999998,
+        -217.28125
+      ],
+      "bounds_max": [
+        55.4250031,
+        2.5207808,
+        -214.71875
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_Recycle_SouthHousing",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_Flowerbed_ParkSouth",
+      "category": "flowerbed",
+      "source": "Assets/SIMUS/Art/vegetation/street_landscape/SIMUS_Flowerbed.fbx",
+      "position": [
+        144.0,
+        -0.012,
+        12.0
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": -0.012,
+      "bounds_min": [
+        142.59906,
+        -0.0120000243,
+        10.7575607
+      ],
+      "bounds_max": [
+        145.40094,
+        1.49920583,
+        13.2424393
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_Flowerbed_ParkSouth",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_Flowerbed_ParkNorth",
+      "category": "flowerbed",
+      "source": "Assets/SIMUS/Art/vegetation/street_landscape/SIMUS_Flowerbed.fbx",
+      "position": [
+        154.0,
+        -0.012,
+        126.0
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": -0.012,
+      "bounds_min": [
+        152.59906,
+        -0.0120000243,
+        124.757553
+      ],
+      "bounds_max": [
+        155.40094,
+        1.49920583,
+        127.242447
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_Flowerbed_ParkNorth",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_Festival_Info_Plaza",
+      "category": "festival_booth",
+      "source": "Assets/SIMUS/Prefabs/props/festival_booth_v001/SIMUS_Festival_Booth_Info.prefab",
+      "position": [
+        14.0,
+        -0.02,
+        104.0
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": -0.02,
+      "bounds_min": [
+        12.424,
+        -0.01999998,
+        102.438248
+      ],
+      "bounds_max": [
+        15.576,
+        2.87199974,
+        105.561752
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_Festival_Info_Plaza",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_Festival_Food_Plaza",
+      "category": "festival_booth",
+      "source": "Assets/SIMUS/Prefabs/props/festival_booth_v001/SIMUS_Festival_Booth_Food.prefab",
+      "position": [
+        19.0,
+        -0.02,
+        104.0
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": -0.02,
+      "bounds_min": [
+        17.424,
+        -0.01999998,
+        102.438248
+      ],
+      "bounds_max": [
+        20.576,
+        2.87199974,
+        105.561752
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_Festival_Food_Plaza",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_Festival_Game_Plaza",
+      "category": "festival_booth",
+      "source": "Assets/SIMUS/Prefabs/props/festival_booth_v001/SIMUS_Festival_Booth_Game.prefab",
+      "position": [
+        24.0,
+        -0.02,
+        104.0
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": -0.02,
+      "bounds_min": [
+        22.424,
+        -0.01999998,
+        102.438248
+      ],
+      "bounds_max": [
+        25.576,
+        2.87199974,
+        105.561752
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_Festival_Game_Plaza",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_PublicToilet_ParkNorth",
+      "category": "public_toilet",
+      "source": "Assets/SIMUS/Prefabs/props/public_toilet_v001/SIMUS_Public_Toilet.prefab",
+      "position": [
+        158.0,
+        -0.012,
+        139.0
+      ],
+      "yaw": 180.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": -0.012,
+      "bounds_min": [
+        152.75,
+        -0.0120000839,
+        135.354172
+      ],
+      "bounds_max": [
+        163.25,
+        3.50800014,
+        142.645828
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_PublicToilet_ParkNorth",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_Barricade_R01_Control",
+      "category": "barricade",
+      "source": "Assets/SIMUS/Prefabs/props/road_control_v001/SIMUS_Barricade_01.prefab",
+      "position": [
+        86.0,
+        0.02,
+        -62.7
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": 0.02,
+      "bounds_min": [
+        85.0,
+        0.01999998,
+        -62.975
+      ],
+      "bounds_max": [
+        87.0,
+        1.04999983,
+        -62.4249954
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_Barricade_R01_Control",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_Cone_R01_Control_1",
+      "category": "traffic_cone",
+      "source": "Assets/SIMUS/Prefabs/props/road_control_v001/SIMUS_TrafficCone_01.prefab",
+      "position": [
+        82.0,
+        0.02,
+        -62.7
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": 0.02,
+      "bounds_min": [
+        81.8,
+        0.02000001,
+        -62.9
+      ],
+      "bounds_max": [
+        82.2,
+        0.72,
+        -62.5
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_Cone_R01_Control_1",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_Cone_R01_Control_2",
+      "category": "traffic_cone",
+      "source": "Assets/SIMUS/Prefabs/props/road_control_v001/SIMUS_TrafficCone_01.prefab",
+      "position": [
+        84.5,
+        0.02,
+        -62.7
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": 0.02,
+      "bounds_min": [
+        84.3,
+        0.02000001,
+        -62.9
+      ],
+      "bounds_max": [
+        84.7,
+        0.72,
+        -62.5
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_Cone_R01_Control_2",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_Cone_R01_Control_3",
+      "category": "traffic_cone",
+      "source": "Assets/SIMUS/Prefabs/props/road_control_v001/SIMUS_TrafficCone_01.prefab",
+      "position": [
+        87.0,
+        0.02,
+        -62.7
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": 0.02,
+      "bounds_min": [
+        86.8,
+        0.02000001,
+        -62.9
+      ],
+      "bounds_max": [
+        87.2,
+        0.72,
+        -62.5
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_Cone_R01_Control_3",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_Cone_R01_Control_4",
+      "category": "traffic_cone",
+      "source": "Assets/SIMUS/Prefabs/props/road_control_v001/SIMUS_TrafficCone_01.prefab",
+      "position": [
+        89.5,
+        0.02,
+        -62.7
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": 0.02,
+      "bounds_min": [
+        89.3,
+        0.02000001,
+        -62.9
+      ],
+      "bounds_max": [
+        89.7,
+        0.72,
+        -62.5
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_Cone_R01_Control_4",
+      "saved_present": true
+    },
+    {
+      "id": "ENV_MysteryCrate_Plaza",
+      "category": "mystery_crate",
+      "source": "Assets/SIMUS/Prefabs/props/mystery_crate_v001/SIMUS_MysteryCrate.prefab",
+      "position": [
+        15.0,
+        -0.02,
+        118.0
+      ],
+      "yaw": 25.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": -0.02,
+      "bounds_min": [
+        14.483448,
+        -0.01999998,
+        117.531815
+      ],
+      "bounds_max": [
+        15.516552,
+        0.648,
+        118.468185
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/ENV_MysteryCrate_Plaza",
+      "saved_present": true
+    },
+    {
+      "id": "NPC_CryingChild_ParkSouth",
+      "category": "crying_child",
+      "source": "Assets/SIMUS/Prefabs/characters/crying_child_v001/SIMUS_NPC_CryingChild.prefab",
+      "position": [
+        148.0,
+        -0.012,
+        22.0
+      ],
+      "yaw": 240.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": -0.012,
+      "bounds_min": [
+        147.700958,
+        -0.08197814,
+        21.6463051
+      ],
+      "bounds_max": [
+        148.236,
+        1.25905061,
+        22.3172722
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/NPC_CryingChild_ParkSouth",
+      "saved_present": true
+    },
+    {
+      "id": "NPC_Police_Gate",
+      "category": "police",
+      "source": "Assets/SIMUS/Art/characters/role_variants_v001/models/SIMUS_NPC_Police.fbx",
+      "position": [
+        6.0,
+        -0.02,
+        -52.0
+      ],
+      "yaw": 180.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": -0.02,
+      "bounds_min": [
+        5.666484,
+        -0.10931015,
+        -52.2243423
+      ],
+      "bounds_max": [
+        6.333516,
+        1.63099957,
+        -51.7912369
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/NPC_Police_Gate",
+      "saved_present": true
+    },
+    {
+      "id": "NPC_Criminal_PlazaEdge",
+      "category": "criminal",
+      "source": "Assets/SIMUS/Art/characters/role_variants_v001/models/SIMUS_NPC_Criminal.fbx",
+      "position": [
+        27.0,
+        -0.02,
+        117.0
+      ],
+      "yaw": 220.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": -0.02,
+      "bounds_min": [
+        26.6680527,
+        -0.10931015,
+        116.694496
+      ],
+      "bounds_max": [
+        27.330864,
+        1.65899944,
+        117.304207
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/NPC_Criminal_PlazaEdge",
+      "saved_present": true
+    },
+    {
+      "id": "NPC_SIMUS_CityCitizen_1",
+      "category": "city_citizen",
+      "source": "Assets/SIMUS/Art/characters/role_variants_v001/models/SIMUS_NPC_Cleaner.fbx",
+      "position": [
+        -34.965,
+        0.16,
+        62.926
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": 0.14,
+      "bounds_min": [
+        -35.10325,
+        0.0706898,
+        62.5924835
+      ],
+      "bounds_max": [
+        -34.740654,
+        1.81099927,
+        63.2595139
+      ],
+      "mode": "existing TestNpcPatrol + NpcGrounding; configured, Play Mode not run",
+      "path": "SIMUS_EventPlacement_20261020/NPC_SIMUS_CityCitizen_1",
+      "graph_edge": "C04_LINK_S1",
+      "patrol_start": [
+        -34.965,
+        0.16,
+        62.926
+      ],
+      "patrol_end": [
+        -16.035,
+        0.16,
+        62.926
+      ],
+      "speed_m_s": 1.0,
+      "saved_present": true
+    },
+    {
+      "id": "NPC_SIMUS_CityCitizen_2",
+      "category": "city_citizen",
+      "source": "Assets/SIMUS/Art/characters/role_variants_v001/models/SIMUS_NPC_Cleaner.fbx",
+      "position": [
+        69.314,
+        0.16,
+        -5.632
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": 0.14,
+      "bounds_min": [
+        69.175766,
+        0.0706898,
+        -5.965516
+      ],
+      "bounds_max": [
+        69.5383453,
+        1.81099927,
+        -5.298484
+      ],
+      "mode": "existing TestNpcPatrol + NpcGrounding; configured, Play Mode not run",
+      "path": "SIMUS_EventPlacement_20261020/NPC_SIMUS_CityCitizen_2",
+      "graph_edge": "C09_LINK_S1",
+      "patrol_start": [
+        69.314,
+        0.16,
+        -5.632
+      ],
+      "patrol_end": [
+        68.926,
+        0.16,
+        10.818
+      ],
+      "speed_m_s": 1.0,
+      "saved_present": true
+    },
+    {
+      "id": "NPC_HeavyCarrier_ApartmentWalk",
+      "category": "heavy_carrier",
+      "source": "Assets/SIMUS/Prefabs/characters/heavy_carrier_v001/SIMUS_NPC_HeavyCarrier.prefab",
+      "position": [
+        -186.85,
+        0.16,
+        124.355
+      ],
+      "yaw": 180.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": 0.139999986,
+      "bounds_min": [
+        -187.29245,
+        -0.02407962,
+        122.742691
+      ],
+      "bounds_max": [
+        -186.407562,
+        1.56490755,
+        124.444321
+      ],
+      "mode": "existing TestNpcPatrol + NpcGrounding; configured, Play Mode not run",
+      "path": "SIMUS_EventPlacement_20261020/NPC_HeavyCarrier_ApartmentWalk",
+      "graph_edge": "B16_BRANCH_S0",
+      "patrol_start": [
+        -186.85,
+        0.16,
+        124.355
+      ],
+      "patrol_end": [
+        -186.85,
+        0.16,
+        101.0738
+      ],
+      "speed_m_s": 0.24,
+      "saved_present": true
+    },
+    {
+      "id": "VEH_Car_R01",
+      "category": "car",
+      "source": "Assets/SIMUS/Art/props/city_state_v001/models/SAF_CAR_NORMAL_01.fbx",
+      "position": [
+        -55.0,
+        0.02,
+        -59.3
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": 0.02,
+      "bounds_min": [
+        -56.85,
+        0.02000004,
+        -60.23699
+      ],
+      "bounds_max": [
+        -53.15,
+        1.42750072,
+        -58.3630066
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/VEH_Car_R01",
+      "saved_present": true
+    },
+    {
+      "id": "VEH_Car_Parking",
+      "category": "car",
+      "source": "Assets/SIMUS/Art/props/city_state_v001/models/SAF_CAR_NORMAL_01.fbx",
+      "position": [
+        156.0,
+        0.205000341,
+        -123.0
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": -0.02,
+      "bounds_min": [
+        155.063,
+        0.205000341,
+        -124.85
+      ],
+      "bounds_max": [
+        156.937,
+        1.61250114,
+        -121.15
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/VEH_Car_Parking",
+      "saved_present": true
+    },
+    {
+      "id": "VEH_Bus_R01_Stop",
+      "category": "bus",
+      "source": "Assets/SIMUS/Prefabs/props/city_bus_v001/SIMUS_City_Bus.prefab",
+      "position": [
+        54.0,
+        0.02,
+        -59.4
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": 0.02,
+      "bounds_min": [
+        48.4499969,
+        0.01999998,
+        -61.025
+      ],
+      "bounds_max": [
+        59.5500031,
+        3.37900066,
+        -57.775
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/VEH_Bus_R01_Stop",
+      "saved_present": true
+    },
+    {
+      "id": "VEH_Taxi_R01_Commercial",
+      "category": "taxi",
+      "source": "Assets/SIMUS/Prefabs/props/taxi_v001/SIMUS_Taxi.prefab",
+      "position": [
+        19.0,
+        0.0199999977,
+        -63.0
+      ],
+      "yaw": 270.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": 0.0199999977,
+      "bounds_min": [
+        16.553,
+        0.01999998,
+        -64.109
+      ],
+      "bounds_max": [
+        21.447,
+        1.6500001,
+        -61.891
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/VEH_Taxi_R01_Commercial",
+      "saved_present": true
+    },
+    {
+      "id": "VEH_IllegalParked_R05",
+      "category": "illegal_car",
+      "source": "Assets/SIMUS/Art/props/city_state_v001/models/SAF_CAR_NORMAL_01.fbx",
+      "position": [
+        -143.0,
+        0.02,
+        -6.7
+      ],
+      "yaw": 85.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "ground_y": 0.02,
+      "bounds_min": [
+        -144.924622,
+        0.02000004,
+        -7.794664
+      ],
+      "bounds_max": [
+        -141.075378,
+        1.42750072,
+        -5.60533571
+      ],
+      "mode": "static existing asset",
+      "path": "SIMUS_EventPlacement_20261020/VEH_IllegalParked_R05",
+      "saved_present": true
+    }
+  ],
+  "play_mode_executed": false,
+  "build_executed": false,
+  "qa_executed": false
+}
