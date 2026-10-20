@@ -15,6 +15,8 @@ const eslintConfig = defineConfig([
     ".demo/**",
     ".unity-deploy-backups/**",
     "public/city/**",
+    "public/city-rebuild-v002/**",
+    "public/city-rebuild-v002-test/**",
     "public/unity-preview/**",
   ]),
 ]);

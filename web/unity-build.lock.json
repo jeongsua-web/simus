@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "repository": "jeongsua-web/simus",
+  "release_tag": "unity-webgl-1ba4e9a12216d3ee",
+  "asset": "unity-webgl-1ba4e9a12216d3ee.tar.gz",
+  "archive_sha256": "1ba4e9a12216d3ee4bbcbaf80c2ae4106db474a7545726604949385353505c23",
+  "archive_bytes": 78292815,
+  "builds": {
+    "city-rebuild-v002": {
+      "protocol_version": 1,
+      "kind": "city-rebuild-v002-session",
+      "map_version": "test-only-city-rebuild-v002-webgl-v1",
+      "path_versions": [
+        "city-rebuild-v002-walk-v1"
+      ],
+      "npc_motion_enabled": true,
+      "exhibition_ready": false
+    },
+    "city": {
+      "protocol_version": 1,
+      "map_version": "dev-synthetic-v1",
+      "exhibition_ready": false
+    },
+    "unity-preview": {
+      "protocol_version": 1,
+      "kind": "npc-follow-preview",
+      "map_version": null,
+      "exhibition_ready": false
+    }
+  },
+  "files": [
+    {
+      "path": "city-rebuild-v002/bridge.js",
+      "bytes": 5884,
+      "sha256": "70d23e67cfad185da55829586a27d69759813f582dc28059d78bf2a24f665a29"
+    },
+    {
+      "path": "city-rebuild-v002/build.json",
+      "bytes": 208,
+      "sha256": "ca34f16097db103596d9455aecc632dacd4d1b822a09c4b0b4657ffca32f15f6"
+    },
+    {
+      "path": "city-rebuild-v002/Build/city_rebuild_v002_character_zoom.data",
+      "bytes": 61270274,
+      "sha256": "7298124f64a5d75547dd222f58ed4e36e04e04e2c00deeac88ec4b8d85087cc6"
+    },
+    {
+      "path": "city-rebuild-v002/Build/city_rebuild_v002_character_zoom.framework.js",
+      "bytes": 413204,
+      "sha256": "8fc81fca14ab0d03713374e001dd5986c5edd0e2b8e8924ea2a21a483340dd2b"
+    },
+    {
+      "path": "city-rebuild-v002/Build/city_rebuild_v002_character_zoom.loader.js",
+      "bytes": 26983,
+      "sha256": "498e251d06036bcbffac60f84c5b39175176eea9f707e5245c368ed2443629e8"
+    },
+    {
+      "path": "city-rebuild-v002/Build/city_rebuild_v002_character_zoom.wasm",
+      "bytes": 26693655,
+      "sha256": "ea63da7ebcab167458f5d807be6a66cc84b8c03838f380971047493aa5cc7dc2"
+    },
+    {
+      "path": "city-rebuild-v002/index.html",
+      "bytes": 1660,
+      "sha256": "229d94ad9bf63d743c9096ebf9f8c73ff94303cfbdb66aafc006d8b543861f51"
+    },
+    {
+      "path": "city/bridge.js",
+      "bytes": 3512,
+      "sha256": "0f3b72662cc12879951e99d3a23ee22c26eb7b981c5b694115a7f8a01044521c"
+    },
+    {
+      "path": "city/build.json",
+      "bytes": 81,
+      "sha256": "3e63ea440f921869966cd56b78dabe3ef48a4a8fb91c40548c7ea01082c292d9"
+    },
+    {
+      "path": "city/Build/development_city.data",
+      "bytes": 45547960,
+      "sha256": "7dd40c5f15606e8158d57c5717b2085d553ca72601b353eb396f9fd33d2c02f9"
+    },
+    {
+      "path": "city/Build/development_city.framework.js",
+      "bytes": 411840,
+      "sha256": "65339d84093e272489ef09498693c8ef7a75adca3c1a70716fe09efaba805862"
+    },
+    {
+      "path": "city/Build/development_city.loader.js",
+      "bytes": 26983,
+      "sha256": "0176a6f4d1e5c8d1bc0275a834746efaea3ba78e0290d6cd18248b5ac8180117"
+    },
+    {
+      "path": "city/Build/development_city.wasm",
+      "bytes": 26184068,
+      "sha256": "7501bbdf992d41a87b86d42f11076ed0464de34532e1c473c6d1b06cc968c50d"
+    },
+    {
+      "path": "city/index.html",
+      "bytes": 1596,
+      "sha256": "984368c522454e3805b31870251636c5e2e1d960d2f98eae737c648a30b784cc"
+    },
+    {
+      "path": "unity-preview/build.json",
+      "bytes": 127,
+      "sha256": "d79337311740f783fcee5e3f8d7b50c3443ba380086c0901231e57e74c8f9d66"
+    },
+    {
+      "path": "unity-preview/Build/npc_follow_preview.data",
+      "bytes": 45540713,
+      "sha256": "649ce86f1c452e568386694d31341fa63b910d7335ec7832a3386e2981a3a977"
+    },
+    {
+      "path": "unity-preview/Build/npc_follow_preview.framework.js",
+      "bytes": 411840,
+      "sha256": "d45b2712093e1d9d01bc22fa9d5f3f2e4c7480ec2cb15e2493471d618bcdb046"
+    },
+    {
+      "path": "unity-preview/Build/npc_follow_preview.loader.js",
+      "bytes": 26983,
+      "sha256": "e6b4e917ca5db1b93a9132241a40f2168cc83f299de4b8cbb5f6f42c78e4074a"
+    },
+    {
+      "path": "unity-preview/Build/npc_follow_preview.wasm",
+      "bytes": 26147911,
+      "sha256": "2666a76b6977b5f9bca65f216a234a1a58fb1a293244c0abe30739813b33c3ab"
+    },
+    {
+      "path": "unity-preview/index.html",
+      "bytes": 2325,
+      "sha256": "5cba4e3ba4b7a6896a217932681586189d3c8127327b7348341ec7adec3b380b"
+    }
+  ]
+}

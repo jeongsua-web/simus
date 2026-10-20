@@ -1,0 +1,160 @@
+name: Docker build and GHCR publish
+
+on:
+  pull_request:
+  push:
+    branches: [main, develop]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docker-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Validate production Compose
+        env:
+          SIMUS_IMAGE: simus:ci
+          DATABASE_URL: postgresql://unused:unused@invalid:5432/unused
+          ADMIN_TOKEN_ISSUER: https://auth.example.invalid
+          ADMIN_TOKEN_AUDIENCE: simus-ci
+          SESSION_JOB_TOKEN: ci-placeholder-with-at-least-32-characters
+        run: docker compose -f compose.prod.yaml config --quiet
+      - name: Set up Node for Unity validation
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+      - name: Test Unity artifact validation
+        run: node --test web/tests/unity-artifact.test.mjs
+      - name: Download pinned Unity release and verify files and map versions
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node web/scripts/unity-artifact.mjs fetch
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@f87e5991a6d7451dcb8d9637bfbc97413f497069 # v4
+      - name: Build and load test image
+        uses: docker/build-push-action@c3c9e263c25d99ce0380d002d59b67737d91b0dc # v7
+        with:
+          # Path context includes downloaded Git-ignored WebGL builds.
+          context: .
+          file: ./Dockerfile
+          platforms: linux/amd64
+          load: true
+          push: false
+          tags: simus:ci
+          cache-from: type=gha,scope=simus
+          cache-to: type=gha,mode=max,scope=simus
+      - name: Smoke test without a database or external network
+        run: |
+          set -euo pipefail
+          trap 'docker logs --tail 50 simus-smoke; docker rm -f simus-smoke' EXIT
+          docker run --detach --name simus-smoke --network none simus:ci
+          docker exec simus-smoke node -e '
+            const fs = require("node:fs");
+            const assert = require("node:assert/strict");
+            assert.notEqual(process.getuid(), 0);
+            assert.equal(fs.existsSync("/app/.env.local"), false);
+            assert.equal(fs.existsSync("/app/.env.production"), false);
+            (async () => {
+              for (let attempt = 0; attempt < 60; attempt++) {
+                try {
+                  const r = await fetch("http://127.0.0.1:3000/", {signal: AbortSignal.timeout(2000)});
+                  if (r.ok) break;
+                } catch {}
+                if (attempt === 59) throw Error("Server did not start");
+                await new Promise(resolve => setTimeout(resolve, 1000));
+              }
+              for (const path of ["/participate", "/characters/custom/npc_01_none.png"]) {
+                const r = await fetch("http://127.0.0.1:3000" + path);
+                assert.equal(r.status, 200, path);
+              }
+              const health = await fetch("http://127.0.0.1:3000/api/health");
+              assert.equal(health.status, 503);
+              assert.equal((await health.json()).status, "unhealthy");
+            })().catch(error => { console.error(error); process.exit(1); });
+          '
+          docker exec simus-smoke node scripts/unity-artifact.mjs check-http http://127.0.0.1:3000
+
+  publish:
+    needs: verify
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          persist-credentials: false
+      - name: Prepare image names
+        id: image
+        env:
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          image="ghcr.io/${REPOSITORY,,}"
+          echo "name=$image" >> "$GITHUB_OUTPUT"
+          {
+            echo 'tags<<TAGS'
+            echo "$image:sha-$GITHUB_SHA"
+            if [ "$GITHUB_REF" = 'refs/heads/main' ]; then echo "$image:latest"; fi
+            if [ "$GITHUB_REF" = 'refs/heads/develop' ]; then echo "$image:develop"; fi
+            echo 'TAGS'
+          } >> "$GITHUB_OUTPUT"
+      - name: Set up Node for Unity validation
+        uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+      - name: Download the same pinned Unity release for publishing
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node web/scripts/unity-artifact.mjs fetch
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@99012661954931238ded8c8b007157a8430204e1 # v4
+        with:
+          platforms: arm64
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@f87e5991a6d7451dcb8d9637bfbc97413f497069 # v4
+      - name: Log in to GHCR
+        uses: docker/login-action@dbcb813823bdd20940b903addbd779551569679f # v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and push AMD64 and ARM64 images
+        id: build
+        uses: docker/build-push-action@c3c9e263c25d99ce0380d002d59b67737d91b0dc # v7
+        with:
+          context: .
+          file: ./Dockerfile
+          platforms: linux/amd64,linux/arm64
+          push: true
+          tags: ${{ steps.image.outputs.tags }}
+          labels: |
+            org.opencontainers.image.source=${{ github.server_url }}/${{ github.repository }}
+            org.opencontainers.image.revision=${{ github.sha }}
+            org.opencontainers.image.title=SIM:US
+          cache-from: type=gha,scope=simus
+          cache-to: type=gha,mode=max,scope=simus
+      - name: Record deployment image
+        env:
+          IMAGE: ${{ steps.image.outputs.name }}
+          DIGEST: ${{ steps.build.outputs.digest }}
+        run: |
+          {
+            echo '### EC2 image'
+            echo "\`SIMUS_IMAGE=$IMAGE:sha-$GITHUB_SHA\`"
+            echo "\`SIMUS_IMAGE=$IMAGE@$DIGEST\`"
+          } >> "$GITHUB_STEP_SUMMARY"

@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "standalone",
   // cloudflared quick tunnel hostnames change on each run.
   allowedDevOrigins: ["127.0.0.1", "*.trycloudflare.com"],
   async headers() {

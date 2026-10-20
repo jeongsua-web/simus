@@ -8,6 +8,9 @@
     "start": "next start",
     "lint": "eslint",
     "unity:deploy": "node scripts/deploy-unity.mjs",
+    "unity:verify": "node scripts/unity-artifact.mjs verify",
+    "unity:fetch": "node scripts/unity-artifact.mjs fetch",
+    "test:unity-artifact": "node --test tests/unity-artifact.test.mjs",
     "test:integration": "node tests/isolated-runner.mjs"
   },
   "dependencies": {
