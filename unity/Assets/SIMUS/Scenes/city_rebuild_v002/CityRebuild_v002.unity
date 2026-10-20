@@ -42532,7 +42532,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &445443270
 Transform:
   m_ObjectHideFlags: 0
@@ -120971,7 +120971,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1262468051
 Transform:
   m_ObjectHideFlags: 0
@@ -152084,7 +152084,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1552961192
 Transform:
   m_ObjectHideFlags: 0
@@ -190307,7 +190307,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1988348023
 Transform:
   m_ObjectHideFlags: 0
@@ -205913,6 +205913,56 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.08763471, y: 1.3874651, z: 0.035249814}
     m_Extent: {x: 0.20859405, y: 0.2575345, z: 0.14521284}
   m_DirtyAABB: 0
+--- !u!1001 &8000000000000000001
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3711844914814753897, guid: 648e3af9580810a4d9a94f6fb6fd0f3f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 156
+      objectReference: {fileID: 0}
+    - target: {fileID: 3711844914814753897, guid: 648e3af9580810a4d9a94f6fb6fd0f3f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.012
+      objectReference: {fileID: 0}
+    - target: {fileID: 3711844914814753897, guid: 648e3af9580810a4d9a94f6fb6fd0f3f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3711844914814753897, guid: 648e3af9580810a4d9a94f6fb6fd0f3f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3711844914814753897, guid: 648e3af9580810a4d9a94f6fb6fd0f3f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9238795
+      objectReference: {fileID: 0}
+    - target: {fileID: 3711844914814753897, guid: 648e3af9580810a4d9a94f6fb6fd0f3f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3711844914814753897, guid: 648e3af9580810a4d9a94f6fb6fd0f3f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.3826834
+      objectReference: {fileID: 0}
+    - target: {fileID: 4091748840471774931, guid: 648e3af9580810a4d9a94f6fb6fd0f3f, type: 3}
+      propertyPath: m_Name
+      value: CAT_Tuxedo_EastPark
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 648e3af9580810a4d9a94f6fb6fd0f3f, type: 3}
+--- !u!4 &8000000000000000002 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3711844914814753897, guid: 648e3af9580810a4d9a94f6fb6fd0f3f, type: 3}
+  m_PrefabInstance: {fileID: 8000000000000000001}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -205923,3 +205973,4 @@ SceneRoots:
   - {fileID: 1818144537}
   - {fileID: 848306604}
   - {fileID: 2143446071}
+  - {fileID: 8000000000000000002}

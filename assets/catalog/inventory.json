@@ -719,8 +719,8 @@
       "path": "assets/library/buildings/subway_entrance_v001/README.md",
       "role": "support",
       "location": "library",
-      "bytes": 1431,
-      "sha256": "5f4cc4f9c7f1e70164fc90b1f92c3c186a7d58d1e2b636f56e5087c615050568"
+      "bytes": 2146,
+      "sha256": "177f2a457861ad5149b2711d127c4c410d9467b8a4e7787efb7342a85860d9ef"
     },
     {
       "path": "assets/library/buildings/subway_entrance_v001/previews/01_Front.png",
@@ -849,11 +849,25 @@
       "sha256": "458fbd3df5fae4a705d200bdcf75e0eccd6789eab91e52176aeb4e6885a8caa9"
     },
     {
+      "path": "assets/library/buildings/subway_entrance_v001/previews/BlackFloor_Check.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 920907,
+      "sha256": "a0eeeaf99f388c019e4105d620625c93465decd290e507eaab6c730bc24e63f5"
+    },
+    {
       "path": "assets/library/buildings/subway_entrance_v001/previews/Overview.jpg",
       "role": "image",
       "location": "library",
       "bytes": 281853,
       "sha256": "674c576a6592ea4f6cf7d7ac0da6b092b8ffa6be18059ce5d4be1196932c071a"
+    },
+    {
+      "path": "assets/library/buildings/subway_entrance_v001/reports/BlackFloor_Audit.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 389,
+      "sha256": "0728e686d34e97b22a7355219095c30db92ff91ce8f91bc6f5f49537fe78da6a"
     },
     {
       "path": "assets/library/buildings/subway_entrance_v001/reports/Delivery_Report.md",
@@ -908,8 +922,8 @@
       "path": "assets/library/buildings/subway_entrance_v001/source/SIMUS_Subway_Entrance.blend",
       "role": "source",
       "location": "library",
-      "bytes": 1988620,
-      "sha256": "6223f8692c34b3011513e1f28b5407b3c35c90ca9944695e2176566e2035beb6"
+      "bytes": 2015122,
+      "sha256": "5c730a2998d3cd4b2c6dcf9ce3cee37ed65f9e848e9ef32876243fe78a02cbbb"
     },
     {
       "path": "assets/library/characters/crying_child_v001/README.md",
@@ -10071,8 +10085,8 @@
       "path": "unity/Assets/SIMUS/Art/buildings/subway_entrance_v001/materials/Metro_Dark.mat",
       "role": "material",
       "location": "unity_existing",
-      "bytes": 2213,
-      "sha256": "de1330ae19dae66ee846eabb3c735b63911dbeefa7bf9fc7ba5f4bdcfcf667ec"
+      "bytes": 2298,
+      "sha256": "6ad6e8e23e92eefdfcd2db26d4b17a80541958310d812c8665ea712d214606dc"
     },
     {
       "path": "unity/Assets/SIMUS/Art/buildings/subway_entrance_v001/materials/Metro_Dark.mat.meta",
@@ -10246,8 +10260,8 @@
       "path": "unity/Assets/SIMUS/Art/buildings/subway_entrance_v001/models/SIMUS_Subway_Entrance.fbx",
       "role": "export",
       "location": "unity_existing",
-      "bytes": 321948,
-      "sha256": "a69af4b2324386540316e6df1c1dedd42b940d8035e51337a351d93a82cc0a5d"
+      "bytes": 321996,
+      "sha256": "e628828188570e28dcdfe6b40bf99f308d98ab6a598dbc30a1b71fb5ec0fedbd"
     },
     {
       "path": "unity/Assets/SIMUS/Art/buildings/subway_entrance_v001/models/SIMUS_Subway_Entrance.fbx.meta",
@@ -18653,8 +18667,8 @@
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity",
       "role": "scene",
       "location": "unity_existing",
-      "bytes": 6581423,
-      "sha256": "811e198574356248d25c182d43e871304ce8cf733168b208db985342ddda38b4"
+      "bytes": 6583618,
+      "sha256": "3ceda52d4d9e4ad236cb7c4945828adc663a453ba4233a5d5006bf689c901dba"
     },
     {
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity.meta",
