@@ -1,3 +1,4 @@
+import { runInitialSessionIntegration } from './initial-session.integration.mjs';
 import { runV002SessionBrowser } from './v002-session-browser.mjs';
 import { runSessionBuildIntegration } from './session-build.integration.mjs';
 import { runCityV002Events } from './city-v002-events.integration.mjs';
@@ -103,17 +104,32 @@ try {
   const admin = new pg.Client({ connectionString: `postgresql://postgres@127.0.0.1:${pgPort}/postgres` });
   await admin.connect(); await admin.query('CREATE DATABASE simus_integration'); await admin.end();
   pool = new pg.Pool({ connectionString: env.DATABASE_URL });
+  if (env.TEST_INITIAL_SESSION_ONLY === '1') {
+    // Exercise the production migration planner in this NEW disposable cluster.
+    // Render without migrate.main(); apply with psql only to the owned test DB.
+    const sql = await command('python3', ['-c',
+      "import runpy; from types import SimpleNamespace; m=runpy.run_path('../scripts/db/migrate.py'); print(m['plan'](SimpleNamespace(command='init', approval_reference=None),m['sources']()))"]);
+    const migrationFile = path.join(root, 'managed-init.sql');
+    await writeFile(migrationFile, sql);
+    await command(path.join(bin, process.platform === 'win32' ? 'psql.exe' : 'psql'),
+      ['-X', '-h', '127.0.0.1', '-p', String(pgPort), '-U', 'postgres', '-d', 'simus_integration', '-v', 'ON_ERROR_STOP=1', '-f', migrationFile]);
+  } else {
   for (const name of ['001_initial_schema.sql','002_session_lifecycle.sql','003_session_creation.sql','004_participant_npcs.sql','005_participant_departments.sql','006_content_score_range.sql','007_result_links.sql','008_web_push.sql','009_participant_profiles.sql','010_session_npc_motion.sql','011_npc_events.sql']) await pool.query(await readFile(path.join(web, '../db', name), 'utf8'));
   await pool.query(await readFile(path.join(web, '../db/012_running_common_events.sql'), 'utf8'));
   await pool.query(await readFile(path.join(web, '../db/013_participant_characters.sql'), 'utf8'));
   await pool.query(await readFile(path.join(web, '../db/014_participant_glasses.sql'), 'utf8'));
   await pool.query(await readFile(path.join(web, '../db/015_npc_graph_guidance.sql'), 'utf8'));
+  await pool.query(await readFile(path.join(web, '../db/017_initial_session_creation.sql'), 'utf8'));
   await pool.query((await readFile(path.join(web, '../db/verify_schema.sql'), 'utf8')).replace(/^\\set.*$/gm, ''));
   // Synthetic geometry belongs only to this disposable test cluster. Production has no route default.
   await pool.query(`CREATE FUNCTION simus.test_fixture_npc_motion() RETURNS trigger LANGUAGE plpgsql AS $$
     BEGIN IF NEW.npc_motion IS NULL THEN NEW.npc_motion := '{"map_version":"test-fixture-v1","path_version":"test-path-v1","points":[[0,0,0],[0,0,20]],"speed_mps":1.4,"loop":true}'::jsonb; END IF; RETURN NEW; END $$;
     CREATE TRIGGER test_fixture_npc_motion BEFORE INSERT ON simus.simulation_sessions FOR EACH ROW EXECUTE FUNCTION simus.test_fixture_npc_motion()`);
+  }
   await startServer();
+  if (env.TEST_INITIAL_SESSION_ONLY === '1') {
+    await runInitialSessionIntegration({ pool, env, privateKey, publicJwk });
+  } else {
   console.log(await command(process.execPath, ['tests/session-lifecycle.integration.mjs'], env));
   await runFlow({ pool, env, stopServer, startServer });
   // Exercise the documented DRAFT demo seed through the real lifecycle API.
@@ -201,6 +217,7 @@ try {
   assert.deepEqual(afterOutage, beforeOutage);
   console.log('PASS: real PostgreSQL stop/start; existing Next.js process serves 503 during outage and recovers with the same persisted city');
   console.log('PASS isolated suite. No development connection or data mutation.');
+  }
 } finally {
   await stopServer(); if (pool) await pool.end();
   if (running) await command(path.join(bin, process.platform === 'win32' ? 'pg_ctl.exe' : 'pg_ctl'), ['-D', data, '-m', 'fast', '-w', 'stop']);

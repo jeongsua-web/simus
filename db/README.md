@@ -2,7 +2,7 @@
 
 DB 초기화와 기존 DB 업그레이드는 [관리형 마이그레이션 운영 안내](../docs/operations/db-migrations.md)를 따른다. 이번 변경은 **구현 및 정적 검토만** 수행하며 DB 접속·테스트·배포는 별도 승인 대상이다.
 
-- 신규 전용 DB: `scripts/db/migrate.py init`으로 001~011 → 013 → **016** → 015를 적용한다. DB 자체의 생성은 별도다.
+- 신규 전용 DB: `scripts/db/migrate.py init`으로 001~011 → 013 → **016** → 015 → **017**를 적용한다. DB 자체의 생성은 별도다.
 - 기존 DB: 최소 010 적용 증빙과 구조 검토 후 `baseline`으로 이력만 채택하고 `upgrade`한다. 이미 관리 이력이 있다면 `upgrade`만 사용한다. 기존 볼륨을 지우지 않는다.
 - 원본 001~015는 불변이다. **014는 직접 실행하지 않고 016으로 대체**한다. 014가 이미 적용된 DB의 안경 값은 UPDATE하지 않는다. 기존 015가 있고 014가 없는 DB도 지원한다.
 - **012의 RUNNING 콘텐츠 변경은 기본 제외**한다. 별도 승인 후 `approve-running-content --approval-reference ...`로만 실행한다.
@@ -34,3 +34,7 @@ PostgreSQL 14 이상을 대상으로 한다(개발 Compose는 16). 모든 서버
 - [프로필](../docs/contracts/participant-profiles.md), [학과](../docs/contracts/participant-departments.md)
 - [NPC API](../docs/contracts/participant-npc-api.md), [Unity 연동](../docs/contracts/unity-integration.md)
 - [새 전시 맵 인계](../docs/content/new-map-handoff-5a.md), [전시 콘텐츠](../docs/content/exhibition-data.md)
+
+## 최초 회차 생성
+
+017은 생성 요청의 `template_session_id`를 NULL로 허용하고 최초 생성 기록을 전체에서 한 개로 제한한다. 기존 회차·계정·콘텐츠 행을 변경하지 않는다. 신규 설치 SQL 준비 도구와 관리형 upgrade 순서에 포함되어 있다. 애플리케이션 변경보다 먼저 관리형 절차로 적용해야 하며, 이 작업에서는 운영 DB에 적용하지 않았다. 최초 생성 API와 검증 결과는 [최초 회차 구현 기록](../docs/verification/initial-session-creation.md)을 참고한다.

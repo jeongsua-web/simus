@@ -82,3 +82,7 @@ psql -X --host 127.0.0.1 --port 55432 --dbname simus_migration_qa --username sim
 ```
 
 컨테이너 전용 env 파일은 승인 후 합성 비밀번호만 담아 별도로 생성한다. 기존 web/tests/isolated-runner.mjs는 여전히 원본 SQL 기반이며 이번 검증을 대신하지 않는다. 이 테스트 경로 변경과 fixture 상세·실행은 후속 승인 범위다. 실행 전에 최종 명령/fixture 범위/격리/판정 기준을 다시 제시하고 승인을 기다린다.
+
+## 017 최초 회차 생성 요청
+
+관리형 init/upgrade의 마지막에 `017_initial_session_creation.sql`을 적용한다. 기존 원본/이력 checksum은 유지한다. `template_session_id`의 NOT NULL 해제, 최초 요청의 v002 프로필 제약과 부분 unique index만 추가하며 콘텐츠나 관리자 계정은 삽입하지 않는다. 017은 신규 관리형 migration으로 baseline 대상이 아니다. 앱의 최초 생성 기능 사용 전에 적용한다. 운영 실행은 이번 작업에서 수행하지 않았다.

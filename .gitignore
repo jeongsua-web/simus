@@ -69,3 +69,6 @@ godot/builds/
 **/.venv/
 *.pyc
 *.tsbuildinfo
+
+# Local administrator credentials
+.secrets/

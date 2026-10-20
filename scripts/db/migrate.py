@@ -12,7 +12,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[2]
 # 012 is separately approved content; original 014 is NEVER executed.
 ORDER = ['001', '002', '003', '004', '005', '006', '007', '008', '009',
-         '010', '011', '013', '016', '015']
+         '010', '011', '013', '016', '015', '017']
 LOCK_KEY = 73649812541002
 
 
@@ -73,9 +73,9 @@ def baseline_entries(path, data, database):
     if not isinstance(evidence, str) or not evidence.strip():
         raise ValueError('Baseline requires independent deployment evidence; schema inference is forbidden')
     entries = document['applied']
-    if not isinstance(entries, dict) or not entries or set(entries) - (set(data) - {'016'}):
+    if not isinstance(entries, dict) or not entries or set(entries) - (set(data) - {'016', '017'}):
         raise ValueError('Baseline applied must list known legacy versions only')
-    normal = [v for v in ORDER if v != '016']
+    normal = [v for v in ORDER if v not in {'016', '017'}]
     selected = [v for v in normal if v in entries]
     if selected != normal[:len(selected)] or '001' not in entries:
         raise ValueError('Baseline must be a contiguous legacy schema prefix (012/014 are explicit exceptions)')
