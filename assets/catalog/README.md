@@ -140,3 +140,9 @@ Phase 4 공원 범위에 [하천 설계](../../docs/planning/city_rebuild_v002/r
 
 - [14면 주차장과 모듈](../library/roads/outdoor_parking_v001/README.md): 30×24m, 일반12·장애인1·EV1, 입출구 차단기·정산기·보행로·기존 가로등.
 - Blender 원본1개, Unity FBX12개와 프리팹12개, 재질·아스팔트 텍스처·검수 이미지. received, LOD0, 기존 맵 미배치.
+
+
+## 2026-10-19 턱시도 고양이 NPC
+
+- [tuxedo_cat_v001](../library/characters/tuxedo_cat_v001/README.md): 독립 Blender 원본, Generic 사족보행 리그, 대기·걷기·앉기·앉은 대기·일어서기 5개 동작.
+- Unity FBX·프리팹·컨트롤러·텍스처·검수 이미지/GIF 제공. received, LOD0, 기존 맵 미배치.

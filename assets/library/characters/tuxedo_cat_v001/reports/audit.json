@@ -1,0 +1,202 @@
+{
+  "meshes": [
+    {
+      "name": "CAT_HEAD",
+      "vertices": 2387,
+      "triangles": 4770,
+      "max_weights": 1,
+      "zero_weight_vertices": 0
+    },
+    {
+      "name": "CAT_EARS",
+      "vertices": 168,
+      "triangles": 308,
+      "max_weights": 1,
+      "zero_weight_vertices": 0
+    },
+    {
+      "name": "CAT_TAIL",
+      "vertices": 396,
+      "triangles": 788,
+      "max_weights": 2,
+      "zero_weight_vertices": 0
+    },
+    {
+      "name": "CAT_BODY",
+      "vertices": 5503,
+      "triangles": 11002,
+      "max_weights": 4,
+      "zero_weight_vertices": 0
+    },
+    {
+      "name": "CAT_NOSE",
+      "vertices": 72,
+      "triangles": 140,
+      "max_weights": 1,
+      "zero_weight_vertices": 0
+    },
+    {
+      "name": "CAT_MOUTH",
+      "vertices": 48,
+      "triangles": 84,
+      "max_weights": 1,
+      "zero_weight_vertices": 0
+    },
+    {
+      "name": "CAT_INNER_EARS",
+      "vertices": 8,
+      "triangles": 6,
+      "max_weights": 1,
+      "zero_weight_vertices": 0
+    },
+    {
+      "name": "CAT_WHISKERS",
+      "vertices": 300,
+      "triangles": 560,
+      "max_weights": 1,
+      "zero_weight_vertices": 0
+    },
+    {
+      "name": "CAT_PAW_PADS",
+      "vertices": 251,
+      "triangles": 486,
+      "max_weights": 1,
+      "zero_weight_vertices": 0
+    },
+    {
+      "name": "CAT_FUR_SILHOUETTE",
+      "vertices": 64,
+      "triangles": 64,
+      "max_weights": 1,
+      "zero_weight_vertices": 0
+    },
+    {
+      "name": "CAT_EYES",
+      "vertices": 262,
+      "triangles": 256,
+      "max_weights": 1,
+      "zero_weight_vertices": 0
+    }
+  ],
+  "materials": [
+    {
+      "name": "CAT_Fur",
+      "color": [
+        0.03500000014901161,
+        0.03799999877810478,
+        0.041999999433755875,
+        1.0
+      ],
+      "roughness": 0.7400000095367432,
+      "texture": "CAT_Fur_BaseColor.png"
+    },
+    {
+      "name": "CAT_Nose_Pads",
+      "color": [
+        0.44999998807907104,
+        0.20000000298023224,
+        0.20000000298023224,
+        1.0
+      ],
+      "roughness": 0.44999998807907104,
+      "texture": ""
+    },
+    {
+      "name": "CAT_Eye_Rim",
+      "color": [
+        0.007000000216066837,
+        0.00800000037997961,
+        0.009999999776482582,
+        1.0
+      ],
+      "roughness": 0.3499999940395355,
+      "texture": ""
+    },
+    {
+      "name": "CAT_Inner_Ear",
+      "color": [
+        0.2800000011920929,
+        0.14000000059604645,
+        0.15000000596046448,
+        1.0
+      ],
+      "roughness": 0.7699999809265137,
+      "texture": ""
+    },
+    {
+      "name": "CAT_Whisker",
+      "color": [
+        0.7200000286102295,
+        0.7099999785423279,
+        0.6600000262260437,
+        1.0
+      ],
+      "roughness": 0.5199999809265137,
+      "texture": ""
+    },
+    {
+      "name": "CAT_Eye_Iris",
+      "color": [
+        0.25,
+        0.3400000035762787,
+        0.06499999761581421,
+        1.0
+      ],
+      "roughness": 0.18000000715255737,
+      "texture": "CAT_Iris_BaseColor.png"
+    }
+  ],
+  "bones": 35,
+  "tail_bones": 9,
+  "triangles": 18464,
+  "bounds_min": [
+    -0.09702472388744354,
+    -0.34523066878318787,
+    -2.4626197046018206e-05
+  ],
+  "bounds_max": [
+    0.12206248939037323,
+    0.5175212025642395,
+    0.4020000398159027
+  ],
+  "clips": [
+    {
+      "name": "CAT_IDLE_STAND",
+      "frames": 151,
+      "fps": 30,
+      "duration": 5.0,
+      "loop": true
+    },
+    {
+      "name": "CAT_WALK",
+      "frames": 37,
+      "fps": 30,
+      "duration": 1.2,
+      "loop": true
+    },
+    {
+      "name": "CAT_SIT_DOWN",
+      "frames": 61,
+      "fps": 30,
+      "duration": 2.0,
+      "loop": false
+    },
+    {
+      "name": "CAT_SIT_IDLE",
+      "frames": 151,
+      "fps": 30,
+      "duration": 5.0,
+      "loop": true
+    },
+    {
+      "name": "CAT_STAND_UP",
+      "frames": 61,
+      "fps": 30,
+      "duration": 2.0,
+      "loop": false
+    }
+  ],
+  "render_pipeline": "Built-in Standard",
+  "forward_speed_m_s": 0.12768817204301075,
+  "lod": "LOD0"
+}

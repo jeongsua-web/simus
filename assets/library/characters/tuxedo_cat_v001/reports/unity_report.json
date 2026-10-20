@@ -1,0 +1,54 @@
+{
+    "passed": true,
+    "avatarValid": true,
+    "error": "",
+    "size": {
+        "x": 0.2190874218940735,
+        "y": 0.402024507522583,
+        "z": 0.862751305103302
+    },
+    "bones": 36,
+    "skinnedMeshes": 11,
+    "clips": [
+        {
+            "name": "CAT_IDLE_STAND",
+            "seconds": 5.000000476837158,
+            "minY": -0.000024631619453430176,
+            "maxY": 0.40225791931152346,
+            "maxRootDisplacement": 0.0,
+            "loop": true
+        },
+        {
+            "name": "CAT_WALK",
+            "seconds": 1.2000000476837159,
+            "minY": -0.00039692223072052,
+            "maxY": 0.4022701382637024,
+            "maxRootDisplacement": 0.0,
+            "loop": true
+        },
+        {
+            "name": "CAT_SIT_DOWN",
+            "seconds": 2.0,
+            "minY": -0.0000247955322265625,
+            "maxY": 0.42209410667419436,
+            "maxRootDisplacement": 0.0,
+            "loop": false
+        },
+        {
+            "name": "CAT_SIT_IDLE",
+            "seconds": 5.000000476837158,
+            "minY": -0.000024810433387756348,
+            "maxY": 0.4222576320171356,
+            "maxRootDisplacement": 0.0,
+            "loop": true
+        },
+        {
+            "name": "CAT_STAND_UP",
+            "seconds": 2.0,
+            "minY": -0.000024810433387756348,
+            "maxY": 0.4220941662788391,
+            "maxRootDisplacement": 0.0,
+            "loop": false
+        }
+    ]
+}

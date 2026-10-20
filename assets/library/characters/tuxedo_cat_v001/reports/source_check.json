@@ -1,0 +1,20 @@
+{
+  "file_reopened": true,
+  "scene": "CAT_STUDIO",
+  "objects": 17,
+  "actions": [
+    "CAT_IDLE_STAND",
+    "CAT_SIT_DOWN",
+    "CAT_SIT_IDLE",
+    "CAT_STAND_UP",
+    "CAT_WALK"
+  ],
+  "packed_textures": [
+    "CAT_Fur_BaseColor.png",
+    "CAT_Fur_Normal.png",
+    "CAT_Fur_Roughness.png",
+    "CAT_Iris_BaseColor.png"
+  ],
+  "missing_textures": [],
+  "armatures": 1
+}

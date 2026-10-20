@@ -1,0 +1,32 @@
+{
+  "CAT_IDLE_STAND": {
+    "minimum_body_z": -2.4681165086803958e-05,
+    "minimum_tail_z": 0.1693286895751953,
+    "seam_max_matrix_delta": 0.0,
+    "loop": true
+  },
+  "CAT_WALK": {
+    "minimum_body_z": -2.4711474907235242e-05,
+    "minimum_tail_z": 0.1693286895751953,
+    "seam_max_matrix_delta": 0.0,
+    "loop": true
+  },
+  "CAT_SIT_DOWN": {
+    "minimum_body_z": -2.4721080990275368e-05,
+    "minimum_tail_z": 0.009592011570930481,
+    "seam_max_matrix_delta": 1.9445693492889404,
+    "loop": false
+  },
+  "CAT_SIT_IDLE": {
+    "minimum_body_z": -2.4730046789045446e-05,
+    "minimum_tail_z": 0.009493768215179443,
+    "seam_max_matrix_delta": 0.0,
+    "loop": true
+  },
+  "CAT_STAND_UP": {
+    "minimum_body_z": -2.4733437385293655e-05,
+    "minimum_tail_z": 0.009592011570930481,
+    "seam_max_matrix_delta": 1.9445693492889404,
+    "loop": false
+  }
+}
