@@ -3,7 +3,8 @@ name: Docker build and GHCR publish
 on:
   pull_request:
   push:
-    branches: [main, develop]
+    branches:
+      - "release/**"
   workflow_dispatch:
 
 permissions:
