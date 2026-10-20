@@ -7964,8 +7964,8 @@
       "path": "unity/Assets/Editor/CityRebuildV002WebGLBuild.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 5831,
-      "sha256": "ba5236ff86b11f446674df5847b7bc3a7d2b741351fcc7e048ebec77c8314bcb"
+      "bytes": 8048,
+      "sha256": "a53b17a010f2ed1ab6f34142825fdf50fafd378246ed92af749b641444185e48"
     },
     {
       "path": "unity/Assets/Editor/CityRebuildV002WebGLBuild.cs.meta",
@@ -8001,6 +8001,20 @@
       "location": "unity_existing",
       "bytes": 60,
       "sha256": "21d04708400e682d9817068162e883d831707b53925c61402df7fca05c4bbb70"
+    },
+    {
+      "path": "unity/Assets/Editor/CityV002LocationPreparation.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 3081,
+      "sha256": "983e00ec016b5c9daad83dea8d11c4aa0b7508dad0bcb72bb75837742b63d48e"
+    },
+    {
+      "path": "unity/Assets/Editor/CityV002LocationPreparation.cs.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 60,
+      "sha256": "6cdaf685a31eb45f3fb1b78191ba439a44f0064abd862dd4b7dbb482cf51f55c"
     },
     {
       "path": "unity/Assets/Editor/CompletedMapFollowSetup.cs",
@@ -18667,8 +18681,8 @@
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity",
       "role": "scene",
       "location": "unity_existing",
-      "bytes": 6583618,
-      "sha256": "3ceda52d4d9e4ad236cb7c4945828adc663a453ba4233a5d5006bf689c901dba"
+      "bytes": 6400557,
+      "sha256": "3ca26d6ee0c512812c8d1778c4fb8e8296b7df2357a46aa231daf9f6fe8969d2"
     },
     {
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity.meta",
@@ -36248,6 +36262,20 @@
       "sha256": "f0f9cf882c1171d3b77a4d56a83eb9fa00930c9ffcc7293c594184169dcb2421"
     },
     {
+      "path": "unity/Assets/Scripts/CityV002NpcBuildRole.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 364,
+      "sha256": "08afca6cba3e6c635290130580743408e000c71f0a65397771893ddbc28918b1"
+    },
+    {
+      "path": "unity/Assets/Scripts/CityV002NpcBuildRole.cs.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 60,
+      "sha256": "a853d0be852621a255f4a19ed24c98b40e17c50e77dfe2c0eaba5a188cb3a97e"
+    },
+    {
       "path": "unity/Assets/Scripts/CityV002NpcRouteAdapter.cs",
       "role": "code",
       "location": "unity_existing",
@@ -36265,8 +36293,8 @@
       "path": "unity/Assets/Scripts/CityV002PedestrianGraph.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 3866,
-      "sha256": "f862be6141f85de556455b9fd2e1e727c62c1c5b5422036a51194fbd41eaed37"
+      "bytes": 3937,
+      "sha256": "d45f423ab1c60b966d0d4e9f4aa8e2f6c4b7fb90acd0de2366505fcebf0f2c13"
     },
     {
       "path": "unity/Assets/Scripts/CityV002PedestrianGraph.cs.meta",
@@ -36302,6 +36330,20 @@
       "location": "unity_existing",
       "bytes": 60,
       "sha256": "5839a9bda4a3e025e9f5eb381bb89b4d4f4cbe59fdda8be105d4fe332b86d665"
+    },
+    {
+      "path": "unity/Assets/Scripts/CityV002PlaceAnchor.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 442,
+      "sha256": "2e9c37e00b16e08154ea60cb04b37fbe32f5d4c5457ace21c22413084a4022d5"
+    },
+    {
+      "path": "unity/Assets/Scripts/CityV002PlaceAnchor.cs.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 60,
+      "sha256": "59c5b32732613aff9e4d930c3b817825cc849554371403ed03fd82e022211ade"
     },
     {
       "path": "unity/Assets/Scripts/CityV002RiverArea.cs",

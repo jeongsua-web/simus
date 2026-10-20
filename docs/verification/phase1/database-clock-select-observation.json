@@ -1,0 +1,16 @@
+{
+  "scope": "Pure SELECT observation of two clock_timestamp evaluations, not UPDATE or choice E2E reproduction",
+  "database_writes": false,
+  "artificial_sleep": false,
+  "sql": "WITH samples AS MATERIALIZED (SELECT clock_timestamp() AS first_at,clock_timestamp() AS second_at FROM generate_series(1,100000)) SELECT count(*)::int AS samples,count(*) FILTER (WHERE date_trunc('milliseconds',first_at)=date_trunc('milliseconds',second_at))::int AS same_millisecond,count(*) FILTER (WHERE date_trunc('milliseconds',first_at)<>date_trunc('milliseconds',second_at))::int AS different_millisecond,count(*) FILTER (WHERE first_at<>second_at)::int AS different_exact_timestamp FROM samples",
+  "result": {
+    "samples": 100000,
+    "same_millisecond": 99998,
+    "different_millisecond": 2,
+    "different_exact_timestamp": 4122
+  },
+  "transaction_read_only": "on",
+  "transaction_completed": "ROLLBACK",
+  "status": "OBSERVED",
+  "recorded_at": "2026-10-20T05:14:37.434Z"
+}

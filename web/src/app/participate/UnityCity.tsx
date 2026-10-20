@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { BRIDGE_CHANNEL, BRIDGE_VERSION, matchesOwnSnapshot, readUnityEvent } from "./unity-bridge";
 import type { NpcSnapshot } from "./npc-motion";
 import styles from "./participate.module.css";
-import { cityBuildBase, V002_MAP_VERSION } from "@/lib/city-builds";
+import { cityBuildBase, isCityV002Map } from "@/lib/city-builds";
 
 type View = { phase: "loading" | "ready" | "error"; message: string; src?: string; zoomSupported?: boolean };
 
@@ -97,7 +97,7 @@ export default function UnityCity({ sessionId }: { sessionId: string }) {
         const build = await response.json();
         if (build.protocol_version !== BRIDGE_VERSION || typeof build.map_version !== "string" || !build.map_version.trim()) throw new Error("Invalid build");
         if (build.map_version !== sessionMap || build.npc_motion_enabled === false ||
-            (sessionMap === V002_MAP_VERSION && (build.npc_motion_enabled !== true || !build.path_versions?.includes(initial.npcs[0].motion.path_version)))) {
+            (isCityV002Map(sessionMap) && (build.npc_motion_enabled !== true || !Array.isArray(build.path_versions) || !build.path_versions.includes(initial.npcs[0].motion.path_version)))) {
           fail("회차의 도시 또는 경로 버전과 배포 빌드가 맞지 않습니다. 관리자에게 문의해 주세요."); return;
         }
         if (disposed || failed) return;

@@ -1,0 +1,3799 @@
+{
+  "recorded_at": "2026-10-20T05:07:06.886Z",
+  "scope": "READ ONLY metadata and content identifiers; no migration, seeds, QA writes, or apply",
+  "queries": [
+    {
+      "name": "transaction_context",
+      "sql": "SELECT current_database() AS database,current_setting('server_version') AS postgres_version,current_setting('transaction_read_only') AS transaction_read_only",
+      "parameters": [],
+      "rows": [
+        {
+          "database": "simus",
+          "postgres_version": "18.4",
+          "transaction_read_only": "on"
+        }
+      ]
+    },
+    {
+      "name": "tables",
+      "sql": "SELECT table_name FROM information_schema.tables WHERE table_schema='simus' AND table_type='BASE TABLE' ORDER BY table_name",
+      "parameters": [],
+      "rows": [
+        {
+          "table_name": "admin_actions"
+        },
+        {
+          "table_name": "admin_users"
+        },
+        {
+          "table_name": "choice_record_region_effects"
+        },
+        {
+          "table_name": "choice_records"
+        },
+        {
+          "table_name": "choice_region_effects"
+        },
+        {
+          "table_name": "city_states"
+        },
+        {
+          "table_name": "departments"
+        },
+        {
+          "table_name": "npc_event_states"
+        },
+        {
+          "table_name": "npc_events"
+        },
+        {
+          "table_name": "participant_alignments"
+        },
+        {
+          "table_name": "participant_credentials"
+        },
+        {
+          "table_name": "participant_results"
+        },
+        {
+          "table_name": "participant_sessions"
+        },
+        {
+          "table_name": "participants"
+        },
+        {
+          "table_name": "push_jobs"
+        },
+        {
+          "table_name": "push_subscriptions"
+        },
+        {
+          "table_name": "region_results"
+        },
+        {
+          "table_name": "region_states"
+        },
+        {
+          "table_name": "result_links"
+        },
+        {
+          "table_name": "session_choices"
+        },
+        {
+          "table_name": "session_creation_requests"
+        },
+        {
+          "table_name": "session_regions"
+        },
+        {
+          "table_name": "session_results"
+        },
+        {
+          "table_name": "session_situations"
+        },
+        {
+          "table_name": "simulation_sessions"
+        }
+      ]
+    },
+    {
+      "name": "columns",
+      "sql": "SELECT table_name,column_name,data_type,is_nullable,column_default FROM information_schema.columns WHERE table_schema='simus' ORDER BY table_name,ordinal_position",
+      "parameters": [],
+      "rows": [
+        {
+          "table_name": "admin_actions",
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "table_name": "admin_actions",
+          "column_name": "admin_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "admin_actions",
+          "column_name": "session_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "admin_actions",
+          "column_name": "action",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "admin_actions",
+          "column_name": "request_key",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "admin_actions",
+          "column_name": "requested_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "clock_timestamp()"
+        },
+        {
+          "table_name": "admin_actions",
+          "column_name": "approved_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "admin_actions",
+          "column_name": "outcome",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "admin_users",
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "table_name": "admin_users",
+          "column_name": "auth_subject",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "admin_users",
+          "column_name": "display_name",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "admin_users",
+          "column_name": "is_active",
+          "data_type": "boolean",
+          "is_nullable": "NO",
+          "column_default": "true"
+        },
+        {
+          "table_name": "admin_users",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "now()"
+        },
+        {
+          "table_name": "choice_record_region_effects",
+          "column_name": "choice_record_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_record_region_effects",
+          "column_name": "session_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_record_region_effects",
+          "column_name": "region_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_record_region_effects",
+          "column_name": "delta_requested",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_record_region_effects",
+          "column_name": "delta_applied",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_records",
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "table_name": "choice_records",
+          "column_name": "session_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_records",
+          "column_name": "participant_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_records",
+          "column_name": "situation_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_records",
+          "column_name": "choice_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_records",
+          "column_name": "request_key",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_records",
+          "column_name": "received_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_records",
+          "column_name": "applied_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "clock_timestamp()"
+        },
+        {
+          "table_name": "choice_records",
+          "column_name": "alignment_dx",
+          "data_type": "smallint",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_records",
+          "column_name": "alignment_dy",
+          "data_type": "smallint",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_records",
+          "column_name": "scale_snapshot",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_records",
+          "column_name": "happiness_delta_requested",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_records",
+          "column_name": "happiness_delta_applied",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_records",
+          "column_name": "safety_delta_requested",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_records",
+          "column_name": "safety_delta_applied",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_records",
+          "column_name": "cleanliness_delta_requested",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_records",
+          "column_name": "cleanliness_delta_applied",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_records",
+          "column_name": "state_version",
+          "data_type": "bigint",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_records",
+          "column_name": "event_id",
+          "data_type": "uuid",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_region_effects",
+          "column_name": "session_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_region_effects",
+          "column_name": "situation_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_region_effects",
+          "column_name": "choice_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_region_effects",
+          "column_name": "region_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "choice_region_effects",
+          "column_name": "pollution_base",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "city_states",
+          "column_name": "session_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "city_states",
+          "column_name": "happiness",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": "50"
+        },
+        {
+          "table_name": "city_states",
+          "column_name": "safety",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": "50"
+        },
+        {
+          "table_name": "city_states",
+          "column_name": "cleanliness",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": "50"
+        },
+        {
+          "table_name": "city_states",
+          "column_name": "version",
+          "data_type": "bigint",
+          "is_nullable": "NO",
+          "column_default": "0"
+        },
+        {
+          "table_name": "city_states",
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "now()"
+        },
+        {
+          "table_name": "departments",
+          "column_name": "id",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "departments",
+          "column_name": "faculty",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "departments",
+          "column_name": "name",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "departments",
+          "column_name": "display_order",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "npc_event_states",
+          "column_name": "session_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "npc_event_states",
+          "column_name": "participant_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "npc_event_states",
+          "column_name": "motion_revision",
+          "data_type": "bigint",
+          "is_nullable": "NO",
+          "column_default": "1"
+        },
+        {
+          "table_name": "npc_event_states",
+          "column_name": "waiting_since",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "clock_timestamp()"
+        },
+        {
+          "table_name": "npc_event_states",
+          "column_name": "motion_epoch",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "clock_timestamp()"
+        },
+        {
+          "table_name": "npc_event_states",
+          "column_name": "paused_ms",
+          "data_type": "bigint",
+          "is_nullable": "NO",
+          "column_default": "0"
+        },
+        {
+          "table_name": "npc_event_states",
+          "column_name": "resume_motion",
+          "data_type": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "npc_event_states",
+          "column_name": "guidance_point",
+          "data_type": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "npc_event_states",
+          "column_name": "guidance_origin",
+          "data_type": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "npc_event_states",
+          "column_name": "guidance_started_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "npc_events",
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "table_name": "npc_events",
+          "column_name": "session_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "npc_events",
+          "column_name": "participant_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "npc_events",
+          "column_name": "situation_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "npc_events",
+          "column_name": "trigger_kind",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "npc_events",
+          "column_name": "status",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": "'ACTIVE'::text"
+        },
+        {
+          "table_name": "npc_events",
+          "column_name": "started_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "clock_timestamp()"
+        },
+        {
+          "table_name": "npc_events",
+          "column_name": "completed_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "overall_pollution",
+          "column_name": "session_id",
+          "data_type": "uuid",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "overall_pollution",
+          "column_name": "overall_pollution",
+          "data_type": "numeric",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "participant_alignments",
+          "column_name": "session_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "participant_alignments",
+          "column_name": "participant_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "participant_alignments",
+          "column_name": "x_score",
+          "data_type": "bigint",
+          "is_nullable": "NO",
+          "column_default": "0"
+        },
+        {
+          "table_name": "participant_alignments",
+          "column_name": "y_score",
+          "data_type": "bigint",
+          "is_nullable": "NO",
+          "column_default": "0"
+        },
+        {
+          "table_name": "participant_alignments",
+          "column_name": "response_count",
+          "data_type": "bigint",
+          "is_nullable": "NO",
+          "column_default": "0"
+        },
+        {
+          "table_name": "participant_alignments",
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "now()"
+        },
+        {
+          "table_name": "participant_credentials",
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "table_name": "participant_credentials",
+          "column_name": "participant_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "participant_credentials",
+          "column_name": "token_hash",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "participant_credentials",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "now()"
+        },
+        {
+          "table_name": "participant_credentials",
+          "column_name": "expires_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "participant_credentials",
+          "column_name": "revoked_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "participant_results",
+          "column_name": "session_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "participant_results",
+          "column_name": "participant_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "participant_results",
+          "column_name": "x_score",
+          "data_type": "bigint",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "participant_results",
+          "column_name": "y_score",
+          "data_type": "bigint",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "participant_results",
+          "column_name": "response_count",
+          "data_type": "bigint",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "participant_results",
+          "column_name": "alignment_code",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "participant_results",
+          "column_name": "interpretation",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "participant_results",
+          "column_name": "finalized_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "participant_sessions",
+          "column_name": "session_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "participant_sessions",
+          "column_name": "participant_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "participant_sessions",
+          "column_name": "joined_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "now()"
+        },
+        {
+          "table_name": "participant_sessions",
+          "column_name": "npc_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "table_name": "participant_sessions",
+          "column_name": "npc_motion",
+          "data_type": "jsonb",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "participant_sessions",
+          "column_name": "department_id",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": "'none'::text"
+        },
+        {
+          "table_name": "participant_sessions",
+          "column_name": "nickname",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "participant_sessions",
+          "column_name": "mbti",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "participant_sessions",
+          "column_name": "profile_completed_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "participant_sessions",
+          "column_name": "character_id",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": "'npc_01'::text"
+        },
+        {
+          "table_name": "participant_sessions",
+          "column_name": "glasses_id",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": "'none'::text"
+        },
+        {
+          "table_name": "participants",
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "table_name": "participants",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "now()"
+        },
+        {
+          "table_name": "participants",
+          "column_name": "last_seen_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "now()"
+        },
+        {
+          "table_name": "push_jobs",
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "table_name": "push_jobs",
+          "column_name": "session_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "push_jobs",
+          "column_name": "subscription_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "push_jobs",
+          "column_name": "status",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": "'PENDING'::text"
+        },
+        {
+          "table_name": "push_jobs",
+          "column_name": "attempts",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "0"
+        },
+        {
+          "table_name": "push_jobs",
+          "column_name": "next_attempt_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "clock_timestamp()"
+        },
+        {
+          "table_name": "push_jobs",
+          "column_name": "claimed_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "push_jobs",
+          "column_name": "sent_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "push_jobs",
+          "column_name": "last_error",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "push_subscriptions",
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "table_name": "push_subscriptions",
+          "column_name": "session_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "push_subscriptions",
+          "column_name": "participant_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "push_subscriptions",
+          "column_name": "endpoint_hash",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "push_subscriptions",
+          "column_name": "endpoint",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "push_subscriptions",
+          "column_name": "p256dh",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "push_subscriptions",
+          "column_name": "auth_secret",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "push_subscriptions",
+          "column_name": "consented_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "clock_timestamp()"
+        },
+        {
+          "table_name": "push_subscriptions",
+          "column_name": "revoked_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "region_results",
+          "column_name": "session_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "region_results",
+          "column_name": "region_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "region_results",
+          "column_name": "pollution",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "region_states",
+          "column_name": "session_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "region_states",
+          "column_name": "region_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "region_states",
+          "column_name": "pollution",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": "0"
+        },
+        {
+          "table_name": "region_states",
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "now()"
+        },
+        {
+          "table_name": "result_links",
+          "column_name": "session_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "result_links",
+          "column_name": "participant_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "result_links",
+          "column_name": "token_hash",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "result_links",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "clock_timestamp()"
+        },
+        {
+          "table_name": "result_links",
+          "column_name": "expires_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_choices",
+          "column_name": "session_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_choices",
+          "column_name": "situation_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_choices",
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "table_name": "session_choices",
+          "column_name": "label",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_choices",
+          "column_name": "display_order",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "0"
+        },
+        {
+          "table_name": "session_choices",
+          "column_name": "importance",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": "'NORMAL'::text"
+        },
+        {
+          "table_name": "session_choices",
+          "column_name": "alignment_dx",
+          "data_type": "smallint",
+          "is_nullable": "NO",
+          "column_default": "0"
+        },
+        {
+          "table_name": "session_choices",
+          "column_name": "alignment_dy",
+          "data_type": "smallint",
+          "is_nullable": "NO",
+          "column_default": "0"
+        },
+        {
+          "table_name": "session_choices",
+          "column_name": "happiness_base",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": "0"
+        },
+        {
+          "table_name": "session_choices",
+          "column_name": "safety_base",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": "0"
+        },
+        {
+          "table_name": "session_choices",
+          "column_name": "cleanliness_base",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": "0"
+        },
+        {
+          "table_name": "session_creation_requests",
+          "column_name": "admin_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_creation_requests",
+          "column_name": "request_key",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_creation_requests",
+          "column_name": "session_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_creation_requests",
+          "column_name": "template_session_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_creation_requests",
+          "column_name": "name",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_creation_requests",
+          "column_name": "duration_seconds",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_creation_requests",
+          "column_name": "impact_scale",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_creation_requests",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "now()"
+        },
+        {
+          "table_name": "session_regions",
+          "column_name": "session_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_regions",
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "table_name": "session_regions",
+          "column_name": "code",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_regions",
+          "column_name": "name",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_regions",
+          "column_name": "aggregation_weight",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": "1"
+        },
+        {
+          "table_name": "session_regions",
+          "column_name": "map_metadata",
+          "data_type": "jsonb",
+          "is_nullable": "NO",
+          "column_default": "'{}'::jsonb"
+        },
+        {
+          "table_name": "session_results",
+          "column_name": "session_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_results",
+          "column_name": "finalized_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_results",
+          "column_name": "final_state_version",
+          "data_type": "bigint",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_results",
+          "column_name": "happiness",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_results",
+          "column_name": "safety",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_results",
+          "column_name": "cleanliness",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_results",
+          "column_name": "overall_pollution",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_results",
+          "column_name": "rules_snapshot",
+          "data_type": "jsonb",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_situations",
+          "column_name": "session_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_situations",
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "table_name": "session_situations",
+          "column_name": "code",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_situations",
+          "column_name": "title",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_situations",
+          "column_name": "body",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "session_situations",
+          "column_name": "display_order",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": "0"
+        },
+        {
+          "table_name": "session_situations",
+          "column_name": "event_location",
+          "data_type": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "session_situations",
+          "column_name": "is_generic",
+          "data_type": "boolean",
+          "is_nullable": "NO",
+          "column_default": "false"
+        },
+        {
+          "table_name": "session_timing",
+          "column_name": "session_id",
+          "data_type": "uuid",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "session_timing",
+          "column_name": "status",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "session_timing",
+          "column_name": "scheduled_end_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "session_timing",
+          "column_name": "admission_buffer",
+          "data_type": "interval",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "session_timing",
+          "column_name": "auto_cutoff_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "simulation_sessions",
+          "column_name": "id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": "gen_random_uuid()"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "column_name": "name",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "simulation_sessions",
+          "column_name": "status",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": "'DRAFT'::text"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "column_name": "starts_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "simulation_sessions",
+          "column_name": "scheduled_end_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "simulation_sessions",
+          "column_name": "admission_buffer",
+          "data_type": "interval",
+          "is_nullable": "NO",
+          "column_default": "'00:00:05'::interval"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "column_name": "admission_closed_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "simulation_sessions",
+          "column_name": "end_requested_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "simulation_sessions",
+          "column_name": "actual_ended_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "simulation_sessions",
+          "column_name": "finalized_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "simulation_sessions",
+          "column_name": "end_mode",
+          "data_type": "text",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "simulation_sessions",
+          "column_name": "ended_by_admin_id",
+          "data_type": "uuid",
+          "is_nullable": "YES",
+          "column_default": null
+        },
+        {
+          "table_name": "simulation_sessions",
+          "column_name": "expected_participants",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "simulation_sessions",
+          "column_name": "expected_answers_per_person",
+          "data_type": "integer",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "simulation_sessions",
+          "column_name": "impact_scale",
+          "data_type": "numeric",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "simulation_sessions",
+          "column_name": "rules_snapshot",
+          "data_type": "jsonb",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "simulation_sessions",
+          "column_name": "pollution_aggregation",
+          "data_type": "text",
+          "is_nullable": "NO",
+          "column_default": "'WEIGHTED_MEAN'::text"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "column_name": "created_by_admin_id",
+          "data_type": "uuid",
+          "is_nullable": "NO",
+          "column_default": null
+        },
+        {
+          "table_name": "simulation_sessions",
+          "column_name": "created_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "now()"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "column_name": "updated_at",
+          "data_type": "timestamp with time zone",
+          "is_nullable": "NO",
+          "column_default": "now()"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "column_name": "npc_motion",
+          "data_type": "jsonb",
+          "is_nullable": "YES",
+          "column_default": null
+        }
+      ]
+    },
+    {
+      "name": "constraints",
+      "sql": "SELECT c.relname AS table_name,k.conname AS constraint_name,pg_get_constraintdef(k.oid) AS definition FROM pg_constraint k JOIN pg_class c ON c.oid=k.conrelid JOIN pg_namespace n ON n.oid=c.relnamespace WHERE n.nspname='simus' ORDER BY c.relname,k.conname",
+      "parameters": [],
+      "rows": [
+        {
+          "table_name": "admin_actions",
+          "constraint_name": "admin_actions_action_check",
+          "definition": "CHECK ((action = ANY (ARRAY['CREATE'::text, 'START'::text, 'END'::text])))"
+        },
+        {
+          "table_name": "admin_actions",
+          "constraint_name": "admin_actions_action_not_null",
+          "definition": "NOT NULL action"
+        },
+        {
+          "table_name": "admin_actions",
+          "constraint_name": "admin_actions_admin_id_fkey",
+          "definition": "FOREIGN KEY (admin_id) REFERENCES admin_users(id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "admin_actions",
+          "constraint_name": "admin_actions_admin_id_not_null",
+          "definition": "NOT NULL admin_id"
+        },
+        {
+          "table_name": "admin_actions",
+          "constraint_name": "admin_actions_admin_id_request_key_key",
+          "definition": "UNIQUE (admin_id, request_key)"
+        },
+        {
+          "table_name": "admin_actions",
+          "constraint_name": "admin_actions_id_not_null",
+          "definition": "NOT NULL id"
+        },
+        {
+          "table_name": "admin_actions",
+          "constraint_name": "admin_actions_outcome_check",
+          "definition": "CHECK ((outcome = ANY (ARRAY['PENDING'::text, 'SUCCEEDED'::text, 'REJECTED'::text, 'ERROR'::text])))"
+        },
+        {
+          "table_name": "admin_actions",
+          "constraint_name": "admin_actions_outcome_not_null",
+          "definition": "NOT NULL outcome"
+        },
+        {
+          "table_name": "admin_actions",
+          "constraint_name": "admin_actions_pkey",
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "admin_actions",
+          "constraint_name": "admin_actions_request_key_not_null",
+          "definition": "NOT NULL request_key"
+        },
+        {
+          "table_name": "admin_actions",
+          "constraint_name": "admin_actions_requested_at_not_null",
+          "definition": "NOT NULL requested_at"
+        },
+        {
+          "table_name": "admin_actions",
+          "constraint_name": "admin_actions_session_id_fkey",
+          "definition": "FOREIGN KEY (session_id) REFERENCES simulation_sessions(id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "admin_actions",
+          "constraint_name": "admin_actions_session_id_not_null",
+          "definition": "NOT NULL session_id"
+        },
+        {
+          "table_name": "admin_users",
+          "constraint_name": "admin_users_auth_subject_key",
+          "definition": "UNIQUE (auth_subject)"
+        },
+        {
+          "table_name": "admin_users",
+          "constraint_name": "admin_users_auth_subject_not_null",
+          "definition": "NOT NULL auth_subject"
+        },
+        {
+          "table_name": "admin_users",
+          "constraint_name": "admin_users_created_at_not_null",
+          "definition": "NOT NULL created_at"
+        },
+        {
+          "table_name": "admin_users",
+          "constraint_name": "admin_users_display_name_not_null",
+          "definition": "NOT NULL display_name"
+        },
+        {
+          "table_name": "admin_users",
+          "constraint_name": "admin_users_id_not_null",
+          "definition": "NOT NULL id"
+        },
+        {
+          "table_name": "admin_users",
+          "constraint_name": "admin_users_is_active_not_null",
+          "definition": "NOT NULL is_active"
+        },
+        {
+          "table_name": "admin_users",
+          "constraint_name": "admin_users_pkey",
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "choice_record_region_effects",
+          "constraint_name": "choice_record_region_effects_choice_record_id_not_null",
+          "definition": "NOT NULL choice_record_id"
+        },
+        {
+          "table_name": "choice_record_region_effects",
+          "constraint_name": "choice_record_region_effects_delta_applied_not_null",
+          "definition": "NOT NULL delta_applied"
+        },
+        {
+          "table_name": "choice_record_region_effects",
+          "constraint_name": "choice_record_region_effects_delta_requested_not_null",
+          "definition": "NOT NULL delta_requested"
+        },
+        {
+          "table_name": "choice_record_region_effects",
+          "constraint_name": "choice_record_region_effects_pkey",
+          "definition": "PRIMARY KEY (choice_record_id, region_id)"
+        },
+        {
+          "table_name": "choice_record_region_effects",
+          "constraint_name": "choice_record_region_effects_region_id_not_null",
+          "definition": "NOT NULL region_id"
+        },
+        {
+          "table_name": "choice_record_region_effects",
+          "constraint_name": "choice_record_region_effects_session_id_choice_record_id_fkey",
+          "definition": "FOREIGN KEY (session_id, choice_record_id) REFERENCES choice_records(session_id, id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "choice_record_region_effects",
+          "constraint_name": "choice_record_region_effects_session_id_not_null",
+          "definition": "NOT NULL session_id"
+        },
+        {
+          "table_name": "choice_record_region_effects",
+          "constraint_name": "choice_record_region_effects_session_id_region_id_fkey",
+          "definition": "FOREIGN KEY (session_id, region_id) REFERENCES session_regions(session_id, id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_event_membership",
+          "definition": "FOREIGN KEY (session_id, participant_id, situation_id, event_id) REFERENCES npc_events(session_id, participant_id, situation_id, id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_alignment_dx_not_null",
+          "definition": "NOT NULL alignment_dx"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_alignment_dy_not_null",
+          "definition": "NOT NULL alignment_dy"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_alignment_range_check",
+          "definition": "CHECK ((((alignment_dx >= '-4'::integer) AND (alignment_dx <= 3)) AND ((alignment_dy >= '-4'::integer) AND (alignment_dy <= 3))))"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_applied_at_not_null",
+          "definition": "NOT NULL applied_at"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_choice_id_not_null",
+          "definition": "NOT NULL choice_id"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_cleanliness_delta_applied_not_null",
+          "definition": "NOT NULL cleanliness_delta_applied"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_cleanliness_delta_requested_not_null",
+          "definition": "NOT NULL cleanliness_delta_requested"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_event_id_key",
+          "definition": "UNIQUE (event_id)"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_happiness_delta_applied_not_null",
+          "definition": "NOT NULL happiness_delta_applied"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_happiness_delta_requested_not_null",
+          "definition": "NOT NULL happiness_delta_requested"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_id_not_null",
+          "definition": "NOT NULL id"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_participant_id_not_null",
+          "definition": "NOT NULL participant_id"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_pkey",
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_received_at_not_null",
+          "definition": "NOT NULL received_at"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_request_key_not_null",
+          "definition": "NOT NULL request_key"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_safety_delta_applied_not_null",
+          "definition": "NOT NULL safety_delta_applied"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_safety_delta_requested_not_null",
+          "definition": "NOT NULL safety_delta_requested"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_scale_snapshot_check",
+          "definition": "CHECK (((scale_snapshot >= (0)::numeric) AND (scale_snapshot <> 'NaN'::numeric)))"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_scale_snapshot_not_null",
+          "definition": "NOT NULL scale_snapshot"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_session_id_id_key",
+          "definition": "UNIQUE (session_id, id)"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_session_id_not_null",
+          "definition": "NOT NULL session_id"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_session_id_participant_id_fkey",
+          "definition": "FOREIGN KEY (session_id, participant_id) REFERENCES participant_sessions(session_id, participant_id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_session_id_participant_id_request_key_key",
+          "definition": "UNIQUE (session_id, participant_id, request_key)"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_session_id_situation_id_choice_id_fkey",
+          "definition": "FOREIGN KEY (session_id, situation_id, choice_id) REFERENCES session_choices(session_id, situation_id, id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_session_id_state_version_key",
+          "definition": "UNIQUE (session_id, state_version)"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_situation_id_not_null",
+          "definition": "NOT NULL situation_id"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_state_version_check",
+          "definition": "CHECK ((state_version > 0))"
+        },
+        {
+          "table_name": "choice_records",
+          "constraint_name": "choice_records_state_version_not_null",
+          "definition": "NOT NULL state_version"
+        },
+        {
+          "table_name": "choice_region_effects",
+          "constraint_name": "choice_region_effects_choice_id_not_null",
+          "definition": "NOT NULL choice_id"
+        },
+        {
+          "table_name": "choice_region_effects",
+          "constraint_name": "choice_region_effects_pkey",
+          "definition": "PRIMARY KEY (session_id, situation_id, choice_id, region_id)"
+        },
+        {
+          "table_name": "choice_region_effects",
+          "constraint_name": "choice_region_effects_pollution_base_not_null",
+          "definition": "NOT NULL pollution_base"
+        },
+        {
+          "table_name": "choice_region_effects",
+          "constraint_name": "choice_region_effects_region_id_not_null",
+          "definition": "NOT NULL region_id"
+        },
+        {
+          "table_name": "choice_region_effects",
+          "constraint_name": "choice_region_effects_session_id_not_null",
+          "definition": "NOT NULL session_id"
+        },
+        {
+          "table_name": "choice_region_effects",
+          "constraint_name": "choice_region_effects_session_id_region_id_fkey",
+          "definition": "FOREIGN KEY (session_id, region_id) REFERENCES session_regions(session_id, id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "choice_region_effects",
+          "constraint_name": "choice_region_effects_session_id_situation_id_choice_id_fkey",
+          "definition": "FOREIGN KEY (session_id, situation_id, choice_id) REFERENCES session_choices(session_id, situation_id, id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "choice_region_effects",
+          "constraint_name": "choice_region_effects_situation_id_not_null",
+          "definition": "NOT NULL situation_id"
+        },
+        {
+          "table_name": "city_states",
+          "constraint_name": "city_states_cleanliness_check",
+          "definition": "CHECK (((cleanliness >= (0)::numeric) AND (cleanliness <= (100)::numeric)))"
+        },
+        {
+          "table_name": "city_states",
+          "constraint_name": "city_states_cleanliness_not_null",
+          "definition": "NOT NULL cleanliness"
+        },
+        {
+          "table_name": "city_states",
+          "constraint_name": "city_states_happiness_check",
+          "definition": "CHECK (((happiness >= (0)::numeric) AND (happiness <= (100)::numeric)))"
+        },
+        {
+          "table_name": "city_states",
+          "constraint_name": "city_states_happiness_not_null",
+          "definition": "NOT NULL happiness"
+        },
+        {
+          "table_name": "city_states",
+          "constraint_name": "city_states_pkey",
+          "definition": "PRIMARY KEY (session_id)"
+        },
+        {
+          "table_name": "city_states",
+          "constraint_name": "city_states_safety_check",
+          "definition": "CHECK (((safety >= (0)::numeric) AND (safety <= (100)::numeric)))"
+        },
+        {
+          "table_name": "city_states",
+          "constraint_name": "city_states_safety_not_null",
+          "definition": "NOT NULL safety"
+        },
+        {
+          "table_name": "city_states",
+          "constraint_name": "city_states_session_id_fkey",
+          "definition": "FOREIGN KEY (session_id) REFERENCES simulation_sessions(id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "city_states",
+          "constraint_name": "city_states_session_id_not_null",
+          "definition": "NOT NULL session_id"
+        },
+        {
+          "table_name": "city_states",
+          "constraint_name": "city_states_updated_at_not_null",
+          "definition": "NOT NULL updated_at"
+        },
+        {
+          "table_name": "city_states",
+          "constraint_name": "city_states_version_check",
+          "definition": "CHECK ((version >= 0))"
+        },
+        {
+          "table_name": "city_states",
+          "constraint_name": "city_states_version_not_null",
+          "definition": "NOT NULL version"
+        },
+        {
+          "table_name": "departments",
+          "constraint_name": "departments_display_order_key",
+          "definition": "UNIQUE (display_order)"
+        },
+        {
+          "table_name": "departments",
+          "constraint_name": "departments_display_order_not_null",
+          "definition": "NOT NULL display_order"
+        },
+        {
+          "table_name": "departments",
+          "constraint_name": "departments_faculty_not_null",
+          "definition": "NOT NULL faculty"
+        },
+        {
+          "table_name": "departments",
+          "constraint_name": "departments_id_not_null",
+          "definition": "NOT NULL id"
+        },
+        {
+          "table_name": "departments",
+          "constraint_name": "departments_name_not_null",
+          "definition": "NOT NULL name"
+        },
+        {
+          "table_name": "departments",
+          "constraint_name": "departments_pkey",
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "npc_event_states",
+          "constraint_name": "npc_event_states_check",
+          "definition": "CHECK ((((guidance_point IS NULL) AND (guidance_origin IS NULL) AND (guidance_started_at IS NULL)) OR ((guidance_point IS NOT NULL) AND (guidance_origin IS NOT NULL) AND (guidance_started_at IS NOT NULL))))"
+        },
+        {
+          "table_name": "npc_event_states",
+          "constraint_name": "npc_event_states_guidance_origin_check",
+          "definition": "CHECK (((guidance_origin IS NULL) OR valid_event_point(guidance_origin)))"
+        },
+        {
+          "table_name": "npc_event_states",
+          "constraint_name": "npc_event_states_guidance_point_check",
+          "definition": "CHECK (((guidance_point IS NULL) OR valid_event_point(guidance_point)))"
+        },
+        {
+          "table_name": "npc_event_states",
+          "constraint_name": "npc_event_states_motion_epoch_not_null",
+          "definition": "NOT NULL motion_epoch"
+        },
+        {
+          "table_name": "npc_event_states",
+          "constraint_name": "npc_event_states_motion_revision_check",
+          "definition": "CHECK (((motion_revision >= 1) AND (motion_revision <= '9007199254740991'::bigint)))"
+        },
+        {
+          "table_name": "npc_event_states",
+          "constraint_name": "npc_event_states_motion_revision_not_null",
+          "definition": "NOT NULL motion_revision"
+        },
+        {
+          "table_name": "npc_event_states",
+          "constraint_name": "npc_event_states_participant_id_not_null",
+          "definition": "NOT NULL participant_id"
+        },
+        {
+          "table_name": "npc_event_states",
+          "constraint_name": "npc_event_states_paused_ms_check",
+          "definition": "CHECK ((paused_ms >= 0))"
+        },
+        {
+          "table_name": "npc_event_states",
+          "constraint_name": "npc_event_states_paused_ms_not_null",
+          "definition": "NOT NULL paused_ms"
+        },
+        {
+          "table_name": "npc_event_states",
+          "constraint_name": "npc_event_states_pkey",
+          "definition": "PRIMARY KEY (session_id, participant_id)"
+        },
+        {
+          "table_name": "npc_event_states",
+          "constraint_name": "npc_event_states_resume_motion_check",
+          "definition": "CHECK (((resume_motion IS NULL) OR valid_event_resume_motion(resume_motion)))"
+        },
+        {
+          "table_name": "npc_event_states",
+          "constraint_name": "npc_event_states_session_id_not_null",
+          "definition": "NOT NULL session_id"
+        },
+        {
+          "table_name": "npc_event_states",
+          "constraint_name": "npc_event_states_session_id_participant_id_fkey",
+          "definition": "FOREIGN KEY (session_id, participant_id) REFERENCES participant_sessions(session_id, participant_id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "npc_event_states",
+          "constraint_name": "npc_event_states_waiting_since_not_null",
+          "definition": "NOT NULL waiting_since"
+        },
+        {
+          "table_name": "npc_events",
+          "constraint_name": "npc_events_check",
+          "definition": "CHECK ((((status = 'ACTIVE'::text) AND (completed_at IS NULL)) OR ((status = 'COMPLETED'::text) AND (completed_at >= started_at))))"
+        },
+        {
+          "table_name": "npc_events",
+          "constraint_name": "npc_events_id_not_null",
+          "definition": "NOT NULL id"
+        },
+        {
+          "table_name": "npc_events",
+          "constraint_name": "npc_events_participant_id_not_null",
+          "definition": "NOT NULL participant_id"
+        },
+        {
+          "table_name": "npc_events",
+          "constraint_name": "npc_events_pkey",
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "npc_events",
+          "constraint_name": "npc_events_session_id_not_null",
+          "definition": "NOT NULL session_id"
+        },
+        {
+          "table_name": "npc_events",
+          "constraint_name": "npc_events_session_id_participant_id_fkey",
+          "definition": "FOREIGN KEY (session_id, participant_id) REFERENCES participant_sessions(session_id, participant_id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "npc_events",
+          "constraint_name": "npc_events_session_id_participant_id_situation_id_id_key",
+          "definition": "UNIQUE (session_id, participant_id, situation_id, id)"
+        },
+        {
+          "table_name": "npc_events",
+          "constraint_name": "npc_events_session_id_situation_id_fkey",
+          "definition": "FOREIGN KEY (session_id, situation_id) REFERENCES session_situations(session_id, id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "npc_events",
+          "constraint_name": "npc_events_situation_id_not_null",
+          "definition": "NOT NULL situation_id"
+        },
+        {
+          "table_name": "npc_events",
+          "constraint_name": "npc_events_started_at_not_null",
+          "definition": "NOT NULL started_at"
+        },
+        {
+          "table_name": "npc_events",
+          "constraint_name": "npc_events_status_check",
+          "definition": "CHECK ((status = ANY (ARRAY['ACTIVE'::text, 'COMPLETED'::text])))"
+        },
+        {
+          "table_name": "npc_events",
+          "constraint_name": "npc_events_status_not_null",
+          "definition": "NOT NULL status"
+        },
+        {
+          "table_name": "npc_events",
+          "constraint_name": "npc_events_trigger_kind_check",
+          "definition": "CHECK ((trigger_kind = ANY (ARRAY['LOCATION'::text, 'DEADLINE'::text])))"
+        },
+        {
+          "table_name": "npc_events",
+          "constraint_name": "npc_events_trigger_kind_not_null",
+          "definition": "NOT NULL trigger_kind"
+        },
+        {
+          "table_name": "participant_alignments",
+          "constraint_name": "participant_alignments_participant_id_not_null",
+          "definition": "NOT NULL participant_id"
+        },
+        {
+          "table_name": "participant_alignments",
+          "constraint_name": "participant_alignments_pkey",
+          "definition": "PRIMARY KEY (session_id, participant_id)"
+        },
+        {
+          "table_name": "participant_alignments",
+          "constraint_name": "participant_alignments_response_count_check",
+          "definition": "CHECK ((response_count >= 0))"
+        },
+        {
+          "table_name": "participant_alignments",
+          "constraint_name": "participant_alignments_response_count_not_null",
+          "definition": "NOT NULL response_count"
+        },
+        {
+          "table_name": "participant_alignments",
+          "constraint_name": "participant_alignments_session_id_not_null",
+          "definition": "NOT NULL session_id"
+        },
+        {
+          "table_name": "participant_alignments",
+          "constraint_name": "participant_alignments_session_id_participant_id_fkey",
+          "definition": "FOREIGN KEY (session_id, participant_id) REFERENCES participant_sessions(session_id, participant_id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "participant_alignments",
+          "constraint_name": "participant_alignments_updated_at_not_null",
+          "definition": "NOT NULL updated_at"
+        },
+        {
+          "table_name": "participant_alignments",
+          "constraint_name": "participant_alignments_x_score_not_null",
+          "definition": "NOT NULL x_score"
+        },
+        {
+          "table_name": "participant_alignments",
+          "constraint_name": "participant_alignments_y_score_not_null",
+          "definition": "NOT NULL y_score"
+        },
+        {
+          "table_name": "participant_credentials",
+          "constraint_name": "participant_credentials_check",
+          "definition": "CHECK (((expires_at IS NULL) OR (expires_at > created_at)))"
+        },
+        {
+          "table_name": "participant_credentials",
+          "constraint_name": "participant_credentials_check1",
+          "definition": "CHECK (((revoked_at IS NULL) OR (revoked_at >= created_at)))"
+        },
+        {
+          "table_name": "participant_credentials",
+          "constraint_name": "participant_credentials_created_at_not_null",
+          "definition": "NOT NULL created_at"
+        },
+        {
+          "table_name": "participant_credentials",
+          "constraint_name": "participant_credentials_id_not_null",
+          "definition": "NOT NULL id"
+        },
+        {
+          "table_name": "participant_credentials",
+          "constraint_name": "participant_credentials_participant_id_fkey",
+          "definition": "FOREIGN KEY (participant_id) REFERENCES participants(id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "participant_credentials",
+          "constraint_name": "participant_credentials_participant_id_not_null",
+          "definition": "NOT NULL participant_id"
+        },
+        {
+          "table_name": "participant_credentials",
+          "constraint_name": "participant_credentials_pkey",
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "participant_credentials",
+          "constraint_name": "participant_credentials_token_hash_key",
+          "definition": "UNIQUE (token_hash)"
+        },
+        {
+          "table_name": "participant_credentials",
+          "constraint_name": "participant_credentials_token_hash_not_null",
+          "definition": "NOT NULL token_hash"
+        },
+        {
+          "table_name": "participant_results",
+          "constraint_name": "participant_results_alignment_code_check",
+          "definition": "CHECK ((alignment_code = ANY (ARRAY['LAWFUL_GOOD'::text, 'LAWFUL_NEUTRAL'::text, 'LAWFUL_EVIL'::text, 'NEUTRAL_GOOD'::text, 'TRUE_NEUTRAL'::text, 'NEUTRAL_EVIL'::text, 'CHAOTIC_GOOD'::text, 'CHAOTIC_NEUTRAL'::text, 'CHAOTIC_EVIL'::text])))"
+        },
+        {
+          "table_name": "participant_results",
+          "constraint_name": "participant_results_alignment_code_not_null",
+          "definition": "NOT NULL alignment_code"
+        },
+        {
+          "table_name": "participant_results",
+          "constraint_name": "participant_results_check",
+          "definition": "CHECK (((response_count > 0) OR ((x_score = 0) AND (y_score = 0))))"
+        },
+        {
+          "table_name": "participant_results",
+          "constraint_name": "participant_results_finalized_at_not_null",
+          "definition": "NOT NULL finalized_at"
+        },
+        {
+          "table_name": "participant_results",
+          "constraint_name": "participant_results_interpretation_not_null",
+          "definition": "NOT NULL interpretation"
+        },
+        {
+          "table_name": "participant_results",
+          "constraint_name": "participant_results_participant_id_not_null",
+          "definition": "NOT NULL participant_id"
+        },
+        {
+          "table_name": "participant_results",
+          "constraint_name": "participant_results_pkey",
+          "definition": "PRIMARY KEY (session_id, participant_id)"
+        },
+        {
+          "table_name": "participant_results",
+          "constraint_name": "participant_results_response_count_check",
+          "definition": "CHECK ((response_count >= 0))"
+        },
+        {
+          "table_name": "participant_results",
+          "constraint_name": "participant_results_response_count_not_null",
+          "definition": "NOT NULL response_count"
+        },
+        {
+          "table_name": "participant_results",
+          "constraint_name": "participant_results_session_id_fkey",
+          "definition": "FOREIGN KEY (session_id) REFERENCES session_results(session_id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "participant_results",
+          "constraint_name": "participant_results_session_id_not_null",
+          "definition": "NOT NULL session_id"
+        },
+        {
+          "table_name": "participant_results",
+          "constraint_name": "participant_results_session_id_participant_id_fkey",
+          "definition": "FOREIGN KEY (session_id, participant_id) REFERENCES participant_sessions(session_id, participant_id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "participant_results",
+          "constraint_name": "participant_results_x_score_not_null",
+          "definition": "NOT NULL x_score"
+        },
+        {
+          "table_name": "participant_results",
+          "constraint_name": "participant_results_y_score_not_null",
+          "definition": "NOT NULL y_score"
+        },
+        {
+          "table_name": "participant_results",
+          "constraint_name": "results_commit",
+          "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+        },
+        {
+          "table_name": "participant_sessions",
+          "constraint_name": "participant_sessions_character_id_check",
+          "definition": "CHECK ((character_id ~ '^npc_(0[1-9]|1[0-6])$'::text))"
+        },
+        {
+          "table_name": "participant_sessions",
+          "constraint_name": "participant_sessions_character_id_not_null",
+          "definition": "NOT NULL character_id"
+        },
+        {
+          "table_name": "participant_sessions",
+          "constraint_name": "participant_sessions_department_id_fkey",
+          "definition": "FOREIGN KEY (department_id) REFERENCES departments(id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "participant_sessions",
+          "constraint_name": "participant_sessions_department_id_not_null",
+          "definition": "NOT NULL department_id"
+        },
+        {
+          "table_name": "participant_sessions",
+          "constraint_name": "participant_sessions_glasses_id_check",
+          "definition": "CHECK ((glasses_id = ANY (ARRAY['none'::text, 'square'::text, 'round'::text])))"
+        },
+        {
+          "table_name": "participant_sessions",
+          "constraint_name": "participant_sessions_glasses_id_not_null",
+          "definition": "NOT NULL glasses_id"
+        },
+        {
+          "table_name": "participant_sessions",
+          "constraint_name": "participant_sessions_joined_at_not_null",
+          "definition": "NOT NULL joined_at"
+        },
+        {
+          "table_name": "participant_sessions",
+          "constraint_name": "participant_sessions_npc_id_key",
+          "definition": "UNIQUE (npc_id)"
+        },
+        {
+          "table_name": "participant_sessions",
+          "constraint_name": "participant_sessions_npc_id_not_null",
+          "definition": "NOT NULL npc_id"
+        },
+        {
+          "table_name": "participant_sessions",
+          "constraint_name": "participant_sessions_npc_motion_not_null",
+          "definition": "NOT NULL npc_motion"
+        },
+        {
+          "table_name": "participant_sessions",
+          "constraint_name": "participant_sessions_participant_id_fkey",
+          "definition": "FOREIGN KEY (participant_id) REFERENCES participants(id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "participant_sessions",
+          "constraint_name": "participant_sessions_participant_id_not_null",
+          "definition": "NOT NULL participant_id"
+        },
+        {
+          "table_name": "participant_sessions",
+          "constraint_name": "participant_sessions_pkey",
+          "definition": "PRIMARY KEY (session_id, participant_id)"
+        },
+        {
+          "table_name": "participant_sessions",
+          "constraint_name": "participant_sessions_session_id_fkey",
+          "definition": "FOREIGN KEY (session_id) REFERENCES simulation_sessions(id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "participant_sessions",
+          "constraint_name": "participant_sessions_session_id_not_null",
+          "definition": "NOT NULL session_id"
+        },
+        {
+          "table_name": "participant_sessions",
+          "constraint_name": "profile_all_or_nothing",
+          "definition": "CHECK ((((nickname IS NULL) AND (mbti IS NULL) AND (profile_completed_at IS NULL)) OR ((nickname IS NOT NULL) AND (mbti IS NOT NULL) AND (profile_completed_at IS NOT NULL) AND (department_id <> 'none'::text))))"
+        },
+        {
+          "table_name": "participant_sessions",
+          "constraint_name": "profile_mbti_shape",
+          "definition": "CHECK (((mbti IS NULL) OR (mbti ~ '^[EI][SN][TF][JP]$'::text)))"
+        },
+        {
+          "table_name": "participant_sessions",
+          "constraint_name": "profile_nickname_shape",
+          "definition": "CHECK (((nickname IS NULL) OR (((char_length(nickname) >= 2) AND (char_length(nickname) <= 10)) AND (nickname = btrim(nickname)))))"
+        },
+        {
+          "table_name": "participants",
+          "constraint_name": "participants_created_at_not_null",
+          "definition": "NOT NULL created_at"
+        },
+        {
+          "table_name": "participants",
+          "constraint_name": "participants_id_not_null",
+          "definition": "NOT NULL id"
+        },
+        {
+          "table_name": "participants",
+          "constraint_name": "participants_last_seen_at_not_null",
+          "definition": "NOT NULL last_seen_at"
+        },
+        {
+          "table_name": "participants",
+          "constraint_name": "participants_pkey",
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "push_jobs",
+          "constraint_name": "push_jobs_attempts_not_null",
+          "definition": "NOT NULL attempts"
+        },
+        {
+          "table_name": "push_jobs",
+          "constraint_name": "push_jobs_id_not_null",
+          "definition": "NOT NULL id"
+        },
+        {
+          "table_name": "push_jobs",
+          "constraint_name": "push_jobs_next_attempt_at_not_null",
+          "definition": "NOT NULL next_attempt_at"
+        },
+        {
+          "table_name": "push_jobs",
+          "constraint_name": "push_jobs_pkey",
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "push_jobs",
+          "constraint_name": "push_jobs_session_id_fkey",
+          "definition": "FOREIGN KEY (session_id) REFERENCES simulation_sessions(id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "push_jobs",
+          "constraint_name": "push_jobs_session_id_not_null",
+          "definition": "NOT NULL session_id"
+        },
+        {
+          "table_name": "push_jobs",
+          "constraint_name": "push_jobs_session_id_subscription_id_key",
+          "definition": "UNIQUE (session_id, subscription_id)"
+        },
+        {
+          "table_name": "push_jobs",
+          "constraint_name": "push_jobs_status_check",
+          "definition": "CHECK ((status = ANY (ARRAY['PENDING'::text, 'SENDING'::text, 'SENT'::text, 'FAILED'::text, 'CANCELLED'::text])))"
+        },
+        {
+          "table_name": "push_jobs",
+          "constraint_name": "push_jobs_status_not_null",
+          "definition": "NOT NULL status"
+        },
+        {
+          "table_name": "push_jobs",
+          "constraint_name": "push_jobs_subscription_id_fkey",
+          "definition": "FOREIGN KEY (subscription_id) REFERENCES push_subscriptions(id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "push_jobs",
+          "constraint_name": "push_jobs_subscription_id_not_null",
+          "definition": "NOT NULL subscription_id"
+        },
+        {
+          "table_name": "push_subscriptions",
+          "constraint_name": "push_subscriptions_auth_secret_not_null",
+          "definition": "NOT NULL auth_secret"
+        },
+        {
+          "table_name": "push_subscriptions",
+          "constraint_name": "push_subscriptions_consented_at_not_null",
+          "definition": "NOT NULL consented_at"
+        },
+        {
+          "table_name": "push_subscriptions",
+          "constraint_name": "push_subscriptions_endpoint_hash_check",
+          "definition": "CHECK ((endpoint_hash ~ '^[0-9a-f]{64}$'::text))"
+        },
+        {
+          "table_name": "push_subscriptions",
+          "constraint_name": "push_subscriptions_endpoint_hash_not_null",
+          "definition": "NOT NULL endpoint_hash"
+        },
+        {
+          "table_name": "push_subscriptions",
+          "constraint_name": "push_subscriptions_endpoint_not_null",
+          "definition": "NOT NULL endpoint"
+        },
+        {
+          "table_name": "push_subscriptions",
+          "constraint_name": "push_subscriptions_id_not_null",
+          "definition": "NOT NULL id"
+        },
+        {
+          "table_name": "push_subscriptions",
+          "constraint_name": "push_subscriptions_p256dh_not_null",
+          "definition": "NOT NULL p256dh"
+        },
+        {
+          "table_name": "push_subscriptions",
+          "constraint_name": "push_subscriptions_participant_id_not_null",
+          "definition": "NOT NULL participant_id"
+        },
+        {
+          "table_name": "push_subscriptions",
+          "constraint_name": "push_subscriptions_pkey",
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "push_subscriptions",
+          "constraint_name": "push_subscriptions_session_id_not_null",
+          "definition": "NOT NULL session_id"
+        },
+        {
+          "table_name": "push_subscriptions",
+          "constraint_name": "push_subscriptions_session_id_participant_id_endpoint_hash_key",
+          "definition": "UNIQUE (session_id, participant_id, endpoint_hash)"
+        },
+        {
+          "table_name": "push_subscriptions",
+          "constraint_name": "push_subscriptions_session_id_participant_id_fkey",
+          "definition": "FOREIGN KEY (session_id, participant_id) REFERENCES participant_sessions(session_id, participant_id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "region_results",
+          "constraint_name": "region_results_pkey",
+          "definition": "PRIMARY KEY (session_id, region_id)"
+        },
+        {
+          "table_name": "region_results",
+          "constraint_name": "region_results_pollution_check",
+          "definition": "CHECK (((pollution >= (0)::numeric) AND (pollution <= (100)::numeric)))"
+        },
+        {
+          "table_name": "region_results",
+          "constraint_name": "region_results_pollution_not_null",
+          "definition": "NOT NULL pollution"
+        },
+        {
+          "table_name": "region_results",
+          "constraint_name": "region_results_region_id_not_null",
+          "definition": "NOT NULL region_id"
+        },
+        {
+          "table_name": "region_results",
+          "constraint_name": "region_results_session_id_fkey",
+          "definition": "FOREIGN KEY (session_id) REFERENCES session_results(session_id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "region_results",
+          "constraint_name": "region_results_session_id_not_null",
+          "definition": "NOT NULL session_id"
+        },
+        {
+          "table_name": "region_results",
+          "constraint_name": "region_results_session_id_region_id_fkey",
+          "definition": "FOREIGN KEY (session_id, region_id) REFERENCES session_regions(session_id, id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "region_results",
+          "constraint_name": "results_commit",
+          "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+        },
+        {
+          "table_name": "region_states",
+          "constraint_name": "region_states_pkey",
+          "definition": "PRIMARY KEY (session_id, region_id)"
+        },
+        {
+          "table_name": "region_states",
+          "constraint_name": "region_states_pollution_check",
+          "definition": "CHECK (((pollution >= (0)::numeric) AND (pollution <= (100)::numeric)))"
+        },
+        {
+          "table_name": "region_states",
+          "constraint_name": "region_states_pollution_not_null",
+          "definition": "NOT NULL pollution"
+        },
+        {
+          "table_name": "region_states",
+          "constraint_name": "region_states_region_id_not_null",
+          "definition": "NOT NULL region_id"
+        },
+        {
+          "table_name": "region_states",
+          "constraint_name": "region_states_session_id_not_null",
+          "definition": "NOT NULL session_id"
+        },
+        {
+          "table_name": "region_states",
+          "constraint_name": "region_states_session_id_region_id_fkey",
+          "definition": "FOREIGN KEY (session_id, region_id) REFERENCES session_regions(session_id, id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "region_states",
+          "constraint_name": "region_states_updated_at_not_null",
+          "definition": "NOT NULL updated_at"
+        },
+        {
+          "table_name": "result_links",
+          "constraint_name": "result_links_check",
+          "definition": "CHECK ((expires_at > created_at))"
+        },
+        {
+          "table_name": "result_links",
+          "constraint_name": "result_links_created_at_not_null",
+          "definition": "NOT NULL created_at"
+        },
+        {
+          "table_name": "result_links",
+          "constraint_name": "result_links_expires_at_not_null",
+          "definition": "NOT NULL expires_at"
+        },
+        {
+          "table_name": "result_links",
+          "constraint_name": "result_links_participant_id_not_null",
+          "definition": "NOT NULL participant_id"
+        },
+        {
+          "table_name": "result_links",
+          "constraint_name": "result_links_pkey",
+          "definition": "PRIMARY KEY (session_id, participant_id)"
+        },
+        {
+          "table_name": "result_links",
+          "constraint_name": "result_links_session_id_not_null",
+          "definition": "NOT NULL session_id"
+        },
+        {
+          "table_name": "result_links",
+          "constraint_name": "result_links_session_id_participant_id_fkey",
+          "definition": "FOREIGN KEY (session_id, participant_id) REFERENCES participant_sessions(session_id, participant_id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "result_links",
+          "constraint_name": "result_links_token_hash_check",
+          "definition": "CHECK ((token_hash ~ '^[0-9a-f]{64}$'::text))"
+        },
+        {
+          "table_name": "result_links",
+          "constraint_name": "result_links_token_hash_key",
+          "definition": "UNIQUE (token_hash)"
+        },
+        {
+          "table_name": "result_links",
+          "constraint_name": "result_links_token_hash_not_null",
+          "definition": "NOT NULL token_hash"
+        },
+        {
+          "table_name": "session_choices",
+          "constraint_name": "session_choices_alignment_dx_not_null",
+          "definition": "NOT NULL alignment_dx"
+        },
+        {
+          "table_name": "session_choices",
+          "constraint_name": "session_choices_alignment_dy_not_null",
+          "definition": "NOT NULL alignment_dy"
+        },
+        {
+          "table_name": "session_choices",
+          "constraint_name": "session_choices_alignment_range_check",
+          "definition": "CHECK ((((importance = 'NORMAL'::text) AND ((alignment_dx >= '-1'::integer) AND (alignment_dx <= 1)) AND ((alignment_dy >= '-1'::integer) AND (alignment_dy <= 1))) OR ((importance = 'MAJOR'::text) AND ((alignment_dx >= '-4'::integer) AND (alignment_dx <= 3)) AND ((alignment_dy >= '-4'::integer) AND (alignment_dy <= 3)))))"
+        },
+        {
+          "table_name": "session_choices",
+          "constraint_name": "session_choices_cleanliness_base_not_null",
+          "definition": "NOT NULL cleanliness_base"
+        },
+        {
+          "table_name": "session_choices",
+          "constraint_name": "session_choices_display_order_not_null",
+          "definition": "NOT NULL display_order"
+        },
+        {
+          "table_name": "session_choices",
+          "constraint_name": "session_choices_happiness_base_not_null",
+          "definition": "NOT NULL happiness_base"
+        },
+        {
+          "table_name": "session_choices",
+          "constraint_name": "session_choices_id_not_null",
+          "definition": "NOT NULL id"
+        },
+        {
+          "table_name": "session_choices",
+          "constraint_name": "session_choices_importance_check",
+          "definition": "CHECK ((importance = ANY (ARRAY['NORMAL'::text, 'MAJOR'::text])))"
+        },
+        {
+          "table_name": "session_choices",
+          "constraint_name": "session_choices_importance_not_null",
+          "definition": "NOT NULL importance"
+        },
+        {
+          "table_name": "session_choices",
+          "constraint_name": "session_choices_label_not_null",
+          "definition": "NOT NULL label"
+        },
+        {
+          "table_name": "session_choices",
+          "constraint_name": "session_choices_pkey",
+          "definition": "PRIMARY KEY (session_id, situation_id, id)"
+        },
+        {
+          "table_name": "session_choices",
+          "constraint_name": "session_choices_safety_base_not_null",
+          "definition": "NOT NULL safety_base"
+        },
+        {
+          "table_name": "session_choices",
+          "constraint_name": "session_choices_session_id_not_null",
+          "definition": "NOT NULL session_id"
+        },
+        {
+          "table_name": "session_choices",
+          "constraint_name": "session_choices_session_id_situation_id_fkey",
+          "definition": "FOREIGN KEY (session_id, situation_id) REFERENCES session_situations(session_id, id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "session_choices",
+          "constraint_name": "session_choices_situation_id_not_null",
+          "definition": "NOT NULL situation_id"
+        },
+        {
+          "table_name": "session_creation_requests",
+          "constraint_name": "session_creation_requests_admin_id_fkey",
+          "definition": "FOREIGN KEY (admin_id) REFERENCES admin_users(id)"
+        },
+        {
+          "table_name": "session_creation_requests",
+          "constraint_name": "session_creation_requests_admin_id_not_null",
+          "definition": "NOT NULL admin_id"
+        },
+        {
+          "table_name": "session_creation_requests",
+          "constraint_name": "session_creation_requests_created_at_not_null",
+          "definition": "NOT NULL created_at"
+        },
+        {
+          "table_name": "session_creation_requests",
+          "constraint_name": "session_creation_requests_duration_seconds_check",
+          "definition": "CHECK (((duration_seconds >= 10) AND (duration_seconds <= 86400)))"
+        },
+        {
+          "table_name": "session_creation_requests",
+          "constraint_name": "session_creation_requests_duration_seconds_not_null",
+          "definition": "NOT NULL duration_seconds"
+        },
+        {
+          "table_name": "session_creation_requests",
+          "constraint_name": "session_creation_requests_impact_scale_check",
+          "definition": "CHECK (((impact_scale >= (0)::numeric) AND (impact_scale <= (1)::numeric)))"
+        },
+        {
+          "table_name": "session_creation_requests",
+          "constraint_name": "session_creation_requests_impact_scale_not_null",
+          "definition": "NOT NULL impact_scale"
+        },
+        {
+          "table_name": "session_creation_requests",
+          "constraint_name": "session_creation_requests_name_not_null",
+          "definition": "NOT NULL name"
+        },
+        {
+          "table_name": "session_creation_requests",
+          "constraint_name": "session_creation_requests_pkey",
+          "definition": "PRIMARY KEY (admin_id, request_key)"
+        },
+        {
+          "table_name": "session_creation_requests",
+          "constraint_name": "session_creation_requests_request_key_not_null",
+          "definition": "NOT NULL request_key"
+        },
+        {
+          "table_name": "session_creation_requests",
+          "constraint_name": "session_creation_requests_session_id_fkey",
+          "definition": "FOREIGN KEY (session_id) REFERENCES simulation_sessions(id)"
+        },
+        {
+          "table_name": "session_creation_requests",
+          "constraint_name": "session_creation_requests_session_id_key",
+          "definition": "UNIQUE (session_id)"
+        },
+        {
+          "table_name": "session_creation_requests",
+          "constraint_name": "session_creation_requests_session_id_not_null",
+          "definition": "NOT NULL session_id"
+        },
+        {
+          "table_name": "session_creation_requests",
+          "constraint_name": "session_creation_requests_template_session_id_fkey",
+          "definition": "FOREIGN KEY (template_session_id) REFERENCES simulation_sessions(id)"
+        },
+        {
+          "table_name": "session_creation_requests",
+          "constraint_name": "session_creation_requests_template_session_id_not_null",
+          "definition": "NOT NULL template_session_id"
+        },
+        {
+          "table_name": "session_regions",
+          "constraint_name": "session_regions_aggregation_weight_check",
+          "definition": "CHECK (((aggregation_weight > (0)::numeric) AND (aggregation_weight <> 'NaN'::numeric)))"
+        },
+        {
+          "table_name": "session_regions",
+          "constraint_name": "session_regions_aggregation_weight_not_null",
+          "definition": "NOT NULL aggregation_weight"
+        },
+        {
+          "table_name": "session_regions",
+          "constraint_name": "session_regions_code_not_null",
+          "definition": "NOT NULL code"
+        },
+        {
+          "table_name": "session_regions",
+          "constraint_name": "session_regions_id_not_null",
+          "definition": "NOT NULL id"
+        },
+        {
+          "table_name": "session_regions",
+          "constraint_name": "session_regions_map_metadata_check",
+          "definition": "CHECK ((jsonb_typeof(map_metadata) = 'object'::text))"
+        },
+        {
+          "table_name": "session_regions",
+          "constraint_name": "session_regions_map_metadata_not_null",
+          "definition": "NOT NULL map_metadata"
+        },
+        {
+          "table_name": "session_regions",
+          "constraint_name": "session_regions_name_not_null",
+          "definition": "NOT NULL name"
+        },
+        {
+          "table_name": "session_regions",
+          "constraint_name": "session_regions_pkey",
+          "definition": "PRIMARY KEY (session_id, id)"
+        },
+        {
+          "table_name": "session_regions",
+          "constraint_name": "session_regions_session_id_code_key",
+          "definition": "UNIQUE (session_id, code)"
+        },
+        {
+          "table_name": "session_regions",
+          "constraint_name": "session_regions_session_id_fkey",
+          "definition": "FOREIGN KEY (session_id) REFERENCES simulation_sessions(id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "session_regions",
+          "constraint_name": "session_regions_session_id_not_null",
+          "definition": "NOT NULL session_id"
+        },
+        {
+          "table_name": "session_results",
+          "constraint_name": "results_commit",
+          "definition": "TRIGGER DEFERRABLE INITIALLY DEFERRED"
+        },
+        {
+          "table_name": "session_results",
+          "constraint_name": "session_results_cleanliness_check",
+          "definition": "CHECK (((cleanliness >= (0)::numeric) AND (cleanliness <= (100)::numeric)))"
+        },
+        {
+          "table_name": "session_results",
+          "constraint_name": "session_results_cleanliness_not_null",
+          "definition": "NOT NULL cleanliness"
+        },
+        {
+          "table_name": "session_results",
+          "constraint_name": "session_results_final_state_version_check",
+          "definition": "CHECK ((final_state_version >= 0))"
+        },
+        {
+          "table_name": "session_results",
+          "constraint_name": "session_results_final_state_version_not_null",
+          "definition": "NOT NULL final_state_version"
+        },
+        {
+          "table_name": "session_results",
+          "constraint_name": "session_results_finalized_at_not_null",
+          "definition": "NOT NULL finalized_at"
+        },
+        {
+          "table_name": "session_results",
+          "constraint_name": "session_results_happiness_check",
+          "definition": "CHECK (((happiness >= (0)::numeric) AND (happiness <= (100)::numeric)))"
+        },
+        {
+          "table_name": "session_results",
+          "constraint_name": "session_results_happiness_not_null",
+          "definition": "NOT NULL happiness"
+        },
+        {
+          "table_name": "session_results",
+          "constraint_name": "session_results_overall_pollution_check",
+          "definition": "CHECK (((overall_pollution >= (0)::numeric) AND (overall_pollution <= (100)::numeric)))"
+        },
+        {
+          "table_name": "session_results",
+          "constraint_name": "session_results_overall_pollution_not_null",
+          "definition": "NOT NULL overall_pollution"
+        },
+        {
+          "table_name": "session_results",
+          "constraint_name": "session_results_pkey",
+          "definition": "PRIMARY KEY (session_id)"
+        },
+        {
+          "table_name": "session_results",
+          "constraint_name": "session_results_rules_snapshot_check",
+          "definition": "CHECK ((jsonb_typeof(rules_snapshot) = 'object'::text))"
+        },
+        {
+          "table_name": "session_results",
+          "constraint_name": "session_results_rules_snapshot_not_null",
+          "definition": "NOT NULL rules_snapshot"
+        },
+        {
+          "table_name": "session_results",
+          "constraint_name": "session_results_safety_check",
+          "definition": "CHECK (((safety >= (0)::numeric) AND (safety <= (100)::numeric)))"
+        },
+        {
+          "table_name": "session_results",
+          "constraint_name": "session_results_safety_not_null",
+          "definition": "NOT NULL safety"
+        },
+        {
+          "table_name": "session_results",
+          "constraint_name": "session_results_session_id_fkey",
+          "definition": "FOREIGN KEY (session_id) REFERENCES simulation_sessions(id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "session_results",
+          "constraint_name": "session_results_session_id_not_null",
+          "definition": "NOT NULL session_id"
+        },
+        {
+          "table_name": "session_situations",
+          "constraint_name": "generic_event_has_no_location",
+          "definition": "CHECK (((NOT is_generic) OR (event_location IS NULL)))"
+        },
+        {
+          "table_name": "session_situations",
+          "constraint_name": "session_situations_body_not_null",
+          "definition": "NOT NULL body"
+        },
+        {
+          "table_name": "session_situations",
+          "constraint_name": "session_situations_code_not_null",
+          "definition": "NOT NULL code"
+        },
+        {
+          "table_name": "session_situations",
+          "constraint_name": "session_situations_display_order_not_null",
+          "definition": "NOT NULL display_order"
+        },
+        {
+          "table_name": "session_situations",
+          "constraint_name": "session_situations_event_location_check",
+          "definition": "CHECK (((event_location IS NULL) OR valid_event_location(event_location)))"
+        },
+        {
+          "table_name": "session_situations",
+          "constraint_name": "session_situations_id_not_null",
+          "definition": "NOT NULL id"
+        },
+        {
+          "table_name": "session_situations",
+          "constraint_name": "session_situations_is_generic_not_null",
+          "definition": "NOT NULL is_generic"
+        },
+        {
+          "table_name": "session_situations",
+          "constraint_name": "session_situations_pkey",
+          "definition": "PRIMARY KEY (session_id, id)"
+        },
+        {
+          "table_name": "session_situations",
+          "constraint_name": "session_situations_session_id_code_key",
+          "definition": "UNIQUE (session_id, code)"
+        },
+        {
+          "table_name": "session_situations",
+          "constraint_name": "session_situations_session_id_fkey",
+          "definition": "FOREIGN KEY (session_id) REFERENCES simulation_sessions(id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "session_situations",
+          "constraint_name": "session_situations_session_id_not_null",
+          "definition": "NOT NULL session_id"
+        },
+        {
+          "table_name": "session_situations",
+          "constraint_name": "session_situations_title_not_null",
+          "definition": "NOT NULL title"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "session_npc_motion_valid",
+          "definition": "CHECK (((npc_motion IS NULL) OR valid_npc_motion(npc_motion)))"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_admission_buffer_check",
+          "definition": "CHECK ((admission_buffer > '00:00:00'::interval))"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_admission_buffer_not_null",
+          "definition": "NOT NULL admission_buffer"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_check",
+          "definition": "CHECK (((starts_at IS NULL) OR (scheduled_end_at > (starts_at + admission_buffer))))"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_check1",
+          "definition": "CHECK ((((end_mode IS NULL) AND (ended_by_admin_id IS NULL)) OR ((end_mode = 'AUTO'::text) AND (ended_by_admin_id IS NULL)) OR ((end_mode = 'MANUAL'::text) AND (ended_by_admin_id IS NOT NULL))))"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_check2",
+          "definition": "CHECK (((status = 'DRAFT'::text) OR (starts_at IS NOT NULL)))"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_check3",
+          "definition": "CHECK (((status <> ALL (ARRAY['CLOSING'::text, 'FINALIZED'::text])) OR ((end_mode IS NOT NULL) AND (admission_closed_at IS NOT NULL) AND (end_requested_at IS NOT NULL))))"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_check4",
+          "definition": "CHECK (((status <> 'FINALIZED'::text) OR ((actual_ended_at IS NOT NULL) AND (finalized_at IS NOT NULL))))"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_created_at_not_null",
+          "definition": "NOT NULL created_at"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_created_by_admin_id_fkey",
+          "definition": "FOREIGN KEY (created_by_admin_id) REFERENCES admin_users(id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_created_by_admin_id_not_null",
+          "definition": "NOT NULL created_by_admin_id"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_end_mode_check",
+          "definition": "CHECK ((end_mode = ANY (ARRAY['AUTO'::text, 'MANUAL'::text])))"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_ended_by_admin_id_fkey",
+          "definition": "FOREIGN KEY (ended_by_admin_id) REFERENCES admin_users(id) ON DELETE RESTRICT"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_expected_answers_per_person_check",
+          "definition": "CHECK ((expected_answers_per_person > 0))"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_expected_answers_per_person_not_null",
+          "definition": "NOT NULL expected_answers_per_person"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_expected_participants_check",
+          "definition": "CHECK ((expected_participants > 0))"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_expected_participants_not_null",
+          "definition": "NOT NULL expected_participants"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_id_not_null",
+          "definition": "NOT NULL id"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_impact_scale_check",
+          "definition": "CHECK ((impact_scale >= (0)::numeric))"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_impact_scale_not_null",
+          "definition": "NOT NULL impact_scale"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_name_not_null",
+          "definition": "NOT NULL name"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_pkey",
+          "definition": "PRIMARY KEY (id)"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_pollution_aggregation_check",
+          "definition": "CHECK ((pollution_aggregation = 'WEIGHTED_MEAN'::text))"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_pollution_aggregation_not_null",
+          "definition": "NOT NULL pollution_aggregation"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_rules_snapshot_check",
+          "definition": "CHECK ((jsonb_typeof(rules_snapshot) = 'object'::text))"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_rules_snapshot_not_null",
+          "definition": "NOT NULL rules_snapshot"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_scheduled_end_at_not_null",
+          "definition": "NOT NULL scheduled_end_at"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_status_check",
+          "definition": "CHECK ((status = ANY (ARRAY['DRAFT'::text, 'RUNNING'::text, 'CLOSING'::text, 'FINALIZED'::text])))"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_status_not_null",
+          "definition": "NOT NULL status"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "constraint_name": "simulation_sessions_updated_at_not_null",
+          "definition": "NOT NULL updated_at"
+        }
+      ]
+    },
+    {
+      "name": "indexes",
+      "sql": "SELECT tablename,indexname,indexdef FROM pg_indexes WHERE schemaname='simus' ORDER BY tablename,indexname",
+      "parameters": [],
+      "rows": [
+        {
+          "tablename": "admin_actions",
+          "indexname": "admin_actions_admin_id_request_key_key",
+          "indexdef": "CREATE UNIQUE INDEX admin_actions_admin_id_request_key_key ON simus.admin_actions USING btree (admin_id, request_key)"
+        },
+        {
+          "tablename": "admin_actions",
+          "indexname": "admin_actions_pkey",
+          "indexdef": "CREATE UNIQUE INDEX admin_actions_pkey ON simus.admin_actions USING btree (id)"
+        },
+        {
+          "tablename": "admin_users",
+          "indexname": "admin_users_auth_subject_key",
+          "indexdef": "CREATE UNIQUE INDEX admin_users_auth_subject_key ON simus.admin_users USING btree (auth_subject)"
+        },
+        {
+          "tablename": "admin_users",
+          "indexname": "admin_users_pkey",
+          "indexdef": "CREATE UNIQUE INDEX admin_users_pkey ON simus.admin_users USING btree (id)"
+        },
+        {
+          "tablename": "choice_record_region_effects",
+          "indexname": "choice_record_region_effects_pkey",
+          "indexdef": "CREATE UNIQUE INDEX choice_record_region_effects_pkey ON simus.choice_record_region_effects USING btree (choice_record_id, region_id)"
+        },
+        {
+          "tablename": "choice_records",
+          "indexname": "choice_history",
+          "indexdef": "CREATE INDEX choice_history ON simus.choice_records USING btree (session_id, participant_id, received_at)"
+        },
+        {
+          "tablename": "choice_records",
+          "indexname": "choice_records_event_id_key",
+          "indexdef": "CREATE UNIQUE INDEX choice_records_event_id_key ON simus.choice_records USING btree (event_id)"
+        },
+        {
+          "tablename": "choice_records",
+          "indexname": "choice_records_legacy_situation",
+          "indexdef": "CREATE UNIQUE INDEX choice_records_legacy_situation ON simus.choice_records USING btree (session_id, participant_id, situation_id) WHERE (event_id IS NULL)"
+        },
+        {
+          "tablename": "choice_records",
+          "indexname": "choice_records_pkey",
+          "indexdef": "CREATE UNIQUE INDEX choice_records_pkey ON simus.choice_records USING btree (id)"
+        },
+        {
+          "tablename": "choice_records",
+          "indexname": "choice_records_session_id_id_key",
+          "indexdef": "CREATE UNIQUE INDEX choice_records_session_id_id_key ON simus.choice_records USING btree (session_id, id)"
+        },
+        {
+          "tablename": "choice_records",
+          "indexname": "choice_records_session_id_participant_id_request_key_key",
+          "indexdef": "CREATE UNIQUE INDEX choice_records_session_id_participant_id_request_key_key ON simus.choice_records USING btree (session_id, participant_id, request_key)"
+        },
+        {
+          "tablename": "choice_records",
+          "indexname": "choice_records_session_id_state_version_key",
+          "indexdef": "CREATE UNIQUE INDEX choice_records_session_id_state_version_key ON simus.choice_records USING btree (session_id, state_version)"
+        },
+        {
+          "tablename": "choice_records",
+          "indexname": "choice_statistics",
+          "indexdef": "CREATE INDEX choice_statistics ON simus.choice_records USING btree (session_id, situation_id, choice_id)"
+        },
+        {
+          "tablename": "choice_region_effects",
+          "indexname": "choice_region_effects_pkey",
+          "indexdef": "CREATE UNIQUE INDEX choice_region_effects_pkey ON simus.choice_region_effects USING btree (session_id, situation_id, choice_id, region_id)"
+        },
+        {
+          "tablename": "city_states",
+          "indexname": "city_states_pkey",
+          "indexdef": "CREATE UNIQUE INDEX city_states_pkey ON simus.city_states USING btree (session_id)"
+        },
+        {
+          "tablename": "departments",
+          "indexname": "departments_display_order_key",
+          "indexdef": "CREATE UNIQUE INDEX departments_display_order_key ON simus.departments USING btree (display_order)"
+        },
+        {
+          "tablename": "departments",
+          "indexname": "departments_pkey",
+          "indexdef": "CREATE UNIQUE INDEX departments_pkey ON simus.departments USING btree (id)"
+        },
+        {
+          "tablename": "npc_event_states",
+          "indexname": "npc_event_states_pkey",
+          "indexdef": "CREATE UNIQUE INDEX npc_event_states_pkey ON simus.npc_event_states USING btree (session_id, participant_id)"
+        },
+        {
+          "tablename": "npc_events",
+          "indexname": "npc_events_history",
+          "indexdef": "CREATE INDEX npc_events_history ON simus.npc_events USING btree (session_id, participant_id, started_at)"
+        },
+        {
+          "tablename": "npc_events",
+          "indexname": "npc_events_one_active",
+          "indexdef": "CREATE UNIQUE INDEX npc_events_one_active ON simus.npc_events USING btree (session_id, participant_id) WHERE (status = 'ACTIVE'::text)"
+        },
+        {
+          "tablename": "npc_events",
+          "indexname": "npc_events_pkey",
+          "indexdef": "CREATE UNIQUE INDEX npc_events_pkey ON simus.npc_events USING btree (id)"
+        },
+        {
+          "tablename": "npc_events",
+          "indexname": "npc_events_session_id_participant_id_situation_id_id_key",
+          "indexdef": "CREATE UNIQUE INDEX npc_events_session_id_participant_id_situation_id_id_key ON simus.npc_events USING btree (session_id, participant_id, situation_id, id)"
+        },
+        {
+          "tablename": "participant_alignments",
+          "indexname": "participant_alignments_pkey",
+          "indexdef": "CREATE UNIQUE INDEX participant_alignments_pkey ON simus.participant_alignments USING btree (session_id, participant_id)"
+        },
+        {
+          "tablename": "participant_credentials",
+          "indexname": "credentials_expiry_cleanup",
+          "indexdef": "CREATE INDEX credentials_expiry_cleanup ON simus.participant_credentials USING btree (expires_at) WHERE (expires_at IS NOT NULL)"
+        },
+        {
+          "tablename": "participant_credentials",
+          "indexname": "credentials_participant",
+          "indexdef": "CREATE INDEX credentials_participant ON simus.participant_credentials USING btree (participant_id)"
+        },
+        {
+          "tablename": "participant_credentials",
+          "indexname": "credentials_revocation_cleanup",
+          "indexdef": "CREATE INDEX credentials_revocation_cleanup ON simus.participant_credentials USING btree (revoked_at) WHERE (revoked_at IS NOT NULL)"
+        },
+        {
+          "tablename": "participant_credentials",
+          "indexname": "participant_credentials_pkey",
+          "indexdef": "CREATE UNIQUE INDEX participant_credentials_pkey ON simus.participant_credentials USING btree (id)"
+        },
+        {
+          "tablename": "participant_credentials",
+          "indexname": "participant_credentials_token_hash_key",
+          "indexdef": "CREATE UNIQUE INDEX participant_credentials_token_hash_key ON simus.participant_credentials USING btree (token_hash)"
+        },
+        {
+          "tablename": "participant_results",
+          "indexname": "participant_results_pkey",
+          "indexdef": "CREATE UNIQUE INDEX participant_results_pkey ON simus.participant_results USING btree (session_id, participant_id)"
+        },
+        {
+          "tablename": "participant_sessions",
+          "indexname": "participant_profile_order",
+          "indexdef": "CREATE INDEX participant_profile_order ON simus.participant_sessions USING btree (session_id, profile_completed_at) WHERE (profile_completed_at IS NOT NULL)"
+        },
+        {
+          "tablename": "participant_sessions",
+          "indexname": "participant_session_history",
+          "indexdef": "CREATE INDEX participant_session_history ON simus.participant_sessions USING btree (participant_id, joined_at DESC)"
+        },
+        {
+          "tablename": "participant_sessions",
+          "indexname": "participant_sessions_npc_id_key",
+          "indexdef": "CREATE UNIQUE INDEX participant_sessions_npc_id_key ON simus.participant_sessions USING btree (npc_id)"
+        },
+        {
+          "tablename": "participant_sessions",
+          "indexname": "participant_sessions_pkey",
+          "indexdef": "CREATE UNIQUE INDEX participant_sessions_pkey ON simus.participant_sessions USING btree (session_id, participant_id)"
+        },
+        {
+          "tablename": "participants",
+          "indexname": "participants_pkey",
+          "indexdef": "CREATE UNIQUE INDEX participants_pkey ON simus.participants USING btree (id)"
+        },
+        {
+          "tablename": "push_jobs",
+          "indexname": "push_jobs_pkey",
+          "indexdef": "CREATE UNIQUE INDEX push_jobs_pkey ON simus.push_jobs USING btree (id)"
+        },
+        {
+          "tablename": "push_jobs",
+          "indexname": "push_jobs_ready",
+          "indexdef": "CREATE INDEX push_jobs_ready ON simus.push_jobs USING btree (status, next_attempt_at)"
+        },
+        {
+          "tablename": "push_jobs",
+          "indexname": "push_jobs_session_id_subscription_id_key",
+          "indexdef": "CREATE UNIQUE INDEX push_jobs_session_id_subscription_id_key ON simus.push_jobs USING btree (session_id, subscription_id)"
+        },
+        {
+          "tablename": "push_subscriptions",
+          "indexname": "push_subscriptions_pkey",
+          "indexdef": "CREATE UNIQUE INDEX push_subscriptions_pkey ON simus.push_subscriptions USING btree (id)"
+        },
+        {
+          "tablename": "push_subscriptions",
+          "indexname": "push_subscriptions_session_id_participant_id_endpoint_hash_key",
+          "indexdef": "CREATE UNIQUE INDEX push_subscriptions_session_id_participant_id_endpoint_hash_key ON simus.push_subscriptions USING btree (session_id, participant_id, endpoint_hash)"
+        },
+        {
+          "tablename": "region_results",
+          "indexname": "region_results_pkey",
+          "indexdef": "CREATE UNIQUE INDEX region_results_pkey ON simus.region_results USING btree (session_id, region_id)"
+        },
+        {
+          "tablename": "region_states",
+          "indexname": "region_states_pkey",
+          "indexdef": "CREATE UNIQUE INDEX region_states_pkey ON simus.region_states USING btree (session_id, region_id)"
+        },
+        {
+          "tablename": "result_links",
+          "indexname": "result_links_expiry",
+          "indexdef": "CREATE INDEX result_links_expiry ON simus.result_links USING btree (expires_at)"
+        },
+        {
+          "tablename": "result_links",
+          "indexname": "result_links_pkey",
+          "indexdef": "CREATE UNIQUE INDEX result_links_pkey ON simus.result_links USING btree (session_id, participant_id)"
+        },
+        {
+          "tablename": "result_links",
+          "indexname": "result_links_token_hash_key",
+          "indexdef": "CREATE UNIQUE INDEX result_links_token_hash_key ON simus.result_links USING btree (token_hash)"
+        },
+        {
+          "tablename": "session_choices",
+          "indexname": "session_choices_pkey",
+          "indexdef": "CREATE UNIQUE INDEX session_choices_pkey ON simus.session_choices USING btree (session_id, situation_id, id)"
+        },
+        {
+          "tablename": "session_creation_requests",
+          "indexname": "session_creation_requests_pkey",
+          "indexdef": "CREATE UNIQUE INDEX session_creation_requests_pkey ON simus.session_creation_requests USING btree (admin_id, request_key)"
+        },
+        {
+          "tablename": "session_creation_requests",
+          "indexname": "session_creation_requests_session_id_key",
+          "indexdef": "CREATE UNIQUE INDEX session_creation_requests_session_id_key ON simus.session_creation_requests USING btree (session_id)"
+        },
+        {
+          "tablename": "session_regions",
+          "indexname": "session_regions_pkey",
+          "indexdef": "CREATE UNIQUE INDEX session_regions_pkey ON simus.session_regions USING btree (session_id, id)"
+        },
+        {
+          "tablename": "session_regions",
+          "indexname": "session_regions_session_id_code_key",
+          "indexdef": "CREATE UNIQUE INDEX session_regions_session_id_code_key ON simus.session_regions USING btree (session_id, code)"
+        },
+        {
+          "tablename": "session_results",
+          "indexname": "session_results_pkey",
+          "indexdef": "CREATE UNIQUE INDEX session_results_pkey ON simus.session_results USING btree (session_id)"
+        },
+        {
+          "tablename": "session_situations",
+          "indexname": "session_situations_pkey",
+          "indexdef": "CREATE UNIQUE INDEX session_situations_pkey ON simus.session_situations USING btree (session_id, id)"
+        },
+        {
+          "tablename": "session_situations",
+          "indexname": "session_situations_session_id_code_key",
+          "indexdef": "CREATE UNIQUE INDEX session_situations_session_id_code_key ON simus.session_situations USING btree (session_id, code)"
+        },
+        {
+          "tablename": "simulation_sessions",
+          "indexname": "one_active_session",
+          "indexdef": "CREATE UNIQUE INDEX one_active_session ON simus.simulation_sessions USING btree ((true)) WHERE (status = ANY (ARRAY['RUNNING'::text, 'CLOSING'::text]))"
+        },
+        {
+          "tablename": "simulation_sessions",
+          "indexname": "sessions_by_status_created",
+          "indexdef": "CREATE INDEX sessions_by_status_created ON simus.simulation_sessions USING btree (status, created_at DESC)"
+        },
+        {
+          "tablename": "simulation_sessions",
+          "indexname": "simulation_sessions_pkey",
+          "indexdef": "CREATE UNIQUE INDEX simulation_sessions_pkey ON simus.simulation_sessions USING btree (id)"
+        }
+      ]
+    },
+    {
+      "name": "triggers",
+      "sql": "SELECT c.relname AS table_name,t.tgname AS trigger_name,pg_get_triggerdef(t.oid) AS definition FROM pg_trigger t JOIN pg_class c ON c.oid=t.tgrelid JOIN pg_namespace n ON n.oid=c.relnamespace WHERE n.nspname='simus' AND NOT t.tgisinternal ORDER BY c.relname,t.tgname",
+      "parameters": [],
+      "rows": [
+        {
+          "table_name": "choice_record_region_effects",
+          "trigger_name": "immutable_rows",
+          "definition": "CREATE TRIGGER immutable_rows BEFORE DELETE OR UPDATE ON simus.choice_record_region_effects FOR EACH ROW EXECUTE FUNCTION reject_mutation()"
+        },
+        {
+          "table_name": "choice_record_region_effects",
+          "trigger_name": "immutable_truncate",
+          "definition": "CREATE TRIGGER immutable_truncate BEFORE TRUNCATE ON simus.choice_record_region_effects FOR EACH STATEMENT EXECUTE FUNCTION reject_mutation()"
+        },
+        {
+          "table_name": "choice_record_region_effects",
+          "trigger_name": "lifecycle_insert",
+          "definition": "CREATE TRIGGER lifecycle_insert BEFORE INSERT ON simus.choice_record_region_effects FOR EACH ROW EXECUTE FUNCTION guard_session_write('ledger')"
+        },
+        {
+          "table_name": "choice_records",
+          "trigger_name": "immutable_rows",
+          "definition": "CREATE TRIGGER immutable_rows BEFORE DELETE OR UPDATE ON simus.choice_records FOR EACH ROW EXECUTE FUNCTION reject_mutation()"
+        },
+        {
+          "table_name": "choice_records",
+          "trigger_name": "immutable_truncate",
+          "definition": "CREATE TRIGGER immutable_truncate BEFORE TRUNCATE ON simus.choice_records FOR EACH STATEMENT EXECUTE FUNCTION reject_mutation()"
+        },
+        {
+          "table_name": "choice_records",
+          "trigger_name": "lifecycle_insert",
+          "definition": "CREATE TRIGGER lifecycle_insert BEFORE INSERT ON simus.choice_records FOR EACH ROW EXECUTE FUNCTION guard_session_write('ledger')"
+        },
+        {
+          "table_name": "choice_region_effects",
+          "trigger_name": "draft_content",
+          "definition": "CREATE TRIGGER draft_content BEFORE INSERT OR DELETE OR UPDATE ON simus.choice_region_effects FOR EACH ROW EXECUTE FUNCTION guard_content()"
+        },
+        {
+          "table_name": "choice_region_effects",
+          "trigger_name": "no_truncate",
+          "definition": "CREATE TRIGGER no_truncate BEFORE TRUNCATE ON simus.choice_region_effects FOR EACH STATEMENT EXECUTE FUNCTION reject_mutation()"
+        },
+        {
+          "table_name": "city_states",
+          "trigger_name": "lifecycle_no_truncate",
+          "definition": "CREATE TRIGGER lifecycle_no_truncate BEFORE TRUNCATE ON simus.city_states FOR EACH STATEMENT EXECUTE FUNCTION reject_mutation()"
+        },
+        {
+          "table_name": "city_states",
+          "trigger_name": "lifecycle_write",
+          "definition": "CREATE TRIGGER lifecycle_write BEFORE INSERT OR DELETE OR UPDATE ON simus.city_states FOR EACH ROW EXECUTE FUNCTION guard_session_write('state')"
+        },
+        {
+          "table_name": "participant_alignments",
+          "trigger_name": "lifecycle_no_truncate",
+          "definition": "CREATE TRIGGER lifecycle_no_truncate BEFORE TRUNCATE ON simus.participant_alignments FOR EACH STATEMENT EXECUTE FUNCTION reject_mutation()"
+        },
+        {
+          "table_name": "participant_alignments",
+          "trigger_name": "lifecycle_write",
+          "definition": "CREATE TRIGGER lifecycle_write BEFORE INSERT OR DELETE OR UPDATE ON simus.participant_alignments FOR EACH ROW EXECUTE FUNCTION guard_session_write('state')"
+        },
+        {
+          "table_name": "participant_results",
+          "trigger_name": "immutable_rows",
+          "definition": "CREATE TRIGGER immutable_rows BEFORE DELETE OR UPDATE ON simus.participant_results FOR EACH ROW EXECUTE FUNCTION reject_mutation()"
+        },
+        {
+          "table_name": "participant_results",
+          "trigger_name": "immutable_truncate",
+          "definition": "CREATE TRIGGER immutable_truncate BEFORE TRUNCATE ON simus.participant_results FOR EACH STATEMENT EXECUTE FUNCTION reject_mutation()"
+        },
+        {
+          "table_name": "participant_results",
+          "trigger_name": "lifecycle_insert",
+          "definition": "CREATE TRIGGER lifecycle_insert BEFORE INSERT ON simus.participant_results FOR EACH ROW EXECUTE FUNCTION guard_session_write('result')"
+        },
+        {
+          "table_name": "participant_results",
+          "trigger_name": "results_commit",
+          "definition": "CREATE CONSTRAINT TRIGGER results_commit AFTER INSERT ON simus.participant_results DEFERRABLE INITIALLY DEFERRED FOR EACH ROW EXECUTE FUNCTION require_finalized_results()"
+        },
+        {
+          "table_name": "participant_sessions",
+          "trigger_name": "department_change",
+          "definition": "CREATE TRIGGER department_change BEFORE UPDATE ON simus.participant_sessions FOR EACH ROW EXECUTE FUNCTION guard_department_change()"
+        },
+        {
+          "table_name": "participant_sessions",
+          "trigger_name": "lifecycle_no_truncate",
+          "definition": "CREATE TRIGGER lifecycle_no_truncate BEFORE TRUNCATE ON simus.participant_sessions FOR EACH STATEMENT EXECUTE FUNCTION reject_mutation()"
+        },
+        {
+          "table_name": "participant_sessions",
+          "trigger_name": "lifecycle_write",
+          "definition": "CREATE TRIGGER lifecycle_write BEFORE INSERT OR DELETE OR UPDATE ON simus.participant_sessions FOR EACH ROW EXECUTE FUNCTION guard_session_write('state')"
+        },
+        {
+          "table_name": "participant_sessions",
+          "trigger_name": "npc_identity",
+          "definition": "CREATE TRIGGER npc_identity BEFORE UPDATE ON simus.participant_sessions FOR EACH ROW EXECUTE FUNCTION guard_npc_identity()"
+        },
+        {
+          "table_name": "participant_sessions",
+          "trigger_name": "npc_motion_snapshot",
+          "definition": "CREATE TRIGGER npc_motion_snapshot BEFORE INSERT ON simus.participant_sessions FOR EACH ROW EXECUTE FUNCTION guard_new_npc_motion()"
+        },
+        {
+          "table_name": "participant_sessions",
+          "trigger_name": "profile_change",
+          "definition": "CREATE TRIGGER profile_change BEFORE UPDATE ON simus.participant_sessions FOR EACH ROW EXECUTE FUNCTION guard_profile_change()"
+        },
+        {
+          "table_name": "region_results",
+          "trigger_name": "immutable_rows",
+          "definition": "CREATE TRIGGER immutable_rows BEFORE DELETE OR UPDATE ON simus.region_results FOR EACH ROW EXECUTE FUNCTION reject_mutation()"
+        },
+        {
+          "table_name": "region_results",
+          "trigger_name": "immutable_truncate",
+          "definition": "CREATE TRIGGER immutable_truncate BEFORE TRUNCATE ON simus.region_results FOR EACH STATEMENT EXECUTE FUNCTION reject_mutation()"
+        },
+        {
+          "table_name": "region_results",
+          "trigger_name": "lifecycle_insert",
+          "definition": "CREATE TRIGGER lifecycle_insert BEFORE INSERT ON simus.region_results FOR EACH ROW EXECUTE FUNCTION guard_session_write('result')"
+        },
+        {
+          "table_name": "region_results",
+          "trigger_name": "results_commit",
+          "definition": "CREATE CONSTRAINT TRIGGER results_commit AFTER INSERT ON simus.region_results DEFERRABLE INITIALLY DEFERRED FOR EACH ROW EXECUTE FUNCTION require_finalized_results()"
+        },
+        {
+          "table_name": "region_states",
+          "trigger_name": "lifecycle_no_truncate",
+          "definition": "CREATE TRIGGER lifecycle_no_truncate BEFORE TRUNCATE ON simus.region_states FOR EACH STATEMENT EXECUTE FUNCTION reject_mutation()"
+        },
+        {
+          "table_name": "region_states",
+          "trigger_name": "lifecycle_write",
+          "definition": "CREATE TRIGGER lifecycle_write BEFORE INSERT OR DELETE OR UPDATE ON simus.region_states FOR EACH ROW EXECUTE FUNCTION guard_session_write('state')"
+        },
+        {
+          "table_name": "session_choices",
+          "trigger_name": "draft_content",
+          "definition": "CREATE TRIGGER draft_content BEFORE INSERT OR DELETE OR UPDATE ON simus.session_choices FOR EACH ROW EXECUTE FUNCTION guard_content()"
+        },
+        {
+          "table_name": "session_choices",
+          "trigger_name": "no_truncate",
+          "definition": "CREATE TRIGGER no_truncate BEFORE TRUNCATE ON simus.session_choices FOR EACH STATEMENT EXECUTE FUNCTION reject_mutation()"
+        },
+        {
+          "table_name": "session_creation_requests",
+          "trigger_name": "immutable_rows",
+          "definition": "CREATE TRIGGER immutable_rows BEFORE DELETE OR UPDATE ON simus.session_creation_requests FOR EACH ROW EXECUTE FUNCTION reject_mutation()"
+        },
+        {
+          "table_name": "session_creation_requests",
+          "trigger_name": "immutable_truncate",
+          "definition": "CREATE TRIGGER immutable_truncate BEFORE TRUNCATE ON simus.session_creation_requests FOR EACH STATEMENT EXECUTE FUNCTION reject_mutation()"
+        },
+        {
+          "table_name": "session_regions",
+          "trigger_name": "draft_content",
+          "definition": "CREATE TRIGGER draft_content BEFORE INSERT OR DELETE OR UPDATE ON simus.session_regions FOR EACH ROW EXECUTE FUNCTION guard_content()"
+        },
+        {
+          "table_name": "session_regions",
+          "trigger_name": "no_truncate",
+          "definition": "CREATE TRIGGER no_truncate BEFORE TRUNCATE ON simus.session_regions FOR EACH STATEMENT EXECUTE FUNCTION reject_mutation()"
+        },
+        {
+          "table_name": "session_results",
+          "trigger_name": "immutable_rows",
+          "definition": "CREATE TRIGGER immutable_rows BEFORE DELETE OR UPDATE ON simus.session_results FOR EACH ROW EXECUTE FUNCTION reject_mutation()"
+        },
+        {
+          "table_name": "session_results",
+          "trigger_name": "immutable_truncate",
+          "definition": "CREATE TRIGGER immutable_truncate BEFORE TRUNCATE ON simus.session_results FOR EACH STATEMENT EXECUTE FUNCTION reject_mutation()"
+        },
+        {
+          "table_name": "session_results",
+          "trigger_name": "lifecycle_insert",
+          "definition": "CREATE TRIGGER lifecycle_insert BEFORE INSERT ON simus.session_results FOR EACH ROW EXECUTE FUNCTION guard_session_write('result')"
+        },
+        {
+          "table_name": "session_results",
+          "trigger_name": "results_commit",
+          "definition": "CREATE CONSTRAINT TRIGGER results_commit AFTER INSERT ON simus.session_results DEFERRABLE INITIALLY DEFERRED FOR EACH ROW EXECUTE FUNCTION require_finalized_results()"
+        },
+        {
+          "table_name": "session_situations",
+          "trigger_name": "draft_content",
+          "definition": "CREATE TRIGGER draft_content BEFORE INSERT OR DELETE OR UPDATE ON simus.session_situations FOR EACH ROW EXECUTE FUNCTION guard_content()"
+        },
+        {
+          "table_name": "session_situations",
+          "trigger_name": "no_truncate",
+          "definition": "CREATE TRIGGER no_truncate BEFORE TRUNCATE ON simus.session_situations FOR EACH STATEMENT EXECUTE FUNCTION reject_mutation()"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "trigger_name": "session_lifecycle",
+          "definition": "CREATE TRIGGER session_lifecycle BEFORE INSERT OR UPDATE ON simus.simulation_sessions FOR EACH ROW EXECUTE FUNCTION guard_session_lifecycle()"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "trigger_name": "session_npc_motion",
+          "definition": "CREATE TRIGGER session_npc_motion BEFORE UPDATE ON simus.simulation_sessions FOR EACH ROW EXECUTE FUNCTION guard_session_npc_motion()"
+        },
+        {
+          "table_name": "simulation_sessions",
+          "trigger_name": "simulation_sessions_updated_at",
+          "definition": "CREATE TRIGGER simulation_sessions_updated_at BEFORE UPDATE ON simus.simulation_sessions FOR EACH ROW EXECUTE FUNCTION set_updated_at()"
+        }
+      ]
+    },
+    {
+      "name": "functions",
+      "sql": "SELECT p.proname AS function_name,pg_get_function_identity_arguments(p.oid) AS arguments FROM pg_proc p JOIN pg_namespace n ON n.oid=p.pronamespace WHERE n.nspname='simus' ORDER BY p.proname",
+      "parameters": [],
+      "rows": [
+        {
+          "function_name": "guard_content",
+          "arguments": ""
+        },
+        {
+          "function_name": "guard_department_change",
+          "arguments": ""
+        },
+        {
+          "function_name": "guard_new_npc_motion",
+          "arguments": ""
+        },
+        {
+          "function_name": "guard_npc_identity",
+          "arguments": ""
+        },
+        {
+          "function_name": "guard_profile_change",
+          "arguments": ""
+        },
+        {
+          "function_name": "guard_session_lifecycle",
+          "arguments": ""
+        },
+        {
+          "function_name": "guard_session_npc_motion",
+          "arguments": ""
+        },
+        {
+          "function_name": "guard_session_write",
+          "arguments": ""
+        },
+        {
+          "function_name": "reject_mutation",
+          "arguments": ""
+        },
+        {
+          "function_name": "require_finalized_results",
+          "arguments": ""
+        },
+        {
+          "function_name": "set_updated_at",
+          "arguments": ""
+        },
+        {
+          "function_name": "valid_event_location",
+          "arguments": "location jsonb"
+        },
+        {
+          "function_name": "valid_event_point",
+          "arguments": "point jsonb"
+        },
+        {
+          "function_name": "valid_event_resume_motion",
+          "arguments": "motion jsonb"
+        },
+        {
+          "function_name": "valid_npc_motion",
+          "arguments": "motion jsonb"
+        }
+      ]
+    },
+    {
+      "name": "sessions_and_content",
+      "sql": "SELECT s.id AS session_id,s.status,s.npc_motion->>'map_version' AS map_version,s.npc_motion->>'path_version' AS path_version,count(t.id)::int AS situation_count,array_agg(t.code ORDER BY t.code) FILTER(WHERE t.id IS NOT NULL) AS situation_codes FROM simus.simulation_sessions s LEFT JOIN simus.session_situations t ON t.session_id=s.id GROUP BY s.id,s.status ORDER BY s.id LIMIT 100",
+      "parameters": [],
+      "rows": [
+        {
+          "session_id": "10000000-0000-0000-0000-000000000001",
+          "status": "DRAFT",
+          "map_version": null,
+          "path_version": null,
+          "situation_count": 1,
+          "situation_codes": [
+            "TRASH_001"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "targeted_situations",
+      "sql": "SELECT s.id AS session_id,s.status,t.code,t.id AS situation_id FROM simus.simulation_sessions s JOIN simus.session_situations t ON t.session_id=s.id WHERE t.code=ANY($1::text[]) ORDER BY s.id,t.code LIMIT 160",
+      "parameters": [
+        [
+          "EXHIBITION_02",
+          "EXHIBITION_05",
+          "EXHIBITION_07",
+          "EXHIBITION_13",
+          "EXHIBITION_17",
+          "EXHIBITION_18",
+          "EXHIBITION_28",
+          "EXHIBITION_30"
+        ]
+      ],
+      "rows": []
+    },
+    {
+      "name": "seed_template_presence",
+      "sql": "SELECT id,status FROM simus.simulation_sessions WHERE id=ANY($1::uuid[]) ORDER BY id",
+      "parameters": [
+        [
+          "10000000-0000-0000-0000-000000000001",
+          "16000000-0000-0000-0000-000000000001"
+        ]
+      ],
+      "rows": [
+        {
+          "id": "10000000-0000-0000-0000-000000000001",
+          "status": "DRAFT"
+        }
+      ]
+    },
+    {
+      "name": "event_summary",
+      "sql": "SELECT trigger_kind,status,count(*)::int AS occurrence_count FROM simus.npc_events GROUP BY trigger_kind,status ORDER BY trigger_kind,status",
+      "parameters": [],
+      "rows": []
+    }
+  ],
+  "transaction_completed": "ROLLBACK",
+  "source_migrations": [
+    {
+      "file": "db/001_initial_schema.sql",
+      "sha256": "2467813dacc65a878a20fd8b802d3b0dfff3b239e29eadec675510c5ddd72678"
+    },
+    {
+      "file": "db/002_session_lifecycle.sql",
+      "sha256": "c38591cd668814b6c4f0124bea84671aed9dd2432c83cd9a03a65ea4e04da3af"
+    },
+    {
+      "file": "db/003_session_creation.sql",
+      "sha256": "2e7ea36e33057b7c3b6c1a5d3d15e88e83b41a82423f71b0cd255cc4b9bd872e"
+    },
+    {
+      "file": "db/004_participant_npcs.sql",
+      "sha256": "f793d717c2ec5741a440703dffd9c54d1e0600ac7263d93daf9c085bb1d4de68"
+    },
+    {
+      "file": "db/005_participant_departments.sql",
+      "sha256": "70afa5637cfd1c3de9053f28434d3a1d2f7f30e9a69b6e352213f184a2a19012"
+    },
+    {
+      "file": "db/006_content_score_range.sql",
+      "sha256": "32f1ab3090d14d9d7f49cf51ba03f87987396fab38c65c891203163d7efab13e"
+    },
+    {
+      "file": "db/007_result_links.sql",
+      "sha256": "31b3c09534277927851cb0645dc5d38f29e239be955306439f63a72367ab7ac5"
+    },
+    {
+      "file": "db/008_web_push.sql",
+      "sha256": "690a20b29db680dfb2191f557ae3fc8594e1f8163b70006d4657cec50e902c51"
+    },
+    {
+      "file": "db/009_participant_profiles.sql",
+      "sha256": "a95bbf9fc8b82cb7191bb7c544b20592e47403f3eddcdad455da058de0131b46"
+    },
+    {
+      "file": "db/010_session_npc_motion.sql",
+      "sha256": "7d7e4c67f959f391c2cda5dda0fa27c1c466d0c2206f1c51284e92eafbcf4af1"
+    },
+    {
+      "file": "db/011_npc_events.sql",
+      "sha256": "1911144181eb25a29f49ec67b9521dba4fa7c2efc32e67ce1fc9f672be41265f"
+    },
+    {
+      "file": "db/012_running_common_events.sql",
+      "sha256": "b797c552263a7ef235cc9fbee33922ab5a3bfcff36486452c74ee03fae88613d"
+    },
+    {
+      "file": "db/013_participant_characters.sql",
+      "sha256": "3e74597a76cd41885c0672b1e748785d9499b4876cb0f4e6055e2c0a6c28eadf"
+    },
+    {
+      "file": "db/014_participant_glasses.sql",
+      "sha256": "a61bac8882783dfe79fa519a733084a26aa67e7bdbf5e14c72be7e9e42bd7cfe"
+    },
+    {
+      "file": "db/015_npc_graph_guidance.sql",
+      "sha256": "030131eff2c84a9ab45e02d59173ac4b968ce369400a22fcf198962041e1fc0c"
+    },
+    {
+      "file": "db/016_location_entry_events.sql",
+      "sha256": "34371f9af1ae1d6fa19f58214d5e292d31e10c11f127e24fdd85de6e532ca0e6"
+    }
+  ]
+}

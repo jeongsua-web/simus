@@ -1,0 +1,110 @@
+{
+  "recorded_at": "2026-10-20T05:07:06.886Z",
+  "schema_readiness": "FAIL",
+  "integration_readiness": "BLOCKED",
+  "comparison_limit": "Feature-marker comparison of live catalog with checked-in migrations, not migration execution history or full behavior verification.",
+  "migrations": [
+    {
+      "number": "001",
+      "status": "PASS",
+      "note": "Base session/content/ledger tables, content/immutability guards and single-active index"
+    },
+    {
+      "number": "002",
+      "status": "PASS",
+      "note": "Session lifecycle guard and trigger"
+    },
+    {
+      "number": "003",
+      "status": "PASS",
+      "note": "Session creation request table"
+    },
+    {
+      "number": "004",
+      "status": "PASS",
+      "note": "Participant NPC identity and motion snapshot"
+    },
+    {
+      "number": "005",
+      "status": "PASS",
+      "note": "Department table and participant reference"
+    },
+    {
+      "number": "006",
+      "status": "PASS",
+      "note": "Alignment range constraints (captured definition confirms -4..3)"
+    },
+    {
+      "number": "007",
+      "status": "PASS",
+      "note": "Result link table"
+    },
+    {
+      "number": "008",
+      "status": "PASS",
+      "note": "Push subscription and job tables"
+    },
+    {
+      "number": "009",
+      "status": "PASS",
+      "note": "Participant profile fields"
+    },
+    {
+      "number": "010",
+      "status": "PASS",
+      "note": "Session motion contract and snapshot guard"
+    },
+    {
+      "number": "011",
+      "status": "PASS",
+      "note": "Location event baseline, ACTIVE uniqueness and choice event link"
+    },
+    {
+      "number": "012",
+      "status": "NOT TESTED",
+      "note": "Data-only conditional upgrade; no RUNNING session and no migration-history table, so execution cannot be inferred"
+    },
+    {
+      "number": "013",
+      "status": "PASS",
+      "note": "Character field"
+    },
+    {
+      "number": "014",
+      "status": "PASS",
+      "note": "Glasses field"
+    },
+    {
+      "number": "015",
+      "status": "FAIL",
+      "note": "Graph guidance motion and NPC profile (missing)"
+    },
+    {
+      "number": "016",
+      "status": "FAIL",
+      "note": "Phase 1 entry-state fields/functions/unique index (missing)"
+    }
+  ],
+  "missing_015_columns": [
+    "npc_event_states.guidance_motion",
+    "session_creation_requests.npc_profile"
+  ],
+  "missing_016_columns": [
+    "npc_event_states.location_occupancy",
+    "npc_event_states.overdue_since",
+    "npc_event_states.location_evaluated_at",
+    "npc_events.place_id",
+    "npc_events.entry_seq"
+  ],
+  "eligible_drafts": 0,
+  "targeted_rows": 0,
+  "seed_template_presence": [
+    {
+      "id": "10000000-0000-0000-0000-000000000001",
+      "status": "DRAFT"
+    }
+  ],
+  "cause_observed": "Only the demo DRAFT with TRASH_001 exists; its npc_motion map/path are NULL. Exhibition template and all target eight codes are absent.",
+  "cause_inference": "The exhibition seed content is not present in this connection. Application elsewhere, rollback, deletion or a different database cannot be distinguished without external deployment history.",
+  "database_writes": false
+}

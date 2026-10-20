@@ -1,0 +1,13 @@
+{
+  "scope": "Phase 1 QA; implementation source unchanged",
+  "checks": [
+    {"command": "npx tsc --noEmit --incremental false", "cwd": "web", "exit_code": 0, "status": "PASS", "result": "TypeScript compilation check completed without diagnostics"},
+    {"command": "npm run lint", "cwd": "web", "exit_code": 0, "status": "PASS", "errors": 0, "warnings": 1, "warning": "web/src/app/shared-result/page.tsx:42 react-hooks/exhaustive-deps generation.current cleanup reference; outside the Phase 1 implementation diff"},
+    {"command": "node --test tests/unity-bridge.test.mjs", "cwd": "web", "exit_code": 0, "status": "PASS", "passed": 3, "failed": 0, "scope_limit": "Bridge validation functions only; not rendered Unity or statistics integration", "initial_attempt": "Sandbox spawn EPERM; approved retry outside sandbox passed"},
+    {"command": "node tests/city-v002-graph.mjs", "cwd": "web", "exit_code": 1, "status": "FAIL", "result": "Existing test expects 572 nodes but the default Phase 1 graph has 579; assertion at line 10 fails before the remaining checks", "classification": "Regression test fixture still targets the previous default graph; does not by itself establish a routing defect"},
+    {"check": "Implementation report text integrity", "path": "docs/placement/phase1/implementation-report.md", "status": "FAIL", "utf8_decodable": true, "hangul_characters": 0, "question_marks": 2499, "result": "Korean prose was replaced by question marks in the saved baseline report; original report left unchanged during QA"}
+  ],
+  "database_writes": "NOT RUN",
+  "migration_application": "NOT RUN",
+  "deployment": "NOT RUN"
+}

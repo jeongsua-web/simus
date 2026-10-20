@@ -1,0 +1,371 @@
+{
+  "scope": "Actual Unity Editor scene load and Physics queries; no movement yet",
+  "unity": "6000.3.24f1",
+  "scene_sha256": "3ca26d6ee0c512812c8d1778c4fb8e8296b7df2357a46aa231daf9f6fe8969d2",
+  "compile_and_load": "PASS",
+  "node_count": 579,
+  "edge_count": 604,
+  "places": [
+    {
+      "situation_code": "EXHIBITION_02",
+      "place_id": "city_v002_gate_crossing",
+      "anchor_node_id": "MN_GATE",
+      "point": [
+        0.0,
+        0.16,
+        -56.25
+      ],
+      "marker_position": [
+        0.0,
+        0.16,
+        -56.25
+      ],
+      "marker_matches": true,
+      "node_matches": true,
+      "graph_connected": true,
+      "scene_object_found": true,
+      "scene_object_active": true,
+      "physics": {
+        "supported": true,
+        "support": "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01LE02_S1",
+        "support_y": 0.14,
+        "ground_error": 3.7252903E-09,
+        "projected_point": [
+          0.0,
+          0.16,
+          -56.25
+        ],
+        "static_obstacles": [],
+        "npc_overlaps_diagnostic": []
+      }
+    },
+    {
+      "situation_code": "EXHIBITION_05",
+      "place_id": "city_v002_crying_child",
+      "anchor_node_id": "PHASE1_EXHIBITION_05",
+      "point": [
+        147.15834,
+        0.16,
+        26.3766041
+      ],
+      "marker_position": [
+        147.15834,
+        0.16,
+        26.3766041
+      ],
+      "marker_matches": true,
+      "node_matches": true,
+      "graph_connected": true,
+      "scene_object_found": true,
+      "scene_object_active": true,
+      "physics": {
+        "supported": true,
+        "support": "CityRebuild_v002/04_PedestrianSurfaces/park_trail/PKE06_S0",
+        "support_y": 0.14,
+        "ground_error": 3.7252903E-09,
+        "projected_point": [
+          147.15834,
+          0.16,
+          26.3766041
+        ],
+        "static_obstacles": [],
+        "npc_overlaps_diagnostic": []
+      }
+    },
+    {
+      "situation_code": "EXHIBITION_07",
+      "place_id": "city_v002_illegal_parking",
+      "anchor_node_id": "PHASE1_EXHIBITION_07",
+      "point": [
+        -143.0,
+        0.16,
+        -8.3
+      ],
+      "marker_position": [
+        -143.0,
+        0.16,
+        -8.3
+      ],
+      "marker_matches": true,
+      "node_matches": true,
+      "graph_connected": true,
+      "scene_object_found": true,
+      "scene_object_active": true,
+      "physics": {
+        "supported": true,
+        "support": "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R05LE00_S1",
+        "support_y": 0.14,
+        "ground_error": 3.7252903E-09,
+        "projected_point": [
+          -143.0,
+          0.16,
+          -8.3
+        ],
+        "static_obstacles": [],
+        "npc_overlaps_diagnostic": []
+      }
+    },
+    {
+      "situation_code": "EXHIBITION_13",
+      "place_id": "city_v002_park_flowerbed",
+      "anchor_node_id": "PHASE1_EXHIBITION_13",
+      "point": [
+        155.908066,
+        0.16,
+        126.702972
+      ],
+      "marker_position": [
+        155.908066,
+        0.16,
+        126.702972
+      ],
+      "marker_matches": true,
+      "node_matches": true,
+      "graph_connected": true,
+      "scene_object_found": true,
+      "scene_object_active": true,
+      "physics": {
+        "supported": true,
+        "support": "CityRebuild_v002/04_PedestrianSurfaces/park_trail/PKE03_S0",
+        "support_y": 0.14,
+        "ground_error": 3.7252903E-09,
+        "projected_point": [
+          155.908066,
+          0.16,
+          126.702972
+        ],
+        "static_obstacles": [],
+        "npc_overlaps_diagnostic": []
+      }
+    },
+    {
+      "situation_code": "EXHIBITION_17",
+      "place_id": "city_v002_festival_info",
+      "anchor_node_id": "PHASE1_EXHIBITION_17",
+      "point": [
+        11.5381842,
+        0.16,
+        103.113136
+      ],
+      "marker_position": [
+        11.5381842,
+        0.16,
+        103.113136
+      ],
+      "marker_matches": true,
+      "node_matches": true,
+      "graph_connected": true,
+      "scene_object_found": true,
+      "scene_object_active": true,
+      "physics": {
+        "supported": true,
+        "support": "CityRebuild_v002/04_PedestrianSurfaces/campus_walk/C07_LINK_S1",
+        "support_y": 0.14,
+        "ground_error": 3.7252903E-09,
+        "projected_point": [
+          11.5381842,
+          0.16,
+          103.113136
+        ],
+        "static_obstacles": [],
+        "npc_overlaps_diagnostic": []
+      }
+    },
+    {
+      "situation_code": "EXHIBITION_18",
+      "place_id": "city_v002_park_cat",
+      "anchor_node_id": "PHASE1_EXHIBITION_18",
+      "point": [
+        158.259689,
+        0.16,
+        50.83931
+      ],
+      "marker_position": [
+        158.259689,
+        0.16,
+        50.83931
+      ],
+      "marker_matches": true,
+      "node_matches": true,
+      "graph_connected": true,
+      "scene_object_found": true,
+      "scene_object_active": true,
+      "physics": {
+        "supported": true,
+        "support": "CityRebuild_v002/04_PedestrianSurfaces/park_trail/PKE05_S0",
+        "support_y": 0.139999986,
+        "ground_error": 1.11758709E-08,
+        "projected_point": [
+          158.259689,
+          0.159999982,
+          50.83931
+        ],
+        "static_obstacles": [],
+        "npc_overlaps_diagnostic": []
+      }
+    },
+    {
+      "situation_code": "EXHIBITION_28",
+      "place_id": "city_v002_road_control",
+      "anchor_node_id": "PHASE1_EXHIBITION_28",
+      "point": [
+        86.0,
+        0.16,
+        -65.75
+      ],
+      "marker_position": [
+        86.0,
+        0.16,
+        -65.75
+      ],
+      "marker_matches": true,
+      "node_matches": true,
+      "graph_connected": true,
+      "scene_object_found": true,
+      "scene_object_active": true,
+      "physics": {
+        "supported": true,
+        "support": "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01RE03_S0",
+        "support_y": 0.14,
+        "ground_error": 3.7252903E-09,
+        "projected_point": [
+          86.0,
+          0.16,
+          -65.75
+        ],
+        "static_obstacles": [],
+        "npc_overlaps_diagnostic": []
+      }
+    },
+    {
+      "situation_code": "EXHIBITION_30",
+      "place_id": "city_v002_mystery_crate",
+      "anchor_node_id": "PHASE1_EXHIBITION_30",
+      "point": [
+        15.0,
+        0.16,
+        115.0
+      ],
+      "marker_position": [
+        15.0,
+        0.16,
+        115.0
+      ],
+      "marker_matches": true,
+      "node_matches": true,
+      "graph_connected": true,
+      "scene_object_found": true,
+      "scene_object_active": true,
+      "physics": {
+        "supported": true,
+        "support": "CityRebuild_v002/04_PedestrianSurfaces/campus_walk/C_PARK_S0",
+        "support_y": 0.139999986,
+        "ground_error": 1.11758709E-08,
+        "projected_point": [
+          15.0,
+          0.159999982,
+          115.0
+        ],
+        "static_obstacles": [],
+        "npc_overlaps_diagnostic": []
+      }
+    }
+  ],
+  "adjusted_routes": [
+    {
+      "edge_id": "R05LE00_S1",
+      "status": "PASS",
+      "samples": 285,
+      "maximum_route_height_vs_support_error": 1.86264515E-08,
+      "first_failures": []
+    },
+    {
+      "edge_id": "PKE03_S0",
+      "status": "PASS",
+      "samples": 213,
+      "maximum_route_height_vs_support_error": 1.86264515E-08,
+      "first_failures": []
+    },
+    {
+      "edge_id": "C07_LINK_S1",
+      "status": "PASS",
+      "samples": 333,
+      "maximum_route_height_vs_support_error": 1.86264515E-08,
+      "first_failures": []
+    },
+    {
+      "edge_id": "R01LE03_S0",
+      "status": "PASS",
+      "samples": 553,
+      "maximum_route_height_vs_support_error": 1.86264515E-08,
+      "first_failures": []
+    }
+  ],
+  "roles": [
+    {
+      "path": "Test NPC - Happiness 01",
+      "role": "ParticipantTemplate",
+      "active": true
+    },
+    {
+      "path": "CityRebuild_v002/12_River_Phase4/river_west_roundtrip",
+      "role": "TestProbe",
+      "active": true
+    },
+    {
+      "path": "CityRebuild_v002/12_River_Phase4/river_east_roundtrip",
+      "role": "TestProbe",
+      "active": true
+    },
+    {
+      "path": "CityRebuild_v002/12_River_Phase4/river_bridge_to_park",
+      "role": "TestProbe",
+      "active": true
+    },
+    {
+      "path": "CityRebuild_v002/13_Phase5_RouteVerification/GraphProbe_school_residential",
+      "role": "TestProbe",
+      "active": true
+    },
+    {
+      "path": "CityRebuild_v002/13_Phase5_RouteVerification/GraphProbe_school_park",
+      "role": "TestProbe",
+      "active": true
+    },
+    {
+      "path": "CityRebuild_v002/13_Phase5_RouteVerification/GraphProbe_residential_commerce",
+      "role": "TestProbe",
+      "active": true
+    },
+    {
+      "path": "SIMUS_EventPlacement_20261020/NPC_CryingChild_ParkSouth",
+      "role": "Environment",
+      "active": true
+    },
+    {
+      "path": "SIMUS_EventPlacement_20261020/NPC_Police_Gate",
+      "role": "Environment",
+      "active": true
+    },
+    {
+      "path": "SIMUS_EventPlacement_20261020/NPC_Criminal_PlazaEdge",
+      "role": "Environment",
+      "active": true
+    },
+    {
+      "path": "SIMUS_EventPlacement_20261020/NPC_SIMUS_CityCitizen_1",
+      "role": "Environment",
+      "active": true
+    },
+    {
+      "path": "SIMUS_EventPlacement_20261020/NPC_SIMUS_CityCitizen_2",
+      "role": "Environment",
+      "active": true
+    },
+    {
+      "path": "SIMUS_EventPlacement_20261020/NPC_HeavyCarrier_ApartmentWalk",
+      "role": "Environment",
+      "active": true
+    }
+  ]
+}

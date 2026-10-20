@@ -1,0 +1,118 @@
+{
+  "scope": "Actual Editor Play Mode: inactive participant template clone, unchanged bridge pose method, subsequent actual RiverGuard.LateUpdate; no API/DB writes",
+  "cases": [
+    {
+      "case": "fresh_network_spawn",
+      "from_node": "template_zero",
+      "to_node": "PARK_REST_2",
+      "start": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "server_point": [
+        142.0,
+        0.16,
+        118.0
+      ],
+      "expected_grounded_point": [
+        142.0,
+        0.16,
+        118.0
+      ],
+      "direct_segment_safe": false,
+      "destination_forbidden": false,
+      "bridge_method": "WebCityBridge.MoveActor (unchanged private static method, reflection)",
+      "rejected_before": 0,
+      "position_immediately_after_bridge": [
+        142.0,
+        0.16,
+        118.0
+      ],
+      "position_after_late_update": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rejected_after": 1,
+      "position_error_m": 184.629425,
+      "status": "FAIL"
+    },
+    {
+      "case": "hidden_tab_resume_warp",
+      "from_node": "RIVER_W_0",
+      "to_node": "RIVER_E_0",
+      "start": [
+        117.173187,
+        -0.198763281,
+        -13.8530378
+      ],
+      "server_point": [
+        136.826813,
+        -0.408,
+        -10.1469622
+      ],
+      "expected_grounded_point": [
+        136.826813,
+        -0.408,
+        -10.1469622
+      ],
+      "direct_segment_safe": false,
+      "destination_forbidden": false,
+      "bridge_method": "WebCityBridge.MoveActor (unchanged private static method, reflection)",
+      "rejected_before": 0,
+      "position_immediately_after_bridge": [
+        136.826813,
+        -0.408,
+        -10.1469622
+      ],
+      "position_after_late_update": [
+        117.173187,
+        -0.198763281,
+        -13.8530378
+      ],
+      "rejected_after": 1,
+      "position_error_m": 20.0010948,
+      "status": "FAIL"
+    },
+    {
+      "case": "same_bank_control",
+      "from_node": "RIVER_W_0",
+      "to_node": "RIVER_W_1",
+      "start": [
+        117.173187,
+        -0.198763281,
+        -13.8530378
+      ],
+      "server_point": [
+        116.971695,
+        -0.168729812,
+        -12.7843714
+      ],
+      "expected_grounded_point": [
+        116.971695,
+        -0.168729857,
+        -12.7843714
+      ],
+      "direct_segment_safe": true,
+      "destination_forbidden": false,
+      "bridge_method": "WebCityBridge.MoveActor (unchanged private static method, reflection)",
+      "rejected_before": 0,
+      "position_immediately_after_bridge": [
+        116.971695,
+        -0.168729857,
+        -12.7843714
+      ],
+      "position_after_late_update": [
+        116.971695,
+        -0.168729857,
+        -12.7843714
+      ],
+      "rejected_after": 0,
+      "position_error_m": 0.0,
+      "status": "PASS"
+    }
+  ],
+  "source_scene_sha256": "3ca26d6ee0c512812c8d1778c4fb8e8296b7df2357a46aa231daf9f6fe8969d2",
+  "product_code_modified": false
+}

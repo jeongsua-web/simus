@@ -1,0 +1,57 @@
+{
+  "scope": "Actual BuildPipeline postprocess scene inspection",
+  "scene": "Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002_WebGL_Test.unity",
+  "test_probe_count": 0,
+  "participant_template_count": 1,
+  "objects": [
+    {
+      "name": "NPC_SIMUS_CityCitizen_1",
+      "found": true,
+      "active": true,
+      "patrol": true,
+      "animators": 1
+    },
+    {
+      "name": "NPC_SIMUS_CityCitizen_2",
+      "found": true,
+      "active": true,
+      "patrol": true,
+      "animators": 1
+    },
+    {
+      "name": "NPC_HeavyCarrier_ApartmentWalk",
+      "found": true,
+      "active": true,
+      "patrol": true,
+      "animators": 1
+    },
+    {
+      "name": "NPC_CryingChild_ParkSouth",
+      "found": true,
+      "active": true,
+      "patrol": false,
+      "animators": 1
+    },
+    {
+      "name": "NPC_Police_Gate",
+      "found": true,
+      "active": true,
+      "patrol": false,
+      "animators": 1
+    },
+    {
+      "name": "NPC_Criminal_PlazaEdge",
+      "found": true,
+      "active": true,
+      "patrol": false,
+      "animators": 1
+    },
+    {
+      "name": "CAT_Tuxedo_EastPark",
+      "found": true,
+      "active": true,
+      "patrol": false,
+      "animators": 1
+    }
+  ]
+}

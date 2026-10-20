@@ -60,6 +60,9 @@ export default function ParticipatePage() {
   const answeredCount = state.responseCount;
   const activeEvent = state.session.accepting_choices && state.eventState?.phase === "ACTIVE" ? state.eventState.event : null;
   const activeSituation = activeEvent?.situation;
+  const eventsClosed = !state.session.accepting_choices || state.eventState?.phase === "CLOSED";
+  const guiding = state.eventState?.phase === "GUIDING";
+  const waitingForArrival = !eventsClosed && !activeEvent && state.eventState?.overdue;
   return (
     <main className={styles.gamePage}>
       <header className={styles.hud}>
@@ -88,10 +91,11 @@ export default function ParticipatePage() {
       <section className={styles.cityExperience} aria-label="도시와 선택">
         <UnityCity key={state.session.id} sessionId={state.session.id} />
         <details className={styles.choicePanel} open>
-          <summary><span>도시에서 선택하기</span><small>{activeEvent ? "상황 발생" : "이벤트 대기"}</small></summary>
+          <summary><span>도시에서 선택하기</span><small>{eventsClosed ? "접수 마감" : activeEvent ? "상황 발생" : guiding ? "장소로 이동 중" : "이벤트 대기"}</small></summary>
           <div className={styles.choicePanelBody}>
             {!activeSituation && <div className={styles.emptySituation} role="status" aria-live="polite">
-              <h2>{!state.session.accepting_choices || state.eventState?.phase === "CLOSED" ? "이벤트 접수가 마감되었습니다" : state.eventState?.phase === "GUIDING" ? "새로운 상황을 만나러 이동 중이에요" : "도시를 둘러보고 있어요"}</h2>
+              <h2>{eventsClosed ? "이벤트 접수가 마감되었습니다" : waitingForArrival ? "다음 장소 도착을 기다리고 있어요" : guiding ? "이벤트 장소로 이동 중이에요" : "도시를 둘러보고 있어요"}</h2>
+              {!eventsClosed && <p className={styles.body}>{waitingForArrival ? "이동에 시간이 더 걸리고 있어요. 이벤트 장소에 도착하면 선택지가 나타나요." : "이벤트 장소에 도착하면 선택지가 나타나요."}</p>}
             </div>}
             {activeEvent && activeSituation && <SituationCard key={activeEvent.id} situation={activeSituation} selectedChoiceId={state.selected[activeEvent.id]}
               done={Boolean(state.answered[activeEvent.id])} acceptingChoices={state.session.accepting_choices}

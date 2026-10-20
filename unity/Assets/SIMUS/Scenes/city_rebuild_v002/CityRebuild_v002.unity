@@ -25473,6 +25473,7 @@ GameObject:
   - component: {fileID: 270534925}
   - component: {fileID: 270534924}
   - component: {fileID: 270534923}
+  - component: {fileID: 8200000000000000007}
   m_Layer: 0
   m_Name: GraphProbe_school_residential
   m_TagString: Untagged
@@ -27969,6 +27970,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 292530911}
+  - component: {fileID: 8200000000000000005}
   m_Layer: 0
   m_Name: NPC_Police_Gate
   m_TagString: Untagged
@@ -37678,6 +37680,7 @@ GameObject:
   - component: {fileID: 401897807}
   - component: {fileID: 401897806}
   - component: {fileID: 401897805}
+  - component: {fileID: 8200000000000000008}
   m_Layer: 0
   m_Name: GraphProbe_school_park
   m_TagString: Untagged
@@ -58341,6 +58344,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Simus.CityV002PedestrianGraph
   layoutSha256: 3e98ea485bd92dc9c2528d0420b5999a0336f700270c0f73f7630aa214fbd105
+  mapVersion: test-only-city-rebuild-v002-phase1-v1
+  pathVersion: city-rebuild-v002-walk-phase1-v1
   nodes:
   - id: R01L00
     position: {x: -226.2595, y: 0.16, z: -81.17}
@@ -59486,12 +59491,26 @@ MonoBehaviour:
     position: {x: 110.896, y: 0.16, z: -0.745}
   - id: RIVER_BRIDGE_1_JOIN
     position: {x: 134.933, y: 0.16, z: 20.518}
+  - id: PHASE1_EXHIBITION_05
+    position: {x: 147.158345, y: 0.16, z: 26.376605}
+  - id: PHASE1_EXHIBITION_07
+    position: {x: -143, y: 0.16, z: -8.3}
+  - id: PHASE1_EXHIBITION_13
+    position: {x: 155.90806, y: 0.16, z: 126.702969}
+  - id: PHASE1_EXHIBITION_17
+    position: {x: 11.538184, y: 0.16, z: 103.113135}
+  - id: PHASE1_EXHIBITION_18
+    position: {x: 158.259684, y: 0.16, z: 50.839311}
+  - id: PHASE1_EXHIBITION_28
+    position: {x: 86, y: 0.16, z: -65.75}
+  - id: PHASE1_EXHIBITION_30
+    position: {x: 15, y: 0.16, z: 115}
   edges:
   - id: R01LE00_S0
     kind: sidewalk
     from: 0
     to: 1
-    width: 3
+    width: 3.0
     points:
     - {x: -226.2595, y: 0.16, z: -81.17}
     - {x: -135.6412, y: 0.16, z: -56.25}
@@ -59499,7 +59518,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 1
     to: 215
-    width: 3
+    width: 3.0
     points:
     - {x: -135.6412, y: 0.16, z: -56.25}
     - {x: -99.4995, y: 0.16, z: -56.25}
@@ -59507,7 +59526,7 @@ MonoBehaviour:
     kind: crossing
     from: 215
     to: 2
-    width: 3
+    width: 3.0
     points:
     - {x: -99.4995, y: 0.16, z: -56.25}
     - {x: -95, y: 0.16, z: -56.25}
@@ -59515,7 +59534,7 @@ MonoBehaviour:
     kind: crossing
     from: 2
     to: 216
-    width: 3
+    width: 3.0
     points:
     - {x: -95, y: 0.16, z: -56.25}
     - {x: -90.5005, y: 0.16, z: -56.25}
@@ -59523,7 +59542,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 216
     to: 3
-    width: 3
+    width: 3.0
     points:
     - {x: -90.5005, y: 0.16, z: -56.25}
     - {x: 0, y: 0.16, z: -56.25}
@@ -59531,15 +59550,19 @@ MonoBehaviour:
     kind: sidewalk
     from: 3
     to: 4
-    width: 3
+    width: 2.0
     points:
     - {x: 0, y: 0.16, z: -56.25}
+    - {x: 43, y: 0.16, z: -56.25}
+    - {x: 45, y: 0.16, z: -56.65}
+    - {x: 63, y: 0.16, z: -56.65}
+    - {x: 65, y: 0.16, z: -56.25}
     - {x: 109.118, y: 0.16, z: -56.25}
   - id: R01LE04_S0
     kind: sidewalk
     from: 4
     to: 5
-    width: 3
+    width: 3.0
     points:
     - {x: 109.118, y: 0.16, z: -56.25}
     - {x: 193.2948, y: 0.16, z: -23.8743}
@@ -59547,7 +59570,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 6
     to: 7
-    width: 3
+    width: 3.0
     points:
     - {x: -223.7405, y: 0.16, z: -90.33}
     - {x: -134.3588, y: 0.16, z: -65.75}
@@ -59555,7 +59578,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 7
     to: 217
-    width: 3
+    width: 3.0
     points:
     - {x: -134.3588, y: 0.16, z: -65.75}
     - {x: -100.143715, y: 0.16, z: -65.75}
@@ -59563,7 +59586,7 @@ MonoBehaviour:
     kind: crossing
     from: 217
     to: 8
-    width: 3
+    width: 3.0
     points:
     - {x: -100.143715, y: 0.16, z: -65.75}
     - {x: -95, y: 0.16, z: -65.75}
@@ -59571,7 +59594,7 @@ MonoBehaviour:
     kind: crossing
     from: 8
     to: 218
-    width: 3
+    width: 3.0
     points:
     - {x: -95, y: 0.16, z: -65.75}
     - {x: -91.0714, y: 0.16, z: -65.75}
@@ -59579,7 +59602,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 218
     to: 219
-    width: 3
+    width: 3.0
     points:
     - {x: -91.0714, y: 0.16, z: -65.75}
     - {x: -13.2495, y: 0.16, z: -65.75}
@@ -59587,7 +59610,7 @@ MonoBehaviour:
     kind: crossing
     from: 219
     to: 220
-    width: 3
+    width: 3.0
     points:
     - {x: -13.2495, y: 0.16, z: -65.75}
     - {x: -6.7505, y: 0.16, z: -65.75}
@@ -59595,23 +59618,23 @@ MonoBehaviour:
     kind: sidewalk
     from: 220
     to: 9
-    width: 3
+    width: 3.0
     points:
     - {x: -6.7505, y: 0.16, z: -65.75}
     - {x: 0, y: 0.16, z: -65.75}
   - id: R01RE03_S0
     kind: sidewalk
     from: 9
-    to: 10
-    width: 3
+    to: 577
+    width: 3.0
     points:
     - {x: 0, y: 0.16, z: -65.75}
-    - {x: 110.882, y: 0.16, z: -65.75}
+    - {x: 86, y: 0.16, z: -65.75}
   - id: R01RE04_S0
     kind: sidewalk
     from: 10
     to: 11
-    width: 3
+    width: 3.0
     points:
     - {x: 110.882, y: 0.16, z: -65.75}
     - {x: 196.7052, y: 0.16, z: -32.7411}
@@ -59619,7 +59642,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 0
     to: 221
-    width: 3
+    width: 3.0
     points:
     - {x: -226.2595, y: 0.16, z: -81.17}
     - {x: -226.25935, y: 0.16, z: -81.17051}
@@ -59627,7 +59650,7 @@ MonoBehaviour:
     kind: crossing
     from: 221
     to: 222
-    width: 3
+    width: 3.0
     points:
     - {x: -226.25935, y: 0.16, z: -81.17051}
     - {x: -223.74065, y: 0.16, z: -90.32949}
@@ -59635,7 +59658,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 222
     to: 6
-    width: 3
+    width: 3.0
     points:
     - {x: -223.74065, y: 0.16, z: -90.32949}
     - {x: -223.7405, y: 0.16, z: -90.33}
@@ -59643,7 +59666,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 5
     to: 223
-    width: 3
+    width: 3.0
     points:
     - {x: 193.2948, y: 0.16, z: -23.8743}
     - {x: 193.29498, y: 0.16, z: -23.87479}
@@ -59651,7 +59674,7 @@ MonoBehaviour:
     kind: crossing
     from: 223
     to: 224
-    width: 3
+    width: 3.0
     points:
     - {x: 193.29498, y: 0.16, z: -23.87479}
     - {x: 196.70502, y: 0.16, z: -32.74061}
@@ -59659,7 +59682,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 224
     to: 11
-    width: 3
+    width: 3.0
     points:
     - {x: 196.70502, y: 0.16, z: -32.74061}
     - {x: 196.7052, y: 0.16, z: -32.7411}
@@ -60138,11 +60161,13 @@ MonoBehaviour:
   - id: R05LE00_S1
     kind: sidewalk
     from: 253
-    to: 43
-    width: 1.8
+    to: 573
+    width: 1.0
     points:
     - {x: -98.8995, y: 0.16, z: -7.9}
-    - {x: -154.005, y: 0.16, z: -7.9}
+    - {x: -137, y: 0.16, z: -7.9}
+    - {x: -139, y: 0.16, z: -8.3}
+    - {x: -143, y: 0.16, z: -8.3}
   - id: R05LE01_S0
     kind: sidewalk
     from: 43
@@ -60227,7 +60252,7 @@ MonoBehaviour:
     kind: shared_lane_edge
     from: 48
     to: 49
-    width: 2
+    width: 2.0
     points:
     - {x: -75, y: 0.16, z: -108.25}
     - {x: -12.75, y: 0.16, z: -108.25}
@@ -60235,7 +60260,7 @@ MonoBehaviour:
     kind: shared_lane_edge
     from: 49
     to: 50
-    width: 2
+    width: 2.0
     points:
     - {x: -12.75, y: 0.16, z: -108.25}
     - {x: -12.75, y: 0.16, z: -65.75}
@@ -60243,7 +60268,7 @@ MonoBehaviour:
     kind: shared_lane_edge
     from: 51
     to: 52
-    width: 2
+    width: 2.0
     points:
     - {x: -75, y: 0.16, z: -113.75}
     - {x: -7.25, y: 0.16, z: -113.75}
@@ -60251,7 +60276,7 @@ MonoBehaviour:
     kind: shared_lane_edge
     from: 52
     to: 53
-    width: 2
+    width: 2.0
     points:
     - {x: -7.25, y: 0.16, z: -113.75}
     - {x: -7.25, y: 0.16, z: -65.75}
@@ -60259,7 +60284,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 48
     to: 259
-    width: 2
+    width: 2.0
     points:
     - {x: -75, y: 0.16, z: -108.25}
     - {x: -75, y: 0.16, z: -108.2505}
@@ -60267,7 +60292,7 @@ MonoBehaviour:
     kind: crossing
     from: 259
     to: 260
-    width: 2
+    width: 2.0
     points:
     - {x: -75, y: 0.16, z: -108.2505}
     - {x: -75, y: 0.16, z: -113.7495}
@@ -60275,7 +60300,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 260
     to: 51
-    width: 2
+    width: 2.0
     points:
     - {x: -75, y: 0.16, z: -113.7495}
     - {x: -75, y: 0.16, z: -113.75}
@@ -60283,7 +60308,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 50
     to: 261
-    width: 2
+    width: 2.0
     points:
     - {x: -12.75, y: 0.16, z: -65.75}
     - {x: -12.7495, y: 0.16, z: -65.75}
@@ -60291,7 +60316,7 @@ MonoBehaviour:
     kind: crossing
     from: 261
     to: 262
-    width: 2
+    width: 2.0
     points:
     - {x: -12.7495, y: 0.16, z: -65.75}
     - {x: -7.2505, y: 0.16, z: -65.75}
@@ -60299,7 +60324,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 262
     to: 53
-    width: 2
+    width: 2.0
     points:
     - {x: -7.2505, y: 0.16, z: -65.75}
     - {x: -7.25, y: 0.16, z: -65.75}
@@ -60307,7 +60332,7 @@ MonoBehaviour:
     kind: shared_lane_edge
     from: 54
     to: 55
-    width: 2
+    width: 2.0
     points:
     - {x: 32, y: 0.16, z: -110.25}
     - {x: 66.5882, y: 0.16, z: -110.25}
@@ -60315,7 +60340,7 @@ MonoBehaviour:
     kind: shared_lane_edge
     from: 55
     to: 56
-    width: 2
+    width: 2.0
     points:
     - {x: 66.5882, y: 0.16, z: -110.25}
     - {x: 97.3138, y: 0.16, z: -124.0235}
@@ -60323,7 +60348,7 @@ MonoBehaviour:
     kind: shared_lane_edge
     from: 56
     to: 263
-    width: 2
+    width: 2.0
     points:
     - {x: 97.3138, y: 0.16, z: -124.0235}
     - {x: 110.161575, y: 0.16, z: -171.46144}
@@ -60331,7 +60356,7 @@ MonoBehaviour:
     kind: crossing
     from: 263
     to: 57
-    width: 2
+    width: 2.0
     points:
     - {x: 110.161575, y: 0.16, z: -171.46144}
     - {x: 110.6544, y: 0.16, z: -173.2811}
@@ -60339,7 +60364,7 @@ MonoBehaviour:
     kind: shared_lane_edge
     from: 58
     to: 59
-    width: 2
+    width: 2.0
     points:
     - {x: 32, y: 0.16, z: -115.75}
     - {x: 65.4118, y: 0.16, z: -115.75}
@@ -60347,7 +60372,7 @@ MonoBehaviour:
     kind: shared_lane_edge
     from: 59
     to: 60
-    width: 2
+    width: 2.0
     points:
     - {x: 65.4118, y: 0.16, z: -115.75}
     - {x: 92.6862, y: 0.16, z: -127.9765}
@@ -60355,7 +60380,7 @@ MonoBehaviour:
     kind: shared_lane_edge
     from: 60
     to: 264
-    width: 2
+    width: 2.0
     points:
     - {x: 92.6862, y: 0.16, z: -127.9765}
     - {x: 104.308624, y: 0.16, z: -170.89008}
@@ -60363,7 +60388,7 @@ MonoBehaviour:
     kind: crossing
     from: 264
     to: 61
-    width: 2
+    width: 2.0
     points:
     - {x: 104.308624, y: 0.16, z: -170.89008}
     - {x: 105.3456, y: 0.16, z: -174.7189}
@@ -60371,7 +60396,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 54
     to: 265
-    width: 2
+    width: 2.0
     points:
     - {x: 32, y: 0.16, z: -110.25}
     - {x: 32, y: 0.16, z: -110.2505}
@@ -60379,7 +60404,7 @@ MonoBehaviour:
     kind: crossing
     from: 265
     to: 266
-    width: 2
+    width: 2.0
     points:
     - {x: 32, y: 0.16, z: -110.2505}
     - {x: 32, y: 0.16, z: -115.7495}
@@ -60387,7 +60412,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 266
     to: 58
-    width: 2
+    width: 2.0
     points:
     - {x: 32, y: 0.16, z: -115.7495}
     - {x: 32, y: 0.16, z: -115.75}
@@ -60395,7 +60420,7 @@ MonoBehaviour:
     kind: crossing
     from: 57
     to: 267
-    width: 2
+    width: 2.0
     points:
     - {x: 110.6544, y: 0.16, z: -173.2811}
     - {x: 110.65389, y: 0.16, z: -173.28123}
@@ -60403,7 +60428,7 @@ MonoBehaviour:
     kind: crossing
     from: 267
     to: 268
-    width: 2
+    width: 2.0
     points:
     - {x: 110.65389, y: 0.16, z: -173.28123}
     - {x: 105.34611, y: 0.16, z: -174.71877}
@@ -60411,7 +60436,7 @@ MonoBehaviour:
     kind: crossing
     from: 268
     to: 61
-    width: 2
+    width: 2.0
     points:
     - {x: 105.34611, y: 0.16, z: -174.71877}
     - {x: 105.3456, y: 0.16, z: -174.7189}
@@ -60419,7 +60444,7 @@ MonoBehaviour:
     kind: crossing
     from: 15
     to: 269
-    width: 2
+    width: 2.0
     points:
     - {x: -90.75, y: 0.16, z: -61.2707}
     - {x: -91.00859, y: 0.16, z: -61.25423}
@@ -60427,7 +60452,7 @@ MonoBehaviour:
     kind: crossing
     from: 269
     to: 270
-    width: 2
+    width: 2.0
     points:
     - {x: -91.00859, y: 0.16, z: -61.25423}
     - {x: -98.9995, y: 0.16, z: -60.745255}
@@ -60435,7 +60460,7 @@ MonoBehaviour:
     kind: crossing
     from: 270
     to: 21
-    width: 2
+    width: 2.0
     points:
     - {x: -98.9995, y: 0.16, z: -60.745255}
     - {x: -99.25, y: 0.16, z: -60.7293}
@@ -60443,7 +60468,7 @@ MonoBehaviour:
     kind: crossing
     from: 15
     to: 271
-    width: 2
+    width: 2.0
     points:
     - {x: -90.75, y: 0.16, z: -61.2707}
     - {x: -91.0005, y: 0.16, z: -60.974773}
@@ -60451,7 +60476,7 @@ MonoBehaviour:
     kind: crossing
     from: 271
     to: 272
-    width: 2
+    width: 2.0
     points:
     - {x: -91.0005, y: 0.16, z: -60.974773}
     - {x: -94.57633, y: 0.16, z: -56.7505}
@@ -60459,7 +60484,7 @@ MonoBehaviour:
     kind: crossing
     from: 272
     to: 2
-    width: 2
+    width: 2.0
     points:
     - {x: -94.57633, y: 0.16, z: -56.7505}
     - {x: -95, y: 0.16, z: -56.25}
@@ -60467,7 +60492,7 @@ MonoBehaviour:
     kind: crossing
     from: 15
     to: 273
-    width: 2
+    width: 2.0
     points:
     - {x: -90.75, y: 0.16, z: -61.2707}
     - {x: -91.04189, y: 0.16, z: -61.57834}
@@ -60475,7 +60500,7 @@ MonoBehaviour:
     kind: crossing
     from: 273
     to: 274
-    width: 2
+    width: 2.0
     points:
     - {x: -91.04189, y: 0.16, z: -61.57834}
     - {x: -94.52512, y: 0.16, z: -65.2495}
@@ -60483,7 +60508,7 @@ MonoBehaviour:
     kind: crossing
     from: 274
     to: 8
-    width: 2
+    width: 2.0
     points:
     - {x: -94.52512, y: 0.16, z: -65.2495}
     - {x: -95, y: 0.16, z: -65.75}
@@ -60491,7 +60516,7 @@ MonoBehaviour:
     kind: crossing
     from: 34
     to: 38
-    width: 2
+    width: 2.0
     points:
     - {x: -95, y: 0.16, z: 61.85}
     - {x: -95, y: 0.16, z: 68.15}
@@ -60499,7 +60524,7 @@ MonoBehaviour:
     kind: crossing
     from: 34
     to: 275
-    width: 2
+    width: 2.0
     points:
     - {x: -95, y: 0.16, z: 61.85}
     - {x: -98.9995, y: 0.16, z: 64.81434}
@@ -60507,7 +60532,7 @@ MonoBehaviour:
     kind: crossing
     from: 275
     to: 19
-    width: 2
+    width: 2.0
     points:
     - {x: -98.9995, y: 0.16, z: 64.81434}
     - {x: -99.25, y: 0.16, z: 65}
@@ -60515,7 +60540,7 @@ MonoBehaviour:
     kind: crossing
     from: 34
     to: 276
-    width: 2
+    width: 2.0
     points:
     - {x: -95, y: 0.16, z: 61.85}
     - {x: -91.8555, y: 0.16, z: 64.180626}
@@ -60523,7 +60548,7 @@ MonoBehaviour:
     kind: crossing
     from: 276
     to: 277
-    width: 2
+    width: 2.0
     points:
     - {x: -91.8555, y: 0.16, z: 64.180626}
     - {x: -91.0005, y: 0.16, z: 64.81434}
@@ -60531,7 +60556,7 @@ MonoBehaviour:
     kind: junction_walk
     from: 277
     to: 13
-    width: 2
+    width: 2.0
     points:
     - {x: -91.0005, y: 0.16, z: 64.81434}
     - {x: -90.75, y: 0.16, z: 65}
@@ -60539,7 +60564,7 @@ MonoBehaviour:
     kind: crossing
     from: 45
     to: 42
-    width: 2
+    width: 2.0
     points:
     - {x: -95, y: 0.16, z: -2.1}
     - {x: -95, y: 0.16, z: -7.9}
@@ -60547,7 +60572,7 @@ MonoBehaviour:
     kind: crossing
     from: 45
     to: 278
-    width: 2
+    width: 2.0
     points:
     - {x: -95, y: 0.16, z: -2.1}
     - {x: -92.15869, y: 0.16, z: -4.0387774}
@@ -60555,7 +60580,7 @@ MonoBehaviour:
     kind: crossing
     from: 278
     to: 279
-    width: 2
+    width: 2.0
     points:
     - {x: -92.15869, y: 0.16, z: -4.0387774}
     - {x: -91.0005, y: 0.16, z: -4.8290706}
@@ -60563,7 +60588,7 @@ MonoBehaviour:
     kind: junction_walk
     from: 279
     to: 14
-    width: 2
+    width: 2.0
     points:
     - {x: -91.0005, y: 0.16, z: -4.8290706}
     - {x: -90.75, y: 0.16, z: -5}
@@ -60571,7 +60596,7 @@ MonoBehaviour:
     kind: crossing
     from: 45
     to: 280
-    width: 2
+    width: 2.0
     points:
     - {x: -95, y: 0.16, z: -2.1}
     - {x: -98.9995, y: 0.16, z: -4.8290706}
@@ -60579,7 +60604,7 @@ MonoBehaviour:
     kind: crossing
     from: 280
     to: 20
-    width: 2
+    width: 2.0
     points:
     - {x: -98.9995, y: 0.16, z: -4.8290706}
     - {x: -99.25, y: 0.16, z: -5}
@@ -60587,7 +60612,7 @@ MonoBehaviour:
     kind: crossing
     from: 24
     to: 29
-    width: 2
+    width: 2.0
     points:
     - {x: -105.4904, y: 0.16, z: -143.8915}
     - {x: -106.5096, y: 0.16, z: -150.1085}
@@ -60595,7 +60620,7 @@ MonoBehaviour:
     kind: crossing
     from: 24
     to: 281
-    width: 2
+    width: 2.0
     points:
     - {x: -105.4904, y: 0.16, z: -143.8915}
     - {x: -102.23075, y: 0.16, z: -148.33745}
@@ -60603,7 +60628,7 @@ MonoBehaviour:
     kind: crossing
     from: 281
     to: 16
-    width: 2
+    width: 2.0
     points:
     - {x: -102.23075, y: 0.16, z: -148.33745}
     - {x: -101.9376, y: 0.16, z: -148.7373}
@@ -60611,7 +60636,7 @@ MonoBehaviour:
     kind: crossing
     from: 24
     to: 282
-    width: 2
+    width: 2.0
     points:
     - {x: -105.4904, y: 0.16, z: -143.8915}
     - {x: -108.34112, y: 0.16, z: -144.74646}
@@ -60619,7 +60644,7 @@ MonoBehaviour:
     kind: crossing
     from: 282
     to: 283
-    width: 2
+    width: 2.0
     points:
     - {x: -108.34112, y: 0.16, z: -144.74646}
     - {x: -109.7998, y: 0.16, z: -145.18394}
@@ -60627,7 +60652,7 @@ MonoBehaviour:
     kind: junction_walk
     from: 283
     to: 22
-    width: 2
+    width: 2.0
     points:
     - {x: -109.7998, y: 0.16, z: -145.18394}
     - {x: -110.0624, y: 0.16, z: -145.2627}
@@ -60635,7 +60660,7 @@ MonoBehaviour:
     kind: walkway
     from: 50
     to: 284
-    width: 2
+    width: 2.0
     points:
     - {x: -12.75, y: 0.16, z: -65.75}
     - {x: -12.7495, y: 0.16, z: -65.75}
@@ -60643,7 +60668,7 @@ MonoBehaviour:
     kind: crossing
     from: 284
     to: 62
-    width: 2
+    width: 2.0
     points:
     - {x: -12.7495, y: 0.16, z: -65.75}
     - {x: -10, y: 0.16, z: -65.75}
@@ -60651,7 +60676,7 @@ MonoBehaviour:
     kind: walkway
     from: 53
     to: 285
-    width: 2
+    width: 2.0
     points:
     - {x: -7.25, y: 0.16, z: -65.75}
     - {x: -7.2505, y: 0.16, z: -65.75}
@@ -60659,7 +60684,7 @@ MonoBehaviour:
     kind: crossing
     from: 285
     to: 62
-    width: 2
+    width: 2.0
     points:
     - {x: -7.2505, y: 0.16, z: -65.75}
     - {x: -10, y: 0.16, z: -65.75}
@@ -60667,7 +60692,7 @@ MonoBehaviour:
     kind: crossing
     from: 62
     to: 286
-    width: 2
+    width: 2.0
     points:
     - {x: -10, y: 0.16, z: -65.75}
     - {x: -7.2505, y: 0.16, z: -65.75}
@@ -60675,7 +60700,7 @@ MonoBehaviour:
     kind: walkway
     from: 286
     to: 9
-    width: 2
+    width: 2.0
     points:
     - {x: -7.2505, y: 0.16, z: -65.75}
     - {x: 0, y: 0.16, z: -65.75}
@@ -60683,7 +60708,7 @@ MonoBehaviour:
     kind: crossing
     from: 61
     to: 287
-    width: 2
+    width: 2.0
     points:
     - {x: 105.3456, y: 0.16, z: -174.7189}
     - {x: 105.34611, y: 0.16, z: -174.71877}
@@ -60691,7 +60716,7 @@ MonoBehaviour:
     kind: crossing
     from: 287
     to: 288
-    width: 2
+    width: 2.0
     points:
     - {x: 105.34611, y: 0.16, z: -174.71877}
     - {x: 110.65389, y: 0.16, z: -173.28123}
@@ -60699,7 +60724,7 @@ MonoBehaviour:
     kind: crossing
     from: 288
     to: 57
-    width: 2
+    width: 2.0
     points:
     - {x: 110.65389, y: 0.16, z: -173.28123}
     - {x: 110.6544, y: 0.16, z: -173.2811}
@@ -60707,7 +60732,7 @@ MonoBehaviour:
     kind: crossing
     from: 61
     to: 289
-    width: 2
+    width: 2.0
     points:
     - {x: 105.3456, y: 0.16, z: -174.7189}
     - {x: 105.346016, y: 0.16, z: -174.71841}
@@ -60715,7 +60740,7 @@ MonoBehaviour:
     kind: crossing
     from: 289
     to: 290
-    width: 2
+    width: 2.0
     points:
     - {x: 105.346016, y: 0.16, z: -174.71841}
     - {x: 108.70612, y: 0.16, z: -170.82816}
@@ -60723,7 +60748,7 @@ MonoBehaviour:
     kind: crossing
     from: 290
     to: 27
-    width: 2
+    width: 2.0
     points:
     - {x: 108.70612, y: 0.16, z: -170.82816}
     - {x: 108.7129, y: 0.16, z: -170.8203}
@@ -60731,7 +60756,7 @@ MonoBehaviour:
     kind: crossing
     from: 61
     to: 291
-    width: 2
+    width: 2.0
     points:
     - {x: 105.3456, y: 0.16, z: -174.7189}
     - {x: 105.346436, y: 0.16, z: -174.71996}
@@ -60739,7 +60764,7 @@ MonoBehaviour:
     kind: crossing
     from: 291
     to: 292
-    width: 2
+    width: 2.0
     points:
     - {x: 105.346436, y: 0.16, z: -174.71996}
     - {x: 106.68236, y: 0.16, z: -176.41321}
@@ -60747,7 +60772,7 @@ MonoBehaviour:
     kind: crossing
     from: 292
     to: 32
-    width: 2
+    width: 2.0
     points:
     - {x: 106.68236, y: 0.16, z: -176.41321}
     - {x: 107.2871, y: 0.16, z: -177.1797}
@@ -60859,7 +60884,7 @@ MonoBehaviour:
     kind: walkway
     from: 72
     to: 3
-    width: 3
+    width: 3.0
     points:
     - {x: 0, y: 0.16, z: -56.25}
     - {x: 0, y: 0.16, z: -56.25}
@@ -60867,7 +60892,7 @@ MonoBehaviour:
     kind: walkway
     from: 73
     to: 9
-    width: 3
+    width: 3.0
     points:
     - {x: 0, y: 0.16, z: -65.75}
     - {x: 0, y: 0.16, z: -65.75}
@@ -60875,7 +60900,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 72
     to: 297
-    width: 3
+    width: 3.0
     points:
     - {x: 0, y: 0.16, z: -56.25}
     - {x: 0, y: 0.16, z: -56.2505}
@@ -60883,7 +60908,7 @@ MonoBehaviour:
     kind: crossing
     from: 297
     to: 298
-    width: 3
+    width: 3.0
     points:
     - {x: 0, y: 0.16, z: -56.2505}
     - {x: 0, y: 0.16, z: -65.7495}
@@ -60891,7 +60916,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 298
     to: 73
-    width: 3
+    width: 3.0
     points:
     - {x: 0, y: 0.16, z: -65.7495}
     - {x: 0, y: 0.16, z: -65.75}
@@ -60907,7 +60932,7 @@ MonoBehaviour:
     kind: walkway
     from: 72
     to: 75
-    width: 3
+    width: 3.0
     points:
     - {x: 0, y: 0.16, z: -56.25}
     - {x: 0, y: 0.16, z: -41.093}
@@ -60915,7 +60940,7 @@ MonoBehaviour:
     kind: campus_walk
     from: 75
     to: 299
-    width: 3
+    width: 3.0
     points:
     - {x: 0, y: 0.16, z: -41.093}
     - {x: 5.926, y: 0.16, z: -33.352}
@@ -60923,7 +60948,7 @@ MonoBehaviour:
     kind: campus_walk
     from: 299
     to: 77
-    width: 3
+    width: 3.0
     points:
     - {x: 5.926, y: 0.16, z: -33.352}
     - {x: 8, y: 0.16, z: 115}
@@ -60931,7 +60956,7 @@ MonoBehaviour:
     kind: campus_walk
     from: 77
     to: 300
-    width: 3
+    width: 3.0
     points:
     - {x: 8, y: 0.16, z: 115}
     - {x: -5.444, y: 0.16, z: 132.768}
@@ -60939,7 +60964,7 @@ MonoBehaviour:
     kind: campus_walk
     from: 300
     to: 301
-    width: 3
+    width: 3.0
     points:
     - {x: -5.444, y: 0.16, z: 132.768}
     - {x: -5.444, y: 0.16, z: 149.057}
@@ -60947,18 +60972,18 @@ MonoBehaviour:
     kind: campus_walk
     from: 301
     to: 76
-    width: 3
+    width: 3.0
     points:
     - {x: -5.444, y: 0.16, z: 149.057}
     - {x: 10, y: 0.16, z: 171.093}
   - id: C_PARK_S0
     kind: campus_walk
     from: 77
-    to: 78
-    width: 3
+    to: 578
+    width: 3.0
     points:
     - {x: 8, y: 0.16, z: 115}
-    - {x: 78.12, y: 0.16, z: 115}
+    - {x: 15, y: 0.16, z: 115}
   - id: BACK_NEIGHBORHOOD_S0
     kind: campus_walk
     from: 76
@@ -61026,11 +61051,13 @@ MonoBehaviour:
   - id: PKE03_S0
     kind: park_trail
     from: 82
-    to: 83
-    width: 2.5
+    to: 574
+    width: 1.0
     points:
     - {x: 151, y: 0.16, z: 138}
-    - {x: 165, y: 0.16, z: 100}
+    - {x: 153.522693, y: 0.16, z: 131.152691}
+    - {x: 154.870944, y: 0.16, z: 129.517999}
+    - {x: 155.90806, y: 0.16, z: 126.702969}
   - id: PKE04_S0
     kind: park_trail
     from: 83
@@ -61042,19 +61069,19 @@ MonoBehaviour:
   - id: PKE05_S0
     kind: park_trail
     from: 84
-    to: 85
+    to: 576
     width: 2.5
     points:
     - {x: 153, y: 0.16, z: 65}
-    - {x: 166, y: 0.16, z: 30}
+    - {x: 158.259684, y: 0.16, z: 50.839311}
   - id: PKE06_S0
     kind: park_trail
     from: 85
-    to: 86
+    to: 572
     width: 2.5
     points:
     - {x: 166, y: 0.16, z: 30}
-    - {x: 140, y: 0.16, z: 25}
+    - {x: 147.158345, y: 0.16, z: 26.376605}
   - id: PKE07_S0
     kind: park_trail
     from: 86
@@ -61274,11 +61301,13 @@ MonoBehaviour:
   - id: C07_LINK_S1
     kind: campus_walk
     from: 318
-    to: 77
-    width: 2.5
+    to: 575
+    width: 1.0
     points:
     - {x: 29.835, y: 0.16, z: 54.389}
-    - {x: 8, y: 0.16, z: 115}
+    - {x: 13.891383, y: 0.16, z: 98.646319}
+    - {x: 12.554962, y: 0.16, z: 100.290696}
+    - {x: 11.538184, y: 0.16, z: 103.113135}
   - id: C08_LINK_S0
     kind: campus_walk
     from: 99
@@ -61475,7 +61504,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 106
     to: 336
-    width: 2
+    width: 2.0
     points:
     - {x: -72, y: 0.16, z: -65.75}
     - {x: -91.57548, y: 0.16, z: -65.75}
@@ -61483,7 +61512,7 @@ MonoBehaviour:
     kind: crossing
     from: 336
     to: 8
-    width: 2
+    width: 2.0
     points:
     - {x: -91.57548, y: 0.16, z: -65.75}
     - {x: -95, y: 0.16, z: -65.75}
@@ -61499,7 +61528,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 108
     to: 337
-    width: 2
+    width: 2.0
     points:
     - {x: -49, y: 0.16, z: -65.75}
     - {x: -91.57548, y: 0.16, z: -65.75}
@@ -61507,7 +61536,7 @@ MonoBehaviour:
     kind: crossing
     from: 337
     to: 8
-    width: 2
+    width: 2.0
     points:
     - {x: -91.57548, y: 0.16, z: -65.75}
     - {x: -95, y: 0.16, z: -65.75}
@@ -61523,7 +61552,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 110
     to: 338
-    width: 2
+    width: 2.0
     points:
     - {x: -25, y: 0.16, z: -65.75}
     - {x: -91.57548, y: 0.16, z: -65.75}
@@ -61531,7 +61560,7 @@ MonoBehaviour:
     kind: crossing
     from: 338
     to: 8
-    width: 2
+    width: 2.0
     points:
     - {x: -91.57548, y: 0.16, z: -65.75}
     - {x: -95, y: 0.16, z: -65.75}
@@ -61547,7 +61576,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 112
     to: 9
-    width: 2
+    width: 2.0
     points:
     - {x: 6, y: 0.16, z: -65.75}
     - {x: 0, y: 0.16, z: -65.75}
@@ -61563,7 +61592,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 114
     to: 9
-    width: 2
+    width: 2.0
     points:
     - {x: 31, y: 0.16, z: -65.75}
     - {x: 0, y: 0.16, z: -65.75}
@@ -61579,7 +61608,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 116
     to: 9
-    width: 2
+    width: 2.0
     points:
     - {x: 54, y: 0.16, z: -65.75}
     - {x: 0, y: 0.16, z: -65.75}
@@ -61595,7 +61624,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 118
     to: 9
-    width: 2
+    width: 2.0
     points:
     - {x: 81, y: 0.16, z: -65.75}
     - {x: 0, y: 0.16, z: -65.75}
@@ -61611,7 +61640,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 120
     to: 9
-    width: 2
+    width: 2.0
     points:
     - {x: 110.882, y: 0.16, z: -65.75}
     - {x: 0, y: 0.16, z: -65.75}
@@ -61627,7 +61656,7 @@ MonoBehaviour:
     kind: shared_lane_edge
     from: 122
     to: 51
-    width: 2
+    width: 2.0
     points:
     - {x: -65, y: 0.16, z: -113.75}
     - {x: -75, y: 0.16, z: -113.75}
@@ -61643,7 +61672,7 @@ MonoBehaviour:
     kind: shared_lane_edge
     from: 124
     to: 51
-    width: 2
+    width: 2.0
     points:
     - {x: -39, y: 0.16, z: -113.75}
     - {x: -75, y: 0.16, z: -113.75}
@@ -61659,7 +61688,7 @@ MonoBehaviour:
     kind: shared_lane_edge
     from: 126
     to: 51
-    width: 2
+    width: 2.0
     points:
     - {x: -7.25, y: 0.16, z: -113.75}
     - {x: -75, y: 0.16, z: -113.75}
@@ -61675,7 +61704,7 @@ MonoBehaviour:
     kind: shared_lane_edge
     from: 128
     to: 58
-    width: 2
+    width: 2.0
     points:
     - {x: 43, y: 0.16, z: -115.75}
     - {x: 32, y: 0.16, z: -115.75}
@@ -61691,7 +61720,7 @@ MonoBehaviour:
     kind: shared_lane_edge
     from: 130
     to: 59
-    width: 2
+    width: 2.0
     points:
     - {x: 70.945, y: 0.16, z: -118.23041}
     - {x: 65.4118, y: 0.16, z: -115.75}
@@ -61707,7 +61736,7 @@ MonoBehaviour:
     kind: shared_lane_edge
     from: 132
     to: 52
-    width: 2
+    width: 2.0
     points:
     - {x: -7.25, y: 0.16, z: -107.4}
     - {x: -7.25, y: 0.16, z: -113.75}
@@ -61723,7 +61752,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 134
     to: 18
-    width: 2
+    width: 2.0
     points:
     - {x: -99.25, y: 0.16, z: 118.71}
     - {x: -99.25, y: 0.16, z: 190}
@@ -61771,7 +61800,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 140
     to: 339
-    width: 2
+    width: 2.0
     points:
     - {x: -99.25, y: 0.16, z: 50.71}
     - {x: -99.25, y: 0.16, z: 61.7505}
@@ -61779,7 +61808,7 @@ MonoBehaviour:
     kind: crossing
     from: 339
     to: 19
-    width: 2
+    width: 2.0
     points:
     - {x: -99.25, y: 0.16, z: 61.7505}
     - {x: -99.25, y: 0.16, z: 65}
@@ -62075,7 +62104,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 160
     to: 0
-    width: 2
+    width: 2.0
     points:
     - {x: -174.58734, y: 0.16, z: -66.960175}
     - {x: -226.2595, y: 0.16, z: -81.17}
@@ -62091,7 +62120,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 162
     to: 6
-    width: 2
+    width: 2.0
     points:
     - {x: -203.51624, y: 0.16, z: -84.76832}
     - {x: -223.7405, y: 0.16, z: -90.33}
@@ -62107,7 +62136,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 164
     to: 6
-    width: 2
+    width: 2.0
     points:
     - {x: -177.53986, y: 0.16, z: -77.6248}
     - {x: -223.7405, y: 0.16, z: -90.33}
@@ -62123,7 +62152,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 166
     to: 22
-    width: 2
+    width: 2.0
     points:
     - {x: -140.53326, y: 0.16, z: -182.86502}
     - {x: -110.0624, y: 0.16, z: -145.2627}
@@ -62139,7 +62168,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 168
     to: 357
-    width: 2
+    width: 2.0
     points:
     - {x: -119.37296, y: 0.16, z: -170.2533}
     - {x: -103.52671, y: 0.16, z: -150.69833}
@@ -62147,7 +62176,7 @@ MonoBehaviour:
     kind: crossing
     from: 357
     to: 16
-    width: 2
+    width: 2.0
     points:
     - {x: -103.52671, y: 0.16, z: -150.69833}
     - {x: -101.9376, y: 0.16, z: -148.7373}
@@ -62355,7 +62384,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 188
     to: 22
-    width: 2
+    width: 2.0
     points:
     - {x: -156.302, y: 0.16, z: -202.3243}
     - {x: -110.0624, y: 0.16, z: -145.2627}
@@ -62371,7 +62400,7 @@ MonoBehaviour:
     kind: sidewalk
     from: 190
     to: 364
-    width: 2
+    width: 2.0
     points:
     - {x: -149.698, y: 0.16, z: -207.6757}
     - {x: -103.52671, y: 0.16, z: -150.69833}
@@ -62379,7 +62408,7 @@ MonoBehaviour:
     kind: crossing
     from: 364
     to: 16
-    width: 2
+    width: 2.0
     points:
     - {x: -103.52671, y: 0.16, z: -150.69833}
     - {x: -101.9376, y: 0.16, z: -148.7373}
@@ -62699,7 +62728,7 @@ MonoBehaviour:
     kind: shared_lane_edge
     from: 212
     to: 60
-    width: 2
+    width: 2.0
     points:
     - {x: 101.15339, y: 0.16, z: -159.23996}
     - {x: 92.6862, y: 0.16, z: -127.9765}
@@ -64171,7 +64200,7 @@ MonoBehaviour:
     kind: river_bridge
     from: 566
     to: 567
-    width: 3
+    width: 3.0
     points:
     - {x: 113.017, y: 0.16, z: 145.351}
     - {x: 141.188, y: 0.16, z: 139.899}
@@ -64203,7 +64232,7 @@ MonoBehaviour:
     kind: river_bridge
     from: 568
     to: 566
-    width: 3
+    width: 3.0
     points:
     - {x: 119.999916, y: 0.16, z: 143.99957}
     - {x: 113.017, y: 0.16, z: 145.351}
@@ -64211,7 +64240,7 @@ MonoBehaviour:
     kind: river_bridge
     from: 568
     to: 567
-    width: 3
+    width: 3.0
     points:
     - {x: 119.999916, y: 0.16, z: 143.99957}
     - {x: 141.188, y: 0.16, z: 139.899}
@@ -64219,7 +64248,7 @@ MonoBehaviour:
     kind: river_bridge
     from: 569
     to: 570
-    width: 3
+    width: 3.0
     points:
     - {x: 134.933, y: 0.16, z: 20.518}
     - {x: 110.896, y: 0.16, z: -0.745}
@@ -64251,7 +64280,7 @@ MonoBehaviour:
     kind: river_bridge
     from: 571
     to: 569
-    width: 3
+    width: 3.0
     points:
     - {x: 134.933, y: 0.16, z: 20.518}
     - {x: 134.933, y: 0.16, z: 20.518}
@@ -64259,10 +64288,72 @@ MonoBehaviour:
     kind: river_bridge
     from: 571
     to: 570
-    width: 3
+    width: 3.0
     points:
     - {x: 134.933, y: 0.16, z: 20.518}
     - {x: 110.896, y: 0.16, z: -0.745}
+  - id: PKE06_S0_PHASE1_CONTINUATION
+    kind: park_trail
+    from: 572
+    to: 86
+    width: 2.5
+    points:
+    - {x: 147.158345, y: 0.16, z: 26.376605}
+    - {x: 140, y: 0.16, z: 25}
+  - id: R05LE00_S1_PHASE1_CONTINUATION
+    kind: sidewalk
+    from: 573
+    to: 43
+    width: 1.0
+    points:
+    - {x: -143, y: 0.16, z: -8.3}
+    - {x: -147, y: 0.16, z: -8.3}
+    - {x: -149, y: 0.16, z: -7.9}
+    - {x: -154.005, y: 0.16, z: -7.9}
+  - id: PKE03_S0_PHASE1_CONTINUATION
+    kind: park_trail
+    from: 574
+    to: 83
+    width: 1.0
+    points:
+    - {x: 155.90806, y: 0.16, z: 126.702969}
+    - {x: 156.945176, y: 0.16, z: 123.88794}
+    - {x: 156.979746, y: 0.16, z: 121.76926}
+    - {x: 165, y: 0.16, z: 100}
+  - id: C07_LINK_S1_PHASE1_CONTINUATION
+    kind: campus_walk
+    from: 575
+    to: 77
+    width: 1.0
+    points:
+    - {x: 11.538184, y: 0.16, z: 103.113135}
+    - {x: 10.521405, y: 0.16, z: 105.935574}
+    - {x: 10.502122, y: 0.16, z: 108.054448}
+    - {x: 8, y: 0.16, z: 115}
+  - id: PKE05_S0_PHASE1_CONTINUATION
+    kind: park_trail
+    from: 576
+    to: 85
+    width: 2.5
+    points:
+    - {x: 158.259684, y: 0.16, z: 50.839311}
+    - {x: 166, y: 0.16, z: 30}
+  - id: R01RE03_S0_PHASE1_CONTINUATION
+    kind: sidewalk
+    from: 577
+    to: 10
+    width: 3.0
+    points:
+    - {x: 86, y: 0.16, z: -65.75}
+    - {x: 110.882, y: 0.16, z: -65.75}
+  - id: C_PARK_S0_PHASE1_CONTINUATION
+    kind: campus_walk
+    from: 578
+    to: 78
+    width: 3.0
+    points:
+    - {x: 15, y: 0.16, z: 115}
+    - {x: 78.12, y: 0.16, z: 115}
 --- !u!1 &642198038
 GameObject:
   m_ObjectHideFlags: 0
@@ -82715,6 +82806,7 @@ GameObject:
   - component: {fileID: 864469237}
   - component: {fileID: 864469236}
   - component: {fileID: 864469235}
+  - component: {fileID: 8200000000000000009}
   m_Layer: 0
   m_Name: GraphProbe_residential_commerce
   m_TagString: Untagged
@@ -88173,6 +88265,7 @@ GameObject:
   - component: {fileID: 913072680}
   - component: {fileID: 913072682}
   - component: {fileID: 913072681}
+  - component: {fileID: 8200000000000000003}
   m_Layer: 0
   m_Name: NPC_HeavyCarrier_ApartmentWalk
   m_TagString: Untagged
@@ -95753,6 +95846,7 @@ GameObject:
   - component: {fileID: 990289495}
   - component: {fileID: 990289494}
   - component: {fileID: 990289493}
+  - component: {fileID: 8200000000000000010}
   m_Layer: 0
   m_Name: river_east_roundtrip
   m_TagString: Untagged
@@ -103193,6 +103287,7 @@ GameObject:
   - component: {fileID: 1071786704}
   - component: {fileID: 1071786703}
   - component: {fileID: 1071786702}
+  - component: {fileID: 8200000000000000011}
   m_Layer: 0
   m_Name: river_west_roundtrip
   m_TagString: Untagged
@@ -141466,6 +141561,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1460650540}
+  - component: {fileID: 8200000000000000006}
   m_Layer: 0
   m_Name: NPC_Criminal_PlazaEdge
   m_TagString: Untagged
@@ -152646,6 +152742,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7808161511616217883, guid: 70af21a147d37a64ca8bf1a69f10e968, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2854895308004308066, guid: 70af21a147d37a64ca8bf1a69f10e968, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4960850180069999220, guid: 70af21a147d37a64ca8bf1a69f10e968, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9053357116122138407, guid: 70af21a147d37a64ca8bf1a69f10e968, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4691692011497219216, guid: 70af21a147d37a64ca8bf1a69f10e968, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 320602226801216613, guid: 70af21a147d37a64ca8bf1a69f10e968, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119197997963640041, guid: 70af21a147d37a64ca8bf1a69f10e968, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8696003154483811292, guid: 70af21a147d37a64ca8bf1a69f10e968, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8760979773466947042, guid: 70af21a147d37a64ca8bf1a69f10e968, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -159039,6 +159171,7 @@ GameObject:
   - component: {fileID: 1649886560}
   - component: {fileID: 1649886561}
   - component: {fileID: 1649886562}
+  - component: {fileID: 8200000000000000000}
   m_Layer: 0
   m_Name: Test NPC - Happiness 01
   m_TagString: Untagged
@@ -180208,6 +180341,7 @@ GameObject:
   - component: {fileID: 1881982258}
   - component: {fileID: 1881982260}
   - component: {fileID: 1881982259}
+  - component: {fileID: 8200000000000000001}
   m_Layer: 0
   m_Name: NPC_SIMUS_CityCitizen_1
   m_TagString: Untagged
@@ -195821,6 +195955,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2046983997}
+  - component: {fileID: 8200000000000000004}
   m_Layer: 0
   m_Name: NPC_CryingChild_ParkSouth
   m_TagString: Untagged
@@ -196940,6 +197075,7 @@ GameObject:
   - component: {fileID: 2060620758}
   - component: {fileID: 2060620760}
   - component: {fileID: 2060620759}
+  - component: {fileID: 8200000000000000002}
   m_Layer: 0
   m_Name: NPC_SIMUS_CityCitizen_2
   m_TagString: Untagged
@@ -204087,6 +204223,7 @@ GameObject:
   - component: {fileID: 2129385513}
   - component: {fileID: 2129385512}
   - component: {fileID: 2129385511}
+  - component: {fileID: 8200000000000000012}
   m_Layer: 0
   m_Name: river_bridge_to_park
   m_TagString: Untagged
@@ -205963,6 +206100,606 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3711844914814753897, guid: 648e3af9580810a4d9a94f6fb6fd0f3f, type: 3}
   m_PrefabInstance: {fileID: 8000000000000000001}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8200000000000000000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1649886558}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c6c9061af94b80b836cd7793216109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  role: 1
+--- !u!114 &8200000000000000001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1881982257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c6c9061af94b80b836cd7793216109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  role: 2
+--- !u!114 &8200000000000000002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2060620757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c6c9061af94b80b836cd7793216109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  role: 2
+--- !u!114 &8200000000000000003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 913072679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c6c9061af94b80b836cd7793216109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  role: 2
+--- !u!114 &8200000000000000004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046983996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c6c9061af94b80b836cd7793216109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  role: 2
+--- !u!114 &8200000000000000005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292530910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c6c9061af94b80b836cd7793216109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  role: 2
+--- !u!114 &8200000000000000006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460650539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c6c9061af94b80b836cd7793216109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  role: 2
+--- !u!114 &8200000000000000007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 270534921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c6c9061af94b80b836cd7793216109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  role: 3
+--- !u!114 &8200000000000000008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401897803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c6c9061af94b80b836cd7793216109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  role: 3
+--- !u!114 &8200000000000000009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864469233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c6c9061af94b80b836cd7793216109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  role: 3
+--- !u!114 &8200000000000000010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 990289491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c6c9061af94b80b836cd7793216109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  role: 3
+--- !u!114 &8200000000000000011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071786700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c6c9061af94b80b836cd7793216109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  role: 3
+--- !u!114 &8200000000000000012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2129385509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1c6c9061af94b80b836cd7793216109, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  role: 3
+--- !u!1 &8100000000000000000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8100000000000000001}
+  m_Layer: 0
+  m_Name: SIMUS_Phase1_Places
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8100000000000000001
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100000000000000000}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 8100000000000000011}
+  - {fileID: 8100000000000000021}
+  - {fileID: 8100000000000000031}
+  - {fileID: 8100000000000000041}
+  - {fileID: 8100000000000000051}
+  - {fileID: 8100000000000000061}
+  - {fileID: 8100000000000000071}
+  - {fileID: 8100000000000000081}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8100000000000000010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8100000000000000011}
+  - component: {fileID: 8100000000000000012}
+  m_Layer: 0
+  m_Name: city_v002_gate_crossing
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8100000000000000011
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100000000000000010}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.16, z: -56.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8100000000000000001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8100000000000000012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100000000000000010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb72964b68c4de89e468fb081ab6fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeId: city_v002_gate_crossing
+  situationCode: EXHIBITION_02
+  graphNodeId: MN_GATE
+  radius: 1.5
+  physicalAccessVerified: 0
+--- !u!1 &8100000000000000020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8100000000000000021}
+  - component: {fileID: 8100000000000000022}
+  m_Layer: 0
+  m_Name: city_v002_crying_child
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8100000000000000021
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100000000000000020}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 147.158345, y: 0.16, z: 26.376605}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8100000000000000001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8100000000000000022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100000000000000020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb72964b68c4de89e468fb081ab6fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeId: city_v002_crying_child
+  situationCode: EXHIBITION_05
+  graphNodeId: PHASE1_EXHIBITION_05
+  radius: 1.5
+  physicalAccessVerified: 0
+--- !u!1 &8100000000000000030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8100000000000000031}
+  - component: {fileID: 8100000000000000032}
+  m_Layer: 0
+  m_Name: city_v002_illegal_parking
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8100000000000000031
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100000000000000030}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -143, y: 0.16, z: -8.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8100000000000000001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8100000000000000032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100000000000000030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb72964b68c4de89e468fb081ab6fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeId: city_v002_illegal_parking
+  situationCode: EXHIBITION_07
+  graphNodeId: PHASE1_EXHIBITION_07
+  radius: 1.5
+  physicalAccessVerified: 0
+--- !u!1 &8100000000000000040
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8100000000000000041}
+  - component: {fileID: 8100000000000000042}
+  m_Layer: 0
+  m_Name: city_v002_park_flowerbed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8100000000000000041
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100000000000000040}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 155.90806, y: 0.16, z: 126.702969}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8100000000000000001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8100000000000000042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100000000000000040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb72964b68c4de89e468fb081ab6fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeId: city_v002_park_flowerbed
+  situationCode: EXHIBITION_13
+  graphNodeId: PHASE1_EXHIBITION_13
+  radius: 1.5
+  physicalAccessVerified: 0
+--- !u!1 &8100000000000000050
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8100000000000000051}
+  - component: {fileID: 8100000000000000052}
+  m_Layer: 0
+  m_Name: city_v002_festival_info
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8100000000000000051
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100000000000000050}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 11.538184, y: 0.16, z: 103.113135}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8100000000000000001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8100000000000000052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100000000000000050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb72964b68c4de89e468fb081ab6fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeId: city_v002_festival_info
+  situationCode: EXHIBITION_17
+  graphNodeId: PHASE1_EXHIBITION_17
+  radius: 1.5
+  physicalAccessVerified: 0
+--- !u!1 &8100000000000000060
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8100000000000000061}
+  - component: {fileID: 8100000000000000062}
+  m_Layer: 0
+  m_Name: city_v002_park_cat
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8100000000000000061
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100000000000000060}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 158.259684, y: 0.16, z: 50.839311}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8100000000000000001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8100000000000000062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100000000000000060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb72964b68c4de89e468fb081ab6fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeId: city_v002_park_cat
+  situationCode: EXHIBITION_18
+  graphNodeId: PHASE1_EXHIBITION_18
+  radius: 1.5
+  physicalAccessVerified: 0
+--- !u!1 &8100000000000000070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8100000000000000071}
+  - component: {fileID: 8100000000000000072}
+  m_Layer: 0
+  m_Name: city_v002_road_control
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8100000000000000071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100000000000000070}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 86, y: 0.16, z: -65.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8100000000000000001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8100000000000000072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100000000000000070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb72964b68c4de89e468fb081ab6fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeId: city_v002_road_control
+  situationCode: EXHIBITION_28
+  graphNodeId: PHASE1_EXHIBITION_28
+  radius: 1.5
+  physicalAccessVerified: 0
+--- !u!1 &8100000000000000080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8100000000000000081}
+  - component: {fileID: 8100000000000000082}
+  m_Layer: 0
+  m_Name: city_v002_mystery_crate
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8100000000000000081
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100000000000000080}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15, y: 0.16, z: 115}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8100000000000000001}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8100000000000000082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8100000000000000080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cb72964b68c4de89e468fb081ab6fd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeId: city_v002_mystery_crate
+  situationCode: EXHIBITION_30
+  graphNodeId: PHASE1_EXHIBITION_30
+  radius: 1.5
+  physicalAccessVerified: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -205974,3 +206711,4 @@ SceneRoots:
   - {fileID: 848306604}
   - {fileID: 2143446071}
   - {fileID: 8000000000000000002}
+  - {fileID: 8100000000000000001}

@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "scope": "Static canonical eight-code to original seed UUID comparison only",
+  "rows": [
+    {
+      "code": "EXHIBITION_02",
+      "seed_session_id": "16000000-0000-0000-0000-000000000001",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000002",
+      "prepared_uuid": "30000000-0000-0000-0000-000000000002",
+      "status": "PASS",
+      "live_uuid_status": "BLOCKED: no matching code in connected database"
+    },
+    {
+      "code": "EXHIBITION_05",
+      "seed_session_id": "16000000-0000-0000-0000-000000000001",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000005",
+      "prepared_uuid": "30000000-0000-0000-0000-000000000005",
+      "status": "PASS",
+      "live_uuid_status": "BLOCKED: no matching code in connected database"
+    },
+    {
+      "code": "EXHIBITION_07",
+      "seed_session_id": "16000000-0000-0000-0000-000000000001",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000007",
+      "prepared_uuid": "30000000-0000-0000-0000-000000000007",
+      "status": "PASS",
+      "live_uuid_status": "BLOCKED: no matching code in connected database"
+    },
+    {
+      "code": "EXHIBITION_13",
+      "seed_session_id": "16000000-0000-0000-0000-000000000001",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000013",
+      "prepared_uuid": "30000000-0000-0000-0000-000000000013",
+      "status": "PASS",
+      "live_uuid_status": "BLOCKED: no matching code in connected database"
+    },
+    {
+      "code": "EXHIBITION_17",
+      "seed_session_id": "16000000-0000-0000-0000-000000000001",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000017",
+      "prepared_uuid": "30000000-0000-0000-0000-000000000017",
+      "status": "PASS",
+      "live_uuid_status": "BLOCKED: no matching code in connected database"
+    },
+    {
+      "code": "EXHIBITION_18",
+      "seed_session_id": "16000000-0000-0000-0000-000000000001",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000018",
+      "prepared_uuid": "30000000-0000-0000-0000-000000000018",
+      "status": "PASS",
+      "live_uuid_status": "BLOCKED: no matching code in connected database"
+    },
+    {
+      "code": "EXHIBITION_28",
+      "seed_session_id": "16000000-0000-0000-0000-000000000001",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000028",
+      "prepared_uuid": "30000000-0000-0000-0000-000000000028",
+      "status": "PASS",
+      "live_uuid_status": "BLOCKED: no matching code in connected database"
+    },
+    {
+      "code": "EXHIBITION_30",
+      "seed_session_id": "16000000-0000-0000-0000-000000000001",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000030",
+      "prepared_uuid": "30000000-0000-0000-0000-000000000030",
+      "status": "PASS",
+      "live_uuid_status": "BLOCKED: no matching code in connected database"
+    }
+  ]
+}

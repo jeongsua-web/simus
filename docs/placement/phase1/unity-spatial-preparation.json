@@ -1,0 +1,455 @@
+{
+  "scope": "Serialized scene preparation; not Unity load/physics/QA/runtime verification",
+  "map_version": "test-only-city-rebuild-v002-phase1-v1",
+  "path_version": "city-rebuild-v002-walk-phase1-v1",
+  "source_scene": "unity\\Assets\\SIMUS\\Scenes\\city_rebuild_v002\\CityRebuild_v002.unity",
+  "source_scene_before_sha256": "3ceda52d4d9e4ad236cb7c4945828adc663a453ba4233a5d5006bf689c901dba",
+  "source_scene_sha256": "3ca26d6ee0c512812c8d1778c4fb8e8296b7df2357a46aa231daf9f6fe8969d2",
+  "legacy_graph_sha256": "6e5e0f37e74f61a44e7b355a5bbd61b257f95fce184f7e2e4d5cba1c48673f02",
+  "node_count": 579,
+  "edge_count": 604,
+  "places": [
+    {
+      "situation_code": "EXHIBITION_02",
+      "place_id": "city_v002_gate_crossing",
+      "anchor_node_id": "MN_GATE",
+      "position": [
+        0,
+        0.16,
+        -56.25
+      ],
+      "radius_m": 1.5,
+      "source_edge_id": null,
+      "asset_scene_path": "SIMUS_EventPlacement_20261020/ENV_PedSignal_Gate_N",
+      "object_position": [
+        2.1,
+        0.14,
+        -55.4
+      ],
+      "object_distance_xz_m": 2.265502151841839,
+      "status": "draft_only",
+      "physical_access_verified": false,
+      "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+      "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger."
+    },
+    {
+      "situation_code": "EXHIBITION_05",
+      "place_id": "city_v002_crying_child",
+      "anchor_node_id": "PHASE1_EXHIBITION_05",
+      "position": [
+        147.158345,
+        0.16,
+        26.376605
+      ],
+      "radius_m": 1.5,
+      "source_edge_id": "PKE06_S0",
+      "asset_scene_path": "SIMUS_EventPlacement_20261020/NPC_CryingChild_ParkSouth",
+      "object_position": [
+        148.0,
+        -0.012,
+        22.0
+      ],
+      "object_distance_xz_m": 4.456798678990338,
+      "status": "draft_only",
+      "physical_access_verified": false,
+      "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+      "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger."
+    },
+    {
+      "situation_code": "EXHIBITION_07",
+      "place_id": "city_v002_illegal_parking",
+      "anchor_node_id": "PHASE1_EXHIBITION_07",
+      "position": [
+        -143.0,
+        0.16,
+        -8.3
+      ],
+      "radius_m": 1.5,
+      "source_edge_id": "R05LE00_S1",
+      "asset_scene_path": "SIMUS_EventPlacement_20261020/VEH_IllegalParked_R05",
+      "object_position": [
+        -143.0,
+        0.02,
+        -6.7
+      ],
+      "object_distance_xz_m": 1.6000000000000005,
+      "status": "draft_only",
+      "physical_access_verified": false,
+      "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+      "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger."
+    },
+    {
+      "situation_code": "EXHIBITION_13",
+      "place_id": "city_v002_park_flowerbed",
+      "anchor_node_id": "PHASE1_EXHIBITION_13",
+      "position": [
+        155.90806,
+        0.16,
+        126.702969
+      ],
+      "radius_m": 1.5,
+      "source_edge_id": "PKE03_S0",
+      "asset_scene_path": "SIMUS_EventPlacement_20261020/ENV_Flowerbed_ParkNorth",
+      "object_position": [
+        154.0,
+        -0.012,
+        126.0
+      ],
+      "object_distance_xz_m": 2.033435117863616,
+      "status": "draft_only",
+      "physical_access_verified": false,
+      "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+      "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger."
+    },
+    {
+      "situation_code": "EXHIBITION_17",
+      "place_id": "city_v002_festival_info",
+      "anchor_node_id": "PHASE1_EXHIBITION_17",
+      "position": [
+        11.538184,
+        0.16,
+        103.113135
+      ],
+      "radius_m": 1.5,
+      "source_edge_id": "C07_LINK_S1",
+      "asset_scene_path": "SIMUS_EventPlacement_20261020/ENV_Festival_Info_Plaza",
+      "object_position": [
+        14.0,
+        -0.02,
+        104.0
+      ],
+      "object_distance_xz_m": 2.616690189166651,
+      "status": "draft_only",
+      "physical_access_verified": false,
+      "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+      "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger."
+    },
+    {
+      "situation_code": "EXHIBITION_18",
+      "place_id": "city_v002_park_cat",
+      "anchor_node_id": "PHASE1_EXHIBITION_18",
+      "position": [
+        158.259684,
+        0.16,
+        50.839311
+      ],
+      "radius_m": 1.5,
+      "source_edge_id": "PKE05_S0",
+      "asset_scene_path": "CAT_Tuxedo_EastPark",
+      "object_position": [
+        156,
+        -0.012,
+        50
+      ],
+      "object_distance_xz_m": 2.4105216727042658,
+      "status": "draft_only",
+      "physical_access_verified": false,
+      "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+      "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger."
+    },
+    {
+      "situation_code": "EXHIBITION_28",
+      "place_id": "city_v002_road_control",
+      "anchor_node_id": "PHASE1_EXHIBITION_28",
+      "position": [
+        86,
+        0.16,
+        -65.75
+      ],
+      "radius_m": 1.5,
+      "source_edge_id": "R01RE03_S0",
+      "asset_scene_path": "SIMUS_EventPlacement_20261020/ENV_Barricade_R01_Control",
+      "object_position": [
+        86.0,
+        0.02,
+        -62.7
+      ],
+      "object_distance_xz_m": 3.049999999999997,
+      "status": "draft_only",
+      "physical_access_verified": false,
+      "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+      "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger."
+    },
+    {
+      "situation_code": "EXHIBITION_30",
+      "place_id": "city_v002_mystery_crate",
+      "anchor_node_id": "PHASE1_EXHIBITION_30",
+      "position": [
+        15,
+        0.16,
+        115
+      ],
+      "radius_m": 1.5,
+      "source_edge_id": "C_PARK_S0",
+      "asset_scene_path": "SIMUS_EventPlacement_20261020/ENV_MysteryCrate_Plaza",
+      "object_position": [
+        15.0,
+        -0.02,
+        118.0
+      ],
+      "object_distance_xz_m": 3.0,
+      "status": "draft_only",
+      "physical_access_verified": false,
+      "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+      "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger."
+    }
+  ],
+  "route_adjustments": [
+    {
+      "edge_id": "R05LE00_S1",
+      "old_points": [
+        [
+          -98.8995,
+          0.16,
+          -7.9
+        ],
+        [
+          -154.005,
+          0.16,
+          -7.9
+        ]
+      ],
+      "new_points": [
+        [
+          -98.8995,
+          0.16,
+          -7.9
+        ],
+        [
+          -137.0,
+          0.16,
+          -7.9
+        ],
+        [
+          -139.0,
+          0.16,
+          -8.3
+        ],
+        [
+          -143.0,
+          0.16,
+          -8.3
+        ],
+        [
+          -147.0,
+          0.16,
+          -8.3
+        ],
+        [
+          -149.0,
+          0.16,
+          -7.9
+        ],
+        [
+          -154.005,
+          0.16,
+          -7.9
+        ]
+      ],
+      "offset_m": 0.4,
+      "usable_width_m": 1.0,
+      "existing_floor_mesh": "meshes/surface_0078.asset",
+      "basis": "Existing serialized MeshCollider mesh vertices; offset stays within that original paved strip. Physics not executed."
+    },
+    {
+      "edge_id": "PKE03_S0",
+      "old_points": [
+        [
+          151.0,
+          0.16,
+          138.0
+        ],
+        [
+          165.0,
+          0.16,
+          100.0
+        ]
+      ],
+      "new_points": [
+        [
+          151.0,
+          0.16,
+          138.0
+        ],
+        [
+          153.522693,
+          0.16,
+          131.152691
+        ],
+        [
+          154.870944,
+          0.16,
+          129.517999
+        ],
+        [
+          155.90806,
+          0.16,
+          126.702969
+        ],
+        [
+          156.945176,
+          0.16,
+          123.88794
+        ],
+        [
+          156.979746,
+          0.16,
+          121.76926
+        ],
+        [
+          165.0,
+          0.16,
+          100.0
+        ]
+      ],
+      "offset_m": 0.7,
+      "usable_width_m": 1.0,
+      "existing_floor_mesh": "meshes/surface_0119.asset",
+      "basis": "Existing serialized MeshCollider mesh vertices; offset stays within that original paved strip. Physics not executed."
+    },
+    {
+      "edge_id": "C07_LINK_S1",
+      "old_points": [
+        [
+          29.835,
+          0.16,
+          54.389
+        ],
+        [
+          8.0,
+          0.16,
+          115.0
+        ]
+      ],
+      "new_points": [
+        [
+          29.835,
+          0.16,
+          54.389
+        ],
+        [
+          13.891383,
+          0.16,
+          98.646319
+        ],
+        [
+          12.554962,
+          0.16,
+          100.290696
+        ],
+        [
+          11.538184,
+          0.16,
+          103.113135
+        ],
+        [
+          10.521405,
+          0.16,
+          105.935574
+        ],
+        [
+          10.502122,
+          0.16,
+          108.054448
+        ],
+        [
+          8.0,
+          0.16,
+          115.0
+        ]
+      ],
+      "offset_m": 0.7,
+      "usable_width_m": 1.0,
+      "existing_floor_mesh": "meshes/surface_0146.asset",
+      "basis": "Existing serialized MeshCollider mesh vertices; offset stays within that original paved strip. Physics not executed."
+    },
+    {
+      "edge_id": "R01LE03_S0",
+      "old_points": [
+        [
+          0.0,
+          0.16,
+          -56.25
+        ],
+        [
+          109.118,
+          0.16,
+          -56.25
+        ]
+      ],
+      "new_points": [
+        [
+          0.0,
+          0.16,
+          -56.25
+        ],
+        [
+          43,
+          0.16,
+          -56.25
+        ],
+        [
+          45,
+          0.16,
+          -56.65
+        ],
+        [
+          63,
+          0.16,
+          -56.65
+        ],
+        [
+          65,
+          0.16,
+          -56.25
+        ],
+        [
+          109.118,
+          0.16,
+          -56.25
+        ]
+      ],
+      "offset_m": 0.4,
+      "usable_width_m": 2,
+      "existing_floor_mesh": "meshes/surface_0025.asset",
+      "basis": "Existing MeshCollider rectangle y=.14, z=-57.75..-54.75. New route stays on it, south of recorded stop bounds. Physics not executed."
+    }
+  ],
+  "npc_roles": {
+    "Test NPC - Happiness 01": 1,
+    "NPC_SIMUS_CityCitizen_1": 2,
+    "NPC_SIMUS_CityCitizen_2": 2,
+    "NPC_HeavyCarrier_ApartmentWalk": 2,
+    "NPC_CryingChild_ParkSouth": 2,
+    "NPC_Police_Gate": 2,
+    "NPC_Criminal_PlazaEdge": 2,
+    "GraphProbe_school_residential": 3,
+    "GraphProbe_school_park": 3,
+    "GraphProbe_residential_commerce": 3,
+    "river_east_roundtrip": 3,
+    "river_west_roundtrip": 3,
+    "river_bridge_to_park": 3
+  },
+  "subway_hidden_scene_overrides": {
+    "SUBWAY_STAIRS": 7808161511616217883,
+    "SUBWAY_STAIR_EDGES": 2854895308004308066,
+    "SUBWAY_ESCALATOR_UP": 4960850180069999220,
+    "SUBWAY_ESCALATOR_DOWN": 9053357116122138407,
+    "SUBWAY_UNDERGROUND_CORRIDOR": 4691692011497219216,
+    "COL_BOX_LOWER_LANDING": 320602226801216613,
+    "COL_RAMP_STAIRS": 5119197997963640041,
+    "COL_RAMP_ESC_DOWN": 8696003154483811292,
+    "COL_RAMP_ESC_UP": 8760979773466947042
+  },
+  "not_implemented": [
+    "Cafe/restaurant connectors: no current Unity collider/support measurements available.",
+    "Signal pole/overhead-arm collision disambiguation requires Unity inspection.",
+    "No underground entry, terrain cuts, runtime place triggers or new NPC AI."
+  ],
+  "unity_load": "NOT VERIFIED: Editor license unavailable (exit 198)",
+  "physics": "NOT RUN",
+  "qa": "NOT RUN",
+  "play_mode": "NOT RUN",
+  "webgl_build": "NOT RUN",
+  "deployment": "NOT RUN"
+}

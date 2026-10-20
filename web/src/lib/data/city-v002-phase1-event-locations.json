@@ -1,0 +1,217 @@
+{
+  "schema_version": 1,
+  "map_version": "test-only-city-rebuild-v002-phase1-v1",
+  "path_version": "city-rebuild-v002-walk-phase1-v1",
+  "exhibition_ready": false,
+  "status": "IMPLEMENTED_AWAITING_QA",
+  "source_scene": {
+    "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity",
+    "sha256": "3ca26d6ee0c512812c8d1778c4fb8e8296b7df2357a46aa231daf9f6fe8969d2"
+  },
+  "source_graph": {
+    "path": "web/src/lib/data/city-rebuild-v002-phase1-graph.json",
+    "sha256": "8cd68b471207fa043cf1fcf484f291635c3fd1b41a1e880dde1bd4df3041575f"
+  },
+  "locations": [
+    {
+      "situation_code": "EXHIBITION_02",
+      "place_id": "city_v002_gate_crossing",
+      "point": [
+        0.0,
+        0.16,
+        -56.25
+      ],
+      "radius_m": 1.5,
+      "approach_node_id": "MN_GATE",
+      "approach_path_id": "X_GATE_S0",
+      "scene_object_path": "SIMUS_EventPlacement_20261020/ENV_PedSignal_Gate_N",
+      "source_evidence": {
+        "path": "docs/placement/phase1/unity-spatial-preparation.json",
+        "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+        "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger.",
+        "object_position": [
+          2.1,
+          0.14,
+          -55.4
+        ],
+        "object_distance_xz_m": 2.265502151841839,
+        "physical_access_verified": false
+      }
+    },
+    {
+      "situation_code": "EXHIBITION_05",
+      "place_id": "city_v002_crying_child",
+      "point": [
+        147.158345,
+        0.16,
+        26.376605
+      ],
+      "radius_m": 1.5,
+      "approach_node_id": "PHASE1_EXHIBITION_05",
+      "approach_path_id": "PKE06_S0",
+      "scene_object_path": "SIMUS_EventPlacement_20261020/NPC_CryingChild_ParkSouth",
+      "source_evidence": {
+        "path": "docs/placement/phase1/unity-spatial-preparation.json",
+        "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+        "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger.",
+        "object_position": [
+          148.0,
+          -0.012,
+          22.0
+        ],
+        "object_distance_xz_m": 4.456798678990338,
+        "physical_access_verified": false
+      }
+    },
+    {
+      "situation_code": "EXHIBITION_07",
+      "place_id": "city_v002_illegal_parking",
+      "point": [
+        -143.0,
+        0.16,
+        -8.3
+      ],
+      "radius_m": 1.5,
+      "approach_node_id": "PHASE1_EXHIBITION_07",
+      "approach_path_id": "R05LE00_S1",
+      "scene_object_path": "SIMUS_EventPlacement_20261020/VEH_IllegalParked_R05",
+      "source_evidence": {
+        "path": "docs/placement/phase1/unity-spatial-preparation.json",
+        "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+        "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger.",
+        "object_position": [
+          -143.0,
+          0.02,
+          -6.7
+        ],
+        "object_distance_xz_m": 1.6000000000000005,
+        "physical_access_verified": false
+      }
+    },
+    {
+      "situation_code": "EXHIBITION_13",
+      "place_id": "city_v002_park_flowerbed",
+      "point": [
+        155.90806,
+        0.16,
+        126.702969
+      ],
+      "radius_m": 1.5,
+      "approach_node_id": "PHASE1_EXHIBITION_13",
+      "approach_path_id": "PKE03_S0",
+      "scene_object_path": "SIMUS_EventPlacement_20261020/ENV_Flowerbed_ParkNorth",
+      "source_evidence": {
+        "path": "docs/placement/phase1/unity-spatial-preparation.json",
+        "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+        "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger.",
+        "object_position": [
+          154.0,
+          -0.012,
+          126.0
+        ],
+        "object_distance_xz_m": 2.033435117863616,
+        "physical_access_verified": false
+      }
+    },
+    {
+      "situation_code": "EXHIBITION_17",
+      "place_id": "city_v002_festival_info",
+      "point": [
+        11.538184,
+        0.16,
+        103.113135
+      ],
+      "radius_m": 1.5,
+      "approach_node_id": "PHASE1_EXHIBITION_17",
+      "approach_path_id": "C07_LINK_S1",
+      "scene_object_path": "SIMUS_EventPlacement_20261020/ENV_Festival_Info_Plaza",
+      "source_evidence": {
+        "path": "docs/placement/phase1/unity-spatial-preparation.json",
+        "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+        "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger.",
+        "object_position": [
+          14.0,
+          -0.02,
+          104.0
+        ],
+        "object_distance_xz_m": 2.616690189166651,
+        "physical_access_verified": false
+      }
+    },
+    {
+      "situation_code": "EXHIBITION_18",
+      "place_id": "city_v002_park_cat",
+      "point": [
+        158.259684,
+        0.16,
+        50.839311
+      ],
+      "radius_m": 1.5,
+      "approach_node_id": "PHASE1_EXHIBITION_18",
+      "approach_path_id": "PKE05_S0",
+      "scene_object_path": "CAT_Tuxedo_EastPark",
+      "source_evidence": {
+        "path": "docs/placement/phase1/unity-spatial-preparation.json",
+        "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+        "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger.",
+        "object_position": [
+          156,
+          -0.012,
+          50
+        ],
+        "object_distance_xz_m": 2.4105216727042658,
+        "physical_access_verified": false
+      }
+    },
+    {
+      "situation_code": "EXHIBITION_28",
+      "place_id": "city_v002_road_control",
+      "point": [
+        86.0,
+        0.16,
+        -65.75
+      ],
+      "radius_m": 1.5,
+      "approach_node_id": "PHASE1_EXHIBITION_28",
+      "approach_path_id": "R01RE03_S0",
+      "scene_object_path": "SIMUS_EventPlacement_20261020/ENV_Barricade_R01_Control",
+      "source_evidence": {
+        "path": "docs/placement/phase1/unity-spatial-preparation.json",
+        "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+        "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger.",
+        "object_position": [
+          86.0,
+          0.02,
+          -62.7
+        ],
+        "object_distance_xz_m": 3.049999999999997,
+        "physical_access_verified": false
+      }
+    },
+    {
+      "situation_code": "EXHIBITION_30",
+      "place_id": "city_v002_mystery_crate",
+      "point": [
+        15.0,
+        0.16,
+        115.0
+      ],
+      "radius_m": 1.5,
+      "approach_node_id": "PHASE1_EXHIBITION_30",
+      "approach_path_id": "C_PARK_S0",
+      "scene_object_path": "SIMUS_EventPlacement_20261020/ENV_MysteryCrate_Plaza",
+      "source_evidence": {
+        "path": "docs/placement/phase1/unity-spatial-preparation.json",
+        "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+        "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger.",
+        "object_position": [
+          15.0,
+          -0.02,
+          118.0
+        ],
+        "object_distance_xz_m": 3.0,
+        "physical_access_verified": false
+      }
+    }
+  ]
+}

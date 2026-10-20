@@ -150,3 +150,28 @@ DB도 미설정 경로 및 회차 설정과 다른 스냅샷을 거절하며 기
 014 다음에 `015_npc_graph_guidance.sql`을 한 번 적용한 뒤 새 서버 코드를 배포한다. `npc_event_states.guidance_motion`과 생성 요청의 `npc_profile` nullable 열을 추가하며 기존 회차·가입 스냅샷은 갱신하지 않는다.
 관리자 회차 생성 본문에 `"npc_profile":"city-rebuild-v002"`를 지정한 새 DRAFT만 테스트용 v002 보행 경로를 갖는다. 이전 맵 이벤트 위치·지역 geometry는 복사하지 않는다. 프로필 생략 시 기존 동작을 유지한다.
 좌표·버전·유도·복귀·90초 정책과 검증 절차는 [Phase 2 기록](../docs/verification/city-rebuild-v002-webgl-phase2.md)을 참고한다. 전시 맵 승인이나 운영 `/city` 교체를 의미하지 않는다.
+
+## Phase 1 장소 진입 이벤트 (016, 적용 대기)
+
+`016_location_entry_events.sql`은 015 다음에 한 번 적용할 추가 마이그레이션이다. 이번 작업에서는 실행하지 않았다. 기존 회차·상황·선택·스탯·가입 경로 스냅샷을 수정하는 DML은 없다. 기존 원장과 lifecycle 제약을 유지한다. QA/DB 검증 실행은 사용자 승인 전까지 보류한다.
+
+`session_situations.event_location`은 기존 `map_version`, `point`, `radius_m`에 `place_id`를 추가한다. 기존 위치는 보존하므로 레거시 행에 `place_id`를 소급 강제하지 않는다. 새 8개 매핑은 `place_id`가 필수다. 같은 회차에서 같은 장소 ID를 공유하는 상황은 지도 버전·위치·반경이 같아야 하며, 부모 회차 잠금과 content trigger가 일관성과 DRAFT 전용 편집을 보장한다.
+
+`npc_event_states.location_occupancy`는 `{ "place_id": { "inside": false, "entry_seq": 0, "consumed_entry_seq": 0 } }` 형식이다. 서버가 밖→안 진입마다 순번을 증가시키고 ACTIVE 중 진입도 기록·소비한다. `consumed_entry_seq <= entry_seq`이며 양쪽은 JavaScript 안전 정수 범위다. `npc_events.place_id/entry_seq`는 함께 NULL이거나 LOCATION 발생 건에 함께 저장되며, 참가자·회차·장소·진입 순번 조합은 유일하다. 기존 발생 건은 두 값 NULL로 보존한다. 장소에 머무르면서 선택을 완료해도 같은 진입 순번으로 다시 발생시키지 않는다. `location_evaluated_at`은 마지막 서버 권위 위치 평가 시각이며 폴링 사이 실제 이동 구간을 연속 검사하는 기준이다. nullable 초기값 및 이전 발생 건과의 경계는 서버가 처리한다.
+
+`npc_event_states.overdue_since`는 90초 경과 기록이다. Phase 1 서버 정책은 60초 그래프 유도를 유지하고 90초 강제 DEADLINE 생성을 중단한다. 선택 완료 후 새 대기 주기를 시작할 때 overdue를 초기화한다. 이전 DEADLINE 원장과 DB의 `trigger_kind` 허용값은 보존한다. 위 011 설명 및 과거 검증 문서의 90초 대체 정책은 과거 동작이며 새 서버 정책과 구분한다.
+
+매핑 단일 원본은 `web/src/lib/data/city-v002-phase1-event-locations.json`이다. 메타데이터 규격은 `db/phase1-event-locations.schema.json`에 있다. 최상위 필드는 `schema_version:1`, `map_version`, `path_version`, `exhibition_ready:false`, `status:"IMPLEMENTED_AWAITING_QA"`, `locations`다. 각 위치는 `situation_code`, `place_id`, 실측 `point`, `radius_m`, `approach_path_id`, `scene_object_path`, `source_evidence`를 가진다. 좌표를 SQL에 복제하지 않는다. 승인 범위는 `EXHIBITION_02/05/07/13/17/18/28/30`뿐이며 나머지 22개는 이 도구로 변경하지 않는다. 원본 `seed_exhibition.sql`은 그대로 유지한다.
+
+`phase1_event_locations.sql`은 psql용 도구다. 기본은 **READ ONLY preflight**이며 대상 DRAFT·지도/경로 버전·8개 코드와 원본 시드 UUID·장소 데이터 및 실측 근거를 확인하고 기존/제안 위치를 출력한 뒤 ROLLBACK한다. JSON은 파일 내용을 `mapping_json` 변수로 전달한다. 자격 증명은 기존 서버 전용 환경에서만 공급하며 출력하지 않는다.
+
+```powershell
+$phase1Mapping = Get-Content -Raw -Encoding utf8 web/src/lib/data/city-v002-phase1-event-locations.json
+psql -X -v ON_ERROR_STOP=1 -v session_id="<new-draft-uuid>" -v "mapping_json=$phase1Mapping" -f db/phase1_event_locations.sql
+```
+
+**psql 직접 apply는 제거했다.** `-v apply=true`를 전달하면 오류로 중단한다. 실제 적용 준비 도구는 `node db/prepare-phase1-locations.mjs --session <new-draft-uuid>`다. 기본은 읽기 전용 preflight이며 canonical 파일을 고정 경로에서 읽고 승인된 정확한 8개 코드, 위치 형식, 신규 map/path 버전, `source_scene`/`source_graph` 경로 및 SHA256을 확인한다. canonical의 두 source 필드는 `{ "path": "저장소 상대 경로", "sha256": "64자리 해시" }`다. `approach_node_id`의 명명된 그래프 노드와 위치의 정확한 일치, 서버 `locate` 허용오차와 `graphMotion`/실제 참가자 경로에서 목적지까지 연결 가능성도 확인한다. 이는 정적 입력 계약 확인이며 물리·Play Mode QA의 대체가 아니다.
+
+실제 적용은 별도 승인 후 격리 개발 DB에서만 Node 명령에 `--apply --environment isolated-development`를 추가한다. 이 플래그는 대상 DB가 개발 환경이라는 운영자의 확인이며 DB 자체의 환경 탐지를 대신하지 않는다. 적용 경로는 회차를 잠그고 DRAFT·동일 map/path·시드 UUID·016 칼럼 존재를 확인한 뒤 8개 `event_location`만 갱신한다. commit 직전 원본 JSON 및 씬/그래프 해시를 재확인하며 실패하면 전체 ROLLBACK한다. RUNNING/CLOSING/FINALIZED 및 운영 DB에는 적용하지 않는다. 두 도구와 마이그레이션은 이번 작업에서 실행하지 않았다. 격리 DB의 `db/verify_schema.sql` 실행과 위치 이벤트 검증은 후속 승인 단계다.
+
+2026-10-20 연결된 로컬 서버 설정으로 허용된 `BEGIN READ ONLY` 조회를 수행했다. 대상 8개 EXHIBITION 코드의 회차 ID·상태·상황 ID만 조회했으며 결과는 0행이었다. 따라서 실제 DB UUID가 원본 시드와 일치하는지는 확인되지 않았고, 해당 연결에는 적용 가능한 8개 콘텐츠 DRAFT가 확인되지 않았다. ROLLBACK 후 종료했으며 회차 생성·시드 적용·마이그레이션·쓰기 쿼리는 실행하지 않았다. 준비된 preflight 도구 자체도 실행하지 않았다.

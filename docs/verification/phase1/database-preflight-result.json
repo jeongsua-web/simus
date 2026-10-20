@@ -1,0 +1,9 @@
+{
+  "command": "node db/prepare-phase1-locations.mjs --session 10000000-0000-0000-0000-000000000001",
+  "mode": "READ_ONLY_PREFLIGHT",
+  "status": "BLOCKED",
+  "exit_code": 1,
+  "output": "DRAFT map/path mismatch",
+  "interpretation": "Canonical source hashes, approved codes, named graph anchors and route checks completed before opening the DB; the existing DRAFT has no configured Phase 1 map/path, so DB preflight stopped and rolled back before any write. The 015/016 contract and target eight situations are also missing per separate READ ONLY catalog evidence.",
+  "write_operations_executed": false
+}

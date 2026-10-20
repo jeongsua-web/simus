@@ -1,5 +1,5 @@
 import { npcPosition, type Npc } from '@/app/participate/npc-motion';
-import { MAP_VERSION, routeBetween, pathLength, distance } from './city-v002-graph.mjs';
+import { isV002MapVersion, routeBetween, pathLength, distance } from './city-v002-graph.mjs';
 
 type Motion = Npc['motion'];
 export type ReturnMotion = Motion & { rejoin_after_ms?: number; rejoin_motion?: Motion };
@@ -20,8 +20,8 @@ export function resumedNpc(state: GraphState, original: Motion, at: number): Npc
 }
 export function guidanceMotion(state: Pick<GraphState, 'guidance_motion' | 'guidance_origin' | 'guidance_point'>, original: Motion): Motion {
   // A v002 state must never fall back to a two-point chord.
-  const points = original.map_version === MAP_VERSION
-    ? state.guidance_motion?.points ?? routeBetween(state.guidance_origin!, state.guidance_point!)
+  const points = isV002MapVersion(original.map_version)
+    ? state.guidance_motion?.points ?? routeBetween(state.guidance_origin!, state.guidance_point!, original.map_version)
     : [state.guidance_origin!, state.guidance_point!];
   return { ...original, points: points.length > 1 ? points : [points[0], points[0]], loop: false };
 }
@@ -32,8 +32,8 @@ export function returnMotion(original: Motion, point: number[]): ReturnMotion {
   const points = original.points;
   let nearest = 0;
   points.forEach((p, i) => { if (distance(p, point) < distance(points[nearest], point)) nearest = i; });
-  if (original.map_version !== MAP_VERSION) return { ...original, points: [point, ...points.slice(nearest), ...(original.loop ? points.slice(0, nearest) : [])] };
-  const connector = routeBetween(point, points[nearest]);
+  if (!isV002MapVersion(original.map_version)) return { ...original, points: [point, ...points.slice(nearest), ...(original.loop ? points.slice(0, nearest) : [])] };
+  const connector = routeBetween(point, points[nearest], original.map_version);
   const cycle = original.loop ? [...points.slice(nearest), ...points.slice(0, nearest), points[nearest]] : points.slice(nearest);
   // Return exactly once, then restore the original loop, with no repeated event detour.
   const rejoin_motion = { ...original, points: cycle.length > 1 ? cycle : [cycle[0], cycle[0]],
@@ -47,7 +47,7 @@ export function returnMotion(original: Motion, point: number[]): ReturnMotion {
 
 export function projectedRevision(state: GraphState & { motion_revision: string | number }, original: Motion, at: number) {
   const revision = Number(state.motion_revision);
-  if (original.map_version !== MAP_VERSION) return revision;
+  if (!isV002MapVersion(original.map_version)) return revision;
   const resume = state.resume_motion;
   const rejoined = resume?.rejoin_after_ms !== undefined &&
     at >= new Date(state.motion_epoch).getTime() + Number(state.paused_ms) + resume.rejoin_after_ms;

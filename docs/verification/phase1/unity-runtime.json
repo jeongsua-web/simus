@@ -1,0 +1,1178 @@
+{
+  "scope": "Actual Unity Editor Play Mode, retained TestNpcPatrol/graph adapter/grounding; timeScale20, no teleport between waypoints",
+  "time_scale": 20.0,
+  "wall_seconds": 34.846311899999996,
+  "routes": [
+    {
+      "route_id": "school_commerce",
+      "kind": "existing_four_route",
+      "situation_code": null,
+      "status": "FAIL",
+      "sample_count": 5005,
+      "support_failures": 0,
+      "obstacle_samples": 6,
+      "first_failures": [
+        {
+          "point": [
+            0.0,
+            0.04,
+            -57.77647
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/02_Roads/R01_main/R01_Carriageway",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              0.0,
+              0.04,
+              -57.77647
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01LE03_S0",
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01LE02_S1"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            0.0,
+            0.04,
+            -57.83438
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/02_Roads/R01_main/R01_Carriageway",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              0.0,
+              0.04,
+              -57.83438
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01LE03_S0",
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01LE02_S1"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            0.0,
+            0.04,
+            -64.14586
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/02_Roads/R01_main/R01_Carriageway",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              0.0,
+              0.04,
+              -64.14586
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01RE03_S0",
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01RE02_S3"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            0.0,
+            0.04,
+            -64.20516
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/02_Roads/R01_main/R01_Carriageway",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              0.0,
+              0.04,
+              -64.20516
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01RE03_S0",
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01RE02_S3"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            0.0,
+            0.04,
+            -64.12543
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/02_Roads/R01_main/R01_Carriageway",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              0.0,
+              0.04,
+              -64.12543
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01RE03_S0",
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01RE02_S3"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            0.0,
+            0.04,
+            -57.7902832
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/02_Roads/R01_main/R01_Carriageway",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              0.0,
+              0.04,
+              -57.7902832
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01LE03_S0",
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01LE02_S1"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        }
+      ],
+      "distance_m": 390.717377,
+      "arrival_count": 2,
+      "frames": 4996,
+      "error": null,
+      "final_position": [
+        7.99991465,
+        0.16,
+        114.993912
+      ],
+      "length_m": 195.272369,
+      "reached_waypoints": 13
+    },
+    {
+      "route_id": "school_residential",
+      "kind": "existing_four_route",
+      "situation_code": null,
+      "status": "FAIL",
+      "sample_count": 12805,
+      "support_failures": 0,
+      "obstacle_samples": 14,
+      "first_failures": [
+        {
+          "point": [
+            -92.04809,
+            0.04,
+            185.0
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/02_Roads/R02_collector/R02_Carriageway",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -92.04809,
+              0.04,
+              185.0
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R02LE00_S0"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -92.12789,
+            0.04,
+            185.0
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/02_Roads/R02_collector/R02_Carriageway",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -92.12789,
+              0.04,
+              185.0
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R02LE00_S0"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -97.91255,
+            0.04,
+            185.0
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/02_Roads/R02_collector/R02_Carriageway",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -97.91255,
+              0.04,
+              185.0
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R02RE00_S0"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -97.98451,
+            0.04,
+            185.0
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/02_Roads/R02_collector/R02_Carriageway",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -97.98451,
+              0.04,
+              185.0
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R02RE00_S0"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -99.25,
+            0.04,
+            67.20835
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/03_TurningAndIntersections/J02_T/J02_IntersectionAsphalt",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -99.25,
+              0.04,
+              67.20835
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/crossing/R02RE00_S1"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -99.25,
+            0.04,
+            67.14975
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/03_TurningAndIntersections/J02_T/J02_IntersectionAsphalt",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -99.25,
+              0.04,
+              67.14975
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/crossing/R02RE00_S1"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -97.90999,
+            0.04,
+            68.14794
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/03_TurningAndIntersections/J02_T/J02_IntersectionAsphalt",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -97.90999,
+              0.04,
+              68.14794
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/crossing/R02RE00_S1"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -97.9697952,
+            0.04,
+            68.15
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/03_TurningAndIntersections/J02_T/J02_IntersectionAsphalt",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -97.9697952,
+              0.04,
+              68.15
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/crossing/R02RE00_S1"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -97.9028,
+            0.04,
+            68.15
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/03_TurningAndIntersections/J02_T/J02_IntersectionAsphalt",
+            "support_y": 0.0199999977,
+            "ground_error": 1.86264515E-09,
+            "projected_point": [
+              -97.9028,
+              0.04,
+              68.15
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/crossing/R02RE00_S1"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -99.25,
+            0.04,
+            67.20564
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/03_TurningAndIntersections/J02_T/J02_IntersectionAsphalt",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -99.25,
+              0.04,
+              67.20564
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/crossing/R02RE00_S1"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -97.9907455,
+            0.04,
+            185.013611
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/02_Roads/R02_collector/R02_Carriageway",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -97.9907455,
+              0.04,
+              185.013611
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R02RE00_S0"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -97.94252,
+            0.04,
+            185.013519
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/02_Roads/R02_collector/R02_Carriageway",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -97.94252,
+              0.04,
+              185.013519
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R02RE00_S0"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        }
+      ],
+      "distance_m": 968.989746,
+      "arrival_count": 2,
+      "frames": 12796,
+      "error": null,
+      "final_position": [
+        7.97003031,
+        0.16,
+        115.039658
+      ],
+      "length_m": 484.390961,
+      "reached_waypoints": 35
+    },
+    {
+      "route_id": "school_park",
+      "kind": "existing_four_route",
+      "situation_code": null,
+      "status": "PASS",
+      "sample_count": 5723,
+      "support_failures": 0,
+      "obstacle_samples": 0,
+      "first_failures": [],
+      "distance_m": 456.539673,
+      "arrival_count": 2,
+      "frames": 5714,
+      "error": null,
+      "final_position": [
+        8.007399,
+        0.16,
+        115.0
+      ],
+      "length_m": 228.375992,
+      "reached_waypoints": 25
+    },
+    {
+      "route_id": "residential_commerce",
+      "kind": "existing_four_route",
+      "situation_code": null,
+      "status": "FAIL",
+      "sample_count": 10924,
+      "support_failures": 0,
+      "obstacle_samples": 20,
+      "first_failures": [
+        {
+          "point": [
+            -97.91309,
+            0.04,
+            68.1500244
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/03_TurningAndIntersections/J02_T/J02_IntersectionAsphalt",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -97.91309,
+              0.04,
+              68.1500244
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/crossing/R02RE00_S1"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -92.10131,
+            0.04,
+            64.00119
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/03_TurningAndIntersections/J02_T/J02_IntersectionAsphalt",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -92.10131,
+              0.04,
+              64.00119
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R02LE01_S0"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -92.02879,
+            0.04,
+            64.05413
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/03_TurningAndIntersections/J02_T/J02_IntersectionAsphalt",
+            "support_y": 0.0199999977,
+            "ground_error": 1.86264515E-09,
+            "projected_point": [
+              -92.02879,
+              0.04,
+              64.05413
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R02LE01_S0"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -90.75,
+            0.04,
+            -57.7627831
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/03_TurningAndIntersections/J01_four_way/J01_IntersectionAsphalt",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -90.75,
+              0.04,
+              -57.7627831
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/crossing/R01LE02_S0"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -90.75,
+            0.04,
+            -57.8184052
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/03_TurningAndIntersections/J01_four_way/J01_IntersectionAsphalt",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -90.75,
+              0.04,
+              -57.8184052
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/crossing/R01LE02_S0"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -90.75,
+            0.04,
+            -57.869976
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/03_TurningAndIntersections/J01_four_way/J01_IntersectionAsphalt",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -90.75,
+              0.04,
+              -57.869976
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/crossing/R01LE02_S0"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -92.66419,
+            0.04,
+            -65.749794
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/03_TurningAndIntersections/J01_four_way/J01_IntersectionAsphalt",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -92.66419,
+              0.04,
+              -65.749794
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/crossing/R01RE02_S0"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -92.60931,
+            0.04,
+            -65.7498
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/03_TurningAndIntersections/J01_four_way/J01_IntersectionAsphalt",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -92.60931,
+              0.04,
+              -65.7498
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/crossing/R01RE02_S0"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -11.7265778,
+            0.04,
+            -65.75
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/02_Roads/R06_service_shared/R06_Carriageway",
+            "support_y": 0.0200000014,
+            "ground_error": 1.86264515E-09,
+            "projected_point": [
+              -11.7265778,
+              0.04,
+              -65.75
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/crossing/R01RE02_S2"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -11.6271334,
+            0.04,
+            -65.75
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/02_Roads/R06_service_shared/R06_Carriageway",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -11.6271334,
+              0.04,
+              -65.75
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/crossing/R01RE02_S2"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -8.360005,
+            0.04,
+            -65.75
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/02_Roads/R06_service_shared/R06_Carriageway",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -8.360005,
+              0.04,
+              -65.75
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/crossing/R01RE02_S2"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -8.290422,
+            0.04,
+            -65.75
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/02_Roads/R06_service_shared/R06_Carriageway",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -8.290422,
+              0.04,
+              -65.75
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/crossing/R01RE02_S2"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        }
+      ],
+      "distance_m": 811.7953,
+      "arrival_count": 2,
+      "frames": 10915,
+      "error": null,
+      "final_position": [
+        -164.0038,
+        0.160000011,
+        124.355
+      ],
+      "length_m": 405.700165,
+      "reached_waypoints": 43
+    },
+    {
+      "route_id": "city_v002_gate_crossing",
+      "kind": "place_approach",
+      "situation_code": "EXHIBITION_02",
+      "status": "PASS",
+      "sample_count": 2325,
+      "support_failures": 0,
+      "obstacle_samples": 0,
+      "first_failures": [],
+      "distance_m": 173.23053,
+      "arrival_count": 1,
+      "frames": 2317,
+      "error": null,
+      "final_position": [
+        0.0,
+        0.16,
+        -56.2082825
+      ],
+      "length_m": 173.272369,
+      "reached_waypoints": 4
+    },
+    {
+      "route_id": "city_v002_crying_child",
+      "kind": "place_approach",
+      "situation_code": "EXHIBITION_05",
+      "status": "PASS",
+      "sample_count": 3281,
+      "support_failures": 0,
+      "obstacle_samples": 0,
+      "first_failures": [],
+      "distance_m": 250.592651,
+      "arrival_count": 1,
+      "frames": 3273,
+      "error": null,
+      "final_position": [
+        147.130829,
+        0.16,
+        26.3712463
+      ],
+      "length_m": 250.658981,
+      "reached_waypoints": 8
+    },
+    {
+      "route_id": "city_v002_illegal_parking",
+      "kind": "place_approach",
+      "situation_code": "EXHIBITION_07",
+      "status": "FAIL",
+      "sample_count": 5001,
+      "support_failures": 0,
+      "obstacle_samples": 7,
+      "first_failures": [
+        {
+          "point": [
+            -92.01644,
+            0.04,
+            -56.24998
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/03_TurningAndIntersections/J01_four_way/J01_IntersectionAsphalt",
+            "support_y": 0.0199999977,
+            "ground_error": 1.86264515E-09,
+            "projected_point": [
+              -92.01644,
+              0.04,
+              -56.24998
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/crossing/R01LE02_S0"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -92.08183,
+            0.04,
+            -56.24998
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/03_TurningAndIntersections/J01_four_way/J01_IntersectionAsphalt",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -92.08183,
+              0.04,
+              -56.24998
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/crossing/R01LE02_S0"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -90.75717,
+            0.04,
+            -57.8492546
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/03_TurningAndIntersections/J01_four_way/J01_IntersectionAsphalt",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -90.75717,
+              0.04,
+              -57.8492546
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/crossing/R01LE02_S0"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -90.75688,
+            0.04,
+            -57.7947159
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/03_TurningAndIntersections/J01_four_way/J01_IntersectionAsphalt",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -90.75688,
+              0.04,
+              -57.7947159
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/crossing/R01LE02_S0"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -92.05789,
+            0.04,
+            -4.107672
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/03_TurningAndIntersections/J03_T/J03_IntersectionAsphalt",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -92.05789,
+              0.04,
+              -4.107672
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R02LE01_S0"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -97.87401,
+            0.04,
+            -7.9
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/03_TurningAndIntersections/J03_T/J03_IntersectionAsphalt",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -97.87401,
+              0.04,
+              -7.9
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/crossing/R02RE02_S0"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            -97.97588,
+            0.04,
+            -7.9
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/03_TurningAndIntersections/J03_T/J03_IntersectionAsphalt",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              -97.97588,
+              0.04,
+              -7.9
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/crossing/R02RE02_S0"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        }
+      ],
+      "distance_m": 390.1859,
+      "arrival_count": 1,
+      "frames": 4992,
+      "error": null,
+      "final_position": [
+        -143.0,
+        0.16,
+        -8.3
+      ],
+      "length_m": 390.105835,
+      "reached_waypoints": 19
+    },
+    {
+      "route_id": "city_v002_park_flowerbed",
+      "kind": "place_approach",
+      "situation_code": "EXHIBITION_13",
+      "status": "PASS",
+      "sample_count": 2287,
+      "support_failures": 0,
+      "obstacle_samples": 0,
+      "first_failures": [],
+      "distance_m": 170.789444,
+      "arrival_count": 1,
+      "frames": 2279,
+      "error": null,
+      "final_position": [
+        155.898331,
+        0.16,
+        126.729393
+      ],
+      "length_m": 170.8512,
+      "reached_waypoints": 9
+    },
+    {
+      "route_id": "city_v002_festival_info",
+      "kind": "place_approach",
+      "situation_code": "EXHIBITION_17",
+      "status": "PASS",
+      "sample_count": 156,
+      "support_failures": 0,
+      "obstacle_samples": 0,
+      "first_failures": [],
+      "distance_m": 12.4566841,
+      "arrival_count": 1,
+      "frames": 151,
+      "error": null,
+      "final_position": [
+        11.5239706,
+        0.16,
+        103.153152
+      ],
+      "length_m": 12.501461,
+      "reached_waypoints": 4
+    },
+    {
+      "route_id": "city_v002_park_cat",
+      "kind": "place_approach",
+      "situation_code": "EXHIBITION_18",
+      "status": "PASS",
+      "sample_count": 3287,
+      "support_failures": 0,
+      "obstacle_samples": 0,
+      "first_failures": [],
+      "distance_m": 251.1909,
+      "arrival_count": 1,
+      "frames": 3279,
+      "error": null,
+      "final_position": [
+        158.245483,
+        0.16,
+        50.87758
+      ],
+      "length_m": 251.275772,
+      "reached_waypoints": 14
+    },
+    {
+      "route_id": "city_v002_road_control",
+      "kind": "place_approach",
+      "situation_code": "EXHIBITION_28",
+      "status": "FAIL",
+      "sample_count": 3540,
+      "support_failures": 0,
+      "obstacle_samples": 4,
+      "first_failures": [
+        {
+          "point": [
+            0.0,
+            0.04,
+            -57.79777
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/02_Roads/R01_main/R01_Carriageway",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              0.0,
+              0.04,
+              -57.79777
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01LE03_S0",
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01LE02_S1"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            0.0,
+            0.04,
+            -57.8588333
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/02_Roads/R01_main/R01_Carriageway",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              0.0,
+              0.04,
+              -57.8588333
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01LE03_S0",
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01LE02_S1"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            0.0,
+            0.04,
+            -64.16168
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/02_Roads/R01_main/R01_Carriageway",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              0.0,
+              0.04,
+              -64.16168
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01RE03_S0",
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01RE02_S3"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        },
+        {
+          "point": [
+            0.0,
+            0.04,
+            -64.21563
+          ],
+          "physics": {
+            "supported": true,
+            "support": "CityRebuild_v002/02_Roads/R01_main/R01_Carriageway",
+            "support_y": 0.02,
+            "ground_error": 0.0,
+            "projected_point": [
+              0.0,
+              0.04,
+              -64.21563
+            ],
+            "static_obstacles": [
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01RE03_S0",
+              "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01RE02_S3"
+            ],
+            "npc_overlaps_diagnostic": []
+          }
+        }
+      ],
+      "distance_m": 268.882751,
+      "arrival_count": 1,
+      "frames": 3532,
+      "error": null,
+      "final_position": [
+        86.0,
+        0.16,
+        -65.75
+      ],
+      "length_m": 268.772369,
+      "reached_waypoints": 6
+    },
+    {
+      "route_id": "city_v002_mystery_crate",
+      "kind": "place_approach",
+      "situation_code": "EXHIBITION_30",
+      "status": "PASS",
+      "sample_count": 76,
+      "support_failures": 0,
+      "obstacle_samples": 0,
+      "first_failures": [],
+      "distance_m": 6.99461555,
+      "arrival_count": 1,
+      "frames": 71,
+      "error": null,
+      "final_position": [
+        14.9946156,
+        0.16,
+        115.0
+      ],
+      "length_m": 7.0,
+      "reached_waypoints": 2
+    }
+  ],
+  "runtime_errors": [],
+  "camera_visuals": "NOT TESTED: nographics batch; no claim of visibility or target-device performance"
+}

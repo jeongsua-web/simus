@@ -20,6 +20,8 @@ namespace Simus
             }
         }
         public string layoutSha256;
+        public string mapVersion;
+        public string pathVersion;
         public Node[] nodes = Array.Empty<Node>();
         public Edge[] edges = Array.Empty<Edge>();
 

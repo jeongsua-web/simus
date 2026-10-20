@@ -1,0 +1,246 @@
+{
+  "generated_at": "2026-10-20T05:10:00.730Z",
+  "scope": "UNCHANGED_SERVER_SOURCES_EXECUTED_WITH_IN_MEMORY_SQL_PORT",
+  "database": "BLOCKED_NOT_RUN: no PostgreSQL connection, schema application or migration authorized",
+  "limits": [
+    "No SQL execution, PostgreSQL lock/unique/check semantics or transaction rollback validation",
+    "No actual choices/stat ledger write or HTTP/cookie/Next.js route execution",
+    "No Unity, physical clearance, WebGL, deployment or mobile verification",
+    "Simulated database statements are a test fixture; results are not database integration PASS"
+  ],
+  "input_hashes": {
+    "web/src/lib/npc-place-trajectory.ts": "78319cb6fa92ccd7958679420c499b48489c9a395b4400aef088c1dd5a9d3e9a",
+    "web/src/lib/npc-events.ts": "c3b3f0d02c92191ed4b95c0a23b2d9101fe792c2d653256c1df28a3f247901cc",
+    "web/src/lib/npc-graph-motion.ts": "efeb3b10f7bf7ffceaf9389b97f6946d3338754d450e5e87bd723c8f05dd6dde",
+    "web/src/app/participate/npc-motion.ts": "a4d336a57449f0cb457f4bc66782447e3ad7de3c4be987180cd6d5d5de94640b",
+    "web/src/lib/event-locations.ts": "320b9e02ceacbacb0f7be7c7a71f07e208d1319dab7b4b042e0f46b4a76888a5",
+    "web/src/lib/city-v002-graph.mjs": "949569f1245f5412aa9b38dfcb3b8b0c56fbeaed2efdfc1c2cec0489aa7a3c28",
+    "web/src/lib/data/city-rebuild-v002-phase1-graph.json": "8cd68b471207fa043cf1fcf484f291635c3fd1b41a1e880dde1bd4df3041575f",
+    "web/src/lib/data/city-v002-phase1-event-locations.json": "4711975e0805cfdae429aa5a787399a41a371acc07203e554f4ed246e6649e58"
+  },
+  "passed": 32,
+  "failed": 1,
+  "results": [
+    {
+      "name": "straight pass-through reconstructed despite polling after exit",
+      "status": "PASS_IN_MEMORY_RUNTIME"
+    },
+    {
+      "name": "long polling gap counts narrow-radius loop entries without sampling",
+      "status": "PASS_IN_MEMORY_RUNTIME"
+    },
+    {
+      "name": "loop seam inside interval and entire-loop occupancy do not double enter",
+      "status": "PASS_IN_MEMORY_RUNTIME"
+    },
+    {
+      "name": "corner polyline never replaced by polling chord",
+      "status": "PASS_IN_MEMORY_RUNTIME"
+    },
+    {
+      "name": "submillisecond tangent is not frozen outside radius",
+      "status": "PASS_IN_MEMORY_RUNTIME"
+    },
+    {
+      "name": "earliest eligible entry freezes at entry, duplicate polling and reconnect do not duplicate",
+      "status": "PASS_IN_MEMORY_RUNTIME"
+    },
+    {
+      "name": "same-place situations cannot chain while inside; real exit and reentry permits next unanswered",
+      "status": "PASS_IN_MEMORY_RUNTIME"
+    },
+    {
+      "name": "completion clock expressions separated by 1 ms must not create synthetic reentry",
+      "status": "FAIL_IN_MEMORY_RUNTIME",
+      "error": "AssertionError [ERR_ASSERTION]: remaining at the frozen boundary generated a second occurrence\n\n2 !== 1\n\n    at file:///C:/Project/simus/web/tests/phase1-server-memory.mjs:148:10\n    at async test (file:///C:/Project/simus/web/tests/phase1-server-memory.mjs:101:55)\n    at async file:///C:/Project/simus/web/tests/phase1-server-memory.mjs:141:1"
+    },
+    {
+      "name": "overlapping distinct places consume one simultaneous entry together",
+      "status": "PASS_IN_MEMORY_RUNTIME"
+    },
+    {
+      "name": "first inside evaluation counts once; legacy null cursor does not replay old crossings",
+      "status": "PASS_IN_MEMORY_RUNTIME"
+    },
+    {
+      "name": "active freeze consumes no future place entries",
+      "status": "PASS_IN_MEMORY_RUNTIME"
+    },
+    {
+      "name": "60-second guidance; 90-second overdue only, persisted across polls",
+      "status": "PASS_IN_MEMORY_RUNTIME"
+    },
+    {
+      "name": "unlocated generic and wrong-map content never creates deadline fallback",
+      "status": "PASS_IN_MEMORY_RUNTIME"
+    },
+    {
+      "name": "earliest location wins independent of situation list order",
+      "status": "PASS_IN_MEMORY_RUNTIME"
+    },
+    {
+      "name": "overdue survives entry and ACTIVE polling until successful completion",
+      "status": "PASS_IN_MEMORY_RUNTIME"
+    },
+    {
+      "name": "stored legacy DEADLINE occurrence remains readable and completable",
+      "status": "PASS_IN_MEMORY_RUNTIME"
+    },
+    {
+      "name": "closed, future-start and admission-cutoff sessions produce no event",
+      "status": "PASS_IN_MEMORY_RUNTIME"
+    },
+    {
+      "name": "consumed occupancy without fresh content advances cursor but produces no event",
+      "status": "PASS_IN_MEMORY_RUNTIME"
+    },
+    {
+      "name": "entry counter overflow is rejected rather than rounded",
+      "status": "PASS_IN_MEMORY_RUNTIME"
+    },
+    {
+      "name": "event location parser rejects malformed geometry and group conflicts",
+      "status": "PASS_IN_MEMORY_RUNTIME"
+    },
+    {
+      "name": "EXHIBITION_02: actual graph route entry, radius, freeze and reconnection",
+      "status": "PASS_IN_MEMORY_RUNTIME",
+      "detail": {
+        "route_points": 4,
+        "route_m": 173.2723714775912,
+        "entry_ms": 122695,
+        "radius_m": 1.5,
+        "euclidean_m": 1.4993714775912252,
+        "graph_distance_m": 1.4993714775912252
+      }
+    },
+    {
+      "name": "EXHIBITION_05: actual graph route entry, radius, freeze and reconnection",
+      "status": "PASS_IN_MEMORY_RUNTIME",
+      "detail": {
+        "route_points": 8,
+        "route_m": 250.65899824955886,
+        "entry_ms": 177971,
+        "radius_m": 1.5,
+        "euclidean_m": 1.499598249558904,
+        "graph_distance_m": 1.499598249558904
+      }
+    },
+    {
+      "name": "EXHIBITION_07: actual graph route entry, radius, freeze and reconnection",
+      "status": "PASS_IN_MEMORY_RUNTIME",
+      "detail": {
+        "route_points": 21,
+        "route_m": 390.10581080554977,
+        "entry_ms": 277576,
+        "radius_m": 1.5,
+        "euclidean_m": 1.499410805549843,
+        "graph_distance_m": 1.499410805549843
+      }
+    },
+    {
+      "name": "EXHIBITION_13: actual graph route entry, radius, freeze and reconnection",
+      "status": "PASS_IN_MEMORY_RUNTIME",
+      "detail": {
+        "route_points": 9,
+        "route_m": 170.8511942022363,
+        "entry_ms": 120966,
+        "radius_m": 1.5,
+        "euclidean_m": 1.498794202236313,
+        "graph_distance_m": 1.498794202236313
+      }
+    },
+    {
+      "name": "EXHIBITION_17: actual graph route entry, radius, freeze and reconnection",
+      "status": "PASS_IN_MEMORY_RUNTIME",
+      "detail": {
+        "route_points": 4,
+        "route_m": 12.501462038827324,
+        "entry_ms": 7859,
+        "radius_m": 1.5,
+        "euclidean_m": 1.4988620388273288,
+        "graph_distance_m": 1.4988620388273288
+      }
+    },
+    {
+      "name": "EXHIBITION_18: actual graph route entry, radius, freeze and reconnection",
+      "status": "PASS_IN_MEMORY_RUNTIME",
+      "detail": {
+        "route_points": 14,
+        "route_m": 251.27577478603695,
+        "entry_ms": 178412,
+        "radius_m": 1.5,
+        "euclidean_m": 1.498974786036991,
+        "graph_distance_m": 1.498974786036991
+      }
+    },
+    {
+      "name": "EXHIBITION_28: actual graph route entry, radius, freeze and reconnection",
+      "status": "PASS_IN_MEMORY_RUNTIME",
+      "detail": {
+        "route_points": 8,
+        "route_m": 268.7723714775912,
+        "entry_ms": 190909,
+        "radius_m": 1.5,
+        "euclidean_m": 1.4997714775912385,
+        "graph_distance_m": 1.4997714775912385
+      }
+    },
+    {
+      "name": "EXHIBITION_30: actual graph route entry, radius, freeze and reconnection",
+      "status": "PASS_IN_MEMORY_RUNTIME",
+      "detail": {
+        "route_points": 2,
+        "route_m": 7,
+        "entry_ms": 3929,
+        "radius_m": 1.5,
+        "euclidean_m": 1.4994000000000014,
+        "graph_distance_m": 1.4994000000000014
+      }
+    },
+    {
+      "name": "graph zero-speed and off-graph locations cannot fabricate guidance or event",
+      "status": "PASS_IN_MEMORY_RUNTIME"
+    },
+    {
+      "name": "60-second graph guidance chooses nearest unoccupied reachable place",
+      "status": "PASS_IN_MEMORY_RUNTIME",
+      "detail": {
+        "nearest_place_id": "city_v002_mystery_crate",
+        "graph_distance_m": 7
+      }
+    },
+    {
+      "name": "consumed occupied graph place is excluded from 60-second guidance",
+      "status": "PASS_IN_MEMORY_RUNTIME"
+    },
+    {
+      "name": "graph guidance arrival, completion, fractional connector handoff remain on graph",
+      "status": "PASS_IN_MEMORY_RUNTIME",
+      "detail": {
+        "handoff_ms": 170186.93083958115,
+        "positions": [
+          [
+            5.925149047353682,
+            0.16,
+            -33.35311158022868
+          ],
+          [
+            5.925207786837835,
+            0.16,
+            -33.35303485016677
+          ],
+          [
+            5.924356775793454,
+            0.16,
+            -33.35414650667953
+          ]
+        ]
+      }
+    },
+    {
+      "name": "direct returnMotion with fractional handoff preserves original loop shape",
+      "status": "PASS_IN_MEMORY_RUNTIME"
+    }
+  ]
+}

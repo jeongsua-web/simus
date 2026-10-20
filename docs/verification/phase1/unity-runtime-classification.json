@@ -1,0 +1,196 @@
+{
+  "scope": "Classification of unchanged Unity Play Mode evidence; not a new test or override of recorded FAIL results",
+  "raw_evidence": "docs/verification/phase1/unity-runtime.json",
+  "time_scale": 20.0,
+  "wall_seconds": 34.846311899999996,
+  "total_samples": 54410,
+  "runtime_errors": [],
+  "routes": [
+    {
+      "route_id": "school_commerce",
+      "situation_code": null,
+      "movement_status": "PASS",
+      "arrival_count": 2,
+      "expected_arrivals": 2,
+      "strict_capsule_clearance_status": "FAIL",
+      "obstacle_samples": 6,
+      "support_failures": 0,
+      "sample_count": 5005,
+      "colliders_in_recorded_first_failures": [
+        "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01LE02_S1",
+        "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01LE03_S0",
+        "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01RE02_S3",
+        "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01RE03_S0"
+      ],
+      "interpretation": "Capsule touching recorded raised walkway/crossing geometry. Transform-driven completion is independent of physical clearance. No validator threshold or product code was changed."
+    },
+    {
+      "route_id": "school_residential",
+      "situation_code": null,
+      "movement_status": "PASS",
+      "arrival_count": 2,
+      "expected_arrivals": 2,
+      "strict_capsule_clearance_status": "FAIL",
+      "obstacle_samples": 14,
+      "support_failures": 0,
+      "sample_count": 12805,
+      "colliders_in_recorded_first_failures": [
+        "CityRebuild_v002/04_PedestrianSurfaces/crossing/R02RE00_S1",
+        "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R02LE00_S0",
+        "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R02RE00_S0"
+      ],
+      "interpretation": "Capsule touching recorded raised walkway/crossing geometry. Transform-driven completion is independent of physical clearance. No validator threshold or product code was changed."
+    },
+    {
+      "route_id": "school_park",
+      "situation_code": null,
+      "movement_status": "PASS",
+      "arrival_count": 2,
+      "expected_arrivals": 2,
+      "strict_capsule_clearance_status": "PASS",
+      "obstacle_samples": 0,
+      "support_failures": 0,
+      "sample_count": 5723,
+      "colliders_in_recorded_first_failures": [],
+      "interpretation": "No static capsule contacts recorded."
+    },
+    {
+      "route_id": "residential_commerce",
+      "situation_code": null,
+      "movement_status": "PASS",
+      "arrival_count": 2,
+      "expected_arrivals": 2,
+      "strict_capsule_clearance_status": "FAIL",
+      "obstacle_samples": 20,
+      "support_failures": 0,
+      "sample_count": 10924,
+      "colliders_in_recorded_first_failures": [
+        "CityRebuild_v002/04_PedestrianSurfaces/crossing/R01LE02_S0",
+        "CityRebuild_v002/04_PedestrianSurfaces/crossing/R01RE02_S0",
+        "CityRebuild_v002/04_PedestrianSurfaces/crossing/R01RE02_S2",
+        "CityRebuild_v002/04_PedestrianSurfaces/crossing/R02RE00_S1",
+        "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R02LE01_S0"
+      ],
+      "interpretation": "Capsule touching recorded raised walkway/crossing geometry. Transform-driven completion is independent of physical clearance. No validator threshold or product code was changed."
+    },
+    {
+      "route_id": "city_v002_gate_crossing",
+      "situation_code": "EXHIBITION_02",
+      "movement_status": "PASS",
+      "arrival_count": 1,
+      "expected_arrivals": 1,
+      "strict_capsule_clearance_status": "PASS",
+      "obstacle_samples": 0,
+      "support_failures": 0,
+      "sample_count": 2325,
+      "colliders_in_recorded_first_failures": [],
+      "interpretation": "No static capsule contacts recorded."
+    },
+    {
+      "route_id": "city_v002_crying_child",
+      "situation_code": "EXHIBITION_05",
+      "movement_status": "PASS",
+      "arrival_count": 1,
+      "expected_arrivals": 1,
+      "strict_capsule_clearance_status": "PASS",
+      "obstacle_samples": 0,
+      "support_failures": 0,
+      "sample_count": 3281,
+      "colliders_in_recorded_first_failures": [],
+      "interpretation": "No static capsule contacts recorded."
+    },
+    {
+      "route_id": "city_v002_illegal_parking",
+      "situation_code": "EXHIBITION_07",
+      "movement_status": "PASS",
+      "arrival_count": 1,
+      "expected_arrivals": 1,
+      "strict_capsule_clearance_status": "FAIL",
+      "obstacle_samples": 7,
+      "support_failures": 0,
+      "sample_count": 5001,
+      "colliders_in_recorded_first_failures": [
+        "CityRebuild_v002/04_PedestrianSurfaces/crossing/R01LE02_S0",
+        "CityRebuild_v002/04_PedestrianSurfaces/crossing/R02RE02_S0",
+        "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R02LE01_S0"
+      ],
+      "interpretation": "Capsule touching recorded raised walkway/crossing geometry. Transform-driven completion is independent of physical clearance. No validator threshold or product code was changed."
+    },
+    {
+      "route_id": "city_v002_park_flowerbed",
+      "situation_code": "EXHIBITION_13",
+      "movement_status": "PASS",
+      "arrival_count": 1,
+      "expected_arrivals": 1,
+      "strict_capsule_clearance_status": "PASS",
+      "obstacle_samples": 0,
+      "support_failures": 0,
+      "sample_count": 2287,
+      "colliders_in_recorded_first_failures": [],
+      "interpretation": "No static capsule contacts recorded."
+    },
+    {
+      "route_id": "city_v002_festival_info",
+      "situation_code": "EXHIBITION_17",
+      "movement_status": "PASS",
+      "arrival_count": 1,
+      "expected_arrivals": 1,
+      "strict_capsule_clearance_status": "PASS",
+      "obstacle_samples": 0,
+      "support_failures": 0,
+      "sample_count": 156,
+      "colliders_in_recorded_first_failures": [],
+      "interpretation": "No static capsule contacts recorded."
+    },
+    {
+      "route_id": "city_v002_park_cat",
+      "situation_code": "EXHIBITION_18",
+      "movement_status": "PASS",
+      "arrival_count": 1,
+      "expected_arrivals": 1,
+      "strict_capsule_clearance_status": "PASS",
+      "obstacle_samples": 0,
+      "support_failures": 0,
+      "sample_count": 3287,
+      "colliders_in_recorded_first_failures": [],
+      "interpretation": "No static capsule contacts recorded."
+    },
+    {
+      "route_id": "city_v002_road_control",
+      "situation_code": "EXHIBITION_28",
+      "movement_status": "PASS",
+      "arrival_count": 1,
+      "expected_arrivals": 1,
+      "strict_capsule_clearance_status": "FAIL",
+      "obstacle_samples": 4,
+      "support_failures": 0,
+      "sample_count": 3540,
+      "colliders_in_recorded_first_failures": [
+        "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01LE02_S1",
+        "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01LE03_S0",
+        "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01RE02_S3",
+        "CityRebuild_v002/04_PedestrianSurfaces/sidewalk/R01RE03_S0"
+      ],
+      "interpretation": "Capsule touching recorded raised walkway/crossing geometry. Transform-driven completion is independent of physical clearance. No validator threshold or product code was changed."
+    },
+    {
+      "route_id": "city_v002_mystery_crate",
+      "situation_code": "EXHIBITION_30",
+      "movement_status": "PASS",
+      "arrival_count": 1,
+      "expected_arrivals": 1,
+      "strict_capsule_clearance_status": "PASS",
+      "obstacle_samples": 0,
+      "support_failures": 0,
+      "sample_count": 76,
+      "colliders_in_recorded_first_failures": [],
+      "interpretation": "No static capsule contacts recorded."
+    }
+  ],
+  "limitations": [
+    "Strict overlap failures retain FAIL. They are floor/curb contacts in recorded first failures, not proof that a blocking rigidbody agent cannot traverse.",
+    "Movement uses Transform/MoveTowards and can pass through colliders; successful arrival does not resolve contact risk.",
+    "No scene rendering was performed in nographics Editor execution.",
+    "Network-driven NPC creation or tab-resume jumps across the river were not tested here."
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "status": "FAIL_ACTUAL_UNITY_MOCK_SNAPSHOT",
+  "artifact": "C:\\Project\\simus\\unity\\Builds\\phase1_qa_local_20261020_051159",
+  "checks": [],
+  "error": "TimeoutError: page.waitForFunction: Timeout 240000ms exceeded.",
+  "stack": "page.waitForFunction: Timeout 240000ms exceeded.\n    at C:\\Project\\simus\\web\\tests\\phase1-webgl-local-fixture.mjs:60:14",
+  "pageErrors": [],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "unexpectedApiRequests": []
+}
