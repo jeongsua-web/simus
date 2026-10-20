@@ -4,7 +4,7 @@ import { pathToFileURL } from 'node:url';
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { enterCity } from './participant-entry.mjs';
-import { MAP_VERSION, PATH_VERSION, defaultMotion, distance } from '../src/lib/city-v002-graph.mjs';
+import { MAP_VERSION, PATH_VERSION, nodePoint, distance } from '../src/lib/city-v002-graph.mjs';
 
 export async function runV002SessionBrowser({pool,env,token,templateId,root}) {
   if (!env.TEST_V002_PLAYWRIGHT_MODULE) return console.log('SKIP: actual v002 session WebGL browser (set TEST_V002_PLAYWRIGHT_MODULE)');
@@ -35,11 +35,9 @@ export async function runV002SessionBrowser({pool,env,token,templateId,root}) {
     assert.equal((await saved).status(),200);
     const location=(await pool.query('SELECT id,event_location FROM simus.session_situations WHERE session_id=$1 AND event_location IS NOT NULL',[sid])).rows[0];
     assert.ok(location);
-    // Test-only placement at 40% of the real first graph segment: reached in ~42s
-    // on the unmodified default route. This is NOT an exhibition placement seed.
-    const m=defaultMotion(),point=m.points[0].map((v,i)=>v+(m.points[1][i]-v)*.4);
-    const placed=await admin.request.put(`${env.TEST_API_URL}/api/admin/sessions/${sid}/event-locations`,{headers:{authorization:`Bearer ${token}`},data:{situation_id:location.id,is_generic:false,event_location:{map_version:MAP_VERSION,point,radius_m:2}}});
-    assert.equal(placed.status(),200);
+    // Keep the exact administrator UI placement through arrival and choice.
+    // This disposable round does not establish exhibition placement approval.
+    assert.deepEqual(location.event_location,{map_version:MAP_VERSION,point:nodePoint('C_SPINE_CUT_0'),radius_m:2});
     const start=admin.waitForResponse(r=>r.url().endsWith(`/${sid}/start`));
     await card.getByRole('button',{name:'회차 시작',exact:true}).click();assert.equal((await start).status(),200);
     console.log('v002 actual browser: placement saved and round started');
@@ -100,6 +98,17 @@ export async function runV002SessionBrowser({pool,env,token,templateId,root}) {
     assert.ok(waitMs > 0 && waitMs < 90000, 'LOCATION event arrives within the real 90-second window');
     const frozen=await inspect();await page.waitForTimeout(3000);const still=await inspect();
     assert.ok(distance(frozen.position,still.position)<.05,'Unity actor stops for active event');
+    const serverFrozen=await page.evaluate(async id=>(await fetch(`/api/sessions/${id}/npc`)).json(),sid);
+    assert.equal(serverFrozen.npcs[0].npc_id,still.npc_id);
+    assert.equal(serverFrozen.npcs[0].motion.map_version,MAP_VERSION);
+    assert.equal(serverFrozen.npcs[0].motion.path_version,PATH_VERSION);
+    assert.equal(serverFrozen.npcs[0].motion.speed_mps,0);
+    const serverPoint=serverFrozen.npcs[0].motion.points[0];
+    // Unity projects Y onto rendered ground; compare horizontal map coordinates.
+    const serverUnityErrorM=Math.hypot(serverPoint[0]-still.position[0],serverPoint[2]-still.position[2]);
+    const placementDistanceM=Math.hypot(serverPoint[0]-location.event_location.point[0],serverPoint[2]-location.event_location.point[2]);
+    assert.ok(serverUnityErrorM<.05,'Server frozen NPC and actual Unity actor agree within 5cm in XZ');
+    assert.ok(placementDistanceM<=location.event_location.radius_m+.05,'Actual LOCATION event uses the administrator UI placement');
     // Verify the rendered lens after initial camera acquisition has settled.
     await page.getByRole('button',{name:'캐릭터 화면 확대',exact:true}).click();
     await unity.waitForFunction(expected=>{
@@ -144,7 +153,7 @@ export async function runV002SessionBrowser({pool,env,token,templateId,root}) {
     assert.ok(requests.some(p=>p===`/api/sessions/${sid}/npcs`),'Actual Unity crowd polling');
     assert.ok(!requests.some(p=>p.startsWith('/city/')),'v002 never requests legacy build');
     assert.ok(!messages.some(m=>m.type==='ERROR'));assert.deepEqual(errors,[]);
-    await writeFile(path.join(artifacts,'evidence.json'),JSON.stringify({sid,map:MAP_VERSION,path:PATH_VERSION,a,b,frozen,still,resumed,moving,ended,ended2,waitMs,messages,errors},null,2));
+    await writeFile(path.join(artifacts,'evidence.json'),JSON.stringify({sid,map:MAP_VERSION,path:PATH_VERSION,location,serverFrozen,serverUnityErrorM,placementDistanceM,a,b,frozen,still,resumed,moving,ended,ended2,waitMs,messages,errors},null,2));
     console.log(`PASS actual browser/API/WebGL: admin create/place/start → /participate profile/join → visible NPC/movement/Phase8 follow → LOCATION event/freeze → choice ledger+city version → movement resumes → admin end/API freeze/WebGL disposal. Evidence: ${artifacts}`);
   } catch(error) {
     for(const page of browser.contexts().flatMap(c=>c.pages())) await page.screenshot({path:path.join(artifacts,`failure-${browser.contexts().indexOf(page.context())}.png`),fullPage:true}).catch(()=>{});
