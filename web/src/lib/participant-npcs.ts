@@ -2,6 +2,7 @@ import type { PoolClient } from "pg";
 import { npcPosition, type Npc } from "@/app/participate/npc-motion";
 import { guidanceMotion, guidancePosition, resumedNpc, projectedRevision } from "./npc-graph-motion";
 import { ApiError } from "./api";
+import { syncNpcEvents } from "./npc-events";
 
 // Caller holds the session row lock, shared with choices and lifecycle transitions.
 export async function joinSession(db: PoolClient, sessionId: string, participantId: string) {
@@ -24,6 +25,7 @@ export async function joinSession(db: PoolClient, sessionId: string, participant
 }
 
 export async function readNpcs(db: PoolClient, sessionId: string, participantId?: string) {
+  await syncNpcEvents(db, sessionId, participantId);
   // One statement gives lifecycle, clock and membership the same snapshot.
   const result = await db.query(`WITH snapshot AS (
     SELECT s.*,statement_timestamp() AS server_time,

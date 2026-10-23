@@ -16,7 +16,7 @@ def main():
     migration = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(migration)  # Import only; migrate.main()/psql are never called.
     expected = ['001', '002', '003', '004', '005', '006', '007', '008', '009',
-                '010', '011', '013', '016', '015', '017']
+                '010', '011', '013', '016', '015', '017', '018']
     if migration.ORDER != expected:
         raise ValueError('Reviewed first-install order changed; review before preparing SQL')
     sql = migration.plan(SimpleNamespace(command='init', approval_reference=None),

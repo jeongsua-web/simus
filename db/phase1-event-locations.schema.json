@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SIM:US Phase 1 measured event locations",
+  "type": "object",
+  "required": ["schema_version", "map_version", "path_version", "exhibition_ready", "status", "source_scene", "source_graph", "locations"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "map_version": {"$ref": "#/$defs/identifier"},
+    "path_version": {"$ref": "#/$defs/identifier"},
+    "exhibition_ready": {"const": false},
+    "status": {"const": "IMPLEMENTED_AWAITING_QA"},
+    "source_scene": {"$ref": "#/$defs/source"},
+    "source_graph": {"$ref": "#/$defs/source"},
+    "locations": {
+      "type": "array", "minItems": 8, "maxItems": 8,
+      "items": {
+        "type": "object",
+        "required": ["situation_code", "place_id", "point", "radius_m", "approach_path_id", "approach_node_id", "scene_object_path", "source_evidence"],
+        "properties": {
+          "situation_code": {"enum": ["EXHIBITION_02", "EXHIBITION_05", "EXHIBITION_07", "EXHIBITION_13", "EXHIBITION_17", "EXHIBITION_18", "EXHIBITION_28", "EXHIBITION_30"]},
+          "place_id": {"$ref": "#/$defs/identifier"},
+          "point": {"type": "array", "minItems": 3, "maxItems": 3, "items": {"type": "number", "minimum": -1000000, "maximum": 1000000}},
+          "radius_m": {"type": "number", "exclusiveMinimum": 0, "maximum": 1000000},
+          "approach_path_id": {"type": "string", "minLength": 1},
+          "approach_node_id": {"type": "string", "minLength": 1},
+          "scene_object_path": {"type": "string", "minLength": 1},
+          "source_evidence": {"oneOf": [{"type": "string", "minLength": 1}, {"type": "object", "minProperties": 1}]}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "identifier": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$"},
+    "source": {"type": "object", "required": ["path", "sha256"], "properties": {
+      "path": {"type": "string", "minLength": 1},
+      "sha256": {"type": "string", "pattern": "^[a-fA-F0-9]{64}$"}
+    }}
+  },
+  "$comment": "psql preflight additionally requires every allowed code exactly once and matches original exhibition seed UUIDs. Point values must come from measured Unity evidence. Schema alone does not approve reachability or authorize DB writes."
+}

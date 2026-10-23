@@ -85,4 +85,10 @@ psql -X --host 127.0.0.1 --port 55432 --dbname simus_migration_qa --username sim
 
 ## 017 최초 회차 생성 요청
 
-관리형 init/upgrade의 마지막에 `017_initial_session_creation.sql`을 적용한다. 기존 원본/이력 checksum은 유지한다. `template_session_id`의 NOT NULL 해제, 최초 요청의 v002 프로필 제약과 부분 unique index만 추가하며 콘텐츠나 관리자 계정은 삽입하지 않는다. 017은 신규 관리형 migration으로 baseline 대상이 아니다. 앱의 최초 생성 기능 사용 전에 적용한다. 운영 실행은 이번 작업에서 수행하지 않았다.
+관리형 init/upgrade에서 015 뒤에 `017_initial_session_creation.sql`을 적용한다(Phase 2는 그 뒤에 018을 계획한다). 기존 원본/이력 checksum은 유지한다. `template_session_id`의 NOT NULL 해제, 최초 요청의 v002 프로필 제약과 부분 unique index만 추가하며 콘텐츠나 관리자 계정은 삽입하지 않는다. 017은 신규 관리형 migration으로 baseline 대상이 아니다. 앱의 최초 생성 기능 사용 전에 적용한다. 운영 실행은 이번 작업에서 수행하지 않았다.
+
+## 018 장소 진입 이벤트 준비
+
+Phase 2는 017 다음에 `018_npc_event_visit.sql`을 계획한다. Phase 1 커밋 `7ac43f0`의 `016_location_entry_events.sql` 스키마를 현재 브랜치의 번호 체계에 맞게 이식한 것이다. 기존 016 safe-glasses 원본·checksum은 그대로다. 새 서버는 018의 영속 장소 진입 상태와 진입당 유일 인덱스를 요구한다. 018은 baseline 대상이 아니며 실제 적용은 사용자 승인 전까지 보류한다. 다른 브랜치의 Phase 1 migration을 이미 적용했다면 중복 실행하지 말고 이력/스키마를 검토하여 별도 채택 계획을 만든다.
+
+콘텐츠·좌표는 schema runner에서 적용하지 않는다. `db/content/city-v002-events-phase2-draft.sql`은 별도로 검토할 개발 DRAFT용 산출물이며 운영 DB에는 적용하지 않는다. 신규 Phase 1 map/path의 DRAFT에만 사용할 수 있고, 구버전 DRAFT·RUNNING 회차·참가자 스냅샷·기존 non-null 좌표를 재작성하지 않는다. `web/scripts/prepare-city-v002-events.mjs`에는 적용 기능이 없다. QA/실제 DB 적용/WebGL 빌드/배포는 각각 후속 승인 범위다.

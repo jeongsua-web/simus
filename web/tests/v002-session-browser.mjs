@@ -37,7 +37,7 @@ export async function runV002SessionBrowser({pool,env,token,templateId,root}) {
     assert.ok(location);
     // Keep the exact administrator UI placement through arrival and choice.
     // This disposable round does not establish exhibition placement approval.
-    assert.deepEqual(location.event_location,{map_version:MAP_VERSION,point:nodePoint('C_SPINE_CUT_0'),radius_m:2});
+    assert.deepEqual(location.event_location,{place_id:'graph_C_SPINE_CUT_0',map_version:MAP_VERSION,point:nodePoint('C_SPINE_CUT_0'),radius_m:2});
     const start=admin.waitForResponse(r=>r.url().endsWith(`/${sid}/start`));
     await card.getByRole('button',{name:'회차 시작',exact:true}).click();assert.equal((await start).status(),200);
     console.log('v002 actual browser: placement saved and round started');

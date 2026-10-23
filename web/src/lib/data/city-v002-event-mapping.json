@@ -1,0 +1,1232 @@
+{
+  "schema_version": 1,
+  "mapping_version": "city-v002-events-phase2-v1",
+  "map_version": "test-only-city-rebuild-v002-phase1-v1",
+  "path_version": "city-rebuild-v002-walk-phase1-v1",
+  "exhibition_ready": false,
+  "qa_executed": false,
+  "phase1_report_available": true,
+  "phase1_source_commit": "7ac43f0",
+  "policy": "Only READY rows may be enabled; preserve every existing location; candidates are not active mappings.",
+  "graph_source": "web/src/lib/data/city-rebuild-v002-phase1-graph.json",
+  "graph_sha256": "8cd68b471207fa043cf1fcf484f291635c3fd1b41a1e880dde1bd4df3041575f",
+  "placement_source": "docs/placement/city-v002-event-placement-results.json",
+  "placement_sha256": "f5e8ad18e22dca379e4824ae38ad46b5640ab202a927d00ab6e90d72eda5adb0",
+  "events": [
+    {
+      "number": 1,
+      "code": "EXHIBITION_01",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000001",
+      "title": "길에 쓰레기가 떨어져 있다",
+      "place_id": "ENV_Bin_BusStop",
+      "scene_path": "SIMUS_EventPlacement_20261020/ENV_Bin_BusStop",
+      "status": "BLOCKED_SCENE",
+      "reason": "도로/쓰레기통 접근점은 있으나 떨어진 쓰레기 표현 근거 없음. 장소 후보만 기록.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "ENV_Bin_BusStop",
+        "point": [
+          60.0,
+          0.16,
+          -56.65
+        ],
+        "radius_m": 2
+      },
+      "event_location": null,
+      "approach_evidence": {
+        "point": [
+          60.0,
+          0.16,
+          -56.65
+        ],
+        "edge_id": "R01LE03_S0",
+        "reference_point": [
+          60.0,
+          0.16,
+          -54.0
+        ],
+        "gap_m": 2.6499999999999986
+      },
+      "phase1_baseline": "ADDED_PHASE2",
+      "physical_access_verified": false
+    },
+    {
+      "number": 2,
+      "code": "EXHIBITION_02",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000002",
+      "title": "빨간불인데 차가 한 대도 없다",
+      "place_id": "city_v002_gate_crossing",
+      "scene_path": "SIMUS_EventPlacement_20261020/ENV_PedSignal_Gate_N",
+      "status": "READY",
+      "reason": "정문 횡단보도 북쪽 신호등 앞 기존 보도. 신호 주기/교통 제어는 구현하지 않음.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "city_v002_gate_crossing",
+        "point": [
+          0.0,
+          0.16,
+          -56.25
+        ],
+        "radius_m": 1.5
+      },
+      "event_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "city_v002_gate_crossing",
+        "point": [
+          0.0,
+          0.16,
+          -56.25
+        ],
+        "radius_m": 1.5
+      },
+      "approach_evidence": {
+        "point": [
+          0.0,
+          0.16,
+          -56.25
+        ],
+        "node_id": "MN_GATE",
+        "edge_id": "X_GATE_S0",
+        "gap_m": 2.265502151841839,
+        "source_evidence": {
+          "path": "docs/placement/phase1/unity-spatial-preparation.json",
+          "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+          "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger.",
+          "object_position": [
+            2.1,
+            0.14,
+            -55.4
+          ],
+          "object_distance_xz_m": 2.265502151841839,
+          "physical_access_verified": false
+        }
+      },
+      "phase1_baseline": "PRESERVED_7ac43f0",
+      "physical_access_verified": false
+    },
+    {
+      "number": 3,
+      "code": "EXHIBITION_03",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000003",
+      "title": "누군가 지갑을 떨어뜨렸다",
+      "place_id": "ENV_MysteryCrate_Plaza",
+      "scene_path": "SIMUS_EventPlacement_20261020/ENV_MysteryCrate_Plaza",
+      "status": "BLOCKED_SCENE",
+      "reason": "광장 접근 가능. 떨어진 지갑 미배치.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "ENV_MysteryCrate_Plaza",
+        "point": [
+          15.0,
+          0.16,
+          115.0
+        ],
+        "radius_m": 2
+      },
+      "event_location": null,
+      "approach_evidence": {
+        "point": [
+          15.0,
+          0.16,
+          115.0
+        ],
+        "edge_id": "C_PARK_S0",
+        "reference_point": [
+          15.0,
+          0.16,
+          118.0
+        ],
+        "gap_m": 3.0
+      },
+      "phase1_baseline": "ADDED_PHASE2",
+      "physical_access_verified": false
+    },
+    {
+      "number": 4,
+      "code": "EXHIBITION_04",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000004",
+      "title": "버스 정류장에서 누군가 새치기한다",
+      "place_id": "ENV_BusStop_R01",
+      "scene_path": "SIMUS_EventPlacement_20261020/ENV_BusStop_R01",
+      "status": "BLOCKED_SCENE",
+      "reason": "정류장 bounds 앞 보도 접근 가능. 대기 줄/새치기 상황 미표현.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "ENV_BusStop_R01",
+        "point": [
+          54.0,
+          0.16,
+          -56.65
+        ],
+        "radius_m": 2
+      },
+      "event_location": null,
+      "approach_evidence": {
+        "point": [
+          54.0,
+          0.16,
+          -56.65
+        ],
+        "edge_id": "R01LE03_S0",
+        "reference_point": [
+          54,
+          0.16,
+          -55
+        ],
+        "gap_m": 1.6499999999999986
+      },
+      "phase1_baseline": "ADDED_PHASE2",
+      "physical_access_verified": false
+    },
+    {
+      "number": 5,
+      "code": "EXHIBITION_05",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000005",
+      "title": "길을 잃은 아이가 울고 있다",
+      "place_id": "city_v002_crying_child",
+      "scene_path": "SIMUS_EventPlacement_20261020/NPC_CryingChild_ParkSouth",
+      "status": "READY",
+      "reason": "기존 공원 길에서 저장된 우는 아이를 만나는 접근점. 울음 실제 재생은 승인 후 확인 필요.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "city_v002_crying_child",
+        "point": [
+          147.158345,
+          0.16,
+          26.376605
+        ],
+        "radius_m": 1.5
+      },
+      "event_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "city_v002_crying_child",
+        "point": [
+          147.158345,
+          0.16,
+          26.376605
+        ],
+        "radius_m": 1.5
+      },
+      "approach_evidence": {
+        "point": [
+          147.158345,
+          0.16,
+          26.376605
+        ],
+        "node_id": "PHASE1_EXHIBITION_05",
+        "edge_id": "PKE06_S0",
+        "gap_m": 4.456798678990338,
+        "source_evidence": {
+          "path": "docs/placement/phase1/unity-spatial-preparation.json",
+          "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+          "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger.",
+          "object_position": [
+            148.0,
+            -0.012,
+            22.0
+          ],
+          "object_distance_xz_m": 4.456798678990338,
+          "physical_access_verified": false
+        }
+      },
+      "phase1_baseline": "PRESERVED_7ac43f0",
+      "physical_access_verified": false
+    },
+    {
+      "number": 6,
+      "code": "EXHIBITION_06",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000006",
+      "title": "공원에서 누군가 큰 소리로 음악을 틀고 있다",
+      "place_id": "PARK_REST_2",
+      "scene_path": "PARK_REST_2",
+      "status": "BLOCKED_SCENE",
+      "reason": "공원 접근 가능. 음악 재생자/음원 상황 미표현.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "PARK_REST_2",
+        "point": [
+          142.0,
+          0.16,
+          118.0
+        ],
+        "radius_m": 2
+      },
+      "event_location": null,
+      "approach_evidence": {
+        "point": [
+          142.0,
+          0.16,
+          118.0
+        ],
+        "node_id": "PARK_REST_2",
+        "gap_m": 0
+      },
+      "phase1_baseline": "ADDED_PHASE2",
+      "physical_access_verified": false
+    },
+    {
+      "number": 7,
+      "code": "EXHIBITION_07",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000007",
+      "title": "불법 주차된 차 때문에 통행이 어렵다",
+      "place_id": "city_v002_illegal_parking",
+      "scene_path": "SIMUS_EventPlacement_20261020/VEH_IllegalParked_R05",
+      "status": "READY",
+      "reason": "기존 R05 보도에서 불법 주차 차량 옆 접근. 통과 여유는 승인 후 확인 필요.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "city_v002_illegal_parking",
+        "point": [
+          -143.0,
+          0.16,
+          -8.3
+        ],
+        "radius_m": 1.5
+      },
+      "event_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "city_v002_illegal_parking",
+        "point": [
+          -143.0,
+          0.16,
+          -8.3
+        ],
+        "radius_m": 1.5
+      },
+      "approach_evidence": {
+        "point": [
+          -143.0,
+          0.16,
+          -8.3
+        ],
+        "node_id": "PHASE1_EXHIBITION_07",
+        "edge_id": "R05LE00_S1",
+        "gap_m": 1.6000000000000005,
+        "source_evidence": {
+          "path": "docs/placement/phase1/unity-spatial-preparation.json",
+          "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+          "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger.",
+          "object_position": [
+            -143.0,
+            0.02,
+            -6.7
+          ],
+          "object_distance_xz_m": 1.6000000000000005,
+          "physical_access_verified": false
+        }
+      },
+      "phase1_baseline": "PRESERVED_7ac43f0",
+      "physical_access_verified": false
+    },
+    {
+      "number": 8,
+      "code": "EXHIBITION_08",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000008",
+      "title": "카페 직원이 거스름돈을 더 줬다",
+      "place_id": "ENV_Cafe_EastCommercial",
+      "scene_path": "SIMUS_EventPlacement_20261020/ENV_Cafe_EastCommercial",
+      "status": "BLOCKED_ACCESS",
+      "reason": "카페 북쪽 전면/door_x 근거의 외부 접근 후보. 연결된 포장/실제 출입구까지의 경로 근거가 없어 그래프를 연장하지 않음.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "ENV_Cafe_EastCommercial",
+        "point": [
+          137.84588167413895,
+          0.16,
+          -55.37928352947122
+        ],
+        "radius_m": 2
+      },
+      "event_location": null,
+      "approach_evidence": {
+        "point": [
+          137.84588167413895,
+          0.16,
+          -55.37928352947122
+        ],
+        "edge_id": "R01RE04_S0",
+        "reference_point": [
+          142.7,
+          0.16,
+          -68
+        ],
+        "gap_m": 13.522017192376895
+      },
+      "phase1_baseline": "ADDED_PHASE2",
+      "physical_access_verified": false
+    },
+    {
+      "number": 9,
+      "code": "EXHIBITION_09",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000009",
+      "title": "지하철에서 자리가 하나 났다",
+      "place_id": "ENV_Subway_Entrance_SurfaceOnly",
+      "scene_path": "SIMUS_EventPlacement_20261020/ENV_Subway_Entrance_SurfaceOnly",
+      "status": "BLOCKED_SCENE",
+      "reason": "지상 출입구만 존재. 객실/좌석/내부 보행 경로 없음. 지상 좌표로 대체하지 않음.",
+      "candidate_location": null,
+      "event_location": null,
+      "approach_evidence": null,
+      "phase1_baseline": "ADDED_PHASE2",
+      "physical_access_verified": false
+    },
+    {
+      "number": 10,
+      "code": "EXHIBITION_10",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000010",
+      "title": "친구가 시험에서 부정행위를 하자고 한다",
+      "place_id": "C04_ACCESS",
+      "scene_path": "C04_ACCESS",
+      "status": "READY",
+      "reason": "캠퍼스 학교 건물 C04의 기존 접근 노드. 대화형 원문은 기존 모바일 UI 사용.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "C04_ACCESS",
+        "point": [
+          -41.1685,
+          0.16,
+          67.139
+        ],
+        "radius_m": 2
+      },
+      "event_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "C04_ACCESS",
+        "point": [
+          -41.1685,
+          0.16,
+          67.139
+        ],
+        "radius_m": 2
+      },
+      "approach_evidence": {
+        "point": [
+          -41.1685,
+          0.16,
+          67.139
+        ],
+        "node_id": "C04_ACCESS",
+        "gap_m": 0
+      },
+      "phase1_baseline": "ADDED_PHASE2",
+      "physical_access_verified": false
+    },
+    {
+      "number": 11,
+      "code": "EXHIBITION_11",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000011",
+      "title": "분리수거장이 엉망이다",
+      "place_id": "ENV_Recycle_SouthHousing",
+      "scene_path": "SIMUS_EventPlacement_20261020/ENV_Recycle_SouthHousing",
+      "status": "BLOCKED_SCENE",
+      "reason": "분리수거 시설 접근점 있음. 엉망인 쓰레기 상태의 배치 근거 없음.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "ENV_Recycle_SouthHousing",
+        "point": [
+          53.04486133768352,
+          0.16,
+          -214.42985318107668
+        ],
+        "radius_m": 2
+      },
+      "event_location": null,
+      "approach_evidence": {
+        "point": [
+          53.04486133768352,
+          0.16,
+          -214.42985318107668
+        ],
+        "edge_id": "LWE05_S0",
+        "reference_point": [
+          53.0,
+          0.16,
+          -216.0
+        ],
+        "gap_m": 1.5707875644382263
+      },
+      "phase1_baseline": "ADDED_PHASE2",
+      "physical_access_verified": false
+    },
+    {
+      "number": 12,
+      "code": "EXHIBITION_12",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000012",
+      "title": "가까운 거리에 이동해야 한다",
+      "place_id": "ENV_Bin_BusStop",
+      "scene_path": "SIMUS_EventPlacement_20261020/ENV_Bin_BusStop",
+      "status": "READY",
+      "reason": "일반 도로 R01의 기존 보도. 근거리 이동 선택 문맥을 모바일에 표시.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "ENV_Bin_BusStop",
+        "point": [
+          60.0,
+          0.16,
+          -56.65
+        ],
+        "radius_m": 2
+      },
+      "event_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "ENV_Bin_BusStop",
+        "point": [
+          60.0,
+          0.16,
+          -56.65
+        ],
+        "radius_m": 2
+      },
+      "approach_evidence": {
+        "point": [
+          60.0,
+          0.16,
+          -56.65
+        ],
+        "edge_id": "R01LE03_S0",
+        "reference_point": [
+          60.0,
+          0.16,
+          -54.0
+        ],
+        "gap_m": 2.6499999999999986
+      },
+      "phase1_baseline": "ADDED_PHASE2",
+      "physical_access_verified": false
+    },
+    {
+      "number": 13,
+      "code": "EXHIBITION_13",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000013",
+      "title": "꽃밭에 들어가면 사진이 잘 나올 것 같다",
+      "place_id": "city_v002_park_flowerbed",
+      "scene_path": "SIMUS_EventPlacement_20261020/ENV_Flowerbed_ParkNorth",
+      "status": "READY",
+      "reason": "북쪽 공원 꽃밭 옆 기존 산책로. 남쪽 꽃밭의 먼 접근점 대신 가까운 북쪽 시설 사용.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "city_v002_park_flowerbed",
+        "point": [
+          155.90806,
+          0.16,
+          126.702969
+        ],
+        "radius_m": 1.5
+      },
+      "event_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "city_v002_park_flowerbed",
+        "point": [
+          155.90806,
+          0.16,
+          126.702969
+        ],
+        "radius_m": 1.5
+      },
+      "approach_evidence": {
+        "point": [
+          155.90806,
+          0.16,
+          126.702969
+        ],
+        "node_id": "PHASE1_EXHIBITION_13",
+        "edge_id": "PKE03_S0",
+        "gap_m": 2.033435117863616,
+        "source_evidence": {
+          "path": "docs/placement/phase1/unity-spatial-preparation.json",
+          "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+          "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger.",
+          "object_position": [
+            154.0,
+            -0.012,
+            126.0
+          ],
+          "object_distance_xz_m": 2.033435117863616,
+          "physical_access_verified": false
+        }
+      },
+      "phase1_baseline": "PRESERVED_7ac43f0",
+      "physical_access_verified": false
+    },
+    {
+      "number": 14,
+      "code": "EXHIBITION_14",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000014",
+      "title": "동네 하천에 쓰레기가 쌓여 있다",
+      "place_id": "RIVER_E_30",
+      "scene_path": "RIVER_E_30",
+      "status": "BLOCKED_SCENE",
+      "reason": "실제 하천 산책로 접근점 있음. 하천 쓰레기 누적 상황 표현 근거 없음.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "RIVER_E_30",
+        "point": [
+          127.97789,
+          -0.408,
+          45.664577
+        ],
+        "radius_m": 2
+      },
+      "event_location": null,
+      "approach_evidence": {
+        "point": [
+          127.97789,
+          -0.408,
+          45.664577
+        ],
+        "node_id": "RIVER_E_30",
+        "gap_m": 0
+      },
+      "phase1_baseline": "ADDED_PHASE2",
+      "physical_access_verified": false
+    },
+    {
+      "number": 15,
+      "code": "EXHIBITION_15",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000015",
+      "title": "일회용품과 다회용품 중 선택할 수 있다",
+      "place_id": "ENV_Cafe_EastCommercial",
+      "scene_path": "SIMUS_EventPlacement_20261020/ENV_Cafe_EastCommercial",
+      "status": "BLOCKED_ACCESS",
+      "reason": "카페 #08과 동일한 접근성 문제. 임의의 먼 지점을 카페 도착으로 처리하지 않음.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "ENV_Cafe_EastCommercial",
+        "point": [
+          137.84588167413895,
+          0.16,
+          -55.37928352947122
+        ],
+        "radius_m": 2
+      },
+      "event_location": null,
+      "approach_evidence": {
+        "point": [
+          137.84588167413895,
+          0.16,
+          -55.37928352947122
+        ],
+        "edge_id": "R01RE04_S0",
+        "reference_point": [
+          142.7,
+          0.16,
+          -68
+        ],
+        "gap_m": 13.522017192376895
+      },
+      "phase1_baseline": "ADDED_PHASE2",
+      "physical_access_verified": false
+    },
+    {
+      "number": 16,
+      "code": "EXHIBITION_16",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000016",
+      "title": "이웃이 무거운 짐을 들고 있다",
+      "place_id": "NPC_HeavyCarrier_ApartmentWalk",
+      "scene_path": "SIMUS_EventPlacement_20261020/NPC_HeavyCarrier_ApartmentWalk",
+      "status": "READY",
+      "reason": "기록된 짐 운반자 왕복 구간의 중간 접근점. 빌더에서 환경 NPC를 삭제하던 처리도 보호.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "NPC_HeavyCarrier_ApartmentWalk",
+        "point": [
+          -186.85,
+          0.16,
+          112.71440000000001
+        ],
+        "radius_m": 2
+      },
+      "event_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "NPC_HeavyCarrier_ApartmentWalk",
+        "point": [
+          -186.85,
+          0.16,
+          112.71440000000001
+        ],
+        "radius_m": 2
+      },
+      "approach_evidence": {
+        "point": [
+          -186.85,
+          0.16,
+          112.71440000000001
+        ],
+        "edge_id": "B16_BRANCH_S0",
+        "reference_point": [
+          -186.85,
+          0.16,
+          112.71440000000001
+        ],
+        "gap_m": 0.0
+      },
+      "phase1_baseline": "ADDED_PHASE2",
+      "physical_access_verified": false
+    },
+    {
+      "number": 17,
+      "code": "EXHIBITION_17",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000017",
+      "title": "동네 축제 자원봉사자를 모집한다",
+      "place_id": "city_v002_festival_info",
+      "scene_path": "SIMUS_EventPlacement_20261020/ENV_Festival_Info_Plaza",
+      "status": "READY",
+      "reason": "광장 안내 축제 부스의 기존 보행 접근점. 모집 내용은 원문 모바일 선택지 사용.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "city_v002_festival_info",
+        "point": [
+          11.538184,
+          0.16,
+          103.113135
+        ],
+        "radius_m": 1.5
+      },
+      "event_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "city_v002_festival_info",
+        "point": [
+          11.538184,
+          0.16,
+          103.113135
+        ],
+        "radius_m": 1.5
+      },
+      "approach_evidence": {
+        "point": [
+          11.538184,
+          0.16,
+          103.113135
+        ],
+        "node_id": "PHASE1_EXHIBITION_17",
+        "edge_id": "C07_LINK_S1",
+        "gap_m": 2.616690189166651,
+        "source_evidence": {
+          "path": "docs/placement/phase1/unity-spatial-preparation.json",
+          "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+          "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger.",
+          "object_position": [
+            14.0,
+            -0.02,
+            104.0
+          ],
+          "object_distance_xz_m": 2.616690189166651,
+          "physical_access_verified": false
+        }
+      },
+      "phase1_baseline": "PRESERVED_7ac43f0",
+      "physical_access_verified": false
+    },
+    {
+      "number": 18,
+      "code": "EXHIBITION_18",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000018",
+      "title": "길고양이에게 먹이를 주고 싶다",
+      "place_id": "city_v002_park_cat",
+      "scene_path": "CAT_Tuxedo_EastPark",
+      "status": "READY",
+      "reason": "Phase 1의 CAT_Tuxedo_EastPark 배치와 접근점을 그대로 재사용. 이전 39개 배치 보고서 이후 추가된 기존 고양이이며 신규 제작 없음.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "city_v002_park_cat",
+        "point": [
+          158.259684,
+          0.16,
+          50.839311
+        ],
+        "radius_m": 1.5
+      },
+      "event_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "city_v002_park_cat",
+        "point": [
+          158.259684,
+          0.16,
+          50.839311
+        ],
+        "radius_m": 1.5
+      },
+      "approach_evidence": {
+        "point": [
+          158.259684,
+          0.16,
+          50.839311
+        ],
+        "node_id": "PHASE1_EXHIBITION_18",
+        "edge_id": "PKE05_S0",
+        "gap_m": 2.4105216727042658,
+        "source_evidence": {
+          "path": "docs/placement/phase1/unity-spatial-preparation.json",
+          "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+          "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger.",
+          "object_position": [
+            156,
+            -0.012,
+            50
+          ],
+          "object_distance_xz_m": 2.4105216727042658,
+          "physical_access_verified": false
+        }
+      },
+      "phase1_baseline": "PRESERVED_7ac43f0",
+      "physical_access_verified": false
+    },
+    {
+      "number": 19,
+      "code": "EXHIBITION_19",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000019",
+      "title": "공용 화장실 바닥에 휴지가 떨어져 있다",
+      "place_id": "ENV_PublicToilet_ParkNorth",
+      "scene_path": "SIMUS_EventPlacement_20261020/ENV_PublicToilet_ParkNorth",
+      "status": "BLOCKED_SCENE",
+      "reason": "화장실 외관만 존재. 실내 바닥/떨어진 휴지/실내 접근 경로 근거 없음.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "ENV_PublicToilet_ParkNorth",
+        "point": [
+          153.01925659804988,
+          0.16,
+          132.51916111982857
+        ],
+        "radius_m": 2
+      },
+      "event_location": null,
+      "approach_evidence": {
+        "point": [
+          153.01925659804988,
+          0.16,
+          132.51916111982857
+        ],
+        "edge_id": "PKE03_S0",
+        "reference_point": [
+          158,
+          0.16,
+          134.354172
+        ],
+        "gap_m": 5.308019382633906
+      },
+      "phase1_baseline": "ADDED_PHASE2",
+      "physical_access_verified": false
+    },
+    {
+      "number": 20,
+      "code": "EXHIBITION_20",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000020",
+      "title": "주민들이 공원에 나무를 심고 있다",
+      "place_id": "PARK_REST_2",
+      "scene_path": "PARK_REST_2",
+      "status": "BLOCKED_SCENE",
+      "reason": "공원 녹지는 있으나 주민들의 나무 심기 상황 미표현.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "PARK_REST_2",
+        "point": [
+          142.0,
+          0.16,
+          118.0
+        ],
+        "radius_m": 2
+      },
+      "event_location": null,
+      "approach_evidence": {
+        "point": [
+          142.0,
+          0.16,
+          118.0
+        ],
+        "node_id": "PARK_REST_2",
+        "gap_m": 0
+      },
+      "phase1_baseline": "ADDED_PHASE2",
+      "physical_access_verified": false
+    },
+    {
+      "number": 21,
+      "code": "EXHIBITION_21",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000021",
+      "title": "길거리에서 두 사람이 싸우고 있다",
+      "place_id": "ENV_MysteryCrate_Plaza",
+      "scene_path": "SIMUS_EventPlacement_20261020/ENV_MysteryCrate_Plaza",
+      "status": "BLOCKED_SCENE",
+      "reason": "광장 접근 가능. 싸우는 두 사람 상황 미표현.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "ENV_MysteryCrate_Plaza",
+        "point": [
+          15.0,
+          0.16,
+          115.0
+        ],
+        "radius_m": 2
+      },
+      "event_location": null,
+      "approach_evidence": {
+        "point": [
+          15.0,
+          0.16,
+          115.0
+        ],
+        "edge_id": "C_PARK_S0",
+        "reference_point": [
+          15.0,
+          0.16,
+          118.0
+        ],
+        "gap_m": 3.0
+      },
+      "phase1_baseline": "ADDED_PHASE2",
+      "physical_access_verified": false
+    },
+    {
+      "number": 22,
+      "code": "EXHIBITION_22",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000022",
+      "title": "친구가 다른 사람의 비밀을 알려줬다",
+      "place_id": "C04_ACCESS",
+      "scene_path": "C04_ACCESS",
+      "status": "READY",
+      "reason": "학교 C04 접근점 공유. 비밀 대화는 기존 모바일 원문 사용, 잔류 중 연속 발생 금지.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "C04_ACCESS",
+        "point": [
+          -41.1685,
+          0.16,
+          67.139
+        ],
+        "radius_m": 2
+      },
+      "event_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "C04_ACCESS",
+        "point": [
+          -41.1685,
+          0.16,
+          67.139
+        ],
+        "radius_m": 2
+      },
+      "approach_evidence": {
+        "point": [
+          -41.1685,
+          0.16,
+          67.139
+        ],
+        "node_id": "C04_ACCESS",
+        "gap_m": 0
+      },
+      "phase1_baseline": "ADDED_PHASE2",
+      "physical_access_verified": false
+    },
+    {
+      "number": 23,
+      "code": "EXHIBITION_23",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000023",
+      "title": "식당에서 주문하지 않은 비싼 음식이 나왔다",
+      "place_id": "ENV_Restaurant_EastCommercial",
+      "scene_path": "SIMUS_EventPlacement_20261020/ENV_Restaurant_EastCommercial",
+      "status": "BLOCKED_ACCESS",
+      "reason": "식당 북쪽 전면/door_x 근거의 외부 접근 후보. 연속 포장/실제 출입구 경로 근거 없음. 그래프 연장 보류.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "ENV_Restaurant_EastCommercial",
+        "point": [
+          127.0,
+          0.16,
+          -107.4
+        ],
+        "radius_m": 2
+      },
+      "event_location": null,
+      "approach_evidence": {
+        "point": [
+          127.0,
+          0.16,
+          -107.4
+        ],
+        "edge_id": "B14_ACCESS_EDGE_S0",
+        "reference_point": [
+          150.2,
+          0.16,
+          -89.45
+        ],
+        "gap_m": 29.33330018937521
+      },
+      "phase1_baseline": "ADDED_PHASE2",
+      "physical_access_verified": false
+    },
+    {
+      "number": 24,
+      "code": "EXHIBITION_24",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000024",
+      "title": "공원 금지구역을 지나가면 지름길이다",
+      "place_id": "PARK_REST_2",
+      "scene_path": "PARK_REST_2",
+      "status": "BLOCKED_SCENE",
+      "reason": "공원 접근 가능하나 금지구역/울타리/제한 표식이 실제 해당 구역에 있다는 근거 없음.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "PARK_REST_2",
+        "point": [
+          142.0,
+          0.16,
+          118.0
+        ],
+        "radius_m": 2
+      },
+      "event_location": null,
+      "approach_evidence": {
+        "point": [
+          142.0,
+          0.16,
+          118.0
+        ],
+        "node_id": "PARK_REST_2",
+        "gap_m": 0
+      },
+      "phase1_baseline": "ADDED_PHASE2",
+      "physical_access_verified": false
+    },
+    {
+      "number": 25,
+      "code": "EXHIBITION_25",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000025",
+      "title": "가게에서 누군가 물건을 훔치는 걸 봤다",
+      "place_id": "B04_ACCESS",
+      "scene_path": "B04_ACCESS",
+      "status": "BLOCKED_SCENE",
+      "reason": "상가 B04 외부 접근점은 있음. 광장 범죄자 NPC는 상점 절도 행위의 근거가 아님.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "B04_ACCESS",
+        "point": [
+          6.0,
+          0.16,
+          -72.25
+        ],
+        "radius_m": 2
+      },
+      "event_location": null,
+      "approach_evidence": {
+        "point": [
+          6.0,
+          0.16,
+          -72.25
+        ],
+        "node_id": "B04_ACCESS",
+        "gap_m": 0
+      },
+      "phase1_baseline": "ADDED_PHASE2",
+      "physical_access_verified": false
+    },
+    {
+      "number": 26,
+      "code": "EXHIBITION_26",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000026",
+      "title": "갑자기 정전이 발생했다",
+      "place_id": "B04_ACCESS",
+      "scene_path": "B04_ACCESS",
+      "status": "BLOCKED_SCENE",
+      "reason": "건물 외부 접근점은 있음. 정전/CCTV 중단 상황 미표현.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "B04_ACCESS",
+        "point": [
+          6.0,
+          0.16,
+          -72.25
+        ],
+        "radius_m": 2
+      },
+      "event_location": null,
+      "approach_evidence": {
+        "point": [
+          6.0,
+          0.16,
+          -72.25
+        ],
+        "node_id": "B04_ACCESS",
+        "gap_m": 0
+      },
+      "phase1_baseline": "ADDED_PHASE2",
+      "physical_access_verified": false
+    },
+    {
+      "number": 27,
+      "code": "EXHIBITION_27",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000027",
+      "title": "폭우로 도로 일부가 침수됐다",
+      "place_id": "ENV_Barricade_R01_Control",
+      "scene_path": "SIMUS_EventPlacement_20261020/ENV_Barricade_R01_Control",
+      "status": "BLOCKED_SCENE",
+      "reason": "도로 옆 접근점은 있음. 도로 침수 상황 없음. 기존 하천/범람원 이름은 도로 침수 증거가 아님.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "ENV_Barricade_R01_Control",
+        "point": [
+          86.0,
+          0.16,
+          -65.75
+        ],
+        "radius_m": 2
+      },
+      "event_location": null,
+      "approach_evidence": {
+        "point": [
+          86.0,
+          0.16,
+          -65.75
+        ],
+        "edge_id": "B08_BRANCH_S0",
+        "reference_point": [
+          86.0,
+          0.16,
+          -62.7
+        ],
+        "gap_m": 3.049999999999997
+      },
+      "phase1_baseline": "ADDED_PHASE2",
+      "physical_access_verified": false
+    },
+    {
+      "number": 28,
+      "code": "EXHIBITION_28",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000028",
+      "title": "행사 때문에 도로가 통제됐다",
+      "place_id": "city_v002_road_control",
+      "scene_path": "SIMUS_EventPlacement_20261020/ENV_Barricade_R01_Control",
+      "status": "READY",
+      "reason": "R01 바리케이드/콘을 보는 남쪽 기존 보도 접근점. 도로를 통과하는 경로를 새로 만들지 않음.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "city_v002_road_control",
+        "point": [
+          86.0,
+          0.16,
+          -65.75
+        ],
+        "radius_m": 1.5
+      },
+      "event_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "city_v002_road_control",
+        "point": [
+          86.0,
+          0.16,
+          -65.75
+        ],
+        "radius_m": 1.5
+      },
+      "approach_evidence": {
+        "point": [
+          86.0,
+          0.16,
+          -65.75
+        ],
+        "node_id": "PHASE1_EXHIBITION_28",
+        "edge_id": "R01RE03_S0",
+        "gap_m": 3.049999999999997,
+        "source_evidence": {
+          "path": "docs/placement/phase1/unity-spatial-preparation.json",
+          "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+          "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger.",
+          "object_position": [
+            86.0,
+            0.02,
+            -62.7
+          ],
+          "object_distance_xz_m": 3.049999999999997,
+          "physical_access_verified": false
+        }
+      },
+      "phase1_baseline": "PRESERVED_7ac43f0",
+      "physical_access_verified": false
+    },
+    {
+      "number": 29,
+      "code": "EXHIBITION_29",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000029",
+      "title": "화재경보가 울렸는데 불은 보이지 않는다",
+      "place_id": "B04_ACCESS",
+      "scene_path": "B04_ACCESS",
+      "status": "BLOCKED_SCENE",
+      "reason": "건물 외부 접근점은 있음. 실제 화재경보 상황 미표현.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "B04_ACCESS",
+        "point": [
+          6.0,
+          0.16,
+          -72.25
+        ],
+        "radius_m": 2
+      },
+      "event_location": null,
+      "approach_evidence": {
+        "point": [
+          6.0,
+          0.16,
+          -72.25
+        ],
+        "node_id": "B04_ACCESS",
+        "gap_m": 0
+      },
+      "phase1_baseline": "ADDED_PHASE2",
+      "physical_access_verified": false
+    },
+    {
+      "number": 30,
+      "code": "EXHIBITION_30",
+      "seed_situation_id": "30000000-0000-0000-0000-000000000030",
+      "title": "도시 광장에서 정체불명의 상자를 발견했다",
+      "place_id": "city_v002_mystery_crate",
+      "scene_path": "SIMUS_EventPlacement_20261020/ENV_MysteryCrate_Plaza",
+      "status": "READY",
+      "reason": "광장 상자 남쪽 기존 C_PARK 보행선. 모델 중심 대신 3m 떨어진 길 위에서 발생.",
+      "candidate_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "city_v002_mystery_crate",
+        "point": [
+          15.0,
+          0.16,
+          115.0
+        ],
+        "radius_m": 1.5
+      },
+      "event_location": {
+        "map_version": "test-only-city-rebuild-v002-phase1-v1",
+        "place_id": "city_v002_mystery_crate",
+        "point": [
+          15.0,
+          0.16,
+          115.0
+        ],
+        "radius_m": 1.5
+      },
+      "approach_evidence": {
+        "point": [
+          15.0,
+          0.16,
+          115.0
+        ],
+        "node_id": "PHASE1_EXHIBITION_30",
+        "edge_id": "C_PARK_S0",
+        "gap_m": 3.0,
+        "source_evidence": {
+          "path": "docs/placement/phase1/unity-spatial-preparation.json",
+          "coordinate_basis": "Saved scene world transform and existing graph projection; selected route points use existing serialized floor mesh geometry.",
+          "radius_basis": "A 1.5m along-route approach window around the anchor, not certification of object interaction or a physical trigger.",
+          "object_position": [
+            15.0,
+            -0.02,
+            118.0
+          ],
+          "object_distance_xz_m": 3.0,
+          "physical_access_verified": false
+        }
+      },
+      "phase1_baseline": "PRESERVED_7ac43f0",
+      "physical_access_verified": false
+    }
+  ]
+}

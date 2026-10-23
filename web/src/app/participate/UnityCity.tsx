@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { BRIDGE_CHANNEL, BRIDGE_VERSION, matchesOwnSnapshot, readUnityEvent } from "./unity-bridge";
 import type { NpcSnapshot } from "./npc-motion";
 import styles from "./participate.module.css";
-import { cityBuildBase, V002_MAP_VERSION } from "@/lib/city-builds";
+import { cityBuildBase, isCityV002Map } from "@/lib/city-builds";
+import Population from "./Population";
 
 type View = { phase: "loading" | "ready" | "error"; message: string; src?: string; zoomSupported?: boolean };
 
@@ -97,7 +98,7 @@ export default function UnityCity({ sessionId }: { sessionId: string }) {
         const build = await response.json();
         if (build.protocol_version !== BRIDGE_VERSION || typeof build.map_version !== "string" || !build.map_version.trim()) throw new Error("Invalid build");
         if (build.map_version !== sessionMap || build.npc_motion_enabled === false ||
-            (sessionMap === V002_MAP_VERSION && (build.npc_motion_enabled !== true || !build.path_versions?.includes(initial.npcs[0].motion.path_version)))) {
+            (isCityV002Map(sessionMap) && (build.npc_motion_enabled !== true || !build.path_versions?.includes(initial.npcs[0].motion.path_version)))) {
           fail("회차의 도시 또는 경로 버전과 배포 빌드가 맞지 않습니다. 관리자에게 문의해 주세요."); return;
         }
         if (disposed || failed) return;
@@ -125,6 +126,7 @@ export default function UnityCity({ sessionId }: { sessionId: string }) {
     {view.src && <iframe key={view.src} ref={frame} src={view.src} title="SIM:US 도시" className={styles.cityFrame}
       style={{ visibility: view.phase === "ready" ? "visible" : "hidden" }} onError={() => setView({ phase: "error", message: "도시를 불러오지 못했습니다. 다시 시도해 주세요." })} />}
     <div className={styles.cityOverlay}>
+      <Population key={sessionId} sessionId={sessionId} />
       <div className={styles.cityStatus} role={view.phase === "error" ? "alert" : "status"}>
         <p>{view.message}</p>
         {view.phase === "loading" && <span>처음 접속할 때는 시간이 걸릴 수 있어요.</span>}

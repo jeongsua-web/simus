@@ -45,7 +45,12 @@ export async function runNpcEventIntegration({ pool, env, token, templateId, sto
     SELECT $1,t.id,c.label,c.n,'NORMAL' FROM simus.session_situations t
     CROSS JOIN (VALUES ('First',1),('Second',2)) c(label,n)
     WHERE t.session_id=$1 AND t.id=ANY($2::uuid[])`,[sid,[...added.map(t=>t.id),placeholder]]);
-  const timedIds = new Set([generic,...added.filter(t=>!t.event_location).map(t=>t.id)]);
+  const colocated = (await pool.query(`INSERT INTO simus.session_situations
+    (session_id,code,title,body,display_order,event_location) VALUES
+    ($1,'SAME_PLACE_FIXTURE','Same place','Choose',500,$2) RETURNING id`,[sid,locationInput.event_location])).rows[0].id;
+  await pool.query(`INSERT INTO simus.session_choices(session_id,situation_id,label,display_order)
+    VALUES($1,$2,'Help',1),($1,$2,'Pass',2)`,[sid,colocated]);
+  const locatedIds = new Set([located,colocated]);
   assert.equal((await call(`/api/admin/sessions/${sid}/start`, { method: 'POST', admin: true, data: { request_key: randomUUID() } })).status, 200);
   assert.equal((await call(locationsPath,{method:'PUT',admin:true,data:locationInput})).body.error.code,'EVENT_LOCATION_LOCKED');
   const owner = await call('/api/participants', { method: 'POST' });
@@ -58,7 +63,8 @@ export async function runNpcEventIntegration({ pool, env, token, templateId, sto
   assert.equal((await call(eventPath,{cookie:stranger.cookie})).body.error.code,'NOT_JOINED');
   const waiting = await event();
   assert.equal(waiting.body.phase,'WAITING'); assert.equal(waiting.body.event,null);
-  assert.equal(Date.parse(waiting.body.deadline_at)-Date.parse(waiting.body.waiting_since),90000);
+  assert.equal(waiting.body.deadline_at,null);
+  assert.equal(Date.parse(waiting.body.guidance_at)-Date.parse(waiting.body.waiting_since),60000);
   const metadata = await call('/api/sessions/current');
   for (const situation of metadata.body.situations ?? metadata.body.session?.situations ?? []) assert.deepEqual(situation.choices,[]);
   await pool.query("UPDATE simus.npc_event_states SET waiting_since=clock_timestamp()-interval '59 seconds' WHERE session_id=$1 AND participant_id=$2",[sid,pid]);
@@ -70,16 +76,21 @@ export async function runNpcEventIntegration({ pool, env, token, templateId, sto
   await pool.query("UPDATE simus.npc_event_states SET guidance_started_at=clock_timestamp()-interval '10 seconds' WHERE session_id=$1 AND participant_id=$2",[sid,pid]);
   await pool.query("UPDATE simus.npc_event_states SET waiting_since=clock_timestamp()-interval '89 seconds' WHERE session_id=$1 AND participant_id=$2",[sid,pid]);
   assert.equal((await event()).body.event,null);
-  // Deadline is advanced by the server's periodic scheduler, without any event GET.
+  // Passing 90 seconds mid-route must NOT trigger any mapped or unlocated event.
   await pool.query("UPDATE simus.npc_event_states SET waiting_since=clock_timestamp()-interval '91 seconds' WHERE session_id=$1 AND participant_id=$2",[sid,pid]);
+  assert.equal((await event()).body.event,null);
+  assert.equal((await pool.query("SELECT count(*) FROM simus.npc_events WHERE session_id=$1 AND participant_id=$2",[sid,pid])).rows[0].count,'0');
+  // Advance the fixture's guidance clock until its actual pose reaches the place.
+  // The autonomous ticker must trigger arrival without an event GET.
+  await pool.query("UPDATE simus.npc_event_states SET guidance_started_at=clock_timestamp()-interval '200 seconds' WHERE session_id=$1 AND participant_id=$2",[sid,pid]);
   const until=Date.now()+1000; let occurrence;
   while(Date.now()<until) {
     occurrence=(await pool.query("SELECT * FROM simus.npc_events WHERE session_id=$1 AND participant_id=$2 AND status='ACTIVE'",[sid,pid])).rows[0];
     if(occurrence) break;
     await new Promise(resolve=>setTimeout(resolve,50));
   }
-  assert.ok(occurrence,'Scheduler must trigger the deadline without client polling within 1 second');
-  assert.ok(timedIds.has(occurrence.situation_id)); assert.equal(occurrence.trigger_kind,'DEADLINE');
+  assert.ok(occurrence,'Scheduler must trigger actual arrival without client polling');
+  assert.ok(locatedIds.has(occurrence.situation_id)); assert.equal(occurrence.trigger_kind,'LOCATION');
   if(stopServer&&startServer) {
     await stopServer(); await startServer();
     assert.equal((await event()).body.event.id,occurrence.id,'Process restart preserves the active event');
@@ -105,29 +116,24 @@ export async function runNpcEventIntegration({ pool, env, token, templateId, sto
   assert.ok(Math.hypot(...resumedPoint.map((v,i)=>v-frozenPoint[i]))<1,'Completion must resume without teleporting from the guided path');
   const resumed=await event();assert.equal(resumed.body.phase,'WAITING');assert.equal(resumed.body.event,null);
   assert.ok(Date.parse(resumed.body.waiting_since)>Date.parse(waiting.body.waiting_since));
-  assert.ok(Date.parse(resumed.body.deadline_at)-Date.parse(resumed.body.server_time)>88000);
-  // Move the fixture NPC to an authored location; RUNNING content stays immutable.
+  assert.equal(resumed.body.deadline_at,null);
+  assert.ok(Object.values((await pool.query('SELECT location_occupancy FROM simus.npc_event_states WHERE session_id=$1 AND participant_id=$2',[sid,pid])).rows[0].location_occupancy).some(s=>s.inside));
+  if(stopServer&&startServer) { await stopServer(); await startServer(); }
+  assert.equal((await event()).body.event,null,'A reconnect at the same place must not consume the other event');
+  // Leave the place, release its durable latch, then return. Only runtime state
+  // changes; RUNNING content and membership snapshots remain immutable.
+  await pool.query('UPDATE simus.npc_event_states SET resume_motion=$3,motion_epoch=clock_timestamp(),paused_ms=0 WHERE session_id=$1 AND participant_id=$2',[sid,pid,JSON.stringify({...motion,points:[[110,0,100],[120,0,100]]})]);
+  assert.equal((await event()).body.event,null);
+  assert.ok(Object.values((await pool.query('SELECT location_occupancy FROM simus.npc_event_states WHERE session_id=$1 AND participant_id=$2',[sid,pid])).rows[0].location_occupancy).every(s=>!s.inside));
   await pool.query('UPDATE simus.npc_event_states SET resume_motion=$3,motion_epoch=clock_timestamp(),paused_ms=0 WHERE session_id=$1 AND participant_id=$2',[sid,pid,JSON.stringify({...motion,points:[[100,0,100],[110,0,100]]})]);
-  const nearby=await event();assert.equal(nearby.body.event.situation_id,located);assert.equal(nearby.body.event.trigger_kind,'LOCATION');
+  const nearby=await event();assert.ok(locatedIds.has(nearby.body.event.situation_id));assert.notEqual(nearby.body.event.situation_id,occurrence.situation_id);assert.equal(nearby.body.event.trigger_kind,'LOCATION');
   assert.equal((await event()).body.event.id,nearby.body.event.id); // durable refresh identity
-  const locationPayload={...payload,event_id:nearby.body.event.id,situation_id:located,choice_id:nearby.body.event.situation.choices[0].id,request_key:randomUUID()};
+  const locationPayload={...payload,event_id:nearby.body.event.id,situation_id:nearby.body.event.situation_id,choice_id:nearby.body.event.situation.choices[0].id,request_key:randomUUID()};
   assert.equal((await call('/api/choices',{method:'POST',cookie:owner.cookie,data:locationPayload})).status,201);
-  const seen = new Set([occurrence.situation_id,located]);
-  for (let n=1;n<timedIds.size;n++) {
-    await pool.query("UPDATE simus.npc_event_states SET waiting_since=clock_timestamp()-interval '91 seconds' WHERE session_id=$1 AND participant_id=$2",[sid,pid]);
-    const next=(await event()).body.event;
-    assert.ok(next,'Every unanswered, unlocated situation must remain reachable');
-    assert.ok(timedIds.has(next.situation_id));
-    assert.ok(!seen.has(next.situation_id),'A participant must never repeat an answered situation');
-    seen.add(next.situation_id);
-    assert.equal((await call('/api/choices',{method:'POST',cookie:owner.cookie,data:{
-      ...payload,event_id:next.id,situation_id:next.situation_id,choice_id:next.situation.choices[0].id,request_key:randomUUID()
-    }})).status,201);
-  }
   await pool.query("UPDATE simus.npc_event_states SET waiting_since=clock_timestamp()-interval '91 seconds' WHERE session_id=$1 AND participant_id=$2",[sid,pid]);
   for (let n=0;n<3;n++) assert.equal((await event()).body.event,null,'Exhaustion must not recycle greetings or use foreign-map locations');
   const counts=(await pool.query('SELECT count(*)::int AS total,count(DISTINCT situation_id)::int AS unique FROM simus.choice_records WHERE session_id=$1 AND participant_id=$2',[sid,pid])).rows[0];
-  assert.deepEqual(counts,{total:timedIds.size+1,unique:timedIds.size+1});
+  assert.deepEqual(counts,{total:2,unique:2});
   // Batch fixture writes remain confined to this disposable pool. No HTTP event polls.
   const batch=(await pool.query(`WITH added AS (
     INSERT INTO simus.participants(id) SELECT gen_random_uuid() FROM generate_series(1,1000) RETURNING id
@@ -135,7 +141,7 @@ export async function runNpcEventIntegration({ pool, env, token, templateId, sto
     INSERT INTO simus.participant_sessions(session_id,participant_id,npc_motion)
     SELECT $1,id,$2::jsonb FROM added RETURNING participant_id,joined_at
   ) INSERT INTO simus.npc_event_states(session_id,participant_id,waiting_since,motion_epoch)
-    SELECT $1,participant_id,clock_timestamp()-interval '91 seconds',joined_at FROM joined RETURNING participant_id`,[sid,JSON.stringify(motion)])).rows.map(row=>row.participant_id);
+    SELECT $1,participant_id,clock_timestamp()-interval '91 seconds',joined_at FROM joined RETURNING participant_id`,[sid,JSON.stringify({...motion,points:[[100,0,100],[1000,0,100]]})])).rows.map(row=>row.participant_id);
   await pool.query('INSERT INTO simus.participant_alignments(session_id,participant_id) SELECT $1,unnest($2::uuid[])',[sid,batch]);
   const batchUntil=Date.now()+8000;let batchCount=0;
   while(Date.now()<batchUntil) {
@@ -143,15 +149,15 @@ export async function runNpcEventIntegration({ pool, env, token, templateId, sto
     if(batchCount===1000) break;
     await new Promise(resolve=>setTimeout(resolve,100));
   }
-  assert.equal(batchCount,1000,'The autonomous scheduler must deliver all 1000 overdue participants within 8 seconds');
+  assert.equal(batchCount,1000,'Every participant actually at the place must receive an event without a probability gate');
   const variety=(await pool.query('SELECT DISTINCT situation_id FROM simus.npc_events WHERE session_id=$1 AND participant_id=ANY($2::uuid[])',[sid,batch])).rows;
   assert.ok(variety.length>1,'Participants must receive varied first situations');
-  assert.ok(variety.every(t=>timedIds.has(t.situation_id)));
+  assert.ok(variety.every(t=>locatedIds.has(t.situation_id)));
   await pool.query("UPDATE simus.simulation_sessions SET admission_closed_at=clock_timestamp() WHERE id=$1",[sid]);
   await pool.query("UPDATE simus.npc_event_states SET waiting_since=clock_timestamp()-interval '91 seconds' WHERE session_id=$1 AND participant_id=$2",[sid,pid]);
   const closed=await event();assert.equal(closed.body.phase,'CLOSED');assert.equal(closed.body.event,null);
   assert.equal((await pool.query("SELECT count(*) FROM simus.npc_events WHERE session_id=$1 AND participant_id=$2 AND status='ACTIVE'",[sid,pid])).rows[0].count,'0');
   const ended=await call(`/api/admin/sessions/${sid}/end`,{method:'POST',admin:true,data:{request_key:randomUUID()}});
   assert.equal(ended.status,200,JSON.stringify(ended.body));
-  console.log('PASS: NPC timing, location priority, restart, concurrency, score idempotence, 30 unmapped situations without repeats, exhaustion, map isolation and varied 1000-participant scheduler batch');
+  console.log('PASS: arrival-only events, no 90s fallback, 60s guidance, durable place exit/reentry, restart, concurrency, score idempotence, unlocated/foreign-map exclusion and 1000 actual arrivals');
 }

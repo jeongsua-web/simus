@@ -5,6 +5,7 @@ import path from 'node:path';
 import { SignJWT } from 'jose';
 import { MAP_VERSION, defaultMotion, nodePoint } from '../src/lib/city-v002-graph.mjs';
 import content from '../src/lib/data/initial-session-content.json' with { type: 'json' };
+import { preparedLocation } from '../src/lib/city-v002-event-mapping.mjs';
 
 // Called only by the disposable-cluster runner; never connects to a configured DB.
 export async function runInitialSessionIntegration({ pool, env, privateKey, publicJwk }) {
@@ -36,7 +37,7 @@ export async function runInitialSessionIntegration({ pool, env, privateKey, publ
     {impact_scale:-1},{impact_scale:1.1},{impact_scale:.12345678901},{npc_profile:'legacy'},{template_session_id:randomUUID()},
     {creation_mode:'unknown'},{request_key:'bad'}])
     assert.equal((await call(endpoint,{...payload,...patch})).status,400,JSON.stringify(patch));
-  const file=path.join(env.SIMUS_WEBGL_PUBLIC_ROOT,'city-rebuild-v002/build.json');
+  const file=path.join(env.SIMUS_WEBGL_PUBLIC_ROOT,'city-rebuild-v002-phase1/build.json');
   const raw=await readFile(file,'utf8');
   try {
     await writeFile(file,JSON.stringify({...JSON.parse(raw),map_version:'foreign'}));
@@ -62,7 +63,9 @@ export async function runInitialSessionIntegration({ pool, env, privateKey, publ
   for (const table of ['participant_sessions','city_states','region_states','admin_actions'])
     assert.equal((await pool.query(`SELECT count(*) FROM simus.${table}`)).rows[0].count,'0');
   const situations=(await pool.query('SELECT * FROM simus.session_situations WHERE session_id=$1 ORDER BY display_order',[sid])).rows;
-  assert.equal(situations.length,30);assert.ok(situations.every(s=>s.event_location===null&&!s.is_generic));
+  assert.equal(situations.length,30);assert.ok(situations.every(s=>!s.is_generic));
+  assert.equal(situations.filter(s=>s.event_location).length,12);
+  for (const situation of situations) assert.deepEqual(situation.event_location,preparedLocation(situation.code));
   assert.deepEqual(situations.map(s=>s.title),content.situations.map(s=>s.title));
   const choices=(await pool.query(`SELECT c.*,e.pollution_base FROM simus.session_choices c JOIN simus.choice_region_effects e
     ON (e.session_id,e.situation_id,e.choice_id)=(c.session_id,c.situation_id,c.id) WHERE c.session_id=$1 ORDER BY c.situation_id,c.display_order`,[sid])).rows;
@@ -72,13 +75,13 @@ export async function runInitialSessionIntegration({ pool, env, privateKey, publ
   assert.equal((await call(endpoint)).body.sessions[0].can_start,true);
   // The existing map editor accepts an authored v002 point on the initial round.
   const location=await fetch(`${env.TEST_API_URL}${endpoint}/${sid}/event-locations`,{method:'PUT',headers:{authorization:`Bearer ${token}`,'content-type':'application/json'},
-    body:JSON.stringify({situation_id:situations[0].id,is_generic:false,event_location:{map_version:MAP_VERSION,point:nodePoint('CAMPUS_PLAZA'),radius_m:2}})});
+    body:JSON.stringify({situation_id:situations[1].id,is_generic:false,event_location:{place_id:'fixture_initial_gate',map_version:MAP_VERSION,point:nodePoint('MN_GATE'),radius_m:1.5}})});
   assert.equal(location.status,200,await location.text());
   const clonePayload={template_session_id:sid,npc_profile:'city-rebuild-v002',name:'Second city',duration_seconds:300,impact_scale:.2,request_key:randomUUID()};
   const clone=await call(endpoint,clonePayload);assert.equal(clone.status,201);assert.equal(clone.body.status,'DRAFT');
   assert.equal((await call(endpoint,clonePayload)).status,200);
   assert.equal((await pool.query('SELECT count(*) FROM simus.session_situations WHERE session_id=$1',[clone.body.session_id])).rows[0].count,'30');
-  assert.equal((await pool.query('SELECT event_location FROM simus.session_situations WHERE session_id=$1 AND id=$2',[clone.body.session_id,situations[0].id])).rows[0].event_location.map_version,MAP_VERSION);
+  assert.equal((await pool.query('SELECT event_location FROM simus.session_situations WHERE session_id=$1 AND id=$2',[clone.body.session_id,situations[1].id])).rows[0].event_location.map_version,MAP_VERSION);
   for (const action of ['start','end']) {
     const result=await call(`${endpoint}/${sid}/${action}`,{request_key:randomUUID()});assert.equal(result.status,200,JSON.stringify(result.body));
     if(action==='start') {

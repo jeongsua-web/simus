@@ -1,9 +1,10 @@
 import type { PoolClient } from "pg";
 import content from "./data/initial-session-content.json";
 import { validateRules } from "./session-rules";
+import { preparedLocation } from "./city-v002-event-mapping.mjs";
 
-// Approved text/scores only. Geometry remains unassigned until an administrator
-// authors it using the selected map's event-location editor.
+// Original text/scores/IDs remain unchanged. Only evidenced READY locations
+// are authored into a newly created v002 DRAFT, never an existing session.
 export const initialRules = validateRules({
   version: 1,
   alignment_thresholds: { negative: -3, positive: 3 },
@@ -27,8 +28,9 @@ export async function insertInitialContent(db: PoolClient, sessionId: string) {
   for (const situation of content.situations) {
     const situationId = contentId(3, situation.number);
     await db.query(`INSERT INTO simus.session_situations(session_id,id,code,title,body,display_order,event_location,is_generic)
-      VALUES($1,$2,$3,$4,$4,$5,NULL,false)`,
-    [sessionId, situationId, `EXHIBITION_${String(situation.number).padStart(2, "0")}`, situation.title, situation.number]);
+      VALUES($1,$2,$3,$4,$4,$5,$6,false)`,
+    [sessionId, situationId, `EXHIBITION_${String(situation.number).padStart(2, "0")}`, situation.title, situation.number,
+      preparedLocation(`EXHIBITION_${String(situation.number).padStart(2, "0")}`)]);
     for (const choice of situation.choices) {
       const choiceId = contentId(4, situation.number * 10 + choice.number);
       const s = choice.scores;

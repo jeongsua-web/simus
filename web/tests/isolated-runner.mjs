@@ -16,6 +16,7 @@ import pg from 'pg';
 import { runDepartmentIntegration } from './departments.integration.mjs';
 import { runNpcPositionIntegration } from './npc-positions.integration.mjs';
 import { runProfileIntegration } from './profiles.integration.mjs';
+import { runPopulationIntegration } from './population.integration.mjs';
 import { runDepartmentStatisticsIntegration } from './department-statistics.integration.mjs';
 import { runResultLinksIntegration } from './result-links.integration.mjs';
 import { runExhibitionContentIntegration } from './exhibition-content.integration.mjs';
@@ -75,10 +76,10 @@ async function fixtureBuild(map = 'test-fixture-v1', route = 'test-path-v1') {
   await writeFile(path.join(fixtureCity, 'build.json'), JSON.stringify({protocol_version:1,map_version:map,path_versions:[route],npc_motion_enabled:true}));
 }
 await fixtureBuild();
-const v002 = path.join(env.SIMUS_WEBGL_PUBLIC_ROOT, 'city-rebuild-v002');
+const v002 = path.join(env.SIMUS_WEBGL_PUBLIC_ROOT, 'city-rebuild-v002-phase1');
 await mkdir(v002);
-for (const name of ['build.json','index.html','bridge.js']) await cp(path.join(web,'public/city-rebuild-v002',name),path.join(v002,name));
-await symlink(path.join(web,'public/city-rebuild-v002/Build'),path.join(v002,'Build'), 'dir');
+for (const name of ['build.json','index.html','bridge.js']) await cp(path.join(web,'public/city-rebuild-v002-phase1',name),path.join(v002,name));
+await symlink(path.join(web,'public/city-rebuild-v002-phase1/Build'),path.join(v002,'Build'), 'dir');
 let server, running = false, pool;
 async function stopServer() {
   if (server && server.exitCode === null) { const ended = once(server, 'exit'); server.kill(); await ended; }
@@ -120,6 +121,7 @@ try {
   await pool.query(await readFile(path.join(web, '../db/014_participant_glasses.sql'), 'utf8'));
   await pool.query(await readFile(path.join(web, '../db/015_npc_graph_guidance.sql'), 'utf8'));
   await pool.query(await readFile(path.join(web, '../db/017_initial_session_creation.sql'), 'utf8'));
+  await pool.query(await readFile(path.join(web, '../db/018_npc_event_visit.sql'), 'utf8'));
   await pool.query((await readFile(path.join(web, '../db/verify_schema.sql'), 'utf8')).replace(/^\\set.*$/gm, ''));
   // Synthetic geometry belongs only to this disposable test cluster. Production has no route default.
   await pool.query(`CREATE FUNCTION simus.test_fixture_npc_motion() RETURNS trigger LANGUAGE plpgsql AS $$
@@ -129,6 +131,12 @@ try {
   await startServer();
   if (env.TEST_INITIAL_SESSION_ONLY === '1') {
     await runInitialSessionIntegration({ pool, env, privateKey, publicJwk });
+  } else if (env.TEST_POPULATION_ONLY === '1') {
+    await pool.query(await readFile(path.join(web, '../db/seed_demo.sql'), 'utf8'));
+    const token = await new SignJWT({}).setProtectedHeader({ alg: 'RS256', kid: publicJwk.kid })
+      .setIssuer(env.ADMIN_TOKEN_ISSUER).setAudience(env.ADMIN_TOKEN_AUDIENCE)
+      .setSubject('dev-admin').setIssuedAt().setExpirationTime('30m').sign(privateKey);
+    await runPopulationIntegration({ pool, env, token, templateId: '10000000-0000-0000-0000-000000000001' });
   } else {
   console.log(await command(process.execPath, ['tests/session-lifecycle.integration.mjs'], env));
   await runFlow({ pool, env, stopServer, startServer });
@@ -188,6 +196,7 @@ try {
   await runNpcPositionIntegration({ pool, env, token: demoToken, templateId: demoId });
   await fixtureBuild();
   await runProfileIntegration({ pool, env, token: demoToken, templateId: demoId });
+  await runPopulationIntegration({ pool, env, token: demoToken, templateId: demoId });
   await runDepartmentStatisticsIntegration({ pool, env, token: demoToken, templateId: demoId });
   await runResultLinksIntegration({ pool, env, token: demoToken, templateId: demoId });
   await runStageIntegration({ pool, env, token: demoToken, demoId });

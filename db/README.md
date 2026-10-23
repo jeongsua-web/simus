@@ -2,7 +2,7 @@
 
 DB 초기화와 기존 DB 업그레이드는 [관리형 마이그레이션 운영 안내](../docs/operations/db-migrations.md)를 따른다. 이번 변경은 **구현 및 정적 검토만** 수행하며 DB 접속·테스트·배포는 별도 승인 대상이다.
 
-- 신규 전용 DB: `scripts/db/migrate.py init`으로 001~011 → 013 → **016** → 015 → **017**를 적용한다. DB 자체의 생성은 별도다.
+- 신규 전용 DB: `scripts/db/migrate.py init`으로 001~011 → 013 → **016** → 015 → **017** → **018**을 적용한다. DB 자체의 생성은 별도다.
 - 기존 DB: 최소 010 적용 증빙과 구조 검토 후 `baseline`으로 이력만 채택하고 `upgrade`한다. 이미 관리 이력이 있다면 `upgrade`만 사용한다. 기존 볼륨을 지우지 않는다.
 - 원본 001~015는 불변이다. **014는 직접 실행하지 않고 016으로 대체**한다. 014가 이미 적용된 DB의 안경 값은 UPDATE하지 않는다. 기존 015가 있고 014가 없는 DB도 지원한다.
 - **012의 RUNNING 콘텐츠 변경은 기본 제외**한다. 별도 승인 후 `approve-running-content --approval-reference ...`로만 실행한다.
@@ -38,3 +38,11 @@ PostgreSQL 14 이상을 대상으로 한다(개발 Compose는 16). 모든 서버
 ## 최초 회차 생성
 
 017은 생성 요청의 `template_session_id`를 NULL로 허용하고 최초 생성 기록을 전체에서 한 개로 제한한다. 기존 회차·계정·콘텐츠 행을 변경하지 않는다. 신규 설치 SQL 준비 도구와 관리형 upgrade 순서에 포함되어 있다. 애플리케이션 변경보다 먼저 관리형 절차로 적용해야 하며, 이 작업에서는 운영 DB에 적용하지 않았다. 최초 생성 API와 검증 결과는 [최초 회차 구현 기록](../docs/verification/initial-session-creation.md)을 참고한다.
+
+## Phase 2 위치 이벤트 준비 (미적용)
+
+018은 다른 브랜치의 Phase 1 커밋 `7ac43f0`에 있던 장소 진입 스키마를 이식한다. 이 브랜치의 불변 016(안경 migration)과 번호가 충돌하므로 018을 사용한다. `location_occupancy`, `location_evaluated_at`, 진단용 `overdue_since`, 이벤트 `place_id/entry_seq`, 진입당 유일 인덱스를 추가하며 기존 이벤트·콘텐츠·좌표를 재작성하지 않는다. 새 서버 배포 전에 별도 승인 후 적용해야 한다. 기존에 다른 브랜치의 `016_location_entry_events.sql`을 적용한 DB에는 018을 맹목 재실행하지 말고 이력·스키마를 별도로 대조한다.
+
+`web/scripts/prepare-city-v002-events.mjs`는 원본 seed UUID/30개 원문/91개 선택지와 Phase 1의 8개 canonical 좌표를 재사용해 [DRAFT 전용 SQL](content/city-v002-events-phase2-draft.sql)을 생성한다. 선택적으로 `--audit`은 DB를 `REPEATABLE READ READ ONLY`로 읽고 ROLLBACK한 뒤 파일만 남긴다. 적용 모드는 없다. SQL 자체는 지정된 개발 DB·미가입 DRAFT·Phase 1 map/path·018 스키마를 요구한다. 기존 ID/원문/선택지/스탯/모든 non-null 좌표를 보존하고, 누락된 원본 콘텐츠만 원래 seed ID로 삽입한다. ID 충돌·부분 선택지·원문 차이는 변경 대신 중단한다. 12개 준비 위치만 설정하며 미완료 18개 후보를 활성화하지 않는다.
+
+이번 작업은 코드·SQL 준비와 읽기 전용 콘텐츠 조사까지이며 실제 migration/seed 적용·QA·빌드·배포는 수행하지 않았다. [30개별 보고서](../docs/placement/phase2/implementation-report.md)를 먼저 검토한다.

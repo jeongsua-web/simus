@@ -1,29 +1,36 @@
 import type { PoolClient } from "pg";
 import { randomInt } from "node:crypto";
 import { ApiError, transaction } from "./api";
-import { MAP_VERSION, routeBetween, pathLength } from "./city-v002-graph.mjs";
-import { guidanceMotion, guidancePosition, resumedNpc, returnMotion } from "./npc-graph-motion";
+import { isV002MapVersion, routeBetween, pathLength } from "./city-v002-graph.mjs";
+import { guidanceMotion, guidancePosition, resumedNpc, returnMotion, type ReturnMotion } from "./npc-graph-motion";
 import { npcPosition, type Npc } from "@/app/participate/npc-motion";
+import { normalizeEventLocation, type EventLocation } from "./event-locations";
+import { playableLocation } from "./city-v002-event-mapping.mjs";
+import { scanPlace } from "./npc-place-trajectory";
 
 type Point = number[];
 type State = {
   waiting_since: Date; motion_epoch: Date; paused_ms: string;
-  resume_motion: Npc["motion"] | null; guidance_point: Point | null;
+  resume_motion: ReturnMotion | null; guidance_point: Point | null;
   guidance_origin: Point | null; guidance_started_at: Date | null;
   guidance_motion?: Npc["motion"] | null;
+  location_occupancy: Record<string, Occupancy>;
+  location_evaluated_at: Date | null; overdue_since: Date | null;
 };
+type Occupancy = { inside: boolean; entry_seq: number; consumed_entry_seq: number };
 type Member = State & {
   participant_id: string; npc_id: string; npc_motion: Npc["motion"];
   active: Event | null;
 };
 type Situation = {
   id: string; code: string; title: string; body: string; display_order: number;
-  event_location: { map_version: string; point: Point; radius_m: number } | null;
+  event_location: EventLocation | null;
   is_generic: boolean; choices: { id: string; label: string; display_order: number }[];
 };
 type Event = {
   id: string; situation_id: string; started_at: Date;
   trigger_kind: "LOCATION" | "DEADLINE";
+  place_id?: string | null; entry_seq?: string | null;
 };
 type Session = {
   id: string; now: Date; status: string; admission_closed_at: Date | null;
@@ -37,12 +44,11 @@ type World = {
 type Transition = {
   participant_id: string; situation_id?: string; trigger_kind?: string;
   started_at?: string; guidance_point?: Point; guidance_origin?: Point; guidance_motion?: Npc["motion"];
+  place_id?: string; entry_seq?: number;
+  location_occupancy: Record<string, Occupancy>; location_evaluated_at: string; overdue_since: string | null;
 };
-const distance = (a: Point, b: Point) => Math.hypot(...a.map((n, i) => n - b[i]));
 const timestamp = (value: Date | string) => new Date(value).getTime();
 const pick = <T,>(items: T[]): T | undefined => items.length ? items[randomInt(items.length)] : undefined;
-const isPlaceholder = (t: Situation) =>
-  t.code === "SIMUS_COMMON_ENCOUNTER" || t.code === "SIMUS_COMMON_ENCOUNTER_UPGRADE";
 function isOpen(s: Session) {
   const buffer = s.admission_buffer;
   const cutoff = timestamp(s.scheduled_end_at) -
@@ -55,12 +61,12 @@ function isOpen(s: Session) {
 // Four batched reads replace per-NPC content and history queries.
 async function readWorld(db: PoolClient, session: Session, participant?: string): Promise<World> {
   await db.query(`INSERT INTO simus.npc_event_states
-    (session_id,participant_id,waiting_since,motion_epoch)
-    SELECT session_id,participant_id,joined_at,joined_at FROM simus.participant_sessions
+    (session_id,participant_id,waiting_since,motion_epoch,location_evaluated_at)
+    SELECT session_id,participant_id,joined_at,joined_at,joined_at FROM simus.participant_sessions
     WHERE session_id=$1 AND ($2::uuid IS NULL OR participant_id=$2)
     ON CONFLICT DO NOTHING`, [session.id, participant ?? null]);
   const members = await db.query<Member>(`SELECT p.participant_id,p.npc_id,p.npc_motion,st.*,
-    CASE WHEN e.id IS NULL THEN NULL ELSE to_jsonb(e) END AS active
+    CASE WHEN e.id IS NULL THEN NULL ELSE to_jsonb(e) || jsonb_build_object('entry_seq',e.entry_seq::text) END AS active
     FROM simus.participant_sessions p JOIN simus.npc_event_states st USING(session_id,participant_id)
     LEFT JOIN simus.npc_events e ON e.session_id=p.session_id
       AND e.participant_id=p.participant_id AND e.status='ACTIVE'
@@ -69,10 +75,6 @@ async function readWorld(db: PoolClient, session: Session, participant?: string)
   // Runtime routes can adjust speed while the joined motion snapshot stays immutable.
   for (const member of members.rows) {
     if (member.resume_motion) member.npc_motion = { ...member.npc_motion, speed_mps: member.resume_motion.speed_mps };
-  }
-  // A ticker pass has no work when every participant is waiting for a decision.
-  if (!participant && members.rows.every(p => p.active)) {
-    return { session, members: members.rows, situations: [], answered: new Map() };
   }
   const situations = await db.query<Situation>(`SELECT t.*,
     COALESCE((SELECT jsonb_agg(jsonb_build_object('id',c.id,'label',c.label,
@@ -92,63 +94,119 @@ async function readWorld(db: PoolClient, session: Session, participant?: string)
 }
 
 function transitionFor(world: World, p: Member): Transition | null {
-  if (p.active || !isOpen(world.session)) return null;
+  if (!isOpen(world.session)) return null;
   const now = timestamp(world.session.now);
   const fresh = world.situations.filter(t => !world.answered.get(p.participant_id)?.has(t.id));
+  const places = new Map<string, EventLocation>();
+  for (const situation of world.situations) {
+    try {
+      const location = normalizeEventLocation(situation.event_location);
+      situation.event_location = location;
+      if (location.map_version === p.npc_motion.map_version && playableLocation(situation.code, location))
+        places.set(location.place_id, location);
+    } catch { /* Legacy unplaced content remains inactive until explicitly mapped. */ }
+  }
+  const until = p.active ? Math.min(now, timestamp(p.active.started_at)) : now;
+  // Legacy rows have no historical entry cursor: establish occupancy at the
+  // current pose rather than replaying motion predating this policy.
+  const from = Math.min(until, p.location_evaluated_at ? timestamp(p.location_evaluated_at) : until);
+  const scan = (end: number) => {
+    const occupancy: Record<string, Occupancy> = Object.assign(Object.create(null), p.location_occupancy);
+    const entered = new Map<string, number>();
+    for (const [id, location] of places) {
+      let state = { ...(occupancy[id] ?? { inside: false, entry_seq: 0, consumed_entry_seq: 0 }) };
+      for (const phase of motionPhases(p, from, end)) {
+        const result = scanPlace(phase.npc, phase.from, phase.to, location, state.inside);
+        if (result.firstEntry !== null && !entered.has(id)) entered.set(id, result.firstEntry);
+        if (!Number.isSafeInteger(state.entry_seq + result.entries))
+          throw new ApiError(409, "EVENT_ENTRY_LIMIT", "장소 진입 횟수의 지원 범위를 초과했습니다.");
+        state = { inside: result.inside, entry_seq: state.entry_seq + result.entries,
+          consumed_entry_seq: state.entry_seq + result.entries };
+      }
+      occupancy[id] = state;
+    }
+    return { occupancy, entered };
+  };
+  const scanned = scan(until);
+  const eligible = fresh.filter(t => t.event_location && places.has(t.event_location.place_id));
+  const arrivals = p.active ? [] : eligible.filter(t => scanned.entered.has(t.event_location!.place_id));
+  const firstArrival = arrivals.length ? Math.min(...arrivals.map(t => scanned.entered.get(t.event_location!.place_id)!)) : null;
+  // Millisecond timestamps are rounded into the arriving interval, never before it.
+  const evaluated = firstArrival === null ? until : Math.min(until, Math.ceil(firstArrival));
+  const atArrival = firstArrival === null ? scanned : scan(evaluated);
+  const selected = pick(arrivals.filter(t => Math.ceil(scanned.entered.get(t.event_location!.place_id)!) === evaluated &&
+    atArrival.occupancy[t.event_location!.place_id]?.inside));
+  const overdue = p.overdue_since ? timestamp(p.overdue_since) :
+    !p.active && evaluated >= timestamp(p.waiting_since) + 90000 ? timestamp(p.waiting_since) + 90000 : null;
+  const transition: Transition = { participant_id: p.participant_id, location_occupancy: atArrival.occupancy,
+    location_evaluated_at: new Date(evaluated).toISOString(), overdue_since: overdue === null ? null : new Date(overdue).toISOString() };
+  if (selected) return { ...transition, situation_id: selected.id, trigger_kind: "LOCATION",
+    place_id: selected.event_location!.place_id, entry_seq: atArrival.occupancy[selected.event_location!.place_id].entry_seq,
+    started_at: new Date(evaluated).toISOString() };
+  if (p.active) return transition;
   const npc = resumedNpc(p, p.npc_motion, now);
   const point = p.guidance_point ? guidancePosition(p, p.npc_motion, now) : npcPosition(npc, now);
-  const eligible = fresh.filter(t => t.event_location?.map_version === p.npc_motion.map_version);
   const routeTo = (target: Point) => {
     if (!point) return null;
-    try { return p.npc_motion.map_version === MAP_VERSION ? routeBetween(point, target) : [point, target]; }
+    try { return isV002MapVersion(p.npc_motion.map_version) ? routeBetween(point, target, p.npc_motion.map_version) : [point, target]; }
     catch { return null; } // Off-graph or disconnected locations cannot create a chord.
   };
-  const destinations = () => eligible.map(t => ({ situation: t, route: routeTo(t.event_location!.point) }))
+  const destinations = () => eligible.filter(t => !atArrival.occupancy[t.event_location!.place_id]?.inside)
+    .map(t => ({ situation: t, route: routeTo(t.event_location!.point) }))
     .filter((t): t is { situation: Situation; route: Point[] } => t.route !== null);
-  let selected = pick(eligible.filter(t => {
-    if (!point || distance(point, t.event_location!.point) > t.event_location!.radius_m) return false;
-    const route = routeTo(t.event_location!.point);
-    return route && pathLength(route) <= t.event_location!.radius_m;
-  }));
-  let trigger_kind = now - timestamp(p.waiting_since) >= 90000 ? "DEADLINE" : "LOCATION";
-  if (!selected && now - timestamp(p.waiting_since) >= 90000) {
-    // Until map placement is authored, unlocated content participates in the
-    // timed cycle. Never invent coordinates or use a different map's locations.
-    // The generated greeting is only for sessions without authored content.
-    const hasAuthoredContent = world.situations.some(t => !isPlaceholder(t));
-    selected = pick(fresh.filter(t => t.event_location === null &&
-      (!hasAuthoredContent || !isPlaceholder(t))));
-    trigger_kind = "DEADLINE";
-  }
-  if (!selected && p.npc_motion.map_version === MAP_VERSION && now - timestamp(p.waiting_since) >= 90000)
-    selected = pick(destinations().map(t => t.situation)); // Deadline freezes the current graph pose, never teleports.
-  if (selected) return {
-    participant_id: p.participant_id, situation_id: selected.id, trigger_kind,
-    // Keep actual delivery/pose time honest; deadline_at separately records the target.
-    started_at: new Date(world.session.now).toISOString(),
-  };
   if (!p.guidance_point && now - timestamp(p.waiting_since) >= 60000 && point && eligible.length) {
-    if (p.npc_motion.map_version === MAP_VERSION && p.npc_motion.speed_mps === 0) return null;
+    if (isV002MapVersion(p.npc_motion.map_version) && p.npc_motion.speed_mps === 0) return transition;
     const routes = destinations().sort((a, b) => pathLength(a.route) - pathLength(b.route));
-    if (!routes.length) return null;
+    if (!routes.length) return transition;
     const target = routes[0];
-    return { participant_id: p.participant_id, guidance_point: target.situation.event_location!.point, guidance_origin: point,
-      ...(p.npc_motion.map_version === MAP_VERSION ? { guidance_motion: guidanceMotion({ guidance_point: target.situation.event_location!.point, guidance_origin: point,
+    return { ...transition, guidance_point: target.situation.event_location!.point, guidance_origin: point,
+      ...(isV002MapVersion(p.npc_motion.map_version) ? { guidance_motion: guidanceMotion({ guidance_point: target.situation.event_location!.point, guidance_origin: point,
         guidance_motion: { ...p.npc_motion, points: target.route, loop: false } }, p.npc_motion) } : {}) };
   }
-  return null;
+  return transition;
+}
+
+function motionPhases(p: Member, from: number, to: number) {
+  if (p.guidance_point) return [{ from, to, npc: { npc_id: p.npc_id,
+    epoch: new Date(p.guidance_started_at!).toISOString(), motion: guidanceMotion(p, p.npc_motion) } }];
+  const epoch = timestamp(p.motion_epoch) + Number(p.paused_ms);
+  const resume = p.resume_motion;
+  const handoff = resume?.rejoin_after_ms === undefined ? null : epoch + resume.rejoin_after_ms;
+  if (handoff !== null && resume?.rejoin_motion && handoff > from && handoff <= to) return [
+    { from, to: handoff, npc: { npc_id: p.npc_id, epoch: new Date(epoch).toISOString(), motion: resume } },
+    { from: handoff, to, npc: { npc_id: p.npc_id, epoch: new Date(handoff).toISOString(), motion: resume.rejoin_motion } },
+  ];
+  return [{ from, to, npc: resumedNpc(p, p.npc_motion, from) }];
 }
 
 async function applyTransitions(db: PoolClient, world: World) {
   const transitions = world.members.map(p => transitionFor(world, p)).filter(t => t !== null);
+  const updates = transitions.filter(t => {
+    const p = world.members.find(p => p.participant_id === t.participant_id)!;
+    return p.location_evaluated_at?.toISOString() !== t.location_evaluated_at ||
+      (p.overdue_since?.toISOString() ?? null) !== t.overdue_since || JSON.stringify(p.location_occupancy) !== JSON.stringify(t.location_occupancy);
+  });
+  if (updates.length) {
+    await db.query(`UPDATE simus.npc_event_states st SET location_occupancy=r.location_occupancy,
+      location_evaluated_at=r.location_evaluated_at,overdue_since=r.overdue_since
+      FROM jsonb_to_recordset($2::jsonb) AS r(participant_id uuid,location_occupancy jsonb,
+        location_evaluated_at timestamptz,overdue_since timestamptz)
+      WHERE st.session_id=$1 AND st.participant_id=r.participant_id`, [world.session.id, JSON.stringify(updates)]);
+    for (const t of updates) {
+      const p = world.members.find(p => p.participant_id === t.participant_id)!;
+      p.location_occupancy = t.location_occupancy;
+      p.location_evaluated_at = new Date(t.location_evaluated_at);
+      p.overdue_since = t.overdue_since === null ? null : new Date(t.overdue_since);
+    }
+  }
   const events = transitions.filter(t => t.situation_id);
   const guidance = transitions.filter(t => t.guidance_point);
   if (events.length) {
     const inserted = await db.query<Event & { participant_id: string }>(`
-      INSERT INTO simus.npc_events(session_id,participant_id,situation_id,trigger_kind,started_at)
-      SELECT $1,r.participant_id,r.situation_id,r.trigger_kind,r.started_at
+      INSERT INTO simus.npc_events(session_id,participant_id,situation_id,trigger_kind,started_at,place_id,entry_seq)
+      SELECT $1,r.participant_id,r.situation_id,r.trigger_kind,r.started_at,r.place_id,r.entry_seq
       FROM jsonb_to_recordset($2::jsonb) AS r(participant_id uuid,situation_id uuid,
-        trigger_kind text,started_at timestamptz) RETURNING *`, [world.session.id, JSON.stringify(events)]);
+        trigger_kind text,started_at timestamptz,place_id text,entry_seq bigint) RETURNING *`, [world.session.id, JSON.stringify(events)]);
     await db.query(`UPDATE simus.npc_event_states SET motion_revision=motion_revision+1
       WHERE session_id=$1 AND participant_id=ANY($2::uuid[])`,
     [world.session.id, inserted.rows.map(e => e.participant_id)]);
@@ -183,14 +241,25 @@ export async function advanceEvent(db: PoolClient, sid: string, pid: string) {
   return {
     phase: !open ? "CLOSED" : event ? "ACTIVE" : p.guidance_point ? "GUIDING" : "WAITING",
     server_time: new Date(session.now).toISOString(), waiting_since: new Date(p.waiting_since).toISOString(),
-    deadline_at: new Date(timestamp(p.waiting_since) + 90000).toISOString(), event,
+    deadline_at: null, guidance_at: new Date(timestamp(p.waiting_since) + 60000).toISOString(), event,
+    overdue_since: p.overdue_since?.toISOString() ?? null, overdue: p.overdue_since !== null,
   };
+}
+
+// Position snapshots reconcile the same authoritative event state before rendering,
+// so a missed timer tick cannot let a snapshot run past an unprocessed arrival.
+export async function syncNpcEvents(db: PoolClient, sid: string, pid?: string) {
+  const session = (await db.query<Session>(`SELECT *,clock_timestamp() AS now
+    FROM simus.simulation_sessions WHERE id=$1 FOR UPDATE`, [sid])).rows[0];
+  if (!session || !isOpen(session)) return;
+  const world = await readWorld(db, session, pid);
+  await applyTransitions(db, world);
 }
 
 export function guidedPoint(state: Pick<State, "guidance_origin" | "guidance_point" | "guidance_started_at">,
   speed: number, now: number): Point {
   const origin = state.guidance_origin!, target = state.guidance_point!;
-  const length = distance(target, origin);
+  const length = Math.hypot(...target.map((n, i) => n - origin[i]));
   const mix = length ? Math.min(1, Math.max(0, now - timestamp(state.guidance_started_at!)) / 1000 * speed / length) : 1;
   return target.map((n, i) => origin[i] + (n - origin[i]) * mix);
 }
@@ -207,6 +276,7 @@ export async function completeEvent(db: PoolClient, sid: string, pid: string, ei
       WHERE session_id=$1 AND participant_id=$2`, [sid, pid, JSON.stringify(route)]);
   }
   await db.query(`UPDATE simus.npc_event_states st SET waiting_since=clock_timestamp(),
+    overdue_since=NULL,location_evaluated_at=clock_timestamp(),
     motion_revision=motion_revision+1,paused_ms=CASE WHEN st.guidance_point IS NOT NULL THEN 0
       ELSE st.paused_ms+floor(extract(epoch FROM(clock_timestamp()-e.started_at))*1000)::bigint END,
     guidance_point=NULL,guidance_origin=NULL,guidance_started_at=NULL,guidance_motion=NULL

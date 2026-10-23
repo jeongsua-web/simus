@@ -23,6 +23,17 @@ RUNNING 또는 CLOSING 회차를 반환합니다. 없으면 `session: null`입�
 각 상황에는 `id`, `code`, `title`, `body`, `display_order`, `choices`가 포함됩니다.
 선택지는 `id`, `label`, `display_order`만 반환하며 개인 성향과 숨겨진 영향값은 공개하지 않습니다.
 
+## GET /api/sessions/{id}/population · POST /api/sessions/{id}/population
+
+`{ "session_id": "uuid", "online_count": 3 }`를 반환합니다. 현재 회차의 시민 등록을 완료했고,
+최근 45초 안에 접속이 확인된 참여자만 집계합니다. 같은 참여자의 여러 탭은 한 명으로 셉니다.
+만료·폐기된 인증만 있는 참여자와 DRAFT/FINALIZED 회차는 집계에서 제외합니다.
+GET은 공개 조회이며 접속 시각을 갱신하지 않습니다. POST는 유효한 참여자 쿠키와 해당 회차의
+완료된 시민 등록이 필요하며 본인의 접속 시각을 갱신합니다. 다른 출처의 POST는 거부합니다.
+참여 화면은 보이는 동안 15초마다 POST하고, 숨겨진 화면은 갱신을 멈춥니다.
+네트워크 단절·화면 종료 후 최대 약 45초(다른 화면에 반영되기까지 최대 약 60초) 안에 제외됩니다.
+기존 `participants.last_seen_at`을 사용하므로 DB 마이그레이션은 필요하지 않습니다.
+
 ## POST /api/participants
 
 본문 없이 호출합니다. 새 익명 참여자는 201, 유효한 기존 쿠키가 있으면 같은 참여자를 200으로 반환합니다.
@@ -206,15 +217,15 @@ curl -X POST -H "Authorization: Bearer $SESSION_JOB_TOKEN" \
 
 ### NPC event cycle
 
-`GET /api/sessions/:id/event` requires participant cookie and prior membership. Returns `phase` (`WAITING`, `GUIDING`, `ACTIVE`, `CLOSED`), `server_time`, `waiting_since`, `deadline_at`, and `event`. Only ACTIVE exposes `event.situation.choices`; `/sessions/current` retains metadata with empty choices. Event includes `id`, `situation_id`, `trigger_kind` (`LOCATION` or `DEADLINE`), and `started_at`.
+`GET /api/sessions/:id/event` requires participant cookie and prior membership. Returns `phase` (`WAITING`, `GUIDING`, `ACTIVE`, `CLOSED`), `server_time`, `waiting_since`, `guidance_at`, nullable `deadline_at` (always null), diagnostic `overdue/overdue_since`, and `event`. Only ACTIVE exposes `event.situation.choices`; `/sessions/current` retains metadata with empty choices. Event includes `id`, `situation_id`, `place_id`, `entry_seq`, `trigger_kind` and `started_at`. New occurrences use `LOCATION`; historical `DEADLINE` rows remain readable.
 
-`POST /api/choices` requires `event_id`. Ownership, situation, active occurrence and open admission are checked under the session lock. Request-key replay must match event, situation and choice; legacy records without an event ID remain replayable. Stats apply once and completion restarts the waiting timer atomically. Fresh mapped situations fire inside their configured radius (random selection if several overlap). At 60 seconds the NPC is guided toward the nearest compatible mapped situation; at 90 seconds an unanswered situation without a location is selected at random, including content awaiting map placement. Answered situations never repeat within the participant's session. When eligible content is exhausted, no new event is created; mapped content still requires the matching map and radius.
+`POST /api/choices` requires `event_id`. Ownership, situation, active occurrence and open admission are checked under the session lock. Request-key replay must match event, situation and choice; legacy records without an event ID remain replayable. Stats apply once and completion restarts movement and the waiting timer atomically. A server polyline/graph scan detects actual place entries, including travel between polls. One eligible event is selected per entry with no probability gate. Durable occupancy prevents another event while staying inside; exiting/reentering can select another unanswered event. At 60 seconds guidance selects the nearest reachable eligible place. At 90 seconds only diagnostic overdue state is recorded: no forced event, no unlocated fallback and no mid-route freeze. Unfinished scenes are excluded even if a legacy coordinate exists.
 
-Node instrumentation reconciles all running participants every 250 milliseconds independently of polling. Each pass reads membership, content and response history in batches per session, then writes only transitions. Processes serialize through session locks. Hosting must keep a Node process alive; suspending serverless hosting requires a persistent worker invoking authorized `POST /api/internal/sessions/reconcile`. Processing delays/outages delay visible delivery; durable deadlines recover on the next tick. Browser coordinates and clocks never authorize an event.
+Node instrumentation reconciles all running participants every 250 milliseconds independently of polling. Each pass reads membership, content and response history in batches per session, then writes transitions and entry cursors. Position snapshots reconcile the same event state under the session lock before rendering. Hosting must keep a Node process alive; suspending serverless hosting requires a persistent worker invoking authorized `POST /api/internal/sessions/reconcile`. Processing delays/outages delay visible delivery; the next scan recovers actual entries on the stored route. Browser coordinates and clocks never authorize an event.
 
 NPC projections include monotonic `motion.revision` (safe nonnegative integer) and optional ISO `motion.freeze_at`. Consumers accept newer revisions and clamp extrapolation at freeze_at. Guidance and event pause project from immutable membership routes.
 
 
-`PUT /api/admin/sessions/{id}/event-locations`: 관리자 JWT, 활성 관리자와 동일 출처 검증; DRAFT 전용. 본문은 `{situation_id,is_generic,event_location}`. 위치 이벤트는 `{map_version,point:[x,y,z],radius_m}`와 회차 NPC 경로의 동일 map_version이 필요하다. 공통 이벤트는 `is_generic:true,event_location:null`이다. 400 INVALID_EVENT_LOCATION, 409 NPC_MAP_MISMATCH, 409 EVENT_LOCATION_LOCKED, 404 SITUATION_NOT_FOUND를 반환한다.
+`PUT /api/admin/sessions/{id}/event-locations`: 관리자 JWT, 활성 관리자와 동일 출처 검증; DRAFT 전용. 본문은 `{situation_id,is_generic,event_location}`. Phase 1/2 위치 이벤트는 `{place_id,map_version,point:[x,y,z],radius_m}`와 회차 NPC 경로의 동일 map_version이 필요하다. 같은 place_id의 좌표/반경은 같아야 한다. 기존 place_id 없는 구버전 위치는 DB를 수정하지 않고 좌표 기반 장소 ID로 읽는다. 공통 이벤트는 `is_generic:true,event_location:null`이다. 미구현 장면은 409 EVENT_SCENE_INCOMPLETE로 저장을 거부한다. GET은 기존 상황 데이터에 `mapping_status/mapping_reason`을 추가한다.
 
-회차 시작 전 명시적인 공통 이벤트가 없으면 장소에 관계없는 '이웃의 인사' 상황과 중립 선택지 2개를 DRAFT 상태에서 추가한다. 두 선택지의 개인·도시 영향은 0이다. 자동 인사(`SIMUS_COMMON_ENCOUNTER`, `SIMUS_COMMON_ENCOUNTER_UPGRADE`)는 선택 가능한 작성 콘텐츠가 없는 회차에서만 한 번 사용한다. 위치 미지정 콘텐츠는 90초 대기 이벤트 대상으로 사용하며, 저장된 좌표와 `is_generic` 값은 변경하지 않는다.
+기존 DRAFT 공통 인사 준비 기능과 콘텐츠는 보존한다. 위치가 없는 인사·작성 콘텐츠는 시간 경과만으로 발생하지 않는다. Phase 2는 30개 원본을 보존하며 12개 위치 매핑을 준비하고 18개를 미완료로 구분한다. 새 최초 v002 회차에는 준비된 12개만 설정하고, 기존 회차의 데이터는 자동 변경하지 않는다. 상세 상태와 승인 전 제한은 `docs/placement/phase2/implementation-report.md`를 따른다.

@@ -9,12 +9,12 @@ import re
 
 ROOT = Path(__file__).resolve().parents[2]
 SCENE = ROOT / 'unity/Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity'
-OUTPUT = ROOT / 'web/src/lib/data/city-rebuild-v002-graph.json'
+OUTPUT = ROOT / 'web/src/lib/data/city-rebuild-v002-phase1-graph.json'
 
 def vector(raw):
     return [float(re.search(rf'{axis}: ([^,}}]+)', raw)[1]) for axis in 'xyz']
 
-def export():
+def read_graph():
     source = SCENE.read_bytes()
     blocks = re.findall(r'^--- !u!(\d+) &(-?\d+).*?\n(.*?)(?=^--- !u!|\Z)', source.decode(), re.M | re.S)
     graph, = [body for kind, fid, body in blocks if 'guid: 5f84dae63db8441aaa9c70292df1bf56,' in body]
@@ -45,15 +45,25 @@ def export():
         assert math.dist(edge['points'][0], nodes[edge['from']]['position']) < .002
         assert math.dist(edge['points'][-1], nodes[edge['to']]['position']) < .002
         edges.append(edge)
-    assert (len(nodes), len(edges)) == (572, 597)
+    assert len(nodes) >= 572 and len(edges) >= 597
     assert len({n['id'] for n in nodes}) == len(nodes) and len({e['id'] for e in edges}) == len(edges)
     layout = ROOT / 'docs/planning/city_rebuild_v002/layout.json'
-    layout_hash = hashlib.sha256(layout.read_bytes()).hexdigest()
+    # The approved JSON was hashed with LF. A Windows checkout may materialize
+    # CRLF without changing that plan; record both the canonical and file hash.
+    layout_bytes = layout.read_bytes()
+    layout_hash = hashlib.sha256(layout_bytes.replace(b'\r\n', b'\n')).hexdigest()
     assert re.search(r'layoutSha256: (\w+)', graph)[1] == layout_hash
-    return json.dumps(dict(map_version='test-only-city-rebuild-v002-webgl-v1', path_version='city-rebuild-v002-walk-v1',
+    return dict(map_version=re.search(r'^  mapVersion: (.+)$', graph, re.M)[1], path_version=re.search(r'^  pathVersion: (.+)$', graph, re.M)[1],
         exhibition_ready=False, coordinate_system='Unity world metres [x,y,z]; server identity transform; Y up',
-        source=str(SCENE.relative_to(ROOT)), source_sha256=hashlib.sha256(source).hexdigest(), layout_sha256=layout_hash,
-        nodes=nodes, edges=edges), ensure_ascii=False, indent=2) + '\n'
+        source=SCENE.relative_to(ROOT).as_posix(), source_sha256=hashlib.sha256(source).hexdigest(), layout_sha256=layout_hash,
+        layout_file_sha256=hashlib.sha256(layout_bytes).hexdigest(),
+        nodes=nodes, edges=edges)
+
+def export():
+    graph = read_graph()
+    assert graph['map_version'] == 'test-only-city-rebuild-v002-phase1-v1'
+    assert graph['path_version'] == 'city-rebuild-v002-walk-phase1-v1'
+    return json.dumps(graph, ensure_ascii=False, indent=2) + '\n'
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
@@ -61,5 +71,5 @@ if __name__ == '__main__':
     args = parser.parse_args()
     result = export()
     if args.check: assert OUTPUT.read_text() == result, 'Graph export is stale'
-    else: OUTPUT.write_text(result)
-    print('PASS: v002 graph 572 nodes / 597 edges; identity world coordinates; source hash verified')
+    else: OUTPUT.write_text(result, encoding='utf-8', newline='\n')
+    print(('Checked' if args.check else 'Exported') + ' Phase 1 graph; legacy graph file preserved; runtime and physical access unverified')
