@@ -20,7 +20,7 @@ export default function ParticipatePage() {
     <p role="status">{state.messages[state.pending.event_id ?? state.pending.request_key]}</p><button className={styles.button} disabled={state.submitting !== null} onClick={()=>void state.retryPending()}>이전 제출 다시 확인</button>
   </section>;
   if (state.loading) return <main className={styles.page}><div className={styles.stateCard} role="status">참여 정보를 불러오는 중이에요…</div></main>;
-  if (state.loadError) return (
+  if (state.loadError && (!state.session || !state.profile || state.authExpired)) return (
     <main className={styles.page}><div className={styles.stateCard}>
       <h1>{state.authExpired ? "참여 인증이 만료되었습니다" : "정보를 불러오지 못했습니다"}</h1>
       <p role="alert">{state.loadError}</p>
@@ -80,6 +80,11 @@ export default function ParticipatePage() {
         </details>
       </header>
       {pendingNotice && <div className={styles.urgent}>{pendingNotice}</div>}
+      {state.loadError && <section className={styles.roundNotice} role="alert">
+        <strong>참여 정보를 다시 확인하고 있어요</strong>
+        <span>{state.loadError}</span>
+        <button className={styles.secondaryButton} onClick={state.refresh}>다시 확인</button>
+      </section>}
       {(!state.session.accepting_choices) && <section className={styles.roundNotice} role="status">
         <strong>{state.session.status === "FINALIZED" ? "결과 확정" : state.session.status === "CLOSING" ? "결과 준비 중" : "접수 마감"}</strong>
         <span>{state.session.status === "FINALIZED" ? "내 결과가 도착했어요." : "도시를 둘러보며 결과를 기다려 주세요."}</span>

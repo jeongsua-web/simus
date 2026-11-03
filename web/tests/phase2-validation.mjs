@@ -33,6 +33,19 @@ export async function runPhase2Validation({pool,env,privateKey,publicJwk,root,ap
   }
   const create=async(template)=> (await call('/api/admin/sessions',{admin:true,data:{...(template?{template_session_id:template}:{creation_mode:'initial'}),npc_profile:'city-rebuild-v002',name:'Disposable Phase2',duration_seconds:3600,impact_scale:.1,request_key:randomUUID()}})).body.session_id;
   const action=(sid,name)=>call(`/api/admin/sessions/${sid}/${name}`,{admin:true,data:{request_key:randomUUID()}});
+  // The autonomous ticker also persists the entry cursor. Clock travel in this
+  // disposable DB must take its session lock, or a stale ticker snapshot can
+  // overwrite the shifted cursor and make a real loop re-entry disappear.
+  async function runtimeFixture(sid,sql,parameters=[]) {
+    const db=await pool.connect();
+    try {
+      await db.query('BEGIN');
+      await db.query('SELECT id FROM simus.simulation_sessions WHERE id=$1 FOR UPDATE',[sid]);
+      await db.query(sql,[sid,...parameters]);
+      await db.query('COMMIT');
+    } catch(error) {await db.query('ROLLBACK');throw error;}
+    finally {db.release();}
+  }
   const template=await create();
   const contentSnapshot=async(sid)=>(await pool.query(`SELECT
     (SELECT jsonb_agg(to_jsonb(s) ORDER BY id) FROM simus.session_situations s WHERE session_id=$1) AS situations,
@@ -124,7 +137,7 @@ export async function runPhase2Validation({pool,env,privateKey,publicJwk,root,ap
         const pid=(await pool.query('SELECT participant_id FROM simus.participant_sessions WHERE session_id=$1 ORDER BY joined_at DESC LIMIT 1',[sid])).rows[0].participant_id;
         const event=()=>call(`/api/sessions/${sid}/event`,{cookie:person.cookie}); await event();
         // Advance ONLY the owned runtime clock; real browser below never does this.
-        await pool.query("UPDATE simus.npc_event_states SET motion_epoch=clock_timestamp()-$3*interval '1 second',location_evaluated_at=clock_timestamp()-$3*interval '1 second' WHERE session_id=$1 AND participant_id=$2",[sid,pid,pathLength(points)/1.2+1]);
+        await runtimeFixture(sid,"UPDATE simus.npc_event_states SET motion_epoch=clock_timestamp()-$3*interval '1 second',location_evaluated_at=clock_timestamp()-$3*interval '1 second' WHERE session_id=$1 AND participant_id=$2",[pid,pathLength(points)/1.2+1]);
         const active=(await event()).body.event;assert.equal(active.situation_id,row.seed_situation_id);assert.equal(active.trigger_kind,'LOCATION');assert.equal(active.place_id,row.place_id);
         assert.equal(active.situation.title,row.title);assert.deepEqual(active.situation.choices.map(c=>[c.id,c.label]),choices.map(c=>[c.id,c.label]));
         if(row.number===2 && choice===choices[0]) {await stopServer();await startServer();}
@@ -143,7 +156,7 @@ export async function runPhase2Validation({pool,env,privateKey,publicJwk,root,ap
     const person=await call('/api/participants',{method:'POST'});await call(`/api/sessions/${shared.sid}/join`,{method:'POST',cookie:person.cookie});
     const pid=(await pool.query('SELECT participant_id FROM simus.participant_sessions WHERE session_id=$1',[shared.sid])).rows[0].participant_id;
     const event=()=>call(`/api/sessions/${shared.sid}/event`,{cookie:person.cookie});await event();
-    async function advance(seconds) {await pool.query("UPDATE simus.npc_event_states SET motion_epoch=motion_epoch-$3*interval '1 second',location_evaluated_at=location_evaluated_at-$3*interval '1 second' WHERE session_id=$1 AND participant_id=$2",[shared.sid,pid,seconds]);}
+    async function advance(seconds) {await runtimeFixture(shared.sid,"UPDATE simus.npc_event_states SET motion_epoch=motion_epoch-$3*interval '1 second',location_evaluated_at=location_evaluated_at-$3*interval '1 second' WHERE session_id=$1 AND participant_id=$2",[pid,seconds]);}
     await advance(pathLength(shared.points)/1.2+1);const first=(await event()).body.event;assert.ok(first);
     await call('/api/choices',{cookie:person.cookie,data:{session_id:shared.sid,event_id:first.id,situation_id:first.situation_id,choice_id:first.situation.choices[0].id,request_key:randomUUID()}});
     assert.equal((await event()).body.event,null);await stopServer();await startServer();assert.equal((await event()).body.event,null);
@@ -153,19 +166,42 @@ export async function runPhase2Validation({pool,env,privateKey,publicJwk,root,ap
     // Long guidance is explicitly diagnosed; no unplaced fallback is permitted.
     const far=await create(template);await action(far,'start');const waitingPerson=await call('/api/participants',{method:'POST'});await call(`/api/sessions/${far}/join`,{method:'POST',cookie:waitingPerson.cookie});
     await call(`/api/sessions/${far}/event`,{cookie:waitingPerson.cookie});
-    await pool.query("UPDATE simus.npc_event_states SET waiting_since=clock_timestamp()-interval '91 seconds' WHERE session_id=$1",[far]);
+    await runtimeFixture(far,"UPDATE simus.npc_event_states SET waiting_since=clock_timestamp()-interval '91 seconds' WHERE session_id=$1");
     const overdue=(await call(`/api/sessions/${far}/event`,{cookie:waitingPerson.cookie})).body;
-    evidence.wait90={phase:overdue.phase,event:overdue.event,deadline_at:overdue.deadline_at,overdue:overdue.overdue,status:overdue.event?'PASS':'FAIL',meaning:'90-second maximum is not enforced; no remote/unplaced event injected'};
+    const elapsed=(Date.parse(overdue.server_time)-Date.parse(overdue.waiting_since))/1000;
+    const arrival=overdue.event?(Date.parse(overdue.event.started_at)-Date.parse(overdue.waiting_since))/1000:null;
+    evidence.wait90={phase:overdue.phase,event:overdue.event,deadline_at:overdue.deadline_at,overdue:overdue.overdue,
+      elapsed_seconds:elapsed,event_started_after_seconds:arrival,
+      status:arrival!==null&&arrival<=90?'PASS':'FAIL',scope:'single overdue observation, not a universal deadline guarantee',
+      meaning:'90-second maximum is not enforced; no remote/unplaced event injected'};
+    console.log(`${evidence.wait90.status} 90-second maximum: ${elapsed.toFixed(3)}s elapsed, arrival=${arrival??'none'}`);
     await action(far,'end');await save();
     if(!env.TEST_PHASE2_PLAYWRIGHT_MODULE) {console.log('SKIP Phase2 actual browser: TEST_PHASE2_PLAYWRIGHT_MODULE absent');return;}
     const {chromium}=await import(pathToFileURL(env.TEST_PHASE2_PLAYWRIGHT_MODULE).href);
-    const browser=await chromium.launch({headless:true,executablePath:env.TEST_CHROMIUM_EXECUTABLE||undefined,args:['--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+    const requested=env.TEST_PHASE2_BROWSER_CODES?.split(',').filter(Boolean);
+    if(requested) assert.ok(requested.length&&requested.every(code=>ready.some(row=>row.code===code)),'Browser filter must name READY situations');
+    const browserRows=requested?ready.filter(row=>requested.includes(row.code)):ready;
+    evidence.browser_scope=browserRows.map(row=>row.code);
+    // Prefer the native GPU on Windows. Software rendering remains available
+    // explicitly; this mobile viewport test does not certify device performance.
+    const softwareGpu=process.platform!=='win32'||env.TEST_PHASE2_SOFTWARE_GPU==='1';
+    evidence.software_gpu_forced=softwareGpu;
+    const browser=await chromium.launch({headless:true,executablePath:env.TEST_CHROMIUM_EXECUTABLE||undefined,
+      args:[...(softwareGpu?['--use-angle=swiftshader']:[]),'--enable-unsafe-swiftshader']});
     try {
-      for(const row of ready) {
+      for(const row of browserRows) {
         const {sid,points}=await scenario(row,false,true);await action(sid,'start');
         const context=await browser.newContext({viewport:{width:390,height:844}});const page=await context.newPage();
-        const result={code:row.code,sid,status:'RUNNING',errors:[],failures:[]};evidence.browser.push(result);await save();
+        const result={code:row.code,sid,status:'RUNNING',errors:[],failures:[],http_errors:[],bridge_errors:[],frame_detachments:[]};evidence.browser.push(result);await save();
         page.on('pageerror',e=>result.errors.push(e.message));
+        page.on('framedetached',frame=>result.frame_detachments.push({at:new Date().toISOString(),url:frame.url()}));
+        page.on('response',response=>{
+          if(response.status()>=400) result.http_errors.push({status:response.status(),url:response.url()});
+        });
+        await page.addInitScript(()=>window.addEventListener('message',event=>{
+          if(event.origin===location.origin&&event.data?.channel==='simus-city'&&event.data.type==='ERROR')
+            (window.__phase2BridgeErrors??=[]).push({at:new Date().toISOString(),code:event.data.code});
+        }));
         try {
           await page.goto(env.TEST_API_URL+'/participate');await enterCity(page,{nickname:'장소검증'+row.number,characterId:'npc_01'});
           await page.waitForFunction(()=>document.querySelector('iframe[title="SIM:US 도시"]')?.style.visibility==='visible',null,{timeout:180000});
@@ -173,13 +209,28 @@ export async function runPhase2Validation({pool,env,privateKey,publicJwk,root,ap
           const unity=await frame.contentFrame();assert.ok(unity);
           assert.ok(new URL(unity.url()).pathname.endsWith('/index.html'));
           async function inspect() {await unity.evaluate(()=>window.simusBridge.inspect());await page.waitForTimeout(200);return unity.evaluate(()=>window.simusBridge.inspect());}
+          if(row.number===2) {
+            // Transport-failure regression only. Actual movement/events/choices
+            // below still use the live API and the real WebGL runtime.
+            const polling='**/api/sessions/current';
+            await page.route(polling,route=>route.abort('failed'));
+            try {
+              await page.evaluate(()=>window.dispatchEvent(new Event('online')));
+              await page.getByRole('alert').filter({hasText:'참여 정보를 다시 확인하고 있어요'}).waitFor();
+              assert.equal(unity.isDetached(),false,'A failed background poll must preserve the loaded Unity frame');
+              assert.equal(await page.locator('iframe[title="SIM:US 도시"]').evaluate((node,previous)=>node===previous,frame),true);
+            } finally {await page.unroute(polling);}
+            await page.evaluate(()=>window.dispatchEvent(new Event('online')));
+            await page.getByRole('alert').filter({hasText:'참여 정보를 다시 확인하고 있어요'}).waitFor({state:'hidden'});
+            assert.equal(unity.isDetached(),false);result.poll_failure_recovery='PASS';
+          }
           const a=await inspect();
           // Start this disposable actor only after WebGL is visible, so arrival
           // cannot happen invisibly while WASM loads. No time is fast-forwarded;
           // the joined snapshot is retained and the runtime route uses real time.
-          await pool.query(`UPDATE simus.npc_event_states SET resume_motion=$2,motion_epoch=clock_timestamp(),paused_ms=0,
+          await runtimeFixture(sid,`UPDATE simus.npc_event_states SET resume_motion=$2,motion_epoch=clock_timestamp(),paused_ms=0,
             location_evaluated_at=clock_timestamp(),motion_revision=motion_revision+1 WHERE session_id=$1`,
-            [sid,{map_version:MAP_VERSION,path_version:PATH_VERSION,points,speed_mps:1.2,loop:true}]);
+            [{map_version:MAP_VERSION,path_version:PATH_VERSION,points,speed_mps:1.2,loop:true}]);
           result.movement_started_at=new Date().toISOString();
           await page.waitForTimeout(3800);const b=await inspect();result.moving=[a,b];
           result.movement_observed=!!a?.position&&!!b?.position&&distance(a.position,b.position)>.1;
@@ -189,10 +240,21 @@ export async function runPhase2Validation({pool,env,privateKey,publicJwk,root,ap
           assert.equal(active.situation_id,row.seed_situation_id);assert.equal(active.trigger_kind,'LOCATION');
           await page.getByRole('heading',{name:row.title,exact:true}).waitFor();
           for(const c of active.situation.choices) assert.ok(await page.getByRole('radio',{name:c.label,exact:true}).count());
-          const frozen=await inspect();await page.waitForTimeout(1200);const still=await inspect();
-          assert.ok(distance(frozen.position,still.position)<.05);assert.ok(still.active&&still.renderer_count>0);
           const snapshot=(await page.evaluate(async id=>(await fetch(`/api/sessions/${id}/npc`)).json(),sid)).npcs[0];
-          const p=snapshot.motion.points[0];result.server_point=p;result.unity_point=still.position;
+          assert.equal(snapshot.motion.speed_mps,0);
+          const p=snapshot.motion.points[0],syncStarted=Date.now();
+          // The choice panel and Unity poll independently every 2.5s. Observe
+          // the actual frozen snapshot before comparing two stationary frames.
+          // A 1.2s sleep immediately after the panel appears races the next poll.
+          let frozen=await inspect();
+          while(Date.now()-syncStarted<7500&&Math.hypot(p[0]-frozen.position[0],p[2]-frozen.position[2])>=.1) {
+            await page.waitForTimeout(250);frozen=await inspect();
+          }
+          result.freeze_sync_ms=Date.now()-syncStarted;
+          assert.ok(Math.hypot(p[0]-frozen.position[0],p[2]-frozen.position[2])<.1,'Unity must converge to the server freeze within three poll periods');
+          await page.waitForTimeout(1200);const still=await inspect();
+          assert.ok(distance(frozen.position,still.position)<.05);assert.ok(still.active&&still.renderer_count>0);
+          result.server_point=p;result.unity_point=still.position;
           result.server_unity_error_m=Math.hypot(p[0]-still.position[0],p[2]-still.position[2]);
           if(result.server_unity_error_m>=.1) result.failures.push('Unity actor disagrees with server arrival');
           assert.ok(Math.hypot(p[0]-row.event_location.point[0],p[2]-row.event_location.point[2])<=row.event_location.radius_m+.01);
@@ -217,7 +279,8 @@ export async function runPhase2Validation({pool,env,privateKey,publicJwk,root,ap
                 await page.getByRole('button',{name:'제출 중…',exact:true}).waitFor();
                 release();result.single_click_during_poll='PASS';
               }
-              assert.equal((await sent).status(),201);
+              const response=await sent;
+              assert.equal(response.status(),201,await response.text());
             } finally {if(release) {release();await page.unroute(pollPath);}}
           });
           await page.waitForTimeout(1500);const resumed=await inspect();await page.waitForTimeout(1800);const moved=await inspect();
@@ -225,7 +288,10 @@ export async function runPhase2Validation({pool,env,privateKey,publicJwk,root,ap
           result.resumed=[resumed,moved];assert.deepEqual(result.errors,[]);result.status=result.failures.length?'FAIL':'PASS';
           evidence.events.find(e=>e.code===row.code).browser=result.status;console.log(`${result.status} actual WebGL/mobile ${row.code}: ${result.failures.join('; ')||'movement, arrival, text/choices, freeze, persisted stats, resume'}`);
         } catch(error) {result.status='FAIL';result.error=String(error);await page.screenshot({path:path.join(artifacts,`${row.code}-failure.png`)}).catch(()=>{});console.log(`FAIL actual WebGL/mobile ${row.code}: ${error}`);}
-        finally {await context.close();await action(sid,'end');await save();}
+        finally {
+          result.bridge_errors=await page.evaluate(()=>window.__phase2BridgeErrors??[]).catch(()=>[]);
+          await context.close();await action(sid,'end');await save();
+        }
       }
       assert.ok(evidence.browser.every(r=>r.status==='PASS'),'Some actual browser scenarios failed; inspect results.json');
     } finally {await browser.close();}

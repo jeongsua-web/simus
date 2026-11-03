@@ -30,6 +30,9 @@ const web = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const bin = process.env.TEST_PG_BIN ?? (process.platform === 'win32' ? 'C:/Program Files/PostgreSQL/18/bin' : '/opt/homebrew/opt/postgresql@18/bin');
 const pgPort = Number(process.env.TEST_PG_PORT ?? 55439);
 const port = Number(process.env.TEST_WEB_PORT ?? 3117);
+const python = process.env.TEST_PYTHON ?? (process.platform === 'win32' ? 'python' : 'python3');
+// Directory junctions need no Windows developer-mode/admin symlink privilege.
+const linkDirectory = (source, destination) => symlink(source, destination, process.platform === 'win32' ? 'junction' : 'dir');
 // Refuse occupied ports before creating a cluster or sending any HTTP request.
 for (const testPort of [pgPort, port]) {
   await new Promise((resolve, reject) => {
@@ -82,23 +85,28 @@ await mkdir(v002);
 const phase2Build = process.env.TEST_PHASE2_ONLY === '1' && process.env.TEST_PHASE2_WEBGL_BUILD
   ? path.resolve(process.env.TEST_PHASE2_WEBGL_BUILD) : path.join(web,'public/city-rebuild-v002-phase1');
 for (const name of ['build.json','index.html','bridge.js']) await cp(path.join(phase2Build,name),path.join(v002,name));
-await symlink(path.join(phase2Build,'Build'),path.join(v002,'Build'), 'dir');
+await linkDirectory(path.join(phase2Build,'Build'),path.join(v002,'Build'));
 let serverCwd=web;
 if (phase2Build !== path.join(web,'public/city-rebuild-v002-phase1')) {
   // Serve a new local Unity build without replacing the repository's public build.
   serverCwd=path.join(root,'server'); await mkdir(path.join(serverCwd,'public'),{recursive:true});
-  for(const name of ['node_modules','.next']) await symlink(path.join(web,name),path.join(serverCwd,name),'dir');
-  for(const item of await readdir(path.join(web,'public'),{withFileTypes:true}))
-    await symlink(item.name==='city-rebuild-v002-phase1'?phase2Build:path.join(web,'public',item.name),
-      path.join(serverCwd,'public',item.name),item.isDirectory()?'dir':'file');
+  for(const name of ['node_modules','.next']) await linkDirectory(path.join(web,name),path.join(serverCwd,name));
+  for(const item of await readdir(path.join(web,'public'),{withFileTypes:true})) {
+    const source = item.name==='city-rebuild-v002-phase1'?phase2Build:path.join(web,'public',item.name);
+    const destination = path.join(serverCwd,'public',item.name);
+    if (item.isDirectory()) await linkDirectory(source, destination);
+    else await cp(source, destination);
+  }
 }
-let server, running = false, pool;
+let server, running = false, pool, serverLog = '';
 async function stopServer() {
   if (server && server.exitCode === null) { const ended = once(server, 'exit'); server.kill(); await ended; }
 }
 async function startServer() {
   server = spawn(process.execPath, ['node_modules/next/dist/bin/next', 'start', '--hostname', '127.0.0.1', '--port', String(port)], { cwd: serverCwd, env, windowsHide: true });
-  let log = ''; server.stdout.on('data', x => log += x); server.stderr.on('data', x => log += x);
+  let log = '';
+  const record = x => { log += x; serverLog += x; };
+  server.stdout.on('data', record); server.stderr.on('data', record);
   server.on('error', e => { log += e.message; });
   for (let n = 0; n < 80; n++) {
     if (server.exitCode !== null) throw new Error(log);
@@ -120,8 +128,9 @@ try {
   if (env.TEST_INITIAL_SESSION_ONLY === '1' || env.TEST_PHASE2_ONLY === '1') {
     // Exercise the production migration planner in this NEW disposable cluster.
     // Render without migrate.main(); apply with psql only to the owned test DB.
-    const sql = await command('python3', ['-c',
-      "import runpy; from types import SimpleNamespace; m=runpy.run_path('../scripts/db/migrate.py'); print(m['plan'](SimpleNamespace(command='init', approval_reference=None),m['sources']()))"]);
+    const sql = await command(python, ['-c',
+      "import runpy; from types import SimpleNamespace; m=runpy.run_path('../scripts/db/migrate.py'); print(m['plan'](SimpleNamespace(command='init', approval_reference=None),m['sources']()))"],
+      { ...process.env, PYTHONIOENCODING: 'utf-8' });
     const migrationFile = path.join(root, 'managed-init.sql');
     await writeFile(migrationFile, sql);
     await command(path.join(bin, process.platform === 'win32' ? 'psql.exe' : 'psql'),
@@ -143,7 +152,7 @@ try {
   await startServer();
   if (env.TEST_PHASE2_ONLY === '1') {
     await runPhase2Validation({ pool, env, privateKey, publicJwk, root, stopServer, startServer,
-      applyContent: sid => command(path.join(bin, 'psql'), ['-X', '-h', '127.0.0.1', '-p', String(pgPort),
+      applyContent: sid => command(path.join(bin, process.platform === 'win32' ? 'psql.exe' : 'psql'), ['-X', '-h', '127.0.0.1', '-p', String(pgPort),
         '-U', 'postgres', '-d', 'simus_integration', '-v', 'ON_ERROR_STOP=1', '-v', `session_id=${sid}`,
         '-v', 'development_database=simus_integration', '-f', '../db/content/city-v002-events-phase2-draft.sql']) });
   } else if (env.TEST_INITIAL_SESSION_ONLY === '1') {
@@ -247,5 +256,6 @@ try {
 } finally {
   await stopServer(); if (pool) await pool.end();
   if (running) await command(path.join(bin, process.platform === 'win32' ? 'pg_ctl.exe' : 'pg_ctl'), ['-D', data, '-m', 'fast', '-w', 'stop']);
+  await writeFile(path.join(root, 'server.log'), serverLog);
   console.log('Owned services stopped; isolated test files retained at:', root);
 }

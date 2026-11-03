@@ -1,0 +1,879 @@
+{
+  "created_at": "2026-11-03T07:45:23.923Z",
+  "database": "new disposable cluster",
+  "events": [
+    {
+      "code": "EXHIBITION_02",
+      "sid": "fd97d7be-cc38-4ff8-8223-da47e7d71c0b",
+      "place_id": "city_v002_gate_crossing",
+      "point": [
+        0,
+        0.16,
+        -56.25
+      ],
+      "radius_m": 1.5,
+      "approach": [
+        [
+          0,
+          0.16,
+          -41.093
+        ],
+        [
+          0,
+          0.16,
+          -56.25
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000021",
+          "record_id": "7486186e-eae5-4801-bb5b-40d9252a4601",
+          "alignment": [
+            "2",
+            "0"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000022",
+          "record_id": "a2c349c5-c0b7-46a8-bc8c-6c24bfca47d8",
+          "alignment": [
+            "-1",
+            "0"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000023",
+          "record_id": "14b6653a-1f05-4141-b75b-cef7be948603",
+          "alignment": [
+            "-2",
+            "0"
+          ],
+          "city_version": "3"
+        }
+      ],
+      "api": "PASS",
+      "browser": "PASS"
+    },
+    {
+      "code": "EXHIBITION_05",
+      "sid": "3e1cacbc-80f3-41b7-8c6e-6d2fdd921635",
+      "place_id": "city_v002_crying_child",
+      "point": [
+        147.158345,
+        0.16,
+        26.376605
+      ],
+      "radius_m": 1.5,
+      "approach": [
+        [
+          134.933,
+          0.16,
+          20.518
+        ],
+        [
+          140,
+          0.16,
+          25
+        ],
+        [
+          147.158345,
+          0.16,
+          26.376605
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000051",
+          "record_id": "f9ca605f-4608-4b72-a5fb-c38e8fe4f318",
+          "alignment": [
+            "0",
+            "3"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000052",
+          "record_id": "cb65e2e7-9959-43c4-b47a-f0cb54c4fc2f",
+          "alignment": [
+            "2",
+            "2"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000053",
+          "record_id": "df4fb52a-d5b4-4e6f-b973-a6046aff9386",
+          "alignment": [
+            "0",
+            "-1"
+          ],
+          "city_version": "3"
+        }
+      ],
+      "api": "PASS",
+      "browser": "NOT TESTED"
+    },
+    {
+      "code": "EXHIBITION_07",
+      "sid": "36d8f220-143e-4cd0-9b12-dfb32bbcdc5a",
+      "place_id": "city_v002_illegal_parking",
+      "point": [
+        -143,
+        0.16,
+        -8.3
+      ],
+      "radius_m": 1.5,
+      "approach": [
+        [
+          -126,
+          0.16,
+          -7.9
+        ],
+        [
+          -137,
+          0.16,
+          -7.9
+        ],
+        [
+          -139,
+          0.16,
+          -8.3
+        ],
+        [
+          -143,
+          0.16,
+          -8.3
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000071",
+          "record_id": "8a60b175-f0bc-4e54-bbb0-2eca81784af0",
+          "alignment": [
+            "3",
+            "0"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000072",
+          "record_id": "5bf4c63f-dbf7-4f89-942c-c6f76f4acacf",
+          "alignment": [
+            "0",
+            "0"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000073",
+          "record_id": "ec10a3b3-2cac-4c11-b4fa-bf3a5972dd0f",
+          "alignment": [
+            "-3",
+            "-2"
+          ],
+          "city_version": "3"
+        }
+      ],
+      "api": "PASS",
+      "browser": "NOT TESTED"
+    },
+    {
+      "code": "EXHIBITION_10",
+      "sid": "ada85fa2-1e8a-43f3-ac97-4acbc9017c58",
+      "place_id": "C04_ACCESS",
+      "point": [
+        -41.1685,
+        0.16,
+        67.139
+      ],
+      "radius_m": 2,
+      "approach": [
+        [
+          -16.035,
+          0.16,
+          62.926
+        ],
+        [
+          -34.965,
+          0.16,
+          62.926
+        ],
+        [
+          -41.1685,
+          0.16,
+          67.139
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000101",
+          "record_id": "5fa4c919-19d6-4065-b9e4-ef87f198a72e",
+          "alignment": [
+            "2",
+            "1"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000102",
+          "record_id": "1ddf6ffc-09ea-4833-9c9c-1a81e1a33c3c",
+          "alignment": [
+            "0",
+            "0"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000103",
+          "record_id": "1b227687-7aae-4eec-9c50-d0f8d54cce55",
+          "alignment": [
+            "-3",
+            "-2"
+          ],
+          "city_version": "3"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000104",
+          "record_id": "67fea4cc-fce8-4a03-a1b8-95761a8dbe0b",
+          "alignment": [
+            "3",
+            "1"
+          ],
+          "city_version": "4"
+        }
+      ],
+      "api": "PASS",
+      "browser": "NOT TESTED"
+    },
+    {
+      "code": "EXHIBITION_12",
+      "sid": "d27ad7c2-a001-4c13-ae1b-05e886771f10",
+      "place_id": "ENV_Bin_BusStop",
+      "point": [
+        60,
+        0.16,
+        -56.65
+      ],
+      "radius_m": 2,
+      "approach": [
+        [
+          42.039607805437115,
+          0.16,
+          -56.25
+        ],
+        [
+          43,
+          0.16,
+          -56.25
+        ],
+        [
+          45,
+          0.16,
+          -56.65
+        ],
+        [
+          60,
+          0.16,
+          -56.65
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000121",
+          "record_id": "507bd271-46e8-4b09-a465-44b32fa26ae1",
+          "alignment": [
+            "0",
+            "1"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000122",
+          "record_id": "0b9058e8-9f7a-4465-a1e4-efcfb4ccaea9",
+          "alignment": [
+            "0",
+            "0"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000123",
+          "record_id": "a0ee9262-7b4b-42bc-a2ec-06650e14612c",
+          "alignment": [
+            "0",
+            "0"
+          ],
+          "city_version": "3"
+        }
+      ],
+      "api": "PASS",
+      "browser": "NOT TESTED"
+    },
+    {
+      "code": "EXHIBITION_13",
+      "sid": "8390cae9-8a35-4091-9b70-3b5a0b0b93f7",
+      "place_id": "city_v002_park_flowerbed",
+      "point": [
+        155.90806,
+        0.16,
+        126.702969
+      ],
+      "radius_m": 1.5,
+      "approach": [
+        [
+          165,
+          0.16,
+          100
+        ],
+        [
+          156.979746,
+          0.16,
+          121.76926
+        ],
+        [
+          156.945176,
+          0.16,
+          123.88794
+        ],
+        [
+          155.90806,
+          0.16,
+          126.702969
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000131",
+          "record_id": "36b4dcad-03de-4efa-93ab-c9cab8678791",
+          "alignment": [
+            "1",
+            "0"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000132",
+          "record_id": "815156ee-5311-41bb-b29d-15e505283284",
+          "alignment": [
+            "-1",
+            "0"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000133",
+          "record_id": "bd022590-2c53-4eca-9ea2-16d9524d7dfc",
+          "alignment": [
+            "-2",
+            "-2"
+          ],
+          "city_version": "3"
+        }
+      ],
+      "api": "PASS",
+      "browser": "NOT TESTED"
+    },
+    {
+      "code": "EXHIBITION_16",
+      "sid": "7f3dbfb4-3832-433b-937c-c7b78df50204",
+      "place_id": "NPC_HeavyCarrier_ApartmentWalk",
+      "point": [
+        -186.85,
+        0.16,
+        112.71440000000001
+      ],
+      "radius_m": 2,
+      "approach": [
+        [
+          -186.85,
+          0.16,
+          152
+        ],
+        [
+          -186.85,
+          0.16,
+          112.71440000000001
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000161",
+          "record_id": "108fbbce-d3f7-42e8-9d9d-387581dfcc4b",
+          "alignment": [
+            "0",
+            "3"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000162",
+          "record_id": "ea12c39b-83e4-4412-b5f9-cdaef779345e",
+          "alignment": [
+            "0",
+            "2"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000163",
+          "record_id": "bb0dcbb8-d700-4097-8999-b7b45ac6b419",
+          "alignment": [
+            "0",
+            "0"
+          ],
+          "city_version": "3"
+        }
+      ],
+      "api": "PASS",
+      "browser": "NOT TESTED"
+    },
+    {
+      "code": "EXHIBITION_17",
+      "sid": "41a5f7b1-aecc-4c5c-805f-de04a1268967",
+      "place_id": "city_v002_festival_info",
+      "point": [
+        11.538184,
+        0.16,
+        103.113135
+      ],
+      "radius_m": 1.5,
+      "approach": [
+        [
+          15,
+          0.16,
+          115
+        ],
+        [
+          8,
+          0.16,
+          115
+        ],
+        [
+          10.502122,
+          0.16,
+          108.054448
+        ],
+        [
+          10.521405,
+          0.16,
+          105.935574
+        ],
+        [
+          11.538184,
+          0.16,
+          103.113135
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000171",
+          "record_id": "df73f4bc-5293-4d35-bc1f-bd2badc12873",
+          "alignment": [
+            "0",
+            "2"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000172",
+          "record_id": "5684617a-e36f-4e75-a717-ed73c03b4da5",
+          "alignment": [
+            "0",
+            "0"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000173",
+          "record_id": "eb5d9479-2430-4554-bc21-6bd255b6fe99",
+          "alignment": [
+            "-2",
+            "-2"
+          ],
+          "city_version": "3"
+        }
+      ],
+      "api": "PASS",
+      "browser": "NOT TESTED"
+    },
+    {
+      "code": "EXHIBITION_18",
+      "sid": "3167c91e-18aa-498d-88aa-915e5c490804",
+      "place_id": "city_v002_park_cat",
+      "point": [
+        158.259684,
+        0.16,
+        50.839311
+      ],
+      "radius_m": 1.5,
+      "approach": [
+        [
+          153,
+          0.16,
+          65
+        ],
+        [
+          158.259684,
+          0.16,
+          50.839311
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000181",
+          "record_id": "88574dc5-8ee8-47dc-99f6-70ba8697cd3f",
+          "alignment": [
+            "1",
+            "2"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000182",
+          "record_id": "0a2919c5-f89e-4906-ae6c-ea79dca9fecc",
+          "alignment": [
+            "0",
+            "1"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000183",
+          "record_id": "ae5e7756-1067-4538-8a71-ea019eded8ac",
+          "alignment": [
+            "0",
+            "-1"
+          ],
+          "city_version": "3"
+        }
+      ],
+      "api": "PASS",
+      "browser": "NOT TESTED"
+    },
+    {
+      "code": "EXHIBITION_22",
+      "sid": "b965b63f-2eeb-4162-a5f3-86e9fd193660",
+      "place_id": "C04_ACCESS",
+      "point": [
+        -41.1685,
+        0.16,
+        67.139
+      ],
+      "radius_m": 2,
+      "approach": [
+        [
+          -16.035,
+          0.16,
+          62.926
+        ],
+        [
+          -34.965,
+          0.16,
+          62.926
+        ],
+        [
+          -41.1685,
+          0.16,
+          67.139
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000221",
+          "record_id": "360120e0-050c-4c92-8dbc-97e4369e0a5a",
+          "alignment": [
+            "0",
+            "2"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000222",
+          "record_id": "ae564e05-742c-4e2f-a302-39ba1b519823",
+          "alignment": [
+            "0",
+            "1"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000223",
+          "record_id": "bd689b7c-8951-413a-9917-d4c9564fa7f4",
+          "alignment": [
+            "-1",
+            "-3"
+          ],
+          "city_version": "3"
+        }
+      ],
+      "api": "PASS",
+      "browser": "NOT TESTED"
+    },
+    {
+      "code": "EXHIBITION_28",
+      "sid": "c80e3d07-583e-41e8-b173-9d8bc6ed4dc2",
+      "place_id": "city_v002_road_control",
+      "point": [
+        86,
+        0.16,
+        -65.75
+      ],
+      "radius_m": 1.5,
+      "approach": [
+        [
+          110.882,
+          0.16,
+          -65.75
+        ],
+        [
+          86,
+          0.16,
+          -65.75
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000281",
+          "record_id": "007714ec-5b4d-4dd6-8ee8-d062d5b4887a",
+          "alignment": [
+            "2",
+            "0"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000282",
+          "record_id": "dd498c68-b6f0-4935-85ea-1dc830643b7c",
+          "alignment": [
+            "1",
+            "0"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000283",
+          "record_id": "f869c468-7191-44dd-8468-7e96ce21295d",
+          "alignment": [
+            "-3",
+            "-1"
+          ],
+          "city_version": "3"
+        }
+      ],
+      "api": "PASS",
+      "browser": "NOT TESTED"
+    },
+    {
+      "code": "EXHIBITION_30",
+      "sid": "7019d95b-fe86-43ce-bb6c-53697af634b0",
+      "place_id": "city_v002_mystery_crate",
+      "point": [
+        15,
+        0.16,
+        115
+      ],
+      "radius_m": 1.5,
+      "approach": [
+        [
+          11.538184,
+          0.16,
+          103.113135
+        ],
+        [
+          10.521405,
+          0.16,
+          105.935574
+        ],
+        [
+          10.502122,
+          0.16,
+          108.054448
+        ],
+        [
+          8,
+          0.16,
+          115
+        ],
+        [
+          15,
+          0.16,
+          115
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000301",
+          "record_id": "d5d526bf-9ca8-4667-b7f5-2701f23ab93b",
+          "alignment": [
+            "3",
+            "0"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000302",
+          "record_id": "ff13ffa4-091e-48e0-a93e-011d7fff0e3c",
+          "alignment": [
+            "0",
+            "2"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000303",
+          "record_id": "9fa71eca-7ec0-47c1-9376-5507d3270d9e",
+          "alignment": [
+            "-3",
+            "0"
+          ],
+          "city_version": "3"
+        }
+      ],
+      "api": "PASS",
+      "browser": "NOT TESTED"
+    }
+  ],
+  "browser": [
+    {
+      "code": "EXHIBITION_02",
+      "sid": "7c302faa-1145-43d6-a62b-3a4f7ec23a16",
+      "status": "PASS",
+      "errors": [],
+      "failures": [],
+      "http_errors": [],
+      "bridge_errors": [],
+      "frame_detachments": [],
+      "poll_failure_recovery": "PASS",
+      "movement_started_at": "2026-11-03T07:46:50.614Z",
+      "moving": [
+        {
+          "type": "INSPECTION",
+          "session_id": "7c302faa-1145-43d6-a62b-3a4f7ec23a16",
+          "npc_id": "0403de52-32bb-436b-9dc4-efcb9dce6a8b",
+          "position": [
+            0,
+            0.16,
+            -41.093
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 374.821,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "7c302faa-1145-43d6-a62b-3a4f7ec23a16",
+          "npc_id": "0403de52-32bb-436b-9dc4-efcb9dce6a8b",
+          "position": [
+            0,
+            0.159999982,
+            -45.4958
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 207.939514,
+          "smooth_transitions": true
+        }
+      ],
+      "movement_observed": true,
+      "server_point": [
+        0,
+        0.16,
+        -54.75020000000001
+      ],
+      "unity_point": [
+        0,
+        0.16,
+        -54.7502
+      ],
+      "server_unity_error_m": 7.105427357601002e-15,
+      "wait_ms": 31988,
+      "single_click_during_poll": "PASS",
+      "choice": {
+        "choice_id": "40000000-0000-0000-0000-000000000021",
+        "record_id": "f13cead7-5dfe-4f30-8369-d0d670cbe878",
+        "alignment": [
+          "2",
+          "0"
+        ],
+        "city_version": "1"
+      },
+      "resumed": [
+        {
+          "type": "INSPECTION",
+          "session_id": "7c302faa-1145-43d6-a62b-3a4f7ec23a16",
+          "npc_id": "0403de52-32bb-436b-9dc4-efcb9dce6a8b",
+          "position": [
+            0,
+            0.16,
+            -55.4818
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 21.0000114,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "7c302faa-1145-43d6-a62b-3a4f7ec23a16",
+          "npc_id": "0403de52-32bb-436b-9dc4-efcb9dce6a8b",
+          "position": [
+            0,
+            0.16,
+            -52.9798
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 21.0000114,
+          "smooth_transitions": true
+        }
+      ]
+    }
+  ],
+  "checks": [
+    "managed init 001–018; Phase2 DRAFT SQL applied twice without content changes",
+    "all 30 titles, 91 choice labels/alignment/city values and 12 exact placements preserved; 18 null",
+    "10/22 shared place: one event per visit, restart while inside, second event only after loop re-entry"
+  ],
+  "webgl": {
+    "protocol_version": 1,
+    "map_version": "test-only-city-rebuild-v002-phase1-v1",
+    "kind": "city-rebuild-v002-session",
+    "path_versions": [
+      "city-rebuild-v002-walk-phase1-v1"
+    ],
+    "source_scene_sha256": "3ca26d6ee0c512812c8d1778c4fb8e8296b7df2357a46aa231daf9f6fe8969d2",
+    "npc_motion_enabled": true,
+    "exhibition_ready": false,
+    "index_sha256": "a269593f4c7d1ec4285501a67810936e528d72db62417d727d2e72ab616413c5"
+  },
+  "wait90": {
+    "phase": "GUIDING",
+    "event": null,
+    "deadline_at": null,
+    "overdue": true,
+    "elapsed_seconds": 91.022,
+    "event_started_after_seconds": null,
+    "status": "FAIL",
+    "scope": "single overdue observation, not a universal deadline guarantee",
+    "meaning": "90-second maximum is not enforced; no remote/unplaced event injected"
+  },
+  "browser_scope": [
+    "EXHIBITION_02"
+  ],
+  "software_gpu_forced": false
+}
