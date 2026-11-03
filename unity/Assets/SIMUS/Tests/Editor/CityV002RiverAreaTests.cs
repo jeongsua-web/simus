@@ -59,5 +59,35 @@ namespace Simus.City.Tests
                 UnityEngine.Object.DestroyImmediate(host);
             }
         }
+
+        [Test]
+        public void ServerActorClonesDoNotInheritLocalPatrolChordGuard()
+        {
+            var template = new GameObject("server-actor-template");
+            var host = new GameObject("server-bridge-fixture");
+            var bridgeType = Type.GetType("Simus.WebCityBridge, Assembly-CSharp", true);
+            var guardType = Type.GetType("Simus.CityV002RiverGuard, Assembly-CSharp", true);
+            var bridge = host.AddComponent(bridgeType);
+            try
+            {
+                template.AddComponent(guardType); template.SetActive(false);
+                bridgeType.GetField("npcTemplate").SetValue(bridge, template);
+                var getActor = bridgeType.GetMethod("GetActor", BindingFlags.Instance | BindingFlags.NonPublic);
+                foreach (bool own in new[] { true, false })
+                {
+                    var clone = (GameObject)getActor.Invoke(bridge, new object[] { own ? "own" : "crowd", own, "npc_01", "none" });
+                    Assert.That(((Behaviour)clone.GetComponent(guardType)).enabled, Is.False,
+                        "A canonical snapshot is not a direct local patrol step from the template origin.");
+                }
+                Assert.That(((Behaviour)template.GetComponent(guardType)).enabled, Is.True,
+                    "Local environment patrols and the source template retain river protection.");
+            }
+            finally
+            {
+                // DisposeBridge uses runtime Destroy; avoid that path during Edit Mode teardown.
+                bridgeType.GetField("disposed", BindingFlags.Instance | BindingFlags.NonPublic).SetValue(bridge, true);
+                UnityEngine.Object.DestroyImmediate(host); UnityEngine.Object.DestroyImmediate(template);
+            }
+        }
     }
 }

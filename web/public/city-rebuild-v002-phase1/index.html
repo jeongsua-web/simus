@@ -7,10 +7,10 @@ const canvas = document.getElementById('unity-canvas');
 window.simusBridge = createSimusBridge(window, canvas);
 if (simusBridge.valid) {
   const script = document.createElement('script');
-  script.src = 'Build/phase1_qa_local_20261020_051159.loader.js';
+  script.src = 'Build/city_rebuild_v002_phase1_session.loader.js';
   script.onerror = () => simusBridge.error('LOADER_FAILED');
   script.onload = () => createUnityInstance(canvas, {
-    dataUrl: 'Build/phase1_qa_local_20261020_051159.data', frameworkUrl: 'Build/phase1_qa_local_20261020_051159.framework.js', codeUrl: 'Build/phase1_qa_local_20261020_051159.wasm',
+    dataUrl: 'Build/city_rebuild_v002_phase1_session.data', frameworkUrl: 'Build/city_rebuild_v002_phase1_session.framework.js', codeUrl: 'Build/city_rebuild_v002_phase1_session.wasm',
     streamingAssetsUrl: 'StreamingAssets', companyName: 'SIMUS', productName: 'SIMUS bridge test', productVersion: '1',
     devicePixelRatio: Math.min(window.devicePixelRatio || 1, 1.5),
     showBanner: (_, type) => { if (type === 'error') simusBridge.error('UNITY_LOADER_ERROR'); },

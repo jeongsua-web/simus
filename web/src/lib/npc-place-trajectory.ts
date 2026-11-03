@@ -92,8 +92,13 @@ export function scanPlace(npc: Npc, from: number, to: number, location: EventLoc
   let entries = Number(initial), firstEntry: number | null = initial ? from : null;
   const representableEntry = (atDistance: number) => {
     const at = Math.ceil(epoch + atDistance / speed * 1000);
-    // Never freeze outside a radius merely to round a submillisecond tangent.
-    return at <= to && contains(travelled(at)) ? at : null;
+    // Epoch arithmetic can round an exact millisecond boundary just outside
+    // the interval (e.g. road-control arrival at 1.2m/s). Try the next tick,
+    // but only if it is still inside the real interval and polling window.
+    // A submillisecond tangent must never freeze an actor outside the radius.
+    for (const candidate of [at, at + 1])
+      if (candidate <= to && contains(travelled(candidate))) return candidate;
+    return null;
   };
   if (speed > 0 && end > start) {
     const alwaysInside = intervals.length === 1 && intervals[0][0] === 0 && intervals[0][1] === total;

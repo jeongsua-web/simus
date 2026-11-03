@@ -48,7 +48,8 @@ export async function runV002SessionBrowser({pool,env,token,templateId,root}) {
     await page.addInitScript(()=>window.addEventListener('message',event=>{if(event.data?.channel==='simus-city')window.recordBridge(event.data);}));
     await page.goto(env.TEST_API_URL+'/participate');await enterCity(page,{nickname:'새도시시민',characterId:'npc_01'});
     await page.waitForFunction(()=>document.querySelector('iframe[title="SIM:US 도시"]')?.style.visibility==='visible',null,{timeout:180000});
-    const unity=page.frames().find(f=>f.url().includes('/city-rebuild-v002/index.html'));assert.ok(unity);
+    const frame=await page.locator('iframe[title="SIM:US 도시"]').elementHandle();
+    const unity=await frame.contentFrame();assert.ok(unity);
     async function inspect() {
       // SendMessage schedules a Unity frame; allow a fresh observation to arrive.
       await unity.evaluate(()=>window.simusBridge.inspect());await page.waitForTimeout(150);

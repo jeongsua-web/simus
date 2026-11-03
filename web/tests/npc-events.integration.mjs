@@ -51,7 +51,20 @@ export async function runNpcEventIntegration({ pool, env, token, templateId, sto
   await pool.query(`INSERT INTO simus.session_choices(session_id,situation_id,label,display_order)
     VALUES($1,$2,'Help',1),($1,$2,'Pass',2)`,[sid,colocated]);
   const locatedIds = new Set([located,colocated]);
+  const foreign = added.find(t => t.event_location);
+  const rejectedStart = await call(`/api/admin/sessions/${sid}/start`, { method: 'POST', admin: true, data: { request_key: randomUUID() } });
+  assert.equal(rejectedStart.status,409,'New DRAFTs must reject foreign-map content');
+  await pool.query('UPDATE simus.session_situations SET event_location=NULL WHERE session_id=$1 AND id=$2',[sid,foreign.id]);
   assert.equal((await call(`/api/admin/sessions/${sid}/start`, { method: 'POST', admin: true, data: { request_key: randomUUID() } })).status, 200);
+  // Simulate a historical RUNNING row, which predates the new start preflight.
+  // This fixture is owned by isolated-runner; production guards remain enabled.
+  await pool.query('BEGIN');
+  try {
+    await pool.query('ALTER TABLE simus.session_situations DISABLE TRIGGER draft_content');
+    await pool.query('UPDATE simus.session_situations SET event_location=$3 WHERE session_id=$1 AND id=$2',[sid,foreign.id,foreign.event_location]);
+    await pool.query('ALTER TABLE simus.session_situations ENABLE TRIGGER draft_content');
+    await pool.query('COMMIT');
+  } catch(error) {await pool.query('ROLLBACK');throw error;}
   assert.equal((await call(locationsPath,{method:'PUT',admin:true,data:locationInput})).body.error.code,'EVENT_LOCATION_LOCKED');
   const owner = await call('/api/participants', { method: 'POST' });
   const stranger = await call('/api/participants', { method: 'POST' });
@@ -139,9 +152,9 @@ export async function runNpcEventIntegration({ pool, env, token, templateId, sto
     INSERT INTO simus.participants(id) SELECT gen_random_uuid() FROM generate_series(1,1000) RETURNING id
   ), joined AS (
     INSERT INTO simus.participant_sessions(session_id,participant_id,npc_motion)
-    SELECT $1,id,$2::jsonb FROM added RETURNING participant_id,joined_at
-  ) INSERT INTO simus.npc_event_states(session_id,participant_id,waiting_since,motion_epoch)
-    SELECT $1,participant_id,clock_timestamp()-interval '91 seconds',joined_at FROM joined RETURNING participant_id`,[sid,JSON.stringify({...motion,points:[[100,0,100],[1000,0,100]]})])).rows.map(row=>row.participant_id);
+    SELECT $1,a.id,s.npc_motion FROM added a CROSS JOIN simus.simulation_sessions s WHERE s.id=$1 RETURNING participant_id,joined_at
+  ) INSERT INTO simus.npc_event_states(session_id,participant_id,waiting_since,motion_epoch,resume_motion)
+    SELECT $1,participant_id,clock_timestamp()-interval '91 seconds',joined_at,$2::jsonb FROM joined RETURNING participant_id`,[sid,JSON.stringify({...motion,points:[[100,0,100],[1000,0,100]]})])).rows.map(row=>row.participant_id);
   await pool.query('INSERT INTO simus.participant_alignments(session_id,participant_id) SELECT $1,unnest($2::uuid[])',[sid,batch]);
   const batchUntil=Date.now()+8000;let batchCount=0;
   while(Date.now()<batchUntil) {

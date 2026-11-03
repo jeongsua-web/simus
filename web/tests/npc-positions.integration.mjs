@@ -45,7 +45,9 @@ export async function runNpcPositionIntegration({ pool, env, token, templateId }
   const snapshot = await call(`${positions}?map_version=${route.map_version}&path_version=${route.path_version}`);
   assert.equal(snapshot.status, 200); assert.equal(snapshot.cache, 'no-store');
   const npc = snapshot.body.npcs[0];
-  assert.deepEqual(npc.motion, route);
+  const { revision, ...canonicalMotion } = npc.motion;
+  assert.equal(revision, 1);
+  assert.deepEqual(canonicalMotion, route);
   const elapsed = Math.max(0, (Date.parse(snapshot.body.motion_time) - Date.parse(npc.epoch)) / 1000);
   assert.ok(Math.abs(npc.position.x - elapsed * 2) < 0.003);
   assert.equal(npc.position.y, 0); assert.equal(npc.position.z, 0);

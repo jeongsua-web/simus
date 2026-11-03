@@ -4,7 +4,7 @@
   "map_version": "test-only-city-rebuild-v002-phase1-v1",
   "path_version": "city-rebuild-v002-walk-phase1-v1",
   "exhibition_ready": false,
-  "qa_executed": false,
+  "qa_executed": true,
   "phase1_report_available": true,
   "phase1_source_commit": "7ac43f0",
   "policy": "Only READY rows may be enabled; preserve every existing location; candidates are not active mappings.",
@@ -102,7 +102,7 @@
         }
       },
       "phase1_baseline": "PRESERVED_7ac43f0",
-      "physical_access_verified": false
+      "physical_access_verified": true
     },
     {
       "number": 3,
@@ -230,7 +230,7 @@
         }
       },
       "phase1_baseline": "PRESERVED_7ac43f0",
-      "physical_access_verified": false
+      "physical_access_verified": true
     },
     {
       "number": 6,
@@ -316,7 +316,7 @@
         }
       },
       "phase1_baseline": "PRESERVED_7ac43f0",
-      "physical_access_verified": false
+      "physical_access_verified": true
     },
     {
       "number": 8,
@@ -376,7 +376,7 @@
       "seed_situation_id": "30000000-0000-0000-0000-000000000010",
       "title": "친구가 시험에서 부정행위를 하자고 한다",
       "place_id": "C04_ACCESS",
-      "scene_path": "C04_ACCESS",
+      "scene_path": "CityRebuild_v002/06_CampusBuildings_14/C04_중앙동 A",
       "status": "READY",
       "reason": "캠퍼스 학교 건물 C04의 기존 접근 노드. 대화형 원문은 기존 모바일 UI 사용.",
       "candidate_location": {
@@ -409,7 +409,7 @@
         "gap_m": 0
       },
       "phase1_baseline": "ADDED_PHASE2",
-      "physical_access_verified": false
+      "physical_access_verified": true
     },
     {
       "number": 11,
@@ -492,7 +492,7 @@
         "gap_m": 2.6499999999999986
       },
       "phase1_baseline": "ADDED_PHASE2",
-      "physical_access_verified": false
+      "physical_access_verified": true
     },
     {
       "number": 13,
@@ -546,7 +546,7 @@
         }
       },
       "phase1_baseline": "PRESERVED_7ac43f0",
-      "physical_access_verified": false
+      "physical_access_verified": true
     },
     {
       "number": 14,
@@ -661,7 +661,7 @@
         "gap_m": 0.0
       },
       "phase1_baseline": "ADDED_PHASE2",
-      "physical_access_verified": false
+      "physical_access_verified": true
     },
     {
       "number": 17,
@@ -715,7 +715,7 @@
         }
       },
       "phase1_baseline": "PRESERVED_7ac43f0",
-      "physical_access_verified": false
+      "physical_access_verified": true
     },
     {
       "number": 18,
@@ -769,7 +769,7 @@
         }
       },
       "phase1_baseline": "PRESERVED_7ac43f0",
-      "physical_access_verified": false
+      "physical_access_verified": true
     },
     {
       "number": 19,
@@ -883,7 +883,7 @@
       "seed_situation_id": "30000000-0000-0000-0000-000000000022",
       "title": "친구가 다른 사람의 비밀을 알려줬다",
       "place_id": "C04_ACCESS",
-      "scene_path": "C04_ACCESS",
+      "scene_path": "CityRebuild_v002/06_CampusBuildings_14/C04_중앙동 A",
       "status": "READY",
       "reason": "학교 C04 접근점 공유. 비밀 대화는 기존 모바일 원문 사용, 잔류 중 연속 발생 금지.",
       "candidate_location": {
@@ -916,7 +916,7 @@
         "gap_m": 0
       },
       "phase1_baseline": "ADDED_PHASE2",
-      "physical_access_verified": false
+      "physical_access_verified": true
     },
     {
       "number": 23,
@@ -1140,7 +1140,7 @@
         }
       },
       "phase1_baseline": "PRESERVED_7ac43f0",
-      "physical_access_verified": false
+      "physical_access_verified": true
     },
     {
       "number": 29,
@@ -1226,7 +1226,8 @@
         }
       },
       "phase1_baseline": "PRESERVED_7ac43f0",
-      "physical_access_verified": false
+      "physical_access_verified": true
     }
-  ]
+  ],
+  "qa_report": "docs/placement/phase2/integration-validation-report.md"
 }

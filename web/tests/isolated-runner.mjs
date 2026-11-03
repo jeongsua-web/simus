@@ -3,9 +3,10 @@ import { runV002SessionBrowser } from './v002-session-browser.mjs';
 import { runSessionBuildIntegration } from './session-build.integration.mjs';
 import { runCityV002Events } from './city-v002-events.integration.mjs';
 import { runEventBrowser } from './event-browser.mjs';
+import { runPhase2Validation } from './phase2-validation.mjs';
 import { runNpcEventIntegration } from './npc-events.integration.mjs';
 // Creates a NEW cluster. Never reads DATABASE_URL or connects to a development DB.
-import { mkdtemp, readFile, mkdir, writeFile, cp, symlink } from 'node:fs/promises';
+import { mkdtemp, readFile, mkdir, writeFile, cp, symlink, readdir } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -78,14 +79,25 @@ async function fixtureBuild(map = 'test-fixture-v1', route = 'test-path-v1') {
 await fixtureBuild();
 const v002 = path.join(env.SIMUS_WEBGL_PUBLIC_ROOT, 'city-rebuild-v002-phase1');
 await mkdir(v002);
-for (const name of ['build.json','index.html','bridge.js']) await cp(path.join(web,'public/city-rebuild-v002-phase1',name),path.join(v002,name));
-await symlink(path.join(web,'public/city-rebuild-v002-phase1/Build'),path.join(v002,'Build'), 'dir');
+const phase2Build = process.env.TEST_PHASE2_ONLY === '1' && process.env.TEST_PHASE2_WEBGL_BUILD
+  ? path.resolve(process.env.TEST_PHASE2_WEBGL_BUILD) : path.join(web,'public/city-rebuild-v002-phase1');
+for (const name of ['build.json','index.html','bridge.js']) await cp(path.join(phase2Build,name),path.join(v002,name));
+await symlink(path.join(phase2Build,'Build'),path.join(v002,'Build'), 'dir');
+let serverCwd=web;
+if (phase2Build !== path.join(web,'public/city-rebuild-v002-phase1')) {
+  // Serve a new local Unity build without replacing the repository's public build.
+  serverCwd=path.join(root,'server'); await mkdir(path.join(serverCwd,'public'),{recursive:true});
+  for(const name of ['node_modules','.next']) await symlink(path.join(web,name),path.join(serverCwd,name),'dir');
+  for(const item of await readdir(path.join(web,'public'),{withFileTypes:true}))
+    await symlink(item.name==='city-rebuild-v002-phase1'?phase2Build:path.join(web,'public',item.name),
+      path.join(serverCwd,'public',item.name),item.isDirectory()?'dir':'file');
+}
 let server, running = false, pool;
 async function stopServer() {
   if (server && server.exitCode === null) { const ended = once(server, 'exit'); server.kill(); await ended; }
 }
 async function startServer() {
-  server = spawn(process.execPath, ['node_modules/next/dist/bin/next', 'start', '--hostname', '127.0.0.1', '--port', String(port)], { cwd: web, env, windowsHide: true });
+  server = spawn(process.execPath, ['node_modules/next/dist/bin/next', 'start', '--hostname', '127.0.0.1', '--port', String(port)], { cwd: serverCwd, env, windowsHide: true });
   let log = ''; server.stdout.on('data', x => log += x); server.stderr.on('data', x => log += x);
   server.on('error', e => { log += e.message; });
   for (let n = 0; n < 80; n++) {
@@ -105,7 +117,7 @@ try {
   const admin = new pg.Client({ connectionString: `postgresql://postgres@127.0.0.1:${pgPort}/postgres` });
   await admin.connect(); await admin.query('CREATE DATABASE simus_integration'); await admin.end();
   pool = new pg.Pool({ connectionString: env.DATABASE_URL });
-  if (env.TEST_INITIAL_SESSION_ONLY === '1') {
+  if (env.TEST_INITIAL_SESSION_ONLY === '1' || env.TEST_PHASE2_ONLY === '1') {
     // Exercise the production migration planner in this NEW disposable cluster.
     // Render without migrate.main(); apply with psql only to the owned test DB.
     const sql = await command('python3', ['-c',
@@ -129,7 +141,12 @@ try {
     CREATE TRIGGER test_fixture_npc_motion BEFORE INSERT ON simus.simulation_sessions FOR EACH ROW EXECUTE FUNCTION simus.test_fixture_npc_motion()`);
   }
   await startServer();
-  if (env.TEST_INITIAL_SESSION_ONLY === '1') {
+  if (env.TEST_PHASE2_ONLY === '1') {
+    await runPhase2Validation({ pool, env, privateKey, publicJwk, root, stopServer, startServer,
+      applyContent: sid => command(path.join(bin, 'psql'), ['-X', '-h', '127.0.0.1', '-p', String(pgPort),
+        '-U', 'postgres', '-d', 'simus_integration', '-v', 'ON_ERROR_STOP=1', '-v', `session_id=${sid}`,
+        '-v', 'development_database=simus_integration', '-f', '../db/content/city-v002-events-phase2-draft.sql']) });
+  } else if (env.TEST_INITIAL_SESSION_ONLY === '1') {
     await runInitialSessionIntegration({ pool, env, privateKey, publicJwk });
   } else if (env.TEST_POPULATION_ONLY === '1') {
     await pool.query(await readFile(path.join(web, '../db/seed_demo.sql'), 'utf8'));

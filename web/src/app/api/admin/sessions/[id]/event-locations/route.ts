@@ -39,11 +39,12 @@ export async function PUT(request: NextRequest, context: { params: Promise<{ id:
           v.point.some(n => typeof n !== "number" || !Number.isFinite(n) || Math.abs(n) > 1e6) ||
           typeof v.radius_m !== "number" || !Number.isFinite(v.radius_m) || v.radius_m <= 0 || v.radius_m > 1e6)
         throw new ApiError(400, "INVALID_EVENT_LOCATION", "지도, 3차원 위치와 양수 반경을 지정해주세요.");
-      if (isV002MapVersion(v.map_version)) {
-        try { locate(v.point, v.map_version); }
+      const mapVersion = version(v.map_version, "map_version");
+      if (isV002MapVersion(mapVersion)) {
+        try { locate(v.point, mapVersion); }
         catch { throw new ApiError(400, "INVALID_GRAPH_LOCATION", "v002 이벤트 위치는 보행 그래프 위에 있어야 합니다."); }
       }
-      location = normalizeEventLocation({ ...v, map_version: version(v.map_version, "map_version") });
+      location = normalizeEventLocation({ ...v, map_version: mapVersion });
     } else if (input.event_location != null) throw new ApiError(400, "INVALID_EVENT_LOCATION", "공통 이벤트에는 특정 위치를 지정할 수 없습니다.");
     return json(await transaction(async db => {
       await requireAdmin(db, subject);

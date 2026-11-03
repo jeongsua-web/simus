@@ -1,0 +1,217 @@
+{
+  "scope": "Only reproducible old-binary server/Unity divergence; interrupted later cases excluded",
+  "browser": [
+    {
+      "code": "EXHIBITION_05",
+      "sid": "2f5f8985-c85c-45e7-a019-9e64d60c6b6f",
+      "status": "FAIL",
+      "errors": [],
+      "failures": [
+        "No real Unity movement observed before arrival",
+        "Unity actor disagrees with server arrival",
+        "Unity actor did not resume after choice"
+      ],
+      "movement_started_at": "2026-11-03T05:20:01.200Z",
+      "moving": [
+        {
+          "type": "INSPECTION",
+          "session_id": "2f5f8985-c85c-45e7-a019-9e64d60c6b6f",
+          "npc_id": "40afe147-714d-4879-b57b-528fa51f43c2",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 510.4556,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "2f5f8985-c85c-45e7-a019-9e64d60c6b6f",
+          "npc_id": "40afe147-714d-4879-b57b-528fa51f43c2",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 491.7181,
+          "smooth_transitions": true
+        }
+      ],
+      "movement_observed": false,
+      "server_point": [
+        145.68540316092148,
+        0.16,
+        26.09334691445304
+      ],
+      "unity_point": [
+        0,
+        0,
+        0
+      ],
+      "server_unity_error_m": 148.00371430257496,
+      "wait_ms": 34658,
+      "choice": {
+        "choice_id": "40000000-0000-0000-0000-000000000051",
+        "record_id": "1e23b381-e7d3-4cb1-9d35-7d7dc35159c1",
+        "alignment": [
+          "0",
+          "3"
+        ],
+        "city_version": "1"
+      },
+      "resumed": [
+        {
+          "type": "INSPECTION",
+          "session_id": "2f5f8985-c85c-45e7-a019-9e64d60c6b6f",
+          "npc_id": "40afe147-714d-4879-b57b-528fa51f43c2",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 216.889877,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "2f5f8985-c85c-45e7-a019-9e64d60c6b6f",
+          "npc_id": "40afe147-714d-4879-b57b-528fa51f43c2",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 166.335052,
+          "smooth_transitions": true
+        }
+      ]
+    },
+    {
+      "code": "EXHIBITION_13",
+      "sid": "6b9c11de-7c0d-4a18-baa0-6312da8c778d",
+      "status": "FAIL",
+      "errors": [],
+      "failures": [
+        "No real Unity movement observed before arrival",
+        "Unity actor disagrees with server arrival",
+        "Unity actor did not resume after choice"
+      ],
+      "movement_started_at": "2026-11-03T05:24:47.873Z",
+      "moving": [
+        {
+          "type": "INSPECTION",
+          "session_id": "6b9c11de-7c0d-4a18-baa0-6312da8c778d",
+          "npc_id": "076b72c7-9c91-4e25-8b01-77bc6b5617f8",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 506.823029,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "6b9c11de-7c0d-4a18-baa0-6312da8c778d",
+          "npc_id": "076b72c7-9c91-4e25-8b01-77bc6b5617f8",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 488.0808,
+          "smooth_transitions": true
+        }
+      ],
+      "movement_observed": false,
+      "server_point": [
+        156.42656334570893,
+        0.16,
+        125.29560284735396
+      ],
+      "unity_point": [
+        0,
+        0,
+        0
+      ],
+      "server_unity_error_m": 200.4202031059517,
+      "wait_ms": 56216,
+      "choice": {
+        "choice_id": "40000000-0000-0000-0000-000000000131",
+        "record_id": "b197b2bd-4373-4d9b-9425-416c663d7398",
+        "alignment": [
+          "1",
+          "0"
+        ],
+        "city_version": "1"
+      },
+      "resumed": [
+        {
+          "type": "INSPECTION",
+          "session_id": "6b9c11de-7c0d-4a18-baa0-6312da8c778d",
+          "npc_id": "076b72c7-9c91-4e25-8b01-77bc6b5617f8",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 135.754929,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "6b9c11de-7c0d-4a18-baa0-6312da8c778d",
+          "npc_id": "076b72c7-9c91-4e25-8b01-77bc6b5617f8",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 38.7755852,
+          "smooth_transitions": true
+        }
+      ]
+    }
+  ]
+}

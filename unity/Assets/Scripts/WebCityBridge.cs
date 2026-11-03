@@ -71,6 +71,12 @@ namespace Simus
             if (npcTemplate == null) throw new InvalidOperationException("NPC_CHARACTER_MISSING");
             actor = Instantiate(npcTemplate, transform);
             actor.name = own ? "Own NPC - SIMUS Character" : "Public NPC - SIMUS Character";
+            // This guard sweeps a chord from the local patrol's previous pose.
+            // A server actor can spawn across the river or receive snapshots
+            // spanning several graph legs; that chord is not its actual route.
+            // Server graph validation owns these actors. Keep the guard on the
+            // template and local environment patrols, never on session clones.
+            foreach (var guard in actor.GetComponents<CityV002RiverGuard>()) guard.enabled = false;
             CitizenCharacterAppearance.Apply(actor, characterId, glassesId);
             actor.SetActive(true);
             if (actor.GetComponent<NpcGrounding>() == null) actor.AddComponent<NpcGrounding>();

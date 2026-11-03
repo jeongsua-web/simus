@@ -8017,6 +8017,20 @@
       "sha256": "6cdaf685a31eb45f3fb1b78191ba439a44f0064abd862dd4b7dbb482cf51f55c"
     },
     {
+      "path": "unity/Assets/Editor/CityV002Phase2Validation.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 5647,
+      "sha256": "671e5cfbb2608cce6664b062cafe4216b3cb6d6c62958d6899450089cc458271"
+    },
+    {
+      "path": "unity/Assets/Editor/CityV002Phase2Validation.cs.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 59,
+      "sha256": "64cdd2cee2cffe96baeb458b6119dfd18b0c9c3ea70ff2788237c55897ce9977"
+    },
+    {
       "path": "unity/Assets/Editor/CompletedMapFollowSetup.cs",
       "role": "code",
       "location": "unity_existing",
@@ -36125,8 +36139,8 @@
       "path": "unity/Assets/SIMUS/Tests/Editor/CityV002RiverAreaTests.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 2948,
-      "sha256": "94b96ecc41817baa55ec739cf09ed3d7af21e139d374d7df6c623ecbee42cd4c"
+      "bytes": 4734,
+      "sha256": "a149daa668006afadcf9cea64d326fb204494e5c4b9e22282489b28e80df1055"
     },
     {
       "path": "unity/Assets/SIMUS/Tests/Editor/CityV002RiverAreaTests.cs.meta",
@@ -36475,8 +36489,8 @@
       "path": "unity/Assets/Scripts/WebCityBridge.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 10817,
-      "sha256": "afb8aaaaac7f0f7ccee5f911ce195b117233b5f12f4a9137bb6504a2963406e9"
+      "bytes": 11315,
+      "sha256": "9320930811f1373a27c0f5e82aa3722c17eb1a7aac78b6ff323a180edfbf6b3f"
     },
     {
       "path": "unity/Assets/Scripts/WebCityBridge.cs.meta",
@@ -37109,32 +37123,32 @@
       "sha256": "6e3da18b9327723a22c3cf39ddea6eacc0fce2afcad2c70a087a017735f2b34d"
     },
     {
-      "path": "web/public/city-rebuild-v002-phase1/Build/phase1_qa_local_20261020_051159.data",
+      "path": "web/public/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.data",
       "role": "support",
       "location": "web_runtime",
-      "bytes": 74443057,
-      "sha256": "6eaec3b595406b39b76d1e7efe56f0b2a4ee75add871d5fb20ed8f4c07d32174"
+      "bytes": 74442021,
+      "sha256": "fa50bb44655258d5fad3b221736426be7179f643da728db6d8621c9f0552199f"
     },
     {
-      "path": "web/public/city-rebuild-v002-phase1/Build/phase1_qa_local_20261020_051159.framework.js",
+      "path": "web/public/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.framework.js",
       "role": "support",
       "location": "web_runtime",
       "bytes": 413204,
-      "sha256": "8fc81fca14ab0d03713374e001dd5986c5edd0e2b8e8924ea2a21a483340dd2b"
+      "sha256": "f294eeb46e7587ff0699737b70cb3b0da290d6697ca7275e71a1f3627dc05299"
     },
     {
-      "path": "web/public/city-rebuild-v002-phase1/Build/phase1_qa_local_20261020_051159.loader.js",
+      "path": "web/public/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.loader.js",
       "role": "support",
       "location": "web_runtime",
       "bytes": 26983,
-      "sha256": "77066b48678c4666a7492c1c6db2da06245117ef1d60d205ea5b42285034d0bf"
+      "sha256": "f3b676982415b1a1701b22d79a69a15b5699d5466c63cb35ce9d3390eea48533"
     },
     {
-      "path": "web/public/city-rebuild-v002-phase1/Build/phase1_qa_local_20261020_051159.wasm",
+      "path": "web/public/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.wasm",
       "role": "support",
       "location": "web_runtime",
-      "bytes": 26706085,
-      "sha256": "69659847c89e4aa04d8cee55b19a28d4b3492c2c0d7ef8ae734507fe62764f40"
+      "bytes": 26707785,
+      "sha256": "f4062317b91c997fbc13e7365ef56647133b637a7ab39c63491926c7476b933a"
     },
     {
       "path": "web/public/city-rebuild-v002-phase1/bridge.js",
@@ -37154,8 +37168,8 @@
       "path": "web/public/city-rebuild-v002-phase1/index.html",
       "role": "support",
       "location": "web_runtime",
-      "bytes": 1656,
-      "sha256": "04ee99fdfa6c3e4977786feeb61eaa5770cd8a0d9061760426635211a9bcc167"
+      "bytes": 1660,
+      "sha256": "b1b2cdb7bb326d2f37da386510c6768bd347a0753ea1ecfe7a7c56b60c4554d0"
     },
     {
       "path": "web/public/city-rebuild-v002-test/Build/city_rebuild_v002_test_verified.data",
