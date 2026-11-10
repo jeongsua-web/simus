@@ -47,8 +47,10 @@ export async function assertSessionBuild(motion: unknown) {
 }
 
 export function assertEventLocations(motion: { map_version: string }, locations: unknown[]) {
-  assertLocationGroups(locations, motion.map_version);
-  if (!isCityV002Map(motion.map_version)) return;
+  if (!isCityV002Map(motion.map_version)) {
+    assertLocationGroups(locations, motion.map_version);
+    return;
+  }
   for (const item of locations) {
     const location = item as { map_version: string; point: number[] };
     try {
@@ -56,4 +58,5 @@ export function assertEventLocations(motion: { map_version: string }, locations:
       locate(location.point, motion.map_version);
     } catch { throw new ApiError(409, "EVENT_MAP_INCOMPATIBLE", "v002 상황 위치의 맵 버전과 보행 그래프 좌표를 확인해주세요."); }
   }
+  assertLocationGroups(locations, motion.map_version);
 }

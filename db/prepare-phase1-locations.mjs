@@ -82,7 +82,7 @@ async function main() {
     const rows = await client.query(`SELECT code,id,event_location,is_generic FROM simus.session_situations
       WHERE session_id=$1 AND code=ANY($2::text[]) ORDER BY code`, [sessionId,expected.map(e=>e.code)]);
     insist(rows.rowCount===8 && expected.every(e=>rows.rows.some(r=>r.code===e.code && r.id===e.id && !r.is_generic)), 'DRAFT code/UUID/non-generic check failed');
-    // No migrations are applied here; require the 016 contract to have been approved/applied separately.
+    // No migrations are applied here; require the 018 contract to have been approved/applied separately.
     await client.query('SELECT location_occupancy,location_evaluated_at,overdue_since FROM simus.npc_event_states LIMIT 0');
     const conflicts = await client.query(`SELECT code,event_location FROM simus.session_situations
       WHERE session_id=$1 AND NOT(code=ANY($2::text[])) AND event_location->>'place_id'=ANY($3::text[])`,

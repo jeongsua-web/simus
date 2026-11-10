@@ -23,6 +23,17 @@ RUNNING 또는 CLOSING 회차를 반환합니다. 없으면 `session: null`입�
 각 상황에는 `id`, `code`, `title`, `body`, `display_order`, `choices`가 포함됩니다.
 선택지는 `id`, `label`, `display_order`만 반환하며 개인 성향과 숨겨진 영향값은 공개하지 않습니다.
 
+## GET /api/sessions/{id}/population · POST /api/sessions/{id}/population
+
+`{ "session_id": "uuid", "online_count": 3 }`를 반환합니다. 현재 회차의 시민 등록을 완료했고,
+최근 45초 안에 접속이 확인된 참여자만 집계합니다. 같은 참여자의 여러 탭은 한 명으로 셉니다.
+만료·폐기된 인증만 있는 참여자와 DRAFT/FINALIZED 회차는 집계에서 제외합니다.
+GET은 공개 조회이며 접속 시각을 갱신하지 않습니다. POST는 유효한 참여자 쿠키와 해당 회차의
+완료된 시민 등록이 필요하며 본인의 접속 시각을 갱신합니다. 다른 출처의 POST는 거부합니다.
+참여 화면은 보이는 동안 15초마다 POST하고, 숨겨진 화면은 갱신을 멈춥니다.
+네트워크 단절·화면 종료 후 최대 약 45초(다른 화면에 반영되기까지 최대 약 60초) 안에 제외됩니다.
+기존 `participants.last_seen_at`을 사용하므로 DB 마이그레이션은 필요하지 않습니다.
+
 ## POST /api/participants
 
 본문 없이 호출합니다. 새 익명 참여자는 201, 유효한 기존 쿠키가 있으면 같은 참여자를 200으로 반환합니다.
@@ -206,17 +217,15 @@ curl -X POST -H "Authorization: Bearer $SESSION_JOB_TOKEN" \
 
 ### NPC event cycle
 
-`GET /api/sessions/:id/event` requires participant cookie and prior membership. Returns `phase` (`WAITING`, `GUIDING`, `ACTIVE`, `CLOSED`), `server_time`, `waiting_since`, `deadline_at`, `overdue_since` (ISO timestamp or null), `overdue` (boolean), and `event`. Only ACTIVE exposes `event.situation.choices`; `/sessions/current` retains metadata with empty choices. New events have `trigger_kind:LOCATION`, `place_id`, and decimal-string bigint `entry_seq`, in addition to `id`, `situation_id`, and `started_at`. Existing stored DEADLINE occurrences remain readable and answerable. `deadline_at` is now a monitoring threshold at waiting_since + 90 seconds, never a forced occurrence time.
+`GET /api/sessions/:id/event` requires participant cookie and prior membership. Returns `phase` (`WAITING`, `GUIDING`, `ACTIVE`, `CLOSED`), `server_time`, `waiting_since`, `guidance_at`, nullable `deadline_at` (always null), diagnostic `overdue/overdue_since`, and `event`. Only ACTIVE exposes `event.situation.choices`; `/sessions/current` retains metadata with empty choices. Event includes `id`, `situation_id`, `place_id`, `entry_seq`, `trigger_kind` and `started_at`. New occurrences use `LOCATION`; historical `DEADLINE` rows remain readable.
 
-`POST /api/choices` requires `event_id`. Ownership, situation, active occurrence and open admission are checked under the session lock. Request-key replay must match event, situation and choice; legacy records without an event ID remain replayable. Stats apply once and completion restarts the waiting timer and clears overdue state atomically. New events occur only on actual entry into a configured place with matching map, within both its 3D radius and graph travel radius. At 60 seconds guidance targets the nearest reachable unoccupied place with unanswered content. At 90 seconds `overdue_since` is recorded; no fallback event is created. Unlocated content, including generated greetings, cannot create an occurrence. Answered situations never repeat within the participant's session.
+`POST /api/choices` requires `event_id`. Ownership, situation, active occurrence and open admission are checked under the session lock. Request-key replay must match event, situation and choice; legacy records without an event ID remain replayable. Stats apply once and completion restarts movement and the waiting timer atomically. A server polyline/graph scan detects actual place entries, including travel between polls. One eligible event is selected per entry with no probability gate. Durable occupancy prevents another event while staying inside; exiting/reentering can select another unanswered event. At 60 seconds guidance selects the nearest reachable eligible place. At 90 seconds only diagnostic overdue state is recorded: no forced event, no unlocated fallback and no mid-route freeze. Unfinished scenes are excluded even if a legacy coordinate exists.
 
-Migration 016 persists place occupancy and entry sequence. One entry selects at most one unanswered situation; dwelling, duplicate polls, and reconnect cannot select the next situation at that same place. Exit and reentry can select another unanswered situation. Simultaneous overlapping entries are consumed together, including entries during an ACTIVE event. The server sweeps the actual ordered motion polyline between durable evaluation times, including loop wraps and graph-return handoff, and freezes at the earliest eligible arrival. Position APIs reconcile the same event state before returning NPC snapshots. Millisecond timestamp precision and delayed rendering are described in [the event contract](../docs/contracts/npc-events.md).
-
-Node instrumentation reconciles all running participants every 250 milliseconds independently of polling. Each pass reads membership, content and response history in batches per session and persists movement evaluation cursors, entries, overdue state and event transitions. Processes serialize through session locks. Hosting must keep a Node process alive; suspending serverless hosting requires a persistent worker invoking authorized `POST /api/internal/sessions/reconcile`. Processing delays/outages delay visible delivery; durable trajectory cursors recover on the next evaluation. Browser coordinates and clocks never authorize an event.
+Node instrumentation reconciles all running participants every 250 milliseconds independently of polling. Each pass reads membership, content and response history in batches per session, then writes transitions and entry cursors. Position snapshots reconcile the same event state under the session lock before rendering. Hosting must keep a Node process alive; suspending serverless hosting requires a persistent worker invoking authorized `POST /api/internal/sessions/reconcile`. Processing delays/outages delay visible delivery; the next scan recovers actual entries on the stored route. Browser coordinates and clocks never authorize an event.
 
 NPC projections include monotonic `motion.revision` (safe nonnegative integer) and optional ISO `motion.freeze_at`. Consumers accept newer revisions and clamp extrapolation at freeze_at. Guidance and event pause project from immutable membership routes.
 
 
-`PUT /api/admin/sessions/{id}/event-locations`: 관리자 JWT, 활성 관리자와 동일 출처 검증; DRAFT 전용. 본문은 `{situation_id,is_generic,event_location}`. 신규 위치는 `{place_id,map_version,point:[x,y,z],radius_m}`이며 place_id는 영숫자로 시작하는 영숫자·마침표·밑줄·하이픈 1~128자다. 회차 NPC 경로의 동일 map_version과 보행 그래프 위 접근점이 필요하다. 같은 회차의 같은 place_id는 지도·좌표·반경이 모두 같아야 한다. 위치 해제는 기존 `is_generic:true,event_location:null` 계약을 유지한다. 400 INVALID_EVENT_LOCATION, 409 NPC_MAP_MISMATCH, 409 EVENT_PLACE_CONFLICT, 409 EVENT_LOCATION_LOCKED, 404 SITUATION_NOT_FOUND를 반환한다. 기존 place_id 없는 저장값은 읽기 보존하지만 새 발생 후보에서 제외하며, 신규 회차 시작 검증에서 거절한다.
+`PUT /api/admin/sessions/{id}/event-locations`: 관리자 JWT, 활성 관리자와 동일 출처 검증; DRAFT 전용. 본문은 `{situation_id,is_generic,event_location}`. Phase 1/2 위치 이벤트는 `{place_id,map_version,point:[x,y,z],radius_m}`와 회차 NPC 경로의 동일 map_version이 필요하다. 같은 place_id의 좌표/반경은 같아야 한다. 기존 place_id 없는 구버전 위치는 DB를 수정하지 않고 좌표 기반 장소 ID로 읽는다. 공통 이벤트는 `is_generic:true,event_location:null`이다. 미구현 장면은 409 EVENT_SCENE_INCOMPLETE로 저장을 거부한다. GET은 기존 상황 데이터에 `mapping_status/mapping_reason`을 추가한다.
 
-기존 DRAFT 준비 과정의 중립 인사 콘텐츠 생성은 유지하지만 위치 미지정 콘텐츠는 이벤트 발생 대상이 아니다. 저장된 원문·선택지·스탯·`is_generic` 값은 이 정책 변경으로 덮어쓰지 않는다. 016 마이그레이션은 새 서버 배포 전에 필요하며, 이번 구현 단계에서는 DB 적용·QA·WebGL 빌드·배포를 실행하지 않는다. 새 v002 프로필은 별도 Phase 1 map/path를 사용하고 기존 그래프는 이전 회차를 위해 보존한다. 이 단계에서는 Unity collider 또는 진입 메시지를 추가하지 않는다. 자세한 장소 진입·재진입·정지 계약은 [이벤트 계약](../docs/contracts/npc-events.md)을 따른다.
+기존 DRAFT 공통 인사 준비 기능과 콘텐츠는 보존한다. 위치가 없는 인사·작성 콘텐츠는 시간 경과만으로 발생하지 않는다. Phase 2는 30개 원본을 보존하며 12개 위치 매핑을 준비하고 18개를 미완료로 구분한다. 새 최초 v002 회차에는 준비된 12개만 설정하고, 기존 회차의 데이터는 자동 변경하지 않는다. 상세 상태와 승인 전 제한은 `docs/placement/phase2/implementation-report.md`를 따른다.

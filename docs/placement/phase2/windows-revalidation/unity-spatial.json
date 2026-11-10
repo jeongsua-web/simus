@@ -1,0 +1,367 @@
+{
+  "scope": "Edit Mode imported scene, 0.25m polyline samples, 0.2m pedestrian capsule; no Play Mode claim",
+  "unity": "6000.3.24f1",
+  "scene": "Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity",
+  "events": [
+    {
+      "code": "EXHIBITION_02",
+      "place_id": "city_v002_gate_crossing",
+      "object_found": true,
+      "scene_path": "SIMUS_EventPlacement_20261020/ENV_PedSignal_Gate_N",
+      "object_position": [
+        2.1,
+        0.14,
+        -55.4
+      ],
+      "object_colliders": 3,
+      "from_plaza": {
+        "samples": 697,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 2.04048681,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      },
+      "approach": {
+        "samples": 62,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 2.04048681,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "code": "EXHIBITION_05",
+      "place_id": "city_v002_crying_child",
+      "object_found": true,
+      "scene_path": "SIMUS_EventPlacement_20261020/NPC_CryingChild_ParkSouth",
+      "object_position": [
+        148.0,
+        -0.012,
+        22.0
+      ],
+      "object_colliders": 1,
+      "from_plaza": {
+        "samples": 1013,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 4.08876848,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      },
+      "approach": {
+        "samples": 60,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 4.08876848,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "code": "EXHIBITION_07",
+      "place_id": "city_v002_illegal_parking",
+      "object_found": true,
+      "scene_path": "SIMUS_EventPlacement_20261020/VEH_IllegalParked_R05",
+      "object_position": [
+        -143.0,
+        0.02,
+        -6.7
+      ],
+      "object_colliders": 0,
+      "from_plaza": {
+        "samples": 1592,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 0.5053363,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      },
+      "approach": {
+        "samples": 72,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 0.5053363,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "code": "EXHIBITION_10",
+      "place_id": "C04_ACCESS",
+      "object_found": true,
+      "scene_path": "CityRebuild_v002/06_CampusBuildings_14/C04_중앙동 A",
+      "object_position": [
+        0.0,
+        -0.18,
+        65.0
+      ],
+      "object_colliders": 17,
+      "from_plaza": {
+        "samples": 370,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 2.79367065,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      },
+      "approach": {
+        "samples": 108,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 2.79367065,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "code": "EXHIBITION_12",
+      "place_id": "ENV_Bin_BusStop",
+      "object_found": true,
+      "scene_path": "SIMUS_EventPlacement_20261020/ENV_Bin_BusStop",
+      "object_position": [
+        60.0,
+        -0.02,
+        -54.0
+      ],
+      "object_colliders": 0,
+      "from_plaza": {
+        "samples": 941,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 2.38975143,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      },
+      "approach": {
+        "samples": 941,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 2.38975143,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "code": "EXHIBITION_13",
+      "place_id": "city_v002_park_flowerbed",
+      "object_found": true,
+      "scene_path": "SIMUS_EventPlacement_20261020/ENV_Flowerbed_ParkNorth",
+      "object_position": [
+        154.0,
+        -0.012,
+        126.0
+      ],
+      "object_colliders": 0,
+      "from_plaza": {
+        "samples": 696,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 0.4026373,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      },
+      "approach": {
+        "samples": 118,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 0.5273238,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "code": "EXHIBITION_16",
+      "place_id": "NPC_HeavyCarrier_ApartmentWalk",
+      "object_found": true,
+      "scene_path": "SIMUS_EventPlacement_20261020/NPC_HeavyCarrier_ApartmentWalk",
+      "object_position": [
+        -186.85,
+        0.16,
+        124.355
+      ],
+      "object_colliders": 1,
+      "from_plaza": {
+        "samples": 1830,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 10.7106018,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      },
+      "approach": {
+        "samples": 159,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 0.0,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "code": "EXHIBITION_17",
+      "place_id": "city_v002_festival_info",
+      "object_found": true,
+      "scene_path": "SIMUS_EventPlacement_20261020/ENV_Festival_Info_Plaza",
+      "object_position": [
+        14.0,
+        -0.02,
+        104.0
+      ],
+      "object_colliders": 9,
+      "from_plaza": {
+        "samples": 55,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 1.02504063,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      },
+      "approach": {
+        "samples": 84,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 1.02504063,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "code": "EXHIBITION_18",
+      "place_id": "city_v002_park_cat",
+      "object_found": true,
+      "scene_path": "CAT_Tuxedo_EastPark",
+      "object_position": [
+        156.0,
+        -0.012,
+        50.0
+      ],
+      "object_colliders": 1,
+      "from_plaza": {
+        "samples": 1025,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 2.04751348,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      },
+      "approach": {
+        "samples": 62,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 2.04751348,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "code": "EXHIBITION_22",
+      "place_id": "C04_ACCESS",
+      "object_found": true,
+      "scene_path": "CityRebuild_v002/06_CampusBuildings_14/C04_중앙동 A",
+      "object_position": [
+        0.0,
+        -0.18,
+        65.0
+      ],
+      "object_colliders": 17,
+      "from_plaza": {
+        "samples": 370,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 2.79367065,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      },
+      "approach": {
+        "samples": 108,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 2.79367065,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "code": "EXHIBITION_28",
+      "place_id": "city_v002_road_control",
+      "object_found": true,
+      "scene_path": "SIMUS_EventPlacement_20261020/ENV_Barricade_R01_Control",
+      "object_position": [
+        86.0,
+        0.02,
+        -62.7
+      ],
+      "object_colliders": 5,
+      "from_plaza": {
+        "samples": 1085,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 3.00250244,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      },
+      "approach": {
+        "samples": 101,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 3.00250244,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      }
+    },
+    {
+      "code": "EXHIBITION_30",
+      "place_id": "city_v002_mystery_crate",
+      "object_found": true,
+      "scene_path": "SIMUS_EventPlacement_20261020/ENV_MysteryCrate_Plaza",
+      "object_position": [
+        15.0,
+        -0.02,
+        118.0
+      ],
+      "object_colliders": 6,
+      "from_plaza": {
+        "samples": 29,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 2.53181458,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      },
+      "approach": {
+        "samples": 84,
+        "missing_support": 0,
+        "blocked_samples": 0,
+        "target_renderer_aabb_clearance_xz_m": 2.53181458,
+        "obstacles": [],
+        "first_failures": [],
+        "status": "PASS"
+      }
+    }
+  ]
+}

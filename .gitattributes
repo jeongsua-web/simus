@@ -1,0 +1,2 @@
+# Reviewed migration checksums use the repository's LF bytes on every platform.
+/db/[0-9][0-9][0-9]_*.sql text eol=lf

@@ -1,0 +1,1990 @@
+{
+  "created_at": "2026-11-03T05:26:37.130Z",
+  "database": "new disposable cluster",
+  "events": [
+    {
+      "code": "EXHIBITION_02",
+      "sid": "bff08c9a-3b09-4413-853c-6438eb5593d7",
+      "place_id": "city_v002_gate_crossing",
+      "point": [
+        0,
+        0.16,
+        -56.25
+      ],
+      "radius_m": 1.5,
+      "approach": [
+        [
+          0,
+          0.16,
+          -41.093
+        ],
+        [
+          0,
+          0.16,
+          -56.25
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000021",
+          "record_id": "385648b5-6d1f-4ce4-9558-776b3444f427",
+          "alignment": [
+            "2",
+            "0"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000022",
+          "record_id": "ee118f58-0f14-4590-9823-344d6cba966c",
+          "alignment": [
+            "-1",
+            "0"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000023",
+          "record_id": "8eba9d9d-4cd9-498d-830f-576396c9a91b",
+          "alignment": [
+            "-2",
+            "0"
+          ],
+          "city_version": "3"
+        }
+      ],
+      "api": "PASS",
+      "browser": "PASS"
+    },
+    {
+      "code": "EXHIBITION_05",
+      "sid": "eb5d088e-bb36-4d7a-8905-19228b0f6159",
+      "place_id": "city_v002_crying_child",
+      "point": [
+        147.158345,
+        0.16,
+        26.376605
+      ],
+      "radius_m": 1.5,
+      "approach": [
+        [
+          134.933,
+          0.16,
+          20.518
+        ],
+        [
+          140,
+          0.16,
+          25
+        ],
+        [
+          147.158345,
+          0.16,
+          26.376605
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000051",
+          "record_id": "87471751-2d83-4fcd-a5d0-1e75f0c5d134",
+          "alignment": [
+            "0",
+            "3"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000052",
+          "record_id": "154f51a0-f9eb-45bf-aebf-e8126022adc9",
+          "alignment": [
+            "2",
+            "2"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000053",
+          "record_id": "4342acab-8743-46f7-b9c7-08419b0b1b03",
+          "alignment": [
+            "0",
+            "-1"
+          ],
+          "city_version": "3"
+        }
+      ],
+      "api": "PASS",
+      "browser": "PASS"
+    },
+    {
+      "code": "EXHIBITION_07",
+      "sid": "f6fad0ec-139d-4ed3-ada8-d925289a6643",
+      "place_id": "city_v002_illegal_parking",
+      "point": [
+        -143,
+        0.16,
+        -8.3
+      ],
+      "radius_m": 1.5,
+      "approach": [
+        [
+          -126,
+          0.16,
+          -7.9
+        ],
+        [
+          -137,
+          0.16,
+          -7.9
+        ],
+        [
+          -139,
+          0.16,
+          -8.3
+        ],
+        [
+          -143,
+          0.16,
+          -8.3
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000071",
+          "record_id": "0fd0ed46-079f-4c7b-9af3-179744baf99d",
+          "alignment": [
+            "3",
+            "0"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000072",
+          "record_id": "201bf01b-9ff8-43ad-a8b9-dbfae7528499",
+          "alignment": [
+            "0",
+            "0"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000073",
+          "record_id": "da91b7b6-3bd5-42c3-9a9e-6097cecc403d",
+          "alignment": [
+            "-3",
+            "-2"
+          ],
+          "city_version": "3"
+        }
+      ],
+      "api": "PASS",
+      "browser": "PASS"
+    },
+    {
+      "code": "EXHIBITION_10",
+      "sid": "3c070c41-1b21-4872-8fa9-996b3e911b68",
+      "place_id": "C04_ACCESS",
+      "point": [
+        -41.1685,
+        0.16,
+        67.139
+      ],
+      "radius_m": 2,
+      "approach": [
+        [
+          -16.035,
+          0.16,
+          62.926
+        ],
+        [
+          -34.965,
+          0.16,
+          62.926
+        ],
+        [
+          -41.1685,
+          0.16,
+          67.139
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000101",
+          "record_id": "0caa3d19-0573-4e15-8715-2d5d29fed9be",
+          "alignment": [
+            "2",
+            "1"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000102",
+          "record_id": "9daa8550-8b11-45bc-b2cc-ad2c874389a1",
+          "alignment": [
+            "0",
+            "0"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000103",
+          "record_id": "e415bf03-13bc-4e82-a7c8-4db04a7f5cdc",
+          "alignment": [
+            "-3",
+            "-2"
+          ],
+          "city_version": "3"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000104",
+          "record_id": "471225cc-fee2-44c2-806a-e50b7aaabf10",
+          "alignment": [
+            "3",
+            "1"
+          ],
+          "city_version": "4"
+        }
+      ],
+      "api": "PASS",
+      "browser": "PASS"
+    },
+    {
+      "code": "EXHIBITION_12",
+      "sid": "bcdb0b41-96ad-4911-9c94-8acfd3e63839",
+      "place_id": "ENV_Bin_BusStop",
+      "point": [
+        60,
+        0.16,
+        -56.65
+      ],
+      "radius_m": 2,
+      "approach": [
+        [
+          42.039607805437115,
+          0.16,
+          -56.25
+        ],
+        [
+          43,
+          0.16,
+          -56.25
+        ],
+        [
+          45,
+          0.16,
+          -56.65
+        ],
+        [
+          60,
+          0.16,
+          -56.65
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000121",
+          "record_id": "9971869f-5f75-4275-bc16-606cb3cd819f",
+          "alignment": [
+            "0",
+            "1"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000122",
+          "record_id": "4a8c55a9-7ecd-4e1b-8be9-06fd26aff2f7",
+          "alignment": [
+            "0",
+            "0"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000123",
+          "record_id": "ed1506fc-f6ea-4f3b-979e-64790633985a",
+          "alignment": [
+            "0",
+            "0"
+          ],
+          "city_version": "3"
+        }
+      ],
+      "api": "PASS",
+      "browser": "PASS"
+    },
+    {
+      "code": "EXHIBITION_13",
+      "sid": "4fbebc92-35ed-4b4b-8ce5-5aba49badb0e",
+      "place_id": "city_v002_park_flowerbed",
+      "point": [
+        155.90806,
+        0.16,
+        126.702969
+      ],
+      "radius_m": 1.5,
+      "approach": [
+        [
+          165,
+          0.16,
+          100
+        ],
+        [
+          156.979746,
+          0.16,
+          121.76926
+        ],
+        [
+          156.945176,
+          0.16,
+          123.88794
+        ],
+        [
+          155.90806,
+          0.16,
+          126.702969
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000131",
+          "record_id": "a536488e-8d78-4f3b-8c18-e49cbcd7b44b",
+          "alignment": [
+            "1",
+            "0"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000132",
+          "record_id": "de84c14b-d0d1-4a3f-8e58-f46a9fbc84af",
+          "alignment": [
+            "-1",
+            "0"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000133",
+          "record_id": "f5c97301-5028-4ac1-92b5-7ca3b4ddc459",
+          "alignment": [
+            "-2",
+            "-2"
+          ],
+          "city_version": "3"
+        }
+      ],
+      "api": "PASS",
+      "browser": "PASS"
+    },
+    {
+      "code": "EXHIBITION_16",
+      "sid": "66cfb9ce-d94e-4c8a-9018-74c5b8371164",
+      "place_id": "NPC_HeavyCarrier_ApartmentWalk",
+      "point": [
+        -186.85,
+        0.16,
+        112.71440000000001
+      ],
+      "radius_m": 2,
+      "approach": [
+        [
+          -186.85,
+          0.16,
+          152
+        ],
+        [
+          -186.85,
+          0.16,
+          112.71440000000001
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000161",
+          "record_id": "cb1af080-beb1-4dbc-a32e-3439efb1cafe",
+          "alignment": [
+            "0",
+            "3"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000162",
+          "record_id": "6d4bc6ee-ea35-4c93-a808-fd1933a47803",
+          "alignment": [
+            "0",
+            "2"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000163",
+          "record_id": "f0ef6d40-8dad-4bfa-b446-c7e821d9d838",
+          "alignment": [
+            "0",
+            "0"
+          ],
+          "city_version": "3"
+        }
+      ],
+      "api": "PASS",
+      "browser": "PASS"
+    },
+    {
+      "code": "EXHIBITION_17",
+      "sid": "61dd205b-4db6-425a-8016-d9f81d4b3eb7",
+      "place_id": "city_v002_festival_info",
+      "point": [
+        11.538184,
+        0.16,
+        103.113135
+      ],
+      "radius_m": 1.5,
+      "approach": [
+        [
+          15,
+          0.16,
+          115
+        ],
+        [
+          8,
+          0.16,
+          115
+        ],
+        [
+          10.502122,
+          0.16,
+          108.054448
+        ],
+        [
+          10.521405,
+          0.16,
+          105.935574
+        ],
+        [
+          11.538184,
+          0.16,
+          103.113135
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000171",
+          "record_id": "92b40f53-ddcd-4530-b1df-7f94e75a51af",
+          "alignment": [
+            "0",
+            "2"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000172",
+          "record_id": "3b95f62c-8a0c-41f4-93b2-31afb60d3ce4",
+          "alignment": [
+            "0",
+            "0"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000173",
+          "record_id": "09990f63-919e-4184-a117-efd7b4218b54",
+          "alignment": [
+            "-2",
+            "-2"
+          ],
+          "city_version": "3"
+        }
+      ],
+      "api": "PASS",
+      "browser": "PASS"
+    },
+    {
+      "code": "EXHIBITION_18",
+      "sid": "53d1e1b0-bc7d-44c5-98ef-c2606f725625",
+      "place_id": "city_v002_park_cat",
+      "point": [
+        158.259684,
+        0.16,
+        50.839311
+      ],
+      "radius_m": 1.5,
+      "approach": [
+        [
+          153,
+          0.16,
+          65
+        ],
+        [
+          158.259684,
+          0.16,
+          50.839311
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000181",
+          "record_id": "2f93f584-583d-4aed-8a23-b4a6d7cf20ff",
+          "alignment": [
+            "1",
+            "2"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000182",
+          "record_id": "3275798a-4bee-49a6-9c6d-50f819083d98",
+          "alignment": [
+            "0",
+            "1"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000183",
+          "record_id": "3363c28f-e867-4e1a-aa77-f0ab6736b143",
+          "alignment": [
+            "0",
+            "-1"
+          ],
+          "city_version": "3"
+        }
+      ],
+      "api": "PASS",
+      "browser": "PASS"
+    },
+    {
+      "code": "EXHIBITION_22",
+      "sid": "19fabc70-b875-4f7c-a9c5-d2cd8f197148",
+      "place_id": "C04_ACCESS",
+      "point": [
+        -41.1685,
+        0.16,
+        67.139
+      ],
+      "radius_m": 2,
+      "approach": [
+        [
+          -16.035,
+          0.16,
+          62.926
+        ],
+        [
+          -34.965,
+          0.16,
+          62.926
+        ],
+        [
+          -41.1685,
+          0.16,
+          67.139
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000221",
+          "record_id": "42f9eac9-c5dd-4863-8333-0baefad76ce9",
+          "alignment": [
+            "0",
+            "2"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000222",
+          "record_id": "51eb63db-0ba1-406c-8913-e882e144c58e",
+          "alignment": [
+            "0",
+            "1"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000223",
+          "record_id": "3dacc6a5-9d45-46d5-8eab-e6efb4e1763a",
+          "alignment": [
+            "-1",
+            "-3"
+          ],
+          "city_version": "3"
+        }
+      ],
+      "api": "PASS",
+      "browser": "PASS"
+    },
+    {
+      "code": "EXHIBITION_28",
+      "sid": "4511b058-f948-4bc5-b2f7-cdc8630b57aa",
+      "place_id": "city_v002_road_control",
+      "point": [
+        86,
+        0.16,
+        -65.75
+      ],
+      "radius_m": 1.5,
+      "approach": [
+        [
+          110.882,
+          0.16,
+          -65.75
+        ],
+        [
+          86,
+          0.16,
+          -65.75
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000281",
+          "record_id": "0c72d998-0712-47ab-8c93-12c3fd547812",
+          "alignment": [
+            "2",
+            "0"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000282",
+          "record_id": "da027f8d-e1f7-441c-8ef6-20539790a232",
+          "alignment": [
+            "1",
+            "0"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000283",
+          "record_id": "7e5fba41-f472-4c2b-865c-c067e3d95ff3",
+          "alignment": [
+            "-3",
+            "-1"
+          ],
+          "city_version": "3"
+        }
+      ],
+      "api": "PASS",
+      "browser": "PASS"
+    },
+    {
+      "code": "EXHIBITION_30",
+      "sid": "50732b61-3676-4ea4-9ddb-c14360b97fc7",
+      "place_id": "city_v002_mystery_crate",
+      "point": [
+        15,
+        0.16,
+        115
+      ],
+      "radius_m": 1.5,
+      "approach": [
+        [
+          11.538184,
+          0.16,
+          103.113135
+        ],
+        [
+          10.521405,
+          0.16,
+          105.935574
+        ],
+        [
+          10.502122,
+          0.16,
+          108.054448
+        ],
+        [
+          8,
+          0.16,
+          115
+        ],
+        [
+          15,
+          0.16,
+          115
+        ]
+      ],
+      "choices": [
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000301",
+          "record_id": "d7d89e0a-9345-4c5e-b5bb-73ef743f5025",
+          "alignment": [
+            "3",
+            "0"
+          ],
+          "city_version": "1"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000302",
+          "record_id": "72be0e4b-4189-4052-a48d-924dbde60e19",
+          "alignment": [
+            "0",
+            "2"
+          ],
+          "city_version": "2"
+        },
+        {
+          "choice_id": "40000000-0000-0000-0000-000000000303",
+          "record_id": "f98cc33c-acd7-49e9-b038-e093a5e59c37",
+          "alignment": [
+            "-3",
+            "0"
+          ],
+          "city_version": "3"
+        }
+      ],
+      "api": "PASS",
+      "browser": "PASS"
+    }
+  ],
+  "browser": [
+    {
+      "code": "EXHIBITION_02",
+      "sid": "45c4e6c2-a63b-404d-a899-36bfbbbf5467",
+      "status": "PASS",
+      "errors": [],
+      "failures": [],
+      "movement_started_at": "2026-11-03T05:27:17.623Z",
+      "moving": [
+        {
+          "type": "INSPECTION",
+          "session_id": "45c4e6c2-a63b-404d-a899-36bfbbbf5467",
+          "npc_id": "fa72c79d-0221-48da-a012-00e4364b2930",
+          "position": [
+            0,
+            0.16,
+            -41.093
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 516.5746,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "45c4e6c2-a63b-404d-a899-36bfbbbf5467",
+          "npc_id": "fa72c79d-0221-48da-a012-00e4364b2930",
+          "position": [
+            0,
+            0.16,
+            -44.171
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 467.402679,
+          "smooth_transitions": true
+        }
+      ],
+      "movement_observed": true,
+      "server_point": [
+        0,
+        0.16,
+        -54.75020000000001
+      ],
+      "unity_point": [
+        0,
+        0.16,
+        -54.7502
+      ],
+      "server_unity_error_m": 7.105427357601002e-15,
+      "wait_ms": 28001,
+      "single_click_during_poll": "PASS",
+      "choice": {
+        "choice_id": "40000000-0000-0000-0000-000000000021",
+        "record_id": "87ae56e7-b6b8-4236-8ce2-50f27bd605a3",
+        "alignment": [
+          "2",
+          "0"
+        ],
+        "city_version": "1"
+      },
+      "resumed": [
+        {
+          "type": "INSPECTION",
+          "session_id": "45c4e6c2-a63b-404d-a899-36bfbbbf5467",
+          "npc_id": "fa72c79d-0221-48da-a012-00e4364b2930",
+          "position": [
+            0,
+            0.16,
+            -54.7502
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 63.22322,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "45c4e6c2-a63b-404d-a899-36bfbbbf5467",
+          "npc_id": "fa72c79d-0221-48da-a012-00e4364b2930",
+          "position": [
+            0,
+            0.16,
+            -52.8478
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 24.9332733,
+          "smooth_transitions": true
+        }
+      ]
+    },
+    {
+      "code": "EXHIBITION_05",
+      "sid": "34acc9fa-f2fe-43f8-b0b0-677f3dfeec1a",
+      "status": "PASS",
+      "errors": [],
+      "failures": [],
+      "movement_started_at": "2026-11-03T05:28:13.865Z",
+      "moving": [
+        {
+          "type": "INSPECTION",
+          "session_id": "34acc9fa-f2fe-43f8-b0b0-677f3dfeec1a",
+          "npc_id": "6bd96d6e-aba3-4038-9b1c-c32faf0eeb50",
+          "position": [
+            134.933,
+            0.16,
+            20.518
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 513.6378,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "34acc9fa-f2fe-43f8-b0b0-677f3dfeec1a",
+          "npc_id": "6bd96d6e-aba3-4038-9b1c-c32faf0eeb50",
+          "position": [
+            137.359833,
+            0.16,
+            22.6646461
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 464.2556,
+          "smooth_transitions": true
+        }
+      ],
+      "movement_observed": true,
+      "server_point": [
+        145.68540316092148,
+        0.16,
+        26.09334691445304
+      ],
+      "unity_point": [
+        145.68541,
+        0.16,
+        26.0933475
+      ],
+      "server_unity_error_m": 0.000006864099365017291,
+      "wait_ms": 27324,
+      "choice": {
+        "choice_id": "40000000-0000-0000-0000-000000000051",
+        "record_id": "b58235b6-a2df-4f09-b5a7-d666d4869a57",
+        "alignment": [
+          "0",
+          "3"
+        ],
+        "city_version": "1"
+      },
+      "resumed": [
+        {
+          "type": "INSPECTION",
+          "session_id": "34acc9fa-f2fe-43f8-b0b0-677f3dfeec1a",
+          "npc_id": "6bd96d6e-aba3-4038-9b1c-c32faf0eeb50",
+          "position": [
+            146.705948,
+            0.16,
+            26.1598053
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 68.3629761,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "34acc9fa-f2fe-43f8-b0b0-677f3dfeec1a",
+          "npc_id": "6bd96d6e-aba3-4038-9b1c-c32faf0eeb50",
+          "position": [
+            144.265671,
+            0.16,
+            24.9903851
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 21.5038872,
+          "smooth_transitions": true
+        }
+      ]
+    },
+    {
+      "code": "EXHIBITION_07",
+      "sid": "c604742a-07d3-47bd-9154-fb69cc614717",
+      "status": "PASS",
+      "errors": [],
+      "failures": [],
+      "movement_started_at": "2026-11-03T05:29:06.828Z",
+      "moving": [
+        {
+          "type": "INSPECTION",
+          "session_id": "c604742a-07d3-47bd-9154-fb69cc614717",
+          "npc_id": "7a3be10e-7e84-4d6c-a043-e773e8f8327d",
+          "position": [
+            -126,
+            0.16,
+            -7.9
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 513.706238,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "c604742a-07d3-47bd-9154-fb69cc614717",
+          "npc_id": "7a3be10e-7e84-4d6c-a043-e773e8f8327d",
+          "position": [
+            -129.3024,
+            0.16,
+            -7.9
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 464.316376,
+          "smooth_transitions": true
+        }
+      ],
+      "movement_observed": true,
+      "server_point": [
+        -141.5003921945629,
+        0.16,
+        -8.3
+      ],
+      "unity_point": [
+        -141.5004,
+        0.16,
+        -8.3
+      ],
+      "server_unity_error_m": 0.000007805437121533032,
+      "wait_ms": 29766,
+      "choice": {
+        "choice_id": "40000000-0000-0000-0000-000000000071",
+        "record_id": "74a1db71-f33a-478e-9496-e68c504b7f1b",
+        "alignment": [
+          "3",
+          "0"
+        ],
+        "city_version": "1"
+      },
+      "resumed": [
+        {
+          "type": "INSPECTION",
+          "session_id": "c604742a-07d3-47bd-9154-fb69cc614717",
+          "npc_id": "7a3be10e-7e84-4d6c-a043-e773e8f8327d",
+          "position": [
+            -141.5004,
+            0.16,
+            -8.3
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 137.861069,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "c604742a-07d3-47bd-9154-fb69cc614717",
+          "npc_id": "7a3be10e-7e84-4d6c-a043-e773e8f8327d",
+          "position": [
+            -140.1456,
+            0.16,
+            -8.232838
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 106.714539,
+          "smooth_transitions": true
+        }
+      ]
+    },
+    {
+      "code": "EXHIBITION_10",
+      "sid": "f00bd562-41e8-4a59-9821-49d2f7dd23f5",
+      "status": "PASS",
+      "errors": [],
+      "failures": [],
+      "movement_started_at": "2026-11-03T05:30:04.201Z",
+      "moving": [
+        {
+          "type": "INSPECTION",
+          "session_id": "f00bd562-41e8-4a59-9821-49d2f7dd23f5",
+          "npc_id": "a040ef14-67ce-44ee-9cc3-7da6cbee25c1",
+          "position": [
+            -16.035,
+            0.160000011,
+            62.926
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 511.748566,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "f00bd562-41e8-4a59-9821-49d2f7dd23f5",
+          "npc_id": "a040ef14-67ce-44ee-9cc3-7da6cbee25c1",
+          "position": [
+            -18.9234,
+            0.16,
+            62.926
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 466.1113,
+          "smooth_transitions": true
+        }
+      ],
+      "movement_observed": true,
+      "server_point": [
+        -39.514598874680935,
+        0.16,
+        66.0157815844331
+      ],
+      "unity_point": [
+        -39.5146,
+        0.16,
+        66.0157852
+      ],
+      "server_unity_error_m": 0.000003786643234385612,
+      "wait_ms": 36555,
+      "choice": {
+        "choice_id": "40000000-0000-0000-0000-000000000101",
+        "record_id": "8b447712-018a-4194-a3b8-f4e54b338184",
+        "alignment": [
+          "2",
+          "1"
+        ],
+        "city_version": "1"
+      },
+      "resumed": [
+        {
+          "type": "INSPECTION",
+          "session_id": "f00bd562-41e8-4a59-9821-49d2f7dd23f5",
+          "npc_id": "a040ef14-67ce-44ee-9cc3-7da6cbee25c1",
+          "position": [
+            -40.3898163,
+            0.16,
+            67.00848
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 31.5325069,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "f00bd562-41e8-4a59-9821-49d2f7dd23f5",
+          "npc_id": "a040ef14-67ce-44ee-9cc3-7da6cbee25c1",
+          "position": [
+            -38.0086365,
+            0,
+            66.60933
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 21.47855,
+          "smooth_transitions": true
+        }
+      ]
+    },
+    {
+      "code": "EXHIBITION_12",
+      "sid": "e4254540-dd04-4727-a23d-fba32ba66a49",
+      "status": "PASS",
+      "errors": [],
+      "failures": [],
+      "movement_started_at": "2026-11-03T05:31:02.036Z",
+      "moving": [
+        {
+          "type": "INSPECTION",
+          "session_id": "e4254540-dd04-4727-a23d-fba32ba66a49",
+          "npc_id": "5e7e7387-a42a-405a-a72d-cf410be247a7",
+          "position": [
+            42.039608,
+            0.16,
+            -56.25
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 513.842041,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "e4254540-dd04-4727-a23d-fba32ba66a49",
+          "npc_id": "5e7e7387-a42a-405a-a72d-cf410be247a7",
+          "position": [
+            45.2004,
+            0.16,
+            -56.65
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 464.483124,
+          "smooth_transitions": true
+        }
+      ],
+      "movement_observed": true,
+      "server_point": [
+        58.0008,
+        0.16,
+        -56.65
+      ],
+      "unity_point": [
+        58.0008,
+        0.16,
+        -56.65
+      ],
+      "server_unity_error_m": 0,
+      "wait_ms": 29368,
+      "choice": {
+        "choice_id": "40000000-0000-0000-0000-000000000121",
+        "record_id": "68a1fa90-fcdf-4916-af84-e5a458861238",
+        "alignment": [
+          "0",
+          "1"
+        ],
+        "city_version": "1"
+      },
+      "resumed": [
+        {
+          "type": "INSPECTION",
+          "session_id": "e4254540-dd04-4727-a23d-fba32ba66a49",
+          "npc_id": "5e7e7387-a42a-405a-a72d-cf410be247a7",
+          "position": [
+            59.87163,
+            0.16,
+            -56.64714
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 101.745171,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "e4254540-dd04-4727-a23d-fba32ba66a49",
+          "npc_id": "5e7e7387-a42a-405a-a72d-cf410be247a7",
+          "position": [
+            57.01034,
+            0.16,
+            -56.583416
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 39.61035,
+          "smooth_transitions": true
+        }
+      ]
+    },
+    {
+      "code": "EXHIBITION_13",
+      "sid": "4058e168-dc18-4004-8a5d-a6db9dc2fb78",
+      "status": "PASS",
+      "errors": [],
+      "failures": [],
+      "movement_started_at": "2026-11-03T05:31:55.760Z",
+      "moving": [
+        {
+          "type": "INSPECTION",
+          "session_id": "4058e168-dc18-4004-8a5d-a6db9dc2fb78",
+          "npc_id": "208dd973-5adf-474c-a24c-6a47b59dda91",
+          "position": [
+            165,
+            0.16,
+            100
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 513.813843,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "4058e168-dc18-4004-8a5d-a6db9dc2fb78",
+          "npc_id": "208dd973-5adf-474c-a24c-6a47b59dda91",
+          "position": [
+            163.885315,
+            0.16,
+            103.0256
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 464.431549,
+          "smooth_transitions": true
+        }
+      ],
+      "movement_observed": true,
+      "server_point": [
+        156.42656334570893,
+        0.16,
+        125.29560284735396
+      ],
+      "unity_point": [
+        156.426559,
+        0.160000011,
+        125.2956
+      ],
+      "server_unity_error_m": 0.000005195441341314491,
+      "wait_ms": 39106,
+      "choice": {
+        "choice_id": "40000000-0000-0000-0000-000000000131",
+        "record_id": "d3c4e49e-f225-44b3-bc6d-e615b098dace",
+        "alignment": [
+          "1",
+          "0"
+        ],
+        "city_version": "1"
+      },
+      "resumed": [
+        {
+          "type": "INSPECTION",
+          "session_id": "4058e168-dc18-4004-8a5d-a6db9dc2fb78",
+          "npc_id": "208dd973-5adf-474c-a24c-6a47b59dda91",
+          "position": [
+            156.426559,
+            0.160000011,
+            125.2956
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 21.033926,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "4058e168-dc18-4004-8a5d-a6db9dc2fb78",
+          "npc_id": "208dd973-5adf-474c-a24c-6a47b59dda91",
+          "position": [
+            156.886658,
+            0.159999982,
+            123.828842
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 21.0000744,
+          "smooth_transitions": true
+        }
+      ]
+    },
+    {
+      "code": "EXHIBITION_16",
+      "sid": "d214ef7d-9e23-49a1-b49c-464859467496",
+      "status": "PASS",
+      "errors": [],
+      "failures": [],
+      "movement_started_at": "2026-11-03T05:32:47.141Z",
+      "moving": [
+        {
+          "type": "INSPECTION",
+          "session_id": "d214ef7d-9e23-49a1-b49c-464859467496",
+          "npc_id": "4510bc7e-eb36-47ad-a32e-a772b8d8f0e8",
+          "position": [
+            -186.85,
+            0.04,
+            152
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 513.746338,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "d214ef7d-9e23-49a1-b49c-464859467496",
+          "npc_id": "4510bc7e-eb36-47ad-a32e-a772b8d8f0e8",
+          "position": [
+            -186.85,
+            0.04,
+            148.7456
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 464.371857,
+          "smooth_transitions": true
+        }
+      ],
+      "movement_observed": true,
+      "server_point": [
+        -186.85,
+        0.16,
+        114.7136
+      ],
+      "unity_point": [
+        -186.85,
+        0.16,
+        114.7136
+      ],
+      "server_unity_error_m": 0,
+      "wait_ms": 47212,
+      "choice": {
+        "choice_id": "40000000-0000-0000-0000-000000000161",
+        "record_id": "57156823-025d-4f5a-946f-2bbcc0f8ad6c",
+        "alignment": [
+          "0",
+          "3"
+        ],
+        "city_version": "1"
+      },
+      "resumed": [
+        {
+          "type": "INSPECTION",
+          "session_id": "d214ef7d-9e23-49a1-b49c-464859467496",
+          "npc_id": "4510bc7e-eb36-47ad-a32e-a772b8d8f0e8",
+          "position": [
+            -186.85,
+            0.159999982,
+            112.7456
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 52.2184029,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "d214ef7d-9e23-49a1-b49c-464859467496",
+          "npc_id": "4510bc7e-eb36-47ad-a32e-a772b8d8f0e8",
+          "position": [
+            -186.85,
+            0.16,
+            115.1504
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 30.700367,
+          "smooth_transitions": true
+        }
+      ]
+    },
+    {
+      "code": "EXHIBITION_17",
+      "sid": "4eb923be-993c-40d9-8a07-bee71dda9ecb",
+      "status": "PASS",
+      "errors": [],
+      "failures": [],
+      "movement_started_at": "2026-11-03T05:33:44.836Z",
+      "moving": [
+        {
+          "type": "INSPECTION",
+          "session_id": "4eb923be-993c-40d9-8a07-bee71dda9ecb",
+          "npc_id": "f4f4d188-6043-4acd-815c-2e2b0c8fdea0",
+          "position": [
+            15,
+            0.159999982,
+            115
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 513.5892,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "4eb923be-993c-40d9-8a07-bee71dda9ecb",
+          "npc_id": "f4f4d188-6043-4acd-815c-2e2b0c8fdea0",
+          "position": [
+            11.8308,
+            0.16,
+            115
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 464.1993,
+          "smooth_transitions": true
+        }
+      ],
+      "movement_observed": true,
+      "server_point": [
+        11.03011244048733,
+        0.16,
+        104.52347194082921
+      ],
+      "unity_point": [
+        11.0301123,
+        0.16,
+        104.523476
+      ],
+      "server_unity_error_m": 0.000004061601187211687,
+      "wait_ms": 31836,
+      "choice": {
+        "choice_id": "40000000-0000-0000-0000-000000000171",
+        "record_id": "0c36f568-237d-43e6-81ea-43c7e0b9b16e",
+        "alignment": [
+          "0",
+          "2"
+        ],
+        "city_version": "1"
+      },
+      "resumed": [
+        {
+          "type": "INSPECTION",
+          "session_id": "4eb923be-993c-40d9-8a07-bee71dda9ecb",
+          "npc_id": "f4f4d188-6043-4acd-815c-2e2b0c8fdea0",
+          "position": [
+            11.779026,
+            0.16,
+            103.940117
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 51.6225052,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "4eb923be-993c-40d9-8a07-bee71dda9ecb",
+          "npc_id": "f4f4d188-6043-4acd-815c-2e2b0c8fdea0",
+          "position": [
+            12.4474154,
+            0.16,
+            106.235168
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 23.6434689,
+          "smooth_transitions": true
+        }
+      ]
+    },
+    {
+      "code": "EXHIBITION_18",
+      "sid": "76c63bcd-4d51-448f-86b6-0f5940f67c36",
+      "status": "PASS",
+      "errors": [],
+      "failures": [],
+      "movement_started_at": "2026-11-03T05:34:39.130Z",
+      "moving": [
+        {
+          "type": "INSPECTION",
+          "session_id": "76c63bcd-4d51-448f-86b6-0f5940f67c36",
+          "npc_id": "a944bb94-c65c-4c54-b142-729c58f0655c",
+          "position": [
+            153,
+            0.16,
+            65
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 515.0818,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "76c63bcd-4d51-448f-86b6-0f5940f67c36",
+          "npc_id": "a944bb94-c65c-4c54-b142-729c58f0655c",
+          "position": [
+            154.1089,
+            0.16,
+            62.01449
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 465.723022,
+          "smooth_transitions": true
+        }
+      ],
+      "movement_observed": true,
+      "server_point": [
+        157.73770408654062,
+        0.16,
+        52.24464166601439
+      ],
+      "unity_point": [
+        157.7377,
+        0.16,
+        52.24464
+      ],
+      "server_unity_error_m": 0.00000441309622076258,
+      "wait_ms": 27468,
+      "choice": {
+        "choice_id": "40000000-0000-0000-0000-000000000181",
+        "record_id": "5d8cd24f-3ac2-43d1-b68b-0d3a8177cd22",
+        "alignment": [
+          "1",
+          "2"
+        ],
+        "city_version": "1"
+      },
+      "resumed": [
+        {
+          "type": "INSPECTION",
+          "session_id": "76c63bcd-4d51-448f-86b6-0f5940f67c36",
+          "npc_id": "a944bb94-c65c-4c54-b142-729c58f0655c",
+          "position": [
+            158.139465,
+            0.16,
+            51.1629677
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 41.3484879,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "76c63bcd-4d51-448f-86b6-0f5940f67c36",
+          "npc_id": "a944bb94-c65c-4c54-b142-729c58f0655c",
+          "position": [
+            157.122482,
+            0.16,
+            53.901
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 21.0875435,
+          "smooth_transitions": true
+        }
+      ]
+    },
+    {
+      "code": "EXHIBITION_22",
+      "sid": "0b5b43a1-cc88-4397-ba32-f2c6e39b5c13",
+      "status": "PASS",
+      "errors": [],
+      "failures": [],
+      "movement_started_at": "2026-11-03T05:35:39.674Z",
+      "moving": [
+        {
+          "type": "INSPECTION",
+          "session_id": "0b5b43a1-cc88-4397-ba32-f2c6e39b5c13",
+          "npc_id": "3643b92e-7cc8-4793-b96f-50769463b15f",
+          "position": [
+            -16.035,
+            0.160000011,
+            62.926
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 512.8525,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "0b5b43a1-cc88-4397-ba32-f2c6e39b5c13",
+          "npc_id": "3643b92e-7cc8-4793-b96f-50769463b15f",
+          "position": [
+            -19.1718,
+            0.16,
+            62.926
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 467.302124,
+          "smooth_transitions": true
+        }
+      ],
+      "movement_observed": true,
+      "server_point": [
+        -39.514598874680935,
+        0.16,
+        66.0157815844331
+      ],
+      "unity_point": [
+        -39.5146,
+        0.16,
+        66.0157852
+      ],
+      "server_unity_error_m": 0.000003786643234385612,
+      "wait_ms": 38028,
+      "choice": {
+        "choice_id": "40000000-0000-0000-0000-000000000221",
+        "record_id": "f12fa434-0d4a-4dfe-9e4b-56ad5d12039a",
+        "alignment": [
+          "0",
+          "2"
+        ],
+        "city_version": "1"
+      },
+      "resumed": [
+        {
+          "type": "INSPECTION",
+          "session_id": "0b5b43a1-cc88-4397-ba32-f2c6e39b5c13",
+          "npc_id": "3643b92e-7cc8-4793-b96f-50769463b15f",
+          "position": [
+            -40.3199921,
+            0.160000011,
+            66.9967651
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 65.73538,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "0b5b43a1-cc88-4397-ba32-f2c6e39b5c13",
+          "npc_id": "3643b92e-7cc8-4793-b96f-50769463b15f",
+          "position": [
+            -37.87017,
+            0,
+            66.58612
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 26.5792961,
+          "smooth_transitions": true
+        }
+      ]
+    },
+    {
+      "code": "EXHIBITION_28",
+      "sid": "c06988ec-527d-43b2-b2a1-c60d3ba00daf",
+      "status": "PASS",
+      "errors": [],
+      "failures": [],
+      "movement_started_at": "2026-11-03T05:36:42.640Z",
+      "moving": [
+        {
+          "type": "INSPECTION",
+          "session_id": "c06988ec-527d-43b2-b2a1-c60d3ba00daf",
+          "npc_id": "68000a10-82b3-4447-b021-4284dac02640",
+          "position": [
+            110.882,
+            0.16,
+            -65.75
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 512.1595,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "c06988ec-527d-43b2-b2a1-c60d3ba00daf",
+          "npc_id": "68000a10-82b3-4447-b021-4284dac02640",
+          "position": [
+            108.0344,
+            0.16,
+            -65.75
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 470.511536,
+          "smooth_transitions": true
+        }
+      ],
+      "movement_observed": true,
+      "server_point": [
+        87.4988,
+        0.16,
+        -65.75
+      ],
+      "unity_point": [
+        87.4988,
+        0.16,
+        -65.75
+      ],
+      "server_unity_error_m": 0,
+      "wait_ms": 37121,
+      "choice": {
+        "choice_id": "40000000-0000-0000-0000-000000000281",
+        "record_id": "59844502-4272-47de-8c95-244ef1c85023",
+        "alignment": [
+          "2",
+          "0"
+        ],
+        "city_version": "1"
+      },
+      "resumed": [
+        {
+          "type": "INSPECTION",
+          "session_id": "c06988ec-527d-43b2-b2a1-c60d3ba00daf",
+          "npc_id": "68000a10-82b3-4447-b021-4284dac02640",
+          "position": [
+            86.0804,
+            0.16,
+            -65.75
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 41.6942139,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "c06988ec-527d-43b2-b2a1-c60d3ba00daf",
+          "npc_id": "68000a10-82b3-4447-b021-4284dac02640",
+          "position": [
+            89.228,
+            0.16,
+            -65.75
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 22.2514763,
+          "smooth_transitions": true
+        }
+      ]
+    },
+    {
+      "code": "EXHIBITION_30",
+      "sid": "cee779d3-c2cb-4cff-8bcf-ba5735c98a7a",
+      "status": "PASS",
+      "errors": [],
+      "failures": [],
+      "movement_started_at": "2026-11-03T05:37:43.375Z",
+      "moving": [
+        {
+          "type": "INSPECTION",
+          "session_id": "cee779d3-c2cb-4cff-8bcf-ba5735c98a7a",
+          "npc_id": "45b9c011-5c43-447f-8ad0-8fe358890846",
+          "position": [
+            11.5381842,
+            0.16,
+            103.113136
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 513.548767,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "cee779d3-c2cb-4cff-8bcf-ba5735c98a7a",
+          "npc_id": "45b9c011-5c43-447f-8ad0-8fe358890846",
+          "position": [
+            10.5738707,
+            0.16,
+            105.789932
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 471.878784,
+          "smooth_transitions": true
+        }
+      ],
+      "movement_observed": true,
+      "server_point": [
+        13.500937961172678,
+        0.16,
+        115
+      ],
+      "unity_point": [
+        13.5009384,
+        0.16,
+        115
+      ],
+      "server_unity_error_m": 4.388273229238848e-7,
+      "wait_ms": 32373,
+      "choice": {
+        "choice_id": "40000000-0000-0000-0000-000000000301",
+        "record_id": "95f2f506-02fb-4adc-81f9-fae1e6b9b77e",
+        "alignment": [
+          "3",
+          "0"
+        ],
+        "city_version": "1"
+      },
+      "resumed": [
+        {
+          "type": "INSPECTION",
+          "session_id": "cee779d3-c2cb-4cff-8bcf-ba5735c98a7a",
+          "npc_id": "45b9c011-5c43-447f-8ad0-8fe358890846",
+          "position": [
+            14.7329865,
+            0.16,
+            114.083153
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 66.96899,
+          "smooth_transitions": true
+        },
+        {
+          "type": "INSPECTION",
+          "session_id": "cee779d3-c2cb-4cff-8bcf-ba5735c98a7a",
+          "npc_id": "45b9c011-5c43-447f-8ad0-8fe358890846",
+          "position": [
+            14.0736561,
+            0,
+            111.819206
+          ],
+          "active": true,
+          "renderer_count": 5,
+          "following": true,
+          "follow_size": 21,
+          "zoom": 1,
+          "camera_size": 27.3245754,
+          "smooth_transitions": true
+        }
+      ]
+    }
+  ],
+  "checks": [
+    "managed init 001–018; Phase2 DRAFT SQL applied twice without content changes",
+    "all 30 titles, 91 choice labels/alignment/city values and 12 exact placements preserved; 18 null",
+    "10/22 shared place: one event per visit, restart while inside, second event only after loop re-entry"
+  ],
+  "webgl": {
+    "protocol_version": 1,
+    "map_version": "test-only-city-rebuild-v002-phase1-v1",
+    "kind": "city-rebuild-v002-session",
+    "path_versions": [
+      "city-rebuild-v002-walk-phase1-v1"
+    ],
+    "source_scene_sha256": "3ca26d6ee0c512812c8d1778c4fb8e8296b7df2357a46aa231daf9f6fe8969d2",
+    "npc_motion_enabled": true,
+    "exhibition_ready": false,
+    "index_sha256": "b1b2cdb7bb326d2f37da386510c6768bd347a0753ea1ecfe7a7c56b60c4554d0"
+  },
+  "wait90": {
+    "phase": "GUIDING",
+    "event": null,
+    "deadline_at": null,
+    "overdue": true,
+    "status": "FAIL",
+    "meaning": "90-second maximum is not enforced; no remote/unplaced event injected"
+  }
+}

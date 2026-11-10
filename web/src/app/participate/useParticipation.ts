@@ -28,6 +28,7 @@ export function useParticipation() {
   const [departments, setDepartments] = useState<Department[]>([]);
   const busy = useRef(false);
   const loadingState = useRef(false);
+  const loadFinished = useRef<Promise<void>>(Promise.resolve());
   const activeSession = useRef<string | null>(null);
   const mounted = useRef(false);
   const storageReady = useRef(false);
@@ -44,6 +45,8 @@ export function useParticipation() {
   const loadState = useCallback(async (initial = false) => {
     if (loadingState.current) return;
     loadingState.current = true;
+    let finish!: () => void;
+    loadFinished.current = new Promise<void>(resolve => { finish = resolve; });
     const abort = new AbortController();
     controller.current = abort;
     const signal = abort.signal;
@@ -130,7 +133,7 @@ export function useParticipation() {
       setLoadError("");
     } catch (error) {
       if (!signal.aborted && mounted.current) { setEventState(null); setLoadError(error instanceof Error ? error.message : "참여 정보를 불러오지 못했습니다."); }
-    } finally { loadingState.current = false; if (mounted.current) setLoading(false); }
+    } finally { loadingState.current = false; finish(); if (mounted.current) setLoading(false); }
   }, []);
 
   useEffect(() => {
@@ -144,7 +147,7 @@ export function useParticipation() {
   }, [loadState]);
 
   async function submit(situation: Situation) {
-    if (authExpired || busy.current || loadingState.current) return;
+    if (authExpired || busy.current) return;
     const retry = pendingRequest.current;
     if (retry && retry.situation_id !== situation.id) return;
     const activeEvent = eventState?.phase === "ACTIVE" ? eventState.event : null;
@@ -162,6 +165,10 @@ export function useParticipation() {
     setSubmitting(occurrenceKey);
     setMessages(previous => ({ ...previous, [occurrenceKey]: "제출하고 있어요…" }));
     try {
+      // Keep a click made during background polling. Serializing with the
+      // in-flight read also prevents its older snapshot overwriting this choice.
+      await loadFinished.current;
+      if (!mounted.current) return;
       const response = await fetch("/api/choices", {
         method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload),
       });

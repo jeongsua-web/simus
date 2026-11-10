@@ -12,7 +12,7 @@ export async function runSessionBuildIntegration({pool,env,token,templateId}) {
   }
   const created=await call('/api/admin/sessions',{template_session_id:templateId,name:'Disposable build validation',duration_seconds:600,impact_scale:.1,request_key:randomUUID(),npc_profile:'city-rebuild-v002'});
   assert.equal(created.status,201);const sid=created.body.session_id;
-  const file=path.join(env.SIMUS_WEBGL_PUBLIC_ROOT,'city-rebuild-v002/build.json');
+  const file=path.join(env.SIMUS_WEBGL_PUBLIC_ROOT,'city-rebuild-v002-phase1/build.json');
   const raw=await readFile(file,'utf8'),good=JSON.parse(raw);
   const ready=async()=> (await call('/api/admin/sessions')).body.sessions.find(s=>s.id===sid);
   async function blocked(code) {
@@ -42,7 +42,7 @@ export async function runSessionBuildIntegration({pool,env,token,templateId}) {
     const situation=(await pool.query('SELECT id FROM simus.session_situations WHERE session_id=$1 LIMIT 1',[sid])).rows[0].id;
     await pool.query('UPDATE simus.session_situations SET is_generic=false,event_location=$3 WHERE session_id=$1 AND id=$2',[sid,situation,{map_version:'foreign',point:nodePoint('CAMPUS_PLAZA'),radius_m:2}]);
     await blocked('EVENT_MAP_INCOMPATIBLE');
-    await pool.query('UPDATE simus.session_situations SET event_location=$3 WHERE session_id=$1 AND id=$2',[sid,situation,{map_version:MAP_VERSION,point:nodePoint('CAMPUS_PLAZA'),radius_m:2}]);
+    await pool.query('UPDATE simus.session_situations SET event_location=$3 WHERE session_id=$1 AND id=$2',[sid,situation,{place_id:'fixture_build_plaza',map_version:MAP_VERSION,point:nodePoint('CAMPUS_PLAZA'),radius_m:2}]);
     assert.equal((await ready()).can_start,true);
     assert.equal((await call(`/api/admin/sessions/${sid}/start`,{request_key:randomUUID()})).status,200);
     assert.equal((await call(`/api/admin/sessions/${sid}/end`,{request_key:randomUUID()})).status,200);

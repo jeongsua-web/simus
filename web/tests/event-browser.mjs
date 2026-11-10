@@ -18,17 +18,20 @@ export async function runEventBrowser({ pool, env, token, templateId }) {
   }
   try {
     sid = (await admin('/api/admin/sessions', { template_session_id: templateId, name: 'Disposable event browser', duration_seconds: 600, impact_scale: 0.1, request_key: randomUUID() })).session_id;
-    // Approved exhibition geometry is deliberately not fabricated by this fixture.
+    // Synthetic locations belong ONLY to this disposable browser fixture.
+    const motion=(await pool.query('SELECT npc_motion FROM simus.simulation_sessions WHERE id=$1',[sid])).rows[0].npc_motion;
     await pool.query('UPDATE simus.session_situations SET event_location=NULL,is_generic=false WHERE session_id=$1', [sid]);
     const generic = (await pool.query('SELECT id FROM simus.session_situations WHERE session_id=$1 ORDER BY display_order,id LIMIT 1', [sid])).rows[0].id;
-    await pool.query('UPDATE simus.session_situations SET is_generic=true WHERE session_id=$1 AND id=$2', [sid,generic]);
+    await pool.query('UPDATE simus.session_situations SET is_generic=false,event_location=$3 WHERE session_id=$1 AND id=$2',
+      [sid,generic,{map_version:motion.map_version,point:[100,0,100],radius_m:2}]);
     await pool.query(`WITH added AS (
-      INSERT INTO simus.session_situations(session_id,code,title,body,display_order)
-      SELECT $1,'BROWSER_VARIETY_'||n,'다른 상황 '||n,'다음 행동을 선택해주세요.',100+n
+      INSERT INTO simus.session_situations(session_id,code,title,body,display_order,event_location)
+      SELECT $1,'BROWSER_VARIETY_'||n,'다른 상황 '||n,'다음 행동을 선택해주세요.',100+n,
+        jsonb_build_object('map_version',$2::text,'point',jsonb_build_array(100+n*100,0,100),'radius_m',2)
       FROM generate_series(1,2) n RETURNING id
     ) INSERT INTO simus.session_choices(session_id,situation_id,label,display_order,importance)
       SELECT $1,a.id,c.label,c.n,'NORMAL' FROM added a
-      CROSS JOIN (VALUES ('도와준다.',1),('지나간다.',2)) c(label,n)`,[sid]);
+      CROSS JOIN (VALUES ('도와준다.',1),('지나간다.',2)) c(label,n)`,[sid,motion.map_version]);
     await admin(`/api/admin/sessions/${sid}/start`, { request_key: randomUUID() });
     started = true;
     const context = await browser.newContext({ viewport: { width: 390, height: 740 } });
@@ -41,7 +44,13 @@ export async function runEventBrowser({ pool, env, token, templateId }) {
     assert.equal(await page.getByRole('radio').count(), 0);
     assert.equal(await page.getByRole('navigation', { name: '상황 이동' }).count(), 0);
     const pid = (await pool.query('SELECT participant_id FROM simus.participant_sessions WHERE session_id=$1', [sid])).rows[0].participant_id;
-    const advance = () => pool.query("UPDATE simus.npc_event_states SET waiting_since=clock_timestamp()-interval '91 seconds' WHERE session_id=$1 AND participant_id=$2", [sid, pid]);
+    const advance = async () => {
+      const count=Number((await pool.query('SELECT count(*) FROM simus.choice_records WHERE session_id=$1 AND participant_id=$2',[sid,pid])).rows[0].count);
+      const point=[100+100*count,0,100];
+      await pool.query(`UPDATE simus.npc_event_states SET resume_motion=$3,motion_epoch=clock_timestamp(),paused_ms=0,
+        guidance_point=NULL,guidance_origin=NULL,guidance_started_at=NULL,guidance_motion=NULL
+        WHERE session_id=$1 AND participant_id=$2`,[sid,pid,{...motion,points:[point,[point[0]+10,0,point[2]]],loop:false}]);
+    };
     await advance();
     await page.getByRole('radio').first().waitFor();
     const fixture = await page.evaluate(async id => (await fetch(`/api/sessions/${id}/event`)).json(), sid);

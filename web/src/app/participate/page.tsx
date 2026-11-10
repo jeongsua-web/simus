@@ -20,7 +20,7 @@ export default function ParticipatePage() {
     <p role="status">{state.messages[state.pending.event_id ?? state.pending.request_key]}</p><button className={styles.button} disabled={state.submitting !== null} onClick={()=>void state.retryPending()}>이전 제출 다시 확인</button>
   </section>;
   if (state.loading) return <main className={styles.page}><div className={styles.stateCard} role="status">참여 정보를 불러오는 중이에요…</div></main>;
-  if (state.loadError) return (
+  if (state.loadError && (!state.session || !state.profile || state.authExpired)) return (
     <main className={styles.page}><div className={styles.stateCard}>
       <h1>{state.authExpired ? "참여 인증이 만료되었습니다" : "정보를 불러오지 못했습니다"}</h1>
       <p role="alert">{state.loadError}</p>
@@ -60,9 +60,6 @@ export default function ParticipatePage() {
   const answeredCount = state.responseCount;
   const activeEvent = state.session.accepting_choices && state.eventState?.phase === "ACTIVE" ? state.eventState.event : null;
   const activeSituation = activeEvent?.situation;
-  const eventsClosed = !state.session.accepting_choices || state.eventState?.phase === "CLOSED";
-  const guiding = state.eventState?.phase === "GUIDING";
-  const waitingForArrival = !eventsClosed && !activeEvent && state.eventState?.overdue;
   return (
     <main className={styles.gamePage}>
       <header className={styles.hud}>
@@ -83,6 +80,11 @@ export default function ParticipatePage() {
         </details>
       </header>
       {pendingNotice && <div className={styles.urgent}>{pendingNotice}</div>}
+      {state.loadError && <section className={styles.roundNotice} role="alert">
+        <strong>참여 정보를 다시 확인하고 있어요</strong>
+        <span>{state.loadError}</span>
+        <button className={styles.secondaryButton} onClick={state.refresh}>다시 확인</button>
+      </section>}
       {(!state.session.accepting_choices) && <section className={styles.roundNotice} role="status">
         <strong>{state.session.status === "FINALIZED" ? "결과 확정" : state.session.status === "CLOSING" ? "결과 준비 중" : "접수 마감"}</strong>
         <span>{state.session.status === "FINALIZED" ? "내 결과가 도착했어요." : "도시를 둘러보며 결과를 기다려 주세요."}</span>
@@ -91,11 +93,10 @@ export default function ParticipatePage() {
       <section className={styles.cityExperience} aria-label="도시와 선택">
         <UnityCity key={state.session.id} sessionId={state.session.id} />
         <details className={styles.choicePanel} open>
-          <summary><span>도시에서 선택하기</span><small>{eventsClosed ? "접수 마감" : activeEvent ? "상황 발생" : guiding ? "장소로 이동 중" : "이벤트 대기"}</small></summary>
+          <summary><span>도시에서 선택하기</span><small>{activeEvent ? "상황 발생" : "이벤트 대기"}</small></summary>
           <div className={styles.choicePanelBody}>
             {!activeSituation && <div className={styles.emptySituation} role="status" aria-live="polite">
-              <h2>{eventsClosed ? "이벤트 접수가 마감되었습니다" : waitingForArrival ? "다음 장소 도착을 기다리고 있어요" : guiding ? "이벤트 장소로 이동 중이에요" : "도시를 둘러보고 있어요"}</h2>
-              {!eventsClosed && <p className={styles.body}>{waitingForArrival ? "이동에 시간이 더 걸리고 있어요. 이벤트 장소에 도착하면 선택지가 나타나요." : "이벤트 장소에 도착하면 선택지가 나타나요."}</p>}
+              <h2>{!state.session.accepting_choices || state.eventState?.phase === "CLOSED" ? "이벤트 접수가 마감되었습니다" : state.eventState?.phase === "GUIDING" ? "새로운 상황을 만나러 이동 중이에요" : "도시를 둘러보고 있어요"}</h2>
             </div>}
             {activeEvent && activeSituation && <SituationCard key={activeEvent.id} situation={activeSituation} selectedChoiceId={state.selected[activeEvent.id]}
               done={Boolean(state.answered[activeEvent.id])} acceptingChoices={state.session.accepting_choices}

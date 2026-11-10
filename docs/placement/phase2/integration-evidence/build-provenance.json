@@ -1,0 +1,46 @@
+{
+  "unity": "6000.3.24f1",
+  "source_scene_sha256": "3ca26d6ee0c512812c8d1778c4fb8e8296b7df2357a46aa231daf9f6fe8969d2",
+  "web_bridge_source_sha256": "9320930811f1373a27c0f5e82aa3722c17eb1a7aac78b6ff323a180edfbf6b3f",
+  "build_result": "Success",
+  "test_build_path": "/tmp/simus_phase2_unity_validation/Builds/city_rebuild_v002_phase1_session",
+  "files": [
+    {
+      "path": "Build/city_rebuild_v002_phase1_session.data",
+      "bytes": 74442021,
+      "sha256": "fa50bb44655258d5fad3b221736426be7179f643da728db6d8621c9f0552199f"
+    },
+    {
+      "path": "Build/city_rebuild_v002_phase1_session.framework.js",
+      "bytes": 413204,
+      "sha256": "f294eeb46e7587ff0699737b70cb3b0da290d6697ca7275e71a1f3627dc05299"
+    },
+    {
+      "path": "Build/city_rebuild_v002_phase1_session.loader.js",
+      "bytes": 26983,
+      "sha256": "f3b676982415b1a1701b22d79a69a15b5699d5466c63cb35ce9d3390eea48533"
+    },
+    {
+      "path": "Build/city_rebuild_v002_phase1_session.wasm",
+      "bytes": 26707785,
+      "sha256": "f4062317b91c997fbc13e7365ef56647133b637a7ab39c63491926c7476b933a"
+    },
+    {
+      "path": "bridge.js",
+      "bytes": 5884,
+      "sha256": "70d23e67cfad185da55829586a27d69759813f582dc28059d78bf2a24f665a29"
+    },
+    {
+      "path": "build.json",
+      "bytes": 305,
+      "sha256": "244a7823ae0a001bb30e1e687bba8df3769d20e4acf8762682e855bcc6ef258d"
+    },
+    {
+      "path": "index.html",
+      "bytes": 1660,
+      "sha256": "b1b2cdb7bb326d2f37da386510c6768bd347a0753ea1ecfe7a7c56b60c4554d0"
+    }
+  ],
+  "installed_local_path": "web/public/city-rebuild-v002-phase1",
+  "previous_local_backup": "web/.unity-deploy-backups/phase2-20261103-before-fix/city-rebuild-v002-phase1"
+}

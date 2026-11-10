@@ -29,7 +29,7 @@ export async function runCityV002Events({ pool, env, token, templateId, stopServ
   assert.equal((await pool.query('SELECT count(*) FROM simus.session_situations WHERE session_id=$1 AND event_location IS NOT NULL',[sid])).rows[0].count,'0','Never copy old-map placement');
   assert.ok((await pool.query('SELECT map_metadata FROM simus.session_regions WHERE session_id=$1',[sid])).rows.every(r=>JSON.stringify(r.map_metadata)==='{}'));
   const situation=(await pool.query('SELECT id FROM simus.session_situations WHERE session_id=$1 ORDER BY display_order LIMIT 1',[sid])).rows[0].id;
-  const location={situation_id:situation,is_generic:false,event_location:{map_version:MAP_VERSION,point:nodePoint('RIVER_E_30'),radius_m:.1}};
+  const location={situation_id:situation,is_generic:false,event_location:{place_id:'fixture_river',map_version:MAP_VERSION,point:nodePoint('RIVER_E_30'),radius_m:.1}};
   const locations=`/api/admin/sessions/${sid}/event-locations`;
   assert.equal((await call(locations,{method:'PUT',admin:true,data:{...location,event_location:{...location.event_location,point:[120,-1.2,75]}}})).body.error.code,'INVALID_GRAPH_LOCATION');
   assert.equal((await call(locations,{method:'PUT',admin:true,data:location})).status,200);
@@ -67,7 +67,7 @@ export async function runCityV002Events({ pool, env, token, templateId, stopServ
   assert.equal((await pool.query("SELECT count(*) FROM simus.npc_events WHERE session_id=$1 AND status='ACTIVE'",[sid])).rows[0].count,'1');
   const frozen=await snapshot(),frozenNpc=frozen.npcs[0];
   assert.equal(frozenNpc.motion.speed_mps,0);assert.deepEqual(npcPosition(frozenNpc,Date.parse(frozen.motion_time)+90000),frozenNpc.motion.points[0]);
-  const point=frozenNpc.motion.points[0];assert.ok(Math.hypot(...point.map((v,i)=>v-location.event_location.point[i]))<.01);
+  const point=frozenNpc.motion.points[0];assert.ok(Math.hypot(...point.map((v,i)=>v-location.event_location.point[i]))<=location.event_location.radius_m+.005);
   const choicePayload={session_id:sid,event_id:activeId,situation_id:situation,choice_id:arrived.body.event.situation.choices[0].id,request_key:randomUUID()};
   const answered=await Promise.all(Array.from({length:4},()=>call('/api/choices',{method:'POST',cookie:person.cookie,data:choicePayload})));
   assert.deepEqual(answered.map(r=>r.status).sort(),[200,200,200,201]);
@@ -76,16 +76,16 @@ export async function runCityV002Events({ pool, env, token, templateId, stopServ
   state=(await pool.query('SELECT * FROM simus.npc_event_states WHERE session_id=$1',[sid])).rows[0];
   assert.equal(state.guidance_motion,null);assert.equal(state.guidance_point,null);assert.ok(state.resume_motion.rejoin_after_ms>0);
   const rejoin=state.resume_motion.rejoin_motion;graphRoute(rejoin.points,true);
-  // Exercise handoff without passing the next 60/90 second event thresholds.
+  // Exercise handoff before the next 60-second guidance threshold.
   await pool.query("UPDATE simus.npc_event_states SET motion_epoch=clock_timestamp()-$2*interval '1 millisecond' WHERE session_id=$1",[sid,state.resume_motion.rejoin_after_ms+1000]);
   const rejoined=await snapshot();assert.deepEqual(rejoined.npcs[0].motion.points,rejoin.points);assert.equal(rejoined.npcs[0].motion.loop,true);
   assert.ok(rejoined.npcs[0].motion.revision>resumed.npcs[0].motion.revision);
   assert.deepEqual((await pool.query('SELECT npc_motion FROM simus.participant_sessions WHERE session_id=$1',[sid])).rows[0].npc_motion,member.npc_motion);
   await pool.query("UPDATE simus.npc_event_states SET waiting_since=clock_timestamp()-interval '91 seconds' WHERE session_id=$1",[sid]);
-  const deadline=await event();assert.equal(deadline.body.phase,'ACTIVE');assert.equal(deadline.body.event.trigger_kind,'DEADLINE');assert.notEqual(deadline.body.event.situation_id,situation);
-  assert.equal(Date.parse(deadline.body.deadline_at)-Date.parse(deadline.body.waiting_since),90000);
-  // A second NPC reaches the deadline mid-edge: freeze and return must use
-  // the stored polyline, including partial first/last graph segments.
+  const overdue=await event();assert.equal(overdue.body.event,null);assert.equal(overdue.body.deadline_at,null);
+  assert.equal((await pool.query('SELECT count(*) FROM simus.npc_events WHERE session_id=$1 AND situation_id=$2',[sid,timed])).rows[0].count,'0','Unlocated events never fire after 90 seconds');
+  // A second NPC remains on its graph guidance route past 90 seconds. It can
+  // freeze for an event only after reaching the destination, at runtime speed.
   const second = await call('/api/participants',{method:'POST'});
   assert.equal((await call(`/api/sessions/${sid}/join`,{method:'POST',cookie:second.cookie})).status,201);
   const secondId=(await pool.query('SELECT participant_id FROM simus.participant_sessions WHERE session_id=$1 AND participant_id<>$2',[sid,member.participant_id])).rows[0].participant_id;
@@ -96,7 +96,11 @@ export async function runCityV002Events({ pool, env, token, templateId, stopServ
   await pool.query("UPDATE simus.npc_event_states SET waiting_since=clock_timestamp()-interval '61 seconds' WHERE session_id=$1 AND participant_id=$2",[sid,secondId]);
   assert.equal((await secondEvent()).body.phase,'GUIDING');
   await pool.query("UPDATE simus.npc_event_states SET waiting_since=clock_timestamp()-interval '91 seconds',guidance_started_at=clock_timestamp()-interval '7 seconds' WHERE session_id=$1 AND participant_id=$2",[sid,secondId]);
-  const interrupted=await secondEvent();assert.equal(interrupted.body.event.trigger_kind,'DEADLINE');
+  const midRoute=await secondEvent();assert.equal(midRoute.body.event,null);
+  const travelling=(await pool.query('SELECT * FROM simus.npc_event_states WHERE session_id=$1 AND participant_id=$2',[sid,secondId])).rows[0];
+  const travelSeconds=pathLength(travelling.guidance_motion.points)/fasterMotion.speed_mps;
+  await pool.query("UPDATE simus.npc_event_states SET guidance_started_at=clock_timestamp()-$3*interval '1 second' WHERE session_id=$1 AND participant_id=$2",[sid,secondId,travelSeconds+1]);
+  const interrupted=await secondEvent();assert.equal(interrupted.body.event.trigger_kind,'LOCATION');
   const during=(await call(`/api/sessions/${sid}/npc`,{cookie:second.cookie})).body.npcs[0];
   const frozenMid=during.motion.points[0];locate(frozenMid);
   const secondState=(await pool.query('SELECT * FROM simus.npc_event_states WHERE session_id=$1 AND participant_id=$2',[sid,secondId])).rows[0];
@@ -104,7 +108,7 @@ export async function runCityV002Events({ pool, env, token, templateId, stopServ
   const expectedFrozen=npcPosition({npc_id:'test',epoch:new Date(secondState.guidance_started_at).toISOString(),motion:secondState.guidance_motion},Date.parse(interrupted.body.event.started_at));
   assert.ok(Math.hypot(...frozenMid.map((v,i)=>v-expectedFrozen[i]))<.01,'Event and rendering agree at runtime speed');
   assert.ok(Math.hypot(...frozenMid.map((v,i)=>v-secondState.guidance_origin[i]))>1);
-  assert.ok(Math.hypot(...frozenMid.map((v,i)=>v-secondState.guidance_point[i]))>1);
+  assert.ok(Math.hypot(...frozenMid.map((v,i)=>v-secondState.guidance_point[i]))<=location.event_location.radius_m+.005);
   assert.equal((await call('/api/choices',{method:'POST',cookie:second.cookie,data:{session_id:sid,event_id:interrupted.body.event.id,
     situation_id:interrupted.body.event.situation_id,choice_id:interrupted.body.event.situation.choices[0].id,request_key:randomUUID()}})).status,201);
   const midReturn=(await call(`/api/sessions/${sid}/npc`,{cookie:second.cookie})).body.npcs[0];
@@ -113,5 +117,5 @@ export async function runCityV002Events({ pool, env, token, templateId, stopServ
   graphRoute(midReturn.motion.points);assert.deepEqual(midReturn.motion.points[0],frozenMid);
   assert.equal((await call(`/api/admin/sessions/${sid}/end`,{method:'POST',admin:true,data:{request_key:randomUUID()}})).status,200);
   const ended=await snapshot();assert.equal(ended.frozen,true);assert.equal((await event()).body.phase,'CLOSED');
-  console.log('PASS: v002 new DRAFT isolation, join epoch, default movement, graph guidance/arrival, event freeze/restart/concurrency/idempotence, graph return and original loop handoff/revision, immutable snapshots, 90-second deadline, session end');
+  console.log('PASS: v002 DRAFT isolation, graph guidance/arrival, freeze/restart/concurrency/idempotence, graph return and loop handoff/revision, immutable snapshots, no 90-second fallback, session end');
 }

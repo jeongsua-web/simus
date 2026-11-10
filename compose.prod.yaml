@@ -5,12 +5,17 @@ services:
     image: ${SIMUS_IMAGE:?Set SIMUS_IMAGE to a GHCR sha tag or digest}
     init: true
     restart: unless-stopped
+    # Leave approximately 768 MiB for Ubuntu, Docker, and a host reverse proxy.
+    mem_limit: 768m
+    cpus: 1.0
     environment:
       NODE_ENV: production
+      NODE_OPTIONS: --max-old-space-size=512
       NEXT_TELEMETRY_DISABLED: "1"
       HOSTNAME: 0.0.0.0
       PORT: "3000"
-      DATABASE_URL: ${DATABASE_URL:?Set the production PostgreSQL URL}
+      # Use a URL-safe password (openssl rand -hex 32); never use localhost here.
+      DATABASE_URL: postgresql://simus_app:${SIMUS_DB_PASSWORD:?Set a 64-character hex application DB password}@db:5432/simus
       ADMIN_TOKEN_ISSUER: ${ADMIN_TOKEN_ISSUER:?Set the administrator JWT issuer}
       ADMIN_TOKEN_AUDIENCE: ${ADMIN_TOKEN_AUDIENCE:?Set the administrator JWT audience}
       ADMIN_JWKS_URL: ${ADMIN_JWKS_URL:-}
@@ -21,6 +26,12 @@ services:
       VAPID_SUBJECT: ${VAPID_SUBJECT:-}
     ports:
       - "${SIMUS_BIND_ADDRESS:-127.0.0.1}:${SIMUS_PORT:-3000}:3000"
+    networks:
+      - default
+      - database
+    depends_on:
+      db:
+        condition: service_healthy
     healthcheck:
       test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/api/health',{signal:AbortSignal.timeout(4000)}).then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
       interval: 30s
@@ -37,3 +48,71 @@ services:
       options:
         max-size: "10m"
         max-file: "3"
+
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    mem_limit: 512m
+    cpus: 1.0
+    shm_size: 128m
+    environment:
+      POSTGRES_DB: simus
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set a separate PostgreSQL administrator password}
+      SIMUS_DB_PASSWORD: ${SIMUS_DB_PASSWORD:?Set a 64-character hex application DB password}
+      POSTGRES_INITDB_ARGS: --data-checksums
+    command:
+      - postgres
+      - -c
+      - max_connections=30
+      - -c
+      - shared_buffers=128MB
+      - -c
+      - work_mem=2MB
+      - -c
+      - maintenance_work_mem=32MB
+      - -c
+      - effective_cache_size=384MB
+      - -c
+      - max_parallel_workers_per_gather=0
+    # No host port publishing: only web can reach db on the internal network.
+    networks:
+      - database
+    volumes:
+      - simus_prod_postgres_data:/var/lib/postgresql/data
+      - type: bind
+        source: ./.prod-db
+        target: /schema-init
+        read_only: true
+        bind:
+          create_host_path: false
+      - type: bind
+        source: ./scripts/db/init-production.sh
+        target: /docker-entrypoint-initdb.d/010-init-production.sh
+        read_only: true
+        bind:
+          create_host_path: false
+    healthcheck:
+      # TCP rejects the socket-only temporary init server. The marker is written
+      # only after all schema, migration history, and application grants commit.
+      test: ["CMD-SHELL", "test -f \"$$PGDATA/.simus-init-complete\" && pg_isready -h 127.0.0.1 -U postgres -d simus"]
+      interval: 10s
+      timeout: 5s
+      start_period: 120s
+      retries: 12
+    stop_grace_period: 60s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  default: {}
+  database:
+    internal: true
+
+volumes:
+  simus_prod_postgres_data:
+    # Keep the same volume even if the checkout directory or project name changes.
+    name: simus_prod_postgres_data

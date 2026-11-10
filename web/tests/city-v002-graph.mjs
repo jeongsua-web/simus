@@ -1,13 +1,22 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { pedestrianGraph as graph, defaultMotion, nodePoint, routeBetween, isGraphSegment, pathLength, locate, graphMotion } from '../src/lib/city-v002-graph.mjs';
+import { pedestrianGraph as graph, LEGACY_MAP_VERSION, graphForMap, defaultMotion, nodePoint, routeBetween, isGraphSegment, pathLength, locate, graphMotion } from '../src/lib/city-v002-graph.mjs';
+import phase1 from '../src/lib/data/city-v002-phase1-event-locations.json' with { type: 'json' };
+import { eventManifest, preparedLocation } from '../src/lib/city-v002-event-mapping.mjs';
 import { npcPosition } from '../src/app/participate/npc-motion.ts';
 
 export function assertGraphRoute(points, loop = false) {
   const legs = loop ? [...points, points[0]] : points;
   for (let i = 1; i < legs.length; i++) assert.ok(isGraphSegment(legs[i - 1], legs[i]), `Non-graph leg: ${JSON.stringify(legs.slice(i-1,i+1))}`);
 }
-assert.equal(graph.nodes.length, 572); assert.equal(graph.edges.length, 597);
+assert.equal(graph.nodes.length, 579); assert.equal(graph.edges.length, 604);
+assert.equal(graphForMap(LEGACY_MAP_VERSION).nodes.length,572);
+assert.equal(graphForMap(LEGACY_MAP_VERSION).edges.length,597);
+for (const previous of phase1.locations) assert.deepEqual(preparedLocation(previous.situation_code),
+  {place_id:previous.place_id,map_version:phase1.map_version,point:previous.point,radius_m:previous.radius_m},'Preserve the exact eight Phase 1 mappings');
+assert.equal(eventManifest.events.length,30);
+assert.equal(eventManifest.events.filter(e=>e.event_location).length,12);
+for(const event of eventManifest.events.filter(e=>e.status!=='READY')) assert.equal(preparedLocation(event.code),null,'A reachable candidate must not silently enable an unfinished scene');
 const motion = defaultMotion(); assertGraphRoute(motion.points, true);
 const epoch = '2026-01-01T00:00:00Z', start = Date.parse(epoch);
 for (let t = 0; t < pathLength(motion.points) / motion.speed_mps * 1000; t += 1357)
@@ -20,7 +29,7 @@ assert.throws(() => routeBetween(motion.points[0], [120, -1.2, 75]));
 assert.throws(() => graphMotion({ ...motion, path_version: 'wrong-version' }));
 const loop = graphMotion({ ...motion, points: [nodePoint('CAMPUS_PLAZA'), nodePoint('B16_ACCESS')] });
 assertGraphRoute(loop.points, true);
-console.log('PASS: 572/597 source graph, all nodes reachable, default/closing legs, interpolated positions, bridge detour, off-graph/version rejection');
+console.log('PASS: Phase 1 579/604 and preserved legacy graph, exact eight mappings, 12 ready/18 blocked, all nodes reachable, default/closing legs, interpolation, bridge detour and off-graph/version rejection');
 
 const layout = JSON.parse(await readFile(new URL('../../docs/planning/city_rebuild_v002/layout.json', import.meta.url)));
 const design = JSON.parse(await readFile(new URL('../../docs/planning/city_rebuild_v002/river-design.json', import.meta.url)));

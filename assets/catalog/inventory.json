@@ -8006,15 +8006,29 @@
       "path": "unity/Assets/Editor/CityV002LocationPreparation.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 3081,
-      "sha256": "983e00ec016b5c9daad83dea8d11c4aa0b7508dad0bcb72bb75837742b63d48e"
+      "bytes": 3130,
+      "sha256": "ad8c64edc23f665209d23de45c918d1bad5168bf3c8e832a7abfb6639913091d"
     },
     {
       "path": "unity/Assets/Editor/CityV002LocationPreparation.cs.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
+      "bytes": 62,
+      "sha256": "474c54b7e7b3779e1b3b3a538365e5e118325e1270b1a3a5f4b5bcd1af51d0d0"
+    },
+    {
+      "path": "unity/Assets/Editor/CityV002Phase2Validation.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 5725,
+      "sha256": "f9d4b609323cc65ae6b0ddb3db982cd517abea7697e9a3c37832ceb07e01d55a"
+    },
+    {
+      "path": "unity/Assets/Editor/CityV002Phase2Validation.cs.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
       "bytes": 60,
-      "sha256": "6cdaf685a31eb45f3fb1b78191ba439a44f0064abd862dd4b7dbb482cf51f55c"
+      "sha256": "090a8773c14ef2516ec1c0ad6d696ff8a1f9b2f8a7216817ab47230c49763f5d"
     },
     {
       "path": "unity/Assets/Editor/CompletedMapFollowSetup.cs",
@@ -18681,8 +18695,8 @@
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity",
       "role": "scene",
       "location": "unity_existing",
-      "bytes": 6400557,
-      "sha256": "3ca26d6ee0c512812c8d1778c4fb8e8296b7df2357a46aa231daf9f6fe8969d2"
+      "bytes": 6607271,
+      "sha256": "6a8f5cb7b15e2cdf693375ce24b592ff9cd65ab20292ca260b7c31aa99e78a7d"
     },
     {
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002/CityRebuild_v002.unity.meta",
@@ -36125,8 +36139,8 @@
       "path": "unity/Assets/SIMUS/Tests/Editor/CityV002RiverAreaTests.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 3011,
-      "sha256": "fe91b7b391884668e704ba1b8e4f3aae40fb5db9d077fc99fe70f5658eca21df"
+      "bytes": 4827,
+      "sha256": "749360266dc5a53c567eb4153e4ba9fa721c5a9a256b137765aa167386d12592"
     },
     {
       "path": "unity/Assets/SIMUS/Tests/Editor/CityV002RiverAreaTests.cs.meta",
@@ -36265,15 +36279,15 @@
       "path": "unity/Assets/Scripts/CityV002NpcBuildRole.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 364,
-      "sha256": "08afca6cba3e6c635290130580743408e000c71f0a65397771893ddbc28918b1"
+      "bytes": 376,
+      "sha256": "1228f8701f7f8290d89b7b14f2277432bcc0789f968b658bf9da2897bf7e4e70"
     },
     {
       "path": "unity/Assets/Scripts/CityV002NpcBuildRole.cs.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
-      "bytes": 60,
-      "sha256": "a853d0be852621a255f4a19ed24c98b40e17c50e77dfe2c0eaba5a188cb3a97e"
+      "bytes": 62,
+      "sha256": "66ba850096015a5e9a2b7156d73accb09805266e87b238204abe599dfdad067f"
     },
     {
       "path": "unity/Assets/Scripts/CityV002NpcRouteAdapter.cs",
@@ -36335,15 +36349,15 @@
       "path": "unity/Assets/Scripts/CityV002PlaceAnchor.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 442,
-      "sha256": "2e9c37e00b16e08154ea60cb04b37fbe32f5d4c5457ace21c22413084a4022d5"
+      "bytes": 457,
+      "sha256": "6b1ca89f018723c8f3d875376f84a4c695cbefbd1d344a4aa15c3f2d3eccb4d4"
     },
     {
       "path": "unity/Assets/Scripts/CityV002PlaceAnchor.cs.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
-      "bytes": 60,
-      "sha256": "59c5b32732613aff9e4d930c3b817825cc849554371403ed03fd82e022211ade"
+      "bytes": 62,
+      "sha256": "43a91335a8f2ed1af5022933378929ab03fb20f96e81effae7bee2cd9e0f2def"
     },
     {
       "path": "unity/Assets/Scripts/CityV002RiverArea.cs",
@@ -36475,8 +36489,8 @@
       "path": "unity/Assets/Scripts/WebCityBridge.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 11026,
-      "sha256": "dc7893e1266d21650607ff2acfdc829cec8199f473dee0bb58c911182f9732ae"
+      "bytes": 11530,
+      "sha256": "db50e17e9f6e46b45ff9bd25e82386a6f74214dd2eee688a3c5ae71657c28a73"
     },
     {
       "path": "unity/Assets/Scripts/WebCityBridge.cs.meta",
@@ -37107,6 +37121,55 @@
       "location": "web_runtime",
       "bytes": 178284,
       "sha256": "6e3da18b9327723a22c3cf39ddea6eacc0fce2afcad2c70a087a017735f2b34d"
+    },
+    {
+      "path": "web/public/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.data",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 74442021,
+      "sha256": "fa50bb44655258d5fad3b221736426be7179f643da728db6d8621c9f0552199f"
+    },
+    {
+      "path": "web/public/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.framework.js",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 413226,
+      "sha256": "8b1bce6ef29786f8e0ddc51002620441b4161ae073d3f30ce7cc0f825914bd5e"
+    },
+    {
+      "path": "web/public/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.loader.js",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 26983,
+      "sha256": "f3b676982415b1a1701b22d79a69a15b5699d5466c63cb35ce9d3390eea48533"
+    },
+    {
+      "path": "web/public/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.wasm",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 26707785,
+      "sha256": "f4062317b91c997fbc13e7365ef56647133b637a7ab39c63491926c7476b933a"
+    },
+    {
+      "path": "web/public/city-rebuild-v002-phase1/bridge.js",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 5998,
+      "sha256": "304386e7eeb742d6948619942067d1d82278e64c6c34355e414ef5dfb87de945"
+    },
+    {
+      "path": "web/public/city-rebuild-v002-phase1/build.json",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 306,
+      "sha256": "b16dae43d077756db7c2534608286b8a83604a568f7c250aee3925c45cc74cb5"
+    },
+    {
+      "path": "web/public/city-rebuild-v002-phase1/index.html",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 1681,
+      "sha256": "a269593f4c7d1ec4285501a67810936e528d72db62417d727d2e72ab616413c5"
     },
     {
       "path": "web/public/file.svg",

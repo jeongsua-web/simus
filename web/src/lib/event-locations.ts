@@ -1,4 +1,6 @@
 import { ApiError } from "./api";
+import { createHash } from "node:crypto";
+import { MAP_VERSION } from "./city-v002-graph.mjs";
 
 export type EventLocation = { place_id: string; map_version: string; point: number[]; radius_m: number };
 const identifier = /^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$/;
@@ -15,10 +17,22 @@ export function parseEventLocation(value: unknown): EventLocation {
   return { place_id: v.place_id, map_version: v.map_version, point: v.point, radius_m: v.radius_m };
 }
 
+// Preserve old saved locations without rewriting DB content. Coordinate-based
+// identity groups co-located legacy events into the same durable visit. New
+// Phase 1/2 locations must always carry the authored place_id.
+export function normalizeEventLocation(value: unknown): EventLocation {
+  const v = value as Partial<EventLocation> | null;
+  if (v && typeof v === "object" && !v.place_id && v.map_version !== MAP_VERSION) {
+    const id = createHash("sha256").update(JSON.stringify([v.map_version, v.point, v.radius_m])).digest("hex").slice(0, 32);
+    return parseEventLocation({ ...v, place_id: `legacy_${id}` });
+  }
+  return parseEventLocation(value);
+}
+
 export function assertLocationGroups(values: unknown[], mapVersion?: string) {
   const places = new Map<string, EventLocation>();
   for (const value of values) {
-    const location = parseEventLocation(value);
+    const location = normalizeEventLocation(value);
     if (mapVersion && location.map_version !== mapVersion)
       throw new ApiError(409, "NPC_MAP_MISMATCH", "NPC 경로와 이벤트의 지도가 일치해야 합니다.");
     const previous = places.get(location.place_id);

@@ -16,6 +16,7 @@
 /web/public/.unity-preview-*/
 /web/.unity-deploy-backups/
 *.pem
+*.ppk
 *.p12
 *.pfx
 
@@ -42,6 +43,7 @@ godot/builds/
 # 데이터베이스 백업
 *.dump
 *.backup
+/.prod-db/
 
 # IDE
 .idea/
@@ -68,3 +70,6 @@ godot/builds/
 **/.venv/
 *.pyc
 *.tsbuildinfo
+
+# Local administrator credentials
+.secrets/

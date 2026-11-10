@@ -37,7 +37,7 @@ export async function runV002SessionBrowser({pool,env,token,templateId,root}) {
     assert.ok(location);
     // Keep the exact administrator UI placement through arrival and choice.
     // This disposable round does not establish exhibition placement approval.
-    assert.deepEqual(location.event_location,{map_version:MAP_VERSION,point:nodePoint('C_SPINE_CUT_0'),radius_m:2});
+    assert.deepEqual(location.event_location,{place_id:'graph_C_SPINE_CUT_0',map_version:MAP_VERSION,point:nodePoint('C_SPINE_CUT_0'),radius_m:2});
     const start=admin.waitForResponse(r=>r.url().endsWith(`/${sid}/start`));
     await card.getByRole('button',{name:'회차 시작',exact:true}).click();assert.equal((await start).status(),200);
     console.log('v002 actual browser: placement saved and round started');
@@ -48,7 +48,8 @@ export async function runV002SessionBrowser({pool,env,token,templateId,root}) {
     await page.addInitScript(()=>window.addEventListener('message',event=>{if(event.data?.channel==='simus-city')window.recordBridge(event.data);}));
     await page.goto(env.TEST_API_URL+'/participate');await enterCity(page,{nickname:'새도시시민',characterId:'npc_01'});
     await page.waitForFunction(()=>document.querySelector('iframe[title="SIM:US 도시"]')?.style.visibility==='visible',null,{timeout:180000});
-    const unity=page.frames().find(f=>f.url().includes('/city-rebuild-v002/index.html'));assert.ok(unity);
+    const frame=await page.locator('iframe[title="SIM:US 도시"]').elementHandle();
+    const unity=await frame.contentFrame();assert.ok(unity);
     async function inspect() {
       // SendMessage schedules a Unity frame; allow a fresh observation to arrive.
       await unity.evaluate(()=>window.simusBridge.inspect());await page.waitForTimeout(150);

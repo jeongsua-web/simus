@@ -2,7 +2,7 @@
 
 저장소 루트의 `Dockerfile`로 Next.js 앱을 빌드하고 `ghcr.io/jeongsua-web/simus`에 게시한 뒤, EC2에서 `compose.prod.yaml`로 실행한다. EC2에서는 Node/npm과 소스 빌드가 필요 없다. 기존 `compose.yaml`은 개발 전용이며 운영 명령에는 항상 `-f compose.prod.yaml`을 지정한다. 두 Compose 파일을 병합하지 않는다.
 
-운영 구성은 **웹 컨테이너 + 별도 PostgreSQL**을 기준으로 한다. RDS 또는 별도로 준비한 DB 주소를 `DATABASE_URL`로 주입한다. 이 구성은 DB 생성·마이그레이션·seed·회차 시작을 자동 실행하지 않는다. [DB 마이그레이션 안내](db-migrations.md)의 신규 `init` / 기존 `baseline`·`upgrade` 경로로 대상 DB를 별도로 준비한다. 운영에 seed를 적용하거나 014를 직접 실행하지 않는다. 자동 실행에서 012도 제외한다.
+현재 운영 구성은 **같은 EC2의 웹 컨테이너 + PostgreSQL 16 컨테이너**다. 최초 DB 생성·초기화 및 실행 승인은 [EC2 PostgreSQL 최초 배포 승인안](ec2-postgres-first-deploy.md)을 따른다. DB 마이그레이션 실행 테스트는 이번 배포에서 보류한다. 새 빈 볼륨의 첫 DB 기동은 미리 생성한 managed init SQL(001~011 → 013 → 016 → 015)과 제한된 앱 계정을 생성한다. 운영 seed·012·014·회차 시작은 실행하지 않는다. 아래의 이미지 게시·HTTPS·업데이트 설명을 참고하되, 최초 파일 전달/환경변수/DB 실행은 연결한 승인안의 전체 절차를 우선한다.
 
 ## 파일과 이미지 내용
 
@@ -11,7 +11,7 @@
 | `Dockerfile` | Node 24 Debian slim, `npm ci`, lint/build, standalone 결과만 복사, 일반 `node` 사용자로 실행 |
 | `.dockerignore` | 앱 빌드 입력만 허용; 환경 파일·키·Git·Unity/Blender 원본 제외; lock으로 검증하는 Release WebGL 산출물 포함 |
 | `web/next.config.ts` | `output: "standalone"`; 최종 이미지에 `public`과 `.next/static`도 명시적으로 복사 |
-| `compose.prod.yaml` | GHCR 이미지 실행, 런타임 환경 주입, DB 연결 healthcheck, 재시작·로그 용량 제한 |
+| `compose.prod.yaml` | GHCR 웹 이미지와 PostgreSQL 16, 내부 DB 네트워크·named volume·초기화·메모리/로그 제한 |
 | `.env.example` | EC2의 `.env.production` 작성 양식; 실제 값은 Git 제외 |
 | `.github/workflows/docker-publish.yml` | PR 이미지 검증, main/develop push 및 수동 실행에서 GHCR 게시 |
 
@@ -48,13 +48,13 @@ mkdir -p ~/simus
 chmod 700 ~/simus
 ```
 
-`up --wait`를 지원하는 최신 Compose v2 이상이 필요하다. EC2 보안 그룹은 SSH를 관리자 IP로 제한하고, 공개 서비스는 HTTPS 443으로 제공한다. 기본 웹 바인딩은 `127.0.0.1:3000`이므로 같은 EC2의 HTTPS reverse proxy에서 연결한다. 호스트 포트 3000과 DB 5432를 인터넷 전체에 열지 않는다. 사설 DB에 대한 EC2 보안 그룹·라우팅·DNS를 준비하고 DB 방화벽은 앱 EC2에서의 연결만 허용한다.
+`up --wait`를 지원하는 Compose v2 이상이 필요하다(현재 대상 2.40.3). EC2 보안 그룹은 SSH를 관리자 IP로 제한하고, 공개 서비스는 HTTPS 443으로 제공한다. 기본 웹 바인딩은 `127.0.0.1:3000`이므로 같은 EC2의 HTTPS reverse proxy에서 연결한다. 호스트 포트 3000과 DB 5432를 인터넷 전체에 열지 않는다. DB 5432는 host에 게시하지 않고 내부 `database` 네트워크에서만 사용한다.
 
-ALB를 사용한다면 `SIMUS_BIND_ADDRESS=0.0.0.0`으로 변경하고 EC2의 3000 인바운드는 **ALB 보안 그룹에서만** 허용한다. ALB HTTPS listener와 대상 그룹 healthcheck `/api/health`를 별도로 준비한다. DB TLS는 DB 제공자의 인증서/접속 정책에 맞춰 설정한다.
+ALB를 사용한다면 `SIMUS_BIND_ADDRESS=0.0.0.0`으로 변경하고 EC2의 3000 인바운드는 **ALB 보안 그룹에서만** 허용한다. ALB HTTPS listener와 대상 그룹 healthcheck `/api/health`를 별도로 준비한다.
 
 ## 3. 배포 파일과 런타임 설정
 
-로컬 저장소 루트에서 아래 두 파일을 EC2로 복사한다. `EC2_PUBLIC_DNS`와 키 경로는 실제 값으로 바꾼다. 최초에는 위 단계의 `~/simus` 디렉터리를 먼저 만든다.
+최초 배포에는 아래 두 파일 외에도 DB 원본/체크섬/016, runner, 준비 도구와 초기화 shell이 필요하다. **[최초 배포 승인안의 파일 전달 및 SQL 생성 절차](ec2-postgres-first-deploy.md)를 완료해야 하며 승인 전에는 실행하지 않는다.** 아래 두 파일 전송 예시만으로는 DB를 기동할 수 없다. `EC2_PUBLIC_DNS`와 키 경로는 실제 값으로 바꾼다.
 
 ```sh
 scp -i /path/to/ec2-key.pem compose.prod.yaml .env.example ubuntu@EC2_PUBLIC_DNS:~/simus/
@@ -73,7 +73,7 @@ nano .env.production
 다음 값을 실제 환경으로 바꾼다. 샘플의 `REPLACE_...`는 사용 가능한 자격 정보가 아니다.
 
 - `SIMUS_IMAGE`: Actions 요약의 `ghcr.io/jeongsua-web/simus@sha256:...` 또는 전체 SHA 태그.
-- `DATABASE_URL`: 준비된 운영 DB와 앱 계정. 컨테이너에서 `localhost`는 EC2/RDS가 아닌 자기 자신이다. 사용자/비밀번호의 특수 문자는 URL 인코딩한다.
+- `POSTGRES_PASSWORD`, `SIMUS_DB_PASSWORD`: 각각 서로 다른 `openssl rand -hex 32` 값. 앱 URL은 `simus_app@db:5432/simus`로 Compose에서 조립하며 web에 관리자 비밀번호를 주입하지 않는다. 환경변수 변경만으로 기존 DB 비밀번호가 바뀌지 않는다.
 - `ADMIN_TOKEN_ISSUER`, `ADMIN_TOKEN_AUDIENCE`: 실제 RS256 JWT 발급자의 iss/aud. `ADMIN_JWKS_URL`(HTTPS 공개키 endpoint) 또는 `ADMIN_JWKS_JSON`(공개키 JSON) 중 **정확히 하나**만 채운다. DB의 활성 `admin_users.auth_subject`도 발급자의 sub와 일치해야 한다. [관리자 설정](demo-deployment.md#실제-서버-관리자-설정)을 참고한다.
 - `SESSION_JOB_TOKEN`: EC2에서 `openssl rand -hex 32`로 생성한 별도 값. 최소 32자이며 reconcile 작업과 일치시킨다. 주기 작업의 설치·실행은 [종료 정책](../contracts/session-lifecycle.md)의 운영 절차를 따른다.
 - VAPID 세 값은 웹 푸시를 사용하는 경우 함께 설정한다. 개인키는 서버에만 보관한다.
@@ -105,7 +105,7 @@ sudo docker compose --env-file .env.production -f compose.prod.yaml ps
 curl --fail --silent --show-error http://127.0.0.1:3000/api/health
 ```
 
-기본 포트를 바꿨다면 curl 주소도 수정한다. health의 `status=healthy`와 예상한 `database`를 확인한다. healthcheck는 DB 접속 여부를 검사하며 전체 스키마/마이그레이션 완료를 보증하지 않는다. DB 준비, 관리자 인증, DRAFT 및 승인된 WebGL 배포까지 별도로 확인한다. 이미지 pull/시작만으로 회차를 생성하거나 시작하지 않는다.
+이 명령 묶음은 **최초 승인안의 SQL 생성과 DB 초기화 완료 후** 웹 실행/업데이트에 사용한다. web의 `depends_on` 때문에 DB가 없으면 DB도 시작될 수 있으므로 최초 승인 전에는 실행하지 않는다. 기본 포트를 바꿨다면 curl 주소도 수정한다. health의 `status=healthy`와 `database=simus`를 확인한다. healthcheck는 DB 접속 여부를 검사하며 전체 스키마/마이그레이션 완료를 보증하지 않는다. DB 준비, 관리자 인증, DRAFT 및 승인된 WebGL 배포까지 별도로 확인한다. 이미지 pull/시작만으로 회차를 생성하거나 시작하지 않는다.
 
 같은 EC2의 HTTPS 프록시는 `http://127.0.0.1:3000`으로 전달하고 원래 `Host`, `X-Forwarded-Proto`, `X-Forwarded-For`를 보존한다. 프로덕션 참여 쿠키는 Secure이므로 실제 참여 시험은 **HTTPS 주소**에서 진행한다. HTTP health 확인만으로 참여 쿠키·웹 푸시가 검증된 것은 아니다.
 

@@ -1,10 +1,12 @@
+import { runInitialSessionIntegration } from './initial-session.integration.mjs';
 import { runV002SessionBrowser } from './v002-session-browser.mjs';
 import { runSessionBuildIntegration } from './session-build.integration.mjs';
 import { runCityV002Events } from './city-v002-events.integration.mjs';
 import { runEventBrowser } from './event-browser.mjs';
+import { runPhase2Validation } from './phase2-validation.mjs';
 import { runNpcEventIntegration } from './npc-events.integration.mjs';
 // Creates a NEW cluster. Never reads DATABASE_URL or connects to a development DB.
-import { mkdtemp, readFile, mkdir, writeFile, cp, symlink } from 'node:fs/promises';
+import { mkdtemp, readFile, mkdir, writeFile, cp, symlink, readdir } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -15,6 +17,7 @@ import pg from 'pg';
 import { runDepartmentIntegration } from './departments.integration.mjs';
 import { runNpcPositionIntegration } from './npc-positions.integration.mjs';
 import { runProfileIntegration } from './profiles.integration.mjs';
+import { runPopulationIntegration } from './population.integration.mjs';
 import { runDepartmentStatisticsIntegration } from './department-statistics.integration.mjs';
 import { runResultLinksIntegration } from './result-links.integration.mjs';
 import { runExhibitionContentIntegration } from './exhibition-content.integration.mjs';
@@ -27,6 +30,9 @@ const web = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const bin = process.env.TEST_PG_BIN ?? (process.platform === 'win32' ? 'C:/Program Files/PostgreSQL/18/bin' : '/opt/homebrew/opt/postgresql@18/bin');
 const pgPort = Number(process.env.TEST_PG_PORT ?? 55439);
 const port = Number(process.env.TEST_WEB_PORT ?? 3117);
+const python = process.env.TEST_PYTHON ?? (process.platform === 'win32' ? 'python' : 'python3');
+// Directory junctions need no Windows developer-mode/admin symlink privilege.
+const linkDirectory = (source, destination) => symlink(source, destination, process.platform === 'win32' ? 'junction' : 'dir');
 // Refuse occupied ports before creating a cluster or sending any HTTP request.
 for (const testPort of [pgPort, port]) {
   await new Promise((resolve, reject) => {
@@ -74,17 +80,33 @@ async function fixtureBuild(map = 'test-fixture-v1', route = 'test-path-v1') {
   await writeFile(path.join(fixtureCity, 'build.json'), JSON.stringify({protocol_version:1,map_version:map,path_versions:[route],npc_motion_enabled:true}));
 }
 await fixtureBuild();
-const v002 = path.join(env.SIMUS_WEBGL_PUBLIC_ROOT, 'city-rebuild-v002');
+const v002 = path.join(env.SIMUS_WEBGL_PUBLIC_ROOT, 'city-rebuild-v002-phase1');
 await mkdir(v002);
-for (const name of ['build.json','index.html','bridge.js']) await cp(path.join(web,'public/city-rebuild-v002',name),path.join(v002,name));
-await symlink(path.join(web,'public/city-rebuild-v002/Build'),path.join(v002,'Build'), 'dir');
-let server, running = false, pool;
+const phase2Build = process.env.TEST_PHASE2_ONLY === '1' && process.env.TEST_PHASE2_WEBGL_BUILD
+  ? path.resolve(process.env.TEST_PHASE2_WEBGL_BUILD) : path.join(web,'public/city-rebuild-v002-phase1');
+for (const name of ['build.json','index.html','bridge.js']) await cp(path.join(phase2Build,name),path.join(v002,name));
+await linkDirectory(path.join(phase2Build,'Build'),path.join(v002,'Build'));
+let serverCwd=web;
+if (phase2Build !== path.join(web,'public/city-rebuild-v002-phase1')) {
+  // Serve a new local Unity build without replacing the repository's public build.
+  serverCwd=path.join(root,'server'); await mkdir(path.join(serverCwd,'public'),{recursive:true});
+  for(const name of ['node_modules','.next']) await linkDirectory(path.join(web,name),path.join(serverCwd,name));
+  for(const item of await readdir(path.join(web,'public'),{withFileTypes:true})) {
+    const source = item.name==='city-rebuild-v002-phase1'?phase2Build:path.join(web,'public',item.name);
+    const destination = path.join(serverCwd,'public',item.name);
+    if (item.isDirectory()) await linkDirectory(source, destination);
+    else await cp(source, destination);
+  }
+}
+let server, running = false, pool, serverLog = '';
 async function stopServer() {
   if (server && server.exitCode === null) { const ended = once(server, 'exit'); server.kill(); await ended; }
 }
 async function startServer() {
-  server = spawn(process.execPath, ['node_modules/next/dist/bin/next', 'start', '--hostname', '127.0.0.1', '--port', String(port)], { cwd: web, env, windowsHide: true });
-  let log = ''; server.stdout.on('data', x => log += x); server.stderr.on('data', x => log += x);
+  server = spawn(process.execPath, ['node_modules/next/dist/bin/next', 'start', '--hostname', '127.0.0.1', '--port', String(port)], { cwd: serverCwd, env, windowsHide: true });
+  let log = '';
+  const record = x => { log += x; serverLog += x; };
+  server.stdout.on('data', record); server.stderr.on('data', record);
   server.on('error', e => { log += e.message; });
   for (let n = 0; n < 80; n++) {
     if (server.exitCode !== null) throw new Error(log);
@@ -103,17 +125,45 @@ try {
   const admin = new pg.Client({ connectionString: `postgresql://postgres@127.0.0.1:${pgPort}/postgres` });
   await admin.connect(); await admin.query('CREATE DATABASE simus_integration'); await admin.end();
   pool = new pg.Pool({ connectionString: env.DATABASE_URL });
+  if (env.TEST_INITIAL_SESSION_ONLY === '1' || env.TEST_PHASE2_ONLY === '1') {
+    // Exercise the production migration planner in this NEW disposable cluster.
+    // Render without migrate.main(); apply with psql only to the owned test DB.
+    const sql = await command(python, ['-c',
+      "import runpy; from types import SimpleNamespace; m=runpy.run_path('../scripts/db/migrate.py'); print(m['plan'](SimpleNamespace(command='init', approval_reference=None),m['sources']()))"],
+      { ...process.env, PYTHONIOENCODING: 'utf-8' });
+    const migrationFile = path.join(root, 'managed-init.sql');
+    await writeFile(migrationFile, sql);
+    await command(path.join(bin, process.platform === 'win32' ? 'psql.exe' : 'psql'),
+      ['-X', '-h', '127.0.0.1', '-p', String(pgPort), '-U', 'postgres', '-d', 'simus_integration', '-v', 'ON_ERROR_STOP=1', '-f', migrationFile]);
+  } else {
   for (const name of ['001_initial_schema.sql','002_session_lifecycle.sql','003_session_creation.sql','004_participant_npcs.sql','005_participant_departments.sql','006_content_score_range.sql','007_result_links.sql','008_web_push.sql','009_participant_profiles.sql','010_session_npc_motion.sql','011_npc_events.sql']) await pool.query(await readFile(path.join(web, '../db', name), 'utf8'));
   await pool.query(await readFile(path.join(web, '../db/012_running_common_events.sql'), 'utf8'));
   await pool.query(await readFile(path.join(web, '../db/013_participant_characters.sql'), 'utf8'));
   await pool.query(await readFile(path.join(web, '../db/014_participant_glasses.sql'), 'utf8'));
   await pool.query(await readFile(path.join(web, '../db/015_npc_graph_guidance.sql'), 'utf8'));
+  await pool.query(await readFile(path.join(web, '../db/017_initial_session_creation.sql'), 'utf8'));
+  await pool.query(await readFile(path.join(web, '../db/018_npc_event_visit.sql'), 'utf8'));
   await pool.query((await readFile(path.join(web, '../db/verify_schema.sql'), 'utf8')).replace(/^\\set.*$/gm, ''));
   // Synthetic geometry belongs only to this disposable test cluster. Production has no route default.
   await pool.query(`CREATE FUNCTION simus.test_fixture_npc_motion() RETURNS trigger LANGUAGE plpgsql AS $$
     BEGIN IF NEW.npc_motion IS NULL THEN NEW.npc_motion := '{"map_version":"test-fixture-v1","path_version":"test-path-v1","points":[[0,0,0],[0,0,20]],"speed_mps":1.4,"loop":true}'::jsonb; END IF; RETURN NEW; END $$;
     CREATE TRIGGER test_fixture_npc_motion BEFORE INSERT ON simus.simulation_sessions FOR EACH ROW EXECUTE FUNCTION simus.test_fixture_npc_motion()`);
+  }
   await startServer();
+  if (env.TEST_PHASE2_ONLY === '1') {
+    await runPhase2Validation({ pool, env, privateKey, publicJwk, root, stopServer, startServer,
+      applyContent: sid => command(path.join(bin, process.platform === 'win32' ? 'psql.exe' : 'psql'), ['-X', '-h', '127.0.0.1', '-p', String(pgPort),
+        '-U', 'postgres', '-d', 'simus_integration', '-v', 'ON_ERROR_STOP=1', '-v', `session_id=${sid}`,
+        '-v', 'development_database=simus_integration', '-f', '../db/content/city-v002-events-phase2-draft.sql']) });
+  } else if (env.TEST_INITIAL_SESSION_ONLY === '1') {
+    await runInitialSessionIntegration({ pool, env, privateKey, publicJwk });
+  } else if (env.TEST_POPULATION_ONLY === '1') {
+    await pool.query(await readFile(path.join(web, '../db/seed_demo.sql'), 'utf8'));
+    const token = await new SignJWT({}).setProtectedHeader({ alg: 'RS256', kid: publicJwk.kid })
+      .setIssuer(env.ADMIN_TOKEN_ISSUER).setAudience(env.ADMIN_TOKEN_AUDIENCE)
+      .setSubject('dev-admin').setIssuedAt().setExpirationTime('30m').sign(privateKey);
+    await runPopulationIntegration({ pool, env, token, templateId: '10000000-0000-0000-0000-000000000001' });
+  } else {
   console.log(await command(process.execPath, ['tests/session-lifecycle.integration.mjs'], env));
   await runFlow({ pool, env, stopServer, startServer });
   // Exercise the documented DRAFT demo seed through the real lifecycle API.
@@ -172,6 +222,7 @@ try {
   await runNpcPositionIntegration({ pool, env, token: demoToken, templateId: demoId });
   await fixtureBuild();
   await runProfileIntegration({ pool, env, token: demoToken, templateId: demoId });
+  await runPopulationIntegration({ pool, env, token: demoToken, templateId: demoId });
   await runDepartmentStatisticsIntegration({ pool, env, token: demoToken, templateId: demoId });
   await runResultLinksIntegration({ pool, env, token: demoToken, templateId: demoId });
   await runStageIntegration({ pool, env, token: demoToken, demoId });
@@ -201,8 +252,10 @@ try {
   assert.deepEqual(afterOutage, beforeOutage);
   console.log('PASS: real PostgreSQL stop/start; existing Next.js process serves 503 during outage and recovers with the same persisted city');
   console.log('PASS isolated suite. No development connection or data mutation.');
+  }
 } finally {
   await stopServer(); if (pool) await pool.end();
   if (running) await command(path.join(bin, process.platform === 'win32' ? 'pg_ctl.exe' : 'pg_ctl'), ['-D', data, '-m', 'fast', '-w', 'stop']);
+  await writeFile(path.join(root, 'server.log'), serverLog);
   console.log('Owned services stopped; isolated test files retained at:', root);
 }

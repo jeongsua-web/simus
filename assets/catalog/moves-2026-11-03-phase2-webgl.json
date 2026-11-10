@@ -1,0 +1,48 @@
+{
+  "date": "2026-11-03",
+  "purpose": "Preserve previous local test WebGL before installing the 12-scenario E2E verified runtime fix; no production deployment",
+  "files": [
+    {
+      "from": "web/public/city-rebuild-v002-phase1/Build/phase1_qa_local_20261020_051159.data",
+      "to": "web/.unity-deploy-backups/phase2-20261103-before-fix/city-rebuild-v002-phase1/Build/phase1_qa_local_20261020_051159.data",
+      "sha256": "6eaec3b595406b39b76d1e7efe56f0b2a4ee75add871d5fb20ed8f4c07d32174",
+      "bytes": 74443057
+    },
+    {
+      "from": "web/public/city-rebuild-v002-phase1/Build/phase1_qa_local_20261020_051159.framework.js",
+      "to": "web/.unity-deploy-backups/phase2-20261103-before-fix/city-rebuild-v002-phase1/Build/phase1_qa_local_20261020_051159.framework.js",
+      "sha256": "8fc81fca14ab0d03713374e001dd5986c5edd0e2b8e8924ea2a21a483340dd2b",
+      "bytes": 413204
+    },
+    {
+      "from": "web/public/city-rebuild-v002-phase1/Build/phase1_qa_local_20261020_051159.loader.js",
+      "to": "web/.unity-deploy-backups/phase2-20261103-before-fix/city-rebuild-v002-phase1/Build/phase1_qa_local_20261020_051159.loader.js",
+      "sha256": "77066b48678c4666a7492c1c6db2da06245117ef1d60d205ea5b42285034d0bf",
+      "bytes": 26983
+    },
+    {
+      "from": "web/public/city-rebuild-v002-phase1/Build/phase1_qa_local_20261020_051159.wasm",
+      "to": "web/.unity-deploy-backups/phase2-20261103-before-fix/city-rebuild-v002-phase1/Build/phase1_qa_local_20261020_051159.wasm",
+      "sha256": "69659847c89e4aa04d8cee55b19a28d4b3492c2c0d7ef8ae734507fe62764f40",
+      "bytes": 26706085
+    },
+    {
+      "from": "web/public/city-rebuild-v002-phase1/bridge.js",
+      "to": "web/.unity-deploy-backups/phase2-20261103-before-fix/city-rebuild-v002-phase1/bridge.js",
+      "sha256": "70d23e67cfad185da55829586a27d69759813f582dc28059d78bf2a24f665a29",
+      "bytes": 5884
+    },
+    {
+      "from": "web/public/city-rebuild-v002-phase1/build.json",
+      "to": "web/.unity-deploy-backups/phase2-20261103-before-fix/city-rebuild-v002-phase1/build.json",
+      "sha256": "244a7823ae0a001bb30e1e687bba8df3769d20e4acf8762682e855bcc6ef258d",
+      "bytes": 305
+    },
+    {
+      "from": "web/public/city-rebuild-v002-phase1/index.html",
+      "to": "web/.unity-deploy-backups/phase2-20261103-before-fix/city-rebuild-v002-phase1/index.html",
+      "sha256": "04ee99fdfa6c3e4977786feeb61eaa5770cd8a0d9061760426635211a9bcc167",
+      "bytes": 1656
+    }
+  ]
+}

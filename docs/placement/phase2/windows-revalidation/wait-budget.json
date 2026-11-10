@@ -1,0 +1,345 @@
+{
+  "created_at": "2026-11-03T07:33:38.154Z",
+  "map_version": "test-only-city-rebuild-v002-phase1-v1",
+  "scope": "Authored graph nodes, all READY places or one remaining unanswered place; static lower bounds only",
+  "default_speed_mps": 2.38,
+  "guidance_delay_seconds": 60,
+  "requested_maximum_seconds": 90,
+  "all_ready": {
+    "worst": {
+      "node_id": "B55_ACCESS",
+      "point": [
+        140,
+        0.16,
+        -163.995
+      ],
+      "nearest": {
+        "code": "EXHIBITION_02",
+        "place_id": "city_v002_gate_crossing",
+        "distance_to_radius_m": 623.6252103130871
+      }
+    },
+    "witness_route": [
+      [
+        140,
+        0.16,
+        -163.995
+      ],
+      [
+        159.4533,
+        0.16,
+        -197.2053
+      ],
+      [
+        159.453,
+        0.16,
+        -197.2057
+      ],
+      [
+        156.547,
+        0.16,
+        -202.7943
+      ],
+      [
+        156.5467,
+        0.16,
+        -202.7947
+      ],
+      [
+        145,
+        0.16,
+        -215
+      ],
+      [
+        134.807,
+        0.16,
+        -221.434
+      ],
+      [
+        110,
+        0.16,
+        -221.5
+      ],
+      [
+        83.373,
+        0.16,
+        -215.19
+      ],
+      [
+        73,
+        0.16,
+        -215
+      ],
+      [
+        38,
+        0.16,
+        -214
+      ],
+      [
+        19.337,
+        0.16,
+        -216.494
+      ],
+      [
+        9,
+        0.16,
+        -217
+      ],
+      [
+        -3.337,
+        0.16,
+        -216.494
+      ],
+      [
+        -21,
+        0.16,
+        -214
+      ],
+      [
+        -60,
+        0.16,
+        -211
+      ],
+      [
+        -106,
+        0.16,
+        -211
+      ],
+      [
+        -149.698,
+        0.16,
+        -207.6757
+      ],
+      [
+        -103.7079,
+        0.16,
+        -150.922
+      ],
+      [
+        -101.9376,
+        0.16,
+        -148.7373
+      ],
+      [
+        -101.3591,
+        0.16,
+        -144.2146
+      ],
+      [
+        -91.2909,
+        0.16,
+        -65.4995
+      ],
+      [
+        -90.75,
+        0.16,
+        -61.2707
+      ],
+      [
+        -91.0005,
+        0.16,
+        -60.9748
+      ],
+      [
+        -94.5763,
+        0.16,
+        -56.7505
+      ],
+      [
+        -95,
+        0.16,
+        -56.25
+      ],
+      [
+        -90.5005,
+        0.16,
+        -56.25
+      ],
+      [
+        0,
+        0.16,
+        -56.25
+      ]
+    ],
+    "immediate_guidance_lower_bound_seconds": 262.0273992912131,
+    "nodes_exceeding_90_seconds_even_with_immediate_guidance": 147,
+    "nodes_needing_more_than_30_seconds_after_guidance": 375,
+    "at_1_2_mps_nodes_exceeding_90_seconds_even_with_immediate_guidance": 262
+  },
+  "one_unanswered_place": [
+    {
+      "code": "EXHIBITION_02",
+      "place_id": "city_v002_gate_crossing",
+      "worst": {
+        "node_id": "B55_ACCESS",
+        "point": [
+          140,
+          0.16,
+          -163.995
+        ],
+        "distance_to_radius_m": 623.6252103130871
+      },
+      "immediate_guidance_lower_bound_seconds": 262.0273992912131
+    },
+    {
+      "code": "EXHIBITION_05",
+      "place_id": "city_v002_crying_child",
+      "worst": {
+        "node_id": "B55_ACCESS",
+        "point": [
+          140,
+          0.16,
+          -163.995
+        ],
+        "distance_to_radius_m": 838.4799274866073
+      },
+      "immediate_guidance_lower_bound_seconds": 352.3024905405913
+    },
+    {
+      "code": "EXHIBITION_07",
+      "place_id": "city_v002_illegal_parking",
+      "worst": {
+        "node_id": "B55_ACCESS",
+        "point": [
+          140,
+          0.16,
+          -163.995
+        ],
+        "distance_to_radius_m": 637.3026732802449
+      },
+      "immediate_guidance_lower_bound_seconds": 267.7742324706912
+    },
+    {
+      "code": "EXHIBITION_10",
+      "place_id": "C04_ACCESS",
+      "worst": {
+        "node_id": "B55_ACCESS",
+        "point": [
+          140,
+          0.16,
+          -163.995
+        ],
+        "distance_to_radius_m": 887.4167019644743
+      },
+      "immediate_guidance_lower_bound_seconds": 372.8641604892749
+    },
+    {
+      "code": "EXHIBITION_12",
+      "place_id": "ENV_Bin_BusStop",
+      "worst": {
+        "node_id": "B55_ACCESS",
+        "point": [
+          140,
+          0.16,
+          -163.995
+        ],
+        "distance_to_radius_m": 683.1648181185243
+      },
+      "immediate_guidance_lower_bound_seconds": 287.04404122627074
+    },
+    {
+      "code": "EXHIBITION_13",
+      "place_id": "city_v002_park_flowerbed",
+      "worst": {
+        "node_id": "B55_ACCESS",
+        "point": [
+          140,
+          0.16,
+          -163.995
+        ],
+        "distance_to_radius_m": 960.3217740028546
+      },
+      "immediate_guidance_lower_bound_seconds": 403.4965436986784
+    },
+    {
+      "code": "EXHIBITION_16",
+      "place_id": "NPC_HeavyCarrier_ApartmentWalk",
+      "worst": {
+        "node_id": "B55_ACCESS",
+        "point": [
+          140,
+          0.16,
+          -163.995
+        ],
+        "distance_to_radius_m": 779.0821182787546
+      },
+      "immediate_guidance_lower_bound_seconds": 327.3454278482162
+    },
+    {
+      "code": "EXHIBITION_17",
+      "place_id": "city_v002_festival_info",
+      "worst": {
+        "node_id": "B55_ACCESS",
+        "point": [
+          140,
+          0.16,
+          -163.995
+        ],
+        "distance_to_radius_m": 809.3990438295058
+      },
+      "immediate_guidance_lower_bound_seconds": 340.0836318611369
+    },
+    {
+      "code": "EXHIBITION_18",
+      "place_id": "city_v002_park_cat",
+      "worst": {
+        "node_id": "B55_ACCESS",
+        "point": [
+          140,
+          0.16,
+          -163.995
+        ],
+        "distance_to_radius_m": 879.8971934190538
+      },
+      "immediate_guidance_lower_bound_seconds": 369.7047031172495
+    },
+    {
+      "code": "EXHIBITION_22",
+      "place_id": "C04_ACCESS",
+      "worst": {
+        "node_id": "B55_ACCESS",
+        "point": [
+          140,
+          0.16,
+          -163.995
+        ],
+        "distance_to_radius_m": 887.4167019644743
+      },
+      "immediate_guidance_lower_bound_seconds": 372.8641604892749
+    },
+    {
+      "code": "EXHIBITION_28",
+      "place_id": "city_v002_road_control",
+      "worst": {
+        "node_id": "B55_ACCESS",
+        "point": [
+          140,
+          0.16,
+          -163.995
+        ],
+        "distance_to_radius_m": 709.2218985218989
+      },
+      "immediate_guidance_lower_bound_seconds": 297.9923943369323
+    },
+    {
+      "code": "EXHIBITION_30",
+      "place_id": "city_v002_mystery_crate",
+      "worst": {
+        "node_id": "B55_ACCESS",
+        "point": [
+          140,
+          0.16,
+          -163.995
+        ],
+        "distance_to_radius_m": 803.8975817906785
+      },
+      "immediate_guidance_lower_bound_seconds": 337.7720931893607
+    }
+  ],
+  "limitations": [
+    "No Unity or browser claim; graph node coverage is not continuous edge coverage.",
+    "A stationary NPC or no remaining eligible situations cannot guarantee a new arrival.",
+    "Already-inside places require an exit and re-entry; these lower bounds omit that extra travel.",
+    "60s guidance starts from the actual pose at that time, not from every audited node at join."
+  ]
+}

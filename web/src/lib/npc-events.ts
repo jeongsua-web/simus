@@ -4,7 +4,8 @@ import { ApiError, transaction } from "./api";
 import { isV002MapVersion, routeBetween, pathLength } from "./city-v002-graph.mjs";
 import { guidanceMotion, guidancePosition, resumedNpc, returnMotion, type ReturnMotion } from "./npc-graph-motion";
 import { npcPosition, type Npc } from "@/app/participate/npc-motion";
-import { parseEventLocation, type EventLocation } from "./event-locations";
+import { normalizeEventLocation, type EventLocation } from "./event-locations";
+import { playableLocation } from "./city-v002-event-mapping.mjs";
 import { scanPlace } from "./npc-place-trajectory";
 
 type Point = number[];
@@ -99,8 +100,10 @@ function transitionFor(world: World, p: Member): Transition | null {
   const places = new Map<string, EventLocation>();
   for (const situation of world.situations) {
     try {
-      const location = parseEventLocation(situation.event_location);
-      if (location.map_version === p.npc_motion.map_version) places.set(location.place_id, location);
+      const location = normalizeEventLocation(situation.event_location);
+      situation.event_location = location;
+      if (location.map_version === p.npc_motion.map_version && playableLocation(situation.code, location))
+        places.set(location.place_id, location);
     } catch { /* Legacy unplaced content remains inactive until explicitly mapped. */ }
   }
   const until = p.active ? Math.min(now, timestamp(p.active.started_at)) : now;
@@ -238,7 +241,7 @@ export async function advanceEvent(db: PoolClient, sid: string, pid: string) {
   return {
     phase: !open ? "CLOSED" : event ? "ACTIVE" : p.guidance_point ? "GUIDING" : "WAITING",
     server_time: new Date(session.now).toISOString(), waiting_since: new Date(p.waiting_since).toISOString(),
-    deadline_at: new Date(timestamp(p.waiting_since) + 90000).toISOString(), event,
+    deadline_at: null, guidance_at: new Date(timestamp(p.waiting_since) + 60000).toISOString(), event,
     overdue_since: p.overdue_since?.toISOString() ?? null, overdue: p.overdue_since !== null,
   };
 }
