@@ -33,6 +33,8 @@
 - [시연·배포 가이드](operations/demo-deployment.md)
 - [Phase 2-B — Unity WebGL 산출물·버전·해시 검증](operations/unity-webgl-artifacts.md)
 - [Phase 2-C — Docker·GHCR·EC2 실행](operations/docker-ghcr-ec2.md)
+- [새 서버의 SSH 운영자용 관리자 인증 설정](operations/self-managed-admin-auth.md)
+- [EC2 퍼블릭 IP의 HTTPS 설정과 이전 기록](operations/ec2-ip-https.md)
 - [웹 운영 화면](../web/OPERATIONS.md)
 
 ## 검증과 Unity 자산
