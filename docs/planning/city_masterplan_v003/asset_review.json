@@ -1,0 +1,2342 @@
+{
+  "VILLA_03_CORNER_MIXED": {
+    "key": "VILLA_03_CORNER_MIXED",
+    "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_03_CORNER_MIXED.fbx",
+    "dimensions": [
+      18.546,
+      11.896,
+      19.42
+    ],
+    "bounds": {
+      "min": [
+        -9.273,
+        -9.71,
+        0.0
+      ],
+      "max": [
+        9.273,
+        9.71,
+        11.896
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "a035520c65fb1adbae7e7cb79720bffdafde936e9595f2e8ed50f3a2af4e9c1b",
+    "hash_matches_measurement": true,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "VILLA_02_STONE_MODERN": {
+    "key": "VILLA_02_STONE_MODERN",
+    "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_02_STONE_MODERN.fbx",
+    "dimensions": [
+      21.414,
+      14.528,
+      18.668
+    ],
+    "bounds": {
+      "min": [
+        -10.707,
+        -9.334,
+        0.0
+      ],
+      "max": [
+        10.707,
+        9.334,
+        14.528
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "b6dc05e3f4b6764d0059f386e83cd23883b149f15a52fbecb4a2e1ae6322af76",
+    "hash_matches_measurement": true,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "VILLA_01_PILOTI_BRICK": {
+    "key": "VILLA_01_PILOTI_BRICK",
+    "path": "unity/Assets/SIMUS/Art/buildings/villas/VILLA_01_PILOTI_BRICK.fbx",
+    "dimensions": [
+      20.474,
+      17.291,
+      16.788
+    ],
+    "bounds": {
+      "min": [
+        -10.237,
+        -8.394,
+        0.0
+      ],
+      "max": [
+        10.237,
+        8.394,
+        17.291
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "65601c83435281e1b1bf4851b3ed65d1e8f1b50c7f82bfaf0c772c8b275ff5a1",
+    "hash_matches_measurement": true,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "SIMUS_Apartment_Complex": {
+    "key": "SIMUS_Apartment_Complex",
+    "path": "unity/Assets/SIMUS/Art/buildings/apartment_complex_v001/SIMUS_Apartment_Complex.fbx",
+    "dimensions": [
+      2000.0,
+      51.19,
+      2000.0
+    ],
+    "bounds": {
+      "min": [
+        -1000.0,
+        -1000.0,
+        -1.3
+      ],
+      "max": [
+        1000.0,
+        1000.0,
+        49.89
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "1d752a87ba6689a03c0b323bb02f42570aaf3c48cfa2399b55ab175501aaf711",
+    "hash_matches_measurement": true,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "HOUSE_03_NARROW_HOUSE": {
+    "key": "HOUSE_03_NARROW_HOUSE",
+    "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_03_NARROW_HOUSE.fbx",
+    "dimensions": [
+      11.45,
+      9.605,
+      13.084
+    ],
+    "bounds": {
+      "min": [
+        -5.725,
+        -6.542,
+        0.0
+      ],
+      "max": [
+        5.725,
+        6.542,
+        9.605
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "e39bcb769d024c20a5be16a32707344a82c042b05a06f7235115b9e72a672dfa",
+    "hash_matches_measurement": true,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "HOUSE_01_URBAN_MODERN": {
+    "key": "HOUSE_01_URBAN_MODERN",
+    "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_01_URBAN_MODERN.fbx",
+    "dimensions": [
+      11.45,
+      9.755,
+      15.4
+    ],
+    "bounds": {
+      "min": [
+        -5.725,
+        -7.7,
+        0.0
+      ],
+      "max": [
+        5.725,
+        7.7,
+        9.755
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "40f37e299f6a047facc69973de312c8c7566a92ff6be2430a0d547a3426160eb",
+    "hash_matches_measurement": true,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "HOUSE_02_OLD_BRICK": {
+    "key": "HOUSE_02_OLD_BRICK",
+    "path": "unity/Assets/SIMUS/Art/buildings/houses/HOUSE_02_OLD_BRICK.fbx",
+    "dimensions": [
+      13.75,
+      7.571,
+      15.59
+    ],
+    "bounds": {
+      "min": [
+        -6.875,
+        -7.795,
+        0.0
+      ],
+      "max": [
+        6.875,
+        7.795,
+        7.571
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "66c9f21a9c087cdbdd224c2387eee85ffbe7b154b22d23573eb244035e61aabe",
+    "hash_matches_measurement": true,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "Campus": {
+    "key": "Campus",
+    "path": "unity/Assets/SIMUS/Art/buildings/campus/Campus.fbx",
+    "dimensions": [
+      156.24,
+      22.02,
+      212.186
+    ],
+    "bounds": {
+      "min": [
+        -78.12,
+        -106.093,
+        -2.796
+      ],
+      "max": [
+        78.12,
+        106.093,
+        19.224
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "a424e0e33dcc7d3a2d0a3da918d064414bbf141f3f9c4e9da803a8f2c80f5d96",
+    "hash_matches_measurement": true,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "COMMERCIAL_01_OLD_MULTI_TENANT": {
+    "key": "COMMERCIAL_01_OLD_MULTI_TENANT",
+    "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_01_OLD_MULTI_TENANT.fbx",
+    "dimensions": [
+      12.6,
+      16.488,
+      17.1
+    ],
+    "bounds": {
+      "min": [
+        -6.3,
+        -8.55,
+        0.0
+      ],
+      "max": [
+        6.3,
+        8.55,
+        16.488
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "dc4e0d842bd4e0e1ca224ab42ddda094c9c1fc81b7d9bc6a8e8add8de98aac06",
+    "hash_matches_measurement": true,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "COMMERCIAL_03_MODERN_CORNER": {
+    "key": "COMMERCIAL_03_MODERN_CORNER",
+    "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_03_MODERN_CORNER.fbx",
+    "dimensions": [
+      14.4,
+      13.878,
+      18.0
+    ],
+    "bounds": {
+      "min": [
+        -7.2,
+        -9.0,
+        0.0
+      ],
+      "max": [
+        7.2,
+        9.0,
+        13.878
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "30ddd89e46c9134b96ec9de93850584f825a2d0b9894469bd797c261cfd9ec93",
+    "hash_matches_measurement": true,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "COMMERCIAL_02_NEIGHBORHOOD_CENTER": {
+    "key": "COMMERCIAL_02_NEIGHBORHOOD_CENTER",
+    "path": "unity/Assets/SIMUS/Art/buildings/commercial/COMMERCIAL_02_NEIGHBORHOOD_CENTER.fbx",
+    "dimensions": [
+      20.25,
+      13.383,
+      19.8
+    ],
+    "bounds": {
+      "min": [
+        -10.125,
+        -9.9,
+        0.0
+      ],
+      "max": [
+        10.125,
+        9.9,
+        13.383
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "a62574005414ccb75b884b9da044f6833618ba40ddcaa526dae7914255165472",
+    "hash_matches_measurement": true,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "DEPARTMENT": {
+    "key": "DEPARTMENT",
+    "path": "unity/Assets/SIMUS/Art/buildings/department_store/DEPARTMENT.fbx",
+    "dimensions": [
+      24.41,
+      13.74,
+      18.8
+    ],
+    "bounds": {
+      "min": [
+        -12.205,
+        -9.4,
+        0.0
+      ],
+      "max": [
+        12.205,
+        9.4,
+        13.74
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "548356718cefd78fa5065fee83339bf3a02112b31827563b736ee4ad97a7f4e7",
+    "hash_matches_measurement": true,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "APARTMENT_C_MIDRISE": {
+    "key": "APARTMENT_C_MIDRISE",
+    "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_C_MIDRISE.fbx",
+    "dimensions": [
+      20.18,
+      37.6,
+      30.09
+    ],
+    "bounds": {
+      "min": [
+        -10.09,
+        -15.045,
+        0.0
+      ],
+      "max": [
+        10.09,
+        15.045,
+        37.6
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "dc42968bec87d27fa922ef5535d23902b127594186a94ec442a8d1cdd0859816",
+    "hash_matches_measurement": true,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "APARTMENT_A_MIDRISE": {
+    "key": "APARTMENT_A_MIDRISE",
+    "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_A_MIDRISE.fbx",
+    "dimensions": [
+      14.94,
+      43.48,
+      34.18
+    ],
+    "bounds": {
+      "min": [
+        -7.47,
+        -17.09,
+        0.0
+      ],
+      "max": [
+        7.47,
+        17.09,
+        43.48
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "12537f53d5defe04a4c93cd8395780f759a205b1358b41950fc9dc9f450040e5",
+    "hash_matches_measurement": true,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "APARTMENT_B_MIDRISE": {
+    "key": "APARTMENT_B_MIDRISE",
+    "path": "unity/Assets/SIMUS/Art/buildings/apartments/APARTMENT_B_MIDRISE.fbx",
+    "dimensions": [
+      22.18,
+      49.6,
+      22.89
+    ],
+    "bounds": {
+      "min": [
+        -11.09,
+        -11.445,
+        0.0
+      ],
+      "max": [
+        11.09,
+        11.445,
+        49.6
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "cd0386c38331d5c7c515d0916fa160eb83ec59fda4f2cbc4b2c5ac2148e682c6",
+    "hash_matches_measurement": true,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "City_Infrastructure": {
+    "key": "City_Infrastructure",
+    "path": "unity/Assets/SIMUS/Art/roads/city_infrastructure/City_Infrastructure.fbx",
+    "dimensions": [
+      386.25,
+      0.496,
+      317.25
+    ],
+    "bounds": {
+      "min": [
+        -187.75,
+        -158.25,
+        -0.16
+      ],
+      "max": [
+        198.5,
+        159.0,
+        0.336
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "f1f8fcdcdb2987869e766bde19b6305b26f7a34f6d3d121ba093d4849f2cac4e",
+    "hash_matches_measurement": true,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "SIMUS_Dense_Realistic_University_Map_03": {
+    "key": "SIMUS_Dense_Realistic_University_Map_03",
+    "path": "unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Dense_Realistic_University_Map_03.fbx",
+    "dimensions": [
+      595.0,
+      84.46,
+      575.0
+    ],
+    "bounds": {
+      "min": [
+        -310.0,
+        -285.0,
+        -34.8
+      ],
+      "max": [
+        285.0,
+        290.0,
+        49.66
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "464f334610cd28c760219742a10d3d239069185b4f9e9786daa1c14d75ac4c1c",
+    "hash_matches_measurement": false,
+    "registered_key": "university_v003_environment_states",
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "SIMUS_Road_Corner_90": {
+    "key": "SIMUS_Road_Corner_90",
+    "path": "assets/library/roads/road_corner/source/SIMUS_Road_Corner_90.blend",
+    "dimensions": [
+      200.0,
+      0.45,
+      200.0
+    ],
+    "bounds": {
+      "min": [
+        -100.0,
+        -100.0,
+        -0.28
+      ],
+      "max": [
+        100.0,
+        100.0,
+        0.17
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "274116279eba377240888ff1508ecc2c4d9e99fa66960f65c47c4eef4a4f2d3c",
+    "hash_matches_measurement": null,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "SIMUS_Parking_Lot_16": {
+    "key": "SIMUS_Parking_Lot_16",
+    "path": "assets/library/roads/parking_lot/source/SIMUS_Parking_Lot_16.blend",
+    "dimensions": [
+      200.0,
+      0.45,
+      200.0
+    ],
+    "bounds": {
+      "min": [
+        -100.0,
+        -100.0,
+        -0.28
+      ],
+      "max": [
+        100.0,
+        100.0,
+        0.17
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "921060e2785b09d7181904e4fd8835c0b6f87935f4d98339507b3efce8680b20",
+    "hash_matches_measurement": null,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "SIMUS_Road_Straight_10m": {
+    "key": "SIMUS_Road_Straight_10m",
+    "path": "assets/library/roads/road_straight/source/SIMUS_Road_Straight_10m.blend",
+    "dimensions": [
+      200.0,
+      0.45,
+      200.0
+    ],
+    "bounds": {
+      "min": [
+        -100.0,
+        -100.0,
+        -0.28
+      ],
+      "max": [
+        100.0,
+        100.0,
+        0.17
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "c90f858e2c2394732b886456e1e353c56a2917fb90b0cd925788529ca66753ec",
+    "hash_matches_measurement": null,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "SIMUS_Road_Crossroad_15m": {
+    "key": "SIMUS_Road_Crossroad_15m",
+    "path": "assets/library/roads/road_crossroad/source/SIMUS_Road_Crossroad_15m.blend",
+    "dimensions": [
+      200.0,
+      0.45,
+      200.0
+    ],
+    "bounds": {
+      "min": [
+        -100.0,
+        -100.0,
+        -0.28
+      ],
+      "max": [
+        100.0,
+        100.0,
+        0.17
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "6fe77645e71a7aa2cf75d18411f13f12c39b7aa69ccc562c95a7b277f71c4c55",
+    "hash_matches_measurement": null,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "SIMUS_Modular_Character_Happiness_Animations": {
+    "key": "SIMUS_Modular_Character_Happiness_Animations",
+    "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Happiness_Animations.fbx",
+    "dimensions": [
+      7.091,
+      3.775,
+      0.475
+    ],
+    "bounds": {
+      "min": [
+        -0.545,
+        -0.204,
+        0.0
+      ],
+      "max": [
+        6.546,
+        0.271,
+        3.775
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "a81da78cc3eaf0b44e21ef322b046e5d27f9b3a9637829917929d93af2851fb3",
+    "hash_matches_measurement": true,
+    "registered_key": "modular_character_happiness_animations_v001",
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "COZY_NEIGHBORHOOD_PARK": {
+    "key": "COZY_NEIGHBORHOOD_PARK",
+    "path": "unity/Assets/SIMUS/Art/vegetation/parks/COZY_NEIGHBORHOOD_PARK.fbx",
+    "dimensions": [
+      12.0,
+      4.654,
+      12.0
+    ],
+    "bounds": {
+      "min": [
+        -6.0,
+        -6.0,
+        0.0
+      ],
+      "max": [
+        6.0,
+        6.0,
+        4.654
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "7b0290b9d91ba9eb771b4fb641ab843c81e6795d530693481135e341a55ad057",
+    "hash_matches_measurement": true,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "MODERN_MINIMAL_PARK": {
+    "key": "MODERN_MINIMAL_PARK",
+    "path": "unity/Assets/SIMUS/Art/vegetation/parks/MODERN_MINIMAL_PARK.fbx",
+    "dimensions": [
+      12.0,
+      3.831,
+      12.0
+    ],
+    "bounds": {
+      "min": [
+        -6.0,
+        -6.0,
+        0.0
+      ],
+      "max": [
+        6.0,
+        6.0,
+        3.831
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "310d3617f9e8ea83bc075f75ff54cfdb80a25e840fe66480e65040b863dd989e",
+    "hash_matches_measurement": true,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "ECO_RAIN_GARDEN": {
+    "key": "ECO_RAIN_GARDEN",
+    "path": "unity/Assets/SIMUS/Art/vegetation/parks/ECO_RAIN_GARDEN.fbx",
+    "dimensions": [
+      12.0,
+      3.731,
+      12.0
+    ],
+    "bounds": {
+      "min": [
+        -6.0,
+        -6.0,
+        0.0
+      ],
+      "max": [
+        6.0,
+        6.0,
+        3.731
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "48fb41ea01ff1437ebf5deaaeecc2287831b6a463cb43159be4ee1527996106b",
+    "hash_matches_measurement": true,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "POCKET_PLAY_PARK": {
+    "key": "POCKET_PLAY_PARK",
+    "path": "unity/Assets/SIMUS/Art/vegetation/parks/POCKET_PLAY_PARK.fbx",
+    "dimensions": [
+      12.0,
+      4.231,
+      12.0
+    ],
+    "bounds": {
+      "min": [
+        -6.0,
+        -6.0,
+        0.0
+      ],
+      "max": [
+        6.0,
+        6.0,
+        4.231
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "855460ddcf250fb9aa3a2371e424f3102dcf2a8cb9432404b92efd0545e00ccd",
+    "hash_matches_measurement": true,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "ZEN_GARDEN_PARK": {
+    "key": "ZEN_GARDEN_PARK",
+    "path": "unity/Assets/SIMUS/Art/vegetation/parks/ZEN_GARDEN_PARK.fbx",
+    "dimensions": [
+      12.0,
+      3.964,
+      12.0
+    ],
+    "bounds": {
+      "min": [
+        -6.0,
+        -6.0,
+        0.0
+      ],
+      "max": [
+        6.0,
+        6.0,
+        3.964
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "251cfd17d1c5aed8d2c4eedc657e38172090ec5175f62872eee06a871b18faf9",
+    "hash_matches_measurement": true,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "SIMUS_Street_Landscape_Collection": {
+    "key": "SIMUS_Street_Landscape_Collection",
+    "path": "assets/library/vegetation/street_landscape/source/SIMUS_Street_Landscape_Collection.blend",
+    "dimensions": [
+      200.0,
+      8.343,
+      200.0
+    ],
+    "bounds": {
+      "min": [
+        -100.0,
+        -100.0,
+        -0.12
+      ],
+      "max": [
+        100.0,
+        100.0,
+        8.223
+      ]
+    },
+    "evidence": "docs/planning/city_rebuild_v002/asset_measurements.json",
+    "exists": true,
+    "hash_current": "956d7c0a4fad5c1e152764c5dd09322ac620ad0603513e160fda78ad27b925d9",
+    "hash_matches_measurement": null,
+    "registered_key": null,
+    "verification": "Historical measured geometry; fresh file/hash check; not a live Unity walkability test"
+  },
+  "commercial_cafe_v001": {
+    "key": "commercial_cafe_v001",
+    "registered_key": "commercial_cafe_v001",
+    "path": "unity/Assets/SIMUS/Prefabs/buildings/commercial_cafe_v001/SIMUS_Commercial_Cafe.prefab",
+    "dimensions": [
+      14.4,
+      13.8779993,
+      17.9999981
+    ],
+    "bounds_min": [
+      -7.2,
+      -9.536743e-07,
+      -8.999999
+    ],
+    "evidence": "docs/placement/city-v002-event-analysis.json",
+    "exists": true,
+    "verification": "Historical Unity renderer bounds; source prefab present; floor/door access not certified"
+  },
+  "commercial_restaurant_v001": {
+    "key": "commercial_restaurant_v001",
+    "registered_key": "commercial_restaurant_v001",
+    "path": "unity/Assets/SIMUS/Prefabs/buildings/commercial_restaurant_v001/SIMUS_Commercial_Restaurant.prefab",
+    "dimensions": [
+      12.5999994,
+      16.487999,
+      17.0999985
+    ],
+    "bounds_min": [
+      -6.29999971,
+      -9.536743e-07,
+      -8.549999
+    ],
+    "evidence": "docs/placement/city-v002-event-analysis.json",
+    "exists": true,
+    "verification": "Historical Unity renderer bounds; source prefab present; floor/door access not certified"
+  },
+  "subway_entrance_v001": {
+    "key": "subway_entrance_v001",
+    "registered_key": "subway_entrance_v001",
+    "path": "unity/Assets/SIMUS/Prefabs/buildings/subway_entrance_v001/SIMUS_Subway_Entrance.prefab",
+    "dimensions": [
+      6.0,
+      7.299999,
+      14.4999962
+    ],
+    "bounds_min": [
+      -3.0,
+      -3.64999986,
+      -1.79999971
+    ],
+    "evidence": "docs/placement/city-v002-event-analysis.json",
+    "exists": true,
+    "verification": "Historical Unity renderer bounds; source prefab present; floor/door access not certified"
+  },
+  "crying_child_v001": {
+    "key": "crying_child_v001",
+    "registered_key": "crying_child_v001",
+    "path": "unity/Assets/SIMUS/Prefabs/characters/crying_child_v001/SIMUS_NPC_CryingChild.prefab",
+    "dimensions": [
+      0.627125,
+      1.34102869,
+      0.346946955
+    ],
+    "bounds_min": [
+      -0.3135625,
+      -0.06997812,
+      -0.163397461
+    ],
+    "evidence": "docs/placement/city-v002-event-analysis.json",
+    "exists": true,
+    "verification": "Historical Unity renderer bounds; source prefab present; floor/door access not certified"
+  },
+  "heavy_carrier_v001": {
+    "key": "heavy_carrier_v001",
+    "registered_key": "heavy_carrier_v001",
+    "path": "unity/Assets/SIMUS/Prefabs/characters/heavy_carrier_v001/SIMUS_NPC_HeavyCarrier.prefab",
+    "dimensions": [
+      0.8849262,
+      1.58538342,
+      1.701627
+    ],
+    "bounds_min": [
+      -0.442463,
+      -0.184079647,
+      -0.08931035
+    ],
+    "evidence": "docs/placement/city-v002-event-analysis.json",
+    "exists": true,
+    "verification": "Historical Unity renderer bounds; source prefab present; floor/door access not certified"
+  },
+  "city_bus_v001": {
+    "key": "city_bus_v001",
+    "registered_key": "city_bus_v001",
+    "path": "unity/Assets/SIMUS/Prefabs/props/city_bus_v001/SIMUS_City_Bus.prefab",
+    "dimensions": [
+      3.25,
+      3.35900068,
+      11.1
+    ],
+    "bounds_min": [
+      -1.62500024,
+      -8.34465e-07,
+      -5.535
+    ],
+    "evidence": "docs/placement/city-v002-event-analysis.json",
+    "exists": true,
+    "verification": "Historical Unity renderer bounds; source prefab present; floor/door access not certified"
+  },
+  "festival_booth_info_v001": {
+    "key": "festival_booth_info_v001",
+    "registered_key": "festival_booth_info_v001",
+    "path": "unity/Assets/SIMUS/Prefabs/props/festival_booth_v001/SIMUS_Festival_Booth_Base.prefab",
+    "dimensions": [
+      3.152,
+      2.89199972,
+      3.12349939
+    ],
+    "bounds_min": [
+      -1.57599986,
+      -1.1920929e-07,
+      -1.52600014
+    ],
+    "evidence": "docs/placement/city-v002-event-analysis.json",
+    "exists": true,
+    "verification": "Historical Unity renderer bounds; source prefab present; floor/door access not certified"
+  },
+  "heavy_box_v001": {
+    "key": "heavy_box_v001",
+    "registered_key": "heavy_box_v001",
+    "path": "unity/Assets/SIMUS/Prefabs/props/heavy_box_v001/SIMUS_Prop_HeavyBox.prefab",
+    "dimensions": [
+      0.7,
+      0.5213,
+      0.482600033
+    ],
+    "bounds_min": [
+      -0.35,
+      -0.26,
+      -0.2413
+    ],
+    "evidence": "docs/placement/city-v002-event-analysis.json",
+    "exists": true,
+    "verification": "Historical Unity renderer bounds; source prefab present; floor/door access not certified"
+  },
+  "mystery_crate_v001": {
+    "key": "mystery_crate_v001",
+    "registered_key": "mystery_crate_v001",
+    "path": "unity/Assets/SIMUS/Prefabs/props/mystery_crate_v001/SIMUS_MysteryCrate.prefab",
+    "dimensions": [
+      0.962620139,
+      0.668,
+      0.661999941
+    ],
+    "bounds_min": [
+      -0.48131004,
+      -2.98023224e-08,
+      -0.328000039
+    ],
+    "evidence": "docs/placement/city-v002-event-analysis.json",
+    "exists": true,
+    "verification": "Historical Unity renderer bounds; source prefab present; floor/door access not certified"
+  },
+  "public_toilet_v001": {
+    "key": "public_toilet_v001",
+    "registered_key": "public_toilet_v001",
+    "path": "unity/Assets/SIMUS/Prefabs/props/public_toilet_v001/SIMUS_Public_Toilet.prefab",
+    "dimensions": [
+      10.5,
+      3.52000022,
+      7.291648
+    ],
+    "bounds_min": [
+      -5.25,
+      -2.38418579e-07,
+      -2.291649
+    ],
+    "evidence": "docs/placement/city-v002-event-analysis.json",
+    "exists": true,
+    "verification": "Historical Unity renderer bounds; source prefab present; floor/door access not certified"
+  },
+  "recycle_station_v001": {
+    "key": "recycle_station_v001",
+    "registered_key": "recycle_station_v001",
+    "path": "unity/Assets/SIMUS/Prefabs/props/recycle_station_v001/SIMUS_Recycle_Station_Complete.prefab",
+    "dimensions": [
+      4.85,
+      2.540781,
+      2.56250381
+    ],
+    "bounds_min": [
+      -2.42500019,
+      -5.96046448e-07,
+      -1.20250344
+    ],
+    "evidence": "docs/placement/city-v002-event-analysis.json",
+    "exists": true,
+    "verification": "Historical Unity renderer bounds; source prefab present; floor/door access not certified"
+  },
+  "taxi_v001": {
+    "key": "taxi_v001",
+    "registered_key": "taxi_v001",
+    "path": "unity/Assets/SIMUS/Prefabs/props/taxi_v001/SIMUS_Taxi.prefab",
+    "dimensions": [
+      2.218,
+      1.63000035,
+      4.894
+    ],
+    "bounds_min": [
+      -1.10900009,
+      -4.172325e-07,
+      -2.4380002
+    ],
+    "evidence": "docs/placement/city-v002-event-analysis.json",
+    "exists": true,
+    "verification": "Historical Unity renderer bounds; source prefab present; floor/door access not certified"
+  },
+  "traffic_signal_pedestrian_v001": {
+    "key": "traffic_signal_pedestrian_v001",
+    "registered_key": "traffic_signal_pedestrian_v001",
+    "path": "unity/Assets/SIMUS/Prefabs/props/traffic_signal_pedestrian_v001/SIMUS_TrafficSignal_Pedestrian.prefab",
+    "dimensions": [
+      0.324,
+      2.94999981,
+      0.5599997
+    ],
+    "bounds_min": [
+      -0.162,
+      0.0,
+      -0.149999991
+    ],
+    "evidence": "docs/placement/city-v002-event-analysis.json",
+    "exists": true,
+    "verification": "Historical Unity renderer bounds; source prefab present; floor/door access not certified"
+  },
+  "traffic_signal_vehicle_v001": {
+    "key": "traffic_signal_vehicle_v001",
+    "registered_key": "traffic_signal_vehicle_v001",
+    "path": "unity/Assets/SIMUS/Prefabs/props/traffic_signal_vehicle_v001/SIMUS_TrafficSignal_Vehicle.prefab",
+    "dimensions": [
+      4.00999975,
+      5.92999935,
+      0.499999344
+    ],
+    "bounds_min": [
+      -3.8,
+      0.0,
+      -0.209999979
+    ],
+    "evidence": "docs/placement/city-v002-event-analysis.json",
+    "exists": true,
+    "verification": "Historical Unity renderer bounds; source prefab present; floor/door access not certified"
+  },
+  "outdoor_parking_complete_v001": {
+    "key": "outdoor_parking_complete_v001",
+    "registered_key": "outdoor_parking_complete_v001",
+    "path": "unity/Assets/SIMUS/Prefabs/roads/outdoor_parking_v001/SIMUS_Outdoor_ParkingLot_Complete.prefab",
+    "dimensions": [
+      29.9999981,
+      6.18724775,
+      24.0
+    ],
+    "bounds_min": [
+      -14.999999,
+      -0.259997845,
+      0.0
+    ],
+    "evidence": "docs/placement/city-v002-event-analysis.json",
+    "exists": true,
+    "verification": "Historical Unity renderer bounds; source prefab present; floor/door access not certified"
+  },
+  "building_department_store_v2": {
+    "key": "building_department_store_v2",
+    "registered_key": "building_department_store_v2",
+    "path": "unity/Assets/department_store_v2/SIMUS_Department_Store_v2.glb",
+    "dimensions": [
+      24.40999984741211,
+      13.739999949932098,
+      18.800000190734863
+    ],
+    "bounds_min": [
+      -12.210000038146973,
+      0.0,
+      -8.199999809265137
+    ],
+    "evidence": "fresh read of GLB node transforms and POSITION accessor min/max",
+    "exists": true,
+    "hash_current": "c7b500d3e4f3fd09b38bafa0849db5be82913ae5a314aa1605db9e2e6e39c96d",
+    "verification": "Current GLB world AABB; no scene placement or doorway traversal test"
+  },
+  "candidate_building_plot_simus_building_plot_30x24": {
+    "key": "candidate_building_plot_simus_building_plot_30x24",
+    "registered_key": "candidate_building_plot_simus_building_plot_30x24",
+    "path": "assets/library/buildings/building_plot/exports/SIMUS_Building_Plot_30x24.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_convenience_store_simus_convenience_store": {
+    "key": "candidate_convenience_store_simus_convenience_store",
+    "registered_key": "candidate_convenience_store_simus_convenience_store",
+    "path": "assets/library/buildings/convenience_store/exports/SIMUS_Convenience_Store.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_department_store_simus_department_store": {
+    "key": "candidate_department_store_simus_department_store",
+    "registered_key": "candidate_department_store_simus_department_store",
+    "path": "assets/library/buildings/department_store/exports/SIMUS_Department_Store.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_korean_guide_signs_simus_kguide_boundary": {
+    "key": "candidate_korean_guide_signs_simus_kguide_boundary",
+    "registered_key": "candidate_korean_guide_signs_simus_kguide_boundary",
+    "path": "assets/library/props/korean_guide_signs/exports/SIMUS_KGuide_Boundary.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_korean_guide_signs_simus_kguide_direction": {
+    "key": "candidate_korean_guide_signs_simus_kguide_direction",
+    "registered_key": "candidate_korean_guide_signs_simus_kguide_direction",
+    "path": "assets/library/props/korean_guide_signs/exports/SIMUS_KGuide_Direction.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_korean_guide_signs_simus_kguide_distance": {
+    "key": "candidate_korean_guide_signs_simus_kguide_distance",
+    "registered_key": "candidate_korean_guide_signs_simus_kguide_distance",
+    "path": "assets/library/props/korean_guide_signs/exports/SIMUS_KGuide_Distance.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_korean_guide_signs_simus_kguide_gantry": {
+    "key": "candidate_korean_guide_signs_simus_kguide_gantry",
+    "registered_key": "candidate_korean_guide_signs_simus_kguide_gantry",
+    "path": "assets/library/props/korean_guide_signs/exports/SIMUS_KGuide_Gantry.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_korean_guide_signs_simus_kguide_junction": {
+    "key": "candidate_korean_guide_signs_simus_kguide_junction",
+    "registered_key": "candidate_korean_guide_signs_simus_kguide_junction",
+    "path": "assets/library/props/korean_guide_signs/exports/SIMUS_KGuide_Junction.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_road_signs_simus_sign_crosswalk": {
+    "key": "candidate_road_signs_simus_sign_crosswalk",
+    "registered_key": "candidate_road_signs_simus_sign_crosswalk",
+    "path": "assets/library/props/road_signs/exports/SIMUS_Sign_Crosswalk.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_road_signs_simus_sign_noentry": {
+    "key": "candidate_road_signs_simus_sign_noentry",
+    "registered_key": "candidate_road_signs_simus_sign_noentry",
+    "path": "assets/library/props/road_signs/exports/SIMUS_Sign_NoEntry.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_road_signs_simus_sign_oneway": {
+    "key": "candidate_road_signs_simus_sign_oneway",
+    "registered_key": "candidate_road_signs_simus_sign_oneway",
+    "path": "assets/library/props/road_signs/exports/SIMUS_Sign_OneWay.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_road_signs_simus_sign_parking": {
+    "key": "candidate_road_signs_simus_sign_parking",
+    "registered_key": "candidate_road_signs_simus_sign_parking",
+    "path": "assets/library/props/road_signs/exports/SIMUS_Sign_Parking.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_road_signs_simus_sign_speed30": {
+    "key": "candidate_road_signs_simus_sign_speed30",
+    "registered_key": "candidate_road_signs_simus_sign_speed30",
+    "path": "assets/library/props/road_signs/exports/SIMUS_Sign_Speed30.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_road_signs_simus_sign_stop": {
+    "key": "candidate_road_signs_simus_sign_stop",
+    "registered_key": "candidate_road_signs_simus_sign_stop",
+    "path": "assets/library/props/road_signs/exports/SIMUS_Sign_Stop.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_streetlight_simus_streetlight_6m": {
+    "key": "candidate_streetlight_simus_streetlight_6m",
+    "registered_key": "candidate_streetlight_simus_streetlight_6m",
+    "path": "assets/library/props/streetlight/exports/SIMUS_Streetlight_6m.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_traffic_light_simus_traffic_light_amber": {
+    "key": "candidate_traffic_light_simus_traffic_light_amber",
+    "registered_key": "candidate_traffic_light_simus_traffic_light_amber",
+    "path": "assets/library/props/traffic_light/exports/SIMUS_Traffic_Light_Amber.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_traffic_light_simus_traffic_light_green": {
+    "key": "candidate_traffic_light_simus_traffic_light_green",
+    "registered_key": "candidate_traffic_light_simus_traffic_light_green",
+    "path": "assets/library/props/traffic_light/exports/SIMUS_Traffic_Light_Green.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_traffic_light_simus_traffic_light_red": {
+    "key": "candidate_traffic_light_simus_traffic_light_red",
+    "registered_key": "candidate_traffic_light_simus_traffic_light_red",
+    "path": "assets/library/props/traffic_light/exports/SIMUS_Traffic_Light_Red.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_parking_lot_simus_parking_lot_16": {
+    "key": "candidate_parking_lot_simus_parking_lot_16",
+    "registered_key": "candidate_parking_lot_simus_parking_lot_16",
+    "path": "assets/library/roads/parking_lot/exports/SIMUS_Parking_Lot_16.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_road_corner_simus_road_corner_90": {
+    "key": "candidate_road_corner_simus_road_corner_90",
+    "registered_key": "candidate_road_corner_simus_road_corner_90",
+    "path": "assets/library/roads/road_corner/exports/SIMUS_Road_Corner_90.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_road_crossroad_simus_road_crossroad_15m": {
+    "key": "candidate_road_crossroad_simus_road_crossroad_15m",
+    "registered_key": "candidate_road_crossroad_simus_road_crossroad_15m",
+    "path": "assets/library/roads/road_crossroad/exports/SIMUS_Road_Crossroad_15m.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_road_straight_simus_road_straight_10m": {
+    "key": "candidate_road_straight_simus_road_straight_10m",
+    "registered_key": "candidate_road_straight_simus_road_straight_10m",
+    "path": "assets/library/roads/road_straight/exports/SIMUS_Road_Straight_10m.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_street_landscape_simus_bench": {
+    "key": "candidate_street_landscape_simus_bench",
+    "registered_key": "candidate_street_landscape_simus_bench",
+    "path": "assets/library/vegetation/street_landscape/exports/SIMUS_Bench.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_street_landscape_simus_cherry": {
+    "key": "candidate_street_landscape_simus_cherry",
+    "registered_key": "candidate_street_landscape_simus_cherry",
+    "path": "assets/library/vegetation/street_landscape/exports/SIMUS_Cherry.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_street_landscape_simus_flowerbed": {
+    "key": "candidate_street_landscape_simus_flowerbed",
+    "registered_key": "candidate_street_landscape_simus_flowerbed",
+    "path": "assets/library/vegetation/street_landscape/exports/SIMUS_Flowerbed.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_street_landscape_simus_fringetree": {
+    "key": "candidate_street_landscape_simus_fringetree",
+    "registered_key": "candidate_street_landscape_simus_fringetree",
+    "path": "assets/library/vegetation/street_landscape/exports/SIMUS_FringeTree.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_street_landscape_simus_ginkgo_autumn": {
+    "key": "candidate_street_landscape_simus_ginkgo_autumn",
+    "registered_key": "candidate_street_landscape_simus_ginkgo_autumn",
+    "path": "assets/library/vegetation/street_landscape/exports/SIMUS_Ginkgo_Autumn.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_street_landscape_simus_ginkgo_green": {
+    "key": "candidate_street_landscape_simus_ginkgo_green",
+    "registered_key": "candidate_street_landscape_simus_ginkgo_green",
+    "path": "assets/library/vegetation/street_landscape/exports/SIMUS_Ginkgo_Green.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_street_landscape_simus_metasequoia": {
+    "key": "candidate_street_landscape_simus_metasequoia",
+    "registered_key": "candidate_street_landscape_simus_metasequoia",
+    "path": "assets/library/vegetation/street_landscape/exports/SIMUS_Metasequoia.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_street_landscape_simus_trashbin": {
+    "key": "candidate_street_landscape_simus_trashbin",
+    "registered_key": "candidate_street_landscape_simus_trashbin",
+    "path": "assets/library/vegetation/street_landscape/exports/SIMUS_TrashBin.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "candidate_street_landscape_simus_zelkova": {
+    "key": "candidate_street_landscape_simus_zelkova",
+    "registered_key": "candidate_street_landscape_simus_zelkova",
+    "path": "assets/library/vegetation/street_landscape/exports/SIMUS_Zelkova.glb",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "university_v003_environment_states": {
+    "key": "university_v003_environment_states",
+    "registered_key": "university_v003_environment_states",
+    "path": "unity/Assets/SIMUS/Art/maps/university_v003/SIMUS_Dense_Realistic_University_Map_03.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "npc_role_police_v001": {
+    "key": "npc_role_police_v001",
+    "registered_key": "npc_role_police_v001",
+    "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/models/SIMUS_NPC_Police.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "npc_role_cleaner_v001": {
+    "key": "npc_role_cleaner_v001",
+    "registered_key": "npc_role_cleaner_v001",
+    "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/models/SIMUS_NPC_Cleaner.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "npc_role_criminal_v001": {
+    "key": "npc_role_criminal_v001",
+    "registered_key": "npc_role_criminal_v001",
+    "path": "unity/Assets/SIMUS/Art/characters/role_variants_v001/models/SIMUS_NPC_Criminal.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "modular_character_happiness_animations_v001": {
+    "key": "modular_character_happiness_animations_v001",
+    "registered_key": "modular_character_happiness_animations_v001",
+    "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Happiness_Animations.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_portrait_npc_01": {
+    "key": "citizen_portrait_npc_01",
+    "registered_key": "citizen_portrait_npc_01",
+    "path": "web/public/characters/npc_01.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_portrait_npc_02": {
+    "key": "citizen_portrait_npc_02",
+    "registered_key": "citizen_portrait_npc_02",
+    "path": "web/public/characters/npc_02.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_portrait_npc_03": {
+    "key": "citizen_portrait_npc_03",
+    "registered_key": "citizen_portrait_npc_03",
+    "path": "web/public/characters/npc_03.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_portrait_npc_04": {
+    "key": "citizen_portrait_npc_04",
+    "registered_key": "citizen_portrait_npc_04",
+    "path": "web/public/characters/npc_04.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_portrait_npc_05": {
+    "key": "citizen_portrait_npc_05",
+    "registered_key": "citizen_portrait_npc_05",
+    "path": "web/public/characters/npc_05.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_portrait_npc_06": {
+    "key": "citizen_portrait_npc_06",
+    "registered_key": "citizen_portrait_npc_06",
+    "path": "web/public/characters/npc_06.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_portrait_npc_07": {
+    "key": "citizen_portrait_npc_07",
+    "registered_key": "citizen_portrait_npc_07",
+    "path": "web/public/characters/npc_07.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_portrait_npc_08": {
+    "key": "citizen_portrait_npc_08",
+    "registered_key": "citizen_portrait_npc_08",
+    "path": "web/public/characters/npc_08.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_portrait_npc_09": {
+    "key": "citizen_portrait_npc_09",
+    "registered_key": "citizen_portrait_npc_09",
+    "path": "web/public/characters/npc_09.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_portrait_npc_10": {
+    "key": "citizen_portrait_npc_10",
+    "registered_key": "citizen_portrait_npc_10",
+    "path": "web/public/characters/npc_10.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_portrait_npc_11": {
+    "key": "citizen_portrait_npc_11",
+    "registered_key": "citizen_portrait_npc_11",
+    "path": "web/public/characters/npc_11.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_portrait_npc_12": {
+    "key": "citizen_portrait_npc_12",
+    "registered_key": "citizen_portrait_npc_12",
+    "path": "web/public/characters/npc_12.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_portrait_npc_13": {
+    "key": "citizen_portrait_npc_13",
+    "registered_key": "citizen_portrait_npc_13",
+    "path": "web/public/characters/npc_13.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_portrait_npc_14": {
+    "key": "citizen_portrait_npc_14",
+    "registered_key": "citizen_portrait_npc_14",
+    "path": "web/public/characters/npc_14.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_portrait_npc_15": {
+    "key": "citizen_portrait_npc_15",
+    "registered_key": "citizen_portrait_npc_15",
+    "path": "web/public/characters/npc_15.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_portrait_npc_16": {
+    "key": "citizen_portrait_npc_16",
+    "registered_key": "citizen_portrait_npc_16",
+    "path": "web/public/characters/npc_16.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_01_none": {
+    "key": "citizen_custom_portrait_npc_01_none",
+    "registered_key": "citizen_custom_portrait_npc_01_none",
+    "path": "web/public/characters/custom/npc_01_none.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_01_square": {
+    "key": "citizen_custom_portrait_npc_01_square",
+    "registered_key": "citizen_custom_portrait_npc_01_square",
+    "path": "web/public/characters/custom/npc_01_square.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_01_round": {
+    "key": "citizen_custom_portrait_npc_01_round",
+    "registered_key": "citizen_custom_portrait_npc_01_round",
+    "path": "web/public/characters/custom/npc_01_round.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_02_none": {
+    "key": "citizen_custom_portrait_npc_02_none",
+    "registered_key": "citizen_custom_portrait_npc_02_none",
+    "path": "web/public/characters/custom/npc_02_none.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_02_square": {
+    "key": "citizen_custom_portrait_npc_02_square",
+    "registered_key": "citizen_custom_portrait_npc_02_square",
+    "path": "web/public/characters/custom/npc_02_square.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_02_round": {
+    "key": "citizen_custom_portrait_npc_02_round",
+    "registered_key": "citizen_custom_portrait_npc_02_round",
+    "path": "web/public/characters/custom/npc_02_round.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_03_none": {
+    "key": "citizen_custom_portrait_npc_03_none",
+    "registered_key": "citizen_custom_portrait_npc_03_none",
+    "path": "web/public/characters/custom/npc_03_none.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_03_square": {
+    "key": "citizen_custom_portrait_npc_03_square",
+    "registered_key": "citizen_custom_portrait_npc_03_square",
+    "path": "web/public/characters/custom/npc_03_square.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_03_round": {
+    "key": "citizen_custom_portrait_npc_03_round",
+    "registered_key": "citizen_custom_portrait_npc_03_round",
+    "path": "web/public/characters/custom/npc_03_round.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_04_none": {
+    "key": "citizen_custom_portrait_npc_04_none",
+    "registered_key": "citizen_custom_portrait_npc_04_none",
+    "path": "web/public/characters/custom/npc_04_none.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_04_square": {
+    "key": "citizen_custom_portrait_npc_04_square",
+    "registered_key": "citizen_custom_portrait_npc_04_square",
+    "path": "web/public/characters/custom/npc_04_square.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_04_round": {
+    "key": "citizen_custom_portrait_npc_04_round",
+    "registered_key": "citizen_custom_portrait_npc_04_round",
+    "path": "web/public/characters/custom/npc_04_round.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_05_none": {
+    "key": "citizen_custom_portrait_npc_05_none",
+    "registered_key": "citizen_custom_portrait_npc_05_none",
+    "path": "web/public/characters/custom/npc_05_none.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_05_square": {
+    "key": "citizen_custom_portrait_npc_05_square",
+    "registered_key": "citizen_custom_portrait_npc_05_square",
+    "path": "web/public/characters/custom/npc_05_square.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_05_round": {
+    "key": "citizen_custom_portrait_npc_05_round",
+    "registered_key": "citizen_custom_portrait_npc_05_round",
+    "path": "web/public/characters/custom/npc_05_round.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_06_none": {
+    "key": "citizen_custom_portrait_npc_06_none",
+    "registered_key": "citizen_custom_portrait_npc_06_none",
+    "path": "web/public/characters/custom/npc_06_none.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_06_square": {
+    "key": "citizen_custom_portrait_npc_06_square",
+    "registered_key": "citizen_custom_portrait_npc_06_square",
+    "path": "web/public/characters/custom/npc_06_square.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_06_round": {
+    "key": "citizen_custom_portrait_npc_06_round",
+    "registered_key": "citizen_custom_portrait_npc_06_round",
+    "path": "web/public/characters/custom/npc_06_round.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_07_none": {
+    "key": "citizen_custom_portrait_npc_07_none",
+    "registered_key": "citizen_custom_portrait_npc_07_none",
+    "path": "web/public/characters/custom/npc_07_none.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_07_square": {
+    "key": "citizen_custom_portrait_npc_07_square",
+    "registered_key": "citizen_custom_portrait_npc_07_square",
+    "path": "web/public/characters/custom/npc_07_square.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_07_round": {
+    "key": "citizen_custom_portrait_npc_07_round",
+    "registered_key": "citizen_custom_portrait_npc_07_round",
+    "path": "web/public/characters/custom/npc_07_round.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_08_none": {
+    "key": "citizen_custom_portrait_npc_08_none",
+    "registered_key": "citizen_custom_portrait_npc_08_none",
+    "path": "web/public/characters/custom/npc_08_none.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_08_square": {
+    "key": "citizen_custom_portrait_npc_08_square",
+    "registered_key": "citizen_custom_portrait_npc_08_square",
+    "path": "web/public/characters/custom/npc_08_square.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_08_round": {
+    "key": "citizen_custom_portrait_npc_08_round",
+    "registered_key": "citizen_custom_portrait_npc_08_round",
+    "path": "web/public/characters/custom/npc_08_round.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_09_none": {
+    "key": "citizen_custom_portrait_npc_09_none",
+    "registered_key": "citizen_custom_portrait_npc_09_none",
+    "path": "web/public/characters/custom/npc_09_none.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_09_square": {
+    "key": "citizen_custom_portrait_npc_09_square",
+    "registered_key": "citizen_custom_portrait_npc_09_square",
+    "path": "web/public/characters/custom/npc_09_square.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_09_round": {
+    "key": "citizen_custom_portrait_npc_09_round",
+    "registered_key": "citizen_custom_portrait_npc_09_round",
+    "path": "web/public/characters/custom/npc_09_round.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_10_none": {
+    "key": "citizen_custom_portrait_npc_10_none",
+    "registered_key": "citizen_custom_portrait_npc_10_none",
+    "path": "web/public/characters/custom/npc_10_none.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_10_square": {
+    "key": "citizen_custom_portrait_npc_10_square",
+    "registered_key": "citizen_custom_portrait_npc_10_square",
+    "path": "web/public/characters/custom/npc_10_square.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_10_round": {
+    "key": "citizen_custom_portrait_npc_10_round",
+    "registered_key": "citizen_custom_portrait_npc_10_round",
+    "path": "web/public/characters/custom/npc_10_round.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_11_none": {
+    "key": "citizen_custom_portrait_npc_11_none",
+    "registered_key": "citizen_custom_portrait_npc_11_none",
+    "path": "web/public/characters/custom/npc_11_none.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_11_square": {
+    "key": "citizen_custom_portrait_npc_11_square",
+    "registered_key": "citizen_custom_portrait_npc_11_square",
+    "path": "web/public/characters/custom/npc_11_square.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_11_round": {
+    "key": "citizen_custom_portrait_npc_11_round",
+    "registered_key": "citizen_custom_portrait_npc_11_round",
+    "path": "web/public/characters/custom/npc_11_round.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_12_none": {
+    "key": "citizen_custom_portrait_npc_12_none",
+    "registered_key": "citizen_custom_portrait_npc_12_none",
+    "path": "web/public/characters/custom/npc_12_none.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_12_square": {
+    "key": "citizen_custom_portrait_npc_12_square",
+    "registered_key": "citizen_custom_portrait_npc_12_square",
+    "path": "web/public/characters/custom/npc_12_square.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_12_round": {
+    "key": "citizen_custom_portrait_npc_12_round",
+    "registered_key": "citizen_custom_portrait_npc_12_round",
+    "path": "web/public/characters/custom/npc_12_round.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_13_none": {
+    "key": "citizen_custom_portrait_npc_13_none",
+    "registered_key": "citizen_custom_portrait_npc_13_none",
+    "path": "web/public/characters/custom/npc_13_none.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_13_square": {
+    "key": "citizen_custom_portrait_npc_13_square",
+    "registered_key": "citizen_custom_portrait_npc_13_square",
+    "path": "web/public/characters/custom/npc_13_square.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_13_round": {
+    "key": "citizen_custom_portrait_npc_13_round",
+    "registered_key": "citizen_custom_portrait_npc_13_round",
+    "path": "web/public/characters/custom/npc_13_round.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_14_none": {
+    "key": "citizen_custom_portrait_npc_14_none",
+    "registered_key": "citizen_custom_portrait_npc_14_none",
+    "path": "web/public/characters/custom/npc_14_none.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_14_square": {
+    "key": "citizen_custom_portrait_npc_14_square",
+    "registered_key": "citizen_custom_portrait_npc_14_square",
+    "path": "web/public/characters/custom/npc_14_square.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_14_round": {
+    "key": "citizen_custom_portrait_npc_14_round",
+    "registered_key": "citizen_custom_portrait_npc_14_round",
+    "path": "web/public/characters/custom/npc_14_round.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_15_none": {
+    "key": "citizen_custom_portrait_npc_15_none",
+    "registered_key": "citizen_custom_portrait_npc_15_none",
+    "path": "web/public/characters/custom/npc_15_none.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_15_square": {
+    "key": "citizen_custom_portrait_npc_15_square",
+    "registered_key": "citizen_custom_portrait_npc_15_square",
+    "path": "web/public/characters/custom/npc_15_square.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_15_round": {
+    "key": "citizen_custom_portrait_npc_15_round",
+    "registered_key": "citizen_custom_portrait_npc_15_round",
+    "path": "web/public/characters/custom/npc_15_round.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_16_none": {
+    "key": "citizen_custom_portrait_npc_16_none",
+    "registered_key": "citizen_custom_portrait_npc_16_none",
+    "path": "web/public/characters/custom/npc_16_none.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_16_square": {
+    "key": "citizen_custom_portrait_npc_16_square",
+    "registered_key": "citizen_custom_portrait_npc_16_square",
+    "path": "web/public/characters/custom/npc_16_square.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "citizen_custom_portrait_npc_16_round": {
+    "key": "citizen_custom_portrait_npc_16_round",
+    "registered_key": "citizen_custom_portrait_npc_16_round",
+    "path": "web/public/characters/custom/npc_16_round.png",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_hap_planter_healthy_01": {
+    "key": "city_state_hap_planter_healthy_01",
+    "registered_key": "city_state_hap_planter_healthy_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_PLANTER_HEALTHY_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_hap_planter_withered_01": {
+    "key": "city_state_hap_planter_withered_01",
+    "registered_key": "city_state_hap_planter_withered_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_PLANTER_WITHERED_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_pol_tree_healthy_01": {
+    "key": "city_state_pol_tree_healthy_01",
+    "registered_key": "city_state_pol_tree_healthy_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_TREE_HEALTHY_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_pol_tree_withered_01": {
+    "key": "city_state_pol_tree_withered_01",
+    "registered_key": "city_state_pol_tree_withered_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_TREE_WITHERED_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_saf_police_car_01": {
+    "key": "city_state_saf_police_car_01",
+    "registered_key": "city_state_saf_police_car_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_POLICE_CAR_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_saf_car_normal_01": {
+    "key": "city_state_saf_car_normal_01",
+    "registered_key": "city_state_saf_car_normal_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_CAR_NORMAL_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_cln_bin_normal_01": {
+    "key": "city_state_cln_bin_normal_01",
+    "registered_key": "city_state_cln_bin_normal_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_NORMAL_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_cln_garbage_bag_01": {
+    "key": "city_state_cln_garbage_bag_01",
+    "registered_key": "city_state_cln_garbage_bag_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GARBAGE_BAG_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_cln_cardboard_01": {
+    "key": "city_state_cln_cardboard_01",
+    "registered_key": "city_state_cln_cardboard_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_CARDBOARD_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_cln_trash_pile_small_01": {
+    "key": "city_state_cln_trash_pile_small_01",
+    "registered_key": "city_state_cln_trash_pile_small_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PILE_SMALL_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_cln_trash_pile_medium_01": {
+    "key": "city_state_cln_trash_pile_medium_01",
+    "registered_key": "city_state_cln_trash_pile_medium_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PILE_MEDIUM_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_cln_trash_pile_large_01": {
+    "key": "city_state_cln_trash_pile_large_01",
+    "registered_key": "city_state_cln_trash_pile_large_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PILE_LARGE_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_pol_rooftop_vent_01": {
+    "key": "city_state_pol_rooftop_vent_01",
+    "registered_key": "city_state_pol_rooftop_vent_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_ROOFTOP_VENT_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_saf_cctv_01": {
+    "key": "city_state_saf_cctv_01",
+    "registered_key": "city_state_saf_cctv_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_CCTV_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_saf_emergency_bell_01": {
+    "key": "city_state_saf_emergency_bell_01",
+    "registered_key": "city_state_saf_emergency_bell_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_EMERGENCY_BELL_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_hap_decor_lights_01": {
+    "key": "city_state_hap_decor_lights_01",
+    "registered_key": "city_state_hap_decor_lights_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_DECOR_LIGHTS_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_hap_flags_01": {
+    "key": "city_state_hap_flags_01",
+    "registered_key": "city_state_hap_flags_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_FLAGS_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_saf_bench_normal_01": {
+    "key": "city_state_saf_bench_normal_01",
+    "registered_key": "city_state_saf_bench_normal_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BENCH_NORMAL_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_saf_bench_broken_01": {
+    "key": "city_state_saf_bench_broken_01",
+    "registered_key": "city_state_saf_bench_broken_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BENCH_BROKEN_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_saf_fence_normal_01": {
+    "key": "city_state_saf_fence_normal_01",
+    "registered_key": "city_state_saf_fence_normal_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_FENCE_NORMAL_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_saf_fence_broken_01": {
+    "key": "city_state_saf_fence_broken_01",
+    "registered_key": "city_state_saf_fence_broken_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_FENCE_BROKEN_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_saf_lamp_normal_01": {
+    "key": "city_state_saf_lamp_normal_01",
+    "registered_key": "city_state_saf_lamp_normal_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_LAMP_NORMAL_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_saf_lamp_broken_01": {
+    "key": "city_state_saf_lamp_broken_01",
+    "registered_key": "city_state_saf_lamp_broken_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_LAMP_BROKEN_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_saf_fallen_bicycle_01": {
+    "key": "city_state_saf_fallen_bicycle_01",
+    "registered_key": "city_state_saf_fallen_bicycle_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_FALLEN_BICYCLE_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_pol_grass_healthy_01": {
+    "key": "city_state_pol_grass_healthy_01",
+    "registered_key": "city_state_pol_grass_healthy_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_GRASS_HEALTHY_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_pol_grass_brown_01": {
+    "key": "city_state_pol_grass_brown_01",
+    "registered_key": "city_state_pol_grass_brown_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_GRASS_BROWN_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_hap_planter_empty_01": {
+    "key": "city_state_hap_planter_empty_01",
+    "registered_key": "city_state_hap_planter_empty_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_PLANTER_EMPTY_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_hap_banner_active_01": {
+    "key": "city_state_hap_banner_active_01",
+    "registered_key": "city_state_hap_banner_active_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_BANNER_ACTIVE_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_hap_banner_faded_01": {
+    "key": "city_state_hap_banner_faded_01",
+    "registered_key": "city_state_hap_banner_faded_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_BANNER_FADED_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_hap_sign_closed_01": {
+    "key": "city_state_hap_sign_closed_01",
+    "registered_key": "city_state_hap_sign_closed_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_SIGN_CLOSED_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_hap_sign_temporary_closed_01": {
+    "key": "city_state_hap_sign_temporary_closed_01",
+    "registered_key": "city_state_hap_sign_temporary_closed_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/HAP_SIGN_TEMPORARY_CLOSED_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_saf_broken_glass_decal_01": {
+    "key": "city_state_saf_broken_glass_decal_01",
+    "registered_key": "city_state_saf_broken_glass_decal_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BROKEN_GLASS_DECAL_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_saf_broken_glass_decal_02": {
+    "key": "city_state_saf_broken_glass_decal_02",
+    "registered_key": "city_state_saf_broken_glass_decal_02",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BROKEN_GLASS_DECAL_02.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_saf_broken_glass_decal_03": {
+    "key": "city_state_saf_broken_glass_decal_03",
+    "registered_key": "city_state_saf_broken_glass_decal_03",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_BROKEN_GLASS_DECAL_03.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_cln_ground_stain_dust_01": {
+    "key": "city_state_cln_ground_stain_dust_01",
+    "registered_key": "city_state_cln_ground_stain_dust_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GROUND_STAIN_DUST_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_cln_ground_stain_dark_01": {
+    "key": "city_state_cln_ground_stain_dark_01",
+    "registered_key": "city_state_cln_ground_stain_dark_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GROUND_STAIN_DARK_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_cln_ground_stain_spill_01": {
+    "key": "city_state_cln_ground_stain_spill_01",
+    "registered_key": "city_state_cln_ground_stain_spill_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GROUND_STAIN_SPILL_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_cln_drain_stain_01": {
+    "key": "city_state_cln_drain_stain_01",
+    "registered_key": "city_state_cln_drain_stain_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_DRAIN_STAIN_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_saf_police_lightbar_01": {
+    "key": "city_state_saf_police_lightbar_01",
+    "registered_key": "city_state_saf_police_lightbar_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_POLICE_LIGHTBAR_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_saf_damaged_car_01": {
+    "key": "city_state_saf_damaged_car_01",
+    "registered_key": "city_state_saf_damaged_car_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_DAMAGED_CAR_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_saf_damaged_car_02": {
+    "key": "city_state_saf_damaged_car_02",
+    "registered_key": "city_state_saf_damaged_car_02",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_DAMAGED_CAR_02.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_cln_trash_paper_01": {
+    "key": "city_state_cln_trash_paper_01",
+    "registered_key": "city_state_cln_trash_paper_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PAPER_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_cln_trash_cup_01": {
+    "key": "city_state_cln_trash_cup_01",
+    "registered_key": "city_state_cln_trash_cup_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_CUP_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_cln_trash_bottle_01": {
+    "key": "city_state_cln_trash_bottle_01",
+    "registered_key": "city_state_cln_trash_bottle_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_BOTTLE_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_cln_trash_can_01": {
+    "key": "city_state_cln_trash_can_01",
+    "registered_key": "city_state_cln_trash_can_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_CAN_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_cln_trash_plastic_bag_01": {
+    "key": "city_state_cln_trash_plastic_bag_01",
+    "registered_key": "city_state_cln_trash_plastic_bag_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_PLASTIC_BAG_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_cln_trash_wrapper_01": {
+    "key": "city_state_cln_trash_wrapper_01",
+    "registered_key": "city_state_cln_trash_wrapper_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_TRASH_WRAPPER_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_cln_garbage_bag_02": {
+    "key": "city_state_cln_garbage_bag_02",
+    "registered_key": "city_state_cln_garbage_bag_02",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GARBAGE_BAG_02.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_cln_garbage_bag_group_01": {
+    "key": "city_state_cln_garbage_bag_group_01",
+    "registered_key": "city_state_cln_garbage_bag_group_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_GARBAGE_BAG_GROUP_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_cln_bin_half_01": {
+    "key": "city_state_cln_bin_half_01",
+    "registered_key": "city_state_cln_bin_half_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_HALF_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_cln_bin_overflow_01": {
+    "key": "city_state_cln_bin_overflow_01",
+    "registered_key": "city_state_cln_bin_overflow_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_OVERFLOW_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_cln_bin_spill_01": {
+    "key": "city_state_cln_bin_spill_01",
+    "registered_key": "city_state_cln_bin_spill_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/CLN_BIN_SPILL_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_pol_tree_dead_01": {
+    "key": "city_state_pol_tree_dead_01",
+    "registered_key": "city_state_pol_tree_dead_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/POL_TREE_DEAD_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_saf_graffiti_decal_01": {
+    "key": "city_state_saf_graffiti_decal_01",
+    "registered_key": "city_state_saf_graffiti_decal_01",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_GRAFFITI_DECAL_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_saf_graffiti_decal_02": {
+    "key": "city_state_saf_graffiti_decal_02",
+    "registered_key": "city_state_saf_graffiti_decal_02",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_GRAFFITI_DECAL_02.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_saf_graffiti_decal_03": {
+    "key": "city_state_saf_graffiti_decal_03",
+    "registered_key": "city_state_saf_graffiti_decal_03",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_GRAFFITI_DECAL_03.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "city_state_saf_graffiti_decal_04": {
+    "key": "city_state_saf_graffiti_decal_04",
+    "registered_key": "city_state_saf_graffiti_decal_04",
+    "path": "unity/Assets/SIMUS/Art/props/city_state_v001/models/SAF_GRAFFITI_DECAL_04.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "recycle_station_structure_v001": {
+    "key": "recycle_station_structure_v001",
+    "registered_key": "recycle_station_structure_v001",
+    "path": "unity/Assets/SIMUS/Art/props/recycle_station_v001/models/SIMUS_Recycle_Station_Structure.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "air_quality_monitoring_station_v001": {
+    "key": "air_quality_monitoring_station_v001",
+    "registered_key": "air_quality_monitoring_station_v001",
+    "path": "assets/library/props/air_quality_monitoring_station_v001/source/SIMUS_Air_Quality_Monitoring_Station.blend",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "fine_dust_indicator_light_v001": {
+    "key": "fine_dust_indicator_light_v001",
+    "registered_key": "fine_dust_indicator_light_v001",
+    "path": "assets/library/props/fine_dust_indicator_light_v001/source/SIMUS_Fine_Dust_Indicator_Light.blend",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "river_footbridge_v001": {
+    "key": "river_footbridge_v001",
+    "registered_key": "river_footbridge_v001",
+    "path": "assets/library/props/river_footbridge_v001/exports/RIVER_FOOTBRIDGE_NORTH_28_70.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "barricade_01_v001": {
+    "key": "barricade_01_v001",
+    "registered_key": "barricade_01_v001",
+    "path": "unity/Assets/SIMUS/Art/props/road_control_v001/models/SIMUS_Barricade_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "barricade_02_v001": {
+    "key": "barricade_02_v001",
+    "registered_key": "barricade_02_v001",
+    "path": "unity/Assets/SIMUS/Art/props/road_control_v001/models/SIMUS_Barricade_02.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "barricade_warning_light_v001": {
+    "key": "barricade_warning_light_v001",
+    "registered_key": "barricade_warning_light_v001",
+    "path": "unity/Assets/SIMUS/Art/props/road_control_v001/models/SIMUS_Barricade_WarningLight.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "cone_connector_v001": {
+    "key": "cone_connector_v001",
+    "registered_key": "cone_connector_v001",
+    "path": "unity/Assets/SIMUS/Art/props/road_control_v001/models/SIMUS_ConeConnector.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "traffic_cone_01_v001": {
+    "key": "traffic_cone_01_v001",
+    "registered_key": "traffic_cone_01_v001",
+    "path": "unity/Assets/SIMUS/Art/props/road_control_v001/models/SIMUS_TrafficCone_01.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "traffic_cone_02_v001": {
+    "key": "traffic_cone_02_v001",
+    "registered_key": "traffic_cone_02_v001",
+    "path": "unity/Assets/SIMUS/Art/props/road_control_v001/models/SIMUS_TrafficCone_02.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "traffic_cone_fallen_v001": {
+    "key": "traffic_cone_fallen_v001",
+    "registered_key": "traffic_cone_fallen_v001",
+    "path": "unity/Assets/SIMUS/Art/props/road_control_v001/models/SIMUS_TrafficCone_Fallen.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "traffic_cone_tilted_v001": {
+    "key": "traffic_cone_tilted_v001",
+    "registered_key": "traffic_cone_tilted_v001",
+    "path": "unity/Assets/SIMUS/Art/props/road_control_v001/models/SIMUS_TrafficCone_Tilted.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "festival_booth_base_v001": {
+    "key": "festival_booth_base_v001",
+    "registered_key": "festival_booth_base_v001",
+    "path": "unity/Assets/SIMUS/Art/props/festival_booth_v001/models/SIMUS_Festival_Booth_Base.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "festival_booth_food_v001": {
+    "key": "festival_booth_food_v001",
+    "registered_key": "festival_booth_food_v001",
+    "path": "unity/Assets/SIMUS/Art/props/festival_booth_v001/models/SIMUS_Festival_Booth_Food.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "festival_booth_game_v001": {
+    "key": "festival_booth_game_v001",
+    "registered_key": "festival_booth_game_v001",
+    "path": "unity/Assets/SIMUS/Art/props/festival_booth_v001/models/SIMUS_Festival_Booth_Game.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "parking_entrygate_v001": {
+    "key": "parking_entrygate_v001",
+    "registered_key": "parking_entrygate_v001",
+    "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_EntryGate.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "parking_exitgate_v001": {
+    "key": "parking_exitgate_v001",
+    "registered_key": "parking_exitgate_v001",
+    "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_ExitGate.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "parking_ticketmachine_v001": {
+    "key": "parking_ticketmachine_v001",
+    "registered_key": "parking_ticketmachine_v001",
+    "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_TicketMachine.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "parking_paymentmachine_v001": {
+    "key": "parking_paymentmachine_v001",
+    "registered_key": "parking_paymentmachine_v001",
+    "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_PaymentMachine.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "parkingspace_standard_v001": {
+    "key": "parkingspace_standard_v001",
+    "registered_key": "parkingspace_standard_v001",
+    "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_ParkingSpace_Standard.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "parkingspace_accessible_v001": {
+    "key": "parkingspace_accessible_v001",
+    "registered_key": "parkingspace_accessible_v001",
+    "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_ParkingSpace_Accessible.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "parkingspace_ev_v001": {
+    "key": "parkingspace_ev_v001",
+    "registered_key": "parkingspace_ev_v001",
+    "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_ParkingSpace_EV.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "parking_wheelstop_v001": {
+    "key": "parking_wheelstop_v001",
+    "registered_key": "parking_wheelstop_v001",
+    "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_WheelStop.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "parking_sign_v001": {
+    "key": "parking_sign_v001",
+    "registered_key": "parking_sign_v001",
+    "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_Sign.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "parking_evcharger_v001": {
+    "key": "parking_evcharger_v001",
+    "registered_key": "parking_evcharger_v001",
+    "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_EVCharger.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "parking_modularprops_v001": {
+    "key": "parking_modularprops_v001",
+    "registered_key": "parking_modularprops_v001",
+    "path": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Parking_ModularProps.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "tuxedo_cat_v001": {
+    "key": "tuxedo_cat_v001",
+    "registered_key": "tuxedo_cat_v001",
+    "path": "unity/Assets/SIMUS/Art/characters/tuxedo_cat_v001/models/SIMUS_Cat_Tuxedo.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  },
+  "prop_city_v002_phase8_street_kit_v001": {
+    "key": "prop_city_v002_phase8_street_kit_v001",
+    "registered_key": "prop_city_v002_phase8_street_kit_v001",
+    "path": "assets/library/props/city_v002_phase8_street_kit_v001/exports/phase8_street_kit.fbx",
+    "exists": true,
+    "verification": "manifest and actual file existence only; dimensions not measured"
+  }
+}

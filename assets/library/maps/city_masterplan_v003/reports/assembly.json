@@ -1,0 +1,907 @@
+{
+  "lod_groups": 62,
+  "coordinates": [
+    {
+      "id": "U00",
+      "found": true,
+      "position_error_m": 3.60548474E-05,
+      "actual": [
+        4.99999952,
+        3.02403259,
+        232.999985
+      ]
+    },
+    {
+      "id": "U01",
+      "found": true,
+      "position_error_m": 3.09623028E-05,
+      "actual": [
+        -12.0,
+        2.34002686,
+        194.999985
+      ]
+    },
+    {
+      "id": "U02",
+      "found": true,
+      "position_error_m": 2.49884961E-05,
+      "actual": [
+        17.0,
+        2.21401978,
+        187.999985
+      ]
+    },
+    {
+      "id": "U03",
+      "found": true,
+      "position_error_m": 3.6051697E-05,
+      "actual": [
+        62.0,
+        3.02403259,
+        232.999985
+      ]
+    },
+    {
+      "id": "U04",
+      "found": true,
+      "position_error_m": 2.470625E-05,
+      "actual": [
+        17.0,
+        1.54801941,
+        150.999985
+      ]
+    },
+    {
+      "id": "U05",
+      "found": true,
+      "position_error_m": 2.575031E-05,
+      "actual": [
+        42.0,
+        2.26802063,
+        190.999985
+      ]
+    },
+    {
+      "id": "U06",
+      "found": true,
+      "position_error_m": 2.472465E-05,
+      "actual": [
+        -9.999999,
+        1.54801941,
+        150.999985
+      ]
+    },
+    {
+      "id": "U07",
+      "found": true,
+      "position_error_m": 3.22147534E-05,
+      "actual": [
+        126.0,
+        2.75402832,
+        217.999985
+      ]
+    },
+    {
+      "id": "U08",
+      "found": true,
+      "position_error_m": 1.78686732E-05,
+      "actual": [
+        126.0,
+        1.87200928,
+        168.999985
+      ]
+    },
+    {
+      "id": "U09",
+      "found": true,
+      "position_error_m": 1.56369915E-05,
+      "actual": [
+        130.0,
+        0.8640137,
+        112.999992
+      ]
+    },
+    {
+      "id": "U10",
+      "found": true,
+      "position_error_m": 9.191493E-06,
+      "actual": [
+        83.0,
+        0.324005127,
+        82.99999
+      ]
+    },
+    {
+      "id": "U11",
+      "found": true,
+      "position_error_m": 3.586199E-05,
+      "actual": [
+        82.0,
+        2.160019,
+        184.999969
+      ]
+    },
+    {
+      "id": "U12",
+      "found": true,
+      "position_error_m": 2.02167848E-05,
+      "actual": [
+        4.99999952,
+        0.702018738,
+        103.999992
+      ]
+    },
+    {
+      "id": "U13",
+      "found": true,
+      "position_error_m": 1.00401985E-05,
+      "actual": [
+        -18.0,
+        0.252006531,
+        78.99999
+      ]
+    },
+    {
+      "id": "S01",
+      "found": true,
+      "position_error_m": 4.26496126E-06,
+      "actual": [
+        -41.7,
+        3.81469727E-06,
+        24.9999981
+      ]
+    },
+    {
+      "id": "S02",
+      "found": true,
+      "position_error_m": 4.26496126E-06,
+      "actual": [
+        -26.9,
+        3.81469727E-06,
+        24.9999981
+      ]
+    },
+    {
+      "id": "S03",
+      "found": true,
+      "position_error_m": 4.370285E-06,
+      "actual": [
+        -10.6999989,
+        3.81469727E-06,
+        24.9999981
+      ]
+    },
+    {
+      "id": "S04",
+      "found": true,
+      "position_error_m": 4.26496126E-06,
+      "actual": [
+        3.6,
+        3.81469727E-06,
+        24.9999981
+      ]
+    },
+    {
+      "id": "S05",
+      "found": true,
+      "position_error_m": 4.672031E-06,
+      "actual": [
+        18.3999977,
+        3.81469727E-06,
+        24.9999981
+      ]
+    },
+    {
+      "id": "S06",
+      "found": true,
+      "position_error_m": 5.722046E-06,
+      "actual": [
+        59.5749969,
+        3.81469727E-06,
+        24.9999981
+      ]
+    },
+    {
+      "id": "S07",
+      "found": true,
+      "position_error_m": 4.26496126E-06,
+      "actual": [
+        76.8,
+        3.81469727E-06,
+        24.9999981
+      ]
+    },
+    {
+      "id": "S08",
+      "found": true,
+      "position_error_m": 4.26496126E-06,
+      "actual": [
+        123.0,
+        3.81469727E-06,
+        24.9999981
+      ]
+    },
+    {
+      "id": "S09",
+      "found": true,
+      "position_error_m": 4.26496126E-06,
+      "actual": [
+        142.125,
+        3.81469727E-06,
+        24.9999981
+      ]
+    },
+    {
+      "id": "S10",
+      "found": true,
+      "position_error_m": 5.33120158E-07,
+      "actual": [
+        -41.7,
+        -4.76837158E-07,
+        -3.69999981
+      ]
+    },
+    {
+      "id": "S11",
+      "found": true,
+      "position_error_m": 5.33120158E-07,
+      "actual": [
+        -26.9,
+        -4.76837158E-07,
+        -3.69999981
+      ]
+    },
+    {
+      "id": "S12",
+      "found": true,
+      "position_error_m": 7.15255737E-07,
+      "actual": [
+        -7.77499962,
+        -4.76837158E-07,
+        -3.69999981
+      ]
+    },
+    {
+      "id": "S13",
+      "found": true,
+      "position_error_m": 5.33120158E-07,
+      "actual": [
+        9.45,
+        -4.76837158E-07,
+        -3.69999981
+      ]
+    },
+    {
+      "id": "S14",
+      "found": true,
+      "position_error_m": 5.33120158E-07,
+      "actual": [
+        24.25,
+        -4.76837158E-07,
+        -3.69999981
+      ]
+    },
+    {
+      "id": "S15",
+      "found": true,
+      "position_error_m": 5.33120158E-07,
+      "actual": [
+        53.95,
+        -4.76837158E-07,
+        -3.69999981
+      ]
+    },
+    {
+      "id": "S16",
+      "found": true,
+      "position_error_m": 7.647998E-06,
+      "actual": [
+        67.34999,
+        -4.76837158E-07,
+        -3.69999981
+      ]
+    },
+    {
+      "id": "S17",
+      "found": true,
+      "position_error_m": 5.33120158E-07,
+      "actual": [
+        82.15,
+        -4.76837158E-07,
+        -3.69999981
+      ]
+    },
+    {
+      "id": "S18",
+      "found": true,
+      "position_error_m": 7.647998E-06,
+      "actual": [
+        123.324989,
+        -4.76837158E-07,
+        -3.69999981
+      ]
+    },
+    {
+      "id": "S19",
+      "found": true,
+      "position_error_m": 5.33120158E-07,
+      "actual": [
+        140.55,
+        -4.76837158E-07,
+        -3.69999981
+      ]
+    },
+    {
+      "id": "S20",
+      "found": true,
+      "position_error_m": 5.33120158E-07,
+      "actual": [
+        155.35,
+        -4.76837158E-07,
+        -3.69999981
+      ]
+    },
+    {
+      "id": "H01",
+      "found": true,
+      "position_error_m": 5.39479652E-06,
+      "actual": [
+        -41.275,
+        -3.81469727E-06,
+        -41.9999962
+      ]
+    },
+    {
+      "id": "H02",
+      "found": true,
+      "position_error_m": 5.39479652E-06,
+      "actual": [
+        -23.313,
+        -3.81469727E-06,
+        -41.9999962
+      ]
+    },
+    {
+      "id": "H03",
+      "found": true,
+      "position_error_m": 5.39479652E-06,
+      "actual": [
+        -3.601,
+        -3.81469727E-06,
+        -41.9999962
+      ]
+    },
+    {
+      "id": "H04",
+      "found": true,
+      "position_error_m": 5.39479652E-06,
+      "actual": [
+        14.047,
+        -3.81469727E-06,
+        -41.9999962
+      ]
+    },
+    {
+      "id": "H05",
+      "found": true,
+      "position_error_m": 5.722046E-06,
+      "actual": [
+        31.0449982,
+        -3.81469727E-06,
+        -41.9999962
+      ]
+    },
+    {
+      "id": "H07",
+      "found": true,
+      "position_error_m": 5.39479652E-06,
+      "actual": [
+        68.009,
+        -3.81469727E-06,
+        -41.9999962
+      ]
+    },
+    {
+      "id": "H08",
+      "found": true,
+      "position_error_m": 5.39479652E-06,
+      "actual": [
+        85.971,
+        -3.81469727E-06,
+        -41.9999962
+      ]
+    },
+    {
+      "id": "H09",
+      "found": true,
+      "position_error_m": 9.344062E-06,
+      "actual": [
+        105.682991,
+        -3.81469727E-06,
+        -41.9999962
+      ]
+    },
+    {
+      "id": "H10",
+      "found": true,
+      "position_error_m": 1.0789593E-05,
+      "actual": [
+        -35.527,
+        -7.62939453E-06,
+        -76.99999
+      ]
+    },
+    {
+      "id": "H11",
+      "found": true,
+      "position_error_m": 1.0789593E-05,
+      "actual": [
+        -18.529,
+        -7.62939453E-06,
+        -76.99999
+      ]
+    },
+    {
+      "id": "H12",
+      "found": true,
+      "position_error_m": 1.0789593E-05,
+      "actual": [
+        0.503,
+        -7.62939453E-06,
+        -76.99999
+      ]
+    },
+    {
+      "id": "H13",
+      "found": true,
+      "position_error_m": 1.09568837E-05,
+      "actual": [
+        18.4349976,
+        -7.62939453E-06,
+        -76.99999
+      ]
+    },
+    {
+      "id": "H15",
+      "found": true,
+      "position_error_m": 1.0789593E-05,
+      "actual": [
+        56.109,
+        -7.62939453E-06,
+        -76.99999
+      ]
+    },
+    {
+      "id": "H16",
+      "found": true,
+      "position_error_m": 1.0789593E-05,
+      "actual": [
+        73.757,
+        -7.62939453E-06,
+        -76.99999
+      ]
+    },
+    {
+      "id": "H17",
+      "found": true,
+      "position_error_m": 1.0789593E-05,
+      "actual": [
+        90.755,
+        -7.62939453E-06,
+        -76.99999
+      ]
+    },
+    {
+      "id": "H18",
+      "found": true,
+      "position_error_m": 1.0789593E-05,
+      "actual": [
+        109.787,
+        -7.62939453E-06,
+        -76.99999
+      ]
+    },
+    {
+      "id": "H19",
+      "found": true,
+      "position_error_m": 1.7059845E-05,
+      "actual": [
+        -41.275,
+        -1.52587891E-05,
+        -110.999992
+      ]
+    },
+    {
+      "id": "H20",
+      "found": true,
+      "position_error_m": 1.7059845E-05,
+      "actual": [
+        -23.313,
+        -1.52587891E-05,
+        -110.999992
+      ]
+    },
+    {
+      "id": "H21",
+      "found": true,
+      "position_error_m": 1.7059845E-05,
+      "actual": [
+        -3.601,
+        -1.52587891E-05,
+        -110.999992
+      ]
+    },
+    {
+      "id": "H22",
+      "found": true,
+      "position_error_m": 1.7059845E-05,
+      "actual": [
+        14.047,
+        -1.52587891E-05,
+        -110.999992
+      ]
+    },
+    {
+      "id": "H23",
+      "found": true,
+      "position_error_m": 1.71661377E-05,
+      "actual": [
+        31.0449982,
+        -1.52587891E-05,
+        -110.999992
+      ]
+    },
+    {
+      "id": "H25",
+      "found": true,
+      "position_error_m": 1.7059845E-05,
+      "actual": [
+        68.009,
+        -1.52587891E-05,
+        -110.999992
+      ]
+    },
+    {
+      "id": "H26",
+      "found": true,
+      "position_error_m": 1.7059845E-05,
+      "actual": [
+        85.971,
+        -1.52587891E-05,
+        -110.999992
+      ]
+    },
+    {
+      "id": "H27",
+      "found": true,
+      "position_error_m": 1.86881243E-05,
+      "actual": [
+        105.682991,
+        -1.52587891E-05,
+        -110.999992
+      ]
+    },
+    {
+      "id": "H28",
+      "found": true,
+      "position_error_m": 2.15791861E-05,
+      "actual": [
+        -35.527,
+        -1.52587891E-05,
+        -147.999985
+      ]
+    },
+    {
+      "id": "H29",
+      "found": true,
+      "position_error_m": 2.15791861E-05,
+      "actual": [
+        -18.529,
+        -1.52587891E-05,
+        -147.999985
+      ]
+    },
+    {
+      "id": "H30",
+      "found": true,
+      "position_error_m": 2.15791861E-05,
+      "actual": [
+        0.503,
+        -1.52587891E-05,
+        -147.999985
+      ]
+    },
+    {
+      "id": "H31",
+      "found": true,
+      "position_error_m": 2.16633161E-05,
+      "actual": [
+        18.4349976,
+        -1.52587891E-05,
+        -147.999985
+      ]
+    },
+    {
+      "id": "H33",
+      "found": true,
+      "position_error_m": 2.15791861E-05,
+      "actual": [
+        56.109,
+        -1.52587891E-05,
+        -147.999985
+      ]
+    },
+    {
+      "id": "H34",
+      "found": true,
+      "position_error_m": 2.15791861E-05,
+      "actual": [
+        73.757,
+        -1.52587891E-05,
+        -147.999985
+      ]
+    },
+    {
+      "id": "H35",
+      "found": true,
+      "position_error_m": 2.15791861E-05,
+      "actual": [
+        90.755,
+        -1.52587891E-05,
+        -147.999985
+      ]
+    },
+    {
+      "id": "H36",
+      "found": true,
+      "position_error_m": 2.15791861E-05,
+      "actual": [
+        109.787,
+        -1.52587891E-05,
+        -147.999985
+      ]
+    },
+    {
+      "id": "H37",
+      "found": true,
+      "position_error_m": 1.97704212E-05,
+      "actual": [
+        -187.275,
+        1.32801819,
+        102.999992
+      ]
+    },
+    {
+      "id": "H38",
+      "found": true,
+      "position_error_m": 1.81339237E-05,
+      "actual": [
+        -169.313,
+        1.22001648,
+        102.999992
+      ]
+    },
+    {
+      "id": "H39",
+      "found": true,
+      "position_error_m": 1.47607871E-05,
+      "actual": [
+        -149.601,
+        1.10201263,
+        102.999992
+      ]
+    },
+    {
+      "id": "H41",
+      "found": true,
+      "position_error_m": 1.64803332E-05,
+      "actual": [
+        -114.954994,
+        0.894012451,
+        102.999992
+      ]
+    },
+    {
+      "id": "H42",
+      "found": true,
+      "position_error_m": 1.60024865E-05,
+      "actual": [
+        -95.923,
+        0.780014038,
+        102.999992
+      ]
+    },
+    {
+      "id": "H43",
+      "found": true,
+      "position_error_m": 1.69545619E-05,
+      "actual": [
+        -185.075,
+        2.07000732,
+        144.999985
+      ]
+    },
+    {
+      "id": "H44",
+      "found": true,
+      "position_error_m": 1.98117086E-05,
+      "actual": [
+        -167.113,
+        1.9630127,
+        144.999985
+      ]
+    },
+    {
+      "id": "H47",
+      "found": true,
+      "position_error_m": 1.75658843E-05,
+      "actual": [
+        -112.755,
+        1.63700867,
+        144.999985
+      ]
+    },
+    {
+      "id": "H48",
+      "found": true,
+      "position_error_m": 2.396344E-05,
+      "actual": [
+        -93.723,
+        1.52201843,
+        144.999985
+      ]
+    },
+    {
+      "id": "H49",
+      "found": true,
+      "position_error_m": 1.92174848E-05,
+      "actual": [
+        -187.275,
+        2.8400116,
+        186.999985
+      ]
+    },
+    {
+      "id": "H50",
+      "found": true,
+      "position_error_m": 1.812138E-05,
+      "actual": [
+        -169.313,
+        2.73201,
+        186.999985
+      ]
+    },
+    {
+      "id": "H51",
+      "found": true,
+      "position_error_m": 2.043318E-05,
+      "actual": [
+        -149.601,
+        2.61401367,
+        186.999985
+      ]
+    },
+    {
+      "id": "H53",
+      "found": true,
+      "position_error_m": 2.72267334E-05,
+      "actual": [
+        -114.954994,
+        2.406021,
+        186.999985
+      ]
+    },
+    {
+      "id": "H54",
+      "found": true,
+      "position_error_m": 2.73101177E-05,
+      "actual": [
+        -95.923,
+        2.29202271,
+        186.999985
+      ]
+    },
+    {
+      "id": "H55",
+      "found": true,
+      "position_error_m": 2.931773E-05,
+      "actual": [
+        -185.075,
+        3.510025,
+        224.999985
+      ]
+    },
+    {
+      "id": "H56",
+      "found": true,
+      "position_error_m": 3.390661E-05,
+      "actual": [
+        -167.113,
+        3.4030304,
+        224.999985
+      ]
+    },
+    {
+      "id": "H59",
+      "found": true,
+      "position_error_m": 3.05482972E-05,
+      "actual": [
+        -112.755,
+        3.07702637,
+        224.999985
+      ]
+    },
+    {
+      "id": "H60",
+      "found": true,
+      "position_error_m": 3.9321E-05,
+      "actual": [
+        -93.723,
+        2.96203613,
+        224.999985
+      ]
+    },
+    {
+      "id": "A1",
+      "found": true,
+      "position_error_m": 7.740576E-06,
+      "actual": [
+        -192.0,
+        0.671993256,
+        -54.9999962
+      ]
+    },
+    {
+      "id": "A2",
+      "found": true,
+      "position_error_m": 7.35489675E-06,
+      "actual": [
+        -112.0,
+        0.191993713,
+        -57.9999962
+      ]
+    },
+    {
+      "id": "A3",
+      "found": true,
+      "position_error_m": 1.91813087E-05,
+      "actual": [
+        -190.0,
+        0.6599884,
+        -138.999985
+      ]
+    },
+    {
+      "id": "A4",
+      "found": true,
+      "position_error_m": 2.72607049E-05,
+      "actual": [
+        -110.0,
+        0.179977417,
+        -138.999985
+      ]
+    },
+    {
+      "id": "D01",
+      "found": true,
+      "position_error_m": 1.922192E-06,
+      "actual": [
+        -177.0,
+        0.5820017,
+        11.999999
+      ]
+    },
+    {
+      "id": "F01",
+      "found": true,
+      "position_error_m": 2.58901055E-05,
+      "actual": [
+        195.999985,
+        1.22401428,
+        132.999985
+      ]
+    }
+  ],
+  "all_positions_match": true,
+  "runtime_test": "deferred by user; assembly only"
+}

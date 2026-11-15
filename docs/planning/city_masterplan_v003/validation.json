@@ -1,0 +1,81 @@
+{
+  "event_count": 30,
+  "events_30": true,
+  "all_event_nodes_reachable": true,
+  "network_node_count": 483,
+  "network_edge_count": 531,
+  "network_components": 1,
+  "no_isolated_nodes": true,
+  "building_road_overlap": [],
+  "building_overlap": [],
+  "unconnected_entrances": [],
+  "outside_boundary": [],
+  "routes_outside_boundary": [],
+  "stat_event_collisions": [],
+  "max_nearest_event_s": 325.7,
+  "nodes_nearest_within_90_percent": 63.8,
+  "max_spawn_event_s": 553.4,
+  "max_event_pair_s": 829.1,
+  "90s_global_guarantee": false,
+  "timing_assumptions": "1.2m/s; crossing +12s each; lift +20s; no teleport; arbitrary unanswered-event subset can only worsen reachability",
+  "runtime_navmesh_and_collision": "NOT_RUN; plan only",
+  "source_portal_binding": "NOT_CERTIFIED",
+  "independent_walk_connected": true,
+  "vehicle_graph_connected": true,
+  "event_to_route_gaps_over_radius": [],
+  "route_through_building": [],
+  "density": {
+    "Z01": {
+      "buildings": 14,
+      "footprint_m2": 7108.9,
+      "gross_coverage_percent": 18.2
+    },
+    "Z02": {
+      "buildings": 20,
+      "footprint_m2": 5401.1,
+      "gross_coverage_percent": 43.1
+    },
+    "Z03": {
+      "buildings": 32,
+      "footprint_m2": 8377.9,
+      "gross_coverage_percent": 30.2
+    },
+    "Z04": {
+      "buildings": 18,
+      "footprint_m2": 4707.2,
+      "gross_coverage_percent": 26.5
+    },
+    "Z05": {
+      "buildings": 4,
+      "footprint_m2": 2030.8,
+      "gross_coverage_percent": 11.6
+    },
+    "Z06": {
+      "buildings": 1,
+      "footprint_m2": 1174.8,
+      "gross_coverage_percent": 15.6
+    },
+    "Z07": {
+      "buildings": 1,
+      "footprint_m2": 76.7,
+      "gross_coverage_percent": 0.2
+    }
+  },
+  "nearest_building_gaps": {
+    "retail": {
+      "minimum_m": 0.8,
+      "median_nearest_m": 1.05,
+      "maximum_nearest_m": 1.8
+    },
+    "residential": {
+      "minimum_m": 1.5,
+      "median_nearest_m": 2.0,
+      "maximum_nearest_m": 2.6
+    }
+  },
+  "svg_png_visual_review": "reviewed locally; Korean font is embedded as SVG paths and rasterized with Malgun Gothic",
+  "runtime_boundary_collision": "NOT_TESTED; perimeter barrier planned",
+  "parking_driveway_connected": true,
+  "vehicle_swept_path": "NOT_TESTED",
+  "approval": "PENDING_USER_REVIEW"
+}

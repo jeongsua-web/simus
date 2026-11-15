@@ -1,0 +1,394 @@
+[
+  {
+    "slot": "HAP_01_1",
+    "asset": "city_state_hap_planter_healthy_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "HAP_01_2",
+    "asset": "city_state_hap_planter_healthy_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "HAP_02_1",
+    "asset": "planned:balloons",
+    "objects": 6,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "HAP_02_2",
+    "asset": "planned:balloons",
+    "objects": 6,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "HAP_03_1",
+    "asset": "city_state_hap_flags_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "HAP_03_2",
+    "asset": "city_state_hap_flags_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "HAP_04_1",
+    "asset": "planned:picnic",
+    "objects": 2,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "HAP_04_2",
+    "asset": "planned:picnic",
+    "objects": 2,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "HAP_05_1",
+    "asset": "city_state_hap_sign_closed_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "HAP_05_2",
+    "asset": "city_state_hap_sign_closed_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "HAP_06_1",
+    "asset": "planned:shop_light_control",
+    "objects": 1,
+    "host": "S08:west_wall",
+    "runtime_bound": false
+  },
+  {
+    "slot": "HAP_06_2",
+    "asset": "planned:shop_light_control",
+    "objects": 1,
+    "host": "S09:west_wall",
+    "runtime_bound": false
+  },
+  {
+    "slot": "HAP_07_1",
+    "asset": "city_state_saf_bench_normal_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "HAP_07_2",
+    "asset": "city_state_saf_bench_normal_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "SAF_01_1",
+    "asset": "city_state_saf_graffiti_decal_01",
+    "objects": 1,
+    "host": "S11:west_wall",
+    "runtime_bound": false
+  },
+  {
+    "slot": "SAF_01_2",
+    "asset": "city_state_saf_graffiti_decal_01",
+    "objects": 1,
+    "host": "S12:west_wall",
+    "runtime_bound": false
+  },
+  {
+    "slot": "SAF_02_1",
+    "asset": "city_state_saf_damaged_car_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "SAF_02_2",
+    "asset": "city_state_saf_damaged_car_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "SAF_03_1",
+    "asset": "city_state_saf_broken_glass_decal_01",
+    "objects": 1,
+    "host": "S11:west_wall",
+    "runtime_bound": false
+  },
+  {
+    "slot": "SAF_03_2",
+    "asset": "city_state_saf_broken_glass_decal_01",
+    "objects": 1,
+    "host": "S12:west_wall",
+    "runtime_bound": false
+  },
+  {
+    "slot": "SAF_04_1",
+    "asset": "city_state_saf_police_car_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "SAF_04_2",
+    "asset": "city_state_saf_police_car_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "SAF_05_1",
+    "asset": "planned:police_tape",
+    "objects": 3,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "SAF_05_2",
+    "asset": "planned:police_tape",
+    "objects": 3,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "SAF_06_1",
+    "asset": "barricade_01_v001",
+    "objects": 8,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "SAF_06_2",
+    "asset": "barricade_01_v001",
+    "objects": 8,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "SAF_07_1",
+    "asset": "planned:accident_kit",
+    "objects": 4,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "SAF_07_2",
+    "asset": "planned:accident_kit",
+    "objects": 4,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "CLN_01_1",
+    "asset": "city_state_cln_trash_paper_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "CLN_01_2",
+    "asset": "city_state_cln_trash_paper_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "CLN_02_1",
+    "asset": "city_state_cln_trash_can_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "CLN_02_2",
+    "asset": "city_state_cln_trash_can_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "CLN_03_1",
+    "asset": "city_state_cln_trash_bottle_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "CLN_03_2",
+    "asset": "city_state_cln_trash_bottle_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "CLN_04_1",
+    "asset": "city_state_cln_garbage_bag_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "CLN_04_2",
+    "asset": "city_state_cln_garbage_bag_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "CLN_05_1",
+    "asset": "city_state_cln_bin_overflow_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "CLN_05_2",
+    "asset": "city_state_cln_bin_overflow_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "CLN_06_1",
+    "asset": "city_state_cln_ground_stain_dark_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "CLN_06_2",
+    "asset": "city_state_cln_ground_stain_dark_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "CLN_07_1",
+    "asset": "city_state_cln_trash_bottle_01",
+    "objects": 1,
+    "host": "RIVER_WATER",
+    "runtime_bound": false
+  },
+  {
+    "slot": "CLN_07_2",
+    "asset": "city_state_cln_trash_bottle_01",
+    "objects": 1,
+    "host": "RIVER_WATER",
+    "runtime_bound": false
+  },
+  {
+    "slot": "POL_01_1",
+    "asset": "city_state_pol_tree_withered_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "POL_01_2",
+    "asset": "city_state_pol_tree_withered_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "POL_02_1",
+    "asset": "city_state_pol_tree_dead_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "POL_02_2",
+    "asset": "city_state_pol_tree_dead_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "POL_03_1",
+    "asset": "planned:vehicle_smoke_vfx",
+    "objects": 3,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "POL_03_2",
+    "asset": "planned:vehicle_smoke_vfx",
+    "objects": 3,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "POL_04_1",
+    "asset": "planned:exhaust_vfx",
+    "objects": 3,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "POL_04_2",
+    "asset": "planned:exhaust_vfx",
+    "objects": 3,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "POL_05_1",
+    "asset": "planned:water_material_state",
+    "objects": 1,
+    "host": "RIVER_WATER",
+    "runtime_bound": false
+  },
+  {
+    "slot": "POL_05_2",
+    "asset": "planned:water_material_state",
+    "objects": 1,
+    "host": "RIVER_WATER",
+    "runtime_bound": false
+  },
+  {
+    "slot": "POL_06_1",
+    "asset": "planned:local_smog_vfx",
+    "objects": 3,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "POL_06_2",
+    "asset": "planned:local_smog_vfx",
+    "objects": 3,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "POL_07_1",
+    "asset": "city_state_pol_grass_brown_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  },
+  {
+    "slot": "POL_07_2",
+    "asset": "city_state_pol_grass_brown_01",
+    "objects": 1,
+    "host": "reserved_ground_patch",
+    "runtime_bound": false
+  }
+]

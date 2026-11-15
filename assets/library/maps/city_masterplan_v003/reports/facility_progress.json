@@ -1,0 +1,272 @@
+[
+  {
+    "id": "P01",
+    "source": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Outdoor_ParkingLot_Complete.fbx",
+    "meshes": 421,
+    "source_bounds": [
+      [
+        -15.0,
+        -24.0,
+        -0.25999706983566284
+      ],
+      [
+        15.0,
+        2.6026576449567074e-08,
+        5.927250862121582
+      ]
+    ],
+    "uniform_scale": 0.9999999989155594,
+    "actual_width_depth": [
+      29.99999996746678,
+      24.0
+    ],
+    "planned_width_depth": [
+      30,
+      24
+    ],
+    "entry_portal_verified": false
+  },
+  {
+    "id": "P02",
+    "source": "unity/Assets/SIMUS/Art/roads/outdoor_parking_v001/models/SIMUS_Outdoor_ParkingLot_Complete.fbx",
+    "meshes": 421,
+    "source_bounds": [
+      [
+        -15.0,
+        -24.0,
+        -0.25999706983566284
+      ],
+      [
+        15.0,
+        2.6026576449567074e-08,
+        5.927250862121582
+      ]
+    ],
+    "uniform_scale": 0.8,
+    "actual_width_depth": [
+      19.200000020821264,
+      24.0
+    ],
+    "planned_width_depth": [
+      30,
+      24
+    ],
+    "entry_portal_verified": false
+  },
+  {
+    "id": "T01",
+    "source": "unity/Assets/SIMUS/Art/buildings/subway_entrance_v001/models/SIMUS_Subway_Entrance.fbx",
+    "meshes": 83,
+    "source_bounds": [
+      [
+        -3.0,
+        -12.699999809265137,
+        -3.6500000953674316
+      ],
+      [
+        3.0,
+        1.7999999523162842,
+        3.6499998569488525
+      ]
+    ],
+    "uniform_scale": 1.0,
+    "actual_width_depth": [
+      6.0,
+      14.499999761581421
+    ],
+    "planned_width_depth": [
+      6,
+      14.5
+    ],
+    "entry_portal_verified": false
+  },
+  {
+    "id": "PK01",
+    "source": "unity/Assets/SIMUS/Art/vegetation/parks/MODERN_MINIMAL_PARK.fbx",
+    "meshes": 1,
+    "source_bounds": [
+      [
+        -6.0,
+        -6.000000476837158,
+        -1.502060740676825e-06
+      ],
+      [
+        6.000000476837158,
+        6.0,
+        3.8308470249176025
+      ]
+    ],
+    "uniform_scale": 0.9999999602635717,
+    "actual_width_depth": [
+      12.0,
+      12.0
+    ],
+    "planned_width_depth": [
+      12,
+      12
+    ],
+    "entry_portal_verified": false
+  },
+  {
+    "id": "PK02",
+    "source": "unity/Assets/SIMUS/Art/vegetation/parks/COZY_NEIGHBORHOOD_PARK.fbx",
+    "meshes": 1,
+    "source_bounds": [
+      [
+        -6.0,
+        -6.000000476837158,
+        -1.502060740676825e-06
+      ],
+      [
+        6.000000476837158,
+        6.0,
+        4.653672218322754
+      ]
+    ],
+    "uniform_scale": 0.9999999602635717,
+    "actual_width_depth": [
+      12.0,
+      12.0
+    ],
+    "planned_width_depth": [
+      12,
+      12
+    ],
+    "entry_portal_verified": false
+  },
+  {
+    "id": "F02",
+    "source": "unity/Assets/SIMUS/Art/props/recycle_station_v001/models/SIMUS_Recycle_Station_Complete.fbx",
+    "meshes": 30,
+    "source_bounds": [
+      [
+        -2.424999713897705,
+        -1.3600003719329834,
+        -4.0321242522622924e-07
+      ],
+      [
+        2.4250001907348633,
+        1.2025035619735718,
+        2.540780544281006
+      ]
+    ],
+    "uniform_scale": 1.0000000196633883,
+    "actual_width_depth": [
+      4.85,
+      2.562503984294065
+    ],
+    "planned_width_depth": [
+      4.85,
+      2.57
+    ],
+    "entry_portal_verified": false
+  },
+  {
+    "id": "F03",
+    "source": "unity/Assets/SIMUS/Art/props/recycle_station_v001/models/SIMUS_Recycle_Station_Complete.fbx",
+    "meshes": 30,
+    "source_bounds": [
+      [
+        -2.424999713897705,
+        -1.3600003719329834,
+        -4.0321242522622924e-07
+      ],
+      [
+        2.4250001907348633,
+        1.2025035619735718,
+        2.540780544281006
+      ]
+    ],
+    "uniform_scale": 1.0000000196633883,
+    "actual_width_depth": [
+      4.85,
+      2.562503984294065
+    ],
+    "planned_width_depth": [
+      4.85,
+      2.57
+    ],
+    "entry_portal_verified": false
+  },
+  {
+    "id": "K01",
+    "source": "unity/Assets/SIMUS/Art/props/festival_booth_v001/models/SIMUS_Festival_Booth_Info.fbx",
+    "meshes": 78,
+    "source_bounds": [
+      [
+        -1.5759999752044678,
+        -1.5974994897842407,
+        -2.3379115532407013e-07
+      ],
+      [
+        1.5759999752044678,
+        1.5260003805160522,
+        2.892000198364258
+      ]
+    ],
+    "uniform_scale": 1.000000015733206,
+    "actual_width_depth": [
+      3.152,
+      3.1234999194429602
+    ],
+    "planned_width_depth": [
+      3.152,
+      3.124
+    ],
+    "entry_portal_verified": false
+  },
+  {
+    "id": "K02",
+    "source": "unity/Assets/SIMUS/Art/props/festival_booth_v001/models/SIMUS_Festival_Booth_Food.fbx",
+    "meshes": 69,
+    "source_bounds": [
+      [
+        -1.5759999752044678,
+        -1.5974994897842407,
+        -2.3379115532407013e-07
+      ],
+      [
+        1.5759999752044678,
+        1.5260003805160522,
+        2.892000198364258
+      ]
+    ],
+    "uniform_scale": 1.000000015733206,
+    "actual_width_depth": [
+      3.152,
+      3.1234999194429602
+    ],
+    "planned_width_depth": [
+      3.152,
+      3.124
+    ],
+    "entry_portal_verified": false
+  },
+  {
+    "id": "K03",
+    "source": "unity/Assets/SIMUS/Art/props/festival_booth_v001/models/SIMUS_Festival_Booth_Game.fbx",
+    "meshes": 76,
+    "source_bounds": [
+      [
+        -1.5759999752044678,
+        -1.5974994897842407,
+        -2.3379115532407013e-07
+      ],
+      [
+        1.5759999752044678,
+        1.5260003805160522,
+        2.892000198364258
+      ]
+    ],
+    "uniform_scale": 1.000000015733206,
+    "actual_width_depth": [
+      3.152,
+      3.1234999194429602
+    ],
+    "planned_width_depth": [
+      3.152,
+      3.124
+    ],
+    "entry_portal_verified": false
+  }
+]

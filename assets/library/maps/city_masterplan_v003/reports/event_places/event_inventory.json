@@ -1,0 +1,332 @@
+[
+  {
+    "id": 1,
+    "event": "길에 쓰레기가 떨어져 있다",
+    "environment": "보도 쓰레기와 휴지통",
+    "anchor": [
+      76.8,
+      0.0,
+      40.0
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 2,
+    "event": "빨간불인데 차가 한 대도 없다",
+    "environment": "횡단보도 보행 신호등·대기 표시",
+    "anchor": [
+      45.0,
+      0.0,
+      42.0
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 3,
+    "event": "누군가 지갑을 떨어뜨렸다",
+    "environment": "분실 지갑",
+    "anchor": [
+      -137.0,
+      2.196,
+      168.0
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 4,
+    "event": "버스 정류장에서 누군가 새치기한다",
+    "environment": "버스·대기선·벤치·정류장 안내",
+    "anchor": [
+      91.0,
+      0.0,
+      41.5
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 5,
+    "event": "길을 잃은 아이가 울고 있다",
+    "environment": "미아 대기 쉼터",
+    "anchor": [
+      182.92409222038307,
+      0.811,
+      110.03299716244976
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 6,
+    "event": "공원에서 누군가 큰 소리로 음악을 틀고 있다",
+    "environment": "음악 소음 쉼터·스피커",
+    "anchor": [
+      184.74814962593516,
+      1.709,
+      159.96299251870323
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 7,
+    "event": "불법 주차된 차 때문에 통행이 어렵다",
+    "environment": "주차 차량과 안내판",
+    "anchor": [
+      50.0,
+      0.0,
+      -55.5
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 8,
+    "event": "카페 직원이 거스름돈을 더 줬다",
+    "environment": "카페 계산대 잔돈·영수증",
+    "anchor": [
+      -11.3,
+      0.0,
+      31.0
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 9,
+    "event": "지하철에서 자리가 하나 났다",
+    "environment": "기존 지하 좌석 공간의 손잡이·창·문턱",
+    "anchor": [
+      167.4,
+      -2.932,
+      98.75
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 10,
+    "event": "친구가 시험에서 부정행위를 하자고 한다",
+    "environment": "캠퍼스 학습 탁자·시험지·필기구",
+    "anchor": [
+      21.0,
+      1.89,
+      170.0
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 11,
+    "event": "분리수거장이 엉망이다",
+    "environment": "기존 F03 분리수거장 활용·주변 폐기물",
+    "anchor": [
+      122.0,
+      0.0,
+      -34.0
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 12,
+    "event": "가까운 거리에 이동해야 한다",
+    "environment": "택시·승차 안내·벤치",
+    "anchor": [
+      153.0,
+      0.0,
+      41.5
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 13,
+    "event": "꽃밭에 들어가면 사진이 잘 나올 것 같다",
+    "environment": "노란색·분홍색 꽃밭·경계석·바깥 산책로",
+    "anchor": [
+      182.61670796878695,
+      0.631,
+      100.0430089855758
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 14,
+    "event": "동네 하천에 쓰레기가 쌓여 있다",
+    "environment": "하천변 폐병·정화 안내",
+    "anchor": [
+      210.00345856940265,
+      0.0,
+      5.000023141353528
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 15,
+    "event": "일회용품과 다회용품 중 선택할 수 있다",
+    "environment": "카페 일회용컵·다회용컵 선택대",
+    "anchor": [
+      -10.1,
+      0.0,
+      31.0
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 16,
+    "event": "이웃이 무거운 짐을 들고 있다",
+    "environment": "이삿짐·손수레",
+    "anchor": [
+      -104.0,
+      0.144,
+      -104.5
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 17,
+    "event": "동네 축제 자원봉사자를 모집한다",
+    "environment": "기존 K01 축제 부스 활용·접수대·신청서",
+    "anchor": [
+      26.00000000000001,
+      0.0,
+      65.0
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 18,
+    "event": "길고양이에게 먹이를 주고 싶다",
+    "environment": "고양이 급식 그릇·쉼터",
+    "anchor": [
+      184.75142262274704,
+      0.0,
+      -29.981031696706026
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 19,
+    "event": "공용 화장실 바닥에 휴지가 떨어져 있다",
+    "environment": "기존 공용 화장실 바닥 휴지",
+    "anchor": [
+      194.75,
+      1.224,
+      133
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 20,
+    "event": "주민들이 공원에 나무를 심고 있다",
+    "environment": "식재 흙·묘목·삽·물뿌리개",
+    "anchor": [
+      -166.0,
+      3.747,
+      244.5
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 21,
+    "event": "길거리에서 두 사람이 싸우고 있다",
+    "environment": "거리 대화 공간·벤치",
+    "anchor": [
+      80.0,
+      0.0,
+      9.0
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 22,
+    "event": "친구가 다른 사람의 비밀을 알려줬다",
+    "environment": "캠퍼스 대화 벤치·책",
+    "anchor": [
+      17.0,
+      1.89,
+      170.0
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 23,
+    "event": "식당에서 주문하지 않은 비싼 음식이 나왔다",
+    "environment": "식당 테이블의 음식 접시·영수증",
+    "anchor": [
+      53.35,
+      0.0,
+      -9.25
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 24,
+    "event": "공원 금지구역을 지나가면 지름길이다",
+    "environment": "공원 제한구역 울타리·우회 안내",
+    "anchor": [
+      186.74065087281795,
+      2.427,
+      199.8130174563591
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 25,
+    "event": "가게에서 누군가 물건을 훔치는 걸 봤다",
+    "environment": "상가 앞 상품 진열대",
+    "anchor": [
+      145.0,
+      0.0,
+      41.5
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 26,
+    "event": "갑자기 정전이 발생했다",
+    "environment": "가로등·전기함",
+    "anchor": [
+      -137.0,
+      2.196,
+      168.0
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 27,
+    "event": "폭우로 도로 일부가 침수됐다",
+    "environment": "도로 위 얕은 침수 면·모래주머니·배수구",
+    "anchor": [
+      100.0,
+      0.0,
+      -89.5
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 28,
+    "event": "행사 때문에 도로가 통제됐다",
+    "environment": "도로 통제 바리케이드·안내판",
+    "anchor": [
+      136.86605499237137,
+      0.0,
+      -54.146939508391505
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 29,
+    "event": "화재경보가 울렸는데 불은 보이지 않는다",
+    "environment": "화재 경보함·경광 표시·대피 안내",
+    "anchor": [
+      -177.0,
+      0.582,
+      36.0
+    ],
+    "gameplay_connected": false
+  },
+  {
+    "id": 30,
+    "event": "도시 광장에서 정체불명의 상자를 발견했다",
+    "environment": "광장 수상한 상자·안내판",
+    "anchor": [
+      45.0,
+      0.252,
+      79.0
+    ],
+    "gameplay_connected": false
+  }
+]

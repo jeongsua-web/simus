@@ -1,2 +1,7 @@
 # Reviewed migration checksums use the repository's LF bytes on every platform.
 /db/[0-9][0-9][0-9]_*.sql text eol=lf
+assets/library/maps/city_masterplan_v003/source/*.blend filter=lfs diff=lfs merge=lfs -text
+assets/library/maps/city_masterplan_v003/source/*.blend1 filter=lfs diff=lfs merge=lfs -text
+assets/library/maps/city_masterplan_v003/exchange/*.fbx filter=lfs diff=lfs merge=lfs -text
+unity/Assets/SIMUS/Scenes/city_masterplan_v003/models/SIMUS_City_Masterplan_v003_QualityPass.fbx filter=lfs diff=lfs merge=lfs -text
+unity/Assets/SIMUS/Scenes/city_masterplan_v003/models/SIMUS_City_Masterplan_v003.fbx filter=lfs diff=lfs merge=lfs -text

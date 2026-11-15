@@ -1,0 +1,57 @@
+﻿id,label,position_x,position_y,position_z,rotation_y,stat,region_id,active_stage,asset_key,independent_channel,footprint_radius_m,placement_status,host_binding_required,host_binding
+HAP_01_1,꽃 화분,24.18,1.629,155.521,0,HAP,Z01,high(>65),city_state_hap_planter_healthy_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+HAP_01_2,꽃 화분,-192.111,3.076,198.54,0,HAP,Z04,high(>65),city_state_hap_planter_healthy_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+HAP_02_1,풍선,33.172,0.0,36.865,90,HAP,Z02,high(>65),planned:balloons,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+HAP_02_2,풍선,-96.275,0.098,-41.883,90,HAP,Z05,high(>65),planned:balloons,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+HAP_03_1,축제 장식,142.086,0.0,-107.489,180,HAP,Z03,high(>65),city_state_hap_flags_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+HAP_03_2,축제 장식,-205.679,0.754,18.758,180,HAP,Z06,high(>65),city_state_hap_flags_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+HAP_04_1,피크닉 소품,-78.945,2.271,191.169,270,HAP,Z04,high(>65),planned:picnic,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+HAP_04_2,피크닉 소품,229.055,0.0,7.297,270,HAP,Z07,high(>65),planned:picnic,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+HAP_05_1,폐업 안내문,-156.454,0.459,-125.376,0,HAP,Z05,low(<35),city_state_hap_sign_closed_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+HAP_05_2,폐업 안내문,12.977,3.428,255.448,0,HAP,Z01,low(<35),city_state_hap_sign_closed_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+HAP_06_1,밝은 상점,115.80000000000001,2.2,32.0,90,HAP,Z06,high(>65),planned:shop_light_control,True,0.3,CANDIDATE; wall/window/water/VFX slots require host binding,True,S08:west_wall
+HAP_06_2,밝은 상점,132.0,2.2,32.9,90,HAP,Z02,high(>65),planned:shop_light_control,True,0.3,CANDIDATE; wall/window/water/VFX slots require host binding,True,S09:west_wall
+HAP_07_1,비어 있는 벤치,246.337,0.0,15.952,180,HAP,Z07,low(<35),city_state_saf_bench_normal_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+HAP_07_2,비어 있는 벤치,134.759,0.0,-135.631,180,HAP,Z03,low(<35),city_state_saf_bench_normal_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+SAF_01_1,벽 낙서,-34.1,2.2,3.3,0,SAF,Z02,low(<35),city_state_saf_graffiti_decal_01,True,0.3,CANDIDATE; wall/window/water/VFX slots require host binding,True,S11:west_wall
+SAF_01_2,벽 낙서,-17.900000000000002,2.2,4.2,0,SAF,Z05,low(<35),city_state_saf_graffiti_decal_01,True,0.3,CANDIDATE; wall/window/water/VFX slots require host binding,True,S12:west_wall
+SAF_02_1,파손 차량,30.006,0.0,-155.353,90,SAF,Z03,low(<35),city_state_saf_damaged_car_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+SAF_02_2,파손 차량,-172.559,0.555,-5.897,90,SAF,Z06,low(<35),city_state_saf_damaged_car_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+SAF_03_1,깨진 유리창,-34.1,2.2,3.3,180,SAF,Z04,low(<35),city_state_saf_broken_glass_decal_01,True,0.3,CANDIDATE; wall/window/water/VFX slots require host binding,True,S11:west_wall
+SAF_03_2,깨진 유리창,-17.900000000000002,2.2,4.2,180,SAF,Z07,low(<35),city_state_saf_broken_glass_decal_01,True,0.3,CANDIDATE; wall/window/water/VFX slots require host binding,True,S12:west_wall
+SAF_04_1,경찰차,-158.494,0.471,-92.608,270,SAF,Z05,low(<35),city_state_saf_police_car_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+SAF_04_2,경찰차,-32.76,3.411,254.497,270,SAF,Z01,low(<35),city_state_saf_police_car_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+SAF_05_1,경찰 통제선,-189.926,0.66,-7.717,0,SAF,Z06,low(<35),planned:police_tape,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+SAF_05_2,경찰 통제선,-50.45,0.0,35.551,0,SAF,Z02,low(<35),planned:police_tape,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+SAF_06_1,바리케이드,207.744,3.231,244.498,90,SAF,Z07,low(<35),barricade_01_v001,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+SAF_06_2,바리케이드,123.135,0.0,-47.713,90,SAF,Z03,low(<35),barricade_01_v001,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+SAF_07_1,사고 현장,26.978,1.1,126.117,180,SAF,Z01,low(<35),planned:accident_kit,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+SAF_07_2,사고 현장,-128.876,2.627,194.629,180,SAF,Z04,low(<35),planned:accident_kit,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+CLN_01_1,종이 쓰레기,36.033,0.0,-142.855,0,CLN,Z03,low(<35),city_state_cln_trash_paper_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+CLN_01_2,종이 쓰레기,-146.779,0.401,30.719,0,CLN,Z06,low(<35),city_state_cln_trash_paper_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+CLN_02_1,캔,-76.515,1.425,144.141,90,CLN,Z04,low(<35),city_state_cln_trash_can_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+CLN_02_2,캔,212.848,0.18,75.005,90,CLN,Z07,low(<35),city_state_cln_trash_can_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+CLN_03_1,페트병,-94.605,0.088,-145.761,180,CLN,Z05,low(<35),city_state_cln_trash_bottle_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+CLN_03_2,페트병,-42.574,0.443,89.593,180,CLN,Z01,low(<35),city_state_cln_trash_bottle_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+CLN_04_1,쓰레기봉투,-201.999,0.732,-9.307,270,CLN,Z06,low(<35),city_state_cln_garbage_bag_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+CLN_04_2,쓰레기봉투,-36.122,0.0,36.535,270,CLN,Z02,low(<35),city_state_cln_garbage_bag_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+CLN_05_1,넘치는 쓰레기통,204.559,1.229,133.261,0,CLN,Z07,low(<35),city_state_cln_bin_overflow_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+CLN_05_2,넘치는 쓰레기통,47.314,0.0,-105.27,0,CLN,Z03,low(<35),city_state_cln_bin_overflow_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+CLN_06_1,바닥 얼룩,93.255,2.822,221.786,90,CLN,Z01,low(<35),city_state_cln_ground_stain_dark_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+CLN_06_2,바닥 얼룩,-181.374,1.833,133.035,90,CLN,Z04,low(<35),city_state_cln_ground_stain_dark_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+CLN_07_1,하천 부유 쓰레기,229.703,-1.8,-71.214,180,CLN,Z07,low(<35),city_state_cln_trash_bottle_01,True,0.7,CANDIDATE; wall/window/water/VFX slots require host binding,True,RIVER_WATER
+CLN_07_2,하천 부유 쓰레기,222.223,-1.8,142.403,180,CLN,Z07,low(<35),city_state_cln_trash_bottle_01,True,0.7,CANDIDATE; wall/window/water/VFX slots require host binding,True,RIVER_WATER
+POL_01_1,시든 나무,-127.735,1.811,149.703,0,POL,Z04,high(>65),city_state_pol_tree_withered_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+POL_01_2,시든 나무,206.825,0.0,33.012,0,POL,Z07,high(>65),city_state_pol_tree_withered_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+POL_02_1,죽은 식물,-131.469,0.309,-73.834,90,POL,Z05,high(>65),city_state_pol_tree_dead_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+POL_02_2,죽은 식물,-42.634,1.494,148.012,90,POL,Z01,high(>65),city_state_pol_tree_dead_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+POL_03_1,차량 연기,-134.198,0.325,15.28,180,POL,Z06,high(>65),planned:vehicle_smoke_vfx,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,True,reserved_ground_patch
+POL_03_2,차량 연기,45.791,0.0,35.662,180,POL,Z02,high(>65),planned:vehicle_smoke_vfx,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,True,reserved_ground_patch
+POL_04_1,매연,197.598,2.117,182.602,270,POL,Z07,high(>65),planned:exhaust_vfx,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,True,reserved_ground_patch
+POL_04_2,매연,25.372,0.0,-52.149,270,POL,Z03,high(>65),planned:exhaust_vfx,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,True,reserved_ground_patch
+POL_05_1,오염된 물,229.703,-1.8,-63.214,0,POL,Z07,high(>65),planned:water_material_state,True,0.7,CANDIDATE; wall/window/water/VFX slots require host binding,True,RIVER_WATER
+POL_05_2,오염된 물,222.223,-1.8,150.403,0,POL,Z07,high(>65),planned:water_material_state,True,0.7,CANDIDATE; wall/window/water/VFX slots require host binding,True,RIVER_WATER
+POL_06_1,스모그,93.736,0.0,-6.432,90,POL,Z02,high(>65),planned:local_smog_vfx,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+POL_06_2,스모그,-122.172,0.253,-123.009,90,POL,Z05,high(>65),planned:local_smog_vfx,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+POL_07_1,마른 풀,139.732,0.0,-150.543,180,POL,Z03,high(>65),city_state_pol_grass_brown_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
+POL_07_2,마른 풀,-181.065,0.606,-9.947,180,POL,Z06,high(>65),city_state_pol_grass_brown_01,True,1.8,CANDIDATE; wall/window/water/VFX slots require host binding,False,reserved_ground_patch
