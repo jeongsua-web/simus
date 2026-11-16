@@ -92,3 +92,7 @@ psql -X --host 127.0.0.1 --port 55432 --dbname simus_migration_qa --username sim
 Phase 2는 017 다음에 `018_npc_event_visit.sql`을 계획한다. Phase 1 커밋 `7ac43f0`의 `016_location_entry_events.sql` 스키마를 현재 브랜치의 번호 체계에 맞게 이식한 것이다. 기존 016 safe-glasses 원본·checksum은 그대로다. 새 서버는 018의 영속 장소 진입 상태와 진입당 유일 인덱스를 요구한다. 018은 baseline 대상이 아니며 실제 적용은 사용자 승인 전까지 보류한다. 다른 브랜치의 Phase 1 migration을 이미 적용했다면 중복 실행하지 말고 이력/스키마를 검토하여 별도 채택 계획을 만든다.
 
 콘텐츠·좌표는 schema runner에서 적용하지 않는다. `db/content/city-v002-events-phase2-draft.sql`은 별도로 검토할 개발 DRAFT용 산출물이며 운영 DB에는 적용하지 않는다. 신규 Phase 1 map/path의 DRAFT에만 사용할 수 있고, 구버전 DRAFT·RUNNING 회차·참가자 스냅샷·기존 non-null 좌표를 재작성하지 않는다. `web/scripts/prepare-city-v002-events.mjs`에는 적용 기능이 없다. QA/실제 DB 적용/WebGL 빌드/배포는 각각 후속 승인 범위다.
+
+## 019 사용자별 NPC 경로
+
+`019_participant_npc_routes.sql`은 018 다음에 적용한다. 신규 v002 반복 경로 가입에서 points 차이를 허용하도록 `guard_new_npc_motion`만 교체한다. 지도·경로 버전과 속도·loop 등 나머지 설정 일치 및 유효한 motion 검사를 유지한다. 기존 가입/이벤트/회차 데이터와 가입 후 불변 트리거는 변경하지 않는다. 앱의 사용자별 경로 생성 코드를 배포하기 전에 적용한다. 운영 DB 적용은 이번 코드 작업에서 수행하지 않았다.

@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
 import { MAP_VERSION, PATH_VERSION, nodePoint, locate, pathLength, isGraphSegment } from '../src/lib/city-v002-graph.mjs';
+import { participantMotion } from '../src/lib/participant-npc-motion.ts';
 import { npcPosition } from '../src/app/participate/npc-motion.ts';
 
 export async function runCityV002Events({ pool, env, token, templateId, stopServer, startServer }) {
@@ -44,7 +45,7 @@ export async function runCityV002Events({ pool, env, token, templateId, stopServ
   const person=await call('/api/participants',{method:'POST'});
   assert.equal((await call(`/api/sessions/${sid}/join`,{method:'POST',cookie:person.cookie})).status,201);
   const member=(await pool.query('SELECT * FROM simus.participant_sessions WHERE session_id=$1',[sid])).rows[0];
-  assert.deepEqual(member.npc_motion,original.npc_motion);
+  assert.deepEqual(member.npc_motion,participantMotion(original.npc_motion,`${sid}:${member.participant_id}`));
   const positions=`/api/sessions/${sid}/npc-positions?map_version=${MAP_VERSION}&path_version=${PATH_VERSION}`;
   const event=()=>call(`/api/sessions/${sid}/event`,{cookie:person.cookie});
   const snapshot=async()=>{const r=await call(positions);assert.equal(r.status,200,JSON.stringify(r.body));return r.body;};
@@ -89,9 +90,11 @@ export async function runCityV002Events({ pool, env, token, templateId, stopServ
   const second = await call('/api/participants',{method:'POST'});
   assert.equal((await call(`/api/sessions/${sid}/join`,{method:'POST',cookie:second.cookie})).status,201);
   const secondId=(await pool.query('SELECT participant_id FROM simus.participant_sessions WHERE session_id=$1 AND participant_id<>$2',[sid,member.participant_id])).rows[0].participant_id;
+  const secondMotion=(await pool.query('SELECT npc_motion FROM simus.participant_sessions WHERE session_id=$1 AND participant_id=$2',[sid,secondId])).rows[0].npc_motion;
+  assert.notDeepEqual(secondMotion.points,member.npc_motion.points);
   const secondEvent=()=>call(`/api/sessions/${sid}/event`,{cookie:second.cookie});
   await secondEvent();
-  const fasterMotion={...member.npc_motion,speed_mps:member.npc_motion.speed_mps*1.7};
+  const fasterMotion={...secondMotion,speed_mps:secondMotion.speed_mps*1.7};
   await pool.query('UPDATE simus.npc_event_states SET resume_motion=$3 WHERE session_id=$1 AND participant_id=$2',[sid,secondId,fasterMotion]);
   await pool.query("UPDATE simus.npc_event_states SET waiting_since=clock_timestamp()-interval '61 seconds' WHERE session_id=$1 AND participant_id=$2",[sid,secondId]);
   assert.equal((await secondEvent()).body.phase,'GUIDING');
@@ -113,8 +116,18 @@ export async function runCityV002Events({ pool, env, token, templateId, stopServ
     situation_id:interrupted.body.event.situation_id,choice_id:interrupted.body.event.situation.choices[0].id,request_key:randomUUID()}})).status,201);
   const midReturn=(await call(`/api/sessions/${sid}/npc`,{cookie:second.cookie})).body.npcs[0];
   assert.equal(midReturn.motion.speed_mps,fasterMotion.speed_mps,'Return retains runtime speed');
-  assert.deepEqual((await pool.query('SELECT npc_motion FROM simus.participant_sessions WHERE session_id=$1 AND participant_id=$2',[sid,secondId])).rows[0].npc_motion,member.npc_motion);
+  assert.deepEqual((await pool.query('SELECT npc_motion FROM simus.participant_sessions WHERE session_id=$1 AND participant_id=$2',[sid,secondId])).rows[0].npc_motion,secondMotion);
   graphRoute(midReturn.motion.points);assert.deepEqual(midReturn.motion.points[0],frozenMid);
+  const third=await call('/api/participants',{method:'POST'});
+  const thirdJoin=await call(`/api/sessions/${sid}/join`,{method:'POST',cookie:third.cookie});
+  assert.equal(thirdJoin.status,201);
+  const three=(await pool.query('SELECT npc_motion FROM simus.participant_sessions WHERE session_id=$1',[sid])).rows;
+  assert.equal(new Set(three.map(row=>JSON.stringify(row.npc_motion.points))).size,3,'Three participants have three routes');
+  for(const row of three) graphRoute(row.npc_motion.points,true);
+  const replay=await call(`/api/sessions/${sid}/join`,{method:'POST',cookie:third.cookie});
+  assert.equal(replay.status,200);assert.equal(replay.body.replayed,true);
+  assert.deepEqual(replay.body.npcs,thirdJoin.body.npcs,'Rejoining preserves NPC, epoch and route');
+  await assert.rejects(pool.query("UPDATE simus.participant_sessions SET npc_motion=$2 WHERE session_id=$1",[sid,original.npc_motion]),/immutable/);
   assert.equal((await call(`/api/admin/sessions/${sid}/end`,{method:'POST',admin:true,data:{request_key:randomUUID()}})).status,200);
   const ended=await snapshot();assert.equal(ended.frozen,true);assert.equal((await event()).body.phase,'CLOSED');
   console.log('PASS: v002 DRAFT isolation, graph guidance/arrival, freeze/restart/concurrency/idempotence, graph return and loop handoff/revision, immutable snapshots, no 90-second fallback, session end');

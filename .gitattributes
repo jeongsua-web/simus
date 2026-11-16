@@ -5,3 +5,6 @@ assets/library/maps/city_masterplan_v003/source/*.blend1 filter=lfs diff=lfs mer
 assets/library/maps/city_masterplan_v003/exchange/*.fbx filter=lfs diff=lfs merge=lfs -text
 unity/Assets/SIMUS/Scenes/city_masterplan_v003/models/SIMUS_City_Masterplan_v003_QualityPass.fbx filter=lfs diff=lfs merge=lfs -text
 unity/Assets/SIMUS/Scenes/city_masterplan_v003/models/SIMUS_City_Masterplan_v003.fbx filter=lfs diff=lfs merge=lfs -text
+*.blend filter=lfs diff=lfs merge=lfs -text
+*.fbx filter=lfs diff=lfs merge=lfs -text
+*.data filter=lfs diff=lfs merge=lfs -text

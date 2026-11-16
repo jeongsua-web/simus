@@ -143,6 +143,7 @@ try {
   await pool.query(await readFile(path.join(web, '../db/015_npc_graph_guidance.sql'), 'utf8'));
   await pool.query(await readFile(path.join(web, '../db/017_initial_session_creation.sql'), 'utf8'));
   await pool.query(await readFile(path.join(web, '../db/018_npc_event_visit.sql'), 'utf8'));
+  await pool.query(await readFile(path.join(web, '../db/019_participant_npc_routes.sql'), 'utf8'));
   await pool.query((await readFile(path.join(web, '../db/verify_schema.sql'), 'utf8')).replace(/^\\set.*$/gm, ''));
   // Synthetic geometry belongs only to this disposable test cluster. Production has no route default.
   await pool.query(`CREATE FUNCTION simus.test_fixture_npc_motion() RETURNS trigger LANGUAGE plpgsql AS $$
@@ -157,6 +158,12 @@ try {
         '-v', 'development_database=simus_integration', '-f', '../db/content/city-v002-events-phase2-draft.sql']) });
   } else if (env.TEST_INITIAL_SESSION_ONLY === '1') {
     await runInitialSessionIntegration({ pool, env, privateKey, publicJwk });
+  } else if (env.TEST_NPC_ROUTES_ONLY === '1') {
+    await pool.query(await readFile(path.join(web, '../db/seed_demo.sql'), 'utf8'));
+    const token = await new SignJWT({}).setProtectedHeader({ alg: 'RS256', kid: publicJwk.kid })
+      .setIssuer(env.ADMIN_TOKEN_ISSUER).setAudience(env.ADMIN_TOKEN_AUDIENCE)
+      .setSubject('dev-admin').setIssuedAt().setExpirationTime('30m').sign(privateKey);
+    await runCityV002Events({ pool, env, token, templateId: '10000000-0000-0000-0000-000000000001', stopServer, startServer });
   } else if (env.TEST_POPULATION_ONLY === '1') {
     await pool.query(await readFile(path.join(web, '../db/seed_demo.sql'), 'utf8'));
     const token = await new SignJWT({}).setProtectedHeader({ alg: 'RS256', kid: publicJwk.kid })

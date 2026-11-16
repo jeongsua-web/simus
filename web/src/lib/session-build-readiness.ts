@@ -51,6 +51,7 @@ export function assertEventLocations(motion: { map_version: string }, locations:
     assertLocationGroups(locations, motion.map_version);
     return;
   }
+  if (!locations.length) throw new ApiError(409, "NO_EVENT_LOCATIONS", "발생 가능한 상황 위치가 없습니다. 시작 전에 구현된 상황을 보행 지점에 배치해주세요.");
   for (const item of locations) {
     const location = item as { map_version: string; point: number[] };
     try {

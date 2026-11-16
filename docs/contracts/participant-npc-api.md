@@ -93,3 +93,13 @@
 가입 행의 원본 경로·joined_at·NPC ID는 계속 불변이다. 응답 `epoch/motion`은 서버의 지속된 이벤트 상태를 투영하므로 유도·정지·재개 시 달라질 수 있다. `motion.revision`은 전환마다 증가하는 JS 안전 정수이며, 동일 revision 경로 변조·역행은 거부한다. `motion.freeze_at`이 있으면 NPC 보간 시 회차 freeze_at과 함께 최소 시각으로 제한한다. 활성 이벤트에서는 서버가 정지 위치를 반환하고 완료 후 현재 위치에서 원본 경로를 이어간다. 위치 이벤트는 확정된 동일 map_version 위치만 사용한다.
 
 첫 선택의 자동 가입은 제거되었다. 입장 프로필 또는 join API로 먼저 가입하고, 서버가 발급한 본인 활성 event_id로 응답해야 한다. 기존 선택 재시도는 기존 request_key로 복원한다. 상세는 [이벤트 계약](npc-events.md) 및 web/API.md를 참고한다.
+
+## 2026-11-10 사용자별 v002 순찰 경로 (019 이후)
+
+v002 반복 경로는 입장 시 회차·참여자 ID를 시드로 서로 다른 출발점과 경유 순서를 만든 뒤 가입 행의 `npc_motion`에 저장한다. 설정 경로를 길이 기준으로 6등분해 경유점을 선택하고, 같은 map_version의 보행 그래프 최단 경로로 연결한다. 직선 지름길이나 이전 Neighborhood 좌표를 추가하지 않는다. 지도·경로 버전, 속도, 반복 여부는 회차 설정을 유지한다. 단방향·정지 경로 및 v002 외 지도는 기존 설정을 그대로 사용한다.
+
+019는 v002 신규 가입에서 points만 다르게 저장할 수 있도록 INSERT 검사를 확장한다. 가입 이후의 NPC ID·epoch·경로 불변 검사는 유지한다. 기존 가입 행은 변경하지 않으므로 이미 접속한 NPC의 경로는 그대로다. 새 가입의 개인 경로는 본인 화면·공개 군중·이벤트 검사·이벤트 후 복귀에서 공통으로 사용되며, 새로고침·재입장·서버 재시작으로 재배정하지 않는다.
+
+앱 배포 전에 관리형 migration으로 `019_participant_npc_routes.sql`을 적용해야 한다. 이번 코드 작업은 운영 DB를 변경하지 않는다. 새 전시 맵의 확정 경로를 뜻하지 않으며, 현재 등록된 v002 보행 그래프에만 적용된다.
+
+검증: `node --experimental-strip-types --test web/tests/participant-npc-motion.test.mjs`로 두 v002 지도 각각 32개 개인 경로의 그래프 구간·시작점 분리·결정성·설정 보존을 확인했다. `TEST_NPC_ROUTES_ONLY=1 TMPDIR=/tmp npm run test:integration`(web 디렉터리)은 격리 PostgreSQL에서 3명 경로 분리, 재입장, 서버 재시작, 이벤트 유도/정지/개인 경로 복귀, 불변 트리거를 통과했다. 빌드와 변경 파일 ESLint도 통과했다. 전체 통합 실행은 별도 `session-build.integration.mjs:28`의 기존 can_start 기대값에서 중단됐고, 전체 lint는 Unity 생성 framework/loader 파일 오류로 실패했다. 실제 브라우저·Unity 화면 및 운영 DB 적용은 미검증이다.

@@ -1,6 +1,7 @@
 import type { PoolClient } from "pg";
 import { npcPosition, type Npc } from "@/app/participate/npc-motion";
 import { guidanceMotion, guidancePosition, resumedNpc, projectedRevision } from "./npc-graph-motion";
+import { participantMotion } from "./participant-npc-motion";
 import { ApiError } from "./api";
 import { syncNpcEvents } from "./npc-events";
 
@@ -13,8 +14,9 @@ export async function joinSession(db: PoolClient, sessionId: string, participant
     AND status='RUNNING' AND starts_at<=clock_timestamp() AND clock_timestamp()<scheduled_end_at`, [sessionId]);
   if (!open.rowCount) throw new ApiError(409, "SESSION_CLOSED", "회차 입장이 종료되었거나 아직 시작되지 않았습니다.");
   if (!open.rows[0].npc_motion) throw new ApiError(409, "NPC_MOTION_NOT_CONFIGURED", "회차의 NPC 경로가 아직 설정되지 않았습니다.");
+  const motion = participantMotion(open.rows[0].npc_motion, `${sessionId}:${participantId}`);
   await db.query(`INSERT INTO simus.participant_sessions(session_id,participant_id,joined_at,npc_motion)
-    VALUES($1,$2,clock_timestamp(),$3)`, [sessionId, participantId, open.rows[0].npc_motion]);
+    VALUES($1,$2,clock_timestamp(),$3)`, [sessionId, participantId, motion]);
   await db.query(`INSERT INTO simus.participant_alignments(session_id,participant_id)
     VALUES($1,$2) ON CONFLICT DO NOTHING`, [sessionId, participantId]);
   // A request that crosses the scheduled deadline must roll back its membership.

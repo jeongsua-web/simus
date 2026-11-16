@@ -10,18 +10,24 @@ type Reason={code:string;message:string};
 type Session={map_version:string|null;path_version:string|null;id:string;name:string;status:"DRAFT"|"RUNNING"|"CLOSING"|"FINALIZED";starts_at:string|null;scheduled_end_at:string;duration_seconds:number|null;auto_cutoff_at:string;end_requested_at:string|null;finalized_at:string|null;end_mode:"AUTO"|"MANUAL"|null;participant_count:number;response_count:number;can_start:boolean;readiness:Reason[]};
 const statusLabel={DRAFT:"시작 전",RUNNING:"진행 중",CLOSING:"종료 처리 중",FINALIZED:"최종 확정"};
 
+function normalizeToken(input:string){
+  const value=input.trim().replace(/^Bearer\s+/i,"").replace(/\s/g,"");
+  if(!/^[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+$/.test(value)||value.length>16000)throw new Error("토큰 형식이 올바르지 않습니다. admin-token.txt의 토큰 내용만 복사해 붙여넣어 주세요.");
+  return value;
+}
+
 export default function AdminPage(){
   const [token,setToken]=useState(""); const [draftToken,setDraftToken]=useState("");
   const [hasLoaded,setHasLoaded]=useState(false);
   const [sessions,setSessions]=useState<Session[]>([]); const [loading,setLoading]=useState(false);
   const [error,setError]=useState(""); const [busy,setBusy]=useState<string|null>(null); const [confirmEnd,setConfirmEnd]=useState<string|null>(null);
   const load=useCallback(async(value=token)=>{ if(!value)return; setLoading(true);setError("");try{const response=await fetch("/api/admin/sessions",{headers:{Authorization:`Bearer ${value}`},cache:"no-store"});const body=await response.json();if(!response.ok)throw new Error(body.error?.message??"관리자 회차를 불러오지 못했습니다.");setSessions(body.sessions);setHasLoaded(true);}catch(e){setError(e instanceof Error?e.message:"관리자 회차를 불러오지 못했습니다.");}finally{setLoading(false);}},[token]);
-  useEffect(()=>{const timer=window.setTimeout(()=>{const saved=sessionStorage.getItem("simus_admin_token")??"";if(saved){setToken(saved);setDraftToken(saved);void load(saved);}},0);return()=>window.clearTimeout(timer);},[load]);
+  useEffect(()=>{const timer=window.setTimeout(()=>{const saved=sessionStorage.getItem("simus_admin_token")??"";if(saved){try{const value=normalizeToken(saved);sessionStorage.setItem("simus_admin_token",value);setToken(value);setDraftToken(value);void load(value);}catch(e){sessionStorage.removeItem("simus_admin_token");setError(e instanceof Error?e.message:"토큰을 다시 입력해 주세요.");}}},0);return()=>window.clearTimeout(timer);},[load]);
   useEffect(()=>{if(!token)return;const timer=window.setInterval(()=>{if(!busy)void load(token);},sessions.some(s=>s.status==="CLOSING")?3000:10000);return()=>clearInterval(timer);},[token,busy,sessions,load]);
-  function connect(event:FormEvent){event.preventDefault();const value=draftToken.trim();if(!value)return;setHasLoaded(false);sessionStorage.setItem("simus_admin_token",value);setToken(value);void load(value);}
+  function connect(event:FormEvent){event.preventDefault();try{const value=normalizeToken(draftToken);setHasLoaded(false);sessionStorage.setItem("simus_admin_token",value);setDraftToken(value);setToken(value);void load(value);}catch(e){setError(e instanceof Error?e.message:"토큰을 다시 입력해 주세요.");}}
   async function action(session:Session,kind:"start"|"end"){if(!token||busy)return;setBusy(session.id);setError("");try{const response=await fetch(`/api/admin/sessions/${session.id}/${kind}`,{method:"POST",headers:{Authorization:`Bearer ${token}`,"Content-Type":"application/json"},body:JSON.stringify({request_key:crypto.randomUUID()})});const body=await response.json();if(!response.ok)throw new Error(body.error?.message??"작업을 완료하지 못했습니다.");setConfirmEnd(null);await load(token);}catch(e){setError(e instanceof Error?e.message:"작업을 완료하지 못했습니다.");}finally{setBusy(null);}}
   function disconnect(){sessionStorage.removeItem("simus_admin_token");setToken("");setDraftToken("");setSessions([]);setHasLoaded(false);setError("");}
-  if(!token)return <main className={styles.page}><section className={styles.login}><p className={styles.eyebrow}>SIM:US OPERATIONS</p><h1>관리자 인증</h1><p>발급받은 관리자 Bearer JWT를 입력하세요. 토큰은 현재 브라우저 탭에만 보관되며 서버가 서명, 만료, 발급자와 활성 관리자 권한을 검증합니다.</p><form onSubmit={connect}><label htmlFor="token">관리자 토큰</label><textarea id="token" rows={5} value={draftToken} onChange={e=>setDraftToken(e.target.value)} autoComplete="off" spellCheck={false}/><button>운영 화면 열기</button></form></section></main>;
+  if(!token)return <main className={styles.page}><section className={styles.login}><p className={styles.eyebrow}>SIM:US OPERATIONS</p><h1>관리자 인증</h1><p>발급받은 관리자 Bearer JWT를 입력하세요. 토큰은 현재 브라우저 탭에만 보관되며 서버가 서명, 만료, 발급자와 활성 관리자 권한을 검증합니다.</p>{error&&<div className={styles.error} role="alert">{error}</div>}<form onSubmit={connect}><label htmlFor="token">관리자 토큰</label><textarea id="token" rows={5} value={draftToken} onChange={e=>setDraftToken(e.target.value)} autoComplete="off" spellCheck={false}/><button>운영 화면 열기</button></form></section></main>;
   return <main className={styles.page}><header className={styles.header}><div><p className={styles.eyebrow}>SIM:US OPERATIONS</p><h1>회차 운영</h1></div><div className={styles.headerActions}><button onClick={()=>void load()} disabled={loading}>{loading?"불러오는 중…":"새로고침"}</button><button className={styles.quiet} onClick={disconnect}>인증 해제</button></div></header>
     {error&&<div className={styles.error} role="alert"><span>{error}</span><button onClick={()=>void load()}>다시 시도</button></div>}
     {hasLoaded&&<CreateSession token={token} sessions={sessions} onCreated={()=>load(token)}/>}
