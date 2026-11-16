@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { scanPlace } from '../src/lib/npc-place-trajectory.ts';
-import { MAP_VERSION, routeBetween, nodePoint, pathLength } from '../src/lib/city-v002-graph.mjs';
-import { eventManifest } from '../src/lib/city-v002-event-mapping.mjs';
+import { scanPlace } from '../src/lib/npc/npc-place-trajectory.ts';
+import { MAP_VERSION, routeBetween, nodePoint, pathLength } from '../src/lib/city/city-v002-graph.mjs';
+import { eventManifest } from '../src/lib/city/city-v002-event-mapping.mjs';
 const epoch='2026-01-01T00:00:00Z',start=Date.parse(epoch);
 test('road control: exact millisecond entry survives epoch rounding and polling gaps',()=>{
   const npc={npc_id:'test',epoch,motion:{map_version:MAP_VERSION,points:[[110.882,.16,-65.75],[86,.16,-65.75],[110.882,.16,-65.75]],speed_mps:1.2,loop:true}};

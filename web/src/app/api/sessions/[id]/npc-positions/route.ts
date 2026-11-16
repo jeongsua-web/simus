@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
 import { ApiError, handle, json, transaction, uuid } from "@/lib/api";
-import { readNpcs } from "@/lib/participant-npcs";
-import { positionSnapshot, version } from "@/lib/npc-position-sync";
+import { readNpcs } from "@/lib/npc/participant-npcs";
+import { positionSnapshot, version } from "@/lib/npc/npc-position-sync";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export async function GET(request: NextRequest, context: { params: Promise<{ id: string }> }) {

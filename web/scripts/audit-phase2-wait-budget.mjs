@@ -2,8 +2,8 @@
 // guidance, no polling delay and no stops; they cannot certify a 90s maximum.
 import { writeFile } from 'node:fs/promises';
 import assert from 'node:assert/strict';
-import { eventManifest } from '../src/lib/city-v002-event-mapping.mjs';
-import { pedestrianGraph, graphDistanceTo, defaultMotion, routeBetween, pathLength } from '../src/lib/city-v002-graph.mjs';
+import { eventManifest } from '../src/lib/city/city-v002-event-mapping.mjs';
+import { pedestrianGraph, graphDistanceTo, defaultMotion, routeBetween, pathLength } from '../src/lib/city/city-v002-graph.mjs';
 
 const ready = eventManifest.events.filter(row => row.status === 'READY');
 const speed = defaultMotion().speed_mps;

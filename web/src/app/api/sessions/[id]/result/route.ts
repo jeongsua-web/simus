@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 import { ApiError, authenticate, handle, json, transaction, uuid } from "@/lib/api";
-import { readParticipantResult } from "@/lib/participant-results";
+import { readParticipantResult } from "@/lib/participants/participant-results";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 export async function GET(request: NextRequest, context: { params: Promise<{ id: string }> }) {

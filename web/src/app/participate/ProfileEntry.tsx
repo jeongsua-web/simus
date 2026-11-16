@@ -3,7 +3,7 @@
 import { Black_Han_Sans, IBM_Plex_Mono } from "next/font/google";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import CitizenCard from "./CitizenCard";
-import { CITIZEN_CHARACTERS, CITIZEN_GLASSES, getCitizenCharacter, type CitizenGlassesId } from "@/lib/citizen-characters";
+import { CITIZEN_CHARACTERS, CITIZEN_GLASSES, getCitizenCharacter, type CitizenGlassesId } from "@/lib/npc/citizen-characters";
 import type { ApiError, Department, Profile, Session } from "./types";
 import styles from "./ProfileEntry.module.css";
 
@@ -26,7 +26,7 @@ function nicknameError(value: string) {
 }
 
 const wait = (ms: number) => new Promise(resolve => window.setTimeout(resolve, ms));
-class EntryError extends Error {}
+class EntryError extends Error { }
 
 export default function ProfileEntry({ session, departments, onSaved, onEntered, onStale, children }: {
   session: Session; departments: Department[];
@@ -203,7 +203,7 @@ export default function ProfileEntry({ session, departments, onSaved, onEntered,
           <button type="button" className={styles.cta} disabled={!ready || saving} onClick={() => void enter()}>
             {saving && !entered ? "등록하는 중…" : <>도시에 입장하기 <span className={styles.arrow} aria-hidden="true">→</span></>}
           </button>
-          <p className={styles.note}>입장한 뒤에는 헤어·안경·닉네임·학과·MBTI를 바꿀 수 없어요.</p>
+          <p className={styles.note}>입장한 뒤에는 외관·닉네임·학과·MBTI를 바꿀 수 없어요.</p>
         </div>
       </div>
 

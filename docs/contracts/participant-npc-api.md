@@ -103,3 +103,7 @@ v002 반복 경로는 입장 시 회차·참여자 ID를 시드로 서로 다른
 앱 배포 전에 관리형 migration으로 `019_participant_npc_routes.sql`을 적용해야 한다. 이번 코드 작업은 운영 DB를 변경하지 않는다. 새 전시 맵의 확정 경로를 뜻하지 않으며, 현재 등록된 v002 보행 그래프에만 적용된다.
 
 검증: `node --experimental-strip-types --test web/tests/participant-npc-motion.test.mjs`로 두 v002 지도 각각 32개 개인 경로의 그래프 구간·시작점 분리·결정성·설정 보존을 확인했다. `TEST_NPC_ROUTES_ONLY=1 TMPDIR=/tmp npm run test:integration`(web 디렉터리)은 격리 PostgreSQL에서 3명 경로 분리, 재입장, 서버 재시작, 이벤트 유도/정지/개인 경로 복귀, 불변 트리거를 통과했다. 빌드와 변경 파일 ESLint도 통과했다. 전체 통합 실행은 별도 `session-build.integration.mjs:28`의 기존 can_start 기대값에서 중단됐고, 전체 lint는 Unity 생성 framework/loader 파일 오류로 실패했다. 실제 브라우저·Unity 화면 및 운영 DB 적용은 미검증이다.
+
+## v003 local representative route (2026-11-16)
+
+Local map `city-masterplan-v003-local-v1` / path `city-masterplan-v003-plaza30-v1` uses a fixed authored polyline and normal NPC bridge protocol 1. Its joined route is unchanged by participant randomization. Before manual start the server projects speed zero at route point zero. Explicit start projects guidance_motion; server trajectory/radius detection creates the active event and frozen projection. Choice writes actual city deltas once and retains the stop through RESULT. Explicit result confirmation completes the event and projects the authored nonloop resume route. Local start/confirm require `SIMUS_V003_LOCAL_TEST=1`. Endpoint details: [API](../../web/API.md#v003-isolated-local-representative-test-2026-11-16).

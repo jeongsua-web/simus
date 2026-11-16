@@ -1,5 +1,5 @@
 import type { Ref } from "react";
-import { CITIZEN_GLASSES, getCitizenCharacter, getDefaultCitizenGlasses } from "@/lib/citizen-characters";
+import { CITIZEN_GLASSES, getCitizenCharacter, getDefaultCitizenGlasses } from "@/lib/npc/citizen-characters";
 import styles from "./CitizenCard.module.css";
 
 export default function CitizenCard({ nickname, department, mbti, citizenNo, status = "waiting", cardRef, characterId, glassesId }: {
@@ -21,7 +21,7 @@ export default function CitizenCard({ nickname, department, mbti, citizenNo, sta
             // eslint-disable-next-line @next/next/no-img-element
             <img src={character.portrait} alt={`${character.label} · ${glasses?.label ?? "안경 없음"} 정면 모습`} width={160} height={200} />
           ) : (
-          <svg viewBox="0 0 80 100" fill="none"><circle cx="40" cy="34" r="17" fill="currentColor"/><path d="M9 94V82c0-21 13-31 31-31s31 10 31 31v12" fill="currentColor"/></svg>)}
+            <svg viewBox="0 0 80 100" fill="none"><circle cx="40" cy="34" r="17" fill="currentColor" /><path d="M9 94V82c0-21 13-31 31-31s31 10 31 31v12" fill="currentColor" /></svg>)}
           <span>{character?.label ?? "캐릭터 미선택"}</span>
         </div>
         <dl className={styles.fields}>

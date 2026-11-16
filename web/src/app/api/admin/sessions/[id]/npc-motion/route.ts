@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
-import { adminSubject, requireAdmin } from "@/lib/admin-auth";
+import { adminSubject, requireAdmin } from "@/lib/auth/admin-auth";
 import { ApiError, body, checkOrigin, handle, json, transaction, uuid } from "@/lib/api";
-import { validateMotion } from "@/lib/npc-position-sync";
+import { validateMotion } from "@/lib/npc/npc-position-sync";
 export const runtime = "nodejs";
 export async function PUT(request: NextRequest, context: { params: Promise<{ id: string }> }) {
   return handle(async () => {

@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
-import { MAP_VERSION, PATH_VERSION, nodePoint, locate, pathLength, isGraphSegment } from '../src/lib/city-v002-graph.mjs';
-import { participantMotion } from '../src/lib/participant-npc-motion.ts';
+import { MAP_VERSION, PATH_VERSION, nodePoint, locate, pathLength, isGraphSegment } from '../src/lib/city/city-v002-graph.mjs';
+import { participantMotion } from '../src/lib/npc/participant-npc-motion.ts';
 import { npcPosition } from '../src/app/participate/npc-motion.ts';
 
 export async function runCityV002Events({ pool, env, token, templateId, stopServer, startServer }) {

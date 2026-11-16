@@ -1,10 +1,272 @@
-.page{min-height:100svh;display:grid;place-items:center;padding:32px 16px;background:radial-gradient(circle at 1px 1px,#203c3020 1px,transparent 0) 0 0/20px 20px,#e4ecdf;color:#20372e;color-scheme:light}
-.card{width:min(100%,650px);min-width:0;display:grid;gap:20px;padding:clamp(20px,6vw,40px);border:2px solid #20372e;border-radius:24px;background:#fffaf0;box-shadow:0 7px 0 #20372e;overflow-wrap:anywhere}
-.card h1{font-size:clamp(1.7rem,7vw,2.5rem);line-height:1.2;letter-spacing:-.045em}.eyebrow{font-size:.75rem;font-weight:900;letter-spacing:.14em}.sessionName{color:#5d6a60;font-size:.85rem;margin-bottom:-12px}.card .cardTitle{font-size:1.2rem}
-.pending{display:flex;gap:16px;padding:20px;border:1px solid #c5cbbd;border-radius:14px;background:#f0efdf;line-height:1.65}.pending>div{min-width:0}.pulse{flex:0 0 12px;width:12px;height:12px;margin-top:7px;border-radius:50%;background:#cc8620;box-shadow:0 0 0 6px #ead8b6}
-.result{position:relative;min-width:0;padding:clamp(20px,5vw,32px);border:2px solid #20372e;border-radius:16px;background:#c1e7ce;color:#20372e;box-shadow:4px 4px 0 #20372e}.result>p:first-child{font-size:.8rem;font-weight:800}.result h2{margin:10px 0 16px;font-size:clamp(2.7rem,11vw,4.3rem);line-height:1.1;letter-spacing:-.055em}.interpretation{line-height:1.7;white-space:pre-wrap;overflow-wrap:anywhere}.responseBadge{display:inline-block;margin-top:20px;padding:8px 12px;border:1px solid #20372e;border-radius:8px;background:#fffaf0;font-size:.85rem;font-weight:800}
-.scoreDetails{margin-top:22px;padding-top:14px;border-top:1px dashed #557965}.scoreDetails summary{font-size:.85rem;font-weight:800}.scoreDetails>p{font-size:.8rem;line-height:1.6;margin-top:14px}.result dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:14px}.result dl div{padding:12px;border-radius:8px;background:#ffffff60}.result dt{font-size:.75rem}.result dd{margin-top:4px;font-size:1.2rem;font-weight:800}
-.actions{display:flex;flex-wrap:wrap;gap:10px}.actions button,.actions a,.card>button,.share button{min-height:46px;padding:12px 18px;border:2px solid #20372e;border-radius:10px;background:#20372e;color:#fffaf0;font:inherit;font-weight:800;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;text-align:center;white-space:normal}.actions a{background:transparent;color:#20372e}.card button:active,.actions a:active{transform:translateY(2px)}.card button:disabled{opacity:.6;cursor:wait}
-.share{padding:16px;border:1px solid #bac2b3;border-radius:12px;line-height:1.5}.share summary{font-weight:800}.shareContent{display:grid;gap:12px;margin-top:16px}.share p{font-size:.85rem;color:#4d6157}.share textarea{box-sizing:border-box;width:100%;min-width:0;resize:vertical;padding:12px;border:1px solid #748b78;border-radius:8px;background:#fff;color:#20372e;font:inherit;line-height:1.5;overflow-wrap:anywhere}.share label{font-size:.85rem;font-weight:700}.card summary{cursor:pointer;min-height:44px;align-content:center}.card button:focus-visible,.card a:focus-visible,.card summary:focus-visible,.share textarea:focus-visible{outline:3px solid #b96b13;outline-offset:4px}
-@media(max-width:420px){.page{padding:16px 12px 24px}.card{gap:18px;border-radius:18px}.pending{padding:16px}.actions>*{width:100%}}
-@media(prefers-reduced-motion:reduce){.card button:active,.actions a:active{transform:none}}
+.page {
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    padding: 32px 16px;
+    background: radial-gradient(circle at 1px 1px, #203c3020 1px, transparent 0) 0 0/20px 20px, #e4ecdf;
+    color: #20372e;
+    color-scheme: light
+}
+
+.card {
+    width: min(100%, 650px);
+    min-width: 0;
+    display: grid;
+    gap: 20px;
+    padding: clamp(20px, 6vw, 40px);
+    border: 2px solid #20372e;
+    border-radius: 24px;
+    background: #fffaf0;
+    box-shadow: 0 7px 0 #20372e;
+    overflow-wrap: anywhere
+}
+
+.card h1 {
+    font-size: clamp(1.7rem, 7vw, 2.5rem);
+    line-height: 1.2;
+    letter-spacing: -.045em
+}
+
+.eyebrow {
+    font-size: .75rem;
+    font-weight: 900;
+    letter-spacing: .14em
+}
+
+.sessionName {
+    color: #5d6a60;
+    font-size: .85rem;
+    margin-bottom: -12px
+}
+
+.card .cardTitle {
+    font-size: 1.2rem
+}
+
+.pending {
+    display: flex;
+    gap: 16px;
+    padding: 20px;
+    border: 1px solid #c5cbbd;
+    border-radius: 14px;
+    background: #f0efdf;
+    line-height: 1.65
+}
+
+.pending>div {
+    min-width: 0
+}
+
+.pulse {
+    flex: 0 0 12px;
+    width: 12px;
+    height: 12px;
+    margin-top: 7px;
+    border-radius: 50%;
+    background: #cc8620;
+    box-shadow: 0 0 0 6px #ead8b6
+}
+
+.result {
+    position: relative;
+    min-width: 0;
+    padding: clamp(20px, 5vw, 32px);
+    border: 2px solid #20372e;
+    border-radius: 16px;
+    background: #c1e7ce;
+    color: #20372e;
+    box-shadow: 4px 4px 0 #20372e
+}
+
+.result>p:first-child {
+    font-size: .8rem;
+    font-weight: 800
+}
+
+.result h2 {
+    margin: 10px 0 16px;
+    font-size: clamp(2.7rem, 11vw, 4.3rem);
+    line-height: 1.1;
+    letter-spacing: -.055em
+}
+
+.interpretation {
+    line-height: 1.7;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere
+}
+
+.responseBadge {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 12px;
+    border: 1px solid #20372e;
+    border-radius: 8px;
+    background: #fffaf0;
+    font-size: .85rem;
+    font-weight: 800
+}
+
+.scoreDetails {
+    margin-top: 22px;
+    padding-top: 14px;
+    border-top: 1px dashed #557965
+}
+
+.scoreDetails summary {
+    font-size: .85rem;
+    font-weight: 800
+}
+
+.scoreDetails>p {
+    font-size: .8rem;
+    line-height: 1.6;
+    margin-top: 14px
+}
+
+.result dl {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-top: 14px
+}
+
+.result dl div {
+    padding: 12px;
+    border-radius: 8px;
+    background: #ffffff60
+}
+
+.result dt {
+    font-size: .75rem
+}
+
+.result dd {
+    margin-top: 4px;
+    font-size: 1.2rem;
+    font-weight: 800
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px
+}
+
+.actions button,
+.actions a,
+.card>button,
+.share button {
+    min-height: 46px;
+    padding: 12px 18px;
+    border: 2px solid #20372e;
+    border-radius: 10px;
+    background: #20372e;
+    color: #fffaf0;
+    font: inherit;
+    font-weight: 800;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    white-space: normal
+}
+
+.actions a {
+    background: transparent;
+    color: #20372e
+}
+
+.card button:active,
+.actions a:active {
+    transform: translateY(2px)
+}
+
+.card button:disabled {
+    opacity: .6;
+    cursor: wait
+}
+
+.share {
+    padding: 16px;
+    border: 1px solid #bac2b3;
+    border-radius: 12px;
+    line-height: 1.5
+}
+
+.share summary {
+    font-weight: 800
+}
+
+.shareContent {
+    display: grid;
+    gap: 12px;
+    margin-top: 16px
+}
+
+.share p {
+    font-size: .85rem;
+    color: #4d6157
+}
+
+.share textarea {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    resize: vertical;
+    padding: 12px;
+    border: 1px solid #748b78;
+    border-radius: 8px;
+    background: #fff;
+    color: #20372e;
+    font: inherit;
+    line-height: 1.5;
+    overflow-wrap: anywhere
+}
+
+.share label {
+    font-size: .85rem;
+    font-weight: 700
+}
+
+.card summary {
+    cursor: pointer;
+    min-height: 44px;
+    align-content: center
+}
+
+.card button:focus-visible,
+.card a:focus-visible,
+.card summary:focus-visible,
+.share textarea:focus-visible {
+    outline: 3px solid #b96b13;
+    outline-offset: 4px
+}
+
+@media(max-width:420px) {
+    .page {
+        padding: 16px 12px 24px
+    }
+
+    .card {
+        gap: 18px;
+        border-radius: 18px
+    }
+
+    .pending {
+        padding: 16px
+    }
+
+    .actions>* {
+        width: 100%
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    .card button:active,
+    .actions a:active {
+        transform: none
+    }
+}

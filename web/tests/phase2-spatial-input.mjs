@@ -1,7 +1,7 @@
 // Export authored server routes for the Unity collider/support audit. No asset writes.
 import { writeFile } from 'node:fs/promises';
-import { eventManifest } from '../src/lib/city-v002-event-mapping.mjs';
-import { routeBetween, nodePoint, pedestrianGraph, pathLength } from '../src/lib/city-v002-graph.mjs';
+import { eventManifest } from '../src/lib/city/city-v002-event-mapping.mjs';
+import { routeBetween, nodePoint, pedestrianGraph, pathLength } from '../src/lib/city/city-v002-graph.mjs';
 const rows=eventManifest.events.filter(e=>e.status==='READY').map(row=>({
   code:row.code,scene_path:row.scene_path,place_id:row.place_id,location:row.event_location,
   from_plaza:routeBetween(nodePoint('CAMPUS_PLAZA'),row.event_location.point),

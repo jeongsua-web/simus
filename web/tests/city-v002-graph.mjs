@@ -1,8 +1,8 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
-import { pedestrianGraph as graph, LEGACY_MAP_VERSION, graphForMap, defaultMotion, nodePoint, routeBetween, isGraphSegment, pathLength, locate, graphMotion } from '../src/lib/city-v002-graph.mjs';
+import { pedestrianGraph as graph, LEGACY_MAP_VERSION, graphForMap, defaultMotion, nodePoint, routeBetween, isGraphSegment, pathLength, locate, graphMotion } from '../src/lib/city/city-v002-graph.mjs';
 import phase1 from '../src/lib/data/city-v002-phase1-event-locations.json' with { type: 'json' };
-import { eventManifest, preparedLocation } from '../src/lib/city-v002-event-mapping.mjs';
+import { eventManifest, preparedLocation } from '../src/lib/city/city-v002-event-mapping.mjs';
 import { npcPosition } from '../src/app/participate/npc-motion.ts';
 
 export function assertGraphRoute(points, loop = false) {

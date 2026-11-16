@@ -4,7 +4,7 @@ import { pathToFileURL } from 'node:url';
 import { mkdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { enterCity } from './participant-entry.mjs';
-import { MAP_VERSION, PATH_VERSION, nodePoint, distance } from '../src/lib/city-v002-graph.mjs';
+import { MAP_VERSION, PATH_VERSION, nodePoint, distance } from '../src/lib/city/city-v002-graph.mjs';
 
 export async function runV002SessionBrowser({pool,env,token,templateId,root}) {
   if (!env.TEST_V002_PLAYWRIGHT_MODULE) return console.log('SKIP: actual v002 session WebGL browser (set TEST_V002_PLAYWRIGHT_MODULE)');

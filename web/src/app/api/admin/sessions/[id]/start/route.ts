@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
-import { adminSubject, requireAdmin } from "@/lib/admin-auth";
+import { adminSubject, requireAdmin } from "@/lib/auth/admin-auth";
 import { body, checkOrigin, handle, json, transaction, uuid } from "@/lib/api";
-import { startSession } from "@/lib/session-lifecycle";
+import { startSession } from "@/lib/sessions/session-lifecycle";
 export const runtime = "nodejs";
 export async function POST(request: NextRequest, context: { params: Promise<{ id: string }> }) {
   return handle(async () => {

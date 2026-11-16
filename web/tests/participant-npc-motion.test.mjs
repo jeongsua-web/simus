@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { participantMotion } from '../src/lib/participant-npc-motion.ts';
-import { defaultMotion, LEGACY_MAP_VERSION, MAP_VERSION, isGraphSegment } from '../src/lib/city-v002-graph.mjs';
+import { participantMotion } from '../src/lib/npc/participant-npc-motion.ts';
+import { defaultMotion, LEGACY_MAP_VERSION, MAP_VERSION, isGraphSegment } from '../src/lib/city/city-v002-graph.mjs';
 
 for (const version of [LEGACY_MAP_VERSION, MAP_VERSION]) test(`${version}: individual routes stay on the pedestrian graph and survive rejoin`, () => {
   const original = defaultMotion(version), saved = structuredClone(original);

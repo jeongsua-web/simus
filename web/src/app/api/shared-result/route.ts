@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 import { ApiError, body, checkOrigin, handle, hashToken, json, transaction } from "@/lib/api";
-import { readParticipantResult } from "@/lib/participant-results";
+import { readParticipantResult } from "@/lib/participants/participant-results";
 
 export const runtime = "nodejs";
 

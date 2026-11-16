@@ -3,9 +3,9 @@ import { randomUUID } from 'node:crypto';
 import { readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { SignJWT } from 'jose';
-import { MAP_VERSION, defaultMotion, nodePoint } from '../src/lib/city-v002-graph.mjs';
+import { MAP_VERSION, defaultMotion, nodePoint } from '../src/lib/city/city-v002-graph.mjs';
 import content from '../src/lib/data/initial-session-content.json' with { type: 'json' };
-import { preparedLocation } from '../src/lib/city-v002-event-mapping.mjs';
+import { preparedLocation } from '../src/lib/city/city-v002-event-mapping.mjs';
 
 // Called only by the disposable-cluster runner; never connects to a configured DB.
 export async function runInitialSessionIntegration({ pool, env, privateKey, publicJwk }) {

@@ -1,0 +1,61 @@
+{
+  "map_version": "city-masterplan-v003-local-v1",
+  "path_version": "city-masterplan-v003-plaza30-v1",
+  "source_scene_sha256": "4b4e5dfbbf51b0754dd3de7435af67ef4670582994e7cf9cc10b7091123f6c27",
+  "points": [
+    [
+      44.35,
+      0.252,
+      65
+    ],
+    [
+      44.35,
+      0.252,
+      72
+    ],
+    [
+      44.35,
+      0.252,
+      79
+    ]
+  ],
+  "speed_mps": 1.4,
+  "loop": false,
+  "interaction": {
+    "point": [
+      44.35,
+      0.252,
+      79
+    ],
+    "radius_m": 0.6
+  },
+  "event_location": {
+    "map_version": "city-masterplan-v003-local-v1",
+    "place_id": "EXHIBITION_30",
+    "point": [
+      44.35,
+      0.252,
+      79
+    ],
+    "radius_m": 0.6
+  },
+  "resume_points": [
+    [
+      44.35,
+      0.252,
+      79
+    ],
+    [
+      44.35,
+      0.252,
+      72
+    ],
+    [
+      44.35,
+      0.252,
+      65
+    ]
+  ],
+  "validation_status": "candidate_pending_unity_physics",
+  "exhibition_approved": false
+}

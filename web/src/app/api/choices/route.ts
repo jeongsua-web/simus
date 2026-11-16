@@ -1,6 +1,8 @@
 import { NextRequest } from "next/server";
 import { ApiError, authenticate, body, checkOrigin, handle, json, requireOpen, transaction, uuid } from "@/lib/api";
-import { completeEvent } from "@/lib/npc-events";
+import { completeEvent } from "@/lib/npc/npc-events";
+import { V003_MAP_VERSION } from "@/lib/city/city-builds";
+import { choiceOutcome } from '@/lib/routes/v003-local-event';
 export const runtime = "nodejs";
 export async function POST(request: NextRequest) {
   return handle(async () => {
@@ -15,31 +17,31 @@ export async function POST(request: NextRequest) {
       const pid = await authenticate(db, request);
       if (!pid) throw new ApiError(401, "UNAUTHORIZED", "먼저 익명 참여자를 생성해주세요.");
       // Serialize submissions and session transitions using the parent session row.
-      const session = await db.query("SELECT id FROM simus.simulation_sessions WHERE id=$1 FOR UPDATE", [sid]);
+      const session = await db.query("SELECT id,npc_motion FROM simus.simulation_sessions WHERE id=$1 FOR UPDATE", [sid]);
       if (!session.rowCount) throw new ApiError(404, "SESSION_NOT_FOUND", "회차를 찾을 수 없습니다.");
       const prior = await db.query(`SELECT id,situation_id,choice_id,event_id,state_version::text FROM simus.choice_records
-        WHERE session_id=$1 AND participant_id=$2 AND request_key=$3`, [sid,pid,key]);
+        WHERE session_id=$1 AND participant_id=$2 AND request_key=$3`, [sid, pid, key]);
       if (prior.rowCount) {
         const r = prior.rows[0];
         if (r.situation_id !== tid || r.choice_id !== cid || r.event_id !== eid) throw new ApiError(409, "REQUEST_KEY_CONFLICT", "같은 요청 키에 다른 선택을 사용할 수 없습니다.");
-        return { record_id: r.id, state_version: r.state_version, replayed: true };
+        return { record_id: r.id, state_version: r.state_version, replayed: true, ...(eid ? await choiceOutcome(db, sid, pid, eid) : {}) };
       }
       if (!eid) throw new ApiError(400, "EVENT_REQUIRED", "현재 이벤트 식별자가 필요합니다.");
       await requireOpen(db, sid);
-      const occurrence = await db.query(`SELECT id FROM simus.npc_events WHERE id=$1 AND session_id=$2 AND participant_id=$3 AND situation_id=$4 AND status='ACTIVE' FOR UPDATE`, [eid,sid,pid,tid]);
+      const occurrence = await db.query(`SELECT id FROM simus.npc_events WHERE id=$1 AND session_id=$2 AND participant_id=$3 AND situation_id=$4 AND status='ACTIVE' FOR UPDATE`, [eid, sid, pid, tid]);
       if (!occurrence.rowCount) throw new ApiError(409, "EVENT_NOT_ACTIVE", "현재 발생한 이벤트에만 응답할 수 있습니다.");
       const choice = await db.query(`SELECT c.id FROM simus.session_choices c JOIN simus.simulation_sessions s ON s.id=c.session_id
         WHERE c.session_id=$1 AND c.situation_id=$2 AND c.id=$3 AND s.impact_scale <> 'NaN'::numeric
         AND c.happiness_base <> 'NaN'::numeric AND c.safety_base <> 'NaN'::numeric AND c.cleanliness_base <> 'NaN'::numeric
         AND NOT EXISTS (SELECT 1 FROM simus.choice_region_effects e WHERE e.session_id=c.session_id
-        AND e.situation_id=c.situation_id AND e.choice_id=c.id AND e.pollution_base='NaN'::numeric)`, [sid,tid,cid]);
+        AND e.situation_id=c.situation_id AND e.choice_id=c.id AND e.pollution_base='NaN'::numeric)`, [sid, tid, cid]);
       if (!choice.rowCount) throw new ApiError(400, "INVALID_CHOICE", "유효한 선택지가 아닙니다.");
       const ready = await db.query(`SELECT 1 FROM simus.city_states WHERE session_id=$1
         AND EXISTS (SELECT 1 FROM simus.session_regions WHERE session_id=$1)
         AND NOT EXISTS (SELECT 1 FROM simus.session_regions r LEFT JOIN simus.region_states rs
         ON rs.session_id=r.session_id AND rs.region_id=r.id WHERE r.session_id=$1 AND rs.region_id IS NULL)`, [sid]);
       if (!ready.rowCount) throw new ApiError(409, "STATE_NOT_READY", "도시 또는 지역 초기 상태가 준비되지 않았습니다.");
-      await db.query("INSERT INTO simus.participant_alignments(session_id,participant_id) VALUES ($1,$2) ON CONFLICT DO NOTHING", [sid,pid]);
+      await db.query("INSERT INTO simus.participant_alignments(session_id,participant_id) VALUES ($1,$2) ON CONFLICT DO NOTHING", [sid, pid]);
       const record = await db.query(`WITH effects AS (
         SELECT c.*,s.impact_scale,clock_timestamp() AS received_at,
           (c.happiness_base*s.impact_scale)::numeric(20,10) AS dh,
@@ -57,11 +59,11 @@ export async function POST(request: NextRequest) {
         safety_delta_requested,safety_delta_applied,cleanliness_delta_requested,cleanliness_delta_applied,state_version)
         SELECT $1,$2,$3,$4,$5,$6,e.received_at,e.alignment_dx,e.alignment_dy,e.impact_scale,
         e.dh,u.happiness-o.happiness,e.ds,u.safety-o.safety,e.dc,u.cleanliness-o.cleanliness,u.version
-        FROM effects e,old o,updated u RETURNING id,state_version::text`, [sid,pid,tid,cid,key,eid]);
+        FROM effects e,old o,updated u RETURNING id,state_version::text`, [sid, pid, tid, cid, key, eid]);
       await db.query(`UPDATE simus.participant_alignments a SET x_score=a.x_score+c.alignment_dx,
         y_score=a.y_score+c.alignment_dy,response_count=a.response_count+1,updated_at=clock_timestamp()
         FROM simus.session_choices c WHERE a.session_id=$1 AND a.participant_id=$2
-        AND c.session_id=a.session_id AND c.situation_id=$3 AND c.id=$4`, [sid,pid,tid,cid]);
+        AND c.session_id=a.session_id AND c.situation_id=$3 AND c.id=$4`, [sid, pid, tid, cid]);
       await db.query(`WITH old AS (
         SELECT rs.*,(e.pollution_base*s.impact_scale)::numeric(20,10) AS delta FROM simus.region_states rs
         JOIN simus.choice_region_effects e ON e.session_id=rs.session_id AND e.region_id=rs.region_id
@@ -71,12 +73,12 @@ export async function POST(request: NextRequest) {
         UPDATE simus.region_states rs SET pollution=greatest(0,least(100,o.pollution+o.delta)),updated_at=clock_timestamp()
         FROM old o WHERE rs.session_id=o.session_id AND rs.region_id=o.region_id RETURNING rs.*
       ) INSERT INTO simus.choice_record_region_effects(choice_record_id,session_id,region_id,delta_requested,delta_applied)
-        SELECT $4,$1,o.region_id,o.delta,u.pollution-o.pollution FROM old o JOIN updated u ON u.region_id=o.region_id`, [sid,tid,cid,record.rows[0].id]);
+        SELECT $4,$1,o.region_id,o.delta,u.pollution-o.pollution FROM old o JOIN updated u ON u.region_id=o.region_id`, [sid, tid, cid, record.rows[0].id]);
       await db.query("UPDATE simus.participants SET last_seen_at=clock_timestamp() WHERE id=$1", [pid]);
-      await completeEvent(db, sid, pid, eid);
+      if (session.rows[0].npc_motion?.map_version !== V003_MAP_VERSION) await completeEvent(db, sid, pid, eid);
       // Roll back if admission closed while the transaction was processing.
       await requireOpen(db, sid);
-      return { record_id: record.rows[0].id, state_version: record.rows[0].state_version, replayed: false };
+      return { record_id: record.rows[0].id, state_version: record.rows[0].state_version, replayed: false, ...await choiceOutcome(db, sid, pid, eid) };
     });
     return json(result, result.replayed ? 200 : 201);
   });

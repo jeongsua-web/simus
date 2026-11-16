@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
 import { ApiError, authenticate, body, checkOrigin, handle, json, requireOpen, transaction, uuid } from "@/lib/api";
-import { joinSession } from "@/lib/participant-npcs";
-import { parseProfile, readProfile } from "@/lib/participant-profiles";
+import { joinSession } from "@/lib/npc/participant-npcs";
+import { parseProfile, readProfile } from "@/lib/participants/participant-profiles";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 type Context = { params: Promise<{ id: string }> };

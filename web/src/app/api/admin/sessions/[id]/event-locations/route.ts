@@ -1,10 +1,10 @@
 import { NextRequest } from "next/server";
-import { adminSubject, requireAdmin } from "@/lib/admin-auth";
+import { adminSubject, requireAdmin } from "@/lib/auth/admin-auth";
 import { ApiError, body, checkOrigin, handle, json, transaction, uuid } from "@/lib/api";
-import { MAP_VERSION, isV002MapVersion, graphForMap, locate } from "@/lib/city-v002-graph.mjs";
-import { version } from "@/lib/npc-position-sync";
-import { eventMapping, playableLocation } from "@/lib/city-v002-event-mapping.mjs";
-import { normalizeEventLocation, assertLocationGroups } from "@/lib/event-locations";
+import { MAP_VERSION, isV002MapVersion, graphForMap, locate } from "@/lib/city/city-v002-graph.mjs";
+import { version } from "@/lib/npc/npc-position-sync";
+import { eventMapping, playableLocation } from "@/lib/city/city-v002-event-mapping.mjs";
+import { normalizeEventLocation, assertLocationGroups } from "@/lib/events/event-locations";
 export const runtime = "nodejs";
 
 export async function GET(request: NextRequest, context: { params: Promise<{ id: string }> }) {

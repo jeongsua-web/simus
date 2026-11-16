@@ -5,7 +5,7 @@ import { createHash } from 'node:crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import pg from 'pg';
-import { eventManifest, preparedLocation } from '../src/lib/city-v002-event-mapping.mjs';
+import { eventManifest, preparedLocation } from '../src/lib/city/city-v002-event-mapping.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const args = process.argv.slice(2);

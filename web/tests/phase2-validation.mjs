@@ -5,8 +5,8 @@ import { readFile, mkdir, writeFile } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
 import path from 'node:path';
 import { SignJWT } from 'jose';
-import { eventManifest } from '../src/lib/city-v002-event-mapping.mjs';
-import { MAP_VERSION, PATH_VERSION, pedestrianGraph, routeBetween, pathLength, distance } from '../src/lib/city-v002-graph.mjs';
+import { eventManifest } from '../src/lib/city/city-v002-event-mapping.mjs';
+import { MAP_VERSION, PATH_VERSION, pedestrianGraph, routeBetween, pathLength, distance } from '../src/lib/city/city-v002-graph.mjs';
 import content from '../src/lib/data/initial-session-content.json' with { type: 'json' };
 import { enterCity } from './participant-entry.mjs';
 

@@ -1,0 +1,1093 @@
+{
+  "files": [
+    {
+      "path": "assets/library/maps/city_masterplan_v003/source/SIMUS_City_Masterplan_v003_EventPlaces.blend",
+      "sha256": "a0d0f125207077d0f388687ceee0482f61eac91c254fdf6435b9bc3b8acb09d5",
+      "bytes": 107369166
+    },
+    {
+      "path": "assets/library/maps/city_masterplan_v003/exchange/SIMUS_Event_Places_v001.fbx",
+      "sha256": "317149cff95b97e094942c8d69ea62e22dba8f770874438bb7d9f9f57cd5bdde",
+      "bytes": 4268940
+    },
+    {
+      "path": "assets/library/maps/city_masterplan_v003/exchange/SIMUS_City_Masterplan_v003_QualityPass.fbx",
+      "sha256": "a6c48c4794b994f076b2ceb61d83dbb7840f816ceeeb3b53fbc465a8ba52d50c",
+      "bytes": 129803468
+    }
+  ],
+  "blend": {
+    "objects": 10157,
+    "mesh_objects": 8993,
+    "unit_system": "METRIC",
+    "scale_length": 1.0,
+    "anchors": [
+      {
+        "name": "EVS_01",
+        "parent": null,
+        "world_xyz": [
+          76.80000305175781,
+          -40.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_02",
+        "parent": null,
+        "world_xyz": [
+          45.0,
+          -42.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_03",
+        "parent": null,
+        "world_xyz": [
+          -137.0,
+          -168.0,
+          2.196000099182129
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_04",
+        "parent": null,
+        "world_xyz": [
+          91.0,
+          -41.5,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_05",
+        "parent": null,
+        "world_xyz": [
+          182.92408752441406,
+          -110.03299713134766,
+          0.8109999895095825
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_06",
+        "parent": null,
+        "world_xyz": [
+          184.74815368652344,
+          -159.96299743652344,
+          1.7089999914169312
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_07",
+        "parent": null,
+        "world_xyz": [
+          50.0,
+          55.5,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_08",
+        "parent": null,
+        "world_xyz": [
+          -11.300000190734863,
+          -31.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_09",
+        "parent": null,
+        "world_xyz": [
+          167.39999389648438,
+          -98.75,
+          -2.931999921798706
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_10",
+        "parent": null,
+        "world_xyz": [
+          21.0,
+          -170.0,
+          1.8899999856948853
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_11",
+        "parent": null,
+        "world_xyz": [
+          122.0,
+          34.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_12",
+        "parent": null,
+        "world_xyz": [
+          153.0,
+          -41.5,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_13",
+        "parent": null,
+        "world_xyz": [
+          182.61671447753906,
+          -100.04300689697266,
+          0.6309999823570251
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_14",
+        "parent": null,
+        "world_xyz": [
+          210.0034637451172,
+          -5.000023365020752,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_15",
+        "parent": null,
+        "world_xyz": [
+          -10.100000381469727,
+          -31.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_16",
+        "parent": null,
+        "world_xyz": [
+          -104.0,
+          104.5,
+          0.14399999380111694
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_17",
+        "parent": null,
+        "world_xyz": [
+          26.0,
+          -65.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_18",
+        "parent": null,
+        "world_xyz": [
+          184.7514190673828,
+          29.98103141784668,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_19",
+        "parent": null,
+        "world_xyz": [
+          194.75,
+          -133.0,
+          1.2239999771118164
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_20",
+        "parent": null,
+        "world_xyz": [
+          -166.0,
+          -244.5,
+          3.746999979019165
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_21",
+        "parent": null,
+        "world_xyz": [
+          80.0,
+          -9.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_22",
+        "parent": null,
+        "world_xyz": [
+          17.0,
+          -170.0,
+          1.8899999856948853
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_23",
+        "parent": null,
+        "world_xyz": [
+          53.349998474121094,
+          9.25,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_24",
+        "parent": null,
+        "world_xyz": [
+          186.7406463623047,
+          -199.81301879882812,
+          2.427000045776367
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_25",
+        "parent": null,
+        "world_xyz": [
+          145.0,
+          -41.5,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_26",
+        "parent": null,
+        "world_xyz": [
+          -137.0,
+          -168.0,
+          2.196000099182129
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_27",
+        "parent": null,
+        "world_xyz": [
+          100.0,
+          89.5,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_28",
+        "parent": null,
+        "world_xyz": [
+          136.86605834960938,
+          54.14693832397461,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_29",
+        "parent": null,
+        "world_xyz": [
+          -177.0,
+          -36.0,
+          0.5820000171661377
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_30",
+        "parent": null,
+        "world_xyz": [
+          45.0,
+          -79.0,
+          0.25200000405311584
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_30_mystery_crate_v001",
+        "parent": "EVS_30",
+        "world_xyz": [
+          46.0,
+          -79.0,
+          0.4020000100135803
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "FULL_EVENT_30_EXIT",
+        "parent": "FULL_EVENT_30_ROOT",
+        "world_xyz": [
+          45.0,
+          -79.0,
+          0.25200000405311584
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "FULL_EVENT_30_INTERACT",
+        "parent": "FULL_EVENT_30_ROOT",
+        "world_xyz": [
+          45.650001525878906,
+          -79.0,
+          0.25200000405311584
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "FULL_EVENT_30_NPC_WAIT",
+        "parent": "FULL_EVENT_30_ROOT",
+        "world_xyz": [
+          44.349998474121094,
+          -79.0,
+          0.25200000405311584
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "FULL_EVENT_30_START",
+        "parent": "FULL_EVENT_30_ROOT",
+        "world_xyz": [
+          45.0,
+          -79.0,
+          0.25200000405311584
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      }
+    ]
+  },
+  "event_fbx_import": {
+    "objects": 519,
+    "mesh_objects": 475,
+    "unit_system": "METRIC",
+    "scale_length": 1.0,
+    "anchors": [
+      {
+        "name": "EVS_01",
+        "parent": null,
+        "world_xyz": [
+          76.80000305175781,
+          -40.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_02",
+        "parent": null,
+        "world_xyz": [
+          45.0,
+          -42.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_03",
+        "parent": null,
+        "world_xyz": [
+          -137.0,
+          -168.0,
+          2.196000099182129
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_04",
+        "parent": null,
+        "world_xyz": [
+          91.0,
+          -41.5,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_05",
+        "parent": null,
+        "world_xyz": [
+          182.924072265625,
+          -110.03299713134766,
+          0.8109999895095825
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_06",
+        "parent": null,
+        "world_xyz": [
+          184.74813842773438,
+          -159.96299743652344,
+          1.7089998722076416
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_07",
+        "parent": null,
+        "world_xyz": [
+          50.0,
+          55.5,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_08",
+        "parent": null,
+        "world_xyz": [
+          -11.300000190734863,
+          -31.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_09",
+        "parent": null,
+        "world_xyz": [
+          167.39999389648438,
+          -98.75,
+          -2.931999683380127
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_10",
+        "parent": null,
+        "world_xyz": [
+          21.0,
+          -170.0,
+          1.8899999856948853
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_11",
+        "parent": null,
+        "world_xyz": [
+          122.0,
+          34.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_12",
+        "parent": null,
+        "world_xyz": [
+          153.0,
+          -41.5,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_13",
+        "parent": null,
+        "world_xyz": [
+          182.61671447753906,
+          -100.04300689697266,
+          0.6309999823570251
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_14",
+        "parent": null,
+        "world_xyz": [
+          210.00344848632812,
+          -5.000023365020752,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_15",
+        "parent": null,
+        "world_xyz": [
+          -10.100000381469727,
+          -31.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_16",
+        "parent": null,
+        "world_xyz": [
+          -104.0,
+          104.5,
+          0.14399999380111694
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_17",
+        "parent": null,
+        "world_xyz": [
+          26.0,
+          -65.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_18",
+        "parent": null,
+        "world_xyz": [
+          184.7514190673828,
+          29.981029510498047,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_19",
+        "parent": null,
+        "world_xyz": [
+          194.75,
+          -133.0,
+          1.2239998579025269
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_20",
+        "parent": null,
+        "world_xyz": [
+          -166.0,
+          -244.5,
+          3.746999979019165
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_21",
+        "parent": null,
+        "world_xyz": [
+          80.0,
+          -9.0,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_22",
+        "parent": null,
+        "world_xyz": [
+          17.0,
+          -170.0,
+          1.8899999856948853
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_23",
+        "parent": null,
+        "world_xyz": [
+          53.349998474121094,
+          9.25,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_24",
+        "parent": null,
+        "world_xyz": [
+          186.7406463623047,
+          -199.81301879882812,
+          2.427000045776367
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_25",
+        "parent": null,
+        "world_xyz": [
+          145.0,
+          -41.5,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_26",
+        "parent": null,
+        "world_xyz": [
+          -137.0,
+          -168.0,
+          2.196000099182129
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_27",
+        "parent": null,
+        "world_xyz": [
+          100.0,
+          89.5,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_28",
+        "parent": null,
+        "world_xyz": [
+          136.86605834960938,
+          54.14693832397461,
+          0.0
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_29",
+        "parent": null,
+        "world_xyz": [
+          -177.0,
+          -36.0,
+          0.5820000171661377
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_30",
+        "parent": null,
+        "world_xyz": [
+          45.0,
+          -79.0,
+          0.25200000405311584
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "EVS_30_mystery_crate_v001",
+        "parent": "EVS_30",
+        "world_xyz": [
+          46.0,
+          -79.0,
+          0.4020000100135803
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      }
+    ]
+  },
+  "quality_fbx_import": {
+    "objects": 5225,
+    "mesh_objects": 4772,
+    "unit_system": "METRIC",
+    "scale_length": 1.0,
+    "anchors": [
+      {
+        "name": "FULL_EVENT_30_EXIT",
+        "parent": "FULL_EVENT_30_ROOT",
+        "world_xyz": [
+          45.0,
+          -79.0,
+          0.25201287865638733
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "FULL_EVENT_30_INTERACT",
+        "parent": "FULL_EVENT_30_ROOT",
+        "world_xyz": [
+          45.650001525878906,
+          -79.0,
+          0.25201287865638733
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "FULL_EVENT_30_NPC_WAIT",
+        "parent": "FULL_EVENT_30_ROOT",
+        "world_xyz": [
+          44.349998474121094,
+          -79.0,
+          0.25201287865638733
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      },
+      {
+        "name": "FULL_EVENT_30_START",
+        "parent": "FULL_EVENT_30_ROOT",
+        "world_xyz": [
+          45.0,
+          -79.0,
+          0.25201287865638733
+        ],
+        "scale": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "type": "EMPTY"
+      }
+    ]
+  }
+}

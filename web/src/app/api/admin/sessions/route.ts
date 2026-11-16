@@ -1,9 +1,9 @@
 import { NextRequest } from "next/server";
-import { adminSubject, requireAdmin } from "@/lib/admin-auth";
+import { adminSubject, requireAdmin } from "@/lib/auth/admin-auth";
 import { body, checkOrigin, handle, json, transaction } from "@/lib/api";
-import { inspectSessionReadiness } from "@/lib/admin-session-readiness";
+import { inspectSessionReadiness } from "@/lib/auth/admin-session-readiness";
 
-import { createSession } from "@/lib/session-creation";
+import { createSession } from "@/lib/sessions/session-creation";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";

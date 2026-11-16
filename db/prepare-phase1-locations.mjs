@@ -45,7 +45,7 @@ async function main() {
   await evidence(doc.source_scene, scenePath);
   await evidence(doc.source_graph, graphPath);
   const { MAP_VERSION, PATH_VERSION, locate, routeBetween, nodePoint, defaultMotion, graphMotion } =
-    await import('../web/src/lib/city-v002-graph.mjs');
+    await import('../web/src/lib/city/city-v002-graph.mjs');
   insist(doc.map_version === MAP_VERSION && doc.path_version === PATH_VERSION, 'Canonical versions differ from server graph');
   const base = graphMotion(defaultMotion());
   const places = new Map();

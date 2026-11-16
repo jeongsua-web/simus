@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 import { ApiError, authenticate, checkOrigin, handle, json, transaction, uuid } from "@/lib/api";
-import { joinSession, readNpcs } from "@/lib/participant-npcs";
+import { joinSession, readNpcs } from "@/lib/npc/participant-npcs";
 export const runtime = "nodejs";
 export async function POST(request: NextRequest, context: { params: Promise<{ id: string }> }) {
   return handle(async () => {

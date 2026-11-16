@@ -32,8 +32,10 @@ export default function EventLocations({ sessionId, mapVersion, token, onSaved }
     try {
       const response = await fetch(`/api/admin/sessions/${sessionId}/event-locations`, {
         method: "PUT", headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
-        body: JSON.stringify({ situation_id: situationId, is_generic: generic,
-          event_location: generic ? null : { place_id: `graph_${anchor!.id}`, map_version: mapVersion, point: anchor!.position, radius_m: 2 } }),
+        body: JSON.stringify({
+          situation_id: situationId, is_generic: generic,
+          event_location: generic ? null : { place_id: `graph_${anchor!.id}`, map_version: mapVersion, point: anchor!.position, radius_m: 2 }
+        }),
       });
       const data = await response.json();
       if (!response.ok) throw Error(data.error?.message ?? "상황 위치를 저장하지 못했습니다.");
