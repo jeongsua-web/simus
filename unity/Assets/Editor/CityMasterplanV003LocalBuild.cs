@@ -135,6 +135,13 @@ public static class CityMasterplanV003LocalBuild
         if (!BuildPipeline.IsBuildTargetSupported(BuildTargetGroup.WebGL, BuildTarget.WebGL))
             throw new InvalidOperationException("Install Unity 6000.3.24f1 Web Build Support.");
         var scene = EditorSceneManager.GetActiveScene();
+        // Web deployments must poll their own origin, never a desktop localhost port.
+        foreach (var poller in UnityEngine.Object.FindObjectsByType<CityStatePoller>(FindObjectsSortMode.None))
+        {
+            var settings = new SerializedObject(poller);
+            settings.FindProperty("serverBaseUrl").stringValue = "";
+            settings.ApplyModifiedPropertiesWithoutUndo();
+        }
         foreach (var camera in UnityEngine.Object.FindObjectsByType<Camera>(FindObjectsSortMode.None))
             camera.enabled = false;
         var cameraObject = new GameObject("Local participant camera");

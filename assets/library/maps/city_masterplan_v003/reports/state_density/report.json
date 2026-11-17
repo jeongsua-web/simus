@@ -1,0 +1,630 @@
+{
+  "bindings": 114,
+  "counts": {
+    "HAP": 6,
+    "SAF": 14,
+    "CLN": 74,
+    "POL": 20
+  },
+  "trash_clusters_added": 60,
+  "exhaust_sources": 12,
+  "particle_cap": 288,
+  "paths_complete": 30,
+  "original_transforms_unchanged": true,
+  "placements": [
+    {
+      "id": "SD_TrashCluster_01",
+      "road": "R13",
+      "x": -140.07,
+      "z": 134.0,
+      "threshold": 50.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_02",
+      "road": "R01",
+      "x": 12.0,
+      "z": 57.32,
+      "threshold": 50.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_03",
+      "road": "R05",
+      "x": -201.68,
+      "z": 204.0,
+      "threshold": 50.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_04",
+      "road": "R11",
+      "x": -193.0,
+      "z": 162.93,
+      "threshold": 50.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_05",
+      "road": "R07",
+      "x": 17.0,
+      "z": -90.68,
+      "threshold": 50.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_06",
+      "road": "R03",
+      "x": 26.0,
+      "z": -26.82,
+      "threshold": 50.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_07",
+      "road": "R08",
+      "x": 3.0,
+      "z": -131.32,
+      "threshold": 50.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_08",
+      "road": "R10",
+      "x": -151.0,
+      "z": 127.07,
+      "threshold": 50.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_09",
+      "road": "R12",
+      "x": -83.0,
+      "z": 211.07,
+      "threshold": 50.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_10",
+      "road": "R02",
+      "x": -69.82,
+      "z": -45.0,
+      "threshold": 50.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_11",
+      "road": "R01",
+      "x": -2.0,
+      "z": 42.68,
+      "threshold": 50.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_12",
+      "road": "R03",
+      "x": -44.0,
+      "z": -17.18,
+      "threshold": 50.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_13",
+      "road": "R01",
+      "x": -142.0,
+      "z": 42.68,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_14",
+      "road": "R07",
+      "x": -11.0,
+      "z": -90.68,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_15",
+      "road": "R07",
+      "x": 115.0,
+      "z": -97.32,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_16",
+      "road": "R06",
+      "x": -11.0,
+      "z": -56.68,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_17",
+      "road": "R08",
+      "x": -39.0,
+      "z": -124.68,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_18",
+      "road": "R03",
+      "x": 96.0,
+      "z": -17.18,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_19",
+      "road": "R10",
+      "x": -97.0,
+      "z": 120.93,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_20",
+      "road": "R13",
+      "x": -133.93,
+      "z": 148.0,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_21",
+      "road": "R12",
+      "x": -125.0,
+      "z": 204.93,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_22",
+      "road": "R07",
+      "x": 59.0,
+      "z": -97.32,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_23",
+      "road": "R11",
+      "x": -97.0,
+      "z": 162.93,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_24",
+      "road": "R10",
+      "x": -83.0,
+      "z": 127.07,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_25",
+      "road": "R02",
+      "x": -60.18,
+      "z": 25.0,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_26",
+      "road": "R02",
+      "x": -59.82,
+      "z": 196.0,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_27",
+      "road": "R03",
+      "x": -86.0,
+      "z": -26.82,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_28",
+      "road": "R01",
+      "x": -156.0,
+      "z": 57.32,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_29",
+      "road": "R02",
+      "x": -60.18,
+      "z": -3.0,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_30",
+      "road": "R02",
+      "x": -69.82,
+      "z": -129.0,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_31",
+      "road": "R05",
+      "x": -175.0,
+      "z": 76.68,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_32",
+      "road": "R06",
+      "x": 45.0,
+      "z": -56.68,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_33",
+      "road": "R04",
+      "x": -137.0,
+      "z": -114.32,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_34",
+      "road": "R08",
+      "x": 45.0,
+      "z": -124.68,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_35",
+      "road": "R02",
+      "x": -50.18,
+      "z": 126.0,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_36",
+      "road": "R01",
+      "x": 96.0,
+      "z": 57.32,
+      "threshold": 35.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_37",
+      "road": "R01",
+      "x": -58.0,
+      "z": 42.68,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_38",
+      "road": "R03",
+      "x": -100.0,
+      "z": -17.18,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_39",
+      "road": "R03",
+      "x": -30.0,
+      "z": -26.82,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_40",
+      "road": "R02",
+      "x": -59.82,
+      "z": 224.0,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_41",
+      "road": "R02",
+      "x": -59.82,
+      "z": 140.0,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_42",
+      "road": "R02",
+      "x": -60.18,
+      "z": -59.0,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_43",
+      "road": "R09",
+      "x": -153.32,
+      "z": -56.0,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_44",
+      "road": "R05",
+      "x": -137.0,
+      "z": 236.68,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_45",
+      "road": "R02",
+      "x": -60.18,
+      "z": -115.0,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_46",
+      "road": "R03",
+      "x": 110.0,
+      "z": -26.82,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_47",
+      "road": "R05",
+      "x": -208.32,
+      "z": 218.0,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_48",
+      "road": "R11",
+      "x": -179.0,
+      "z": 169.07,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_49",
+      "road": "R02",
+      "x": -69.82,
+      "z": -101.0,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_50",
+      "road": "R06",
+      "x": -25.0,
+      "z": -63.32,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_51",
+      "road": "R05",
+      "x": -133.0,
+      "z": 83.32,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_52",
+      "road": "R07",
+      "x": 141.68,
+      "z": -68.0,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_53",
+      "road": "R05",
+      "x": -189.0,
+      "z": 83.32,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_54",
+      "road": "R08",
+      "x": 87.0,
+      "z": -131.32,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_55",
+      "road": "R05",
+      "x": -208.32,
+      "z": 162.0,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_56",
+      "road": "R02",
+      "x": -50.18,
+      "z": 210.0,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_57",
+      "road": "R05",
+      "x": -201.68,
+      "z": 92.0,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_58",
+      "road": "R05",
+      "x": -147.0,
+      "z": 76.68,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_59",
+      "road": "R08",
+      "x": -53.0,
+      "z": -131.32,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    },
+    {
+      "id": "SD_TrashCluster_60",
+      "road": "R02",
+      "x": -69.82,
+      "z": 39.0,
+      "threshold": 20.0,
+      "width_m": 0.55,
+      "length_m": 1.65
+    }
+  ],
+  "emissions": [
+    {
+      "id": "SD_Smoke_01",
+      "source": "EVS_04_BUS_BODY",
+      "position": "(86.53, 0.69, 47.50)",
+      "max_particles": 24
+    },
+    {
+      "id": "SD_Smoke_02",
+      "source": "EVS_12_TAXI_BODY",
+      "position": "(151.63, 0.59, 46.50)",
+      "max_particles": 24
+    },
+    {
+      "id": "SD_Smoke_03",
+      "source": "EVS_07_",
+      "position": "(50.16, 0.33, -54.20)",
+      "max_particles": 24
+    },
+    {
+      "id": "SD_Smoke_04",
+      "source": "S01_",
+      "position": "(-41.70, 16.51, 25.00)",
+      "max_particles": 24
+    },
+    {
+      "id": "SD_Smoke_05",
+      "source": "S02_",
+      "position": "(-26.90, 13.90, 25.00)",
+      "max_particles": 24
+    },
+    {
+      "id": "SD_Smoke_06",
+      "source": "S03_",
+      "position": "(-10.70, 13.90, 25.00)",
+      "max_particles": 24
+    },
+    {
+      "id": "SD_Smoke_07",
+      "source": "S04_",
+      "position": "(3.60, 16.51, 25.00)",
+      "max_particles": 24
+    },
+    {
+      "id": "SD_Smoke_08",
+      "source": "S05_",
+      "position": "(18.40, 13.90, 25.00)",
+      "max_particles": 24
+    },
+    {
+      "id": "SD_Smoke_09",
+      "source": "S06_",
+      "position": "(59.58, 13.40, 25.00)",
+      "max_particles": 24
+    },
+    {
+      "id": "SD_Smoke_10",
+      "source": "S07_",
+      "position": "(76.80, 16.51, 25.00)",
+      "max_particles": 24
+    },
+    {
+      "id": "SD_Smoke_11",
+      "source": "S08_",
+      "position": "(123.00, 13.90, 25.00)",
+      "max_particles": 24
+    },
+    {
+      "id": "SD_Smoke_12",
+      "source": "S09_",
+      "position": "(142.13, 13.40, 25.00)",
+      "max_particles": 24
+    }
+  ]
+}

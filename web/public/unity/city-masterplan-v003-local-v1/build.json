@@ -5,11 +5,12 @@
   "path_versions": [
     "city-masterplan-v003-plaza30-v1"
   ],
-  "source_scene_sha256": "4b4e5dfbbf51b0754dd3de7435af67ef4670582994e7cf9cc10b7091123f6c27",
+  "source_scene_sha256": "2c0d5223f2c66f1c788be0f04662305fcbc101e009c27c1b22db9e9b5aa9101e",
   "npc_motion_enabled": true,
   "route_validation_status": "unity_physics_passed",
   "exhibition_ready": false,
   "initial_memory_mb": 512,
   "maximum_memory_mb": 2048,
-  "memory_growth": "geometric"
+  "memory_growth": "geometric",
+  "run_in_background": true
 }

@@ -1,0 +1,64 @@
+{
+  "playmode": true,
+  "samples": [
+    {
+      "value": 10,
+      "active": {
+        "HAP": 0,
+        "SAF": 14,
+        "CLN": 74,
+        "POL": 0
+      }
+    },
+    {
+      "value": 20,
+      "active": {
+        "HAP": 0,
+        "SAF": 14,
+        "CLN": 74,
+        "POL": 0
+      }
+    },
+    {
+      "value": 30,
+      "active": {
+        "HAP": 0,
+        "SAF": 7,
+        "CLN": 43,
+        "POL": 0
+      }
+    },
+    {
+      "value": 50,
+      "active": {
+        "HAP": 0,
+        "SAF": 0,
+        "CLN": 0,
+        "POL": 0
+      }
+    },
+    {
+      "value": 70,
+      "active": {
+        "HAP": 3,
+        "SAF": 0,
+        "CLN": 0,
+        "POL": 12
+      }
+    },
+    {
+      "value": 90,
+      "active": {
+        "HAP": 6,
+        "SAF": 0,
+        "CLN": 0,
+        "POL": 20
+      }
+    }
+  ],
+  "added_mesh_renderers": 72,
+  "missing_assets": 0,
+  "particles_alive": 132,
+  "physical_source_guard": true,
+  "default_hidden": true
+}
