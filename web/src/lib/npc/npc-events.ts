@@ -281,7 +281,7 @@ export async function completeEvent(db: PoolClient, sid: string, pid: string, ei
     const original = { ...row.npc_motion, speed_mps: row.resume_motion?.speed_mps ?? row.npc_motion.speed_mps };
     const point = guidancePosition(row, original, timestamp(row.started_at));
     const route = original.map_version === V003_MAP_VERSION
-      ? {...original,points:[point,...localRoute().resume_points],speed_mps:localRoute().speed_mps,loop:false}
+      ? {...original,points:[point,...localRoute().resume_points.slice(1)],speed_mps:localRoute().speed_mps,loop:false}
       : returnMotion(original, point);
     await db.query(`UPDATE simus.npc_event_states SET resume_motion=$3,motion_epoch=clock_timestamp(),paused_ms=0
       WHERE session_id=$1 AND participant_id=$2`, [sid, pid, JSON.stringify(route)]);

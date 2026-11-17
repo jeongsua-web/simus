@@ -15,6 +15,7 @@ const storageKey = "simus-v003-local-command";
 async function request(url: string, body?: object) {
   const response = await fetch(url, body ? { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) } : { cache: "no-store" });
   const data = await response.json();
+  if (response.status === 401) throw new Error("로컬 테스트 인증이 만료되었어요. DB를 다시 시작했다면 새 시크릿 창에서 이 주소를 열어 새 시민으로 입장해 주세요.");
   if (!response.ok) throw new Error(data.error?.message ?? "연결을 확인하고 다시 시도해 주세요.");
   return data;
 }
@@ -33,6 +34,7 @@ export default function LocalTest() {
   const lock = useRef(false);
   const polling = useRef(false);
   const generation = useRef(0);
+  const participantInitialization = useRef<Promise<unknown> | null>(null);
   const refresh = useCallback(async (sid: string) => {
     if (polling.current || lock.current) return;
     polling.current = true;
@@ -45,7 +47,8 @@ export default function LocalTest() {
     let alive = true;
     async function initialize() {
       try {
-        await request("/api/participants", {});
+        participantInitialization.current ??= request("/api/participants", {});
+        await participantInitialization.current;
         const current = await request("/api/sessions/current");
         if (!current.session) throw new Error("로컬 테스트 회차가 없습니다. 테스트 실행기를 먼저 시작해 주세요.");
         const saved = localStorage.getItem(storageKey);
@@ -100,7 +103,7 @@ export default function LocalTest() {
       {error && <p role="alert">{error}</p>}
       {pending && <button disabled={busy} onClick={() => void command(pending)}>같은 요청으로 다시 확인</button>}
       <button disabled={!ready || busy || !!pending || completed || state?.phase !== "WAITING" || !!error} onClick={() => void command({ url: `/api/sessions/${session.id}/event/start`, body: { request_key: crypto.randomUUID() } })}>새로운 상황 만나기</button>
-      {completed && state?.phase === "WAITING" && <p>대표 상황 플레이를 마쳤어요. 캐릭터가 자유 이동을 재개합니다.</p>}
+      {completed && state?.phase === "WAITING" && <p>대표 상황 플레이를 마쳤어요. 캐릭터가 출발점으로 돌아가요.</p>}
       {!ready && <p>도시 연결을 마치면 시작할 수 있어요.</p>}
       {active && <SituationCard situation={active.situation} selectedChoiceId={choice} done={false} acceptingChoices={session.accepting_choices} submitting={busy} submissionInProgress={busy} retrying={false} hasPendingSubmission={!!pending} message="" onSelect={setChoice} onSubmit={() => void command({ url: "/api/choices", body: { session_id: session.id, event_id: active.id, situation_id: active.situation.id, choice_id: choice, request_key: crypto.randomUUID() } })} />}
       {result && <section aria-label="이 선택의 도시 변화"><h2>이 선택이 반영된 시점의 변화</h2>{state.outcome ? <ul>{([['happiness','행복'],['safety','치안'],['cleanliness','청결']] as const).map(([key,label]) => <li key={key}>{label}: {state.outcome!.city[key] > 0 ? "+" : ""}{state.outcome!.city[key]}</li>)}</ul> : <p>도시 변화 정보를 확인하고 있어요.</p>}<button disabled={busy || !!pending} onClick={() => void command({ url: `/api/sessions/${session.id}/event/confirm`, body: { event_id: state.event!.id } })}>확인하고 이동 재개</button></section>}

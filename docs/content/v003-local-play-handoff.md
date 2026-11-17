@@ -10,7 +10,7 @@
 node scripts/dev/v003-local.mjs
 ```
 
-`READY`가 출력되면 <http://127.0.0.1:3210/v003-test>에 접속한다. 실행기는 기존 `.env.local`의 DB 대신 매번 새 임시 PostgreSQL 클러스터(55443)를 만들고 관리형 마이그레이션·원본 시드·DRAFT 패치를 적용한다. 빌드 검사를 통과한 경우에만 회차를 시작한다. Ctrl+C로 실행기가 소유한 서버와 DB를 중지한다. 포트 변경은 `V003_WEB_PORT`, `V003_PG_PORT`를 사용한다. 실행 로그에 출력된 임시 디렉터리의 `local-state.json`에는 로컬 관리자 토큰이 있으므로 공유하지 않는다.
+`READY`가 출력되면 새 시크릿 창에서 <http://127.0.0.1:3210/v003-test>에 접속한다. 실행기는 매번 새 임시 PostgreSQL 클러스터(55443)를 만들고 관리형 마이그레이션·원본 시드·DRAFT 패치를 적용한다. 빌드 검사를 통과하면 회차를 시작한다. Ctrl+C로 실행기가 소유한 서버와 DB를 중지한다. 포트 변경은 `V003_WEB_PORT`, `V003_PG_PORT`를 사용한다. 실행 로그에 출력된 임시 디렉터리의 `local-state.json`에는 로컬 관리자 토큰이 있으므로 공유하지 않는다. 실행기를 재시작한 뒤 인증 만료가 표시되면 이전 시크릿 창을 모두 닫고 새 시크릿 창에서 다시 입장한다.
 
 ## 클릭 순서와 기대 동작
 
@@ -29,7 +29,7 @@ node scripts/dev/v003-local.mjs
 - path: `city-masterplan-v003-plaza30-v1`
 - 실제 WebGL 공개 경로: `web/public/unity/city-masterplan-v003-local-v1`
 - 좌표·속도·정지 반경·재개 경로: [경로 계약](v003-local-route.json)
-- 원본·교환본·해시·좌표 대조: [자산 근거](v003-map-asset-basis.md)
+- 원본·교환본·해시·좌표 대조: [자산 근거](../verification/v003-map-asset-basis.md)
 - 실행 결과와 미검증 항목: [독립 QA](../verification/v003-local-qa.md)
 
 저장 씬의 `FULL_EVENT_30_INTERACT`와 서버 정지점은 별개다. 상자와의 간섭을 피하려고 저장된 NPC 대기점 쪽을 검사한다. 최종 좌표와 Unity 물리 검사 상태는 경로 계약 및 QA 기록을 기준으로 확인한다. 이전 Neighborhood 좌표는 사용하지 않는다.
@@ -37,3 +37,17 @@ node scripts/dev/v003-local.mjs
 ## 전시 UX 후속
 
 현재 페이지는 대표 상황 테스트용이다. 정식 `/participate`에 수동 이벤트 컨트롤러·결과 모달·다중 상황 선정·상황 소진·마감/재접속 처리를 통합해야 한다. 나머지 29개 접근 경로·상호작용 반경·NPC·애니메이션·실내 출입·신호/정전/침수 토글은 배치표의 후속 작업을 따른다. 지역 경계와 오염 영향의 공간적 연결도 승인 전이다. 90초 목표, 개막 필수 상황 수, 도시 외형 변화·오염 확산·웹 푸시 필수 여부는 결정하지 않았다. 목표 모바일 기기 성능과 전시 최종 승인, 운영 배포는 후속 범위다.
+
+## 편집 담당
+
+| 담당 | 단독 편집 범위 |
+|---|---|
+| Unity | `CityMasterplanV003LocalBuild.cs`, 빌드 준비 스크립트, 경로 계약 JSON과 서버 사본, Unity 물리 검사·WebGL 산출물 |
+| Blender·에셋 | 30행 배치표와 생성 스크립트, 자산 대조 보고서, manifest·catalog |
+| 백엔드 | `web/src/lib/{city,npc,routes}`, 이벤트 API, `UnityCity.tsx`와 버전 검사, 관련 서버 테스트 |
+| DB | `db/content/city-v003-local-draft.sql`, `scripts/dev/v003-local.mjs`, 격리 DB 실행 |
+| Web UI | `web/src/app/v003-test/` |
+| 독립 QA | QA 보고서와 독립 검증 스크립트 |
+| 팀장 | 인계 문서, 변경 통합, 사용자 진입점 확인 |
+
+기준 저장 씬은 Unity 담당의 읽기·파생 빌드 대상으로 사용한다. Blender 담당은 이 씬의 Transform을 읽어 자산과 대조한다. 로컬 테스트 산출물의 최종 검증 상태는 QA 기록에 갱신한다.

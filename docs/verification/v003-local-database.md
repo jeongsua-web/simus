@@ -24,3 +24,7 @@ Observed checks:
 - Actual start request rejected with HTTP 409 `CITY_BUILD_UNAVAILABLE` while the v003 WebGL build was absent. This demonstrates the build guard remains active; it is not a successful play verification.
 
 Final successful play and timing evidence is reported by the independent QA report after the actual Unity build is available.
+
+## 2026-11-17 actual WebGL startup
+
+The completed Unity build passed the actual session start API with HTTP 200. The runner printed READY at `http://127.0.0.1:3210/v003-test` using `city-masterplan-v003-local-v1` and `city-masterplan-v003-plaza30-v1`. Managed init, schema verification and preservation of all 30 situations and 91 choices passed again in the fresh owned cluster. Independent QA received the private local state path and the running server.

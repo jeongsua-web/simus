@@ -1,0 +1,65 @@
+{
+  "result": "Success",
+  "unity_version": "6000.3.24f1",
+  "unity_revision": "4e7b9b5b6244",
+  "output": "web/public/unity/city-masterplan-v003-local-v1",
+  "map_version": "city-masterplan-v003-local-v1",
+  "path_version": "city-masterplan-v003-plaza30-v1",
+  "route_validation_status": "unity_physics_passed",
+  "source_scene_sha256": "4b4e5dfbbf51b0754dd3de7435af67ef4670582994e7cf9cc10b7091123f6c27",
+  "files": [
+    {
+      "path": "Build/city-masterplan-v003-local-v1.data",
+      "bytes": 37735739,
+      "sha256": "3acf88a0528022da1720efd8d028cf18af66217f87b88d46a7f9ea1a0eeab850"
+    },
+    {
+      "path": "Build/city-masterplan-v003-local-v1.framework.js",
+      "bytes": 413204,
+      "sha256": "7aa008edd427f42da9d61e8071c42b104b52c7da79fbb55bd2e6050781a819ed"
+    },
+    {
+      "path": "Build/city-masterplan-v003-local-v1.loader.js",
+      "bytes": 26983,
+      "sha256": "51deeb32a6a58fcf1abce201ee21be95afd139a3f9c98778ea7128b44505b390"
+    },
+    {
+      "path": "Build/city-masterplan-v003-local-v1.wasm",
+      "bytes": 26976710,
+      "sha256": "5048b473c50a1d32cc7f5a63f8c7a99050ee8e975bbc4129efffb97f7ee713c3"
+    },
+    {
+      "path": "bridge.js",
+      "bytes": 5884,
+      "sha256": "70d23e67cfad185da55829586a27d69759813f582dc28059d78bf2a24f665a29"
+    },
+    {
+      "path": "build.json",
+      "bytes": 394,
+      "sha256": "ec80b78b147fffd5c0e94230dbe51941fc6db280ad6b6cbe1574dca4c45d4f61"
+    },
+    {
+      "path": "index.html",
+      "bytes": 1648,
+      "sha256": "b8adcf6e70b66c0f8ed6a644c928de9adadb0115802bee026859c624ee538d3b"
+    }
+  ],
+  "raw_build_report": "docs/verification/v003-local.buildreport",
+  "build_log": "/tmp/simus-v003-webgl-build2.log",
+  "webgl_module": {
+    "source": "https://download.unity3d.com/download_unity/4e7b9b5b6244/MacEditorTargetInstaller/UnitySetup-WebGL-Support-for-Editor-Arm64-6000.3.24f1.pkg",
+    "webWasm2023": 0,
+    "threads": false,
+    "excluded": [
+      "development and multithread variants",
+      "Wasm 2023 variants",
+      "Emscripten pic/lto-pic caches",
+      "LLVM development libraries except clang resource headers",
+      "clang-repl, clang-linker-wrapper, clang-offload-packager"
+    ],
+    "byte_identical_executables": true
+  },
+  "build_duration_seconds": 277.578,
+  "uncompressed_user_asset_mb": 605.1,
+  "mesh_mb": 600.9
+}

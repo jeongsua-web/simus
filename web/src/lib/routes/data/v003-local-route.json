@@ -5,17 +5,17 @@
   "points": [
     [
       44.35,
-      0.252,
+      0.202832,
       65
     ],
     [
       44.35,
-      0.252,
+      0.301893,
       72
     ],
     [
       44.35,
-      0.252,
+      0.412014,
       79
     ]
   ],
@@ -24,7 +24,7 @@
   "interaction": {
     "point": [
       44.35,
-      0.252,
+      0.412014,
       79
     ],
     "radius_m": 0.6
@@ -34,7 +34,7 @@
     "place_id": "EXHIBITION_30",
     "point": [
       44.35,
-      0.252,
+      0.412014,
       79
     ],
     "radius_m": 0.6
@@ -42,20 +42,23 @@
   "resume_points": [
     [
       44.35,
-      0.252,
+      0.412014,
       79
     ],
     [
       44.35,
-      0.252,
+      0.301893,
       72
     ],
     [
       44.35,
-      0.252,
+      0.202832,
       65
     ]
   ],
-  "validation_status": "candidate_pending_unity_physics",
-  "exhibition_approved": false
+  "validation_status": "unity_physics_passed",
+  "exhibition_approved": false,
+  "physics_evidence": "docs/verification/v003-local-physics.json",
+  "route_distance_m": 14.001567033922356,
+  "nominal_travel_seconds": 10.00111930994454
 }

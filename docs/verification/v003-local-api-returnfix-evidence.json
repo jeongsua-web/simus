@@ -1,0 +1,430 @@
+{
+  "base": "http://127.0.0.1:3210",
+  "sid": "16000000-0000-0000-0000-000000000001",
+  "started_at": "2026-11-17T04:01:27.032Z",
+  "samples": [
+    {
+      "elapsed_ms": 614,
+      "phase": "GUIDING"
+    },
+    {
+      "elapsed_ms": 1124,
+      "phase": "GUIDING"
+    },
+    {
+      "elapsed_ms": 1633,
+      "phase": "GUIDING"
+    },
+    {
+      "elapsed_ms": 2143,
+      "phase": "GUIDING"
+    },
+    {
+      "elapsed_ms": 2653,
+      "phase": "GUIDING"
+    },
+    {
+      "elapsed_ms": 3163,
+      "phase": "GUIDING"
+    },
+    {
+      "elapsed_ms": 3672,
+      "phase": "GUIDING"
+    },
+    {
+      "elapsed_ms": 4184,
+      "phase": "GUIDING"
+    },
+    {
+      "elapsed_ms": 4711,
+      "phase": "GUIDING"
+    },
+    {
+      "elapsed_ms": 5219,
+      "phase": "GUIDING"
+    },
+    {
+      "elapsed_ms": 5728,
+      "phase": "GUIDING"
+    },
+    {
+      "elapsed_ms": 6238,
+      "phase": "GUIDING"
+    },
+    {
+      "elapsed_ms": 6748,
+      "phase": "GUIDING"
+    },
+    {
+      "elapsed_ms": 7258,
+      "phase": "GUIDING"
+    },
+    {
+      "elapsed_ms": 7767,
+      "phase": "GUIDING"
+    },
+    {
+      "elapsed_ms": 8278,
+      "phase": "GUIDING"
+    },
+    {
+      "elapsed_ms": 8788,
+      "phase": "GUIDING"
+    },
+    {
+      "elapsed_ms": 9298,
+      "phase": "GUIDING"
+    },
+    {
+      "elapsed_ms": 9809,
+      "phase": "GUIDING"
+    },
+    {
+      "elapsed_ms": 10320,
+      "phase": "ACTIVE"
+    }
+  ],
+  "arrival_observed_ms": 10320,
+  "authoritative_travel_ms": 9573,
+  "stop_distance_to_interaction_m": 0.5993670339223546,
+  "result_wait_observed_ms": 2110,
+  "resumed_server_motion_distance_m": 2.969400000000002,
+  "idle": {
+    "session_id": "16000000-0000-0000-0000-000000000001",
+    "status": "RUNNING",
+    "server_time": "2026-11-17T04:01:29.104Z",
+    "freeze_at": "2026-11-17T16:00:46.446Z",
+    "map_version": "city-masterplan-v003-local-v1",
+    "path_version": "city-masterplan-v003-plaza30-v1",
+    "motion_time": "2026-11-17T04:01:29.104Z",
+    "frozen": false,
+    "npcs": [
+      {
+        "epoch": "2026-11-17T13:01:27.999989+09:00",
+        "motion": {
+          "loop": false,
+          "points": [
+            [
+              44.35,
+              0.202832,
+              65
+            ],
+            [
+              44.35,
+              0.202832,
+              65
+            ]
+          ],
+          "speed_mps": 0,
+          "map_version": "city-masterplan-v003-local-v1",
+          "path_version": "city-masterplan-v003-plaza30-v1",
+          "revision": 1
+        },
+        "npc_id": "4ded2bc5-ecba-45ea-8021-827d5ad801e0",
+        "glasses_id": "none",
+        "character_id": "npc_01"
+      }
+    ]
+  },
+  "moving": {
+    "session_id": "16000000-0000-0000-0000-000000000001",
+    "status": "RUNNING",
+    "server_time": "2026-11-17T04:01:31.816Z",
+    "freeze_at": "2026-11-17T16:00:46.446Z",
+    "map_version": "city-masterplan-v003-local-v1",
+    "path_version": "city-masterplan-v003-plaza30-v1",
+    "motion_time": "2026-11-17T04:01:31.816Z",
+    "frozen": false,
+    "npcs": [
+      {
+        "epoch": "2026-11-17T04:01:31.774Z",
+        "motion": {
+          "loop": false,
+          "points": [
+            [
+              44.35,
+              0.202832,
+              65
+            ],
+            [
+              44.35,
+              0.301893,
+              72
+            ],
+            [
+              44.35,
+              0.412014,
+              79
+            ]
+          ],
+          "speed_mps": 1.4,
+          "map_version": "city-masterplan-v003-local-v1",
+          "path_version": "city-masterplan-v003-plaza30-v1",
+          "revision": 2
+        },
+        "npc_id": "4ded2bc5-ecba-45ea-8021-827d5ad801e0",
+        "glasses_id": "none",
+        "character_id": "npc_01"
+      }
+    ]
+  },
+  "active": {
+    "phase": "ACTIVE",
+    "server_time": "2026-11-17T04:01:41.531Z",
+    "waiting_since": "2026-11-17T04:01:27.999Z",
+    "deadline_at": null,
+    "guidance_at": null,
+    "event": {
+      "id": "2a8742d7-29e3-44c1-93f5-b1839f8b9de7",
+      "session_id": "16000000-0000-0000-0000-000000000001",
+      "participant_id": "5241cb46-a65c-42a7-9473-ce1615b0a284",
+      "situation_id": "30000000-0000-0000-0000-000000000030",
+      "trigger_kind": "LOCATION",
+      "status": "ACTIVE",
+      "started_at": "2026-11-17T04:01:41.347Z",
+      "completed_at": null,
+      "place_id": "EXHIBITION_30",
+      "entry_seq": "1",
+      "situation": {
+        "session_id": "16000000-0000-0000-0000-000000000001",
+        "id": "30000000-0000-0000-0000-000000000030",
+        "code": "EXHIBITION_30",
+        "title": "도시 광장에서 정체불명의 상자를 발견했다",
+        "body": "도시 광장에서 정체불명의 상자를 발견했다",
+        "display_order": 30,
+        "event_location": {
+          "place_id": "EXHIBITION_30",
+          "map_version": "city-masterplan-v003-local-v1",
+          "point": [
+            44.35,
+            0.412014,
+            79
+          ],
+          "radius_m": 0.6
+        },
+        "is_generic": false,
+        "choices": [
+          {
+            "id": "40000000-0000-0000-0000-000000000301",
+            "label": "경찰에 신고한다.",
+            "display_order": 1
+          },
+          {
+            "id": "40000000-0000-0000-0000-000000000302",
+            "label": "사람들이 가까이 가지 못하게 한다.",
+            "display_order": 2
+          },
+          {
+            "id": "40000000-0000-0000-0000-000000000303",
+            "label": "일단 열어본다.",
+            "display_order": 3
+          }
+        ]
+      }
+    },
+    "overdue_since": null,
+    "overdue": false
+  },
+  "stopped": {
+    "session_id": "16000000-0000-0000-0000-000000000001",
+    "status": "RUNNING",
+    "server_time": "2026-11-17T04:01:41.545Z",
+    "freeze_at": "2026-11-17T16:00:46.446Z",
+    "map_version": "city-masterplan-v003-local-v1",
+    "path_version": "city-masterplan-v003-plaza30-v1",
+    "motion_time": "2026-11-17T04:01:41.545Z",
+    "frozen": false,
+    "npcs": [
+      {
+        "epoch": "2026-11-17T04:01:41.347Z",
+        "motion": {
+          "loop": false,
+          "points": [
+            [
+              44.35,
+              0.40258618123107276,
+              78.40070711869225
+            ],
+            [
+              44.35,
+              0.40258618123107276,
+              78.40070711869225
+            ]
+          ],
+          "speed_mps": 0,
+          "map_version": "city-masterplan-v003-local-v1",
+          "path_version": "city-masterplan-v003-plaza30-v1",
+          "revision": 3,
+          "freeze_at": "2026-11-17T04:01:41.347Z"
+        },
+        "npc_id": "4ded2bc5-ecba-45ea-8021-827d5ad801e0",
+        "glasses_id": "none",
+        "character_id": "npc_01"
+      }
+    ]
+  },
+  "still": {
+    "session_id": "16000000-0000-0000-0000-000000000001",
+    "status": "RUNNING",
+    "server_time": "2026-11-17T04:01:43.672Z",
+    "freeze_at": "2026-11-17T16:00:46.446Z",
+    "map_version": "city-masterplan-v003-local-v1",
+    "path_version": "city-masterplan-v003-plaza30-v1",
+    "motion_time": "2026-11-17T04:01:43.672Z",
+    "frozen": false,
+    "npcs": [
+      {
+        "epoch": "2026-11-17T04:01:41.347Z",
+        "motion": {
+          "loop": false,
+          "points": [
+            [
+              44.35,
+              0.40258618123107276,
+              78.40070711869225
+            ],
+            [
+              44.35,
+              0.40258618123107276,
+              78.40070711869225
+            ]
+          ],
+          "speed_mps": 0,
+          "map_version": "city-masterplan-v003-local-v1",
+          "path_version": "city-masterplan-v003-plaza30-v1",
+          "revision": 3,
+          "freeze_at": "2026-11-17T04:01:41.347Z"
+        },
+        "npc_id": "4ded2bc5-ecba-45ea-8021-827d5ad801e0",
+        "glasses_id": "none",
+        "character_id": "npc_01"
+      }
+    ]
+  },
+  "choice": {
+    "record_id": "6109c3e3-3af4-48dc-8d8f-571c3ddc3a42",
+    "state_version": "1",
+    "replayed": false,
+    "city": {
+      "happiness": 0,
+      "safety": 3,
+      "cleanliness": 0
+    }
+  },
+  "result": {
+    "outcome": {
+      "record_id": "6109c3e3-3af4-48dc-8d8f-571c3ddc3a42",
+      "state_version": "1",
+      "city": {
+        "happiness": 0,
+        "safety": 3,
+        "cleanliness": 0
+      }
+    },
+    "phase": "RESULT",
+    "server_time": "2026-11-17T04:01:43.777Z",
+    "waiting_since": "2026-11-17T04:01:27.999Z",
+    "deadline_at": null,
+    "guidance_at": null,
+    "event": {
+      "id": "2a8742d7-29e3-44c1-93f5-b1839f8b9de7",
+      "status": "ACTIVE",
+      "place_id": "EXHIBITION_30",
+      "entry_seq": "1",
+      "session_id": "16000000-0000-0000-0000-000000000001",
+      "started_at": "2026-11-17T13:01:41.347+09:00",
+      "completed_at": null,
+      "situation_id": "30000000-0000-0000-0000-000000000030",
+      "trigger_kind": "LOCATION",
+      "participant_id": "5241cb46-a65c-42a7-9473-ce1615b0a284",
+      "situation": {
+        "session_id": "16000000-0000-0000-0000-000000000001",
+        "id": "30000000-0000-0000-0000-000000000030",
+        "code": "EXHIBITION_30",
+        "title": "도시 광장에서 정체불명의 상자를 발견했다",
+        "body": "도시 광장에서 정체불명의 상자를 발견했다",
+        "display_order": 30,
+        "event_location": {
+          "place_id": "EXHIBITION_30",
+          "map_version": "city-masterplan-v003-local-v1",
+          "point": [
+            44.35,
+            0.412014,
+            79
+          ],
+          "radius_m": 0.6
+        },
+        "is_generic": false,
+        "choices": [
+          {
+            "id": "40000000-0000-0000-0000-000000000301",
+            "label": "경찰에 신고한다.",
+            "display_order": 1
+          },
+          {
+            "id": "40000000-0000-0000-0000-000000000302",
+            "label": "사람들이 가까이 가지 못하게 한다.",
+            "display_order": 2
+          },
+          {
+            "id": "40000000-0000-0000-0000-000000000303",
+            "label": "일단 열어본다.",
+            "display_order": 3
+          }
+        ]
+      }
+    },
+    "overdue_since": null,
+    "overdue": false
+  },
+  "resumed": {
+    "session_id": "16000000-0000-0000-0000-000000000001",
+    "status": "RUNNING",
+    "server_time": "2026-11-17T04:01:46.517Z",
+    "freeze_at": "2026-11-17T16:00:46.446Z",
+    "map_version": "city-masterplan-v003-local-v1",
+    "path_version": "city-masterplan-v003-plaza30-v1",
+    "motion_time": "2026-11-17T04:01:46.517Z",
+    "frozen": false,
+    "npcs": [
+      {
+        "epoch": "2026-11-17T04:01:46.481Z",
+        "motion": {
+          "loop": false,
+          "points": [
+            [
+              44.35,
+              0.40258618123107276,
+              78.40070711869225
+            ],
+            [
+              44.35,
+              0.301893,
+              72
+            ],
+            [
+              44.35,
+              0.202832,
+              65
+            ]
+          ],
+          "speed_mps": 1.4,
+          "map_version": "city-masterplan-v003-local-v1",
+          "path_version": "city-masterplan-v003-plaza30-v1",
+          "revision": 4
+        },
+        "npc_id": "4ded2bc5-ecba-45ea-8021-827d5ad801e0",
+        "glasses_id": "none",
+        "character_id": "npc_01"
+      }
+    ]
+  },
+  "completed_at": "2026-11-17T04:01:48.669Z",
+  "ledger": {
+    "state_version": "1",
+    "happiness": 0,
+    "safety": 3,
+    "cleanliness": 0,
+    "event_records": 1
+  }
+}

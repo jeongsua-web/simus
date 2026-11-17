@@ -1,0 +1,29 @@
+{
+  "base": "http://127.0.0.1:3210",
+  "sid": "73aaf209-0946-4082-8650-d9bffced68cb",
+  "source_session": "16000000-0000-0000-0000-000000000001",
+  "results": [
+    {
+      "name": "wrong path",
+      "status": 409,
+      "code": "NPC_PATH_INCOMPATIBLE",
+      "after": {
+        "status": "DRAFT",
+        "starts_at": null,
+        "city": 0,
+        "actions": 0
+      }
+    },
+    {
+      "name": "wrong points",
+      "status": 409,
+      "code": "NPC_PATH_INCOMPATIBLE",
+      "after": {
+        "status": "DRAFT",
+        "starts_at": null,
+        "city": 0,
+        "actions": 0
+      }
+    }
+  ]
+}

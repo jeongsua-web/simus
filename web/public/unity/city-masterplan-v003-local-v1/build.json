@@ -1,0 +1,15 @@
+{
+  "kind": "city-masterplan-v003-local-session",
+  "protocol_version": 1,
+  "map_version": "city-masterplan-v003-local-v1",
+  "path_versions": [
+    "city-masterplan-v003-plaza30-v1"
+  ],
+  "source_scene_sha256": "4b4e5dfbbf51b0754dd3de7435af67ef4670582994e7cf9cc10b7091123f6c27",
+  "npc_motion_enabled": true,
+  "route_validation_status": "unity_physics_passed",
+  "exhibition_ready": false,
+  "initial_memory_mb": 512,
+  "maximum_memory_mb": 2048,
+  "memory_growth": "geometric"
+}
