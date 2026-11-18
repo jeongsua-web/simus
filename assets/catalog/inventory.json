@@ -16,6 +16,27 @@
       "sha256": "a2c5537b0a6218030bf228b06e836eff2a824d196cb52fd0f08a2416252b50ed"
     },
     {
+      "path": "assets/archive/backups/home_city_background_cinematic_v001/HomeBackgroundCinematic-30s.unity",
+      "role": "scene",
+      "location": "archive",
+      "bytes": 19076891,
+      "sha256": "e104901ec29744e0b0db983873264c121ed008efc68eb05e42675a7f5b9ef695"
+    },
+    {
+      "path": "assets/archive/backups/home_city_background_cinematic_v001/city-background-30s-poster.webp",
+      "role": "image",
+      "location": "archive",
+      "bytes": 150238,
+      "sha256": "cca0b9ded6d068dcf72c736217d551ae5bd0c41fba8ba243fce941d2affd2daa"
+    },
+    {
+      "path": "assets/archive/backups/home_city_background_cinematic_v001/city-background-30s.mp4",
+      "role": "support",
+      "location": "archive",
+      "bytes": 15169805,
+      "sha256": "edf8f6291ef85b01ec5aa41fea49e9b3f23520336cd2ef7ed1296bb652d0a5c1"
+    },
+    {
       "path": "assets/archive/backups/modular_hairfix_v001.meta",
       "role": "unity_metadata",
       "location": "archive",
@@ -4083,6 +4104,13 @@
       "sha256": "d4802a55e183f5186bb8cd419000a40614281f9d83e8d0660fb6f718254086c4"
     },
     {
+      "path": "assets/library/maps/city_masterplan_v003/StateDensity_README.md",
+      "role": "support",
+      "location": "library",
+      "bytes": 2162,
+      "sha256": "843f14bb4e52c0c1771ec735a36a3d5f062d0f2d6065018a33e58c2e5cd8be1b"
+    },
+    {
       "path": "assets/library/maps/city_masterplan_v003/exchange/SIMUS_City_Masterplan_v003.fbx",
       "role": "export",
       "location": "library",
@@ -4377,6 +4405,27 @@
       "sha256": "abdd6e777eaf06dae0ba29fb3a9f147cd08b317cbe418c11277b9c55e0a23436"
     },
     {
+      "path": "assets/library/maps/city_masterplan_v003/previews/state_density/Exhaust.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 212697,
+      "sha256": "abe04fc2b7b94d950506ce67d7506732220d1ad63d606fc68b91675d9cc31a6b"
+    },
+    {
+      "path": "assets/library/maps/city_masterplan_v003/previews/state_density/Trash.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 138130,
+      "sha256": "73d9faed4afec2ea379b59abc3a91388945a25d1b92be172e8c3f6d87385ac1a"
+    },
+    {
+      "path": "assets/library/maps/city_masterplan_v003/previews/state_density/VehicleExhaust.png",
+      "role": "image",
+      "location": "library",
+      "bytes": 213225,
+      "sha256": "31f8c5f4ef97719251d4338ba489021c09c239e7703cb48cc0bc426c17c2ea6e"
+    },
+    {
       "path": "assets/library/maps/city_masterplan_v003/reports/Build_Progress.md",
       "role": "support",
       "location": "library",
@@ -4501,6 +4550,27 @@
       "location": "library",
       "bytes": 104,
       "sha256": "2f9c99f3183fae64272d473a2ebb84f94c1634493f4b9653fa63d017971c2e69"
+    },
+    {
+      "path": "assets/library/maps/city_masterplan_v003/reports/state_density/placements.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 4306,
+      "sha256": "5c3e839744cbb1a3ed5a3d9f5c1dd2001d3bbe876438741ac0f6ea0c1201c709"
+    },
+    {
+      "path": "assets/library/maps/city_masterplan_v003/reports/state_density/playmode.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 960,
+      "sha256": "c1a2f463f7feb3f206294e5191f6c4d7e8727754ab48e56f4e72b5ed88254e8e"
+    },
+    {
+      "path": "assets/library/maps/city_masterplan_v003/reports/state_density/report.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 12472,
+      "sha256": "271bed2fe3c4ff23c3e229091c58542d181cb90c6715f072a6d52d60fff33064"
     },
     {
       "path": "assets/library/maps/city_masterplan_v003/reports/state_visual_report.json",
@@ -8164,11 +8234,60 @@
       "sha256": "745f2ad61cb00b15e722364f746cc0a133caa6fe9ca962b1c92d2b89d9ea9edf"
     },
     {
+      "path": "assets/library/ui/home_city_background_cinematic_v001/previews/tour-start.jpg",
+      "role": "image",
+      "location": "library",
+      "bytes": 509554,
+      "sha256": "4208d22b613518d5b257a5a56fb94895a88fe3d10525b975702a411e0d63a0f5"
+    },
+    {
+      "path": "assets/library/ui/home_city_background_cinematic_v001/reports/media-validation.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 499,
+      "sha256": "7eed4f3d7f7c00cb97bcbd331569693234c0f9a2c351c70c3aef91f4627ed5e2"
+    },
+    {
+      "path": "assets/library/ui/home_city_background_cinematic_v001/reports/playmode.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 204,
+      "sha256": "06eeaa5bc8f21914fa60484d60a2022884b54037942905416029eb0acd8d9495"
+    },
+    {
+      "path": "assets/library/ui/home_city_background_cinematic_v001/reports/seam-validation.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 286,
+      "sha256": "ab72b63d9f493353759109c8f572326c238722835f181a417aab9f0cbfcad663"
+    },
+    {
+      "path": "assets/library/ui/home_city_background_cinematic_v001/reports/tour-validation.json",
+      "role": "support",
+      "location": "library",
+      "bytes": 573,
+      "sha256": "9b6c7451ecdebfeb09301df76257e1173895ff6f03c83c510c7a8fbba6f77b8e"
+    },
+    {
       "path": "assets/library/ui/home_city_background_unity_v001/README.md",
       "role": "support",
       "location": "library",
       "bytes": 3702,
       "sha256": "8cb4817530382f4addce30dac165b29570801ea0b133dd521bf43b816519b11a"
+    },
+    {
+      "path": "assets/library/ui/home_city_background_unity_v001/exports/city-background-overview.mp4",
+      "role": "support",
+      "location": "library",
+      "bytes": 576377,
+      "sha256": "9f31b9d6fb352b064030bc39e1510eda6757bed0b3bea20b654ed86831e455da"
+    },
+    {
+      "path": "assets/library/ui/home_city_background_unity_v001/previews/city-background-overview-poster.webp",
+      "role": "image",
+      "location": "library",
+      "bytes": 149394,
+      "sha256": "1f4189ebd14e6e5aabac24e96c65da769da94e46f841e8633cc2c881d9755b9b"
     },
     {
       "path": "assets/library/ui/home_city_background_unity_v001/previews/city-unity-frame.jpg",
@@ -8398,8 +8517,8 @@
       "path": "unity/Assets/Editor/CityMasterplanV003LocalBuild.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 11253,
-      "sha256": "43939ce7330890c7123b365033a68cca597dd73a8cee926c114522605dc6e61d"
+      "bytes": 11657,
+      "sha256": "6c54c1002fcfc3262d7d29dd510b9a7f3fcbf1a7154564ee8bb70b7e82141fb6"
     },
     {
       "path": "unity/Assets/Editor/CityMasterplanV003LocalBuild.cs.meta",
@@ -8664,8 +8783,8 @@
       "path": "unity/Assets/Editor/HomeBackgroundCapture.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 12562,
-      "sha256": "879440666a851edd2097529c5565ba3cf2a4ab5d0981e45c74c81dfab416fe0a"
+      "bytes": 13194,
+      "sha256": "857cce3a14ca04d176b51a23c1c6f22387f505f8826224d09c74ea934643f5a9"
     },
     {
       "path": "unity/Assets/Editor/HomeBackgroundCapture.cs.meta",
@@ -8678,8 +8797,8 @@
       "path": "unity/Assets/Editor/HomeBackgroundCinematicPreview.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 9580,
-      "sha256": "9abf2c0fb6d48031890670458730c3697db70f99ef1821cc1ef1348a9e49025e"
+      "bytes": 9778,
+      "sha256": "ad129d75d2a95069e649e329856ac628c66118bb90f631d028a3ca15a4685253"
     },
     {
       "path": "unity/Assets/Editor/HomeBackgroundCinematicPreview.cs.meta",
@@ -8687,6 +8806,20 @@
       "location": "unity_existing",
       "bytes": 60,
       "sha256": "10b4a6bf94810be5e16591a1aab09ac087404db8e657f3238bdc5748f472fb75"
+    },
+    {
+      "path": "unity/Assets/Editor/HomeBackgroundTourCapture.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 15542,
+      "sha256": "7fddd32467f63c9f322b02866f15a5af3ac49cbee5ad660587cce4279a527ab1"
+    },
+    {
+      "path": "unity/Assets/Editor/HomeBackgroundTourCapture.cs.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 60,
+      "sha256": "2682488acfab9b9e669bd694824fbbab97cb6e427e5e00d304f868ac67f8504c"
     },
     {
       "path": "unity/Assets/Editor/MapRebuildDraftSetup.cs",
@@ -19178,8 +19311,8 @@
       "path": "unity/Assets/SIMUS/Runtime/HomeBackgroundMotion.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 2727,
-      "sha256": "6ed303d4b309f6fca4272276ecb1669aa36201fb4afe4ba7deb1ca906c5da907"
+      "bytes": 2939,
+      "sha256": "261a12208c4c80736de4459de40d71b646172bb0a3a90ec4dc20cb1ef49accbf"
     },
     {
       "path": "unity/Assets/SIMUS/Runtime/HomeBackgroundMotion.cs.meta",
@@ -19187,6 +19320,20 @@
       "location": "unity_existing",
       "bytes": 60,
       "sha256": "ee5ecf8b8c61f4693a1238b87c3ead977ff3b5fd4782600dc9aadc50b4908419"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/HomeBackgroundTour.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 1474,
+      "sha256": "bd01f9e77f60555f024e3cb2d03f018afa3b0059437032853809ac2d512df3a0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Runtime/HomeBackgroundTour.cs.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 60,
+      "sha256": "7fc465f27a2189ea9b1dc22145ba31faf00b9e514db8e185e361011ada9b2caf"
     },
     {
       "path": "unity/Assets/SIMUS/Runtime/NeighborhoodLife.cs",
@@ -19367,8 +19514,8 @@
       "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/CityMasterplan_v003_EventPlaces.unity",
       "role": "scene",
       "location": "unity_existing",
-      "bytes": 16639154,
-      "sha256": "4b4e5dfbbf51b0754dd3de7435af67ef4670582994e7cf9cc10b7091123f6c27"
+      "bytes": 18271452,
+      "sha256": "2c0d5223f2c66f1c788be0f04662305fcbc101e009c27c1b22db9e9b5aa9101e"
     },
     {
       "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/CityMasterplan_v003_EventPlaces.unity.meta",
@@ -27692,6 +27839,202 @@
       "location": "unity_existing",
       "bytes": 158,
       "sha256": "7454306a8ce1b0ab5b553603cdf91850ba1f2c12a5eba7853f8930b8cc497a01"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "188193587d84ee619ba463980248f7c899442864cb6a238483dad5587c062d15"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/ExhaustMetal.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2218,
+      "sha256": "e7a8ad2699bcd8c0f3fd42688ee185583a665493f6b7e5e962167231727a33a5"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/ExhaustMetal.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "c721301ed6cb6da0ec3bbe59a6bc0b8780fa4e105de202d92a527f52823f9fa0"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/LitterCluster_0.asset",
+      "role": "support",
+      "location": "unity_existing",
+      "bytes": 511952,
+      "sha256": "2d9e6d5f593d3200ff1b2f84f3ecf38f4aa6b7792d84faa3296deac05c5b7545"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/LitterCluster_0.asset.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "e82142bad3132531ed7ce321bc7faf2a40df8d16f1037ffb7bb3d429868dd154"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/LitterCluster_1.asset",
+      "role": "support",
+      "location": "unity_existing",
+      "bytes": 511948,
+      "sha256": "dfe59622b29a625b638ba2ba56d0e17ec0bfd53c85bdda0b8bdd9109e2666158"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/LitterCluster_1.asset.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "6f59770d121e58955459cf50b45b30c7eb37bc8437445f91aeeb4928d0616f5a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/LitterCluster_2.asset",
+      "role": "support",
+      "location": "unity_existing",
+      "bytes": 511948,
+      "sha256": "91fb701bdf6699cba1d56b4783132fa4c3249bb76d0306428f3d962b7b967267"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/LitterCluster_2.asset.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "e0437f0e2f81bbf7f83318e7e5067d001b9ab9ba3ae1afb23b5bfb0078424622"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/LitterCluster_3.asset",
+      "role": "support",
+      "location": "unity_existing",
+      "bytes": 511951,
+      "sha256": "2968d7e54df1fc44b9725ec17566e127f681278b70cc7a51e6e759270b6524fe"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/LitterCluster_3.asset.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "14099d1a6c1d92855f479c75e1f5fb8802e1030c800266d3d9ff7928a87dc826"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/LitterMaterial_0.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2220,
+      "sha256": "705ecb4d8e0828a00259afbcfa87cd4af3012fb5d1bc203a35272fd30edbad67"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/LitterMaterial_0.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "eed6d0af5532f59e429ebd8e6c51cdaddc7839e7b46c263bff42a056bf3bfc1a"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/LitterMaterial_1.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2220,
+      "sha256": "b5501d59e07b55d17c842594198e31539e7438ba337ce1e3ff8988ce1b18ff14"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/LitterMaterial_1.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "36f2d62f3388dbd5a3bcb44963d442f55a8e38b5452dc3dc769828490cd6b6b9"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/LitterMaterial_2.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2219,
+      "sha256": "ea35fedc308d6856060add99f99a928da1862af6b87bba455fc4d6a38b1a8198"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/LitterMaterial_2.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "d57ac2d373356798e6c57de6de6346598cd23b103f164c613f31cbfec1fc1a72"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/LitterMaterial_3.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 2219,
+      "sha256": "4a0349d671398bc55d2b69ac3852406f623e710932d85314f052ca5e57c93313"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/LitterMaterial_3.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "12f9c67e6fd2f031b970e12156b04f9eebe5456b2dae6db69dc1bb8e02b1d4bf"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/Runtime.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 172,
+      "sha256": "442aa5f643acc4df49172bd33b1ca374b0910df25c62f8a217f0e2a1db68a292"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/Runtime/CityStateDensity.cs",
+      "role": "code",
+      "location": "unity_existing",
+      "bytes": 3278,
+      "sha256": "9a88da0980d186debff7d831d434d4f45ac0ee40150189a83c35c7592127d039"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/Runtime/CityStateDensity.cs.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 59,
+      "sha256": "0cdb47a84d0150a816a478a022f79777e02ac55500d5755f42c51d9b63ce1017"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/Smoke.mat",
+      "role": "material",
+      "location": "unity_existing",
+      "bytes": 1993,
+      "sha256": "286675066e49079e947fc8b2085ef865e7650cc6201c63992dab8fbd26cbc73b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/Smoke.mat.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "d344cfba8897f31a790f0f8db791b3f6145697fd6f7a0e8dc718b54755719774"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/SoftSmoke.asset",
+      "role": "support",
+      "location": "unity_existing",
+      "bytes": 9216,
+      "sha256": "fda068f45ff6006964d6cdeca1f4e5c776ef6f544f3c3c5c191dd91128ef2427"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/SoftSmoke.asset.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 188,
+      "sha256": "a59715192ec40d461f5880eb15d72aec0db2d0762f6427afc20a0b560d72345d"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/placements.json",
+      "role": "support",
+      "location": "unity_existing",
+      "bytes": 4306,
+      "sha256": "5c3e839744cbb1a3ed5a3d9f5c1dd2001d3bbe876438741ac0f6ea0c1201c709"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/state_density/placements.json.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 158,
+      "sha256": "f77ac89aa614abad9eaf833663776b99a6932f241deefad76be4f547b90c82a9"
     },
     {
       "path": "unity/Assets/SIMUS/Scenes/city_rebuild_v002.meta",
@@ -44914,6 +45257,20 @@
       "sha256": "961f5f7560bcf87d8b0d08fd0b1ee9ee7d38a65d57a43b4f469f36ac02c6ee6d"
     },
     {
+      "path": "unity/Assets/SIMUS/Scenes/home_background/HomeBackgroundCinematic.unity",
+      "role": "scene",
+      "location": "unity_existing",
+      "bytes": 19076891,
+      "sha256": "e104901ec29744e0b0db983873264c121ed008efc68eb05e42675a7f5b9ef695"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/home_background/HomeBackgroundCinematic.unity.meta",
+      "role": "unity_metadata",
+      "location": "unity_existing",
+      "bytes": 155,
+      "sha256": "a3325e803228557c90d297a16c7c97a3e82c30128889b91e2bbe507b65d60ea2"
+    },
+    {
       "path": "unity/Assets/SIMUS/Scenes/map_rebuild_draft.meta",
       "role": "unity_metadata",
       "location": "unity_existing",
@@ -46461,6 +46818,34 @@
       "sha256": "76333a171a1604b6d7b57367faa80a0ca364c586f1d530572130016ad9aa5ffa"
     },
     {
+      "path": "web/public/unity/city-masterplan-v003-local-v1/Build/webgl.data",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 183499063,
+      "sha256": "1ba7ab728f93a08e75aef3705669824478dd2b55f4e3ac9fece813432f8c2174"
+    },
+    {
+      "path": "web/public/unity/city-masterplan-v003-local-v1/Build/webgl.framework.js",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 413427,
+      "sha256": "bddd23c9938ab61f043de9b54586e6d3dba99436355c9b3a3bfa3b1524121b0c"
+    },
+    {
+      "path": "web/public/unity/city-masterplan-v003-local-v1/Build/webgl.loader.js",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 26983,
+      "sha256": "effd58e02c11b2a60367aa4535180f98a3dfa00ec5d3200df8c920f3286fc0ee"
+    },
+    {
+      "path": "web/public/unity/city-masterplan-v003-local-v1/Build/webgl.wasm",
+      "role": "support",
+      "location": "web_runtime",
+      "bytes": 28635865,
+      "sha256": "e9f2c452ca54f2e19e2cec120438b7abcff5da12d8b74def4e86f134e8fa78b9"
+    },
+    {
       "path": "web/public/unity/city-masterplan-v003-local-v1/bridge.js",
       "role": "support",
       "location": "web_runtime",
@@ -46471,15 +46856,15 @@
       "path": "web/public/unity/city-masterplan-v003-local-v1/build.json",
       "role": "support",
       "location": "web_runtime",
-      "bytes": 483,
-      "sha256": "2ddffbeace0cadd84f4d7ccdee4e20397f5352772d1e072be0bef0dad3c38241"
+      "bytes": 512,
+      "sha256": "b1a04ed10fd805257f805dc18b0b36298b47469748f30ea52283d431c63292fc"
     },
     {
       "path": "web/public/unity/city-masterplan-v003-local-v1/index.html",
       "role": "support",
       "location": "web_runtime",
-      "bytes": 1648,
-      "sha256": "b8adcf6e70b66c0f8ed6a644c928de9adadb0115802bee026859c624ee538d3b"
+      "bytes": 1552,
+      "sha256": "3dc3b3a3f1f8f0655f04e88c1c8310e51af4d3c7043783bb094f9ef9b05b3f12"
     },
     {
       "path": "web/public/vercel.svg",
@@ -46492,15 +46877,15 @@
       "path": "web/public/videos/city-background-poster.webp",
       "role": "image",
       "location": "web_runtime",
-      "bytes": 149394,
-      "sha256": "1f4189ebd14e6e5aabac24e96c65da769da94e46f841e8633cc2c881d9755b9b"
+      "bytes": 150238,
+      "sha256": "cca0b9ded6d068dcf72c736217d551ae5bd0c41fba8ba243fce941d2affd2daa"
     },
     {
       "path": "web/public/videos/city-background.mp4",
       "role": "support",
       "location": "web_runtime",
-      "bytes": 576377,
-      "sha256": "9f31b9d6fb352b064030bc39e1510eda6757bed0b3bea20b654ed86831e455da"
+      "bytes": 15169805,
+      "sha256": "edf8f6291ef85b01ec5aa41fea49e9b3f23520336cd2ef7ed1296bb652d0a5c1"
     },
     {
       "path": "web/public/window.svg",
@@ -46672,6 +47057,13 @@
       ]
     },
     {
+      "sha256": "cca0b9ded6d068dcf72c736217d551ae5bd0c41fba8ba243fce941d2affd2daa",
+      "paths": [
+        "assets/archive/backups/home_city_background_cinematic_v001/city-background-30s-poster.webp",
+        "web/public/videos/city-background-poster.webp"
+      ]
+    },
+    {
       "sha256": "ccf95eff956a0a55edf4d97e9e5ebd632061f43fb09c974af1d29fbc6ea56f7c",
       "paths": [
         "unity/Assets/SIMUS/Art/buildings/commercial_cafe_v001/materials/MAT_CONCRETE.mat",
@@ -46690,6 +47082,13 @@
       "paths": [
         "assets/library/props/river_footbridge_v001/exports/RIVER_RAIL_END_POST.fbx",
         "unity/Assets/SIMUS/Art/props/river_footbridge_v001/models/RIVER_RAIL_END_POST.fbx"
+      ]
+    },
+    {
+      "sha256": "e104901ec29744e0b0db983873264c121ed008efc68eb05e42675a7f5b9ef695",
+      "paths": [
+        "assets/archive/backups/home_city_background_cinematic_v001/HomeBackgroundCinematic-30s.unity",
+        "unity/Assets/SIMUS/Scenes/home_background/HomeBackgroundCinematic.unity"
       ]
     },
     {

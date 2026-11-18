@@ -1,7 +1,7 @@
 {
   "map_version": "city-masterplan-v003-local-v1",
   "path_version": "city-masterplan-v003-plaza30-v1",
-  "source_scene_sha256": "4b4e5dfbbf51b0754dd3de7435af67ef4670582994e7cf9cc10b7091123f6c27",
+  "source_scene_sha256": "2c0d5223f2c66f1c788be0f04662305fcbc101e009c27c1b22db9e9b5aa9101e",
   "points": [
     [
       44.35,
@@ -58,7 +58,7 @@
   ],
   "validation_status": "unity_physics_passed",
   "exhibition_approved": false,
-  "physics_evidence": "docs/verification/v003-local-physics.json",
+  "physics_evidence": "docs/verification/v003-web-refresh-physics.json",
   "route_distance_m": 14.001567033922356,
   "nominal_travel_seconds": 10.00111930994454
 }

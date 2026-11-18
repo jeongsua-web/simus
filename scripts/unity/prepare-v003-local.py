@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Create a disposable v003 validation project with its actual asset dependencies."""
 import argparse
+import sys
 import pathlib
 import re
 import shutil
@@ -17,9 +18,11 @@ TEXT_ASSETS = {'.cs', '.unity', '.mat', '.asset', '.shader', '.controller', '.pr
 def copy_file(source, destination):
     destination.parent.mkdir(parents=True, exist_ok=True)
     # APFS clones avoid duplicate storage while keeping importer writes isolated.
-    result = subprocess.run(['cp', '-c', str(source), str(destination)], capture_output=True)
-    if result.returncode:
-        shutil.copy2(source, destination)
+    if sys.platform == 'darwin':
+        result = subprocess.run(['cp', '-c', str(source), str(destination)], capture_output=True)
+        if result.returncode == 0:
+            return
+    shutil.copy2(source, destination)
 
 
 def main():
