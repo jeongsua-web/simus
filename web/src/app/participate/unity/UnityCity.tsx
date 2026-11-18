@@ -2,10 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 import { BRIDGE_CHANNEL, BRIDGE_VERSION, matchesOwnSnapshot, readUnityEvent } from "./unity-bridge";
-import type { NpcSnapshot } from "./npc-motion";
-import styles from "./participate.module.css";
+import type { NpcSnapshot } from "../lib/npc-motion";
+import styles from "../participate.module.css";
 import { cityBuildBase, isCityV002Map, V003_MAP_VERSION } from "@/lib/city/city-builds";
-import Population from "./Population";
+import Population from "../components/Population";
 
 type View = { phase: "loading" | "ready" | "error"; message: string; src?: string; zoomSupported?: boolean };
 
@@ -16,7 +16,7 @@ export default function UnityCity({ sessionId, onReady }: { sessionId: string; o
   const [attempt, setAttempt] = useState(0);
   const [view, setView] = useState<View>({ phase: "loading", message: "도시를 준비하고 있습니다…" });
 
-  useEffect(() => { onReady?.(view.phase === "ready"); }, [view.phase,onReady]);
+  useEffect(() => { onReady?.(view.phase === "ready"); }, [view.phase, onReady]);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -100,7 +100,7 @@ export default function UnityCity({ sessionId, onReady }: { sessionId: string; o
         const build = await response.json();
         if (build.protocol_version !== BRIDGE_VERSION || typeof build.map_version !== "string" || !build.map_version.trim()) throw new Error("Invalid build");
         if (build.map_version !== sessionMap || build.npc_motion_enabled === false ||
-            ((isCityV002Map(sessionMap) || sessionMap === V003_MAP_VERSION) && (build.npc_motion_enabled !== true || !build.path_versions?.includes(initial.npcs[0].motion.path_version)))) {
+          ((isCityV002Map(sessionMap) || sessionMap === V003_MAP_VERSION) && (build.npc_motion_enabled !== true || !build.path_versions?.includes(initial.npcs[0].motion.path_version)))) {
           fail("회차의 도시 또는 경로 버전과 배포 빌드가 맞지 않습니다. 관리자에게 문의해 주세요."); return;
         }
         if (disposed || failed) return;

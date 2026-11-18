@@ -4,7 +4,7 @@ import { Black_Han_Sans, IBM_Plex_Mono } from "next/font/google";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import CitizenCard from "./CitizenCard";
 import { CITIZEN_CHARACTERS, CITIZEN_GLASSES, getCitizenCharacter, type CitizenGlassesId } from "@/lib/npc/citizen-characters";
-import type { ApiError, Department, Profile, Session } from "./types";
+import type { ApiError, Department, Profile, Session } from "../types";
 import styles from "./ProfileEntry.module.css";
 
 const display = Black_Han_Sans({ weight: "400", subsets: ["latin"], preload: false, variable: "--font-display" });

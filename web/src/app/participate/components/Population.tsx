@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import styles from "./participate.module.css";
+import styles from "../participate.module.css";
 
 export default function Population({ sessionId }: { sessionId: string }) {
   const [count, setCount] = useState<number | null>(null);

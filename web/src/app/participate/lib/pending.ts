@@ -1,4 +1,4 @@
-import type { Submission } from "./types";
+import type { Submission } from "../types";
 
 export const pendingKey = "simus_pending_choice_v1";
 export function readPending(): Submission | null {

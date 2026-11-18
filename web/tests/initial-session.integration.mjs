@@ -1,10 +1,11 @@
 import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
-import { readFile, writeFile } from 'node:fs/promises';
+import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { SignJWT } from 'jose';
 import { MAP_VERSION, defaultMotion, nodePoint } from '../src/lib/city/city-v002-graph.mjs';
 import content from '../src/lib/data/initial-session-content.json' with { type: 'json' };
+import v003Route from '../src/lib/routes/data/v003-local-route.json' with { type: 'json' };
 import { preparedLocation } from '../src/lib/city/city-v002-event-mapping.mjs';
 
 // Called only by the disposable-cluster runner; never connects to a configured DB.
@@ -65,7 +66,12 @@ export async function runInitialSessionIntegration({ pool, env, privateKey, publ
   const situations=(await pool.query('SELECT * FROM simus.session_situations WHERE session_id=$1 ORDER BY display_order',[sid])).rows;
   assert.equal(situations.length,30);assert.ok(situations.every(s=>!s.is_generic));
   assert.equal(situations.filter(s=>s.event_location).length,12);
-  for (const situation of situations) assert.deepEqual(situation.event_location,preparedLocation(situation.code));
+  for (const situation of situations) {
+    const expected = preparedLocation(situation.code);
+    if (!expected) { assert.equal(situation.event_location,null); continue; }
+    assert.deepEqual({...situation.event_location,point:expected.point},expected);
+    situation.event_location.point.forEach((value,index)=>assert.ok(Math.abs(value-expected.point[index])<1e-9));
+  }
   assert.deepEqual(situations.map(s=>s.title),content.situations.map(s=>s.title));
   const choices=(await pool.query(`SELECT c.*,e.pollution_base FROM simus.session_choices c JOIN simus.choice_region_effects e
     ON (e.session_id,e.situation_id,e.choice_id)=(c.session_id,c.situation_id,c.id) WHERE c.session_id=$1 ORDER BY c.situation_id,c.display_order`,[sid])).rows;
@@ -82,6 +88,49 @@ export async function runInitialSessionIntegration({ pool, env, privateKey, publ
   assert.equal((await call(endpoint,clonePayload)).status,200);
   assert.equal((await pool.query('SELECT count(*) FROM simus.session_situations WHERE session_id=$1',[clone.body.session_id])).rows[0].count,'30');
   assert.equal((await pool.query('SELECT event_location FROM simus.session_situations WHERE session_id=$1 AND id=$2',[clone.body.session_id,situations[1].id])).rows[0].event_location.map_version,MAP_VERSION);
+  const v003Payload={...clonePayload,npc_profile:'city-masterplan-v003',request_key:randomUUID()};
+  const unavailable=await call(endpoint,v003Payload);
+  assert.equal(unavailable.status,409);assert.equal(unavailable.body.error.code,'CITY_BUILD_UNAVAILABLE');
+  const v003Root=path.join(env.SIMUS_WEBGL_PUBLIC_ROOT,'unity',v003Route.map_version);
+  await mkdir(path.join(v003Root,'Build'),{recursive:true});
+  for (const name of ['index.html','bridge.js','Build/test.loader.js','Build/test.framework.js','Build/test.wasm','Build/test.data'])
+    await writeFile(path.join(v003Root,name),'API-only fixture');
+  await writeFile(path.join(v003Root,'build.json'),JSON.stringify({kind:'city-masterplan-v003-local-session',protocol_version:1,
+    map_version:v003Route.map_version,path_versions:[v003Route.path_version],npc_motion_enabled:true,
+    route_validation_status:v003Route.validation_status,source_scene_sha256:v003Route.source_scene_sha256}));
+  const v003=await call(endpoint,v003Payload);assert.equal(v003.status,201,JSON.stringify(v003.body));
+  assert.equal((await call(endpoint,v003Payload)).status,200);
+  assert.equal((await call(endpoint,{...v003Payload,npc_profile:'city-rebuild-v002'})).body.error.code,'REQUEST_KEY_CONFLICT');
+  const v003Rows=(await pool.query('SELECT code,event_location FROM simus.session_situations WHERE session_id=$1',[v003.body.session_id])).rows;
+  assert.equal(v003Rows.length,30);assert.equal(v003Rows.filter(s=>s.event_location).length,1);
+  assert.deepEqual(v003Rows.find(s=>s.code==='EXHIBITION_30').event_location,v003Route.event_location);
+  const v003Session=(await pool.query('SELECT npc_motion FROM simus.simulation_sessions WHERE id=$1',[v003.body.session_id])).rows[0];
+  assert.equal(v003Session.npc_motion.map_version,v003Route.map_version);
+  assert.deepEqual(v003Session.npc_motion.points,v003Route.points);
+  assert.equal((await pool.query('SELECT count(*) FROM simus.session_choices WHERE session_id=$1',[v003.body.session_id])).rows[0].count,'91');
+  // Omitted settings inherit the source, including authored placements and route.
+  const inheritedPayload = {template_session_id:v003.body.session_id,name:'Inherited city',request_key:randomUUID()};
+  const inherited = await call(endpoint,inheritedPayload);
+  assert.equal(inherited.status,201,JSON.stringify(inherited.body));
+  assert.equal((await call(endpoint,inheritedPayload)).status,200);
+  assert.equal((await call(endpoint,{...inheritedPayload,duration_seconds:601})).body.error.code,'REQUEST_KEY_CONFLICT');
+  const inheritedId = inherited.body.session_id;
+  const inheritedSession = (await pool.query('SELECT * FROM simus.simulation_sessions WHERE id=$1',[inheritedId])).rows[0];
+  assert.deepEqual(inheritedSession.npc_motion,v003Session.npc_motion);
+  assert.equal(Number(inheritedSession.impact_scale),.2);
+  const listed = (await call(endpoint)).body.sessions.find(s=>s.id===inheritedId);
+  assert.equal(listed.duration_seconds,300);assert.equal(listed.impact_scale,.2);
+  assert.deepEqual((await pool.query('SELECT code,event_location FROM simus.session_situations WHERE session_id=$1 ORDER BY code',[inheritedId])).rows,
+    [...v003Rows].sort((a,b)=>a.code.localeCompare(b.code)));
+  for (const table of ['participant_sessions','choice_records','city_states','region_states','session_results'])
+    assert.equal((await pool.query(`SELECT count(*) FROM simus.${table} WHERE session_id=$1`,[inheritedId])).rows[0].count,'0');
+  const customized = await call(endpoint,{...inheritedPayload,name:'Customized city',duration_seconds:450,impact_scale:.35,request_key:randomUUID()});
+  assert.equal(customized.status,201,JSON.stringify(customized.body));
+  const customizedSession = (await pool.query('SELECT npc_motion,impact_scale FROM simus.simulation_sessions WHERE id=$1',[customized.body.session_id])).rows[0];
+  assert.deepEqual(customizedSession.npc_motion,v003Session.npc_motion);assert.equal(Number(customizedSession.impact_scale),.35);
+  assert.equal((await call(endpoint)).body.sessions.find(s=>s.id===customized.body.session_id).duration_seconds,450);
+  console.log('PASS inherited clone: original map/route/placements/duration/scale, replay, empty participation and optional overrides');
+  console.log('PASS v003 clone: missing build rejected, replay/conflict, validated route, one evidenced location, 30 situations and 91 choices');
   for (const action of ['start','end']) {
     const result=await call(`${endpoint}/${sid}/${action}`,{request_key:randomUUID()});assert.equal(result.status,200,JSON.stringify(result.body));
     if(action==='start') {

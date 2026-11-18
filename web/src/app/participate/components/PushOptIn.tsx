@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import styles from "./participate.module.css";
+import styles from "../participate.module.css";
 
 function decodeKey(value:string) {
   const raw=atob(value.replaceAll('-','+').replaceAll('_','/')+'='.repeat((4-value.length%4)%4));

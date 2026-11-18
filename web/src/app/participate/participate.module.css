@@ -1,6 +1,19 @@
+:root {
+    --primary: #59789F;
+    /* Glaucous */
+    --secondary: #A9B6C4;
+    /* Powder Blue */
+    --accent: #ECE69D;
+    /* Vanilla */
+    --moss: #7A9445;
+    /* Moss Green */
+    --dark: #243C2C;
+    /* Dark Green */
+}
+
 .page,
 .gamePage {
-    color: #203831;
+    color: var(--dark);
     background: #f5f1e6;
     color-scheme: light;
     font-family: Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
@@ -28,8 +41,8 @@
     align-items: center;
     gap: 16px;
     padding: 12px max(14px, env(safe-area-inset-right)) 12px max(14px, env(safe-area-inset-left));
-    border-bottom: 2px solid #203831;
-    background: #f5f1e6;
+    border-bottom: 2px solid var(--dark);
+    background: var(--secondary);
 }
 
 .identity {
@@ -47,7 +60,7 @@
 }
 
 .identity h1 span {
-    color: #368371;
+    color: var(--primary);
 }
 
 .identity>strong {
@@ -85,7 +98,7 @@
     align-items: center;
     min-height: 44px;
     padding: 0 12px;
-    border: 1.5px solid #203831;
+    border: 1.5px solid var(--dark);
     border-radius: 10px;
     font-size: 12px;
     font-weight: 800;
@@ -97,7 +110,7 @@
 }
 
 .menu[open]>summary {
-    background: #d1e7db;
+    background: var(--secondary);
 }
 
 .menuBody {
@@ -108,8 +121,8 @@
     max-height: calc(100svh - 100px);
     overflow: auto;
     padding: 22px;
-    background: #f5f1e6;
-    border: 2px solid #203831;
+    background: var(--secondary);
+    border: 2px solid var(--dark);
     border-radius: 16px;
     box-shadow: 5px 6px 0 #20383133;
 }
@@ -158,9 +171,9 @@
 .card,
 .stateCard {
     padding: 24px;
-    border: 2px solid #203831;
+    border: 2px solid var(--dark);
     border-radius: 18px;
-    background: #fffdf5;
+    background: var(--secondary);
     box-shadow: 4px 5px 0 #20383118;
 }
 
@@ -216,7 +229,7 @@
     flex-wrap: wrap;
     gap: 4px 12px;
     padding: 10px 16px;
-    background: #e3ecce;
+    background: var(--accent);
     border-bottom: 1px solid #203831;
     font-size: 12px;
 }
@@ -233,7 +246,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    background: #c2d7c1;
+    background: var(--moss);
 }
 
 .population {
@@ -369,8 +382,8 @@
     z-index: 2;
     width: min(100%, 720px);
     margin: 0 auto;
-    background: #fffdf5;
-    border: 2px solid #203831;
+    background: var(--secondary);
+    border: 2px solid var(--dark);
     border-bottom: 0;
     border-radius: 20px 20px 0 0;
     box-shadow: 0 -5px 0 #20383112;
@@ -485,9 +498,9 @@
     min-height: 52px;
     margin-bottom: 8px;
     padding: 12px 14px;
-    border: 1.5px solid #a6b5a8;
+    border: 1.5px solid var(--dark);
     border-radius: 10px;
-    background: #f7f5eb;
+    background: var(--secondary);
     cursor: pointer;
     transition: background .15s, border-color .15s;
 }
@@ -501,7 +514,7 @@
 
 .choice[data-selected="true"] {
     border: 2px solid #203831;
-    background: #d7eadc;
+    background: var(--accent);
     box-shadow: 3px 3px 0 #203831;
 }
 
@@ -555,7 +568,7 @@
     padding: 0 20px;
     border: 1.5px solid #203831;
     border-radius: 10px;
-    background: #203831;
+    background: var(--primary);
     color: #fffdf5;
     font: inherit;
     font-weight: 800;
@@ -570,7 +583,7 @@
 
 .submitButton {
     width: 100%;
-    background: #a9d7bd;
+    background: var(--accent);
     color: #203831;
     box-shadow: 0 3px 0 #203831;
 }
@@ -584,7 +597,7 @@
 }
 
 .secondaryButton {
-    background: #f1f0e5;
+    background: var(--secondary);
     color: #203831;
 }
 

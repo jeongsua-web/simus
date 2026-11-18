@@ -1,4 +1,4 @@
-import { npcPosition, type Npc } from '@/app/participate/npc-motion';
+import { npcPosition, type Npc } from '@/app/participate/lib/npc-motion';
 import { isV002MapVersion, routeBetween, pathLength, distance } from "../city/city-v002-graph.mjs";
 
 type Motion = Npc['motion'];
@@ -36,13 +36,17 @@ export function returnMotion(original: Motion, point: number[]): ReturnMotion {
   const connector = routeBetween(point, points[nearest], original.map_version);
   const cycle = original.loop ? [...points.slice(nearest), ...points.slice(0, nearest), points[nearest]] : points.slice(nearest);
   // Return exactly once, then restore the original loop, with no repeated event detour.
-  const rejoin_motion = { ...original, points: cycle.length > 1 ? cycle : [cycle[0], cycle[0]],
-    ...(pathLength(cycle) === 0 ? { speed_mps: 0 } : {}) };
+  const rejoin_motion = {
+    ...original, points: cycle.length > 1 ? cycle : [cycle[0], cycle[0]],
+    ...(pathLength(cycle) === 0 ? { speed_mps: 0 } : {})
+  };
   // Keep the connector separate so a maximum-size authored loop can still return.
   // A zero-length connector hands off immediately; its stored fallback stays valid.
-  return { ...original, points: connector.length > 1 ? connector : original.points, loop: false,
+  return {
+    ...original, points: connector.length > 1 ? connector : original.points, loop: false,
     rejoin_after_ms: original.speed_mps > 0 ? pathLength(connector) / original.speed_mps * 1000 : undefined,
-    rejoin_motion };
+    rejoin_motion
+  };
 }
 
 export function projectedRevision(state: GraphState & { motion_revision: string | number }, original: Motion, at: number) {

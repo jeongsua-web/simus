@@ -1,0 +1,24 @@
+{
+  "scene": "Assets/SIMUS/Scenes/home_background/HomeBackgroundCinematic.unity",
+  "duration_seconds": 30,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "frames": 900,
+  "camera_poses": 900,
+  "boundary_samples": 1801,
+  "minimum_boundary_margin_m": 9.987015,
+  "max_camera_boundary_correction_m": 20.1319733,
+  "camera_path_length_m": 1042.92969,
+  "camera_collisions": 0,
+  "walkers": 48,
+  "cars": 12,
+  "vehicle_types": [
+    "taxi",
+    "normal_car",
+    "city_bus"
+  ],
+  "road_supported_points": 114,
+  "layout_changed": false,
+  "server_logic_enabled": false
+}

@@ -5,6 +5,7 @@ using System.Globalization;
 using System.Runtime.InteropServices;
 using Newtonsoft.Json.Linq;
 using Simus.City;
+using Simus.QualityPass;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -35,7 +36,7 @@ namespace Simus
             gameObject.name = "SIMUS Web Bridge";
             state = new WebBridgeState(mapVersion);
             Application.targetFrameRate = 30;
-            Emit(new JObject { ["type"] = "READY", ["map_version"] = mapVersion, ["camera_zoom"] = true });
+            Emit(new JObject { ["type"] = "READY", ["map_version"] = mapVersion, ["camera_zoom"] = true, ["stat_preview"] = FindObjectsByType<QualityCityStateVisuals>(FindObjectsSortMode.None).Length > 0 });
         }
         public void Receive(string json)
         {
@@ -154,6 +155,33 @@ namespace Simus
             active.Dispose();
             if (ReferenceEquals(request, active)) request = null;
         }
+        // Local visual overrides only: never write to City, its poller, or the API.
+        public void SetStatPreview(string json)
+        {
+            if (disposed) return;
+            try
+            {
+                var value = JToken.Parse(json);
+                var visuals = FindObjectsByType<QualityCityStateVisuals>(FindObjectsSortMode.None);
+                if (value.Type == JTokenType.Null)
+                {
+                    foreach (var visual in visuals) visual.EndDeveloperPreview();
+                    return;
+                }
+                var metrics = new float[5];
+                var keys = new[] { "happiness", "safety", "cleanliness", "pollution", "economy" };
+                for (var i = 0; i < keys.Length; i++)
+                {
+                    var token = value[keys[i]];
+                    if (token == null || (token.Type != JTokenType.Integer && token.Type != JTokenType.Float)) return;
+                    var number = token.Value<double>();
+                    if (double.IsNaN(number) || double.IsInfinity(number) || number < 0 || number > 100) return;
+                    metrics[i] = (float)number;
+                }
+                foreach (var visual in visuals) visual.BeginDeveloperPreview(metrics[0], metrics[1], metrics[2], metrics[3]);
+            }
+            catch (Exception) { Debug.LogWarning("SIMUS invalid stat preview ignored."); }
+        }
         public void SetZoom(string value)
         {
             if (disposed || state?.Own == null || followCamera == null) return;
@@ -178,6 +206,7 @@ namespace Simus
         public void DisposeBridge()
         {
             if (disposed) return;
+            foreach (var visual in FindObjectsByType<QualityCityStateVisuals>(FindObjectsSortMode.None)) visual.EndDeveloperPreview();
             disposed = true; StopPolling(); City.Pause();
             if (followCamera != null) followCamera.SetFollowTarget(null);
             foreach (var actor in actors.Values) Destroy(actor);

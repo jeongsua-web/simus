@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motionTime, npcPosition, type Npc, type NpcSnapshot } from "./npc-motion";
-import styles from "./participate.module.css";
+import { motionTime, npcPosition, type Npc, type NpcSnapshot } from "../lib/npc-motion";
+import styles from "../participate.module.css";
 
 type TimedSnapshot = { value: NpcSnapshot; receivedAt: number };
 

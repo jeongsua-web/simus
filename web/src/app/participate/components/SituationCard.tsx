@@ -1,5 +1,5 @@
-import type { Situation } from "./types";
-import styles from "./participate.module.css";
+import type { Situation } from "../types";
+import styles from "../participate.module.css";
 
 type Props = {
   situation: Situation; selectedChoiceId?: string; done: boolean; acceptingChoices: boolean;

@@ -1,7 +1,7 @@
 import { defaultCitizenGlasses } from "./citizen-characters";
 import { graphMotion } from "../city/city-v002-graph.mjs";
 import { ApiError } from "../api";
-import { npcPosition, type Npc, type NpcSnapshot } from "@/app/participate/npc-motion";
+import { npcPosition, type Npc, type NpcSnapshot } from "@/app/participate/lib/npc-motion";
 
 export function version(value: unknown, field: string): string {
   if (typeof value !== "string" || !/^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$/.test(value))
@@ -13,8 +13,8 @@ export function validateMotion(value: unknown, projection = false): Npc["motion"
   const m = value as Record<string, unknown>;
   const map_version = version(m.map_version, "map_version"), path_version = version(m.path_version, "path_version");
   if (!Array.isArray(m.points) || m.points.length < 2 || m.points.length > (projection ? 2049 : 2048) ||
-      m.points.some(p => !Array.isArray(p) || p.length !== 3 || p.some(n => typeof n !== "number" || !Number.isFinite(n) || Math.abs(n) > 1e6)) ||
-      typeof m.speed_mps !== "number" || !Number.isFinite(m.speed_mps) || m.speed_mps < 0 || m.speed_mps > 100 || typeof m.loop !== "boolean")
+    m.points.some(p => !Array.isArray(p) || p.length !== 3 || p.some(n => typeof n !== "number" || !Number.isFinite(n) || Math.abs(n) > 1e6)) ||
+    typeof m.speed_mps !== "number" || !Number.isFinite(m.speed_mps) || m.speed_mps < 0 || m.speed_mps > 100 || typeof m.loop !== "boolean")
     throw new ApiError(400, "INVALID_NPC_MOTION", "유효한 3D 경로, 속도(0~100m/s), loop 값이 필요합니다.");
   const points = m.points as number[][];
   if (!(projection && m.speed_mps === 0) && !points.some(p => p.some((n, i) => n !== points[0][i]))) throw new ApiError(400, "INVALID_NPC_MOTION", "경로 길이는 0보다 커야 합니다.");
@@ -37,9 +37,11 @@ export function positionSnapshot(snapshot: NpcSnapshot, map: string, path?: stri
     let delta = after.map((n, i) => n - point[i]);
     if (!Math.hypot(...delta)) delta = point.map((n, i) => n - before[i]);
     const length = Math.hypot(...delta);
-    return { npc_id: npc.npc_id, character_id: npc.character_id ?? "npc_01", glasses_id: npc.glasses_id ?? defaultCitizenGlasses(npc.character_id ?? "npc_01"), epoch: npc.epoch, motion, path_version: motion.path_version,
+    return {
+      npc_id: npc.npc_id, character_id: npc.character_id ?? "npc_01", glasses_id: npc.glasses_id ?? defaultCitizenGlasses(npc.character_id ?? "npc_01"), epoch: npc.epoch, motion, path_version: motion.path_version,
       position: { x: point[0], y: point[1], z: point[2] },
-      forward: { x: length ? delta[0] / length : 0, y: length ? delta[1] / length : 0, z: length ? delta[2] / length : 0 } };
+      forward: { x: length ? delta[0] / length : 0, y: length ? delta[1] / length : 0, z: length ? delta[2] / length : 0 }
+    };
   });
   return { ...snapshot, map_version: map, npcs };
 }

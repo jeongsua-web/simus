@@ -5,6 +5,24 @@ namespace Simus.QualityPass {
  public Slot[] slots=Array.Empty<Slot>();public CityStatePoller source;public bool followLive=true;public bool previewEnabled;
  [Range(0,100)]public float happiness=50,safety=50,cleanliness=50,pollution=50;
  public bool hasLiveData; public string bindingStatus="No live data; default hidden";
+ bool developerOverride, savedPreview;
+ float savedHappiness,savedSafety,savedCleanliness,savedPollution;
+ System.Collections.Generic.Dictionary<GameObject,bool> savedActive;
+ public void BeginDeveloperPreview(float h,float s,float c,float p){
+  if(!developerOverride){
+   savedPreview=previewEnabled;savedHappiness=happiness;savedSafety=safety;savedCleanliness=cleanliness;savedPollution=pollution;
+   savedActive=new System.Collections.Generic.Dictionary<GameObject,bool>();
+   foreach(var slot in slots)foreach(var go in slot.target_objects)if(go)savedActive[go]=go.activeSelf;
+   developerOverride=true;
+  }
+  SetPreview(h,s,c,p);
+ }
+ public void EndDeveloperPreview(){
+  if(!developerOverride)return;
+  developerOverride=false;previewEnabled=savedPreview;happiness=savedHappiness;safety=savedSafety;cleanliness=savedCleanliness;pollution=savedPollution;
+  foreach(var pair in savedActive)if(pair.Key)pair.Key.SetActive(pair.Value);
+  savedActive=null;lastHash=int.MinValue;
+ }
  int lastHash=int.MinValue;
  public static int Stage(float v)=>Mathf.Clamp(Mathf.CeilToInt(Mathf.Clamp(v,0,100)/20f),1,5);
  void OnEnable(){ResetHidden();}

@@ -1,0 +1,65 @@
+{
+  "media": [
+    {
+      "path": "web/public/videos/city-background.mp4",
+      "bytes": 576377,
+      "sha256": "9f31b9d6fb352b064030bc39e1510eda6757bed0b3bea20b654ed86831e455da"
+    },
+    {
+      "path": "web/public/videos/city-background-poster.webp",
+      "bytes": 149394,
+      "sha256": "1f4189ebd14e6e5aabac24e96c65da769da94e46f841e8633cc2c881d9755b9b"
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/home_background/HomeBackground.unity",
+      "bytes": 18699770,
+      "sha256": "bf37f09edc2333ec45efc44145f9525b0066ca046f1abba1b7963607a4c3ef0b"
+    }
+  ],
+  "decode_exit_code": 0,
+  "codec": "h264",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration_seconds": 12,
+  "frames": 360,
+  "audio_streams": 0,
+  "faststart": true,
+  "frame_comparison": [
+    {
+      "frames": [
+        0,
+        90
+      ],
+      "result": "[Parsed_psnr_0 @ 0x600002ad00b0] PSNR y:49.877802 u:62.731489 v:64.810161 average:51.548505 min:51.548505 max:51.548505"
+    },
+    {
+      "frames": [
+        0,
+        359
+      ],
+      "result": "[Parsed_psnr_0 @ 0x600001c4c4d0] PSNR y:62.238045 u:71.156209 v:74.052018 average:63.793124 min:63.793124 max:63.793124"
+    }
+  ],
+  "cached_models": [
+    {
+      "path": "unity/Assets/SIMUS/Art/characters/modular_hairfix_v001/models/SIMUS_Modular_Character_Happiness_Animations.fbx",
+      "expected_lfs_oid": "a81da78cc3eaf0b44e21ef322b046e5d27f9b3a9637829917929d93af2851fb3",
+      "actual_sha256": "a81da78cc3eaf0b44e21ef322b046e5d27f9b3a9637829917929d93af2851fb3",
+      "matches": true
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/event_places/SIMUS_Event_Places_v001.fbx",
+      "expected_lfs_oid": "317149cff95b97e094942c8d69ea62e22dba8f770874438bb7d9f9f57cd5bdde",
+      "actual_sha256": "317149cff95b97e094942c8d69ea62e22dba8f770874438bb7d9f9f57cd5bdde",
+      "matches": true
+    },
+    {
+      "path": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/models/SIMUS_City_Masterplan_v003_QualityPass.fbx",
+      "expected_lfs_oid": "a6c48c4794b994f076b2ceb61d83dbb7840f816ceeeb3b53fbc465a8ba52d50c",
+      "actual_sha256": "a6c48c4794b994f076b2ceb61d83dbb7840f816ceeeb3b53fbc465a8ba52d50c",
+      "matches": true
+    }
+  ],
+  "protected_sources_unchanged": "4b4e5dfbbf51b0754dd3de7435af67ef4670582994e7cf9cc10b7091123f6c27  unity/Assets/SIMUS/Scenes/city_masterplan_v003/CityMasterplan_v003_EventPlaces.unity\n2cd022cef03df022746b9ab3e571ab35ae423c7a10bf896bbef3cd0b4342ca20  unity/ProjectSettings/EditorBuildSettings.asset\n654639c2829e2ff12e8eab39f3d4e74ac585e30db8a629ffcb365eae118fc39e  unity/Packages/manifest.json\n"
+}

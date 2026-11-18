@@ -3,12 +3,12 @@
 import Link from "next/link";
 import { useState } from "react";
 import { LiveCityStats } from "../components/CityStats";
-import CitizenCard from "./CitizenCard";
-import ProfileEntry from "./ProfileEntry";
-import SituationCard from "./SituationCard";
-import UnityCity from "./UnityCity";
-import PushOptIn from "./PushOptIn";
-import { useParticipation } from "./useParticipation";
+import CitizenCard from "./components/CitizenCard";
+import ProfileEntry from "./components/ProfileEntry";
+import SituationCard from "./components/SituationCard";
+import UnityCity from "./unity/UnityCity";
+import PushOptIn from "./components/PushOptIn";
+import { useParticipation } from "./hooks/useParticipation";
 import styles from "./participate.module.css";
 
 export default function ParticipatePage() {
@@ -17,7 +17,7 @@ export default function ParticipatePage() {
   const history = state.history.length > 0 && <section className={styles.stateCard}><h2>지난 회차 결과</h2>{state.history.map(item => <p key={item.id}><Link href={`/result/${item.id}`}>{item.name} 결과 보기</Link></p>)}</section>;
   const pendingNotice = state.pending && (!state.pending.event_id || state.pending.session_id !== state.session?.id || state.pending.event_id !== state.eventState?.event?.id) && <section className={styles.stateCard}>
     <h2>이전 회차 제출 확인</h2><p>이전 선택의 접수 여부를 확인해 주세요.</p>
-    <p role="status">{state.messages[state.pending.event_id ?? state.pending.request_key]}</p><button className={styles.button} disabled={state.submitting !== null} onClick={()=>void state.retryPending()}>이전 제출 다시 확인</button>
+    <p role="status">{state.messages[state.pending.event_id ?? state.pending.request_key]}</p><button className={styles.button} disabled={state.submitting !== null} onClick={() => void state.retryPending()}>이전 제출 다시 확인</button>
   </section>;
   if (state.loading) return <main className={styles.page}><div className={styles.stateCard} role="status">참여 정보를 불러오는 중이에요…</div></main>;
   if (state.loadError && (!state.session || !state.profile || state.authExpired)) return (
@@ -73,8 +73,8 @@ export default function ParticipatePage() {
             <CitizenCard characterId={profile.character_id} glassesId={profile.glasses_id} nickname={profile.nickname} department={profile.department_name} mbti={profile.mbti} citizenNo={profile.citizen_no} status="issued" />
             <h2>{state.session.name}</h2>
             <p className={styles.schedule}>입력 마감 {state.session.auto_cutoff_at ? new Date(state.session.auto_cutoff_at).toLocaleString("ko-KR") : "확인 중"}<br />종료 예정 {state.session.scheduled_end_at ? new Date(state.session.scheduled_end_at).toLocaleString("ko-KR") : "확인 중"}</p>
-            <LiveCityStats sessionId={state.session.id}/>
-            <PushOptIn key={state.session.id} sessionId={state.session.id}/>
+            <LiveCityStats sessionId={state.session.id} />
+            <PushOptIn key={state.session.id} sessionId={state.session.id} />
             {history}
           </div>
         </details>

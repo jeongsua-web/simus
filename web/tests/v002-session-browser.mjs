@@ -18,10 +18,11 @@ export async function runV002SessionBrowser({pool,env,token,templateId,root}) {
     await admin.getByLabel('관리자 토큰',{exact:true}).fill(token);
     await admin.getByRole('button',{name:'운영 화면 열기',exact:true}).click();
     await admin.locator('select[name=template]').selectOption(templateId);
+    await admin.getByRole('button',{name:'설정 변경',exact:true}).click();
     await admin.locator('select[name=map]').selectOption('city-rebuild-v002');
     const name='Disposable v002 actual WebGL';
     await admin.getByLabel('새 회차 이름',{exact:true}).fill(name);
-    await admin.getByLabel('진행 시간(초)',{exact:true}).fill('600');
+    await admin.getByLabel('진행 시간(시간)',{exact:true}).fill(String(600 / 3600));
     const creation=admin.waitForResponse(r=>r.url().endsWith('/api/admin/sessions')&&r.request().method()==='POST');
     await admin.getByRole('button',{name:'새 회차 준비',exact:true}).click();
     const created=await creation;assert.equal(created.status(),201);sid=(await created.json()).session_id;

@@ -4,6 +4,8 @@ import type { NextRequest } from "next/server";
 import type { PoolClient } from "pg";
 import { ApiError } from "../api";
 
+import { localAdminBypass } from "./local-admin";
+
 let keyResolver: JWTVerifyGetKey | undefined;
 function configuredKeys(): JWTVerifyGetKey {
   if (keyResolver) return keyResolver;
@@ -29,6 +31,7 @@ function bearer(request: NextRequest) {
 }
 
 export async function adminSubject(request: NextRequest): Promise<string> {
+  if (localAdminBypass(request.headers)) return "dev-admin";
   const token = bearer(request);
   const issuer = process.env.ADMIN_TOKEN_ISSUER;
   const audience = process.env.ADMIN_TOKEN_AUDIENCE;

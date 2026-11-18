@@ -66,3 +66,12 @@ node --test scripts/auth/admin-token.test.mjs
 웹이 사용하는 `jose` 검증기로 발급 토큰을 검증하고 서명 변조, 다른 issuer/audience,
 만료 토큰 거부, 기존 인증 설정 보호와 재실행 시 키 유지를 확인한다.
 이 검증은 운영 DB에 접속하지 않는다.
+
+## 로컬 개발 중 토큰 입력 생략
+
+`web/.env.local`에 `SIMUS_LOCAL_ADMIN_BYPASS=1`을 설정하고 `npm run dev`로 실행하면
+`http://localhost:3000/admin`에서 토큰 입력 없이 운영 화면을 연다.
+`localhost`, `127.0.0.1`, `[::1]` 주소에만 적용하며 외부 터널 주소와
+`next build` / `next start` 운영 모드에서는 기존 JWT 인증을 사용한다.
+DB에는 활성 `dev-admin` 계정이 있어야 하며, 생성·종료 기록도 이 계정으로 남는다.
+개발용 DB에서만 사용한다. 다시 인증하려면 설정을 `0`으로 바꾸고 개발 서버를 재시작한다.

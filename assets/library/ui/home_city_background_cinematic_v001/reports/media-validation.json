@@ -1,0 +1,33 @@
+{
+  "bytes": 15169805,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "duration_seconds": 30,
+  "frames": 900,
+  "codec": "h264",
+  "audio_streams": 0,
+  "decode_exit_code": 0,
+  "boxes": [
+    {
+      "type": "ftyp",
+      "offset": 0,
+      "size": 32
+    },
+    {
+      "type": "moov",
+      "offset": 32,
+      "size": 10967
+    },
+    {
+      "type": "free",
+      "offset": 10999,
+      "size": 8
+    },
+    {
+      "type": "mdat",
+      "offset": 11007,
+      "size": 15158798
+    }
+  ]
+}

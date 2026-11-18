@@ -46,3 +46,10 @@ PostgreSQL 14 이상을 대상으로 한다(개발 Compose는 16). 모든 서버
 `web/scripts/prepare-city-v002-events.mjs`는 원본 seed UUID/30개 원문/91개 선택지와 Phase 1의 8개 canonical 좌표를 재사용해 [DRAFT 전용 SQL](content/city-v002-events-phase2-draft.sql)을 생성한다. 선택적으로 `--audit`은 DB를 `REPEATABLE READ READ ONLY`로 읽고 ROLLBACK한 뒤 파일만 남긴다. 적용 모드는 없다. SQL 자체는 지정된 개발 DB·미가입 DRAFT·Phase 1 map/path·018 스키마를 요구한다. 기존 ID/원문/선택지/스탯/모든 non-null 좌표를 보존하고, 누락된 원본 콘텐츠만 원래 seed ID로 삽입한다. ID 충돌·부분 선택지·원문 차이는 변경 대신 중단한다. 12개 준비 위치만 설정하며 미완료 18개 후보를 활성화하지 않는다.
 
 이번 작업은 코드·SQL 준비와 읽기 전용 콘텐츠 조사까지이며 실제 migration/seed 적용·QA·빌드·배포는 수행하지 않았다. [30개별 보고서](../docs/placement/phase2/implementation-report.md)를 먼저 검토한다.
+
+## v003 회차 생성
+
+020은 생성 프로필에 `city-masterplan-v003`을 추가한다. 기존 회차·좌표는 변경하지 않는다.
+v003 생성은 서버의 물리 검증 경로와 일치하는 WebGL 빌드를 요구하고, 검증된
+`EXHIBITION_30`만 배치한다. 나머지 상황 좌표와 지역 경계는 미확정으로 유지한다.
+관리 이력 없는 로컬 DB는 baseline 증빙 또는 별도 승인한 로컬 제약 변경이 필요하다.

@@ -1,4 +1,4 @@
-import type { Npc } from "@/app/participate/npc-motion";
+import type { Npc } from "@/app/participate/lib/npc-motion";
 import { isV002MapVersion, graphDistanceTo } from "../city/city-v002-graph.mjs";
 import type { EventLocation } from "../events/event-locations";
 
@@ -40,7 +40,7 @@ function insideIntervals(npc: Npc, location: EventLocation): { intervals: Interv
       const projection = a.map((v, axis) => v + at * unit[axis]);
       const perpendicular = distance(projection, location.point);
       if (at >= 0 && at <= length && perpendicular <= .005 &&
-          Math.abs(da - distance(a, location.point)) <= 1e-7 && Math.abs(db - distance(b, location.point)) <= 1e-7) {
+        Math.abs(da - distance(a, location.point)) <= 1e-7 && Math.abs(db - distance(b, location.point)) <= 1e-7) {
         const half = Math.sqrt(Math.max(0, radius * radius - perpendicular * perpendicular));
         if (perpendicular <= radius) local.push([Math.max(0, at - half), Math.min(length, at + half)]);
       }
@@ -83,8 +83,10 @@ export function scanPlace(npc: Npc, from: number, to: number, location: EventLoc
   if (!total) {
     const p = npc.motion.points[0];
     let inside = false;
-    try { inside = distance(p, location.point) <= location.radius_m &&
-      (!isV002MapVersion(npc.motion.map_version) || graphDistanceTo(location.point, npc.motion.map_version)(p) <= location.radius_m); }
+    try {
+      inside = distance(p, location.point) <= location.radius_m &&
+      (!isV002MapVersion(npc.motion.map_version) || graphDistanceTo(location.point, npc.motion.map_version)(p) <= location.radius_m);
+    }
     catch { /* disconnected point */ }
     return { inside, entries: inside && !wasInside ? 1 : 0, firstEntry: inside && !wasInside ? from : null };
   }

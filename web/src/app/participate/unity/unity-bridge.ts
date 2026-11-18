@@ -1,4 +1,4 @@
-import type { NpcSnapshot } from "./npc-motion";
+import type { NpcSnapshot } from "../lib/npc-motion";
 
 export const BRIDGE_CHANNEL = "simus-city";
 export const BRIDGE_VERSION = 1;

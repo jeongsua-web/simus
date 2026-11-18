@@ -1,5 +1,5 @@
 import { createHash } from "node:crypto";
-import type { Npc } from "@/app/participate/npc-motion";
+import type { Npc } from "@/app/participate/lib/npc-motion";
 import { isV002MapVersion, routeBetween, pathLength, distance } from "../city/city-v002-graph.mjs";
 
 type Motion = Npc["motion"];

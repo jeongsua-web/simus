@@ -13,10 +13,15 @@ export async function GET(request: NextRequest) {
     const subject = await adminSubject(request);
     const payload = await transaction(async db => {
       await requireAdmin(db, subject);
-      const sessions = await db.query(`SELECT s.id,s.name,s.status,s.starts_at,s.scheduled_end_at,
+      const sessions = await db.query(`SELECT s.id,s.name,s.status,s.starts_at,s.scheduled_end_at,s.impact_scale::float8 AS impact_scale,
           s.npc_motion->>'map_version' AS map_version,s.npc_motion->>'path_version' AS path_version,
+          (SELECT jsonb_build_object('happiness',c.happiness::float8,'safety',c.safety::float8,
+            'cleanliness',c.cleanliness::float8,'pollution',p.overall_pollution::float8)
+            FROM simus.city_states c LEFT JOIN simus.overall_pollution p ON p.session_id=c.session_id
+            WHERE c.session_id=s.id) AS preview_stats,
           s.scheduled_end_at-s.admission_buffer AS auto_cutoff_at,s.end_requested_at,s.finalized_at,s.end_mode,
-          (SELECT duration_seconds FROM simus.session_creation_requests WHERE session_id=s.id) AS duration_seconds,
+          COALESCE((SELECT duration_seconds FROM simus.session_creation_requests WHERE session_id=s.id),
+            extract(epoch FROM s.scheduled_end_at-COALESCE(s.starts_at,s.created_at))::integer) AS duration_seconds,
           (SELECT count(*)::int FROM simus.participant_sessions WHERE session_id=s.id) AS participant_count,
           (SELECT count(*)::int FROM simus.choice_records WHERE session_id=s.id) AS response_count
         FROM simus.simulation_sessions s ORDER BY s.created_at DESC,s.id`);

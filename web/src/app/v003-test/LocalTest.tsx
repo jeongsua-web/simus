@@ -1,15 +1,17 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import ProfileEntry from "../participate/ProfileEntry";
-import SituationCard from "../participate/SituationCard";
-import UnityCity from "../participate/UnityCity";
+import ProfileEntry from "../participate/components/ProfileEntry";
+import SituationCard from "../participate/components/SituationCard";
+import UnityCity from "../participate/unity/UnityCity";
 import type { Department, Profile, Session, Situation } from "../participate/types";
 import styles from "./local.module.css";
 
-type State = { phase: "WAITING" | "GUIDING" | "ACTIVE" | "RESULT" | "CLOSED";
+type State = {
+  phase: "WAITING" | "GUIDING" | "ACTIVE" | "RESULT" | "CLOSED";
   event: { id: string; situation: Situation } | null;
-  outcome?: { city: { happiness: number; safety: number; cleanliness: number } } | null };
+  outcome?: { city: { happiness: number; safety: number; cleanliness: number } } | null
+};
 type Pending = { url: string; body: Record<string, string> };
 const storageKey = "simus-v003-local-command";
 async function request(url: string, body?: object) {
@@ -92,7 +94,7 @@ export default function LocalTest() {
   }
   if (loading) return <main className={styles.page}><p role="status">로컬 테스트 준비 중…</p></main>;
   if (!session) return <main className={styles.page}><h1>v003 로컬 테스트</h1><p role="alert">{error}</p><button onClick={() => location.reload()}>다시 연결</button></main>;
-  if (!profile) return <ProfileEntry session={session} departments={departments} onSaved={() => {}} onEntered={setProfile} onStale={() => location.reload()} />;
+  if (!profile) return <ProfileEntry session={session} departments={departments} onSaved={() => { }} onEntered={setProfile} onStale={() => location.reload()} />;
   const active = state?.phase === "ACTIVE" ? state.event : null;
   const result = state?.phase === "RESULT";
   return <main className={styles.page}>
@@ -106,7 +108,7 @@ export default function LocalTest() {
       {completed && state?.phase === "WAITING" && <p>대표 상황 플레이를 마쳤어요. 캐릭터가 출발점으로 돌아가요.</p>}
       {!ready && <p>도시 연결을 마치면 시작할 수 있어요.</p>}
       {active && <SituationCard situation={active.situation} selectedChoiceId={choice} done={false} acceptingChoices={session.accepting_choices} submitting={busy} submissionInProgress={busy} retrying={false} hasPendingSubmission={!!pending} message="" onSelect={setChoice} onSubmit={() => void command({ url: "/api/choices", body: { session_id: session.id, event_id: active.id, situation_id: active.situation.id, choice_id: choice, request_key: crypto.randomUUID() } })} />}
-      {result && <section aria-label="이 선택의 도시 변화"><h2>이 선택이 반영된 시점의 변화</h2>{state.outcome ? <ul>{([['happiness','행복'],['safety','치안'],['cleanliness','청결']] as const).map(([key,label]) => <li key={key}>{label}: {state.outcome!.city[key] > 0 ? "+" : ""}{state.outcome!.city[key]}</li>)}</ul> : <p>도시 변화 정보를 확인하고 있어요.</p>}<button disabled={busy || !!pending} onClick={() => void command({ url: `/api/sessions/${session.id}/event/confirm`, body: { event_id: state.event!.id } })}>확인하고 이동 재개</button></section>}
+      {result && <section aria-label="이 선택의 도시 변화"><h2>이 선택이 반영된 시점의 변화</h2>{state.outcome ? <ul>{([['happiness', '행복'], ['safety', '치안'], ['cleanliness', '청결']] as const).map(([key, label]) => <li key={key}>{label}: {state.outcome!.city[key] > 0 ? "+" : ""}{state.outcome!.city[key]}</li>)}</ul> : <p>도시 변화 정보를 확인하고 있어요.</p>}<button disabled={busy || !!pending} onClick={() => void command({ url: `/api/sessions/${session.id}/event/confirm`, body: { event_id: state.event!.id } })}>확인하고 이동 재개</button></section>}
       <button disabled={busy} onClick={() => void refresh(session.id)}>상태 새로고침</button>
       <p>대표 상황은 시민당 한 번 플레이합니다. 재시험은 새 브라우저 프로필 또는 새 격리 회차를 사용하세요.</p>
     </section>

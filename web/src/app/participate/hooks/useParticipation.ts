@@ -1,8 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import { pendingKey, readPending } from "./pending";
-import type { ApiError, Department, LatestSession, Profile, Session, Situation, Submission, EventState, OwnResponse } from "./types";
+import { pendingKey, readPending } from "../lib/pending";
+import type { ApiError, Department, LatestSession, Profile, Session, Situation, Submission, EventState, OwnResponse } from "../types";
 
 async function errorMessage(response: Response, fallback: string) {
   try { return ((await response.json()) as ApiError).error?.message ?? fallback; }

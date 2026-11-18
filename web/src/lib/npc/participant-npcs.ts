@@ -1,5 +1,5 @@
 import type { PoolClient } from "pg";
-import { npcPosition, type Npc } from "@/app/participate/npc-motion";
+import { npcPosition, type Npc } from "@/app/participate/lib/npc-motion";
 import { guidanceMotion, guidancePosition, resumedNpc, projectedRevision } from "./npc-graph-motion";
 import { participantMotion } from "./participant-npc-motion";
 import { ApiError } from "../api";

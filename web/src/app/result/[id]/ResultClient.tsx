@@ -12,86 +12,86 @@ type Result = { session_id: string; x_score: string; y_score: string; response_c
 
 
 export default function ResultClient({ sessionId }: { sessionId: string }) {
-  const [city,setCity]=useState<City|null>(null);
-  const [session,setSession]=useState<SessionInfo|null>(null);
-  const [result,setResult]=useState<Result|null>(null);
-  const [resultKind,setResultKind]=useState("NOT_JOINED");
-  const [shareUrl,setShareUrl]=useState("");
-  const [shareMessage,setShareMessage]=useState("");
-  const shareLock=useRef(false);
-  const loadLock=useRef(false);
-  const [issuing,setIssuing]=useState(false);
-  const [refreshing,setRefreshing]=useState(false);
-  const [copying,setCopying]=useState(false);
-  const copyLock=useRef(false);
-  const [loading,setLoading]=useState(true);
-  const [error,setError]=useState("");
-  const load=useCallback(async()=>{
-    if(loadLock.current) return;
-    loadLock.current=true; setRefreshing(true);
+  const [city, setCity] = useState<City | null>(null);
+  const [session, setSession] = useState<SessionInfo | null>(null);
+  const [result, setResult] = useState<Result | null>(null);
+  const [resultKind, setResultKind] = useState("NOT_JOINED");
+  const [shareUrl, setShareUrl] = useState("");
+  const [shareMessage, setShareMessage] = useState("");
+  const shareLock = useRef(false);
+  const loadLock = useRef(false);
+  const [issuing, setIssuing] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
+  const [copying, setCopying] = useState(false);
+  const copyLock = useRef(false);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const load = useCallback(async () => {
+    if (loadLock.current) return;
+    loadLock.current = true; setRefreshing(true);
     try {
       setError("");
-      const own=await resultRequest<{session:SessionInfo}>(`/api/sessions/${sessionId}/responses`);
+      const own = await resultRequest<{ session: SessionInfo }>(`/api/sessions/${sessionId}/responses`);
       setSession(own.session);
-      if(own.session.status==="FINALIZED"){
-        const data=await resultRequest<{result:Result|null;city_state:City|null;result_kind:string}>(`/api/sessions/${sessionId}/result`);
-        if(data.result_kind==="SCORED" && !data.result) throw new Error("개인 결과를 확인하지 못했습니다. 다시 시도해 주세요.");
+      if (own.session.status === "FINALIZED") {
+        const data = await resultRequest<{ result: Result | null; city_state: City | null; result_kind: string }>(`/api/sessions/${sessionId}/result`);
+        if (data.result_kind === "SCORED" && !data.result) throw new Error("개인 결과를 확인하지 못했습니다. 다시 시도해 주세요.");
         setResult(data.result); setCity(data.city_state); setResultKind(data.result_kind);
       } else setResult(null);
-    } catch(e){ setError(e instanceof Error?e.message:"결과를 불러오지 못했습니다."); }
-    finally{ loadLock.current=false; setRefreshing(false); setLoading(false); }
-  },[sessionId]);
+    } catch (e) { setError(e instanceof Error ? e.message : "결과를 불러오지 못했습니다."); }
+    finally { loadLock.current = false; setRefreshing(false); setLoading(false); }
+  }, [sessionId]);
   async function copyShareLink(url: string) {
-    if(copyLock.current) return;
-    copyLock.current=true; setCopying(true);
+    if (copyLock.current) return;
+    copyLock.current = true; setCopying(true);
     try { await navigator.clipboard.writeText(url); setShareMessage("결과 링크를 복사했습니다."); }
     catch { setShareMessage("복사하지 못했습니다. 링크 복사를 다시 누르거나 아래 링크를 길게 눌러 직접 복사해 주세요."); }
-    finally { copyLock.current=false; setCopying(false); }
+    finally { copyLock.current = false; setCopying(false); }
   }
   async function createShareLink() {
-    if(shareLock.current) return;
-    shareLock.current=true; setIssuing(true); setShareMessage("");
+    if (shareLock.current) return;
+    shareLock.current = true; setIssuing(true); setShareMessage("");
     // A lost response may still have rotated the server token. Hide the old URL.
     setShareUrl("");
     try {
-      const data=await resultRequest<{token:string}>(`/api/sessions/${sessionId}/result-link`, {method:"POST"});
-      if(!/^[0-9a-f]{64}$/.test(data.token)) throw new Error("서버 응답을 확인하지 못했습니다.");
-      const url=`${location.origin}/shared-result#${data.token}`;
+      const data = await resultRequest<{ token: string }>(`/api/sessions/${sessionId}/result-link`, { method: "POST" });
+      if (!/^[0-9a-f]{64}$/.test(data.token)) throw new Error("서버 응답을 확인하지 못했습니다.");
+      const url = `${location.origin}/shared-result#${data.token}`;
       setShareUrl(url);
       setShareMessage("새 결과 링크를 만들었습니다. 링크 복사 버튼을 눌러 주세요. 이전 링크는 무효입니다.");
-    } catch(e) {
+    } catch (e) {
       setShareMessage(`${e instanceof Error ? e.message : "링크 발급에 실패했습니다."} 발급 여부를 확인할 수 없어 이전 링크도 사용할 수 없을 수 있습니다. 링크 발급을 다시 시도해 주세요.`);
-    } finally { shareLock.current=false; setIssuing(false); }
+    } finally { shareLock.current = false; setIssuing(false); }
   }
-  useEffect(()=>{ const first=window.setTimeout(()=>void load(),0); return()=>window.clearTimeout(first); },[load]);
-  useEffect(()=>{
-    if(loading || refreshing || error || !session || session.status==="FINALIZED") return;
-    const timer=window.setTimeout(()=>void load(),5000);
-    return()=>window.clearTimeout(timer);
-  },[loading,refreshing,error,session,load]);
-  if(loading) return <main className={styles.page}><section className={styles.card} role="status">결과 상태를 확인하는 중이에요…</section></main>;
-  if(error) return <main className={styles.page}><section className={styles.card}><h1>결과를 불러오지 못했습니다</h1><p role="alert">{error}</p><button disabled={refreshing} onClick={()=>void load()}>{refreshing?"확인 중…":"다시 시도"}</button><Link href="/participate">참여 화면으로</Link></section></main>;
-  const finalized=session?.status==="FINALIZED";
+  useEffect(() => { const first = window.setTimeout(() => void load(), 0); return () => window.clearTimeout(first); }, [load]);
+  useEffect(() => {
+    if (loading || refreshing || error || !session || session.status === "FINALIZED") return;
+    const timer = window.setTimeout(() => void load(), 5000);
+    return () => window.clearTimeout(timer);
+  }, [loading, refreshing, error, session, load]);
+  if (loading) return <main className={styles.page}><section className={styles.card} role="status">결과 상태를 확인하는 중이에요…</section></main>;
+  if (error) return <main className={styles.page}><section className={styles.card}><h1>결과를 불러오지 못했습니다</h1><p role="alert">{error}</p><button disabled={refreshing} onClick={() => void load()}>{refreshing ? "확인 중…" : "다시 시도"}</button><Link href="/participate">참여 화면으로</Link></section></main>;
+  const finalized = session?.status === "FINALIZED";
   return <main className={styles.page}><section className={styles.card}>
     <p className={styles.eyebrow}>SIM:US 개인 결과</p>
     <p className={styles.sessionName}>{session?.name}</p>
-    <h1 className={styles.cardTitle}>{finalized?"나의 시민 카드":"도시의 이야기는 계속됩니다"}</h1>
-    {!finalized && <div className={styles.pending}><span className={styles.pulse}/><div><strong>{session?.status==="CLOSING"?"결과 준비 중":session?.status==="DRAFT"?"회차 시작 전":"회차 진행 중"}</strong><p>나의 성향은 회차가 끝나면 공개돼요.</p></div></div>}
-    {finalized && resultKind==="SCORED" && result && <div className={styles.result}>
-      <p>나의 도시 성향</p><h2>{alignmentNames[result.alignment_code]??result.alignment_code}</h2>
+    <h1 className={styles.cardTitle}>{finalized ? "나의 시민 카드" : "도시의 이야기는 계속됩니다"}</h1>
+    {!finalized && <div className={styles.pending}><span className={styles.pulse} /><div><strong>{session?.status === "CLOSING" ? "결과 준비 중" : session?.status === "DRAFT" ? "회차 시작 전" : "회차 진행 중"}</strong><p>나의 성향은 회차가 끝나면 공개돼요.</p></div></div>}
+    {finalized && resultKind === "SCORED" && result && <div className={styles.result}>
+      <p>나의 도시 성향</p><h2>{alignmentNames[result.alignment_code] ?? result.alignment_code}</h2>
       <p className={styles.interpretation}>{result.interpretation}</p>
       <p className={styles.responseBadge}>도시에 남긴 선택 {result.response_count}개</p>
       <details className={styles.scoreDetails}><summary>성향 자세히 보기</summary><dl><div><dt>질서 축</dt><dd>{result.x_score}</dd></div><div><dt>도덕 축</dt><dd>{result.y_score}</dd></div></dl><p>이번 체험에서 선택한 행동의 경향입니다.</p></details>
     </div>}
-    {finalized && resultKind==="NO_RESPONSE" && <div className={styles.pending}><div><strong>참여한 선택 없음</strong><p>이 회차에 입장했지만 제출한 선택은 없습니다. 개인 성향 점수는 표시하지 않습니다.</p></div></div>}
-    {finalized && resultKind==="NOT_JOINED" && <div className={styles.pending}><div><strong>이 회차의 참여 기록이 없습니다</strong><p>이 브라우저의 참여 기록이 없습니다. 참여했던 기기·브라우저에서 확인하거나 발급받은 결과 링크를 열어 주세요.</p></div></div>}
-    {finalized && city && <CityStats city={city} title="이 회차의 최종 도시"/>}
-    {finalized && (resultKind==="SCORED" || resultKind==="NO_RESPONSE") && <details className={styles.share}><summary>결과 링크 만들기</summary><div className={styles.shareContent} aria-busy={issuing}>
-      <button disabled={issuing || copying} onClick={()=>void createShareLink()}>{issuing?"만드는 중…":shareUrl?"새 링크 만들기":"결과 링크 만들기"}</button>
+    {finalized && resultKind === "NO_RESPONSE" && <div className={styles.pending}><div><strong>참여한 선택 없음</strong><p>이 회차에 입장했지만 제출한 선택은 없습니다. 개인 성향 점수는 표시하지 않습니다.</p></div></div>}
+    {finalized && resultKind === "NOT_JOINED" && <div className={styles.pending}><div><strong>이 회차의 참여 기록이 없습니다</strong><p>이 브라우저의 참여 기록이 없습니다. 참여했던 기기·브라우저에서 확인하거나 발급받은 결과 링크를 열어 주세요.</p></div></div>}
+    {finalized && city && <CityStats city={city} title="이 회차의 최종 도시" />}
+    {finalized && (resultKind === "SCORED" || resultKind === "NO_RESPONSE") && <details className={styles.share}><summary>결과 링크 만들기</summary><div className={styles.shareContent} aria-busy={issuing}>
+      <button disabled={issuing || copying} onClick={() => void createShareLink()}>{issuing ? "만드는 중…" : shareUrl ? "새 링크 만들기" : "결과 링크 만들기"}</button>
       <p>링크를 가진 사람은 이 결과를 볼 수 있습니다. 유효 기간은 발급 후 30일입니다. 새 링크를 만들면 이전 링크는 무효가 됩니다.</p>
-      {shareUrl && <><label htmlFor="result-share-url">다른 기기용 결과 링크</label><textarea id="result-share-url" readOnly rows={3} value={shareUrl} onFocus={event=>event.currentTarget.select()}/><button disabled={copying || issuing} onClick={()=>void copyShareLink(shareUrl)}>{copying?"복사 중…":"링크 복사"}</button></>}
+      {shareUrl && <><label htmlFor="result-share-url">다른 기기용 결과 링크</label><textarea id="result-share-url" readOnly rows={3} value={shareUrl} onFocus={event => event.currentTarget.select()} /><button disabled={copying || issuing} onClick={() => void copyShareLink(shareUrl)}>{copying ? "복사 중…" : "링크 복사"}</button></>}
       <p role="status" aria-live="polite">{shareMessage}</p>
     </div></details>}
-    <div className={styles.actions}>{!finalized&&<button disabled={refreshing} onClick={()=>void load()}>{refreshing?"확인 중…":"상태 새로고침"}</button>}<Link href={`/statistics/${sessionId}`}>학과별 통계</Link><Link href="/participate">참여 화면으로</Link></div>
+    <div className={styles.actions}>{!finalized && <button disabled={refreshing} onClick={() => void load()}>{refreshing ? "확인 중…" : "상태 새로고침"}</button>}<Link href={`/statistics/${sessionId}`}>학과별 통계</Link><Link href="/participate">참여 화면으로</Link></div>
   </section></main>;
 }
