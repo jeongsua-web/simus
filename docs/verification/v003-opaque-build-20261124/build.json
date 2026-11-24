@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-24",
+  "build": {
+    "kind": "city-masterplan-v003-local-session",
+    "protocol_version": 1,
+    "map_version": "city-masterplan-v003-local-v1",
+    "path_versions": [
+      "city-masterplan-v003-plaza30-v1"
+    ],
+    "source_scene_sha256": "2c0d5223f2c66f1c788be0f04662305fcbc101e009c27c1b22db9e9b5aa9101e",
+    "npc_motion_enabled": true,
+    "route_validation_status": "unity_physics_passed",
+    "exhibition_ready": false,
+    "initial_memory_mb": 512,
+    "maximum_memory_mb": 2048,
+    "memory_growth": "geometric",
+    "run_in_background": true,
+    "building_transparency": false
+  },
+  "files": [
+    {
+      "file": "bridge.js",
+      "sha256": "304386e7eeb742d6948619942067d1d82278e64c6c34355e414ef5dfb87de945",
+      "bytes": 5998
+    },
+    {
+      "file": "build.json",
+      "sha256": "6a9e0791e94396fda5747d229af4f297518bd0b99707bc49dbfaf9829c0b5a87",
+      "bytes": 562
+    },
+    {
+      "file": "index.html",
+      "sha256": "f165f234345dca8066634e850eb4750324fbaa7d874cd03f8d3fb08426fd97a1",
+      "bytes": 1573
+    },
+    {
+      "file": "Build/webgl.data",
+      "sha256": "03fbf764c431153f0a53d23dd751b67c08d977a6b0cf8267a20cd65a9ffff4d9",
+      "bytes": 183476952
+    },
+    {
+      "file": "Build/webgl.framework.js",
+      "sha256": "bddd23c9938ab61f043de9b54586e6d3dba99436355c9b3a3bfa3b1524121b0c",
+      "bytes": 413427
+    },
+    {
+      "file": "Build/webgl.loader.js",
+      "sha256": "01ab2e41c9ece3cd16e0d28e6d82b5009be9faf59b70efb2192971098a5f2e1f",
+      "bytes": 26983
+    },
+    {
+      "file": "Build/webgl.wasm",
+      "sha256": "5aac276bf34be8af185897569b8063ebf561108e07c26b99382eb206ad05c1c8",
+      "bytes": 28635886
+    }
+  ],
+  "browser_validation": "deferred_by_user",
+  "unity_camera_regression": "passed",
+  "source_scene_unchanged": true
+}

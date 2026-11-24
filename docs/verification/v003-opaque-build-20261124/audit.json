@@ -1,0 +1,36 @@
+{
+  "camera_reveal_disabled_pass": true,
+  "material_count": 435,
+  "transparent_materials": [
+    {
+      "name": "Mat_074",
+      "path": "Assets/SIMUS/Scenes/city_masterplan_v003/quality_pass/materials/Mat_074.mat",
+      "alpha": 0.22
+    },
+    {
+      "name": "Mat_338",
+      "path": "Assets/SIMUS/Scenes/city_masterplan_v003/quality_pass/materials/Mat_338.mat",
+      "alpha": 0.18
+    },
+    {
+      "name": "Mat_357",
+      "path": "Assets/SIMUS/Scenes/city_masterplan_v003/quality_pass/materials/Mat_357.mat",
+      "alpha": 0.13
+    },
+    {
+      "name": "BUS_Glass",
+      "path": "Assets/SIMUS/Scenes/city_masterplan_v003/event_places/materials/EventMat_016.mat",
+      "alpha": 0.43
+    },
+    {
+      "name": "TAXI_Glass",
+      "path": "Assets/SIMUS/Scenes/city_masterplan_v003/event_places/materials/EventMat_044.mat",
+      "alpha": 0.43
+    },
+    {
+      "name": "Smoke",
+      "path": "Assets/SIMUS/Scenes/city_masterplan_v003/state_density/Smoke.mat",
+      "alpha": 1.0
+    }
+  ]
+}

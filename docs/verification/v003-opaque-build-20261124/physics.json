@@ -1,0 +1,675 @@
+{
+  "source_scene": "Assets/SIMUS/Scenes/city_masterplan_v003/CityMasterplan_v003_EventPlaces.unity",
+  "source_scene_sha256": "2c0d5223f2c66f1c788be0f04662305fcbc101e009c27c1b22db9e9b5aa9101e",
+  "map_version": "city-masterplan-v003-local-v1",
+  "path_version": "city-masterplan-v003-plaza30-v1",
+  "passed": true,
+  "samples": [
+    {
+      "point": [
+        44.35,
+        0.202832,
+        65.0
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.18283189833164215
+    },
+    {
+      "point": [
+        44.35,
+        0.206369892,
+        65.25
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.18497297167778015
+    },
+    {
+      "point": [
+        44.35,
+        0.209907785,
+        65.5
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.18711403012275696
+    },
+    {
+      "point": [
+        44.35,
+        0.213445678,
+        65.75
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.18925508856773376
+    },
+    {
+      "point": [
+        44.35,
+        0.216983572,
+        66.0
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.19139613211154938
+    },
+    {
+      "point": [
+        44.35,
+        0.220521465,
+        66.25
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.19353719055652618
+    },
+    {
+      "point": [
+        44.35,
+        0.224059358,
+        66.5
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.19738684594631195
+    },
+    {
+      "point": [
+        44.35,
+        0.227597252,
+        66.75
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.20188690721988678
+    },
+    {
+      "point": [
+        44.35,
+        0.231135145,
+        67.0
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.20638705790042877
+    },
+    {
+      "point": [
+        44.35,
+        0.234673038,
+        67.25
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.2108871191740036
+    },
+    {
+      "point": [
+        44.35,
+        0.238210931,
+        67.5
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.21538721024990082
+    },
+    {
+      "point": [
+        44.35,
+        0.241748825,
+        67.75
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.21911680698394775
+    },
+    {
+      "point": [
+        44.35,
+        0.245286718,
+        68.0
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.22280950844287872
+    },
+    {
+      "point": [
+        44.35,
+        0.2488246,
+        68.25
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.22650223970413208
+    },
+    {
+      "point": [
+        44.35,
+        0.2523625,
+        68.5
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.23019495606422424
+    },
+    {
+      "point": [
+        44.35,
+        0.255900383,
+        68.75
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.23388770222663879
+    },
+    {
+      "point": [
+        44.35,
+        0.259438276,
+        69.0
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.23758044838905334
+    },
+    {
+      "point": [
+        44.35,
+        0.26297617,
+        69.25
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.24127316474914551
+    },
+    {
+      "point": [
+        44.35,
+        0.266514063,
+        69.5
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.24496592581272125
+    },
+    {
+      "point": [
+        44.35,
+        0.270051956,
+        69.75
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.24865859746932983
+    },
+    {
+      "point": [
+        44.35,
+        0.273589849,
+        70.0
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.25235134363174438
+    },
+    {
+      "point": [
+        44.35,
+        0.277127743,
+        70.25
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.25604408979415894
+    },
+    {
+      "point": [
+        44.35,
+        0.280665636,
+        70.5
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.25973683595657349
+    },
+    {
+      "point": [
+        44.35,
+        0.284203529,
+        70.75
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.26342949271202087
+    },
+    {
+      "point": [
+        44.35,
+        0.287741423,
+        71.0
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.26712226867675781
+    },
+    {
+      "point": [
+        44.35,
+        0.291279316,
+        71.25
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.27081501483917236
+    },
+    {
+      "point": [
+        44.35,
+        0.2948172,
+        71.5
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.27450773119926453
+    },
+    {
+      "point": [
+        44.35,
+        0.2983551,
+        71.75
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.27820044755935669
+    },
+    {
+      "point": [
+        44.35,
+        0.301893,
+        72.0
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.28189319372177124
+    },
+    {
+      "point": [
+        44.35,
+        0.301893,
+        72.0
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.28189319372177124
+    },
+    {
+      "point": [
+        44.35,
+        0.3058259,
+        72.25
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.2855859100818634
+    },
+    {
+      "point": [
+        44.35,
+        0.309758782,
+        72.5
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.28927865624427795
+    },
+    {
+      "point": [
+        44.35,
+        0.313691676,
+        72.75
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.29297149181365967
+    },
+    {
+      "point": [
+        44.35,
+        0.317624569,
+        73.0
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.29666420817375183
+    },
+    {
+      "point": [
+        44.35,
+        0.321557462,
+        73.25
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.300356924533844
+    },
+    {
+      "point": [
+        44.35,
+        0.325490355,
+        73.5
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.30404967069625854
+    },
+    {
+      "point": [
+        44.35,
+        0.329423249,
+        73.75
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.30774235725402832
+    },
+    {
+      "point": [
+        44.35,
+        0.333356142,
+        74.0
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.31143507361412048
+    },
+    {
+      "point": [
+        44.35,
+        0.337289035,
+        74.25
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.31512781977653503
+    },
+    {
+      "point": [
+        44.35,
+        0.341221929,
+        74.5
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.318820595741272
+    },
+    {
+      "point": [
+        44.35,
+        0.345154822,
+        74.75
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.32251328229904175
+    },
+    {
+      "point": [
+        44.35,
+        0.349087715,
+        75.0
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.3262060284614563
+    },
+    {
+      "point": [
+        44.35,
+        0.3530206,
+        75.25
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.32989871501922607
+    },
+    {
+      "point": [
+        44.35,
+        0.3569535,
+        75.5
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.333591490983963
+    },
+    {
+      "point": [
+        44.35,
+        0.3608864,
+        75.75
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.33728417754173279
+    },
+    {
+      "point": [
+        44.35,
+        0.3648193,
+        76.0
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.34097695350646973
+    },
+    {
+      "point": [
+        44.35,
+        0.368752182,
+        76.25
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.34466969966888428
+    },
+    {
+      "point": [
+        44.35,
+        0.372685075,
+        76.5
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.34836241602897644
+    },
+    {
+      "point": [
+        44.35,
+        0.376617968,
+        76.75
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.352055162191391
+    },
+    {
+      "point": [
+        44.35,
+        0.380550861,
+        77.0
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.35601383447647095
+    },
+    {
+      "point": [
+        44.35,
+        0.384483755,
+        77.25
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.360513836145401
+    },
+    {
+      "point": [
+        44.35,
+        0.388416648,
+        77.5
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.36501392722129822
+    },
+    {
+      "point": [
+        44.35,
+        0.392349541,
+        77.75
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.36951395869255066
+    },
+    {
+      "point": [
+        44.35,
+        0.396282434,
+        78.0
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.37401396036148071
+    },
+    {
+      "point": [
+        44.35,
+        0.400215328,
+        78.25
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.37851402163505554
+    },
+    {
+      "point": [
+        44.35,
+        0.404148221,
+        78.5
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.38301408290863037
+    },
+    {
+      "point": [
+        44.35,
+        0.4080811,
+        78.75
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.38751423358917236
+    },
+    {
+      "point": [
+        44.35,
+        0.412014,
+        79.0
+      ],
+      "supported": true,
+      "surface": "CITY_MASTERPLAN_V003/ALLEYS/FULL_V003_WalkNetwork",
+      "surface_y": 0.3920142650604248
+    }
+  ],
+  "blocking_capsule_overlaps": [],
+  "anchors": [
+    {
+      "path": "CITY_MASTERPLAN_V003/EVENT_LOCATIONS/FULL_EVENT_30_ROOT",
+      "position": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "path": "CITY_MASTERPLAN_V003/EVENT_LOCATIONS/FULL_EVENT_30_ROOT/FULL_EVENT_30_AUDIO",
+      "position": [
+        45.0,
+        0.252006531,
+        78.99999
+      ]
+    },
+    {
+      "path": "CITY_MASTERPLAN_V003/EVENT_LOCATIONS/FULL_EVENT_30_ROOT/FULL_EVENT_30_EXIT",
+      "position": [
+        45.0,
+        0.252006531,
+        78.99999
+      ]
+    },
+    {
+      "path": "CITY_MASTERPLAN_V003/EVENT_LOCATIONS/FULL_EVENT_30_ROOT/FULL_EVENT_30_INTERACT",
+      "position": [
+        45.6499977,
+        0.252006531,
+        78.99999
+      ]
+    },
+    {
+      "path": "CITY_MASTERPLAN_V003/EVENT_LOCATIONS/FULL_EVENT_30_ROOT/FULL_EVENT_30_NPC_WAIT",
+      "position": [
+        44.35,
+        0.252006531,
+        78.99999
+      ]
+    },
+    {
+      "path": "CITY_MASTERPLAN_V003/EVENT_LOCATIONS/FULL_EVENT_30_ROOT/FULL_EVENT_30_START",
+      "position": [
+        45.0,
+        0.252006531,
+        78.99999
+      ]
+    },
+    {
+      "path": "CITY_MASTERPLAN_V003/EVENT_LOCATIONS/FULL_EVENT_30_ROOT/FULL_EVENT_30_STATE_AFTER",
+      "position": [
+        45.0,
+        0.252006531,
+        78.99999
+      ]
+    },
+    {
+      "path": "CITY_MASTERPLAN_V003/EVENT_LOCATIONS/FULL_EVENT_30_ROOT/FULL_EVENT_30_STATE_BEFORE",
+      "position": [
+        45.0,
+        0.252006531,
+        78.99999
+      ]
+    },
+    {
+      "path": "CITY_MASTERPLAN_V003/EVENT_LOCATIONS/FULL_EVENT_30_ROOT/FULL_EVENT_30_VIEW",
+      "position": [
+        45.0,
+        0.252006531,
+        78.99999
+      ]
+    },
+    {
+      "path": "SIMUS_EVENT_PLACES/EVS_30",
+      "position": [
+        45.0,
+        0.252,
+        79.0
+      ]
+    }
+  ],
+  "route_distance_m": 14.0015669,
+  "speed_mps": 1.4,
+  "nominal_travel_seconds": 10.00112
+}
