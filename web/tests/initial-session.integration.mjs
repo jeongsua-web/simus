@@ -140,6 +140,18 @@ export async function runInitialSessionIntegration({ pool, env, privateKey, publ
       const sessionPath=`/api/sessions/${sid}`;
       const {body:entry}=await call(`${sessionPath}/profile`,undefined,token,{cookie});
       assert.equal((await call(`${sessionPath}/profile`,{nickname:'테스트시민',department_id:entry.departments[0].id,mbti:'ISTJ'},token,{cookie})).status,201);
+      await new Promise(resolve=>setTimeout(resolve,3200));
+      const waiting=await call(`${sessionPath}/event`,undefined,token,{cookie});
+      assert.equal(waiting.status,200);
+      assert.equal(waiting.body.phase,'WAITING');
+      assert.equal(waiting.body.can_start,true);
+      const startRequest={request_key:randomUUID()};
+      for (let i=0;i<2;i++) {
+        const started=await call(`${sessionPath}/event/start`,startRequest,token,{cookie});
+        assert.equal(started.status,200,JSON.stringify(started.body));
+        assert.equal(started.body.phase,'GUIDING');
+        assert.equal(started.body.can_start,false);
+      }
       let active;
       for (let i=0;i<25;i++) {
         const state=await call(`${sessionPath}/event`,undefined,token,{cookie});
@@ -151,10 +163,13 @@ export async function runInitialSessionIntegration({ pool, env, privateKey, publ
       const choice={session_id:sid,event_id:active.id,situation_id:active.situation_id,choice_id:active.situation.choices[0].id,request_key:randomUUID()};
       assert.equal((await call('/api/choices',choice,token,{cookie})).status,201);
       assert.equal((await call('/api/choices',choice,token,{cookie})).status,200);
-      assert.equal((await call(`${sessionPath}/event`,undefined,token,{cookie})).body.phase,'WAITING');
+      const finished=await call(`${sessionPath}/event`,undefined,token,{cookie});
+      assert.equal(finished.body.phase,'WAITING');
+      assert.equal(finished.body.can_start,false);
+      assert.equal((await call(`${sessionPath}/event/start`,{request_key:randomUUID()},token,{cookie})).body.error.code,'EVENTS_EXHAUSTED');
     }
   }
   assert.equal((await call(endpoint,payload)).body.status,'FINALIZED','replay works after lifecycle transition');
   assert.equal((await call(endpoint,{...clonePayload,request_key:randomUUID(),name:'From finalized'})).status,201);
-  console.log('PASS initial API: empty DB, RS256/admin/origin checks, input validation, build mismatch, atomic rollback, concurrent admins/replays, 30 situations/91 exact choices/effects, no runtime rows, automatic plaza event and choice, DRAFT clone, explicit start/end and FINALIZED clone');
+  console.log('PASS initial API: empty DB, RS256/admin/origin checks, input validation, build mismatch, atomic rollback, concurrent admins/replays, 30 situations/91 exact choices/effects, no runtime rows, manual plaza event and choice, DRAFT clone, explicit start/end and FINALIZED clone');
 }

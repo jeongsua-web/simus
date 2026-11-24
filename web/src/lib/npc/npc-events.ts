@@ -7,7 +7,7 @@ import { npcPosition, type Npc } from "@/app/participate/lib/npc-motion";
 import { normalizeEventLocation, type EventLocation } from "../events/event-locations";
 import { playableLocation } from "../city/city-v002-event-mapping.mjs";
 import { scanPlace } from "./npc-place-trajectory";
-import { V003_MAP_VERSION } from "../city/city-builds";
+import { V003_MAP_VERSION, V003_PATH_VERSION } from "../city/city-builds";
 import { localRoute } from "../routes/v003-route";
 import { choiceOutcome } from "../routes/v003-local-event";
 type Point = number[];
@@ -100,17 +100,8 @@ function transitionFor(world: World, p: Member): Transition | null {
   if (!isOpen(world.session)) return null;
   const now = timestamp(world.session.now);
   const v003 = p.npc_motion.map_version === V003_MAP_VERSION;
+  if (v003 && !p.guidance_point) return null;
   const fresh = world.situations.filter(t => !world.answered.get(p.participant_id)?.has(t.id));
-  if (v003 && !p.guidance_point) {
-    if (process.env.SIMUS_V003_LOCAL_TEST === "1" || !p.profile_completed_at || p.resume_motion ||
-      now < timestamp(p.profile_completed_at) + 3000 || !fresh.some(t => t.code === "EXHIBITION_30" && t.event_location)) return null;
-    const route = localRoute();
-    return {
-      participant_id: p.participant_id, guidance_point: route.interaction.point,
-      guidance_origin: route.points[0], guidance_motion: p.npc_motion,
-      location_occupancy: p.location_occupancy, location_evaluated_at: world.session.now.toISOString(), overdue_since: null,
-    };
-  }
   const places = new Map<string, EventLocation>();
   for (const situation of world.situations) {
     if (v003 && situation.code !== "EXHIBITION_30") continue;
@@ -271,9 +262,19 @@ export async function advanceEvent(db: PoolClient, sid: string, pid: string) {
   const event = open && p.active && situation ? { ...p.active, situation } : null;
   const outcome = p.active && p.npc_motion.map_version === V003_MAP_VERSION
     ? await choiceOutcome(db, sid, pid, p.active.id) : null;
+  const phase = outcome ? "RESULT" : !open ? "CLOSED" : event ? "ACTIVE" : p.guidance_point ? "GUIDING" : "WAITING";
+  const canStart = phase === "WAITING" && Boolean(p.profile_completed_at) && !p.active && !p.resume_motion &&
+    p.npc_motion.map_version === V003_MAP_VERSION && p.npc_motion.path_version === V003_PATH_VERSION &&
+    world.situations.some(t => {
+      if (t.code !== "EXHIBITION_30" || world.answered.get(pid)?.has(t.id)) return false;
+      const location = t.event_location;
+      const expected = localRoute().event_location;
+      return location?.map_version === expected.map_version && location.place_id === expected.place_id &&
+        location.radius_m === expected.radius_m && JSON.stringify(location.point) === JSON.stringify(expected.point);
+    });
   return {
     ...(outcome ? { outcome } : {}),
-    phase: outcome ? "RESULT" : !open ? "CLOSED" : event ? "ACTIVE" : p.guidance_point ? "GUIDING" : "WAITING",
+    phase, can_start: canStart,
     server_time: new Date(session.now).toISOString(), waiting_since: new Date(p.waiting_since).toISOString(),
     deadline_at: null, guidance_at: p.npc_motion.map_version === V003_MAP_VERSION ? null : new Date(timestamp(p.waiting_since) + 60000).toISOString(), event: outcome && p.active && situation ? { ...p.active, situation } : event,
     overdue_since: p.overdue_since?.toISOString() ?? null, overdue: p.overdue_since !== null,
