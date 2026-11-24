@@ -7,16 +7,19 @@
 !web/next.config.ts
 !web/tsconfig.json
 !web/eslint.config.mjs
-!web/unity-build.lock.json
+!web/v003-webgl.lock.json
 !web/scripts/
-!web/scripts/unity-artifact.mjs
+!web/scripts/verify-v003-webgl.mjs
 !web/src/
 !web/src/**
 !web/public/
 !web/public/**
 
-# Include Release-hydrated builds and exclude unrelated local test output.
-web/public/city-rebuild-v002-test/
+# Exclude retired builds and older outputs from the v003 build directory.
+web/public/city/
+web/public/city-rebuild-v002*/
+web/public/unity-preview/
+web/public/unity/city-masterplan-v003-local-v1/Build/city-masterplan-v003-local-v1.*
 web/public/.unity-preview-*/
 web/public/.unity-artifact-*/
 **/.env*

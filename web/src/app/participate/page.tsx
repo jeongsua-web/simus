@@ -23,8 +23,10 @@ export default function ParticipatePage() {
   if (state.loadError && (!state.session || !state.profile || state.authExpired)) return (
     <main className={styles.page}><div className={styles.stateCard}>
       <h1>{state.authExpired ? "참여 인증이 만료되었습니다" : "정보를 불러오지 못했습니다"}</h1>
-      <p role="alert">{state.loadError}</p>
-      {!state.authExpired && <button className={styles.button} onClick={state.retryLoad}>다시 불러오기</button>}
+      <p role="alert">{state.authExpired ? "새 시민으로 시작하면 시민증과 응답 기록이 새로 시작돼요." : state.loadError}</p>
+      {state.authExpired
+        ? <button className={styles.button} onClick={state.restart}>새 참여 시작</button>
+        : <button className={styles.button} onClick={state.retryLoad}>다시 불러오기</button>}
       <Link className={styles.textLink} href="/">처음으로</Link>
     </div></main>
   );

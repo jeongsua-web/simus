@@ -46,6 +46,7 @@ export default function ProfileEntry({ session, departments, onSaved, onEntered,
   const [departmentId, setDepartmentId] = useState<string | null>(null);
   const [mbti, setMbti] = useState<Array<string | null>>([null, null, null, null]);
   const [characterId, setCharacterId] = useState<string | null>(null);
+  const [hairScroll, setHairScroll] = useState({ atStart: true, atEnd: false });
   const [glassesId, setGlassesId] = useState<CitizenGlassesId>("none");
   const [saving, setSaving] = useState(false);
   const [failure, setFailure] = useState("");
@@ -54,6 +55,7 @@ export default function ProfileEntry({ session, departments, onSaved, onEntered,
   const [showMini, setShowMini] = useState(false);
   const [loadingShown, setLoadingShown] = useState(false);
   const cardRef = useRef<HTMLElement>(null);
+  const hairRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const card = cardRef.current;
@@ -69,6 +71,15 @@ export default function ProfileEntry({ session, departments, onSaved, onEntered,
   const mbtiText = mbti.map(value => value ?? "?").join("");
   const ready = !error && Boolean(department) && mbti.every(Boolean) && Boolean(characterId);
   const shownError = touched && error;
+
+  function slideHair(direction: -1 | 1) {
+    const track = hairRef.current;
+    const first = track?.firstElementChild;
+    const second = first?.nextElementSibling;
+    if (!track || !first || !second || (direction < 0 ? hairScroll.atStart : hairScroll.atEnd)) return;
+    const step = second.getBoundingClientRect().left - first.getBoundingClientRect().left;
+    track.scrollTo({ left: (Math.round(track.scrollLeft / step) + direction) * step });
+  }
 
   async function enter() {
     if (!ready || saving || entered) return;
@@ -125,8 +136,14 @@ export default function ProfileEntry({ session, departments, onSaved, onEntered,
         <form className={styles.form} noValidate onSubmit={event => { event.preventDefault(); void enter(); }}>
           <fieldset className={styles.fieldset} disabled={saving}>
             <legend className={styles.characterLegend}>헤어 <span>필수</span></legend>
-            <p id="character-hint" className={styles.hint}>16가지 헤어 중 하나를 고르고 안경을 더해 보세요. 꾸민 모습이 시민증과 도시에 함께 나타나요.</p>
-            <div className={styles.characters} aria-describedby="character-hint">
+            <p id="character-hint" className={styles.hint}>좌우로 밀거나 버튼을 눌러 16가지 헤어를 둘러보세요.</p>
+            <div id="character-carousel" ref={hairRef} className={styles.characters} aria-describedby="character-hint"
+              onScroll={({ currentTarget }) => {
+                const { scrollLeft, scrollWidth, clientWidth } = currentTarget;
+                const atStart = scrollLeft < 1;
+                const atEnd = scrollWidth - clientWidth - scrollLeft < 1;
+                setHairScroll(previous => previous.atStart === atStart && previous.atEnd === atEnd ? previous : { atStart, atEnd });
+              }}>
               {CITIZEN_CHARACTERS.map(character => <label key={character.id} className={styles.character}>
                 <input type="radio" name="character" value={character.id} checked={characterId === character.id}
                   onChange={() => setCharacterId(character.id)} aria-label={character.label} />
@@ -137,6 +154,14 @@ export default function ProfileEntry({ session, departments, onSaved, onEntered,
                   <span className={styles.characterCheck} aria-hidden="true">✓</span>
                 </span>
               </label>)}
+            </div>
+            <div className={styles.hairNavigation}>
+              <button type="button" aria-controls="character-carousel" aria-disabled={hairScroll.atStart} onClick={() => slideHair(-1)}>
+                <span aria-hidden="true">←</span> 이전 헤어
+              </button>
+              <button type="button" aria-controls="character-carousel" aria-disabled={hairScroll.atEnd} onClick={() => slideHair(1)}>
+                다음 헤어 <span aria-hidden="true">→</span>
+              </button>
             </div>
             <p className={styles.hint} aria-live="polite">{characterId ? `${CITIZEN_CHARACTERS.find(item => item.id === characterId)?.label} 선택됨` : "헤어를 선택하면 시민증 사진을 미리 볼 수 있어요."}</p>
           </fieldset>

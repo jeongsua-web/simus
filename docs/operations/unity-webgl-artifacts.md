@@ -1,4 +1,20 @@
-# Phase 2-B — Unity WebGL 배포 산출물
+# Unity WebGL 배포 산출물
+
+현재 웹 배포는 `city-masterplan-v003-local-v1`만 포함한다. Git LFS의 `Build/webgl.data`와 같은 커밋의 로더·WASM·브리지·빌드 메타데이터를 사용한다. Actions가 해당 LFS 파일만 받고, [v003 해시 목록](../../web/v003-webgl.lock.json)으로 전체 런타임 파일을 확인한다. Docker는 빌드 단계와 최종 이미지에서 다시 검사하며, CI는 이미지에서 제공되는 HTTP 응답도 확인한다.
+
+```sh
+cd web
+npm run unity:fetch
+npm run unity:verify
+```
+
+로컬 개발 서버의 응답 확인은 저장소 루트에서 `node web/scripts/verify-v003-webgl.mjs http://localhost:3000`으로 실행한다. WebGL이 바뀌면 HTML이 참조하는 파일과 `v003-webgl.lock.json`의 크기·SHA-256을 함께 갱신한다.
+
+v001·v002의 회차 결과는 기존 회차 ID에서 조회한다. 운영 전환은 v003 생성 스키마가 적용된 상태에서 새 v003 DRAFT를 준비한 후 기존 진행 회차를 정상 종료하고 새 회차를 시작한다. 검증된 위치 이벤트는 `EXHIBITION_30`이다.
+
+---
+
+# 이전 배포 기록 (Phase 2-B)
 
 ## 저장 및 전달 결정
 

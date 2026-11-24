@@ -3,10 +3,9 @@ import { randomUUID } from 'node:crypto';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { SignJWT } from 'jose';
-import { MAP_VERSION, defaultMotion, nodePoint } from '../src/lib/city/city-v002-graph.mjs';
+import { defaultMotion, MAP_VERSION, nodePoint } from '../src/lib/city/city-v002-graph.mjs';
 import content from '../src/lib/data/initial-session-content.json' with { type: 'json' };
 import v003Route from '../src/lib/routes/data/v003-local-route.json' with { type: 'json' };
-import { preparedLocation } from '../src/lib/city/city-v002-event-mapping.mjs';
 
 // Called only by the disposable-cluster runner; never connects to a configured DB.
 export async function runInitialSessionIntegration({ pool, env, privateKey, publicJwk }) {
@@ -24,7 +23,7 @@ export async function runInitialSessionIntegration({ pool, env, privateKey, publ
       body: data ? JSON.stringify(data) : undefined });
     return { status: r.status, body: await r.json() };
   };
-  const payload = {creation_mode:'initial',npc_profile:'city-rebuild-v002',name:'Initial city',duration_seconds:600,impact_scale:.1,request_key:randomUUID()};
+  const payload = {creation_mode:'initial',name:'Initial city',duration_seconds:600,impact_scale:.1,request_key:randomUUID()};
   const empty = async () => {
     for (const table of ['simulation_sessions','session_creation_requests','session_regions','session_situations','session_choices','choice_region_effects'])
       assert.equal((await pool.query(`SELECT count(*) FROM simus.${table}`)).rows[0].count,'0',table);
@@ -34,11 +33,22 @@ export async function runInitialSessionIntegration({ pool, env, privateKey, publ
   assert.equal((await call(endpoint,payload,await sign('unregistered'))).status,403);
   assert.equal((await call(endpoint,payload,await sign('disabled-admin'))).status,403);
   assert.equal((await call(endpoint,payload,token,{origin:'https://foreign.invalid'})).status,403);
-  for (const patch of [{name:''},{name:'x'.repeat(121)},{duration_seconds:9},{duration_seconds:86401},{duration_seconds:10.5},
+  for (const patch of [{name:''},{name:'x'.repeat(121)},{duration_seconds:9},{duration_seconds:604801},{duration_seconds:10.5},
     {impact_scale:-1},{impact_scale:1.1},{impact_scale:.12345678901},{npc_profile:'legacy'},{template_session_id:randomUUID()},
     {creation_mode:'unknown'},{request_key:'bad'}])
     assert.equal((await call(endpoint,{...payload,...patch})).status,400,JSON.stringify(patch));
-  const file=path.join(env.SIMUS_WEBGL_PUBLIC_ROOT,'city-rebuild-v002-phase1/build.json');
+  const retired = await call(endpoint, {...payload, npc_profile:'city-rebuild-v002'});
+  assert.equal(retired.body.error.code, 'CITY_MAP_RETIRED');
+  const unavailable = await call(endpoint, payload);
+  assert.equal(unavailable.body.error.code, 'CITY_BUILD_UNAVAILABLE');
+  const v003Root=path.join(env.SIMUS_WEBGL_PUBLIC_ROOT,'unity',v003Route.map_version);
+  await mkdir(path.join(v003Root,'Build'),{recursive:true});
+  for (const name of ['index.html','bridge.js','Build/test.loader.js','Build/test.framework.js','Build/test.wasm','Build/test.data'])
+    await writeFile(path.join(v003Root,name),'API-only fixture');
+  const file=path.join(v003Root,'build.json');
+  await writeFile(file,JSON.stringify({kind:'city-masterplan-v003-local-session',protocol_version:1,
+    map_version:v003Route.map_version,path_versions:[v003Route.path_version],npc_motion_enabled:true,
+    route_validation_status:v003Route.validation_status,source_scene_sha256:v003Route.source_scene_sha256}));
   const raw=await readFile(file,'utf8');
   try {
     await writeFile(file,JSON.stringify({...JSON.parse(raw),map_version:'foreign'}));
@@ -58,20 +68,15 @@ export async function runInitialSessionIntegration({ pool, env, privateKey, publ
   assert.equal((await call(endpoint,{...payload,name:'Changed'})).body.error.code,'REQUEST_KEY_CONFLICT');
   assert.equal((await call(endpoint,{...payload,request_key:randomUUID()})).body.error.code,'INITIAL_SESSION_EXISTS');
   const session=(await pool.query('SELECT * FROM simus.simulation_sessions WHERE id=$1',[sid])).rows[0];
-  assert.equal(session.status,'DRAFT');assert.equal(session.starts_at,null);assert.deepEqual(session.npc_motion,defaultMotion());
+  assert.equal(session.status,'DRAFT');assert.equal(session.starts_at,null);assert.deepEqual(session.npc_motion, { map_version:v003Route.map_version, path_version:v003Route.path_version, points:v003Route.points, speed_mps:v003Route.speed_mps, loop:false });
   assert.equal(session.rules_snapshot.initial_region_pollution.EXHIBITION_CITY,0);
   assert.equal((await pool.query('SELECT count(*) FROM simus.admin_users')).rows[0].count,'3');
   for (const table of ['participant_sessions','city_states','region_states','admin_actions'])
     assert.equal((await pool.query(`SELECT count(*) FROM simus.${table}`)).rows[0].count,'0');
   const situations=(await pool.query('SELECT * FROM simus.session_situations WHERE session_id=$1 ORDER BY display_order',[sid])).rows;
   assert.equal(situations.length,30);assert.ok(situations.every(s=>!s.is_generic));
-  assert.equal(situations.filter(s=>s.event_location).length,12);
-  for (const situation of situations) {
-    const expected = preparedLocation(situation.code);
-    if (!expected) { assert.equal(situation.event_location,null); continue; }
-    assert.deepEqual({...situation.event_location,point:expected.point},expected);
-    situation.event_location.point.forEach((value,index)=>assert.ok(Math.abs(value-expected.point[index])<1e-9));
-  }
+  for (const situation of situations)
+    assert.deepEqual(situation.event_location, situation.code==='EXHIBITION_30' ? v003Route.event_location : null);
   assert.deepEqual(situations.map(s=>s.title),content.situations.map(s=>s.title));
   const choices=(await pool.query(`SELECT c.*,e.pollution_base FROM simus.session_choices c JOIN simus.choice_region_effects e
     ON (e.session_id,e.situation_id,e.choice_id)=(c.session_id,c.situation_id,c.id) WHERE c.session_id=$1 ORDER BY c.situation_id,c.display_order`,[sid])).rows;
@@ -79,27 +84,19 @@ export async function runInitialSessionIntegration({ pool, env, privateKey, publ
   assert.deepEqual(choices.map(c=>[c.label,c.alignment_dx,c.alignment_dy,Number(c.happiness_base),Number(c.safety_base),Number(c.cleanliness_base),Number(c.pollution_base)]),
     content.situations.flatMap(s=>s.choices.map(c=>[c.label,c.scores.order,c.scores.morality,c.scores.happiness,c.scores.safety,c.scores.cleanliness,c.scores.pollution])));
   assert.equal((await call(endpoint)).body.sessions[0].can_start,true);
-  // The existing map editor accepts an authored v002 point on the initial round.
-  const location=await fetch(`${env.TEST_API_URL}${endpoint}/${sid}/event-locations`,{method:'PUT',headers:{authorization:`Bearer ${token}`,'content-type':'application/json'},
-    body:JSON.stringify({situation_id:situations[1].id,is_generic:false,event_location:{place_id:'fixture_initial_gate',map_version:MAP_VERSION,point:nodePoint('MN_GATE'),radius_m:1.5}})});
-  assert.equal(location.status,200,await location.text());
-  const clonePayload={template_session_id:sid,npc_profile:'city-rebuild-v002',name:'Second city',duration_seconds:300,impact_scale:.2,request_key:randomUUID()};
-  const clone=await call(endpoint,clonePayload);assert.equal(clone.status,201);assert.equal(clone.body.status,'DRAFT');
-  assert.equal((await call(endpoint,clonePayload)).status,200);
-  assert.equal((await pool.query('SELECT count(*) FROM simus.session_situations WHERE session_id=$1',[clone.body.session_id])).rows[0].count,'30');
-  assert.equal((await pool.query('SELECT event_location FROM simus.session_situations WHERE session_id=$1 AND id=$2',[clone.body.session_id,situations[1].id])).rows[0].event_location.map_version,MAP_VERSION);
-  const v003Payload={...clonePayload,npc_profile:'city-masterplan-v003',request_key:randomUUID()};
-  const unavailable=await call(endpoint,v003Payload);
-  assert.equal(unavailable.status,409);assert.equal(unavailable.body.error.code,'CITY_BUILD_UNAVAILABLE');
-  const v003Root=path.join(env.SIMUS_WEBGL_PUBLIC_ROOT,'unity',v003Route.map_version);
-  await mkdir(path.join(v003Root,'Build'),{recursive:true});
-  for (const name of ['index.html','bridge.js','Build/test.loader.js','Build/test.framework.js','Build/test.wasm','Build/test.data'])
-    await writeFile(path.join(v003Root,name),'API-only fixture');
-  await writeFile(path.join(v003Root,'build.json'),JSON.stringify({kind:'city-masterplan-v003-local-session',protocol_version:1,
-    map_version:v003Route.map_version,path_versions:[v003Route.path_version],npc_motion_enabled:true,
-    route_validation_status:v003Route.validation_status,source_scene_sha256:v003Route.source_scene_sha256}));
+  const clonePayload={template_session_id:sid,name:'Second city',duration_seconds:300,impact_scale:.2,request_key:randomUUID()};
+  const legacy = await call(endpoint,clonePayload);
+  assert.equal(legacy.status,201);
+  const legacyId=legacy.body.session_id;
+  await pool.query('UPDATE simus.simulation_sessions SET npc_motion=$2 WHERE id=$1',[legacyId,defaultMotion()]);
+  await pool.query("UPDATE simus.session_regions SET map_metadata=$2 WHERE session_id=$1",[legacyId,{old_boundary:true}]);
+  await pool.query('UPDATE simus.session_situations SET event_location=$3 WHERE session_id=$1 AND id=$2',
+    [legacyId,situations[1].id,{place_id:'legacy_gate',map_version:MAP_VERSION,point:nodePoint('MN_GATE'),radius_m:1.5}]);
+  assert.equal((await call(`${endpoint}/${legacyId}/start`,{request_key:randomUUID()})).body.error.code,'CITY_MAP_RETIRED');
+  const v003Payload={...clonePayload,template_session_id:legacyId,request_key:randomUUID()};
   const v003=await call(endpoint,v003Payload);assert.equal(v003.status,201,JSON.stringify(v003.body));
-  assert.equal((await call(endpoint,v003Payload)).status,200);
+  assert.equal((await call(endpoint,{...v003Payload,npc_profile:'city-masterplan-v003'})).status,200);
+  assert.deepEqual((await pool.query('SELECT map_metadata FROM simus.session_regions WHERE session_id=$1',[v003.body.session_id])).rows[0].map_metadata,{});
   assert.equal((await call(endpoint,{...v003Payload,npc_profile:'city-rebuild-v002'})).body.error.code,'REQUEST_KEY_CONFLICT');
   const v003Rows=(await pool.query('SELECT code,event_location FROM simus.session_situations WHERE session_id=$1',[v003.body.session_id])).rows;
   assert.equal(v003Rows.length,30);assert.equal(v003Rows.filter(s=>s.event_location).length,1);
@@ -108,7 +105,7 @@ export async function runInitialSessionIntegration({ pool, env, privateKey, publ
   assert.equal(v003Session.npc_motion.map_version,v003Route.map_version);
   assert.deepEqual(v003Session.npc_motion.points,v003Route.points);
   assert.equal((await pool.query('SELECT count(*) FROM simus.session_choices WHERE session_id=$1',[v003.body.session_id])).rows[0].count,'91');
-  // Omitted settings inherit the source, including authored placements and route.
+  // Omitted duration and impact settings still inherit from the source.
   const inheritedPayload = {template_session_id:v003.body.session_id,name:'Inherited city',request_key:randomUUID()};
   const inherited = await call(endpoint,inheritedPayload);
   assert.equal(inherited.status,201,JSON.stringify(inherited.body));
@@ -129,17 +126,35 @@ export async function runInitialSessionIntegration({ pool, env, privateKey, publ
   const customizedSession = (await pool.query('SELECT npc_motion,impact_scale FROM simus.simulation_sessions WHERE id=$1',[customized.body.session_id])).rows[0];
   assert.deepEqual(customizedSession.npc_motion,v003Session.npc_motion);assert.equal(Number(customizedSession.impact_scale),.35);
   assert.equal((await call(endpoint)).body.sessions.find(s=>s.id===customized.body.session_id).duration_seconds,450);
-  console.log('PASS inherited clone: original map/route/placements/duration/scale, replay, empty participation and optional overrides');
-  console.log('PASS v003 clone: missing build rejected, replay/conflict, validated route, one evidenced location, 30 situations and 91 choices');
+  console.log('PASS v003 default clone: duration and scale inheritance, replay, and optional overrides');
+  console.log('PASS v002 template migration: retired start blocked, no legacy spatial data, v003 route and plaza preserved');
   for (const action of ['start','end']) {
     const result=await call(`${endpoint}/${sid}/${action}`,{request_key:randomUUID()});assert.equal(result.status,200,JSON.stringify(result.body));
     if(action==='start') {
       assert.equal(result.body.status,'RUNNING');
       const timing=(await pool.query('SELECT extract(epoch FROM scheduled_end_at-starts_at)::float8 AS seconds FROM simus.simulation_sessions WHERE id=$1',[sid])).rows[0];
       assert.ok(Math.abs(timing.seconds-600)<1);
+      const auth = await fetch(`${env.TEST_API_URL}/api/participants`, { method:'POST' });
+      assert.equal(auth.status,201);
+      const cookie=auth.headers.get('set-cookie').split(';')[0];
+      const sessionPath=`/api/sessions/${sid}`;
+      const {body:entry}=await call(`${sessionPath}/profile`,undefined,token,{cookie});
+      assert.equal((await call(`${sessionPath}/profile`,{nickname:'테스트시민',department_id:entry.departments[0].id,mbti:'ISTJ'},token,{cookie})).status,201);
+      let active;
+      for (let i=0;i<25;i++) {
+        const state=await call(`${sessionPath}/event`,undefined,token,{cookie});
+        assert.equal(state.status,200);
+        if (state.body.phase==='ACTIVE') { active=state.body.event; break; }
+        await new Promise(resolve=>setTimeout(resolve,1000));
+      }
+      assert.equal(active?.situation.code,'EXHIBITION_30');
+      const choice={session_id:sid,event_id:active.id,situation_id:active.situation_id,choice_id:active.situation.choices[0].id,request_key:randomUUID()};
+      assert.equal((await call('/api/choices',choice,token,{cookie})).status,201);
+      assert.equal((await call('/api/choices',choice,token,{cookie})).status,200);
+      assert.equal((await call(`${sessionPath}/event`,undefined,token,{cookie})).body.phase,'WAITING');
     }
   }
   assert.equal((await call(endpoint,payload)).body.status,'FINALIZED','replay works after lifecycle transition');
   assert.equal((await call(endpoint,{...clonePayload,request_key:randomUUID(),name:'From finalized'})).status,201);
-  console.log('PASS initial API: empty DB, RS256/admin/origin checks, input validation, build mismatch, atomic rollback, concurrent admins/replays, 30 situations/91 exact choices/effects, no runtime rows, location editor, DRAFT clone, explicit start/end and FINALIZED clone');
+  console.log('PASS initial API: empty DB, RS256/admin/origin checks, input validation, build mismatch, atomic rollback, concurrent admins/replays, 30 situations/91 exact choices/effects, no runtime rows, automatic plaza event and choice, DRAFT clone, explicit start/end and FINALIZED clone');
 }

@@ -33,8 +33,8 @@ export async function POST(request: NextRequest) {
         await db.query("UPDATE simus.participants SET last_seen_at=clock_timestamp() WHERE id=$1", [existing]);
         return { participant_id: existing, token: null };
       }
-      if (request.cookies.has(participantCookie)) {
-        throw new ApiError(401, "PARTICIPANT_AUTH_EXPIRED", "참여 인증이 만료되었습니다. 브라우저의 사이트 데이터를 지운 뒤 새 참여를 시작해 주세요.");
+      if (request.cookies.has(participantCookie) && request.nextUrl.searchParams.get("restart") !== "1") {
+        throw new ApiError(401, "PARTICIPANT_AUTH_EXPIRED", "참여 인증이 만료되었습니다.");
       }
       const token = randomBytes(32).toString("hex");
       const participant = await db.query("INSERT INTO simus.participants DEFAULT VALUES RETURNING id");

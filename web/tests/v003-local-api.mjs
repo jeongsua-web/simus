@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {randomUUID} from 'node:crypto';
 import {readFile,writeFile} from 'node:fs/promises';
 import pg from 'pg';
-import {npcPosition} from '../src/app/participate/npc-motion.ts';
+import {npcPosition} from '../src/app/participate/lib/npc-motion.ts';
 const base=process.env.V003_TEST_URL||'http://127.0.0.1:3210';
 assert.ok(['127.0.0.1','localhost'].includes(new URL(base).hostname));
 const sid='16000000-0000-0000-0000-000000000001';

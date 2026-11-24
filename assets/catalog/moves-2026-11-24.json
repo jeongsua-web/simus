@@ -1,0 +1,176 @@
+{
+  "date": "2026-11-24",
+  "reason": "Retire v001/v002 and the standalone preview from WebGL deployment",
+  "moves": [
+    {
+      "from": "web/public/city/Build/development_city.data",
+      "to": "assets/archive/maps/retired-webgl/city/Build/development_city.data",
+      "sha256": "7dd40c5f15606e8158d57c5717b2085d553ca72601b353eb396f9fd33d2c02f9"
+    },
+    {
+      "from": "web/public/city/Build/development_city.framework.js",
+      "to": "assets/archive/maps/retired-webgl/city/Build/development_city.framework.js",
+      "sha256": "65339d84093e272489ef09498693c8ef7a75adca3c1a70716fe09efaba805862"
+    },
+    {
+      "from": "web/public/city/Build/development_city.loader.js",
+      "to": "assets/archive/maps/retired-webgl/city/Build/development_city.loader.js",
+      "sha256": "0176a6f4d1e5c8d1bc0275a834746efaea3ba78e0290d6cd18248b5ac8180117"
+    },
+    {
+      "from": "web/public/city/Build/development_city.wasm",
+      "to": "assets/archive/maps/retired-webgl/city/Build/development_city.wasm",
+      "sha256": "7501bbdf992d41a87b86d42f11076ed0464de34532e1c473c6d1b06cc968c50d"
+    },
+    {
+      "from": "web/public/city/bridge.js",
+      "to": "assets/archive/maps/retired-webgl/city/bridge.js",
+      "sha256": "0f3b72662cc12879951e99d3a23ee22c26eb7b981c5b694115a7f8a01044521c"
+    },
+    {
+      "from": "web/public/city/build.json",
+      "to": "assets/archive/maps/retired-webgl/city/build.json",
+      "sha256": "3e63ea440f921869966cd56b78dabe3ef48a4a8fb91c40548c7ea01082c292d9"
+    },
+    {
+      "from": "web/public/city/index.html",
+      "to": "assets/archive/maps/retired-webgl/city/index.html",
+      "sha256": "984368c522454e3805b31870251636c5e2e1d960d2f98eae737c648a30b784cc"
+    },
+    {
+      "from": "web/public/city-rebuild-v002/Build/city_rebuild_v002_character_zoom.data",
+      "to": "assets/archive/maps/retired-webgl/city-rebuild-v002/Build/city_rebuild_v002_character_zoom.data",
+      "sha256": "7298124f64a5d75547dd222f58ed4e36e04e04e2c00deeac88ec4b8d85087cc6"
+    },
+    {
+      "from": "web/public/city-rebuild-v002/Build/city_rebuild_v002_character_zoom.framework.js",
+      "to": "assets/archive/maps/retired-webgl/city-rebuild-v002/Build/city_rebuild_v002_character_zoom.framework.js",
+      "sha256": "8fc81fca14ab0d03713374e001dd5986c5edd0e2b8e8924ea2a21a483340dd2b"
+    },
+    {
+      "from": "web/public/city-rebuild-v002/Build/city_rebuild_v002_character_zoom.loader.js",
+      "to": "assets/archive/maps/retired-webgl/city-rebuild-v002/Build/city_rebuild_v002_character_zoom.loader.js",
+      "sha256": "498e251d06036bcbffac60f84c5b39175176eea9f707e5245c368ed2443629e8"
+    },
+    {
+      "from": "web/public/city-rebuild-v002/Build/city_rebuild_v002_character_zoom.wasm",
+      "to": "assets/archive/maps/retired-webgl/city-rebuild-v002/Build/city_rebuild_v002_character_zoom.wasm",
+      "sha256": "ea63da7ebcab167458f5d807be6a66cc84b8c03838f380971047493aa5cc7dc2"
+    },
+    {
+      "from": "web/public/city-rebuild-v002/bridge.js",
+      "to": "assets/archive/maps/retired-webgl/city-rebuild-v002/bridge.js",
+      "sha256": "70d23e67cfad185da55829586a27d69759813f582dc28059d78bf2a24f665a29"
+    },
+    {
+      "from": "web/public/city-rebuild-v002/build.json",
+      "to": "assets/archive/maps/retired-webgl/city-rebuild-v002/build.json",
+      "sha256": "ca34f16097db103596d9455aecc632dacd4d1b822a09c4b0b4657ffca32f15f6"
+    },
+    {
+      "from": "web/public/city-rebuild-v002/index.html",
+      "to": "assets/archive/maps/retired-webgl/city-rebuild-v002/index.html",
+      "sha256": "229d94ad9bf63d743c9096ebf9f8c73ff94303cfbdb66aafc006d8b543861f51"
+    },
+    {
+      "from": "web/public/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.data",
+      "to": "assets/archive/maps/retired-webgl/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.data",
+      "sha256": "fa50bb44655258d5fad3b221736426be7179f643da728db6d8621c9f0552199f"
+    },
+    {
+      "from": "web/public/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.framework.js",
+      "to": "assets/archive/maps/retired-webgl/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.framework.js",
+      "sha256": "f294eeb46e7587ff0699737b70cb3b0da290d6697ca7275e71a1f3627dc05299"
+    },
+    {
+      "from": "web/public/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.loader.js",
+      "to": "assets/archive/maps/retired-webgl/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.loader.js",
+      "sha256": "f3b676982415b1a1701b22d79a69a15b5699d5466c63cb35ce9d3390eea48533"
+    },
+    {
+      "from": "web/public/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.wasm",
+      "to": "assets/archive/maps/retired-webgl/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.wasm",
+      "sha256": "f4062317b91c997fbc13e7365ef56647133b637a7ab39c63491926c7476b933a"
+    },
+    {
+      "from": "web/public/city-rebuild-v002-phase1/bridge.js",
+      "to": "assets/archive/maps/retired-webgl/city-rebuild-v002-phase1/bridge.js",
+      "sha256": "70d23e67cfad185da55829586a27d69759813f582dc28059d78bf2a24f665a29"
+    },
+    {
+      "from": "web/public/city-rebuild-v002-phase1/build.json",
+      "to": "assets/archive/maps/retired-webgl/city-rebuild-v002-phase1/build.json",
+      "sha256": "244a7823ae0a001bb30e1e687bba8df3769d20e4acf8762682e855bcc6ef258d"
+    },
+    {
+      "from": "web/public/city-rebuild-v002-phase1/index.html",
+      "to": "assets/archive/maps/retired-webgl/city-rebuild-v002-phase1/index.html",
+      "sha256": "b1b2cdb7bb326d2f37da386510c6768bd347a0753ea1ecfe7a7c56b60c4554d0"
+    },
+    {
+      "from": "web/public/city-rebuild-v002-test/Build/city_rebuild_v002_test_verified.data",
+      "to": "assets/archive/maps/retired-webgl/city-rebuild-v002-test/Build/city_rebuild_v002_test_verified.data",
+      "sha256": "bae270ddfc1d254f1e52935b03e06bffb70ade01fbbeebe7bcbfc442df3b8bc7"
+    },
+    {
+      "from": "web/public/city-rebuild-v002-test/Build/city_rebuild_v002_test_verified.framework.js",
+      "to": "assets/archive/maps/retired-webgl/city-rebuild-v002-test/Build/city_rebuild_v002_test_verified.framework.js",
+      "sha256": "90667dee49d653af934583602e8510b830a366cdc93ca3249490bf040f8a371f"
+    },
+    {
+      "from": "web/public/city-rebuild-v002-test/Build/city_rebuild_v002_test_verified.loader.js",
+      "to": "assets/archive/maps/retired-webgl/city-rebuild-v002-test/Build/city_rebuild_v002_test_verified.loader.js",
+      "sha256": "c0769debd1f83f5d1c04896d2258487aa677025c642568825aa49602ce156c3b"
+    },
+    {
+      "from": "web/public/city-rebuild-v002-test/Build/city_rebuild_v002_test_verified.wasm",
+      "to": "assets/archive/maps/retired-webgl/city-rebuild-v002-test/Build/city_rebuild_v002_test_verified.wasm",
+      "sha256": "fea353367e15aa473cbafe6797d99c7acb26629f943e705dfdac6d2b1e447d55"
+    },
+    {
+      "from": "web/public/city-rebuild-v002-test/bridge.js",
+      "to": "assets/archive/maps/retired-webgl/city-rebuild-v002-test/bridge.js",
+      "sha256": "0f3b72662cc12879951e99d3a23ee22c26eb7b981c5b694115a7f8a01044521c"
+    },
+    {
+      "from": "web/public/city-rebuild-v002-test/build.json",
+      "to": "assets/archive/maps/retired-webgl/city-rebuild-v002-test/build.json",
+      "sha256": "e76dcea36474d3d798d715ffc5d9d02853a31b93c3da7e8ade2d53051cb98f7d"
+    },
+    {
+      "from": "web/public/city-rebuild-v002-test/index.html",
+      "to": "assets/archive/maps/retired-webgl/city-rebuild-v002-test/index.html",
+      "sha256": "71bb3bce460ac5e76c7d77b850e8065265e41cb83ea73fc7ba52c3646f27e8d7"
+    },
+    {
+      "from": "web/public/unity-preview/Build/npc_follow_preview.data",
+      "to": "assets/archive/maps/retired-webgl/unity-preview/Build/npc_follow_preview.data",
+      "sha256": "649ce86f1c452e568386694d31341fa63b910d7335ec7832a3386e2981a3a977"
+    },
+    {
+      "from": "web/public/unity-preview/Build/npc_follow_preview.framework.js",
+      "to": "assets/archive/maps/retired-webgl/unity-preview/Build/npc_follow_preview.framework.js",
+      "sha256": "d45b2712093e1d9d01bc22fa9d5f3f2e4c7480ec2cb15e2493471d618bcdb046"
+    },
+    {
+      "from": "web/public/unity-preview/Build/npc_follow_preview.loader.js",
+      "to": "assets/archive/maps/retired-webgl/unity-preview/Build/npc_follow_preview.loader.js",
+      "sha256": "e6b4e917ca5db1b93a9132241a40f2168cc83f299de4b8cbb5f6f42c78e4074a"
+    },
+    {
+      "from": "web/public/unity-preview/Build/npc_follow_preview.wasm",
+      "to": "assets/archive/maps/retired-webgl/unity-preview/Build/npc_follow_preview.wasm",
+      "sha256": "2666a76b6977b5f9bca65f216a234a1a58fb1a293244c0abe30739813b33c3ab"
+    },
+    {
+      "from": "web/public/unity-preview/build.json",
+      "to": "assets/archive/maps/retired-webgl/unity-preview/build.json",
+      "sha256": "d79337311740f783fcee5e3f8d7b50c3443ba380086c0901231e57e74c8f9d66"
+    },
+    {
+      "from": "web/public/unity-preview/index.html",
+      "to": "assets/archive/maps/retired-webgl/unity-preview/index.html",
+      "sha256": "5cba4e3ba4b7a6896a217932681586189d3c8127327b7348341ec7adec3b380b"
+    }
+  ]
+}

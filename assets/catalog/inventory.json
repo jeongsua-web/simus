@@ -142,6 +142,251 @@
       "sha256": "1a2c99ef44858c1f8a657c3eb2baf50360564689b0913ece9443ce3e0103ca45"
     },
     {
+      "path": "assets/archive/maps/retired-webgl/README.md",
+      "role": "support",
+      "location": "archive",
+      "bytes": 587,
+      "sha256": "f4723485372fd962490d0646e06e8232c860a0f079f306915de1d62d8b4119e0"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.data",
+      "role": "support",
+      "location": "archive",
+      "bytes": 74442021,
+      "sha256": "fa50bb44655258d5fad3b221736426be7179f643da728db6d8621c9f0552199f"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.framework.js",
+      "role": "support",
+      "location": "archive",
+      "bytes": 413204,
+      "sha256": "f294eeb46e7587ff0699737b70cb3b0da290d6697ca7275e71a1f3627dc05299"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.loader.js",
+      "role": "support",
+      "location": "archive",
+      "bytes": 26983,
+      "sha256": "f3b676982415b1a1701b22d79a69a15b5699d5466c63cb35ce9d3390eea48533"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.wasm",
+      "role": "support",
+      "location": "archive",
+      "bytes": 26707785,
+      "sha256": "f4062317b91c997fbc13e7365ef56647133b637a7ab39c63491926c7476b933a"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city-rebuild-v002-phase1/bridge.js",
+      "role": "support",
+      "location": "archive",
+      "bytes": 5884,
+      "sha256": "70d23e67cfad185da55829586a27d69759813f582dc28059d78bf2a24f665a29"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city-rebuild-v002-phase1/build.json",
+      "role": "support",
+      "location": "archive",
+      "bytes": 305,
+      "sha256": "244a7823ae0a001bb30e1e687bba8df3769d20e4acf8762682e855bcc6ef258d"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city-rebuild-v002-phase1/index.html",
+      "role": "support",
+      "location": "archive",
+      "bytes": 1660,
+      "sha256": "b1b2cdb7bb326d2f37da386510c6768bd347a0753ea1ecfe7a7c56b60c4554d0"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city-rebuild-v002-test/Build/city_rebuild_v002_test_verified.data",
+      "role": "support",
+      "location": "archive",
+      "bytes": 60773798,
+      "sha256": "bae270ddfc1d254f1e52935b03e06bffb70ade01fbbeebe7bcbfc442df3b8bc7"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city-rebuild-v002-test/Build/city_rebuild_v002_test_verified.framework.js",
+      "role": "support",
+      "location": "archive",
+      "bytes": 413204,
+      "sha256": "90667dee49d653af934583602e8510b830a366cdc93ca3249490bf040f8a371f"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city-rebuild-v002-test/Build/city_rebuild_v002_test_verified.loader.js",
+      "role": "support",
+      "location": "archive",
+      "bytes": 26983,
+      "sha256": "c0769debd1f83f5d1c04896d2258487aa677025c642568825aa49602ce156c3b"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city-rebuild-v002-test/Build/city_rebuild_v002_test_verified.wasm",
+      "role": "support",
+      "location": "archive",
+      "bytes": 26598380,
+      "sha256": "fea353367e15aa473cbafe6797d99c7acb26629f943e705dfdac6d2b1e447d55"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city-rebuild-v002-test/bridge.js",
+      "role": "support",
+      "location": "archive",
+      "bytes": 3512,
+      "sha256": "0f3b72662cc12879951e99d3a23ee22c26eb7b981c5b694115a7f8a01044521c"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city-rebuild-v002-test/build.json",
+      "role": "support",
+      "location": "archive",
+      "bytes": 164,
+      "sha256": "e76dcea36474d3d798d715ffc5d9d02853a31b93c3da7e8ade2d53051cb98f7d"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city-rebuild-v002-test/index.html",
+      "role": "support",
+      "location": "archive",
+      "bytes": 1656,
+      "sha256": "71bb3bce460ac5e76c7d77b850e8065265e41cb83ea73fc7ba52c3646f27e8d7"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city-rebuild-v002/Build/city_rebuild_v002_character_zoom.data",
+      "role": "support",
+      "location": "archive",
+      "bytes": 61270274,
+      "sha256": "7298124f64a5d75547dd222f58ed4e36e04e04e2c00deeac88ec4b8d85087cc6"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city-rebuild-v002/Build/city_rebuild_v002_character_zoom.framework.js",
+      "role": "support",
+      "location": "archive",
+      "bytes": 413204,
+      "sha256": "8fc81fca14ab0d03713374e001dd5986c5edd0e2b8e8924ea2a21a483340dd2b"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city-rebuild-v002/Build/city_rebuild_v002_character_zoom.loader.js",
+      "role": "support",
+      "location": "archive",
+      "bytes": 26983,
+      "sha256": "498e251d06036bcbffac60f84c5b39175176eea9f707e5245c368ed2443629e8"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city-rebuild-v002/Build/city_rebuild_v002_character_zoom.wasm",
+      "role": "support",
+      "location": "archive",
+      "bytes": 26693655,
+      "sha256": "ea63da7ebcab167458f5d807be6a66cc84b8c03838f380971047493aa5cc7dc2"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city-rebuild-v002/bridge.js",
+      "role": "support",
+      "location": "archive",
+      "bytes": 5884,
+      "sha256": "70d23e67cfad185da55829586a27d69759813f582dc28059d78bf2a24f665a29"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city-rebuild-v002/build.json",
+      "role": "support",
+      "location": "archive",
+      "bytes": 208,
+      "sha256": "ca34f16097db103596d9455aecc632dacd4d1b822a09c4b0b4657ffca32f15f6"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city-rebuild-v002/index.html",
+      "role": "support",
+      "location": "archive",
+      "bytes": 1660,
+      "sha256": "229d94ad9bf63d743c9096ebf9f8c73ff94303cfbdb66aafc006d8b543861f51"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city/Build/development_city.data",
+      "role": "support",
+      "location": "archive",
+      "bytes": 45547960,
+      "sha256": "7dd40c5f15606e8158d57c5717b2085d553ca72601b353eb396f9fd33d2c02f9"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city/Build/development_city.framework.js",
+      "role": "support",
+      "location": "archive",
+      "bytes": 411840,
+      "sha256": "65339d84093e272489ef09498693c8ef7a75adca3c1a70716fe09efaba805862"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city/Build/development_city.loader.js",
+      "role": "support",
+      "location": "archive",
+      "bytes": 26983,
+      "sha256": "0176a6f4d1e5c8d1bc0275a834746efaea3ba78e0290d6cd18248b5ac8180117"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city/Build/development_city.wasm",
+      "role": "support",
+      "location": "archive",
+      "bytes": 26184068,
+      "sha256": "7501bbdf992d41a87b86d42f11076ed0464de34532e1c473c6d1b06cc968c50d"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city/bridge.js",
+      "role": "support",
+      "location": "archive",
+      "bytes": 3512,
+      "sha256": "0f3b72662cc12879951e99d3a23ee22c26eb7b981c5b694115a7f8a01044521c"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city/build.json",
+      "role": "support",
+      "location": "archive",
+      "bytes": 81,
+      "sha256": "3e63ea440f921869966cd56b78dabe3ef48a4a8fb91c40548c7ea01082c292d9"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/city/index.html",
+      "role": "support",
+      "location": "archive",
+      "bytes": 1596,
+      "sha256": "984368c522454e3805b31870251636c5e2e1d960d2f98eae737c648a30b784cc"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/unity-preview/Build/npc_follow_preview.data",
+      "role": "support",
+      "location": "archive",
+      "bytes": 45540713,
+      "sha256": "649ce86f1c452e568386694d31341fa63b910d7335ec7832a3386e2981a3a977"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/unity-preview/Build/npc_follow_preview.framework.js",
+      "role": "support",
+      "location": "archive",
+      "bytes": 411840,
+      "sha256": "d45b2712093e1d9d01bc22fa9d5f3f2e4c7480ec2cb15e2493471d618bcdb046"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/unity-preview/Build/npc_follow_preview.loader.js",
+      "role": "support",
+      "location": "archive",
+      "bytes": 26983,
+      "sha256": "e6b4e917ca5db1b93a9132241a40f2168cc83f299de4b8cbb5f6f42c78e4074a"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/unity-preview/Build/npc_follow_preview.wasm",
+      "role": "support",
+      "location": "archive",
+      "bytes": 26147911,
+      "sha256": "2666a76b6977b5f9bca65f216a234a1a58fb1a293244c0abe30739813b33c3ab"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/unity-preview/build.json",
+      "role": "support",
+      "location": "archive",
+      "bytes": 127,
+      "sha256": "d79337311740f783fcee5e3f8d7b50c3443ba380086c0901231e57e74c8f9d66"
+    },
+    {
+      "path": "assets/archive/maps/retired-webgl/unity-preview/index.html",
+      "role": "support",
+      "location": "archive",
+      "bytes": 2325,
+      "sha256": "5cba4e3ba4b7a6896a217932681586189d3c8127327b7348341ec7adec3b380b"
+    },
+    {
       "path": "assets/archive/packages/SIMUS_Building_Plot_04.zip",
       "role": "package",
       "location": "archive",
@@ -8811,8 +9056,8 @@
       "path": "unity/Assets/Editor/HomeBackgroundTourCapture.cs",
       "role": "code",
       "location": "unity_existing",
-      "bytes": 15542,
-      "sha256": "7fddd32467f63c9f322b02866f15a5af3ac49cbee5ad660587cce4279a527ab1"
+      "bytes": 17732,
+      "sha256": "883dba650beaeb34c6a892a26f6473b3244c4b7da9c3af4b18320cbf2270406a"
     },
     {
       "path": "unity/Assets/Editor/HomeBackgroundTourCapture.cs.meta",
@@ -46524,202 +46769,6 @@
       "sha256": "6e3da18b9327723a22c3cf39ddea6eacc0fce2afcad2c70a087a017735f2b34d"
     },
     {
-      "path": "web/public/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.data",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 133,
-      "sha256": "f9bfe16b03512d51f4a6516e6a0dfc3e5d1f4e5daef52c4c4ec16357c7cadbb6"
-    },
-    {
-      "path": "web/public/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.framework.js",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 413204,
-      "sha256": "f294eeb46e7587ff0699737b70cb3b0da290d6697ca7275e71a1f3627dc05299"
-    },
-    {
-      "path": "web/public/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.loader.js",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 26983,
-      "sha256": "f3b676982415b1a1701b22d79a69a15b5699d5466c63cb35ce9d3390eea48533"
-    },
-    {
-      "path": "web/public/city-rebuild-v002-phase1/Build/city_rebuild_v002_phase1_session.wasm",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 26707785,
-      "sha256": "f4062317b91c997fbc13e7365ef56647133b637a7ab39c63491926c7476b933a"
-    },
-    {
-      "path": "web/public/city-rebuild-v002-phase1/bridge.js",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 5884,
-      "sha256": "70d23e67cfad185da55829586a27d69759813f582dc28059d78bf2a24f665a29"
-    },
-    {
-      "path": "web/public/city-rebuild-v002-phase1/build.json",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 305,
-      "sha256": "244a7823ae0a001bb30e1e687bba8df3769d20e4acf8762682e855bcc6ef258d"
-    },
-    {
-      "path": "web/public/city-rebuild-v002-phase1/index.html",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 1660,
-      "sha256": "b1b2cdb7bb326d2f37da386510c6768bd347a0753ea1ecfe7a7c56b60c4554d0"
-    },
-    {
-      "path": "web/public/city-rebuild-v002-test/Build/city_rebuild_v002_test_verified.data",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 60773798,
-      "sha256": "bae270ddfc1d254f1e52935b03e06bffb70ade01fbbeebe7bcbfc442df3b8bc7"
-    },
-    {
-      "path": "web/public/city-rebuild-v002-test/Build/city_rebuild_v002_test_verified.framework.js",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 413204,
-      "sha256": "90667dee49d653af934583602e8510b830a366cdc93ca3249490bf040f8a371f"
-    },
-    {
-      "path": "web/public/city-rebuild-v002-test/Build/city_rebuild_v002_test_verified.loader.js",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 26983,
-      "sha256": "c0769debd1f83f5d1c04896d2258487aa677025c642568825aa49602ce156c3b"
-    },
-    {
-      "path": "web/public/city-rebuild-v002-test/Build/city_rebuild_v002_test_verified.wasm",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 26598380,
-      "sha256": "fea353367e15aa473cbafe6797d99c7acb26629f943e705dfdac6d2b1e447d55"
-    },
-    {
-      "path": "web/public/city-rebuild-v002-test/bridge.js",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 3512,
-      "sha256": "0f3b72662cc12879951e99d3a23ee22c26eb7b981c5b694115a7f8a01044521c"
-    },
-    {
-      "path": "web/public/city-rebuild-v002-test/build.json",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 164,
-      "sha256": "e76dcea36474d3d798d715ffc5d9d02853a31b93c3da7e8ade2d53051cb98f7d"
-    },
-    {
-      "path": "web/public/city-rebuild-v002-test/index.html",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 1656,
-      "sha256": "71bb3bce460ac5e76c7d77b850e8065265e41cb83ea73fc7ba52c3646f27e8d7"
-    },
-    {
-      "path": "web/public/city-rebuild-v002/Build/city_rebuild_v002_character_zoom.data",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 61270274,
-      "sha256": "7298124f64a5d75547dd222f58ed4e36e04e04e2c00deeac88ec4b8d85087cc6"
-    },
-    {
-      "path": "web/public/city-rebuild-v002/Build/city_rebuild_v002_character_zoom.framework.js",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 413204,
-      "sha256": "8fc81fca14ab0d03713374e001dd5986c5edd0e2b8e8924ea2a21a483340dd2b"
-    },
-    {
-      "path": "web/public/city-rebuild-v002/Build/city_rebuild_v002_character_zoom.loader.js",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 26983,
-      "sha256": "498e251d06036bcbffac60f84c5b39175176eea9f707e5245c368ed2443629e8"
-    },
-    {
-      "path": "web/public/city-rebuild-v002/Build/city_rebuild_v002_character_zoom.wasm",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 26693655,
-      "sha256": "ea63da7ebcab167458f5d807be6a66cc84b8c03838f380971047493aa5cc7dc2"
-    },
-    {
-      "path": "web/public/city-rebuild-v002/bridge.js",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 5884,
-      "sha256": "70d23e67cfad185da55829586a27d69759813f582dc28059d78bf2a24f665a29"
-    },
-    {
-      "path": "web/public/city-rebuild-v002/build.json",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 208,
-      "sha256": "ca34f16097db103596d9455aecc632dacd4d1b822a09c4b0b4657ffca32f15f6"
-    },
-    {
-      "path": "web/public/city-rebuild-v002/index.html",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 1660,
-      "sha256": "229d94ad9bf63d743c9096ebf9f8c73ff94303cfbdb66aafc006d8b543861f51"
-    },
-    {
-      "path": "web/public/city/Build/development_city.data",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 45547960,
-      "sha256": "7dd40c5f15606e8158d57c5717b2085d553ca72601b353eb396f9fd33d2c02f9"
-    },
-    {
-      "path": "web/public/city/Build/development_city.framework.js",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 411840,
-      "sha256": "65339d84093e272489ef09498693c8ef7a75adca3c1a70716fe09efaba805862"
-    },
-    {
-      "path": "web/public/city/Build/development_city.loader.js",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 26983,
-      "sha256": "0176a6f4d1e5c8d1bc0275a834746efaea3ba78e0290d6cd18248b5ac8180117"
-    },
-    {
-      "path": "web/public/city/Build/development_city.wasm",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 26184068,
-      "sha256": "7501bbdf992d41a87b86d42f11076ed0464de34532e1c473c6d1b06cc968c50d"
-    },
-    {
-      "path": "web/public/city/bridge.js",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 3512,
-      "sha256": "0f3b72662cc12879951e99d3a23ee22c26eb7b981c5b694115a7f8a01044521c"
-    },
-    {
-      "path": "web/public/city/build.json",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 81,
-      "sha256": "3e63ea440f921869966cd56b78dabe3ef48a4a8fb91c40548c7ea01082c292d9"
-    },
-    {
-      "path": "web/public/city/index.html",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 1596,
-      "sha256": "984368c522454e3805b31870251636c5e2e1d960d2f98eae737c648a30b784cc"
-    },
-    {
       "path": "web/public/file.svg",
       "role": "image",
       "location": "web_runtime",
@@ -46746,48 +46795,6 @@
       "location": "web_runtime",
       "bytes": 996,
       "sha256": "ef99d75fe199d1fa9b432e74841070bb3f7394f24d0faa9abbf64ada41908de0"
-    },
-    {
-      "path": "web/public/unity-preview/Build/npc_follow_preview.data",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 45540713,
-      "sha256": "649ce86f1c452e568386694d31341fa63b910d7335ec7832a3386e2981a3a977"
-    },
-    {
-      "path": "web/public/unity-preview/Build/npc_follow_preview.framework.js",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 411840,
-      "sha256": "d45b2712093e1d9d01bc22fa9d5f3f2e4c7480ec2cb15e2493471d618bcdb046"
-    },
-    {
-      "path": "web/public/unity-preview/Build/npc_follow_preview.loader.js",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 26983,
-      "sha256": "e6b4e917ca5db1b93a9132241a40f2168cc83f299de4b8cbb5f6f42c78e4074a"
-    },
-    {
-      "path": "web/public/unity-preview/Build/npc_follow_preview.wasm",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 26147911,
-      "sha256": "2666a76b6977b5f9bca65f216a234a1a58fb1a293244c0abe30739813b33c3ab"
-    },
-    {
-      "path": "web/public/unity-preview/build.json",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 127,
-      "sha256": "d79337311740f783fcee5e3f8d7b50c3443ba380086c0901231e57e74c8f9d66"
-    },
-    {
-      "path": "web/public/unity-preview/index.html",
-      "role": "support",
-      "location": "web_runtime",
-      "bytes": 2325,
-      "sha256": "5cba4e3ba4b7a6896a217932681586189d3c8127327b7348341ec7adec3b380b"
     },
     {
       "path": "web/public/unity/city-masterplan-v003-local-v1/Build/city-masterplan-v003-local-v1.data",

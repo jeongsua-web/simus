@@ -37,6 +37,9 @@ GET은 공개 조회이며 접속 시각을 갱신하지 않습니다. POST는 �
 ## POST /api/participants
 
 본문 없이 호출합니다. 새 익명 참여자는 201, 유효한 기존 쿠키가 있으면 같은 참여자를 200으로 반환합니다.
+만료되거나 유효하지 않은 쿠키가 있으면 기본 요청은 401을 반환합니다. 사용자가 새 참여를 선택하면
+`POST /api/participants?restart=1`로 새 익명 참여자와 쿠키를 발급받을 수 있습니다. 이 요청에서도
+유효한 쿠키가 있으면 같은 참여자를 반환합니다.
 
 ```json
 { "participant_id": "uuid" }
@@ -167,8 +170,7 @@ curl -X POST -H "Authorization: Bearer $SESSION_JOB_TOKEN" \
 ## GET /api/participants
 
 유효한 참여자 쿠키가 필요하며 본인이 가장 최근 참여한 회차의 상태와 응답 수를 반환합니다. 만료되거나
-유효하지 않은 인증에는 401을 반환합니다. `POST /api/participants`는 참여자 쿠키가 전혀 없을 때만
-새 익명 참여자를 생성합니다.
+유효하지 않은 인증에는 401을 반환합니다.
 
 ## GET /api/admin/sessions
 
@@ -178,7 +180,7 @@ curl -X POST -H "Authorization: Bearer $SESSION_JOB_TOKEN" \
 
 ## 2026-09-29 통합 추가
 
-- `POST /api/admin/sessions`: JWT 관리자만 DRAFT/FINALIZED 회차 콘텐츠를 복제해 다음 DRAFT 생성. 이름·진행 시간·영향 배율·request_key 지정. 동일 요청 재전송은 같은 회차 반환.
+- `POST /api/admin/sessions`: JWT 관리자가 최초 회차를 만들거나 DRAFT/FINALIZED 회차 콘텐츠를 복제해 다음 DRAFT를 만든다. 새 회차는 CityMasterplan_v003 경로와 `EXHIBITION_30` 광장 위치를 적용한다. 이름·진행 시간·영향 배율·`request_key`를 지정할 수 있으며 동일 요청의 재전송은 같은 회차를 반환한다. 신규 v002 생성 요청과 폐기된 맵의 회차 시작은 `409 CITY_MAP_RETIRED`다.
 - `GET /api/admin/sessions`: 복제 회차의 `duration_seconds` 추가. 시작 시점부터 적용.
 - `GET /api/participants`: 본인의 종료된 회차 `history` 추가.
 - `GET /api/sessions/{id}/result`: 확정된 해당 회차 `city_state` 추가. 본인 result 계약 유지.
@@ -209,7 +211,7 @@ curl -X POST -H "Authorization: Bearer $SESSION_JOB_TOKEN" \
 
 ### NPC 경로 설정 및 위치 동기화 (DB 010)
 
-- `PUT /api/admin/sessions/{id}/npc-motion`: 관리자 JWT/활성 관리자/동일 출처, DRAFT 전용. 본문 `{map_version,path_version,points,speed_mps,loop}`, 반환 `{session_id,motion}`. 새 회차 경로는 자동 생성·복사하지 않는다.
+- `PUT /api/admin/sessions/{id}/npc-motion`: 관리자 JWT/활성 관리자/동일 출처, DRAFT 전용. 본문 `{map_version,path_version,points,speed_mps,loop}`, 반환 `{session_id,motion}`. 새 회차의 기본 경로는 검증된 v003 경로다.
 - `GET /api/sessions/{id}/npc-positions?map_version=...&path_version=...`: 공개 익명 스냅샷. `map_version` 필수, `path_version` 선택. 기존 NPC `epoch/motion`과 서버 시각 기준 `position`, `forward`를 함께 반환한다. 지도 불일치 409, 미설정 409, DRAFT 404.
 - 미설정 신규 가입·첫 선택은 `409 NPC_MOTION_NOT_CONFIGURED`. 기존 회원·조회는 보존한다. 새 맵 경로는 확정 자료를 받은 뒤 DRAFT에서 명시 설정한다.
 

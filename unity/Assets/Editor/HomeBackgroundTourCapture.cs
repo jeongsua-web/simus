@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json.Linq;
 using Simus.HomeBackground;
 using UnityEditor;
+using UnityEditor.Media;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 using Object = UnityEngine.Object;
@@ -126,9 +127,45 @@ public static class HomeBackgroundTourCapture
     }
 
     [MenuItem("SIMUS/Home Background/5 Capture cinematic tour")]
-    public static void Capture()
+    public static void Capture() => RunCapture(1, false);
+
+    [MenuItem("SIMUS/Home Background/6 Capture slow web tour")]
+    public static void CaptureSlowWebTour() => RunCapture(16, true);
+
+    static bool capturing;
+
+    static void RunCapture(int stretch, bool useNativeEncoder)
     {
-        if(!Application.isBatchMode && !EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo())return;
+        if(capturing || (!Application.isBatchMode && !EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()))return;
+
+        var capture=CaptureFrames(stretch,useNativeEncoder);
+        if(!useNativeEncoder || Application.isBatchMode)
+        {
+            while(capture.MoveNext()) { }
+            return;
+        }
+
+        capturing=true;
+        EditorApplication.update+=CaptureNextBatch;
+
+        void CaptureNextBatch()
+        {
+            try
+            {
+                if(capture.MoveNext())return;
+            }
+            catch(Exception error)
+            {
+                Debug.LogException(error);
+            }
+            EditorApplication.update-=CaptureNextBatch;
+            capture.Dispose();
+            capturing=false;
+        }
+    }
+
+    static IEnumerator<object> CaptureFrames(int stretch, bool useNativeEncoder)
+    {
         EditorSceneManager.OpenScene(Scene);
         var motion=Object.FindFirstObjectByType<HomeBackgroundMotion>();
         var tour=Object.FindFirstObjectByType<HomeBackgroundTour>();var view=tour.GetComponent<Camera>();
@@ -136,14 +173,23 @@ public static class HomeBackgroundTourCapture
         tour.edgeEnabled=false; // Apply once explicitly for deterministic offline renders.
         foreach(var walker in motion.walkers){walker.animator.Rebind();walker.animator.Update(0);}
         var rt=new RenderTexture(1920,1080,24){antiAliasing=4};var softened=new RenderTexture(1920,1080,0);
-        var pixels=new Texture2D(1920,1080,TextureFormat.RGB24,false);var effect=new Material(tour.edgeShader);
+        var pixels=new Texture2D(1920,1080,useNativeEncoder?TextureFormat.RGBA32:TextureFormat.RGB24,false);var effect=new Material(tour.edgeShader);
         var previous=RenderTexture.active;Directory.CreateDirectory(Output);
         bool sample=Environment.GetEnvironmentVariable("SIMUS_HOME_TOUR_SAMPLE")=="1";
-        int totalFrames=Mathf.RoundToInt(tour.duration*30);
+        int totalFrames=Mathf.RoundToInt(tour.duration*30*stretch);
+        MediaEncoder nativeEncoder=null;
         System.Diagnostics.Process encoder=null;
         System.Threading.Tasks.Task<string> encoderErrors=null;
         string ffmpeg=Environment.GetEnvironmentVariable("SIMUS_HOME_FFMPEG");
-        if(!sample && !string.IsNullOrEmpty(ffmpeg))
+        if(!sample && useNativeEncoder)
+        {
+            var track=new VideoTrackEncoderAttributes(new H264EncoderAttributes())
+            {
+                width=1920, height=1080, frameRate=new MediaRational(30), targetBitRate=1300000
+            };
+            nativeEncoder=new MediaEncoder(Path.Combine(Output,"city-background.mp4"),track);
+        }
+        else if(!sample && !string.IsNullOrEmpty(ffmpeg))
         {
             string output=Path.Combine(Output,"city-background.mp4");
             string args="-hide_banner -y -f image2pipe -vcodec mjpeg -framerate 30 -i pipe:0 -frames:v "+totalFrames+
@@ -156,25 +202,38 @@ public static class HomeBackgroundTourCapture
             view.targetTexture=rt;
             int count=sample?12:totalFrames+1;
             int start=0;
-            if(!sample && encoder==null && int.TryParse(Environment.GetEnvironmentVariable("SIMUS_HOME_TOUR_START"),out var requestedStart))start=Mathf.Clamp(requestedStart,0,totalFrames);
+            if(!sample && encoder==null && nativeEncoder==null && int.TryParse(Environment.GetEnvironmentVariable("SIMUS_HOME_TOUR_START"),out var requestedStart))start=Mathf.Clamp(requestedStart,0,totalFrames);
             for(int frame=start;frame<count;frame++)
             {
-                float seconds=sample?frame*tour.duration/12:frame/30f;
+                float seconds=sample?frame*tour.duration/12:frame/(30f*stretch);
                 motion.Evaluate(seconds);tour.Evaluate(seconds);
                 if(Margin(view)<8)throw new InvalidOperationException("Frame outside map: "+frame);
                 view.Render();Graphics.Blit(rt,softened,effect);RenderTexture.active=softened;
                 pixels.ReadPixels(new Rect(0,0,1920,1080),0,0);pixels.Apply();
-                byte[] bytes=pixels.EncodeToJPG(95);
-                string name=sample?$"sample-{frame:D2}.jpg":frame==totalFrames?"seam.jpg":$"frame-{frame:D4}.jpg";
-                if(encoder!=null && frame<totalFrames)encoder.StandardInput.BaseStream.Write(bytes,0,bytes.Length);
-                if(encoder==null || frame==0 || frame==totalFrames || frame%750==0)File.WriteAllBytes(Path.Combine(Output,name),bytes);
+                if(nativeEncoder!=null && frame<totalFrames && !nativeEncoder.AddFrame(pixels))
+                    throw new InvalidOperationException("Native encoder rejected frame "+frame);
+                bool saveFrame=(encoder==null && nativeEncoder==null) || frame==0 || frame==totalFrames || frame%750==0;
+                if(saveFrame || encoder!=null)
+                {
+                    byte[] bytes=pixels.EncodeToJPG(95);
+                    if(encoder!=null && frame<totalFrames)encoder.StandardInput.BaseStream.Write(bytes,0,bytes.Length);
+                    string name=sample?$"sample-{frame:D2}.jpg":frame==totalFrames?"seam.jpg":$"frame-{frame:D4}.jpg";
+                    if(saveFrame)File.WriteAllBytes(Path.Combine(Output,name),bytes);
+                }
                 if(frame%150==0)Debug.Log("HOME_TOUR_FRAME "+frame+" / "+totalFrames);
+                if(nativeEncoder!=null && (frame+1)%30==0)
+                {
+                    // Let the editor release its per-update graphics and encoder resources.
+                    RenderTexture.active=previous;
+                    yield return null;
+                }
             }
         }
         finally
         {
             view.targetTexture=null;RenderTexture.active=previous;rt.Release();softened.Release();
             Object.DestroyImmediate(rt);Object.DestroyImmediate(softened);Object.DestroyImmediate(pixels);Object.DestroyImmediate(effect);
+            nativeEncoder?.Dispose();
             if(encoder!=null)
             {
                 encoder.StandardInput.Close();encoder.WaitForExit();

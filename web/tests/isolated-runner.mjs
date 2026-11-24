@@ -1,12 +1,8 @@
 import { runInitialSessionIntegration } from './initial-session.integration.mjs';
-import { runV002SessionBrowser } from './v002-session-browser.mjs';
-import { runSessionBuildIntegration } from './session-build.integration.mjs';
-import { runCityV002Events } from './city-v002-events.integration.mjs';
 import { runEventBrowser } from './event-browser.mjs';
-import { runPhase2Validation } from './phase2-validation.mjs';
 import { runNpcEventIntegration } from './npc-events.integration.mjs';
 // Creates a NEW cluster. Never reads DATABASE_URL or connects to a development DB.
-import { mkdtemp, readFile, mkdir, writeFile, cp, symlink, readdir } from 'node:fs/promises';
+import { mkdtemp, readFile, mkdir, writeFile, cp } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -31,8 +27,8 @@ const bin = process.env.TEST_PG_BIN ?? (process.platform === 'win32' ? 'C:/Progr
 const pgPort = Number(process.env.TEST_PG_PORT ?? 55439);
 const port = Number(process.env.TEST_WEB_PORT ?? 3117);
 const python = process.env.TEST_PYTHON ?? (process.platform === 'win32' ? 'python' : 'python3');
-// Directory junctions need no Windows developer-mode/admin symlink privilege.
-const linkDirectory = (source, destination) => symlink(source, destination, process.platform === 'win32' ? 'junction' : 'dir');
+if (process.env.TEST_PHASE2_ONLY === '1' || process.env.TEST_NPC_ROUTES_ONLY === '1')
+  throw new Error('v002 runtime tests require the application revision before the v003 cutover.');
 // Refuse occupied ports before creating a cluster or sending any HTTP request.
 for (const testPort of [pgPort, port]) {
   await new Promise((resolve, reject) => {
@@ -79,31 +75,31 @@ for (const name of ['index.html','bridge.js','Build/test.loader.js','Build/test.
 async function fixtureBuild(map = 'test-fixture-v1', route = 'test-path-v1') {
   await writeFile(path.join(fixtureCity, 'build.json'), JSON.stringify({protocol_version:1,map_version:map,path_versions:[route],npc_motion_enabled:true}));
 }
+const demoId = '10000000-0000-0000-0000-000000000001';
+async function seedDemo(pool) {
+  await pool.query(await readFile(path.join(web, '../db/seed_demo.sql'), 'utf8'));
+  // Generic API tests copy the demo template through the v003 creation path.
+  await pool.query(`WITH plaza AS (
+    INSERT INTO simus.session_situations(session_id,code,title,body,display_order)
+    VALUES($1,'EXHIBITION_30','Fixture plaza','Fixture plaza',10000) RETURNING id
+  ) INSERT INTO simus.session_choices(session_id,situation_id,label,display_order,importance)
+    SELECT $1,id,choice,n,'NORMAL' FROM plaza CROSS JOIN (VALUES ('A',1),('B',2)) AS choices(choice,n)`, [demoId]);
+}
 await fixtureBuild();
-const v002 = path.join(env.SIMUS_WEBGL_PUBLIC_ROOT, 'city-rebuild-v002-phase1');
-await mkdir(v002);
-const phase2Build = process.env.TEST_PHASE2_ONLY === '1' && process.env.TEST_PHASE2_WEBGL_BUILD
-  ? path.resolve(process.env.TEST_PHASE2_WEBGL_BUILD) : path.join(web,'public/city-rebuild-v002-phase1');
-for (const name of ['build.json','index.html','bridge.js']) await cp(path.join(phase2Build,name),path.join(v002,name));
-await linkDirectory(path.join(phase2Build,'Build'),path.join(v002,'Build'));
-let serverCwd=web;
-if (phase2Build !== path.join(web,'public/city-rebuild-v002-phase1')) {
-  // Serve a new local Unity build without replacing the repository's public build.
-  serverCwd=path.join(root,'server'); await mkdir(path.join(serverCwd,'public'),{recursive:true});
-  for(const name of ['node_modules','.next']) await linkDirectory(path.join(web,name),path.join(serverCwd,name));
-  for(const item of await readdir(path.join(web,'public'),{withFileTypes:true})) {
-    const source = item.name==='city-rebuild-v002-phase1'?phase2Build:path.join(web,'public',item.name);
-    const destination = path.join(serverCwd,'public',item.name);
-    if (item.isDirectory()) await linkDirectory(source, destination);
-    else await cp(source, destination);
-  }
+if (env.TEST_INITIAL_SESSION_ONLY !== '1') {
+  const relative = 'unity/city-masterplan-v003-local-v1';
+  const v003 = path.join(env.SIMUS_WEBGL_PUBLIC_ROOT, relative);
+  await mkdir(path.join(v003, 'Build'), { recursive: true });
+  await cp(path.join(web, 'public', relative, 'build.json'), path.join(v003, 'build.json'));
+  for (const name of ['index.html','bridge.js','Build/test.loader.js','Build/test.framework.js','Build/test.wasm','Build/test.data'])
+    await writeFile(path.join(v003, name), 'API fixture only; not a rendered Unity build');
 }
 let server, running = false, pool, serverLog = '';
 async function stopServer() {
   if (server && server.exitCode === null) { const ended = once(server, 'exit'); server.kill(); await ended; }
 }
 async function startServer() {
-  server = spawn(process.execPath, ['node_modules/next/dist/bin/next', 'start', '--hostname', '127.0.0.1', '--port', String(port)], { cwd: serverCwd, env, windowsHide: true });
+  server = spawn(process.execPath, ['node_modules/next/dist/bin/next', 'start', '--hostname', '127.0.0.1', '--port', String(port)], { cwd: web, env, windowsHide: true });
   let log = '';
   const record = x => { log += x; serverLog += x; };
   server.stdout.on('data', record); server.stderr.on('data', record);
@@ -125,7 +121,7 @@ try {
   const admin = new pg.Client({ connectionString: `postgresql://postgres@127.0.0.1:${pgPort}/postgres` });
   await admin.connect(); await admin.query('CREATE DATABASE simus_integration'); await admin.end();
   pool = new pg.Pool({ connectionString: env.DATABASE_URL });
-  if (env.TEST_INITIAL_SESSION_ONLY === '1' || env.TEST_PHASE2_ONLY === '1') {
+  if (env.TEST_INITIAL_SESSION_ONLY === '1') {
     // Exercise the production migration planner in this NEW disposable cluster.
     // Render without migrate.main(); apply with psql only to the owned test DB.
     const sql = await command(python, ['-c',
@@ -144,6 +140,7 @@ try {
   await pool.query(await readFile(path.join(web, '../db/017_initial_session_creation.sql'), 'utf8'));
   await pool.query(await readFile(path.join(web, '../db/018_npc_event_visit.sql'), 'utf8'));
   await pool.query(await readFile(path.join(web, '../db/019_participant_npc_routes.sql'), 'utf8'));
+  await pool.query(await readFile(path.join(web, '../db/020_v003_session_profile.sql'), 'utf8'));
   await pool.query(await readFile(path.join(web, '../db/021_session_duration_seven_days.sql'), 'utf8'));
   await pool.query((await readFile(path.join(web, '../db/verify_schema.sql'), 'utf8')).replace(/^\\set.*$/gm, ''));
   // Synthetic geometry belongs only to this disposable test cluster. Production has no route default.
@@ -152,36 +149,24 @@ try {
     CREATE TRIGGER test_fixture_npc_motion BEFORE INSERT ON simus.simulation_sessions FOR EACH ROW EXECUTE FUNCTION simus.test_fixture_npc_motion()`);
   }
   await startServer();
-  if (env.TEST_PHASE2_ONLY === '1') {
-    await runPhase2Validation({ pool, env, privateKey, publicJwk, root, stopServer, startServer,
-      applyContent: sid => command(path.join(bin, process.platform === 'win32' ? 'psql.exe' : 'psql'), ['-X', '-h', '127.0.0.1', '-p', String(pgPort),
-        '-U', 'postgres', '-d', 'simus_integration', '-v', 'ON_ERROR_STOP=1', '-v', `session_id=${sid}`,
-        '-v', 'development_database=simus_integration', '-f', '../db/content/city-v002-events-phase2-draft.sql']) });
-  } else if (env.TEST_INITIAL_SESSION_ONLY === '1') {
+  if (env.TEST_INITIAL_SESSION_ONLY === '1') {
     await runInitialSessionIntegration({ pool, env, privateKey, publicJwk });
-  } else if (env.TEST_NPC_ROUTES_ONLY === '1') {
-    await pool.query(await readFile(path.join(web, '../db/seed_demo.sql'), 'utf8'));
-    const token = await new SignJWT({}).setProtectedHeader({ alg: 'RS256', kid: publicJwk.kid })
-      .setIssuer(env.ADMIN_TOKEN_ISSUER).setAudience(env.ADMIN_TOKEN_AUDIENCE)
-      .setSubject('dev-admin').setIssuedAt().setExpirationTime('30m').sign(privateKey);
-    await runCityV002Events({ pool, env, token, templateId: '10000000-0000-0000-0000-000000000001', stopServer, startServer });
   } else if (env.TEST_POPULATION_ONLY === '1') {
-    await pool.query(await readFile(path.join(web, '../db/seed_demo.sql'), 'utf8'));
+    await seedDemo(pool);
     const token = await new SignJWT({}).setProtectedHeader({ alg: 'RS256', kid: publicJwk.kid })
       .setIssuer(env.ADMIN_TOKEN_ISSUER).setAudience(env.ADMIN_TOKEN_AUDIENCE)
       .setSubject('dev-admin').setIssuedAt().setExpirationTime('30m').sign(privateKey);
-    await runPopulationIntegration({ pool, env, token, templateId: '10000000-0000-0000-0000-000000000001' });
+    await runPopulationIntegration({ pool, env, token, templateId: demoId });
   } else {
   console.log(await command(process.execPath, ['tests/session-lifecycle.integration.mjs'], env));
   await runFlow({ pool, env, stopServer, startServer });
   // Exercise the documented DRAFT demo seed through the real lifecycle API.
-  await pool.query(await readFile(path.join(web, '../db/seed_demo.sql'), 'utf8'));
+  await seedDemo(pool);
   await pool.query(await readFile(path.join(web, '../db/seed_exhibition.sql'), 'utf8'));
   const demoToken = await new SignJWT({}).setProtectedHeader({ alg: 'RS256', kid: publicJwk.kid })
     .setIssuer(env.ADMIN_TOKEN_ISSUER).setAudience(env.ADMIN_TOKEN_AUDIENCE)
     .setSubject('dev-admin').setIssuedAt().setExpirationTime('30m').sign(privateKey);
   const demoHeaders = { authorization: `Bearer ${demoToken}`, 'content-type': 'application/json' };
-  const demoId = '10000000-0000-0000-0000-000000000001';
   const demoList = await (await fetch(env.TEST_API_URL + '/api/admin/sessions', { headers: demoHeaders })).json();
   assert.equal(demoList.sessions.find(s => s.id === demoId).can_start, true);
   for (const action of ['start', 'end']) {
@@ -218,13 +203,16 @@ try {
   }
   await pool.query(await readFile(path.join(web, '../db/seed_neighborhood.sql'), 'utf8'));
   const neighborhoodId = '15000000-0000-0000-0000-000000000001';
+  await pool.query(`UPDATE simus.simulation_sessions SET npc_motion=jsonb_set(npc_motion,'{map_version}','"neighborhood-v1"') WHERE id=$1`, [neighborhoodId]);
   const neighborhoodList = await (await fetch(env.TEST_API_URL + '/api/admin/sessions', { headers: demoHeaders })).json();
-  assert.equal(neighborhoodList.sessions.find(s => s.id === neighborhoodId).can_start, true);
+  const retired = neighborhoodList.sessions.find(s => s.id === neighborhoodId);
+  assert.equal(retired.can_start, false);
+  assert.ok(retired.readiness.some(reason => reason.code === 'CITY_MAP_RETIRED'));
   const content = await pool.query(`SELECT label,alignment_dx,alignment_dy,happiness_base::float8,cleanliness_base::float8
     FROM simus.session_choices WHERE session_id=$1 ORDER BY display_order`, [neighborhoodId]);
   assert.deepEqual(content.rows.map(c => [c.alignment_dx,c.alignment_dy,c.happiness_base,c.cleanliness_base]), [[1,1,3,5],[0,0,0,0]]);
   assert.equal((await pool.query('SELECT impact_scale::float8 FROM simus.simulation_sessions WHERE id=$1', [neighborhoodId])).rows[0].impact_scale, 0.1);
-  console.log('PASS: migrated neighborhood WASTE seed/readiness and original scoring');
+  console.log('PASS: retired neighborhood round cannot start; original WASTE scoring is preserved');
   await runDepartmentIntegration({ pool, env, token: demoToken, templateId: demoId });
   await fixtureBuild('sync-test-only', 'polyline-v1');
   await runNpcPositionIntegration({ pool, env, token: demoToken, templateId: demoId });
@@ -235,12 +223,9 @@ try {
   await runResultLinksIntegration({ pool, env, token: demoToken, templateId: demoId });
   await runStageIntegration({ pool, env, token: demoToken, demoId });
   await runExhibitionContentIntegration({ pool, env, token: demoToken });
-  await runSessionBuildIntegration({ pool, env, token: demoToken, templateId: demoId });
-  await runCityV002Events({ pool, env, token: demoToken, templateId: demoId, stopServer, startServer });
   await fixtureBuild('event-test-only', 'synthetic-v1');
   await runNpcEventIntegration({ pool, env, token: demoToken, templateId: demoId, stopServer, startServer });
   await fixtureBuild();
-  await runV002SessionBrowser({ pool, env, token: demoToken, templateId: demoId, root });
   await runEventBrowser({ pool, env, token: demoToken, templateId: demoId });
   const originProbe = await fetch(env.TEST_API_URL + '/api/city-state', { headers: { Origin: 'https://different-origin.invalid' } });
   assert.equal(originProbe.status, 200);

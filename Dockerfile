@@ -10,7 +10,7 @@ FROM dependencies AS builder
 # .dockerignore only admits application source/config and public files.
 # No DATABASE_URL, JWT keys, or other runtime secrets are needed to build.
 COPY web/ ./
-RUN node scripts/unity-artifact.mjs verify
+RUN node scripts/verify-v003-webgl.mjs
 # Generated Unity JavaScript is verified by hash, not linted as app source.
 RUN npm run lint -- src next.config.ts && npm run build
 
@@ -23,9 +23,9 @@ ENV NODE_ENV=production \
 COPY --from=builder --chown=node:node /app/.next/standalone ./
 COPY --from=builder --chown=node:node /app/.next/static ./.next/static
 COPY --from=builder --chown=node:node /app/public ./public
-COPY --from=builder --chown=node:node /app/unity-build.lock.json ./unity-build.lock.json
-COPY --from=builder --chown=node:node /app/scripts/unity-artifact.mjs ./scripts/unity-artifact.mjs
-RUN node scripts/unity-artifact.mjs verify
+COPY --from=builder --chown=node:node /app/v003-webgl.lock.json ./v003-webgl.lock.json
+COPY --from=builder --chown=node:node /app/scripts/verify-v003-webgl.mjs ./scripts/verify-v003-webgl.mjs
+RUN node scripts/verify-v003-webgl.mjs
 USER node
 EXPOSE 3000
 CMD ["node", "server.js"]

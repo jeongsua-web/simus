@@ -22,6 +22,7 @@ type State = {
 type Occupancy = { inside: boolean; entry_seq: number; consumed_entry_seq: number };
 type Member = State & {
   participant_id: string; npc_id: string; npc_motion: Npc["motion"];
+  profile_completed_at: Date | null;
   active: Event | null;
 };
 type Situation = {
@@ -67,7 +68,7 @@ async function readWorld(db: PoolClient, session: Session, participant?: string)
     SELECT session_id,participant_id,joined_at,joined_at,joined_at FROM simus.participant_sessions
     WHERE session_id=$1 AND ($2::uuid IS NULL OR participant_id=$2)
     ON CONFLICT DO NOTHING`, [session.id, participant ?? null]);
-  const members = await db.query<Member>(`SELECT p.participant_id,p.npc_id,p.npc_motion,st.*,
+  const members = await db.query<Member>(`SELECT p.participant_id,p.npc_id,p.npc_motion,p.profile_completed_at,st.*,
     CASE WHEN e.id IS NULL THEN NULL ELSE to_jsonb(e) || jsonb_build_object('entry_seq',e.entry_seq::text) END AS active
     FROM simus.participant_sessions p JOIN simus.npc_event_states st USING(session_id,participant_id)
     LEFT JOIN simus.npc_events e ON e.session_id=p.session_id
@@ -99,9 +100,17 @@ function transitionFor(world: World, p: Member): Transition | null {
   if (!isOpen(world.session)) return null;
   const now = timestamp(world.session.now);
   const v003 = p.npc_motion.map_version === V003_MAP_VERSION;
-  // This authored local route starts only through the explicit start command.
-  if (v003 && !p.guidance_point) return null;
   const fresh = world.situations.filter(t => !world.answered.get(p.participant_id)?.has(t.id));
+  if (v003 && !p.guidance_point) {
+    if (process.env.SIMUS_V003_LOCAL_TEST === "1" || !p.profile_completed_at || p.resume_motion ||
+      now < timestamp(p.profile_completed_at) + 3000 || !fresh.some(t => t.code === "EXHIBITION_30" && t.event_location)) return null;
+    const route = localRoute();
+    return {
+      participant_id: p.participant_id, guidance_point: route.interaction.point,
+      guidance_origin: route.points[0], guidance_motion: p.npc_motion,
+      location_occupancy: p.location_occupancy, location_evaluated_at: world.session.now.toISOString(), overdue_since: null,
+    };
+  }
   const places = new Map<string, EventLocation>();
   for (const situation of world.situations) {
     if (v003 && situation.code !== "EXHIBITION_30") continue;

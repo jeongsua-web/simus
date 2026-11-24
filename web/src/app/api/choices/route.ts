@@ -75,7 +75,8 @@ export async function POST(request: NextRequest) {
       ) INSERT INTO simus.choice_record_region_effects(choice_record_id,session_id,region_id,delta_requested,delta_applied)
         SELECT $4,$1,o.region_id,o.delta,u.pollution-o.pollution FROM old o JOIN updated u ON u.region_id=o.region_id`, [sid, tid, cid, record.rows[0].id]);
       await db.query("UPDATE simus.participants SET last_seen_at=clock_timestamp() WHERE id=$1", [pid]);
-      if (session.rows[0].npc_motion?.map_version !== V003_MAP_VERSION) await completeEvent(db, sid, pid, eid);
+      if (session.rows[0].npc_motion?.map_version !== V003_MAP_VERSION || process.env.SIMUS_V003_LOCAL_TEST !== "1")
+        await completeEvent(db, sid, pid, eid);
       // Roll back if admission closed while the transaction was processing.
       await requireOpen(db, sid);
       return { record_id: record.rows[0].id, state_version: record.rows[0].state_version, replayed: false, ...await choiceOutcome(db, sid, pid, eid) };

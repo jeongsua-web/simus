@@ -42,7 +42,7 @@ export function useParticipation() {
     setPending(value);
   }
 
-  const loadState = useCallback(async (initial = false) => {
+  const loadState = useCallback(async (initial = false, restart = false) => {
     if (loadingState.current) return;
     loadingState.current = true;
     let finish!: () => void;
@@ -53,10 +53,14 @@ export function useParticipation() {
     try {
       if (initial) {
         const saved = readPending(); pendingRequest.current = saved; setPending(saved); storageReady.current = true;
-        const participantResponse = await fetch("/api/participants", { method: "POST", signal });
+        const participantResponse = await fetch(restart ? "/api/participants?restart=1" : "/api/participants", { method: "POST", signal });
         if (!participantResponse.ok) {
           if (participantResponse.status === 401) setAuthExpired(true);
           throw new Error(await errorMessage(participantResponse, "참여 인증을 준비하지 못했습니다."));
+        }
+        if (participantResponse.status === 201) {
+          if (saved) rememberPending(null);
+          activeSession.current = null;
         }
       }
       const [currentResponse, meResponse] = await Promise.all([
@@ -184,8 +188,7 @@ export function useParticipation() {
       if (response.status === 401) {
         setAuthExpired(true);
         setLoadError("참여 인증이 만료되었습니다.");
-      }
-      if (result.error?.code === "SESSION_CLOSED") {
+      } else if (result.error?.code === "SESSION_CLOSED") {
         setSession(previous => previous?.id === payload.session_id ? { ...previous, accepting_choices: false } : previous);
         rememberPending(null);
       } else if (response.status < 500 && ![408, 429].includes(response.status)) {
@@ -200,6 +203,13 @@ export function useParticipation() {
     } finally { busy.current = false; setSubmitting(null); }
   }
 
+  async function retryLoad(restart = false) {
+    await loadFinished.current;
+    if (!mounted.current || loadingState.current) return;
+    setLoading(true);
+    await loadState(true, restart);
+  }
+
   return {
     session, eventState, responseCount, latestSession, history, loading, loadError, authExpired, selected, answered, messages,
     submitting, pending, profile, joined, departments,
@@ -209,6 +219,6 @@ export function useParticipation() {
     submit, retryPending: () => {
       const saved = pendingRequest.current;
       if (saved) return submit({ id: saved.situation_id, title: "", body: "", choices: [] });
-    }, retryLoad: () => { setLoading(true); void loadState(true); },
+    }, retryLoad: () => void retryLoad(), restart: () => void retryLoad(true),
   };
 }

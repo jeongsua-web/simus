@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
-import { npcPosition } from '../src/app/participate/npc-motion.ts';
+import { npcPosition } from '../src/app/participate/lib/npc-motion.ts';
 
 // Coordinates belong only to this disposable integration fixture, never exhibition data.
 export async function runNpcEventIntegration({ pool, env, token, templateId, stopServer, startServer }) {

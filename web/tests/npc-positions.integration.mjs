@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { randomUUID } from 'node:crypto';
-import { npcPosition } from '../src/app/participate/npc-motion.ts';
+import { npcPosition } from '../src/app/participate/lib/npc-motion.ts';
 
 export async function runNpcPositionIntegration({ pool, env, token, templateId }) {
   // Exact centerline parity fixtures: corners, closing segment, clamp, zero speed,
@@ -24,8 +24,9 @@ export async function runNpcPositionIntegration({ pool, env, token, templateId }
   async function create() {
     const r = await call('/api/admin/sessions', { method: 'POST', admin: true, data: { template_session_id: templateId, name: 'NPC position test', duration_seconds: 300, impact_scale: 0.1, request_key: randomUUID() } });
     assert.equal(r.status, 201);
-    // Remove the isolated runner's fixture only; production sessions start with NULL.
+    // This test supplies a disposable route unrelated to the v003 plaza.
     await pool.query('UPDATE simus.simulation_sessions SET npc_motion=NULL WHERE id=$1', [r.body.session_id]);
+    await pool.query('UPDATE simus.session_situations SET event_location=NULL WHERE session_id=$1', [r.body.session_id]);
     return r.body.session_id;
   }
   const sid = await create(), adminPath = `/api/admin/sessions/${sid}/npc-motion`, positions = `/api/sessions/${sid}/npc-positions`;
