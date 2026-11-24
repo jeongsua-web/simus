@@ -36,6 +36,8 @@ namespace Simus
         [Min(1f)] public float followSize = 18f;
         public float followPitch = 28.85f;
         public float followYaw = -131.64f;
+        [Tooltip("Optional building cutaway. Disabled by default to keep city facades opaque.")]
+        public bool enableBuildingTransparency;
         public Shader occlusionShader;
         public Transform occlusionRoot;
         [Tooltip("Scene opt-in: smoothly reveal road context through tall nearby buildings.")]
@@ -72,7 +74,7 @@ namespace Simus
 
         private void Start()
         {
-            if (occlusionShader != null)
+            if (enableBuildingTransparency && occlusionShader != null)
             {
                 reveal = gameObject.AddComponent<NpcOcclusionReveal>();
                 reveal.Initialize(occlusionShader, occlusionRoot);
