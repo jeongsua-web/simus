@@ -48,7 +48,11 @@ const posA=npcPosition(resumed.npcs[0],Date.parse(resumed.motion_time)),posB=npc
 evidence.resumed_server_motion_distance_m=Math.hypot(...posA.map((v,i)=>v-posB[i]));assert.ok(evidence.resumed_server_motion_distance_m>1);
 assert.ok(posB[2]<posA[2],'Return moves toward the starting plaza side');
 assert.equal((await call(`/api/sessions/${sid}/event/confirm`,{event_id:active.event.id})).status,200);
-assert.equal((await call(`/api/sessions/${sid}/event/start`,{request_key:randomUUID()})).body.error.code,'EVENTS_EXHAUSTED');
+const followUp=await call(`/api/sessions/${sid}/event/start`,{request_key:randomUUID()});
+assert.equal(followUp.status,200,JSON.stringify(followUp));
+assert.equal(followUp.body.phase,'ACTIVE');
+assert.equal(followUp.body.event.situation.code,'EXHIBITION_01');
+assert.equal(followUp.body.event.trigger_kind,'MANUAL');
 Object.assign(evidence,{idle,moving,active,stopped,still,choice:choice.body,result,resumed,completed_at:new Date().toISOString()});
 if(process.argv[2]){
  const local=JSON.parse(await readFile(process.argv[2],'utf8'));assert.equal(local.session_id,sid);
@@ -61,4 +65,4 @@ if(process.argv[2]){
  }finally{await pool.end();}
 }
 const out=process.env.V003_QA_EVIDENCE||'/tmp/simus-v003-api-evidence.json';await writeFile(out,JSON.stringify(evidence,null,2));
-console.log('PASS v003 actual API: manual start, real timed arrival, stationary ACTIVE/RESULT, choice replay, applied city values, confirm/resume, exhausted. Evidence:',out,'Arrival ms:',evidence.arrival_observed_ms);
+console.log('PASS v003 actual API: manual start, real timed arrival, stationary ACTIVE/RESULT, choice replay, applied city values, confirm/resume and follow-up. Evidence:',out,'Arrival ms:',evidence.arrival_observed_ms);

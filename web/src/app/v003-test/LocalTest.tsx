@@ -9,7 +9,10 @@ import styles from "./local.module.css";
 
 type State = {
   phase: "WAITING" | "GUIDING" | "ACTIVE" | "RESULT" | "CLOSED";
-  event: { id: string; situation: Situation } | null;
+  can_start: boolean;
+  plaza_completed?: boolean;
+  situations_remaining?: number;
+  event: { id: string; trigger_kind: string; situation: Situation } | null;
   outcome?: { city: { happiness: number; safety: number; cleanliness: number } } | null
 };
 type Pending = { url: string; body: Record<string, string> };
@@ -32,7 +35,6 @@ export default function LocalTest() {
   const [busy, setBusy] = useState(false);
   const [pending, setPending] = useState<Pending | null>(null);
   const [choice, setChoice] = useState("");
-  const [completed, setCompleted] = useState(false);
   const lock = useRef(false);
   const polling = useRef(false);
   const generation = useRef(0);
@@ -60,10 +62,6 @@ export default function LocalTest() {
           else localStorage.removeItem(storageKey);
         }
         const entry = await request(`/api/sessions/${current.session.id}/profile`);
-        if (entry.joined) {
-          const own = await request(`/api/sessions/${current.session.id}/responses`);
-          if (alive) setCompleted(own.responses.length > 0);
-        }
         if (!alive) return;
         setSession(current.session); setProfile(entry.profile); setDepartments(entry.departments);
       } catch (e) { if (alive) setError((e as Error).message); }
@@ -86,7 +84,6 @@ export default function LocalTest() {
     try {
       localStorage.setItem(storageKey, JSON.stringify(value)); setPending(value);
       await request(value.url, value.body);
-      if (value.url.endsWith("/event/confirm")) setCompleted(true);
       localStorage.removeItem(storageKey); setPending(null); setChoice(""); setError("");
       setState(await request(`/api/sessions/${session.id}/event`));
     } catch (e) { setError((e as Error).message); }
@@ -97,20 +94,28 @@ export default function LocalTest() {
   if (!profile) return <ProfileEntry session={session} departments={departments} onSaved={() => { }} onEntered={setProfile} onStale={() => location.reload()} />;
   const active = state?.phase === "ACTIVE" ? state.event : null;
   const result = state?.phase === "RESULT";
+  const completed = state?.situations_remaining === 0 && !result;
   return <main className={styles.page}>
-    <header><h1>SIM:US · 광장 로컬 테스트</h1><p>{profile.nickname} · EXHIBITION_30 · 전시 승인 전</p></header>
-    <div className={styles.city}><UnityCity sessionId={session.id} onReady={setReady} /></div>
-    <section className={styles.panel} aria-label="광장 상황 플레이">
-      <p role="status">{state?.phase === "GUIDING" ? "광장의 상자를 향해 이동 중이에요. 내 캐릭터를 따라가 보세요." : state?.phase === "ACTIVE" ? "광장에 도착했어요. 캐릭터가 멈춰서 선택을 기다려요." : result ? "선택이 도시에 반영되었어요. 확인하면 다시 걸어요." : "내 캐릭터를 따라 도시를 둘러보세요."}</p>
+    <header><h1>SIM:US · 상황 로컬 테스트</h1><p>{profile.nickname}</p></header>
+    <div className={styles.city}><UnityCity sessionId={session.id} onReady={setReady} eventCode={state?.event?.situation.code} /></div>
+    <section className={styles.panel} aria-label="상황 플레이">
+      <p role="status">{state?.phase === "CLOSED" ? "이벤트 접수가 마감되었습니다"
+        : state?.phase === "GUIDING" ? "광장의 상자를 향해 이동 중이에요. 내 캐릭터를 따라가 보세요."
+        : active?.trigger_kind === "LOCATION" ? "광장에 도착했어요. 캐릭터가 멈춰서 선택을 기다려요."
+        : active ? "새로운 상황이 발생했어요."
+        : result ? "선택이 도시에 반영되었어요. 확인하면 이동을 재개해요."
+        : completed ? "이번 회차의 모든 상황에 응답했어요"
+        : state?.plaza_completed ? "다음 상황에 응답할 수 있어요" : "내 캐릭터를 따라 도시를 둘러보세요."}</p>
       {error && <p role="alert">{error}</p>}
       {pending && <button disabled={busy} onClick={() => void command(pending)}>같은 요청으로 다시 확인</button>}
-      <button disabled={!ready || busy || !!pending || completed || state?.phase !== "WAITING" || !!error} onClick={() => void command({ url: `/api/sessions/${session.id}/event/start`, body: { request_key: crypto.randomUUID() } })}>새로운 상황 만나기</button>
-      {completed && state?.phase === "WAITING" && <p>대표 상황 플레이를 마쳤어요. 캐릭터가 출발점으로 돌아가요.</p>}
+      {!completed && state?.phase === "WAITING" && <button disabled={!ready || busy || !!pending || !state.can_start || !!error}
+        onClick={() => void command({ url: `/api/sessions/${session.id}/event/start`, body: { request_key: crypto.randomUUID() } })}>
+        {state.plaza_completed ? "다음 상황" : "새로운 상황 만나기"}
+      </button>}
       {!ready && <p>도시 연결을 마치면 시작할 수 있어요.</p>}
       {active && <SituationCard situation={active.situation} selectedChoiceId={choice} done={false} acceptingChoices={session.accepting_choices} submitting={busy} submissionInProgress={busy} retrying={false} hasPendingSubmission={!!pending} message="" onSelect={setChoice} onSubmit={() => void command({ url: "/api/choices", body: { session_id: session.id, event_id: active.id, situation_id: active.situation.id, choice_id: choice, request_key: crypto.randomUUID() } })} />}
       {result && <section aria-label="이 선택의 도시 변화"><h2>이 선택이 반영된 시점의 변화</h2>{state.outcome ? <ul>{([['happiness', '행복'], ['safety', '치안'], ['cleanliness', '청결']] as const).map(([key, label]) => <li key={key}>{label}: {state.outcome!.city[key] > 0 ? "+" : ""}{state.outcome!.city[key]}</li>)}</ul> : <p>도시 변화 정보를 확인하고 있어요.</p>}<button disabled={busy || !!pending} onClick={() => void command({ url: `/api/sessions/${session.id}/event/confirm`, body: { event_id: state.event!.id } })}>확인하고 이동 재개</button></section>}
       <button disabled={busy} onClick={() => void refresh(session.id)}>상태 새로고침</button>
-      <p>대표 상황은 시민당 한 번 플레이합니다. 재시험은 새 브라우저 프로필 또는 새 격리 회차를 사용하세요.</p>
     </section>
   </main>;
 }

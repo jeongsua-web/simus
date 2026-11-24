@@ -11,6 +11,8 @@ namespace Simus.City
     {
         public string Id;
         public string CharacterId;
+        public string EventRole;
+        public bool Hidden;
         public string GlassesId;
         public double EpochMs;
         public long Revision;

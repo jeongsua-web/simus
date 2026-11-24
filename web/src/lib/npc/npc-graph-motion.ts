@@ -1,8 +1,9 @@
 import { npcPosition, type Npc } from '@/app/participate/lib/npc-motion';
 import { isV002MapVersion, routeBetween, pathLength, distance } from "../city/city-v002-graph.mjs";
+import { V003_MAP_VERSION } from "../city/city-builds";
 
 type Motion = Npc['motion'];
-export type ReturnMotion = Motion & { rejoin_after_ms?: number; rejoin_motion?: Motion };
+export type ReturnMotion = Motion & { rejoin_after_ms?: number; rejoin_motion?: Motion; test_return?: true };
 export type GraphState = {
   motion_epoch: Date | string; paused_ms: string | number;
   resume_motion: ReturnMotion | null; guidance_motion?: Motion | null;
@@ -23,7 +24,9 @@ export function guidanceMotion(state: Pick<GraphState, 'guidance_motion' | 'guid
   const points = state.guidance_motion?.points ?? (isV002MapVersion(original.map_version)
     ? routeBetween(state.guidance_origin!, state.guidance_point!, original.map_version)
     : [state.guidance_origin!, state.guidance_point!]);
-  return { ...original, points: points.length > 1 ? points : [points[0], points[0]], loop: false };
+  const speed_mps = original.map_version === V003_MAP_VERSION
+    ? state.guidance_motion?.speed_mps ?? original.speed_mps : original.speed_mps;
+  return { ...original, points: points.length > 1 ? points : [points[0], points[0]], speed_mps, loop: false };
 }
 export function guidancePosition(state: GraphState, original: Motion, at: number) {
   return npcPosition({ npc_id: '', epoch: new Date(state.guidance_started_at!).toISOString(), motion: guidanceMotion(state, original) }, at)!;

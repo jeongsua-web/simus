@@ -1,21 +1,22 @@
 import type { PoolClient } from "pg";
 import { randomInt } from "node:crypto";
-import { ApiError, transaction } from "../api";
+import { ApiError, requireOpen, transaction } from "../api";
 import { isV002MapVersion, routeBetween, pathLength } from "../city/city-v002-graph.mjs";
 import { guidanceMotion, guidancePosition, resumedNpc, returnMotion, type ReturnMotion } from "./npc-graph-motion";
-import { npcPosition, type Npc } from "@/app/participate/lib/npc-motion";
+import { NPC_SPEED_MULTIPLIERS, npcPosition, type Npc, type NpcSpeedMultiplier } from "@/app/participate/lib/npc-motion";
 import { normalizeEventLocation, type EventLocation } from "../events/event-locations";
 import { playableLocation } from "../city/city-v002-event-mapping.mjs";
 import { scanPlace } from "./npc-place-trajectory";
 import { V003_MAP_VERSION, V003_PATH_VERSION } from "../city/city-builds";
 import { localRoute } from "../routes/v003-route";
 import { choiceOutcome } from "../routes/v003-local-event";
+import { auditedEventRoute, eventArrival, eventReturn, eventTestsEnabled, planEventWalk, type EventWalk } from "../routes/v003-event-routes";
 type Point = number[];
 type State = {
   waiting_since: Date; motion_epoch: Date; paused_ms: string;
   resume_motion: ReturnMotion | null; guidance_point: Point | null;
   guidance_origin: Point | null; guidance_started_at: Date | null;
-  guidance_motion?: Npc["motion"] | null;
+  guidance_motion?: (Npc["motion"] & Partial<EventWalk>) | null;
   location_occupancy: Record<string, Occupancy>;
   location_evaluated_at: Date | null; overdue_since: Date | null;
 };
@@ -32,7 +33,7 @@ type Situation = {
 };
 type Event = {
   id: string; situation_id: string; started_at: Date;
-  trigger_kind: "LOCATION" | "DEADLINE";
+  trigger_kind: "LOCATION" | "DEADLINE" | "MANUAL";
   place_id?: string | null; entry_seq?: string | null;
 };
 type Session = {
@@ -79,6 +80,7 @@ async function readWorld(db: PoolClient, session: Session, participant?: string)
   for (const member of members.rows) {
     if (member.resume_motion) member.npc_motion = { ...member.npc_motion, speed_mps: member.resume_motion.speed_mps };
   }
+  if (isOpen(session)) await resumeParkedV003Npcs(db, session, members.rows);
   const situations = await db.query<Situation>(`SELECT t.*,
     COALESCE((SELECT jsonb_agg(jsonb_build_object('id',c.id,'label',c.label,
       'display_order',c.display_order) ORDER BY c.display_order,c.id)
@@ -96,11 +98,55 @@ async function readWorld(db: PoolClient, session: Session, participant?: string)
   return { session, members: members.rows, situations: situations.rows.filter(t => t.choices.length), answered };
 }
 
+function v003PatrolMotion(returnRoute: Npc["motion"]): Npc["motion"] {
+  // Reverse the verified return segments. The loop's closing leg reaches the original stop.
+  const points = returnRoute.points;
+  return { ...returnRoute, points: [...points, ...points.slice(1, -1).reverse()], loop: true };
+}
+
+async function resumeParkedV003Npcs(db: PoolClient, session: Session, members: Member[]) {
+  const now = timestamp(session.now);
+  const updates = members.flatMap(member => {
+    const motion = member.resume_motion;
+    if (member.active || member.guidance_point || !motion || motion.loop || motion.test_return || motion.speed_mps <= 0 ||
+      motion.map_version !== V003_MAP_VERSION || motion.path_version !== V003_PATH_VERSION) return [];
+    // Keep progress along an unfinished return, or restart from its endpoint if already parked.
+    const returnTime = Math.ceil(pathLength(motion.points) / motion.speed_mps * 1000);
+    const epoch = Math.max(timestamp(member.motion_epoch) + Number(member.paused_ms), now - returnTime);
+    member.motion_epoch = new Date(epoch);
+    member.paused_ms = "0";
+    member.resume_motion = v003PatrolMotion(motion);
+    return [{
+      participant_id: member.participant_id,
+      motion_epoch: member.motion_epoch,
+      resume_motion: member.resume_motion
+    }];
+  });
+  if (!updates.length) return;
+  await db.query(`UPDATE simus.npc_event_states st SET resume_motion=r.resume_motion,
+    motion_epoch=r.motion_epoch,paused_ms=0,motion_revision=motion_revision+1
+    FROM jsonb_to_recordset($2::jsonb) AS r(participant_id uuid,motion_epoch timestamptz,resume_motion jsonb)
+    WHERE st.session_id=$1 AND st.participant_id=r.participant_id`, [session.id, JSON.stringify(updates)]);
+}
+
 function transitionFor(world: World, p: Member): Transition | null {
   if (!isOpen(world.session)) return null;
   const now = timestamp(world.session.now);
   const v003 = p.npc_motion.map_version === V003_MAP_VERSION;
   if (v003 && !p.guidance_point) return null;
+  if (v003 && p.guidance_motion?.situation_id) {
+    if (p.active || !p.guidance_started_at) return null;
+    const walk = p.guidance_motion as EventWalk;
+    const epoch = timestamp(p.guidance_started_at);
+    const arrival = eventArrival(walk, epoch, timestamp(p.location_evaluated_at ?? p.guidance_started_at), now);
+    return {
+      participant_id: p.participant_id, location_occupancy: p.location_occupancy,
+      location_evaluated_at: new Date(arrival ?? now).toISOString(), overdue_since: null,
+      ...(arrival === null ? {} : {
+        situation_id: walk.situation_id, trigger_kind: "LOCATION", started_at: new Date(arrival).toISOString(),
+      }),
+    };
+  }
   const fresh = world.situations.filter(t => !world.answered.get(p.participant_id)?.has(t.id));
   const places = new Map<string, EventLocation>();
   for (const situation of world.situations) {
@@ -250,7 +296,13 @@ async function applyTransitions(db: PoolClient, world: World) {
   }
 }
 
-export async function advanceEvent(db: PoolClient, sid: string, pid: string) {
+type EventOptions = { requestedSpeed?: NpcSpeedMultiplier; startRequestKey?: string; situationId?: string };
+
+export async function advanceEvent(db: PoolClient, sid: string, pid: string, options: EventOptions = {}) {
+  const { requestedSpeed, startRequestKey, situationId } = options;
+  const testPickerEnabled = eventTestsEnabled();
+  if (situationId && !testPickerEnabled)
+    throw new ApiError(403, "EVENT_PICKER_DISABLED", "상황 직접 선택은 테스트 모드에서 사용할 수 있습니다.");
   const session = (await db.query<Session>(`SELECT *,clock_timestamp() AS now
     FROM simus.simulation_sessions WHERE id=$1`, [sid])).rows[0];
   const world = await readWorld(db, session, pid);
@@ -263,22 +315,94 @@ export async function advanceEvent(db: PoolClient, sid: string, pid: string) {
   const outcome = p.active && p.npc_motion.map_version === V003_MAP_VERSION
     ? await choiceOutcome(db, sid, pid, p.active.id) : null;
   const phase = outcome ? "RESULT" : !open ? "CLOSED" : event ? "ACTIVE" : p.guidance_point ? "GUIDING" : "WAITING";
-  const canStart = phase === "WAITING" && Boolean(p.profile_completed_at) && !p.active && !p.resume_motion &&
-    p.npc_motion.map_version === V003_MAP_VERSION && p.npc_motion.path_version === V003_PATH_VERSION &&
-    world.situations.some(t => {
-      if (t.code !== "EXHIBITION_30" || world.answered.get(pid)?.has(t.id)) return false;
-      const location = t.event_location;
-      const expected = localRoute().event_location;
-      return location?.map_version === expected.map_version && location.place_id === expected.place_id &&
-        location.radius_m === expected.radius_m && JSON.stringify(location.point) === JSON.stringify(expected.point);
-    });
-  return {
+  const v003 = p.npc_motion.map_version === V003_MAP_VERSION;
+  let speedMultiplier: NpcSpeedMultiplier | undefined;
+  if (phase === "GUIDING" && v003 && p.npc_motion.path_version === V003_PATH_VERSION && p.guidance_started_at) {
+    const motion = guidanceMotion(p, p.npc_motion);
+    const baseSpeed = localRoute().speed_mps;
+    speedMultiplier = NPC_SPEED_MULTIPLIERS.find(value => baseSpeed * value === motion.speed_mps);
+    if (requestedSpeed !== undefined && requestedSpeed !== speedMultiplier && motion.speed_mps > 0) {
+      const speed = baseSpeed * requestedSpeed;
+      const now = timestamp(session.now);
+      const elapsed = Math.max(0, now - timestamp(p.guidance_started_at));
+      // Keep the same distance along the route and scan future arrivals from the current cursor.
+      const epoch = new Date(now - Math.round(elapsed * motion.speed_mps / speed));
+      await db.query(`UPDATE simus.npc_event_states SET guidance_started_at=$3, guidance_motion=$4,
+        motion_revision=motion_revision+1 WHERE session_id=$1 AND participant_id=$2`,
+        [sid, pid, epoch, JSON.stringify({ ...(p.guidance_motion ?? motion), speed_mps: speed })]);
+      speedMultiplier = requestedSpeed;
+    }
+  }
+  const plaza = v003 ? world.situations.find(t => t.code === "EXHIBITION_30") : undefined;
+  const answered = world.answered.get(pid);
+  const plazaCompleted = Boolean(plaza && answered?.has(plaza.id));
+  const followUps = v003 ? world.situations.filter(t =>
+    /^EXHIBITION_(0[1-9]|[12][0-9])$/.test(t.code) && t.event_location === null && !answered?.has(t.id)) : [];
+  const remaining = followUps.length + (plaza && !plazaCompleted ? 1 : 0);
+  const route = localRoute();
+  const location = plaza?.event_location;
+  const expected = route.event_location;
+  const plazaReady = location?.map_version === expected.map_version &&
+    location.place_id === expected.place_id && location.radius_m === expected.radius_m &&
+    JSON.stringify(location.point) === JSON.stringify(expected.point);
+  const waitingToStart = v003 && p.npc_motion.path_version === V003_PATH_VERSION &&
+    phase === "WAITING" && Boolean(p.profile_completed_at);
+  const nextSituation = plazaCompleted ? followUps[0] : plazaReady ? plaza : undefined;
+  const testSituations = testPickerEnabled && waitingToStart
+    ? [...followUps, ...(plaza && plazaReady && !plazaCompleted ? [plaza] : [])]
+    : [];
+  const state = {
     ...(outcome ? { outcome } : {}),
-    phase, can_start: canStart,
+    ...(v003 ? { plaza_completed: plazaCompleted, situations_remaining: remaining } : {}),
+    ...(testSituations.length ? {
+      test_situations: testSituations.map(({ id, code, title }) => ({ id, code, title }))
+    } : {}),
+    ...(speedMultiplier === undefined ? {} : { speed_multiplier: speedMultiplier }),
+    phase, can_start: waitingToStart && Boolean(nextSituation),
     server_time: new Date(session.now).toISOString(), waiting_since: new Date(p.waiting_since).toISOString(),
     deadline_at: null, guidance_at: p.npc_motion.map_version === V003_MAP_VERSION ? null : new Date(timestamp(p.waiting_since) + 60000).toISOString(), event: outcome && p.active && situation ? { ...p.active, situation } : event,
     overdue_since: p.overdue_since?.toISOString() ?? null, overdue: p.overdue_since !== null,
   };
+  if (!startRequestKey) return state;
+
+  const request = await db.query(`INSERT INTO simus.npc_event_start_requests(session_id,participant_id,request_key)
+    VALUES($1,$2,$3) ON CONFLICT DO NOTHING RETURNING request_key`, [sid, pid, startRequestKey]);
+  if (!request.rowCount) return state;
+  const picked = situationId ? testSituations.find(t => t.id === situationId) : nextSituation;
+  if (situationId && !picked)
+    throw new ApiError(409, "TEST_SITUATION_UNAVAILABLE", "지금 시작할 수 있는 미응답 상황을 선택해 주세요.");
+  if (phase !== "WAITING") return state;
+  if (!waitingToStart || !picked) {
+    if (plazaCompleted && !remaining)
+      throw new ApiError(409, "EVENTS_EXHAUSTED", "이번 회차의 모든 상황에 응답했습니다.");
+    throw new ApiError(409, "EVENT_NOT_READY", "시민 등록과 상황 준비를 확인해주세요.");
+  }
+  const pickedRoute = situationId ? auditedEventRoute(picked.code) : undefined;
+  if (situationId && picked !== plaza && !pickedRoute && !["EXHIBITION_12", "EXHIBITION_26"].includes(picked.code))
+    throw new ApiError(409, "EVENT_ROUTE_UNAVAILABLE", "이 상황의 이동 경로가 현재 도시와 일치하지 않습니다.");
+  if (picked === plaza || pickedRoute) {
+    const now = timestamp(session.now);
+    const current = p.resume_motion ? resumedNpc(p, p.npc_motion, now) : {
+      npc_id: p.npc_id, epoch: session.now.toISOString(), motion: p.npc_motion,
+    };
+    const walked = planEventWalk(current, now, picked, pickedRoute ?? { kind: "place", points: route.points });
+    const guidance = pickedRoute ? walked : {
+      map_version: V003_MAP_VERSION, path_version: V003_PATH_VERSION, points: walked.points, speed_mps: route.speed_mps, loop: false,
+    };
+    await db.query(`UPDATE simus.npc_event_states SET guidance_origin=$3,guidance_point=$4,
+      guidance_motion=$5,guidance_started_at=clock_timestamp(),location_evaluated_at=clock_timestamp(),
+      motion_revision=motion_revision+1 WHERE session_id=$1 AND participant_id=$2`,
+      [sid, pid, JSON.stringify(guidance.points[0]), JSON.stringify(guidance.points[guidance.points.length - 1]), JSON.stringify(guidance)]);
+  } else {
+    // Manual situations start at the participant's current pose.
+    await db.query(`WITH started AS (
+      INSERT INTO simus.npc_events(session_id,participant_id,situation_id,trigger_kind)
+      VALUES($1,$2,$3,'MANUAL') RETURNING participant_id
+    ) UPDATE simus.npc_event_states SET motion_revision=motion_revision+1
+      WHERE session_id=$1 AND participant_id IN (SELECT participant_id FROM started)`, [sid, pid, picked.id]);
+  }
+  await requireOpen(db, sid);
+  return advanceEvent(db, sid, pid);
 }
 
 // Position snapshots reconcile the same authoritative event state before rendering,
@@ -306,8 +430,12 @@ export async function completeEvent(db: PoolClient, sid: string, pid: string, ei
   if (row.guidance_point) {
     const original = { ...row.npc_motion, speed_mps: row.resume_motion?.speed_mps ?? row.npc_motion.speed_mps };
     const point = guidancePosition(row, original, timestamp(row.started_at));
-    const route = original.map_version === V003_MAP_VERSION
-      ? { ...original, points: [point, ...localRoute().resume_points.slice(1)], speed_mps: localRoute().speed_mps, loop: false }
+    const route = row.guidance_motion?.situation_id
+      ? eventReturn(row.guidance_motion as EventWalk, row.guidance_started_at!, timestamp(row.started_at))
+      : original.map_version === V003_MAP_VERSION
+      ? v003PatrolMotion({
+        ...original, points: [point, ...localRoute().resume_points.slice(1)], speed_mps: localRoute().speed_mps,
+      })
       : returnMotion(original, point);
     await db.query(`UPDATE simus.npc_event_states SET resume_motion=$3,motion_epoch=clock_timestamp(),paused_ms=0
       WHERE session_id=$1 AND participant_id=$2`, [sid, pid, JSON.stringify(route)]);

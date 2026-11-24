@@ -129,6 +129,38 @@ public static class CityMasterplanV003LocalBuild
         return template;
     }
 
+    private static GameObject CreateEncounterTemplate(string assetFolder, string modelName, string controllerName, float height)
+    {
+        var folder = "Assets/SIMUS/Art/characters/" + assetFolder;
+        var modelPath = folder + "/models/" + modelName + ".fbx";
+        var prefab = AssetDatabase.LoadAssetAtPath<GameObject>(modelPath);
+        var controller = AssetDatabase.LoadAssetAtPath<RuntimeAnimatorController>(folder + "/animations/" + controllerName + ".controller");
+        if (prefab == null || controller == null) throw new InvalidOperationException("Missing encounter model or controller for " + assetFolder);
+        var root = new GameObject("SIMUS " + assetFolder);
+        var model = (GameObject)PrefabUtility.InstantiatePrefab(prefab);
+        model.transform.SetParent(root.transform, false);
+        var renderers = model.GetComponentsInChildren<Renderer>();
+        var bounds = renderers[0].bounds;
+        foreach (var renderer in renderers) bounds.Encapsulate(renderer.bounds);
+        model.transform.localScale *= height / bounds.size.y;
+        bounds = renderers[0].bounds;
+        foreach (var renderer in renderers) bounds.Encapsulate(renderer.bounds);
+        model.transform.position -= new Vector3(bounds.center.x, bounds.min.y, bounds.center.z);
+        var animator = model.GetComponent<Animator>();
+        if (animator == null) animator = model.AddComponent<Animator>();
+        if (animator.avatar == null) animator.avatar = AssetDatabase.LoadAllAssetsAtPath(modelPath).OfType<Avatar>().FirstOrDefault();
+        animator.runtimeAnimatorController = controller;
+        animator.applyRootMotion = false;
+        root.SetActive(false);
+        return root;
+    }
+
+    public static void AuditTraffic()
+    {
+        var scene = EditorSceneManager.OpenScene(ScenePath);
+        V003Traffic.Create(scene).AuditRoutes();
+    }
+
     public static void Build()
     {
         Audit();
@@ -164,6 +196,9 @@ public static class CityMasterplanV003LocalBuild
         bridge.mapVersion = MapVersion;
         bridge.followCamera = follow;
         bridge.npcTemplate = CreateParticipantTemplate();
+        bridge.childTemplate = CreateEncounterTemplate("crying_child_v001", "SIMUS_NPC_CryingChild", "CryingChild", 1.06f);
+        bridge.carrierTemplate = CreateEncounterTemplate("heavy_carrier_v001", "SIMUS_NPC_HeavyCarrier", "HeavyCarrier", 1.7f);
+        bridge.catTemplate = CreateEncounterTemplate("tuxedo_cat_v001", "SIMUS_Cat_Tuxedo", "SIMUS_Cat_Tuxedo", .35f);
         if (File.Exists(TemporaryScene)) throw new InvalidOperationException("Temporary scene exists. Refusing overwrite.");
         var output = Environment.GetEnvironmentVariable("SIMUS_V003_WEBGL_OUTPUT") ?? "Builds/city_masterplan_v003_local";
         var oldTemplate = PlayerSettings.WebGL.template;
@@ -197,7 +232,7 @@ public static class CityMasterplanV003LocalBuild
                 ["route_validation_status"] = "unity_physics_passed", ["exhibition_ready"] = false,
                 ["initial_memory_mb"] = 512, ["maximum_memory_mb"] = 2048,
                 ["memory_growth"] = "geometric", ["run_in_background"] = true,
-                ["building_transparency"] = false
+                ["building_transparency"] = false, ["event_walks"] = true, ["traffic_enabled"] = true
             }.ToString());
         }
         finally

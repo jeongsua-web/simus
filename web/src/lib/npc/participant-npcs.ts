@@ -4,6 +4,7 @@ import { guidanceMotion, guidancePosition, resumedNpc, projectedRevision } from 
 import { participantMotion } from "./participant-npc-motion";
 import { ApiError } from "../api";
 import { syncNpcEvents } from "./npc-events";
+import { eventTestsEnabled } from "../routes/v003-event-routes";
 
 import { V003_MAP_VERSION } from "../city/city-builds";
 // Caller holds the session row lock, shared with choices and lifecycle transitions.
@@ -48,7 +49,21 @@ export async function readNpcs(db: PoolClient, sessionId: string, participantId?
   if (participantId && result.rows[0].npcs.length === 0)
     throw new ApiError(404, "NOT_JOINED", "이 회차에 입장한 기록이 없습니다.");
   const snapshot = result.rows[0];
+  if (participantId && snapshot.map_version === V003_MAP_VERSION && eventTestsEnabled())
+    snapshot.event_walks = true;
   const states = await db.query(`SELECT p.npc_id,st.*,e.started_at FROM simus.participant_sessions p JOIN simus.npc_event_states st ON st.session_id=p.session_id AND st.participant_id=p.participant_id LEFT JOIN simus.npc_events e ON e.session_id=p.session_id AND e.participant_id=p.participant_id AND e.status='ACTIVE' WHERE p.session_id=$1`, [sessionId]);
+  const ownState = participantId && states.rows.find(st => st.npc_id === snapshot.npcs[0]?.npc_id);
+  const encounter = ownState && ownState.guidance_motion?.encounter;
+  if (encounter) {
+    const code = ownState.guidance_motion.event_code;
+    const role = ({ EXHIBITION_05: "child", EXHIBITION_16: "carrier", EXHIBITION_18: "cat" } as Record<string, string>)[code] ?? "citizen";
+    const epoch = new Date(ownState.guidance_motion.encounter_epoch ?? ownState.guidance_started_at).getTime();
+    snapshot.event_npcs = Array.from({ length: code === "EXHIBITION_21" ? 2 : 1 }, (_, index) => ({
+      npc_id: `ee000000-0000-4000-8000-000000000${code.slice(-2)}${index + 1}`,
+      character_id: index ? "npc_03" : "npc_02", event_role: role,
+      epoch: new Date(epoch - index * 2300).toISOString(), motion: encounter,
+    }));
+  }
   snapshot.npcs = snapshot.npcs.map((npc: Npc) => {
     const st = states.rows.find(r => r.npc_id === npc.npc_id);
     if (!st) return npc;
@@ -64,7 +79,8 @@ export async function readNpcs(db: PoolClient, sessionId: string, participantId?
     if (st.guidance_point) projected = { ...projected, epoch: new Date(st.guidance_started_at).toISOString(), motion: { ...guidanceMotion(st, npc.motion), revision } };
     if (st.started_at) {
       const point = st.guidance_point ? guidancePosition(st, npc.motion, at) : npcPosition(projected as Parameters<typeof npcPosition>[0], at);
-      if (point) return { ...projected, epoch: new Date(st.started_at).toISOString(), motion: { ...projected.motion, points: [point, point], speed_mps: 0, freeze_at: new Date(st.started_at).toISOString() } };
+      if (point) return { ...projected, hidden: st.guidance_motion?.event_kind === "entrance",
+        epoch: new Date(st.started_at).toISOString(), motion: { ...projected.motion, points: [point, point], speed_mps: 0, freeze_at: new Date(st.started_at).toISOString() } };
     }
     return projected;
   });

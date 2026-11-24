@@ -142,6 +142,7 @@ try {
   await pool.query(await readFile(path.join(web, '../db/019_participant_npc_routes.sql'), 'utf8'));
   await pool.query(await readFile(path.join(web, '../db/020_v003_session_profile.sql'), 'utf8'));
   await pool.query(await readFile(path.join(web, '../db/021_session_duration_seven_days.sql'), 'utf8'));
+  await pool.query(await readFile(path.join(web, '../db/022_manual_npc_events.sql'), 'utf8'));
   await pool.query((await readFile(path.join(web, '../db/verify_schema.sql'), 'utf8')).replace(/^\\set.*$/gm, ''));
   // Synthetic geometry belongs only to this disposable test cluster. Production has no route default.
   await pool.query(`CREATE FUNCTION simus.test_fixture_npc_motion() RETURNS trigger LANGUAGE plpgsql AS $$

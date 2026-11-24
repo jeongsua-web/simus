@@ -94,7 +94,6 @@
 .menu>summary {
     list-style: none;
     display: flex;
-    gap: 8px;
     align-items: center;
     min-height: 44px;
     padding: 0 12px;
@@ -113,30 +112,18 @@
     background: var(--secondary);
 }
 
-.menuBody {
+.citizenCardPopup {
     position: absolute;
     top: calc(100% + 8px);
     right: 12px;
-    width: min(380px, calc(100vw - 24px));
-    max-height: calc(100svh - 100px);
-    overflow: auto;
-    padding: 22px;
-    background: var(--secondary);
-    border: 2px solid var(--dark);
-    border-radius: 16px;
-    box-shadow: 5px 6px 0 #20383133;
+    width: min(332px, calc(100% - 24px));
 }
 
-.menuBody h2 {
-    font-size: 17px;
-    margin: 20px 0 8px;
-    overflow-wrap: anywhere;
-}
-
-.schedule {
-    font-size: 12px;
-    line-height: 1.8;
-    color: #52645d;
+@media (max-height: 400px) {
+    .citizenCardPopup {
+        max-height: calc(100svh - 88px);
+        overflow: auto;
+    }
 }
 
 .eyebrow {
@@ -187,23 +174,6 @@
 .stateCard h1 {
     font-size: clamp(1.7rem, 6vw, 2.4rem);
     line-height: 1.25;
-}
-
-.menuBody .card,
-.menuBody .stateCard {
-    margin-top: 18px;
-    padding: 16px;
-    box-shadow: none;
-}
-
-.menuBody .card p {
-    font-size: 13px;
-    line-height: 1.6;
-    margin-bottom: 12px;
-}
-
-.menuBody .card h2 {
-    margin-top: 0;
 }
 
 .urgent {
@@ -293,6 +263,32 @@
     width: 100%;
     height: 100%;
     border: 0;
+}
+
+.blackout,
+.rain,
+.alarm {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.blackout {
+    opacity: 0;
+    background: radial-gradient(circle at center, #0000 0 8vmin, #080d20ac 13vmin, #050818e8 24vmin);
+    transition: opacity .45s ease;
+}
+
+.blackout[data-active="true"] {
+    opacity: 1;
+}
+
+.rain {
+    background: repeating-linear-gradient(108deg, transparent 0 15px, #d9f1ff35 16px 17px, transparent 18px 29px), #1b446229;
+}
+
+.alarm {
+    box-shadow: inset 0 0 48px #b6262f88;
 }
 
 .cityStatus {
@@ -626,6 +622,45 @@
 
 .emptySituation h2 {
     font-size: 18px;
+}
+
+.testSituationPicker {
+    display: grid;
+    gap: 8px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line, #ded7c7);
+}
+
+.testSituationPicker label {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.testSituationPicker select {
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    border: 1px solid var(--line, #ded7c7);
+    border-radius: 8px;
+    padding-inline: 10px;
+    background: #fffdf5;
+    color: inherit;
+    font: inherit;
+}
+
+.npcSpeed {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+}
+
+.npcSpeed button {
+    padding-inline: 8px;
+}
+
+.npcSpeed button[aria-pressed="true"] {
+    background: var(--primary);
+    color: #fffdf5;
 }
 
 @media(min-width:800px) {

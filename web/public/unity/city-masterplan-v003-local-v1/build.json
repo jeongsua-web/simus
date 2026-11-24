@@ -13,5 +13,7 @@
   "maximum_memory_mb": 2048,
   "memory_growth": "geometric",
   "run_in_background": true,
-  "building_transparency": false
+  "building_transparency": false,
+  "event_walks": true,
+  "traffic_enabled": true
 }

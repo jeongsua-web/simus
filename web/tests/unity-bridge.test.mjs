@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
-import { readUnityEvent, matchesOwnSnapshot } from '../src/app/participate/unity-bridge.ts';
+import { readUnityEvent, matchesOwnSnapshot } from '../src/app/participate/unity/unity-bridge.ts';
 
 const ready = { channel: 'simus-city', version: 1, bridge_id: 'attempt-1', type: 'READY', map_version: 'test-map' };
 test('zoom events accept only finite supported magnifications', () => {

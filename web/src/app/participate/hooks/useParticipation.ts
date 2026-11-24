@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { pendingKey, readPending } from "../lib/pending";
+import type { NpcSpeedMultiplier } from "../lib/npc-motion";
 import type { ApiError, Department, LatestSession, Profile, Session, Situation, Submission, EventState, OwnResponse } from "../types";
 
 async function errorMessage(response: Response, fallback: string) {
@@ -12,8 +13,9 @@ async function errorMessage(response: Response, fallback: string) {
 export function useParticipation() {
   const [session, setSession] = useState<Session | null>(null);
   const [eventState, setEventState] = useState<EventState | null>(null);
-  const [startingEvent, setStartingEvent] = useState(false);
-  const [eventStartError, setEventStartError] = useState("");
+  const [eventAction, setEventAction] = useState<"start" | "speed" | null>(null);
+  const [eventActionError, setEventActionError] = useState("");
+  const [motionRefresh, setMotionRefresh] = useState(0);
   const [responseCount, setResponseCount] = useState(0);
   const [latestSession, setLatestSession] = useState<LatestSession | null>(null);
   const [history, setHistory] = useState<LatestSession[]>([]);
@@ -119,7 +121,7 @@ export function useParticipation() {
       if (changed) {
         setMessages({});
       }
-      if (changed || !nextEvent?.can_start) setEventStartError("");
+      if (changed || (!nextEvent?.can_start && nextEvent?.phase !== "GUIDING")) setEventActionError("");
       const retry = pendingRequest.current;
       if (retry && retry.session_id === targetId && records.some(item => retry.event_id ? item.event_id === retry.event_id : item.request_key === retry.request_key)) {
         rememberPending(null);
@@ -153,21 +155,27 @@ export function useParticipation() {
     return () => { mounted.current = false; controller.current?.abort(); window.clearTimeout(first); window.clearInterval(timer); window.removeEventListener("online", refresh); document.removeEventListener("visibilitychange", refresh); };
   }, [loadState]);
 
-  async function startEvent() {
-    if (!session?.accepting_choices || !eventState?.can_start || busy.current || pendingRequest.current) return;
+  async function changeEventMotion(options: { multiplier?: NpcSpeedMultiplier; situationId?: string } = {}) {
+    if (!session?.accepting_choices || busy.current) return;
+    const { multiplier, situationId } = options;
+    const starting = multiplier === undefined;
+    const canStart = situationId ? eventState?.test_situations?.some(t => t.id === situationId) : eventState?.can_start;
+    if (starting ? !canStart || pendingRequest.current
+      : eventState?.speed_multiplier === undefined || eventState.speed_multiplier === multiplier) return;
     const sessionId = session.id;
+    const fallback = starting ? "상황을 시작하지 못했습니다." : "NPC 속도를 변경하지 못했습니다.";
     busy.current = true;
-    setStartingEvent(true);
-    setEventStartError("");
+    setEventAction(starting ? "start" : "speed");
+    setEventActionError("");
     try {
       await loadFinished.current;
       if (!mounted.current || activeSession.current !== sessionId) return;
-      const response = await fetch(`/api/sessions/${sessionId}/event/start`, {
-        method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ request_key: crypto.randomUUID() }),
+      const response = await fetch(`/api/sessions/${sessionId}/event${starting ? "/start" : ""}`, {
+        method: starting ? "POST" : "PATCH", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(starting ? { request_key: crypto.randomUUID(), situation_id: situationId } : { speed_multiplier: multiplier }),
       });
       if (!response.ok) {
-        const message = await errorMessage(response, "상황을 시작하지 못했습니다.");
+        const message = await errorMessage(response, fallback);
         if (response.status === 401) {
           setAuthExpired(true);
           setLoadError(message);
@@ -175,13 +183,16 @@ export function useParticipation() {
         throw new Error(message);
       }
       const nextEvent = await response.json() as EventState;
-      if (mounted.current && activeSession.current === sessionId) setEventState(nextEvent);
+      if (mounted.current && activeSession.current === sessionId) {
+        setEventState(nextEvent);
+        setMotionRefresh(previous => previous + 1);
+      }
     } catch (error) {
       if (mounted.current && activeSession.current === sessionId)
-        setEventStartError(error instanceof Error ? error.message : "상황을 시작하지 못했습니다.");
+        setEventActionError(error instanceof Error ? error.message : fallback);
     } finally {
       busy.current = false;
-      setStartingEvent(false);
+      setEventAction(null);
     }
   }
 
@@ -247,7 +258,7 @@ export function useParticipation() {
 
   return {
     session, eventState, responseCount, latestSession, history, loading, loadError, authExpired, selected, answered, messages,
-    submitting, pending, profile, joined, departments, startEvent, startingEvent, eventStartError,
+    submitting, pending, profile, joined, departments, changeEventMotion, eventAction, eventActionError, motionRefresh,
     completeProfile: (value: Profile) => { setProfile(value); setJoined(true); void loadState(false); },
     refresh: () => void loadState(false), selectChoice: (situationId: string, choiceId: string) =>
       setSelected(previous => ({ ...previous, [situationId]: choiceId })),

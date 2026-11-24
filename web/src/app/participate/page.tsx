@@ -2,18 +2,19 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { LiveCityStats } from "../components/CityStats";
 import CitizenCard from "./components/CitizenCard";
 import ProfileEntry from "./components/ProfileEntry";
 import SituationCard from "./components/SituationCard";
 import UnityCity from "./unity/UnityCity";
-import PushOptIn from "./components/PushOptIn";
 import { useParticipation } from "./hooks/useParticipation";
+import { NPC_SPEED_MULTIPLIERS } from "./lib/npc-motion";
 import styles from "./participate.module.css";
 
 export default function ParticipatePage() {
   const state = useParticipation();
   const [enteringSession, setEnteringSession] = useState<string | null>(null);
+  const [testSituationId, setTestSituationId] = useState("");
+  const [cityReady, setCityReady] = useState(false);
   const history = state.history.length > 0 && <section className={styles.stateCard}><h2>지난 회차 결과</h2>{state.history.map(item => <p key={item.id}><Link href={`/result/${item.id}`}>{item.name} 결과 보기</Link></p>)}</section>;
   const pendingNotice = state.pending && (!state.pending.event_id || state.pending.session_id !== state.session?.id || state.pending.event_id !== state.eventState?.event?.id) && <section className={styles.stateCard}>
     <h2>이전 회차 제출 확인</h2><p>이전 선택의 접수 여부를 확인해 주세요.</p>
@@ -62,6 +63,19 @@ export default function ParticipatePage() {
   const answeredCount = state.responseCount;
   const activeEvent = state.session.accepting_choices && state.eventState?.phase === "ACTIVE" ? state.eventState.event : null;
   const activeSituation = activeEvent?.situation;
+  const plazaCompleted = state.eventState?.plaza_completed === true;
+  const allCompleted = state.eventState?.situations_remaining === 0;
+  const guiding = state.eventState?.phase === "GUIDING";
+  const speedMultiplier = state.eventState?.speed_multiplier;
+  const closed = !state.session.accepting_choices || state.eventState?.phase === "CLOSED";
+  const testSituations = state.eventState?.test_situations ?? [];
+  const testSituation = testSituations.find(situation => situation.id === testSituationId);
+  const waitingMessage = closed ? "이벤트 접수가 마감되었습니다"
+    : allCompleted ? "이번 회차의 모든 상황에 응답했어요"
+    : guiding ? "새로운 상황을 만나러 이동 중이에요"
+    : plazaCompleted ? "시민이 광장을 둘러보고 있어요"
+    : state.eventState?.plaza_completed === false && !state.eventState.can_start ? "지금은 광장 상황을 시작할 수 없어요"
+    : "도시를 둘러보고 있어요";
   return (
     <main className={styles.gamePage}>
       <header className={styles.hud}>
@@ -70,14 +84,9 @@ export default function ParticipatePage() {
           <span>{answeredCount}회 응답</span>
         </div>
         <details className={styles.menu}>
-          <summary aria-label="시민증과 회차 메뉴">시민증 <span aria-hidden="true">☰</span></summary>
-          <div className={styles.menuBody}>
+          <summary>시민증</summary>
+          <div className={styles.citizenCardPopup}>
             <CitizenCard characterId={profile.character_id} glassesId={profile.glasses_id} nickname={profile.nickname} department={profile.department_name} mbti={profile.mbti} citizenNo={profile.citizen_no} status="issued" />
-            <h2>{state.session.name}</h2>
-            <p className={styles.schedule}>입력 마감 {state.session.auto_cutoff_at ? new Date(state.session.auto_cutoff_at).toLocaleString("ko-KR") : "확인 중"}<br />종료 예정 {state.session.scheduled_end_at ? new Date(state.session.scheduled_end_at).toLocaleString("ko-KR") : "확인 중"}</p>
-            <LiveCityStats sessionId={state.session.id} />
-            <PushOptIn key={state.session.id} sessionId={state.session.id} />
-            {history}
           </div>
         </details>
       </header>
@@ -93,16 +102,41 @@ export default function ParticipatePage() {
         <Link href={`/result/${state.session.id}`}>{state.session.status === "FINALIZED" ? "내 결과 보기 →" : "결과 상태 확인 →"}</Link>
       </section>}
       <section className={styles.cityExperience} aria-label="도시와 선택">
-        <UnityCity key={state.session.id} sessionId={state.session.id} />
+        <UnityCity key={state.session.id} sessionId={state.session.id} motionRefresh={state.motionRefresh}
+          onReady={setCityReady} eventCode={activeSituation?.code} />
         <details className={styles.choicePanel} open>
-          <summary><span>도시에서 선택하기</span><small>{activeEvent ? "상황 발생" : "이벤트 대기"}</small></summary>
+          <summary><span>도시에서 선택하기</span><small>{activeEvent ? "상황 발생" : allCompleted ? "응답 완료" : guiding ? "이동 중" : "이벤트 대기"}</small></summary>
           <div className={styles.choicePanelBody}>
             {!activeSituation && <div className={styles.emptySituation}>
-              <h2 role="status">{!state.session.accepting_choices || state.eventState?.phase === "CLOSED" ? "이벤트 접수가 마감되었습니다" : state.eventState?.phase === "GUIDING" ? "새로운 상황을 만나러 이동 중이에요" : "도시를 둘러보고 있어요"}</h2>
-              {state.session.accepting_choices && state.eventState?.can_start &&
-                <button type="button" className={styles.button} disabled={state.startingEvent || Boolean(state.pending)}
-                  onClick={() => void state.startEvent()}>{state.startingEvent ? "상황을 시작하는 중…" : "상황 발생"}</button>}
-              {state.eventStartError && <p role="alert">{state.eventStartError}</p>}
+              <h2 id="situation-status" role="status">{waitingMessage}</h2>
+              {!guiding && !allCompleted && (state.eventState?.plaza_completed !== undefined || state.eventState?.can_start) &&
+                <button type="button" className={styles.button} aria-describedby="situation-status"
+                  disabled={closed || !state.eventState?.can_start || state.eventAction !== null || Boolean(state.pending)}
+                  onClick={() => void state.changeEventMotion()}>{state.eventAction === "start" ? "상황을 시작하는 중…" : plazaCompleted ? "다음 상황" : "상황 발생"}</button>}
+              {!closed && testSituations.length > 0 && <form className={styles.testSituationPicker} onSubmit={event => {
+                event.preventDefault();
+                if (testSituation && cityReady) void state.changeEventMotion({ situationId: testSituation.id });
+              }}>
+                <label htmlFor="test-situation">테스트할 상황</label>
+                <select id="test-situation" value={testSituation?.id ?? ""} onChange={event => setTestSituationId(event.target.value)}
+                  disabled={state.eventAction !== null || Boolean(state.pending)}>
+                  <option value="">미응답 상황 선택</option>
+                  {testSituations.map(situation => <option key={situation.id} value={situation.id}>
+                    {situation.code.slice(-2)} · {situation.title}
+                  </option>)}
+                </select>
+                <button type="submit" className={styles.secondaryButton}
+                  disabled={!testSituation || !cityReady || state.eventAction !== null || Boolean(state.pending)}>선택한 상황 시작</button>
+              </form>}
+              {!closed && guiding && speedMultiplier !== undefined &&
+                <div className={styles.npcSpeed} role="group" aria-label="NPC 이동 속도">
+                  {NPC_SPEED_MULTIPLIERS.map(multiplier => (
+                    <button key={multiplier} type="button" className={styles.secondaryButton}
+                      aria-pressed={speedMultiplier === multiplier} disabled={state.eventAction !== null}
+                      onClick={() => void state.changeEventMotion({ multiplier })}>{multiplier}배속</button>
+                  ))}
+                </div>}
+              {state.eventActionError && <p role="alert">{state.eventActionError}</p>}
             </div>}
             {activeEvent && activeSituation && <SituationCard key={activeEvent.id} situation={activeSituation} selectedChoiceId={state.selected[activeEvent.id]}
               done={Boolean(state.answered[activeEvent.id])} acceptingChoices={state.session.accepting_choices}

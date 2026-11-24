@@ -22,12 +22,14 @@ namespace Simus
         private WebBridgeState state;
         private readonly Dictionary<string, GameObject> actors = new Dictionary<string, GameObject>();
         private readonly Dictionary<string, string> actorCharacters = new Dictionary<string, string>();
+        private readonly Dictionary<string, GameObject> eventActors = new Dictionary<string, GameObject>();
         private NpcCrowdSnapshot crowd;
         private Coroutine polling;
         private UnityWebRequest request;
         private bool disposed, visible = true;
         [Tooltip("Configured animated SIMUS character template; kept inactive in the scene.")]
         public GameObject npcTemplate;
+        public GameObject childTemplate, carrierTemplate, catTemplate;
 #if UNITY_WEBGL && !UNITY_EDITOR
         [DllImport("__Internal")] private static extern void SimusBridgeEmit(string json);
 #endif
@@ -50,7 +52,8 @@ namespace Simus
                     return;
                 }
                 var own = GetActor(state.OwnNpcId, true, state.Own.Npcs[0].CharacterId, state.Own.Npcs[0].GlassesId);
-                MoveActor(own, state.Own.Npcs[0].PositionAt(state.Own.MotionTime(Time.realtimeSinceStartupAsDouble)));
+                MoveActor(own, state.Own.Npcs[0].PositionAt(state.Own.MotionTime(Time.realtimeSinceStartupAsDouble)), state.Own.Npcs[0].Hidden);
+                RefreshEventActors();
                 if (followCamera == null) throw new InvalidOperationException("CAMERA_MISSING");
                 if (followCamera.followTarget != own.transform) followCamera.SetFollowTarget(own.transform);
                 if (visible && polling == null) polling = StartCoroutine(Poll());
@@ -90,18 +93,69 @@ namespace Simus
         {
             if (mapDisplayOnly || disposed || !visible || state?.Own == null) return;
             var now = Time.realtimeSinceStartupAsDouble;
-            MoveActor(actors[state.OwnNpcId], state.Own.Npcs[0].PositionAt(state.Own.MotionTime(now)));
+            MoveActor(actors[state.OwnNpcId], state.Own.Npcs[0].PositionAt(state.Own.MotionTime(now)), state.Own.Npcs[0].Hidden);
+            if (state.EventActors != null)
+                foreach (var npc in state.EventActors.Npcs)
+                    MoveActor(eventActors[npc.Id], npc.PositionAt(state.EventActors.MotionTime(now)));
             if (crowd == null) return;
             foreach (var npc in crowd.Npcs)
-                if (npc.Id != state.OwnNpcId) MoveActor(GetActor(npc.Id, false, npc.CharacterId, npc.GlassesId), npc.PositionAt(Math.Min(state.Own.FreezeAtMs, crowd.MotionTime(now))));
+                if (npc.Id != state.OwnNpcId) MoveActor(GetActor(npc.Id, false, npc.CharacterId, npc.GlassesId), npc.PositionAt(Math.Min(state.Own.FreezeAtMs, crowd.MotionTime(now))), npc.Hidden);
         }
-        private static void MoveActor(GameObject actor, Vector3 position)
+        private void RefreshEventActors()
+        {
+            var current = new HashSet<string>();
+            if (state.EventActors != null)
+                foreach (var npc in state.EventActors.Npcs) current.Add(npc.Id);
+            foreach (var id in new List<string>(eventActors.Keys))
+            {
+                if (current.Contains(id)) continue;
+                Destroy(eventActors[id]);
+                eventActors.Remove(id);
+            }
+            if (state.EventActors == null)
+                return;
+            foreach (var npc in state.EventActors.Npcs)
+            {
+                if (eventActors.ContainsKey(npc.Id)) continue;
+                var template = npc.EventRole switch {
+                    "child" => childTemplate,
+                    "carrier" => carrierTemplate,
+                    "cat" => catTemplate,
+                    _ => null
+                };
+                var actor = Instantiate(template ? template : npcTemplate, transform);
+                actor.name = "SIMUS Event NPC " + npc.Id;
+                actor.SetActive(true);
+                if (!template) CitizenCharacterAppearance.Apply(actor, npc.CharacterId, npc.GlassesId);
+                if (actor.GetComponent<NpcGrounding>() == null) actor.AddComponent<NpcGrounding>();
+                foreach (var collider in actor.GetComponentsInChildren<Collider>()) Destroy(collider);
+                eventActors.Add(npc.Id, actor);
+            }
+        }
+        internal bool HasPedestrianInCrossing(V003Traffic.Crossing crossing)
+        {
+            foreach (var actor in actors.Values)
+                if (OccupiesCrossing(actor, crossing)) return true;
+            foreach (var actor in eventActors.Values)
+                if (OccupiesCrossing(actor, crossing)) return true;
+            return false;
+        }
+
+        private static bool OccupiesCrossing(GameObject actor, V003Traffic.Crossing crossing)
+        {
+            if (!actor || !actor.activeInHierarchy || !crossing.Contains(actor.transform.position)) return false;
+            var renderer = actor.GetComponentInChildren<Renderer>();
+            return renderer && !renderer.forceRenderingOff;
+        }
+
+        private static void MoveActor(GameObject actor, Vector3 position, bool hidden = false)
         {
             var direction = position - actor.transform.position;
             direction.y = 0;
             var moving = direction.sqrMagnitude > 0.000001f;
             if (moving) actor.transform.rotation = Quaternion.LookRotation(direction);
             actor.transform.position = actor.GetComponent<NpcGrounding>().Project(position);
+            foreach (var renderer in actor.GetComponentsInChildren<Renderer>()) renderer.forceRenderingOff = hidden;
             foreach (var animator in actor.GetComponentsInChildren<Animator>()) animator.speed = moving ? 1f : 0f;
         }
         private IEnumerator Poll()
@@ -210,6 +264,8 @@ namespace Simus
             disposed = true; StopPolling(); City.Pause();
             if (followCamera != null) followCamera.SetFollowTarget(null);
             foreach (var actor in actors.Values) Destroy(actor);
+            foreach (var actor in eventActors.Values) Destroy(actor);
+            eventActors.Clear();
             actors.Clear(); actorCharacters.Clear();
 
         }

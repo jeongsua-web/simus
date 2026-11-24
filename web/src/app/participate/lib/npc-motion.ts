@@ -1,3 +1,6 @@
+export const NPC_SPEED_MULTIPLIERS = [1, 2, 4] as const;
+export type NpcSpeedMultiplier = typeof NPC_SPEED_MULTIPLIERS[number];
+
 export type Npc = {
   npc_id: string;
   character_id?: string;
@@ -8,6 +11,7 @@ export type Npc = {
 export type NpcSnapshot = {
   session_id: string; status: string; server_time: string; freeze_at: string;
   motion_time: string; frozen: boolean; npcs: Npc[];
+  event_walks?: boolean;
 };
 
 export function motionTime(snapshot: NpcSnapshot, receivedAt: number, now: number): number {

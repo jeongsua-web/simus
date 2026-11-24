@@ -83,7 +83,7 @@ export async function runDepartmentIntegration({ pool, env, token, templateId })
       await page.getByRole('button', { name: '선택 제출', exact: true }).first().click();
       await page.getByText('1회 응답', { exact: true }).waitFor();
       await page.reload();
-      const summary=page.locator('summary[aria-label="시민증과 회차 메뉴"]');
+      const summary=page.locator('summary').filter({ hasText: /^시민증$/ });
       await summary.waitFor(); await summary.click();
       assert.match(await page.locator('details').filter({has:summary}).innerText(), /자율전공학과/);
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));

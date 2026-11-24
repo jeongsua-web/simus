@@ -9,19 +9,47 @@ import Population from "../components/Population";
 
 type View = { phase: "loading" | "ready" | "error"; message: string; src?: string; zoomSupported?: boolean };
 
-export default function UnityCity({ sessionId, onReady }: { sessionId: string; onReady?: (ready: boolean) => void }) {
+export default function UnityCity({ sessionId, onReady, motionRefresh = 0, eventCode }: {
+  sessionId: string; onReady?: (ready: boolean) => void; motionRefresh?: number; eventCode?: string;
+}) {
   const frame = useRef<HTMLIFrameElement>(null);
   const zoomCommand = useRef<((zoom: number) => void) | null>(null);
+  const refreshMotion = useRef<(() => void) | null>(null);
   const [zoom, setZoom] = useState(1);
   const [attempt, setAttempt] = useState(0);
   const [view, setView] = useState<View>({ phase: "loading", message: "도시를 준비하고 있습니다…" });
+  const blackout = eventCode === "EXHIBITION_26";
+  const alarm = eventCode === "EXHIBITION_29";
 
   useEffect(() => { onReady?.(view.phase === "ready"); }, [view.phase, onReady]);
+  useEffect(() => { if (motionRefresh) refreshMotion.current?.(); }, [motionRefresh]);
+  useEffect(() => { refreshMotion.current?.(); }, [eventCode]);
+  useEffect(() => {
+    if (!alarm || typeof AudioContext === "undefined") return;
+    const context = new AudioContext();
+    const pulse = () => {
+      if (document.hidden || context.state !== "running") return;
+      const now = context.currentTime;
+      const tone = context.createOscillator();
+      const volume = context.createGain();
+      tone.frequency.setValueAtTime(600, now);
+      tone.frequency.linearRampToValueAtTime(840, now + .31);
+      volume.gain.setValueAtTime(0, now);
+      volume.gain.linearRampToValueAtTime(.045, now + .035);
+      volume.gain.linearRampToValueAtTime(0, now + .4);
+      tone.connect(volume).connect(context.destination);
+      tone.start(now);
+      tone.stop(now + .4);
+    };
+    void context.resume().then(pulse).catch(() => {});
+    const timer = window.setInterval(pulse, 1250);
+    return () => { window.clearInterval(timer); void context.close(); };
+  }, [alarm]);
 
   useEffect(() => {
     const controller = new AbortController();
     const bridgeId = crypto.randomUUID();
-    let disposed = false, failed = false, ready = false, bound = false, busy = false;
+    let disposed = false, failed = false, ready = false, bound = false, busy = false, refreshQueued = false;
     let mapVersion = "", pathVersion = "", own: NpcSnapshot | null = null;
     const send = (type: string, payload: object = {}) => frame.current?.contentWindow?.postMessage({
       channel: BRIDGE_CHANNEL, version: BRIDGE_VERSION, bridge_id: bridgeId, type, ...payload,
@@ -37,8 +65,12 @@ export default function UnityCity({ sessionId, onReady }: { sessionId: string; o
       setView({ phase: "error", message });
     };
     const deadline = window.setTimeout(() => fail("도시 연결에 시간이 오래 걸리고 있습니다. 다시 시도해 주세요."), 180_000);
-    async function sync() {
-      if (disposed || failed || busy || !ready || document.hidden) return;
+    async function sync(refresh = false) {
+      if (disposed || failed || !ready || document.hidden) return;
+      if (busy) {
+        refreshQueued ||= refresh;
+        return;
+      }
       busy = true;
       try {
         const response = await fetch(`/api/sessions/${sessionId}/npc`, { cache: "no-store", signal: controller.signal });
@@ -58,8 +90,15 @@ export default function UnityCity({ sessionId, onReady }: { sessionId: string; o
         if (bound) setView(v => ({ ...v, phase: "ready", message: data.frozen ? "회차가 끝나 캐릭터가 멈췄습니다." : "내 캐릭터를 따라가는 중" }));
       } catch {
         if (!disposed && !failed) setView(v => ({ ...v, message: "도시 연결을 확인하고 있습니다…" }));
-      } finally { busy = false; }
+      } finally {
+        busy = false;
+        if (refreshQueued) {
+          refreshQueued = false;
+          void sync();
+        }
+      }
     }
+    refreshMotion.current = () => void sync(true);
     function receive(event: MessageEvent) {
       if (disposed || failed || event.origin !== location.origin || event.source !== frame.current?.contentWindow) return;
       const message = readUnityEvent(event.data, bridgeId);
@@ -95,7 +134,11 @@ export default function UnityCity({ sessionId, onReady }: { sessionId: string; o
         if (typeof sessionMap !== "string" || !matchesOwnSnapshot(initial, sessionId, sessionMap)) throw new Error("Invalid NPC");
         if (isRetiredCity(sessionMap)) { fail("이 회차의 도시 버전은 종료되었습니다. 현재 회차에서 새 도시에 입장할 수 있어요."); return; }
         const base = cityBuildBase(sessionMap);
-        const response = await fetch(`${base}/build.json`, { cache: "no-store", signal: controller.signal });
+        let buildBase = base;
+        const buildRequest = (root: string) => fetch(`${root}/build.json`, { cache: "no-store", signal: controller.signal });
+        let response = await buildRequest(base + (initial.event_walks ? "/event-tests" : ""));
+        if (initial.event_walks && response.ok) buildBase += "/event-tests";
+        else if (initial.event_walks && response.status === 404) response = await buildRequest(base);
         if (response.status === 404) { fail("도시 화면을 준비 중입니다. 잠시 후 다시 시도해 주세요."); return; }
         if (!response.ok) throw new Error("Build unavailable");
         const build = await response.json();
@@ -108,7 +151,7 @@ export default function UnityCity({ sessionId, onReady }: { sessionId: string; o
         mapVersion = build.map_version;
         pathVersion = initial.npcs[0].motion.path_version;
         own = initial;
-        setView({ phase: "loading", message: "도시를 불러오고 있습니다…", src: `${base}/index.html?bridge_id=${encodeURIComponent(bridgeId)}` });
+        setView({ phase: "loading", message: "도시를 불러오고 있습니다…", src: `${buildBase}/index.html?bridge_id=${encodeURIComponent(bridgeId)}` });
       } catch { fail("도시를 불러오지 못했습니다. 연결을 확인하고 다시 시도해 주세요."); }
     }
     void prepare();
@@ -116,6 +159,7 @@ export default function UnityCity({ sessionId, onReady }: { sessionId: string; o
       send("DISPOSE");
       disposed = true;
       zoomCommand.current = null;
+      refreshMotion.current = null;
       controller.abort();
       window.clearTimeout(deadline);
       window.clearInterval(timer);
@@ -128,6 +172,9 @@ export default function UnityCity({ sessionId, onReady }: { sessionId: string; o
   return <section className={styles.cityTrack} aria-label="내 캐릭터를 따라가는 도시" aria-busy={view.phase === "loading"}>
     {view.src && <iframe key={view.src} ref={frame} src={view.src} title="SIM:US 도시" className={styles.cityFrame}
       style={{ visibility: view.phase === "ready" ? "visible" : "hidden" }} onError={() => setView({ phase: "error", message: "도시를 불러오지 못했습니다. 다시 시도해 주세요." })} />}
+    <div className={styles.blackout} data-active={blackout} aria-hidden="true" />
+    {eventCode === "EXHIBITION_27" && <div className={styles.rain} aria-hidden="true" />}
+    {alarm && <div className={styles.alarm} aria-hidden="true" />}
     <div className={styles.cityOverlay}>
       <Population key={sessionId} sessionId={sessionId} />
       <div className={styles.cityStatus} role={view.phase === "error" ? "alert" : "status"}>

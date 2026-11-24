@@ -1,0 +1,2226 @@
+{
+  "schema": "simus.npc_pedestrian_network.v003.1",
+  "status": "design_geometry_checked_pending_unity",
+  "source_routes": "routes.json",
+  "source_routes_sha256": "14e4c3e9b10d3410390338ed34c82f59baa564e9a40529e271618bf571fbc74c",
+  "source_scene": "unity/Assets/SIMUS/Scenes/city_masterplan_v003/CityMasterplan_v003_EventPlaces.unity",
+  "source_scene_sha256": "2c0d5223f2c66f1c788be0f04662305fcbc101e009c27c1b22db9e9b5aa9101e",
+  "body_radius_m": 0.28,
+  "routing_assumptions": {
+    "walk_speed_mps": 1.4,
+    "controlled_crossing_delay_s": 12
+  },
+  "spawn_node": "N0027",
+  "summary": {
+    "walk_edges": 479,
+    "crossing_edges": 39,
+    "blocked_edges": 13,
+    "crossing_ids_used": 39,
+    "nodes_in_spawn_component": 476,
+    "component_sizes": [
+      476
+    ],
+    "isolated_nodes": 7
+  },
+  "walk_edges": [
+    "W0000",
+    "W0001",
+    "W0002",
+    "W0003",
+    "W0004",
+    "W0005",
+    "W0006",
+    "W0007",
+    "W0008",
+    "W0009",
+    "W0010",
+    "W0011",
+    "W0012",
+    "W0013",
+    "W0014",
+    "W0015",
+    "W0016",
+    "W0017",
+    "W0018",
+    "W0019",
+    "W0020",
+    "W0021",
+    "W0022",
+    "W0023",
+    "W0024",
+    "W0025",
+    "W0026",
+    "W0027",
+    "W0028",
+    "W0029",
+    "W0030",
+    "W0031",
+    "W0032",
+    "W0033",
+    "W0034",
+    "W0035",
+    "W0036",
+    "W0037",
+    "W0038",
+    "W0039",
+    "W0040",
+    "W0041",
+    "W0042",
+    "W0043",
+    "W0044",
+    "W0045",
+    "W0046",
+    "W0047",
+    "W0048",
+    "W0049",
+    "W0050",
+    "W0051",
+    "W0052",
+    "W0053",
+    "W0054",
+    "W0055",
+    "W0056",
+    "W0057",
+    "W0058",
+    "W0059",
+    "W0060",
+    "W0061",
+    "W0062",
+    "W0063",
+    "W0064",
+    "W0065",
+    "W0066",
+    "W0067",
+    "W0068",
+    "W0069",
+    "W0070",
+    "W0071",
+    "W0072",
+    "W0073",
+    "W0074",
+    "W0075",
+    "W0076",
+    "W0077",
+    "W0078",
+    "W0079",
+    "W0080",
+    "W0081",
+    "W0082",
+    "W0083",
+    "W0084",
+    "W0085",
+    "W0086",
+    "W0087",
+    "W0088",
+    "W0089",
+    "W0090",
+    "W0091",
+    "W0092",
+    "W0093",
+    "W0094",
+    "W0095",
+    "W0096",
+    "W0097",
+    "W0098",
+    "W0099",
+    "W0100",
+    "W0101",
+    "W0102",
+    "W0103",
+    "W0104",
+    "W0105",
+    "W0106",
+    "W0107",
+    "W0108",
+    "W0109",
+    "W0110",
+    "W0111",
+    "W0112",
+    "W0113",
+    "W0114",
+    "W0115",
+    "W0116",
+    "W0117",
+    "W0118",
+    "W0119",
+    "W0120",
+    "W0121",
+    "W0122",
+    "W0123",
+    "W0124",
+    "W0125",
+    "W0126",
+    "W0127",
+    "W0128",
+    "W0129",
+    "W0130",
+    "W0131",
+    "W0132",
+    "W0133",
+    "W0134",
+    "W0135",
+    "W0136",
+    "W0137",
+    "W0138",
+    "W0139",
+    "W0140",
+    "W0141",
+    "W0142",
+    "W0143",
+    "W0144",
+    "W0145",
+    "W0146",
+    "W0147",
+    "W0148",
+    "W0149",
+    "W0150",
+    "W0151",
+    "W0152",
+    "W0153",
+    "W0154",
+    "W0155",
+    "W0156",
+    "W0157",
+    "W0158",
+    "W0159",
+    "W0160",
+    "W0161",
+    "W0162",
+    "W0163",
+    "W0164",
+    "W0165",
+    "W0166",
+    "W0167",
+    "W0168",
+    "W0169",
+    "W0170",
+    "W0171",
+    "W0172",
+    "W0173",
+    "W0174",
+    "W0175",
+    "W0176",
+    "W0177",
+    "W0178",
+    "W0179",
+    "W0180",
+    "W0181",
+    "W0182",
+    "W0183",
+    "W0184",
+    "W0185",
+    "W0186",
+    "W0187",
+    "W0188",
+    "W0189",
+    "W0190",
+    "W0191",
+    "W0192",
+    "W0193",
+    "W0194",
+    "W0195",
+    "W0196",
+    "W0197",
+    "W0198",
+    "W0199",
+    "W0200",
+    "W0201",
+    "W0202",
+    "W0203",
+    "W0204",
+    "W0205",
+    "W0206",
+    "W0207",
+    "W0208",
+    "W0209",
+    "W0210",
+    "W0211",
+    "W0212",
+    "W0213",
+    "W0214",
+    "W0215",
+    "W0216",
+    "W0217",
+    "W0218",
+    "W0219",
+    "W0220",
+    "W0221",
+    "W0222",
+    "W0223",
+    "W0224",
+    "W0225",
+    "W0226",
+    "W0227",
+    "W0228",
+    "W0230",
+    "W0232",
+    "W0234",
+    "W0236",
+    "W0237",
+    "W0238",
+    "W0240",
+    "W0241",
+    "W0243",
+    "W0244",
+    "W0246",
+    "W0247",
+    "W0248",
+    "W0249",
+    "W0250",
+    "W0251",
+    "W0252",
+    "W0253",
+    "W0254",
+    "W0255",
+    "W0256",
+    "W0257",
+    "W0258",
+    "W0259",
+    "W0260",
+    "W0261",
+    "W0262",
+    "W0263",
+    "W0264",
+    "W0265",
+    "W0266",
+    "W0268",
+    "W0269",
+    "W0271",
+    "W0272",
+    "W0274",
+    "W0275",
+    "W0277",
+    "W0278",
+    "W0280",
+    "W0281",
+    "W0283",
+    "W0284",
+    "W0286",
+    "W0287",
+    "W0289",
+    "W0290",
+    "W0292",
+    "W0293",
+    "W0295",
+    "W0296",
+    "W0298",
+    "W0299",
+    "W0301",
+    "W0302",
+    "W0304",
+    "W0305",
+    "W0307",
+    "W0308",
+    "W0310",
+    "W0311",
+    "W0313",
+    "W0314",
+    "W0316",
+    "W0317",
+    "W0319",
+    "W0320",
+    "W0321",
+    "W0323",
+    "W0324",
+    "W0326",
+    "W0327",
+    "W0329",
+    "W0330",
+    "W0332",
+    "W0333",
+    "W0335",
+    "W0336",
+    "W0338",
+    "W0339",
+    "W0341",
+    "W0342",
+    "W0344",
+    "W0345",
+    "W0347",
+    "W0348",
+    "W0350",
+    "W0351",
+    "W0353",
+    "W0354",
+    "W0356",
+    "W0357",
+    "W0359",
+    "W0360",
+    "W0362",
+    "W0363",
+    "W0365",
+    "W0366",
+    "W0368",
+    "W0369",
+    "W0371",
+    "W0372",
+    "W0374",
+    "W0376",
+    "W0378",
+    "W0380",
+    "W0381",
+    "W0383",
+    "W0384",
+    "W0385",
+    "W0386",
+    "W0387",
+    "W0388",
+    "W0389",
+    "W0390",
+    "W0391",
+    "W0392",
+    "W0393",
+    "W0394",
+    "W0395",
+    "W0396",
+    "W0397",
+    "W0398",
+    "W0399",
+    "W0400",
+    "W0401",
+    "W0402",
+    "W0403",
+    "W0404",
+    "W0405",
+    "W0406",
+    "W0407",
+    "W0408",
+    "W0409",
+    "W0410",
+    "W0411",
+    "W0412",
+    "W0413",
+    "W0414",
+    "W0415",
+    "W0416",
+    "W0417",
+    "W0418",
+    "W0419",
+    "W0420",
+    "W0421",
+    "W0422",
+    "W0423",
+    "W0424",
+    "W0425",
+    "W0426",
+    "W0427",
+    "W0428",
+    "W0429",
+    "W0430",
+    "W0431",
+    "W0432",
+    "W0433",
+    "W0434",
+    "W0435",
+    "W0436",
+    "W0437",
+    "W0438",
+    "W0439",
+    "W0440",
+    "W0441",
+    "W0442",
+    "W0443",
+    "W0444",
+    "W0445",
+    "W0446",
+    "W0447",
+    "W0448",
+    "W0449",
+    "W0450",
+    "W0451",
+    "W0452",
+    "W0453",
+    "W0454",
+    "W0455",
+    "W0456",
+    "W0457",
+    "W0458",
+    "W0459",
+    "W0460",
+    "W0461",
+    "W0462",
+    "W0463",
+    "W0464",
+    "W0465",
+    "W0466",
+    "W0467",
+    "W0468",
+    "W0469",
+    "W0470",
+    "W0471",
+    "W0472",
+    "W0473",
+    "W0474",
+    "W0475",
+    "W0476",
+    "W0477",
+    "W0478",
+    "W0479",
+    "W0480",
+    "W0481",
+    "W0482",
+    "W0483",
+    "W0484",
+    "W0485",
+    "W0486",
+    "W0487",
+    "W0489",
+    "W0491",
+    "W0492",
+    "W0493",
+    "W0494",
+    "W0495",
+    "W0496",
+    "W0497",
+    "W0498",
+    "W0499",
+    "W0500",
+    "W0501",
+    "W0502",
+    "W0503",
+    "W0504",
+    "W0505",
+    "W0506",
+    "W0507",
+    "W0508",
+    "W0509",
+    "W0510",
+    "W0511",
+    "W0512",
+    "W0513",
+    "W0514",
+    "W0515",
+    "W0517",
+    "W0520",
+    "W0521",
+    "W0522",
+    "W0523",
+    "SET_CAFE_IN0",
+    "SET_RESTAURANT_IN0",
+    "SET_TOILET_IN0",
+    "SET_SUBWAY_IN0",
+    "SET_SUBWAY_IN1",
+    "SET_SUBWAY_IN2",
+    "LIFT_SUBWAY"
+  ],
+  "crossing_edges": {
+    "W0267": "CW01",
+    "W0270": "CW02",
+    "W0273": "CW03",
+    "W0276": "CW04",
+    "W0279": "CW05",
+    "W0282": "CW06",
+    "W0285": "CW07",
+    "W0288": "CW08",
+    "W0291": "CW09",
+    "W0294": "CW10",
+    "W0297": "CW11",
+    "W0300": "CW12",
+    "W0303": "CW13",
+    "W0306": "CW14",
+    "W0309": "CW15",
+    "W0312": "CW16",
+    "W0315": "CW17",
+    "W0318": "CW18",
+    "W0322": "CW20",
+    "W0325": "CW21",
+    "W0328": "CW22",
+    "W0331": "CW23",
+    "W0334": "CW24",
+    "W0337": "CW25",
+    "W0340": "CW26",
+    "W0343": "CW27",
+    "W0346": "CW28",
+    "W0349": "CW29",
+    "W0352": "CW30",
+    "W0355": "CW31",
+    "W0358": "CW32",
+    "W0361": "CW33",
+    "W0364": "CW34",
+    "W0367": "CW35",
+    "W0370": "CW36",
+    "W0373": "CW37",
+    "W0375": "CW38",
+    "W0379": "CW40",
+    "W0488": "CW00"
+  },
+  "blocked_edges": {
+    "W0229": {
+      "roads": [
+        "R03"
+      ],
+      "reason": "unmarked_road_overlap"
+    },
+    "W0231": {
+      "roads": [
+        "R06"
+      ],
+      "reason": "unmarked_road_overlap"
+    },
+    "W0233": {
+      "roads": [
+        "R07"
+      ],
+      "reason": "unmarked_road_overlap"
+    },
+    "W0235": {
+      "roads": [
+        "R08"
+      ],
+      "reason": "ambiguous_or_untyped_crossing"
+    },
+    "W0239": {
+      "roads": [
+        "R03"
+      ],
+      "reason": "unmarked_road_overlap"
+    },
+    "W0242": {
+      "roads": [
+        "R01"
+      ],
+      "reason": "unmarked_road_overlap"
+    },
+    "W0245": {
+      "roads": [
+        "R07"
+      ],
+      "reason": "unmarked_road_overlap"
+    },
+    "W0377": {
+      "roads": [
+        "R11"
+      ],
+      "reason": "unmarked_road_overlap"
+    },
+    "W0382": {
+      "roads": [
+        "R11"
+      ],
+      "reason": "unmarked_road_overlap"
+    },
+    "W0490": {
+      "roads": [
+        "R11",
+        "R13"
+      ],
+      "reason": "unmarked_road_overlap"
+    },
+    "W0516": {
+      "roads": [
+        "R11",
+        "R13"
+      ],
+      "reason": "unmarked_road_overlap"
+    },
+    "W0518": {
+      "roads": [
+        "R06"
+      ],
+      "reason": "incomplete_crossing"
+    },
+    "W0519": {
+      "roads": [
+        "R06",
+        "R07"
+      ],
+      "reason": "unmarked_road_overlap"
+    }
+  },
+  "crossings": [
+    {
+      "id": "CW00",
+      "scene_object": "Crosswalk_GATE_CROSSING_0",
+      "scene_matches": 1,
+      "road_id": "R01",
+      "wait_points_xz": [
+        [
+          45.0,
+          58.5
+        ],
+        [
+          45.0,
+          41.5
+        ]
+      ],
+      "width_m": 4,
+      "control": "controlled",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW01",
+      "scene_object": "Crosswalk_X_R01_0.15",
+      "scene_matches": 1,
+      "road_id": "R01",
+      "wait_points_xz": [
+        [
+          -148.307004906872,
+          58.6
+        ],
+        [
+          -148.307004906872,
+          41.4
+        ]
+      ],
+      "width_m": 3,
+      "control": "controlled",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW02",
+      "scene_object": "Crosswalk_X_R01_0.4",
+      "scene_matches": 1,
+      "road_id": "R01",
+      "wait_points_xz": [
+        [
+          -45.485346418325406,
+          58.6
+        ],
+        [
+          -45.485346418325406,
+          41.4
+        ]
+      ],
+      "width_m": 3,
+      "control": "controlled",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW03",
+      "scene_object": "Crosswalk_X_R01_0.65",
+      "scene_matches": 1,
+      "road_id": "R01",
+      "wait_points_xz": [
+        [
+          57.3363120702212,
+          58.6
+        ],
+        [
+          57.3363120702212,
+          41.4
+        ]
+      ],
+      "width_m": 3,
+      "control": "controlled",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW04",
+      "scene_object": "Crosswalk_X_R01_0.85",
+      "scene_matches": 1,
+      "road_id": "R01",
+      "wait_points_xz": [
+        [
+          139.59363886105848,
+          58.6
+        ],
+        [
+          139.59363886105848,
+          41.4
+        ]
+      ],
+      "width_m": 3,
+      "control": "controlled",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW05",
+      "scene_object": "Crosswalk_X_R02_0.18",
+      "scene_matches": 1,
+      "road_id": "R02",
+      "wait_points_xz": [
+        [
+          -71.1,
+          -83.65464499078301
+        ],
+        [
+          -58.9,
+          -83.65464499078301
+        ]
+      ],
+      "width_m": 3,
+      "control": "controlled",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW06",
+      "scene_object": "Crosswalk_X_R02_0.55",
+      "scene_matches": 1,
+      "road_id": "R02",
+      "wait_points_xz": [
+        [
+          -67.39817042032765,
+          64.15806735138914
+        ],
+        [
+          -55.64325192284236,
+          60.89281221319882
+        ]
+      ],
+      "width_m": 3,
+      "control": "controlled",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW07",
+      "scene_object": "Crosswalk_X_R02_0.85",
+      "scene_matches": 1,
+      "road_id": "R02",
+      "wait_points_xz": [
+        [
+          -61.1,
+          180.54553749231917
+        ],
+        [
+          -48.9,
+          180.54553749231917
+        ]
+      ],
+      "width_m": 3,
+      "control": "controlled",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW08",
+      "scene_object": "Crosswalk_X_R03_0.18",
+      "scene_matches": 1,
+      "road_id": "R03",
+      "wait_points_xz": [
+        [
+          -140.89229180409697,
+          -15.9
+        ],
+        [
+          -140.89229180409697,
+          -28.1
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW09",
+      "scene_object": "Crosswalk_X_R03_0.55",
+      "scene_matches": 1,
+      "road_id": "R03",
+      "wait_points_xz": [
+        [
+          1.1624417097037565,
+          -15.9
+        ],
+        [
+          1.1624417097037565,
+          -28.1
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW10",
+      "scene_object": "Crosswalk_X_R03_0.85",
+      "scene_matches": 1,
+      "road_id": "R03",
+      "wait_points_xz": [
+        [
+          116.34195536954206,
+          -15.9
+        ],
+        [
+          116.34195536954206,
+          -28.1
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW11",
+      "scene_object": "Crosswalk_X_R04_0.18",
+      "scene_matches": 1,
+      "road_id": "R04",
+      "wait_points_xz": [
+        [
+          -179.8,
+          -104.4
+        ],
+        [
+          -179.8,
+          -115.6
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW12",
+      "scene_object": "Crosswalk_X_R04_0.55",
+      "scene_matches": 1,
+      "road_id": "R04",
+      "wait_points_xz": [
+        [
+          -128.0,
+          -104.4
+        ],
+        [
+          -128.0,
+          -115.6
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW13",
+      "scene_object": "Crosswalk_X_R04_0.85",
+      "scene_matches": 1,
+      "road_id": "R04",
+      "wait_points_xz": [
+        [
+          -86.0,
+          -104.4
+        ],
+        [
+          -86.0,
+          -115.6
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW14",
+      "scene_object": "Crosswalk_X_R05_0.18",
+      "scene_matches": 1,
+      "road_id": "R05",
+      "wait_points_xz": [
+        [
+          -146.0,
+          75.4
+        ],
+        [
+          -146.0,
+          84.6
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW15",
+      "scene_object": "Crosswalk_X_R05_0.55",
+      "scene_matches": 1,
+      "road_id": "R05",
+      "wait_points_xz": [
+        [
+          -209.6,
+          187.50000000000003
+        ],
+        [
+          -200.4,
+          187.50000000000003
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW16",
+      "scene_object": "Crosswalk_X_R05_0.85",
+      "scene_matches": 1,
+      "road_id": "R05",
+      "wait_points_xz": [
+        [
+          -122.5,
+          244.6
+        ],
+        [
+          -122.5,
+          235.4
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW17",
+      "scene_object": "Crosswalk_X_R06_0.18",
+      "scene_matches": 1,
+      "road_id": "R06",
+      "wait_points_xz": [
+        [
+          -21.46410762548267,
+          -55.4
+        ],
+        [
+          -21.46410762548267,
+          -64.6
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW18",
+      "scene_object": "Crosswalk_X_R06_0.55",
+      "scene_matches": 1,
+      "road_id": "R06",
+      "wait_points_xz": [
+        [
+          68.0263378110252,
+          -55.4
+        ],
+        [
+          68.0263378110252,
+          -64.6
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW19",
+      "scene_object": "Crosswalk_X_R06_0.85",
+      "scene_matches": 1,
+      "road_id": "R06",
+      "wait_points_xz": [
+        [
+          135.35393246470488,
+          -52.772282665058135
+        ],
+        [
+          142.16138113994714,
+          -58.96087236982466
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 0
+    },
+    {
+      "id": "CW20",
+      "scene_object": "Crosswalk_X_R07_0.18",
+      "scene_matches": 1,
+      "road_id": "R07",
+      "wait_points_xz": [
+        [
+          -19.1,
+          -89.4
+        ],
+        [
+          -19.1,
+          -98.6
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW21",
+      "scene_object": "Crosswalk_X_R07_0.55",
+      "scene_matches": 1,
+      "road_id": "R07",
+      "wait_points_xz": [
+        [
+          75.25,
+          -89.4
+        ],
+        [
+          75.25,
+          -98.6
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW22",
+      "scene_object": "Crosswalk_X_R07_0.85",
+      "scene_matches": 1,
+      "road_id": "R07",
+      "wait_points_xz": [
+        [
+          140.4,
+          -87.25
+        ],
+        [
+          149.6,
+          -87.25
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW23",
+      "scene_object": "Crosswalk_X_R08_0.18",
+      "scene_matches": 1,
+      "road_id": "R08",
+      "wait_points_xz": [
+        [
+          -30.800000000000004,
+          -123.4
+        ],
+        [
+          -30.800000000000004,
+          -132.6
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW24",
+      "scene_object": "Crosswalk_X_R08_0.55",
+      "scene_matches": 1,
+      "road_id": "R08",
+      "wait_points_xz": [
+        [
+          39.500000000000014,
+          -123.4
+        ],
+        [
+          39.500000000000014,
+          -132.6
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW25",
+      "scene_object": "Crosswalk_X_R08_0.85",
+      "scene_matches": 1,
+      "road_id": "R08",
+      "wait_points_xz": [
+        [
+          96.5,
+          -123.4
+        ],
+        [
+          96.5,
+          -132.6
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW26",
+      "scene_object": "Crosswalk_X_R09_0.18",
+      "scene_matches": 1,
+      "road_id": "R09",
+      "wait_points_xz": [
+        [
+          -154.6,
+          -94.16
+        ],
+        [
+          -145.4,
+          -94.16
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW27",
+      "scene_object": "Crosswalk_X_R09_0.55",
+      "scene_matches": 1,
+      "road_id": "R09",
+      "wait_points_xz": [
+        [
+          -154.6,
+          -61.599999999999994
+        ],
+        [
+          -145.4,
+          -61.599999999999994
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW28",
+      "scene_object": "Crosswalk_X_R09_0.85",
+      "scene_matches": 1,
+      "road_id": "R09",
+      "wait_points_xz": [
+        [
+          -154.6,
+          -35.2
+        ],
+        [
+          -145.4,
+          -35.2
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW29",
+      "scene_object": "Crosswalk_X_R10_0.18",
+      "scene_matches": 1,
+      "road_id": "R10",
+      "wait_points_xz": [
+        [
+          -179.8,
+          128.35
+        ],
+        [
+          -179.8,
+          119.65
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW30",
+      "scene_object": "Crosswalk_X_R10_0.55",
+      "scene_matches": 1,
+      "road_id": "R10",
+      "wait_points_xz": [
+        [
+          -128.0,
+          128.35
+        ],
+        [
+          -128.0,
+          119.65
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW31",
+      "scene_object": "Crosswalk_X_R10_0.85",
+      "scene_matches": 1,
+      "road_id": "R10",
+      "wait_points_xz": [
+        [
+          -86.0,
+          128.35
+        ],
+        [
+          -86.0,
+          119.65
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW32",
+      "scene_object": "Crosswalk_X_R11_0.18",
+      "scene_matches": 1,
+      "road_id": "R11",
+      "wait_points_xz": [
+        [
+          -178.0,
+          170.35
+        ],
+        [
+          -178.0,
+          161.65
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW33",
+      "scene_object": "Crosswalk_X_R11_0.55",
+      "scene_matches": 1,
+      "road_id": "R11",
+      "wait_points_xz": [
+        [
+          -122.5,
+          170.35
+        ],
+        [
+          -122.5,
+          161.65
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW34",
+      "scene_object": "Crosswalk_X_R11_0.85",
+      "scene_matches": 1,
+      "road_id": "R11",
+      "wait_points_xz": [
+        [
+          -77.5,
+          170.35
+        ],
+        [
+          -77.5,
+          161.65
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW35",
+      "scene_object": "Crosswalk_X_R12_0.18",
+      "scene_matches": 1,
+      "road_id": "R12",
+      "wait_points_xz": [
+        [
+          -178.0,
+          212.35
+        ],
+        [
+          -178.0,
+          203.65
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW36",
+      "scene_object": "Crosswalk_X_R12_0.55",
+      "scene_matches": 1,
+      "road_id": "R12",
+      "wait_points_xz": [
+        [
+          -122.5,
+          212.35
+        ],
+        [
+          -122.5,
+          203.65
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW37",
+      "scene_object": "Crosswalk_X_R12_0.85",
+      "scene_matches": 1,
+      "road_id": "R12",
+      "wait_points_xz": [
+        [
+          -77.5,
+          212.35
+        ],
+        [
+          -77.5,
+          203.65
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW38",
+      "scene_object": "Crosswalk_X_R13_0.18",
+      "scene_matches": 1,
+      "road_id": "R13",
+      "wait_points_xz": [
+        [
+          -141.35,
+          108.8
+        ],
+        [
+          -132.65,
+          108.8
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW39",
+      "scene_object": "Crosswalk_X_R13_0.55",
+      "scene_matches": 1,
+      "road_id": "R13",
+      "wait_points_xz": [
+        [
+          -141.35,
+          168.0
+        ],
+        [
+          -132.65,
+          168.0
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 0
+    },
+    {
+      "id": "CW40",
+      "scene_object": "Crosswalk_X_R13_0.85",
+      "scene_matches": 1,
+      "road_id": "R13",
+      "wait_points_xz": [
+        [
+          -141.35,
+          216.0
+        ],
+        [
+          -132.65,
+          216.0
+        ]
+      ],
+      "width_m": 3,
+      "control": "local_priority",
+      "road_edge_count": 1
+    },
+    {
+      "id": "CW41",
+      "scene_object": "Crosswalk_CONNECT_1",
+      "scene_matches": 0,
+      "road_id": null,
+      "wait_points_xz": [
+        [
+          -132.65,
+          170.27
+        ],
+        [
+          -132.65,
+          167.98
+        ]
+      ],
+      "width_m": 2,
+      "control": "local_priority",
+      "road_edge_count": 0
+    }
+  ],
+  "no_stop_nodes": [
+    "N0252",
+    "N0347",
+    "N0348",
+    "N0456",
+    "N0471",
+    "N0472",
+    "N0473"
+  ],
+  "spawn_component_nodes": [
+    "N0000",
+    "N0001",
+    "N0002",
+    "N0003",
+    "N0004",
+    "N0005",
+    "N0006",
+    "N0007",
+    "N0008",
+    "N0009",
+    "N0010",
+    "N0011",
+    "N0012",
+    "N0013",
+    "N0014",
+    "N0015",
+    "N0016",
+    "N0017",
+    "N0018",
+    "N0019",
+    "N0020",
+    "N0021",
+    "N0022",
+    "N0023",
+    "N0024",
+    "N0025",
+    "N0026",
+    "N0027",
+    "N0028",
+    "N0029",
+    "N0030",
+    "N0031",
+    "N0032",
+    "N0033",
+    "N0034",
+    "N0035",
+    "N0036",
+    "N0037",
+    "N0038",
+    "N0039",
+    "N0040",
+    "N0041",
+    "N0042",
+    "N0043",
+    "N0044",
+    "N0045",
+    "N0046",
+    "N0047",
+    "N0048",
+    "N0049",
+    "N0050",
+    "N0051",
+    "N0052",
+    "N0053",
+    "N0054",
+    "N0055",
+    "N0056",
+    "N0057",
+    "N0058",
+    "N0059",
+    "N0060",
+    "N0061",
+    "N0062",
+    "N0063",
+    "N0064",
+    "N0065",
+    "N0066",
+    "N0067",
+    "N0068",
+    "N0069",
+    "N0070",
+    "N0071",
+    "N0072",
+    "N0073",
+    "N0074",
+    "N0075",
+    "N0076",
+    "N0077",
+    "N0078",
+    "N0079",
+    "N0080",
+    "N0081",
+    "N0082",
+    "N0083",
+    "N0084",
+    "N0085",
+    "N0086",
+    "N0087",
+    "N0088",
+    "N0089",
+    "N0090",
+    "N0091",
+    "N0092",
+    "N0093",
+    "N0094",
+    "N0095",
+    "N0096",
+    "N0097",
+    "N0098",
+    "N0099",
+    "N0100",
+    "N0101",
+    "N0102",
+    "N0103",
+    "N0104",
+    "N0105",
+    "N0106",
+    "N0107",
+    "N0108",
+    "N0109",
+    "N0110",
+    "N0111",
+    "N0112",
+    "N0113",
+    "N0114",
+    "N0115",
+    "N0116",
+    "N0117",
+    "N0118",
+    "N0119",
+    "N0120",
+    "N0121",
+    "N0122",
+    "N0123",
+    "N0124",
+    "N0125",
+    "N0126",
+    "N0127",
+    "N0128",
+    "N0129",
+    "N0130",
+    "N0131",
+    "N0132",
+    "N0133",
+    "N0134",
+    "N0135",
+    "N0136",
+    "N0137",
+    "N0138",
+    "N0139",
+    "N0140",
+    "N0141",
+    "N0142",
+    "N0143",
+    "N0144",
+    "N0145",
+    "N0146",
+    "N0147",
+    "N0148",
+    "N0149",
+    "N0150",
+    "N0151",
+    "N0152",
+    "N0153",
+    "N0154",
+    "N0155",
+    "N0156",
+    "N0157",
+    "N0158",
+    "N0159",
+    "N0160",
+    "N0161",
+    "N0162",
+    "N0163",
+    "N0164",
+    "N0165",
+    "N0166",
+    "N0167",
+    "N0168",
+    "N0169",
+    "N0170",
+    "N0171",
+    "N0172",
+    "N0173",
+    "N0174",
+    "N0175",
+    "N0176",
+    "N0177",
+    "N0178",
+    "N0179",
+    "N0180",
+    "N0181",
+    "N0182",
+    "N0183",
+    "N0184",
+    "N0185",
+    "N0186",
+    "N0187",
+    "N0188",
+    "N0189",
+    "N0190",
+    "N0191",
+    "N0192",
+    "N0193",
+    "N0194",
+    "N0195",
+    "N0196",
+    "N0197",
+    "N0198",
+    "N0199",
+    "N0200",
+    "N0201",
+    "N0202",
+    "N0203",
+    "N0204",
+    "N0205",
+    "N0206",
+    "N0207",
+    "N0208",
+    "N0209",
+    "N0210",
+    "N0211",
+    "N0212",
+    "N0213",
+    "N0214",
+    "N0215",
+    "N0216",
+    "N0217",
+    "N0218",
+    "N0219",
+    "N0220",
+    "N0221",
+    "N0222",
+    "N0223",
+    "N0224",
+    "N0225",
+    "N0226",
+    "N0227",
+    "N0228",
+    "N0229",
+    "N0230",
+    "N0231",
+    "N0232",
+    "N0233",
+    "N0234",
+    "N0235",
+    "N0236",
+    "N0237",
+    "N0238",
+    "N0239",
+    "N0240",
+    "N0241",
+    "N0242",
+    "N0243",
+    "N0244",
+    "N0245",
+    "N0246",
+    "N0247",
+    "N0248",
+    "N0249",
+    "N0250",
+    "N0251",
+    "N0253",
+    "N0254",
+    "N0255",
+    "N0256",
+    "N0257",
+    "N0258",
+    "N0259",
+    "N0260",
+    "N0261",
+    "N0262",
+    "N0263",
+    "N0264",
+    "N0265",
+    "N0266",
+    "N0267",
+    "N0268",
+    "N0269",
+    "N0270",
+    "N0271",
+    "N0272",
+    "N0273",
+    "N0274",
+    "N0275",
+    "N0276",
+    "N0277",
+    "N0278",
+    "N0279",
+    "N0280",
+    "N0281",
+    "N0282",
+    "N0283",
+    "N0284",
+    "N0285",
+    "N0286",
+    "N0287",
+    "N0288",
+    "N0289",
+    "N0290",
+    "N0291",
+    "N0292",
+    "N0293",
+    "N0294",
+    "N0295",
+    "N0296",
+    "N0297",
+    "N0298",
+    "N0299",
+    "N0300",
+    "N0301",
+    "N0302",
+    "N0303",
+    "N0304",
+    "N0305",
+    "N0306",
+    "N0307",
+    "N0308",
+    "N0309",
+    "N0310",
+    "N0311",
+    "N0312",
+    "N0313",
+    "N0314",
+    "N0315",
+    "N0316",
+    "N0317",
+    "N0318",
+    "N0319",
+    "N0320",
+    "N0321",
+    "N0322",
+    "N0323",
+    "N0324",
+    "N0325",
+    "N0326",
+    "N0327",
+    "N0328",
+    "N0329",
+    "N0330",
+    "N0331",
+    "N0332",
+    "N0333",
+    "N0334",
+    "N0335",
+    "N0336",
+    "N0337",
+    "N0338",
+    "N0339",
+    "N0340",
+    "N0341",
+    "N0342",
+    "N0343",
+    "N0344",
+    "N0345",
+    "N0346",
+    "N0349",
+    "N0350",
+    "N0351",
+    "N0352",
+    "N0353",
+    "N0354",
+    "N0355",
+    "N0356",
+    "N0357",
+    "N0358",
+    "N0359",
+    "N0360",
+    "N0361",
+    "N0362",
+    "N0363",
+    "N0364",
+    "N0365",
+    "N0366",
+    "N0367",
+    "N0368",
+    "N0369",
+    "N0370",
+    "N0371",
+    "N0372",
+    "N0373",
+    "N0374",
+    "N0375",
+    "N0376",
+    "N0377",
+    "N0378",
+    "N0379",
+    "N0380",
+    "N0381",
+    "N0382",
+    "N0383",
+    "N0384",
+    "N0385",
+    "N0386",
+    "N0387",
+    "N0388",
+    "N0389",
+    "N0390",
+    "N0391",
+    "N0392",
+    "N0393",
+    "N0394",
+    "N0395",
+    "N0396",
+    "N0397",
+    "N0398",
+    "N0399",
+    "N0400",
+    "N0401",
+    "N0402",
+    "N0403",
+    "N0404",
+    "N0405",
+    "N0406",
+    "N0407",
+    "N0408",
+    "N0409",
+    "N0410",
+    "N0411",
+    "N0412",
+    "N0413",
+    "N0414",
+    "N0415",
+    "N0416",
+    "N0417",
+    "N0418",
+    "N0419",
+    "N0420",
+    "N0421",
+    "N0422",
+    "N0423",
+    "N0424",
+    "N0425",
+    "N0426",
+    "N0427",
+    "N0428",
+    "N0429",
+    "N0430",
+    "N0431",
+    "N0432",
+    "N0433",
+    "N0434",
+    "N0435",
+    "N0436",
+    "N0437",
+    "N0438",
+    "N0439",
+    "N0440",
+    "N0441",
+    "N0442",
+    "N0443",
+    "N0444",
+    "N0445",
+    "N0446",
+    "N0447",
+    "N0448",
+    "N0449",
+    "N0450",
+    "N0451",
+    "N0452",
+    "N0453",
+    "N0454",
+    "N0455",
+    "N0457",
+    "N0458",
+    "N0459",
+    "N0460",
+    "N0461",
+    "N0462",
+    "N0463",
+    "N0464",
+    "N0465",
+    "N0466",
+    "N0467",
+    "N0468",
+    "N0469",
+    "N0470",
+    "N0474",
+    "N0475",
+    "N0476",
+    "N0477",
+    "N0478",
+    "N0479",
+    "N0480",
+    "N0481",
+    "N0482"
+  ],
+  "event_route_changes": [
+    {
+      "event": 3,
+      "leg": "approach",
+      "from_node": "N0027",
+      "to_node": "N0456",
+      "blocked_edges": [
+        "W0382",
+        "W0490"
+      ],
+      "replacement_edges": null,
+      "status": "needs_pedestrian_anchor"
+    },
+    {
+      "event": 3,
+      "leg": "exit",
+      "from_node": "N0456",
+      "to_node": "N0150",
+      "blocked_edges": [
+        "W0490",
+        "W0382"
+      ],
+      "replacement_edges": null,
+      "status": "needs_pedestrian_anchor"
+    },
+    {
+      "event": 7,
+      "leg": "approach",
+      "from_node": "N0027",
+      "to_node": "N0459",
+      "blocked_edges": [
+        "W0229"
+      ],
+      "replacement_edges": [
+        "W0488",
+        "W0489",
+        "W0038",
+        "W0227",
+        "W0228",
+        "W0051",
+        "W0050",
+        "W0049",
+        "W0291",
+        "W0129",
+        "W0230",
+        "W0495"
+      ],
+      "status": "detour"
+    },
+    {
+      "event": 11,
+      "leg": "approach",
+      "from_node": "N0027",
+      "to_node": "N0449",
+      "blocked_edges": [
+        "W0239"
+      ],
+      "replacement_edges": [
+        "W0024",
+        "W0273",
+        "W0036",
+        "W0035",
+        "W0034",
+        "W0491",
+        "W0033",
+        "W0237",
+        "W0238",
+        "W0056",
+        "W0294",
+        "W0126",
+        "W0482",
+        "W0481"
+      ],
+      "status": "detour"
+    },
+    {
+      "event": 14,
+      "leg": "approach",
+      "from_node": "N0027",
+      "to_node": "N0463",
+      "blocked_edges": [
+        "W0242"
+      ],
+      "replacement_edges": [
+        "W0024",
+        "W0025",
+        "W0026",
+        "W0276",
+        "W0030",
+        "W0515",
+        "W0514",
+        "W0499",
+        "W0241",
+        "W0255",
+        "W0256",
+        "W0502"
+      ],
+      "status": "detour"
+    },
+    {
+      "event": 16,
+      "leg": "approach",
+      "from_node": "N0027",
+      "to_node": "N0167",
+      "blocked_edges": [
+        "W0229",
+        "W0231"
+      ],
+      "replacement_edges": [
+        "W0488",
+        "W0489",
+        "W0038",
+        "W0227",
+        "W0228",
+        "W0051",
+        "W0050",
+        "W0049",
+        "W0291",
+        "W0130",
+        "W0131",
+        "W0132",
+        "W0315",
+        "W0122",
+        "W0123",
+        "W0279",
+        "W0160",
+        "W0159",
+        "W0158"
+      ],
+      "status": "detour"
+    },
+    {
+      "event": 18,
+      "leg": "approach",
+      "from_node": "N0027",
+      "to_node": "N0465",
+      "blocked_edges": [
+        "W0242"
+      ],
+      "replacement_edges": [
+        "W0024",
+        "W0025",
+        "W0026",
+        "W0276",
+        "W0030",
+        "W0515",
+        "W0514",
+        "W0499",
+        "W0241",
+        "W0507"
+      ],
+      "status": "detour"
+    },
+    {
+      "event": 26,
+      "leg": "approach",
+      "from_node": "N0027",
+      "to_node": "N0456",
+      "blocked_edges": [
+        "W0382",
+        "W0490"
+      ],
+      "replacement_edges": null,
+      "status": "needs_pedestrian_anchor"
+    },
+    {
+      "event": 26,
+      "leg": "exit",
+      "from_node": "N0456",
+      "to_node": "N0150",
+      "blocked_edges": [
+        "W0490",
+        "W0382"
+      ],
+      "replacement_edges": null,
+      "status": "needs_pedestrian_anchor"
+    },
+    {
+      "event": 27,
+      "leg": "approach",
+      "from_node": "N0027",
+      "to_node": "N0116",
+      "blocked_edges": [
+        "W0229",
+        "W0231"
+      ],
+      "replacement_edges": [
+        "W0488",
+        "W0489",
+        "W0038",
+        "W0227",
+        "W0228",
+        "W0051",
+        "W0050",
+        "W0049",
+        "W0291",
+        "W0129",
+        "W0230",
+        "W0495",
+        "W0496",
+        "W0318",
+        "W0116",
+        "W0117",
+        "W0232",
+        "W0109",
+        "W0517"
+      ],
+      "status": "detour"
+    },
+    {
+      "event": 28,
+      "leg": "approach",
+      "from_node": "N0027",
+      "to_node": "N0472",
+      "blocked_edges": [
+        "W0239",
+        "W0518"
+      ],
+      "replacement_edges": null,
+      "status": "needs_pedestrian_anchor"
+    },
+    {
+      "event": 28,
+      "leg": "exit",
+      "from_node": "N0472",
+      "to_node": "N0473",
+      "blocked_edges": [
+        "W0519"
+      ],
+      "replacement_edges": null,
+      "status": "needs_pedestrian_anchor"
+    }
+  ],
+  "saved_event_path_audit": {
+    "status": "design_xz_geometry_checked",
+    "fixed_path_uncovered_roads": [],
+    "fixed_return_uncovered_roads": [],
+    "test_path_count": 27,
+    "test_paths_with_uncovered_roads": {
+      "EXHIBITION_01": [
+        "R01"
+      ],
+      "EXHIBITION_03": [
+        "R02",
+        "R10",
+        "R11",
+        "R13"
+      ],
+      "EXHIBITION_04": [
+        "R01"
+      ],
+      "EXHIBITION_07": [
+        "R01",
+        "R03"
+      ],
+      "EXHIBITION_08": [
+        "R01"
+      ],
+      "EXHIBITION_11": [
+        "R01",
+        "R03"
+      ],
+      "EXHIBITION_14": [
+        "R01"
+      ],
+      "EXHIBITION_15": [
+        "R01"
+      ],
+      "EXHIBITION_16": [
+        "R01",
+        "R02",
+        "R03"
+      ],
+      "EXHIBITION_18": [
+        "R01"
+      ],
+      "EXHIBITION_20": [
+        "R02",
+        "R05",
+        "R10",
+        "R11",
+        "R12",
+        "R13"
+      ],
+      "EXHIBITION_21": [
+        "R01"
+      ],
+      "EXHIBITION_23": [
+        "R01"
+      ],
+      "EXHIBITION_25": [
+        "R01"
+      ],
+      "EXHIBITION_27": [
+        "R01",
+        "R03",
+        "R06"
+      ],
+      "EXHIBITION_28": [
+        "R01",
+        "R03",
+        "R06"
+      ],
+      "EXHIBITION_29": [
+        "R01",
+        "R02"
+      ]
+    }
+  }
+}

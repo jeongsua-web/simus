@@ -1,3 +1,5 @@
+import type { NpcSpeedMultiplier } from "./lib/npc-motion";
+
 export type SessionStatus = "RUNNING" | "CLOSING" | "FINALIZED";
 export type Choice = { id: string; label: string };
 export type Situation = { id: string; code?: string; title: string; body: string; choices: Choice[] };
@@ -15,4 +17,15 @@ export type Department = { id: string; faculty: string; name: string };
 export type Profile = { character_id: string; glasses_id: string; nickname: string; department_id: string; department_name: string; mbti: string; citizen_no: string };
 export type ApiError = { error?: { code?: string; message?: string } };
 
-export type EventState = { phase: "WAITING" | "GUIDING" | "ACTIVE" | "CLOSED"; can_start: boolean; server_time: string; waiting_since: string | null; deadline_at: string | null; event: { id: string; situation_id: string; trigger_kind: string; started_at: string; situation: Situation } | null };
+export type EventState = {
+  phase: "WAITING" | "GUIDING" | "ACTIVE" | "CLOSED";
+  can_start: boolean;
+  plaza_completed?: boolean;
+  situations_remaining?: number;
+  test_situations?: { id: string; code: string; title: string }[];
+  speed_multiplier?: NpcSpeedMultiplier;
+  server_time: string;
+  waiting_since: string | null;
+  deadline_at: string | null;
+  event: { id: string; situation_id: string; trigger_kind: string; started_at: string; situation: Situation } | null;
+};

@@ -11,6 +11,7 @@ namespace Simus.City
         public string SessionId { get; private set; }
         public string OwnNpcId { get; private set; }
         public NpcCrowdSnapshot Own { get; private set; }
+        public NpcCrowdSnapshot EventActors { get; private set; }
         public string BridgeId { get; private set; }
         public readonly string MapVersion;
         private JToken ownMotion;
@@ -47,6 +48,13 @@ namespace Simus.City
             {
                 if (Own != null) next.FreezeAtMs = Math.Min(next.FreezeAtMs, Own.FreezeAtMs);
                 Own = next;
+                EventActors = null;
+                if (root["event_npcs"] is JArray eventNpcs)
+                {
+                    var eventSnapshot = (JObject)root.DeepClone();
+                    eventSnapshot["npcs"] = eventNpcs.DeepClone();
+                    EventActors = ParseSnapshot(eventSnapshot, session, now);
+                }
             }
             SessionId = session; OwnNpcId = own; BridgeId = bridge; ownMotion = signature;
             return type == "INIT";
@@ -92,6 +100,8 @@ namespace Simus.City
                 var npc = new NpcMotion {
                     Id = Uuid(item, "npc_id"),
                     CharacterId = CitizenCharacterAppearance.Normalize(item.Value<string>("character_id")),
+                    EventRole = item.Value<string>("event_role"),
+                    Hidden = item.Value<bool?>("hidden") == true,
                     GlassesId = CitizenCharacterAppearance.NormalizeGlasses(item.Value<string>("glasses_id"), CitizenCharacterAppearance.Normalize(item.Value<string>("character_id"))),
                     EpochMs = Timestamp(item, "epoch"),
                     Speed = Number(motion["speed_mps"]), Loop = (bool)motion["loop"],
