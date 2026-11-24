@@ -1,0 +1,30 @@
+{
+  "index.html": {
+    "bytes": 1552,
+    "sha256": "3dc3b3a3f1f8f0655f04e88c1c8310e51af4d3c7043783bb094f9ef9b05b3f12"
+  },
+  "build.json": {
+    "bytes": 512,
+    "sha256": "b1a04ed10fd805257f805dc18b0b36298b47469748f30ea52283d431c63292fc"
+  },
+  "bridge.js": {
+    "bytes": 5884,
+    "sha256": "70d23e67cfad185da55829586a27d69759813f582dc28059d78bf2a24f665a29"
+  },
+  "Build/webgl.loader.js": {
+    "bytes": 26983,
+    "sha256": "effd58e02c11b2a60367aa4535180f98a3dfa00ec5d3200df8c920f3286fc0ee"
+  },
+  "Build/webgl.framework.js": {
+    "bytes": 413427,
+    "sha256": "bddd23c9938ab61f043de9b54586e6d3dba99436355c9b3a3bfa3b1524121b0c"
+  },
+  "Build/webgl.wasm": {
+    "bytes": 28635865,
+    "sha256": "e9f2c452ca54f2e19e2cec120438b7abcff5da12d8b74def4e86f134e8fa78b9"
+  },
+  "Build/webgl.data": {
+    "bytes": 183499063,
+    "sha256": "1ba7ab728f93a08e75aef3705669824478dd2b55f4e3ac9fece813432f8c2174"
+  }
+}

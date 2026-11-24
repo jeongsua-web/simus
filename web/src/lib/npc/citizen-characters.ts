@@ -1,5 +1,6 @@
 /** Stable appearance IDs shared with Unity's Happiness modular character variants. */
 export const CITIZEN_CHARACTERS = [
+  { id: 'npc_13', label: '민머리', portrait: '/characters/custom/npc_13_none.png' },
   { id: 'npc_01', label: '가르마', portrait: '/characters/custom/npc_01_none.png' },
   { id: 'npc_02', label: '비니', portrait: '/characters/custom/npc_02_none.png' },
   { id: 'npc_03', label: '앞머리 단발', portrait: '/characters/custom/npc_03_none.png' },
@@ -12,7 +13,6 @@ export const CITIZEN_CHARACTERS = [
   { id: 'npc_10', label: '긴 생머리', portrait: '/characters/custom/npc_10_none.png' },
   { id: 'npc_11', label: '모자 · 곱슬 단발', portrait: '/characters/custom/npc_11_none.png' },
   { id: 'npc_12', label: '올림머리', portrait: '/characters/custom/npc_12_none.png' },
-  { id: 'npc_13', label: '민머리', portrait: '/characters/custom/npc_13_none.png' },
   { id: 'npc_14', label: '긴 곱슬머리', portrait: '/characters/custom/npc_14_none.png' },
   { id: 'npc_15', label: '앞머리 짧은 머리', portrait: '/characters/custom/npc_15_none.png' },
   { id: 'npc_16', label: '낮게 묶은 짧은 머리', portrait: '/characters/custom/npc_16_none.png' },

@@ -19,6 +19,26 @@ export async function runFlow({ pool, env, stopServer, startServer }) {
   assert.equal((await call('/api/participants', { method: 'POST', headers: { origin: 'https://untrusted.invalid' } })).status, 403);
   assert.equal((await call('/api/participants', { method: 'POST', headers: { origin: env.TEST_API_URL, 'sec-fetch-site': 'cross-site' } })).status, 403);
   console.log('PASS: matching browser Origin accepted; foreign Origin and cross-site requests rejected');
+  const original = await call('/api/participants', { method: 'POST' });
+  assert.equal(original.status, 201);
+  const restart = cookie => call('/api/participants?restart=1', { method: 'POST', cookie });
+  const reused = await restart(original.cookie);
+  assert.equal(reused.status, 200);
+  assert.equal(reused.body.participant_id, original.body.participant_id);
+  await pool.query(`UPDATE simus.participant_credentials SET created_at=clock_timestamp()-interval '31 days',
+    expires_at=clock_timestamp()-interval '1 day' WHERE participant_id=$1`, [original.body.participant_id]);
+  const expired = await call('/api/participants', { method: 'POST', cookie: original.cookie });
+  assert.equal(expired.status, 401);
+  assert.equal(expired.body.error.code, 'PARTICIPANT_AUTH_EXPIRED');
+  assert.equal(expired.cookie, undefined);
+  const replacement = await restart(original.cookie);
+  assert.equal(replacement.status, 201);
+  assert.notEqual(replacement.body.participant_id, original.body.participant_id);
+  assert.ok(replacement.cookie);
+  assert.notEqual(replacement.cookie, original.cookie);
+  assert.equal((await call('/api/participants', { cookie: replacement.cookie })).status, 200);
+  assert.equal((await call('/api/participants', { cookie: original.cookie })).status, 401);
+  console.log('PASS: expired credentials require explicit restart; valid identity is reused');
   await pool.query("INSERT INTO simus.admin_users(id,auth_subject,display_name) VALUES($1,'flow-admin','Isolated Test')", [admin]);
   const rules = { version:1,alignment_thresholds:{negative:-3,positive:3},alignment_axes:{x:{negative:'CHAOTIC',positive:'LAWFUL'},y:{negative:'EVIL',positive:'GOOD'}},
     interpretations:Object.fromEntries(['LAWFUL_GOOD','LAWFUL_NEUTRAL','LAWFUL_EVIL','NEUTRAL_GOOD','TRUE_NEUTRAL','NEUTRAL_EVIL','CHAOTIC_GOOD','CHAOTIC_NEUTRAL','CHAOTIC_EVIL'].map(x=>[x,x])),

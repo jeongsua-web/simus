@@ -19,7 +19,8 @@ export async function runEventBrowser({ pool, env, token, templateId }) {
   try {
     sid = (await admin('/api/admin/sessions', { template_session_id: templateId, name: 'Disposable event browser', duration_seconds: 600, impact_scale: 0.1, request_key: randomUUID() })).session_id;
     // Synthetic locations belong ONLY to this disposable browser fixture.
-    const motion=(await pool.query('SELECT npc_motion FROM simus.simulation_sessions WHERE id=$1',[sid])).rows[0].npc_motion;
+    const motion=(await pool.query(`UPDATE simus.simulation_sessions target SET npc_motion=source.npc_motion
+      FROM simus.simulation_sessions source WHERE target.id=$1 AND source.id=$2 RETURNING target.npc_motion`,[sid,templateId])).rows[0].npc_motion;
     await pool.query('UPDATE simus.session_situations SET event_location=NULL,is_generic=false WHERE session_id=$1', [sid]);
     const generic = (await pool.query('SELECT id FROM simus.session_situations WHERE session_id=$1 ORDER BY display_order,id LIMIT 1', [sid])).rows[0].id;
     await pool.query('UPDATE simus.session_situations SET is_generic=false,event_location=$3 WHERE session_id=$1 AND id=$2',

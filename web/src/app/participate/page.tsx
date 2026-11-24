@@ -23,8 +23,10 @@ export default function ParticipatePage() {
   if (state.loadError && (!state.session || !state.profile || state.authExpired)) return (
     <main className={styles.page}><div className={styles.stateCard}>
       <h1>{state.authExpired ? "참여 인증이 만료되었습니다" : "정보를 불러오지 못했습니다"}</h1>
-      <p role="alert">{state.loadError}</p>
-      {!state.authExpired && <button className={styles.button} onClick={state.retryLoad}>다시 불러오기</button>}
+      <p role="alert">{state.authExpired ? "새 시민으로 시작하면 시민증과 응답 기록이 새로 시작돼요." : state.loadError}</p>
+      {state.authExpired
+        ? <button className={styles.button} onClick={state.restart}>새 참여 시작</button>
+        : <button className={styles.button} onClick={state.retryLoad}>다시 불러오기</button>}
       <Link className={styles.textLink} href="/">처음으로</Link>
     </div></main>
   );
@@ -95,8 +97,12 @@ export default function ParticipatePage() {
         <details className={styles.choicePanel} open>
           <summary><span>도시에서 선택하기</span><small>{activeEvent ? "상황 발생" : "이벤트 대기"}</small></summary>
           <div className={styles.choicePanelBody}>
-            {!activeSituation && <div className={styles.emptySituation} role="status" aria-live="polite">
-              <h2>{!state.session.accepting_choices || state.eventState?.phase === "CLOSED" ? "이벤트 접수가 마감되었습니다" : state.eventState?.phase === "GUIDING" ? "새로운 상황을 만나러 이동 중이에요" : "도시를 둘러보고 있어요"}</h2>
+            {!activeSituation && <div className={styles.emptySituation}>
+              <h2 role="status">{!state.session.accepting_choices || state.eventState?.phase === "CLOSED" ? "이벤트 접수가 마감되었습니다" : state.eventState?.phase === "GUIDING" ? "새로운 상황을 만나러 이동 중이에요" : "도시를 둘러보고 있어요"}</h2>
+              {state.session.accepting_choices && state.eventState?.can_start &&
+                <button type="button" className={styles.button} disabled={state.startingEvent || Boolean(state.pending)}
+                  onClick={() => void state.startEvent()}>{state.startingEvent ? "상황을 시작하는 중…" : "상황 발생"}</button>}
+              {state.eventStartError && <p role="alert">{state.eventStartError}</p>}
             </div>}
             {activeEvent && activeSituation && <SituationCard key={activeEvent.id} situation={activeSituation} selectedChoiceId={state.selected[activeEvent.id]}
               done={Boolean(state.answered[activeEvent.id])} acceptingChoices={state.session.accepting_choices}

@@ -27,6 +27,19 @@ export async function runBrowserFlow({ env, pool, round, token, call }) {
     const started = await startResponse;
     assert.equal(started.status(), 200, await started.text());
     await card.getByRole('button', { name: '수동 종료', exact: true }).waitFor();
+    const recoveryContext = await browser.newContext();
+    await recoveryContext.addCookies([{ name: 'simus_participant', value: 'expired', url: env.TEST_API_URL }]);
+    const recovery = await recoveryContext.newPage();
+    await recovery.addInitScript(submission => {
+      localStorage.setItem('simus_pending_choice_v1', JSON.stringify(submission));
+    }, { session_id: r.sid, situation_id: r.tid, choice_id: r.a, request_key: crypto.randomUUID() });
+    await recovery.goto(env.TEST_API_URL + '/participate');
+    await recovery.getByRole('heading', { name: '참여 인증이 만료되었습니다' }).waitFor();
+    await recovery.getByRole('button', { name: '새 참여 시작' }).click();
+    await recovery.getByRole('heading', { name: '시민증 만들기' }).waitFor();
+    assert.equal(await recovery.evaluate(() => localStorage.getItem('simus_pending_choice_v1')), null);
+    await recoveryContext.close();
+    console.log('PASS: expired-cookie screen restarts into citizen registration and discards the previous pending choice');
     await Promise.all([a, b, stranger].map(p => p.goto(env.TEST_API_URL + '/participate')));
     await Promise.all([a, b, stranger].map((p, i) => enterCity(p, { nickname: `참여자${i + 1}` })));
     await Promise.all([a, b, stranger].map(p => p.getByText('도시를 둘러보고 있어요', { exact: true }).waitFor()));

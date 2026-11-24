@@ -1,8 +1,8 @@
 import { access, readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import { ApiError } from "../api";
-import { cityBuildBase, isCityV002Map, V002_PHASE1_MAP_VERSION, V003_MAP_VERSION, V003_PATH_VERSION } from "./city-builds";
-import { graphForMap, isGraphSegment, locate } from "./city-v002-graph.mjs";
+import { cityBuildBase, isCityV002Map, isRetiredCity, V003_MAP_VERSION, V003_PATH_VERSION } from "./city-builds";
+import { locate } from "./city-v002-graph.mjs";
 import { assertLocationGroups } from "../events/event-locations";
 import { validateMotion } from "../npc/npc-position-sync";
 import { localRoute } from "../routes/v003-route";
@@ -12,6 +12,8 @@ import { localRoute } from "../routes/v003-route";
 export async function assertSessionBuild(motion: unknown) {
   if (!motion) throw new ApiError(409, "NPC_MOTION_NOT_CONFIGURED", "회차의 NPC 맵과 경로를 먼저 설정해주세요.");
   const m = motion as Record<string, unknown>;
+  if (typeof m.map_version === "string" && isRetiredCity(m.map_version))
+    throw new ApiError(409, "CITY_MAP_RETIRED", "종료된 도시 버전입니다. 이 회차를 원본으로 새 v003 회차를 준비해주세요.");
   try { validateMotion(m); }
   catch { throw new ApiError(409, "NPC_PATH_INCOMPATIBLE", "회차의 경로 버전 또는 NPC 보행 경로 데이터가 호환되지 않습니다."); }
   const base = cityBuildBase(m.map_version as string);
@@ -40,19 +42,6 @@ export async function assertSessionBuild(motion: unknown) {
       build.source_scene_sha256 !== route.source_scene_sha256 ||
       JSON.stringify(m.points) !== JSON.stringify(route.points) || m.speed_mps !== route.speed_mps || m.loop !== false)
       throw new ApiError(409, "NPC_PATH_INCOMPATIBLE", "v003 기준 씬·경로·WebGL 빌드가 일치하지 않습니다.");
-  }
-  if (isCityV002Map(m.map_version as string)) {
-    const graph = graphForMap(m.map_version as string);
-    if (m.path_version !== graph.path_version ||
-      build.kind !== "city-rebuild-v002-session" || build.npc_motion_enabled !== true || !build.path_versions?.includes(graph.path_version))
-      throw new ApiError(409, "NPC_PATH_INCOMPATIBLE", "v002 서버 그래프·회차 경로·WebGL 지원 버전이 일치하지 않습니다.");
-    // Phase 1 must be rebuilt from the matching saved scene; a legacy binary cannot pass as Phase 1.
-    if (m.map_version === V002_PHASE1_MAP_VERSION && build.source_scene_sha256 !== graph.source_sha256)
-      throw new ApiError(409, "NPC_PATH_INCOMPATIBLE", "Phase 1 씬과 WebGL 빌드의 기준 파일이 일치하지 않습니다.");
-    const points = m.points as number[][];
-    const legs = m.loop ? [...points, points[0]] : points;
-    if (legs.slice(1).some((point, i) => !isGraphSegment(legs[i], point, m.map_version as string)))
-      throw new ApiError(409, "NPC_PATH_INCOMPATIBLE", "v002 NPC 경로가 배포 맵의 보행 그래프를 벗어납니다.");
   }
 }
 

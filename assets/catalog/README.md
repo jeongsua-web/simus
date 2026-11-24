@@ -1,5 +1,7 @@
 # 에셋 찾기
 
+2026-11-24부터 웹 회차는 CityMasterplan_v003을 사용한다. v001·v002 WebGL 배포본과 독립 미리보기는 [배포본 보관소](../archive/maps/retired-webgl/README.md)로 옮겼다. [파일 이동 및 SHA-256 기록](moves-2026-11-24.json).
+
 ## CityRebuild_v002 Phase 8-A/B 폴리싱
 
 카메라·도시 시각 개선은 기존 v002 배치를 유지하는 작업이다. 신규 [가로 소품 kit](../library/props/city_v002_phase8_street_kit_v001/README.md)은 별도 Blender 원본과 FBX로 제작한 화단·벤치·가로등이며 `received`다. 씬 전용 재질·장식 메시의 위치는 `unity/Assets/SIMUS/Scenes/city_rebuild_v002/phase8/`다. 기존 Blender 원본과 기존 재질 자산을 덮어쓰지 않는다. [실제 Game 카메라 전후 비교](../../docs/verification/city-rebuild-v002-phase8-captures/index.html)의 최종 검증 여부는 [Phase 8 QA](../../docs/verification/city-rebuild-v002-phase8-qa.md)를 기준으로 확인한다. 조명·성능 최적화(8-C/D) 및 전시 승인과는 별개다.

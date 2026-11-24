@@ -66,8 +66,10 @@ export async function runStageIntegration({ pool, env, token, demoId }) {
   assert.equal(crowd.frozen, false);
   assert.deepEqual(Object.keys(crowd.npcs[0]).sort(), ['character_id', 'epoch', 'glasses_id', 'motion', 'npc_id']);
   assert.deepEqual((await call(`/api/sessions/${sid}/npc`, { cookie })).body.npcs.map(stableNpc), [stableNpc(ownNpc)]);
-  assert.deepEqual((await pool.query('SELECT npc_motion FROM simus.participant_sessions WHERE session_id=$1 AND npc_id=$2', [sid,ownNpc.npc_id])).rows[0].npc_motion,
-    stableNpc(ownNpc).motion, 'membership route remains immutable while runtime metadata initializes');
+  const routes = (await pool.query(`SELECT p.npc_motion AS assigned, s.npc_motion AS configured
+    FROM simus.participant_sessions p JOIN simus.simulation_sessions s ON s.id=p.session_id
+    WHERE p.session_id=$1 AND p.npc_id=$2`, [sid,ownNpc.npc_id])).rows[0];
+  assert.deepEqual(routes.assigned, routes.configured, 'membership keeps the canonical route while v003 waits at the spawn');
   assert.equal((await pool.query('SELECT count(*) FROM simus.choice_records WHERE session_id=$1', [sid])).rows[0].count, '0');
   await assert.rejects(pool.query("UPDATE simus.participant_sessions SET npc_id=gen_random_uuid() WHERE session_id=$1", [sid]), /immutable/);
   const situation = await fixtureSituation(pool, sid);

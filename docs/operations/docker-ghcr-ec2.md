@@ -111,16 +111,16 @@ curl --fail --silent --show-error http://127.0.0.1:3000/api/health
 
 ## 5. WebGL 이미지 포함
 
-Phase 2-B로 Unity 파일 전달 경로를 통합했다. Git에서 제외된 `web/public/city`, `city-rebuild-v002`, `unity-preview`를 Actions가 **같은 저장소의 고정 GitHub Release asset**에서 가져온다. `web/unity-build.lock.json`의 archive/개별 파일 SHA-256·크기·맵/경로 버전을 검사하고, Docker 빌드 전과 최종 이미지에서도 검사한다. 파일이 없거나 다르면 게시를 중단한다. verify 컨테이너는 실제 Next.js HTTP 응답의 해시·MIME·캐시도 확인한다.
+이미지는 `city-masterplan-v003-local-v1` WebGL만 포함한다. Actions가 해당 Git LFS 데이터 파일을 받고 `web/v003-webgl.lock.json`의 파일 크기와 SHA-256을 검사한다. Docker 빌드 단계와 최종 이미지에서 검사를 반복하며, 검증 컨테이너는 Next.js HTTP 응답의 해시·WASM MIME·캐시를 확인한다.
 
 EC2에 별도로 WebGL을 복사하거나 마운트할 필요가 없다. 코드·Unity가 함께 포함된 이미지 digest를 배포/롤백한다. 기존에 `compose.webgl.yaml`을 사용했다면 오래된 bind mount가 이미지의 파일을 가리지 않도록 제거한 배포 구성을 사용한다. `/app/public` 전체를 마운트하지 않는다.
 
-현재 포함된 v002는 `test-only-city-rebuild-v002-webgl-v1`이며 `exhibition_ready:false`다. 새 전시 맵의 map_version·최종 30상황 위치 확정과 별개이며, 과거 Neighborhood를 재사용하지 않는다. 회차 map_version이 배포 빌드와 맞아야 한다. `/unity` 미리보기와 호환되는 새 v002 회차 참여를 실제 HTTPS 출처에서 확인한다. 최초 Release 등록·재빌드·공개 URL 파일 검증은 [Unity 산출물 안내](unity-webgl-artifacts.md)를 따른다.
+운영 전환에서는 020 마이그레이션 적용을 확인하고 새 v003 회차를 준비한다. 기존 진행 회차가 있으면 정상 종료한 뒤 v003 회차를 시작한다. 실제 HTTPS 출처에서 시민증과 광장 대표 상황을 확인한다. [Unity 산출물 안내](unity-webgl-artifacts.md)
 
 이미지 내 파일의 HTTP 검증은 다음 명령으로 수행한다. DB 접속은 하지 않는다.
 
 ```sh
-sudo docker compose --env-file .env.production -f compose.prod.yaml exec -T web node scripts/unity-artifact.mjs check-http http://127.0.0.1:3000
+sudo docker compose --env-file .env.production -f compose.prod.yaml exec -T web node scripts/verify-v003-webgl.mjs http://127.0.0.1:3000
 ```
 
 ## 6. 업데이트·롤백·문제 확인

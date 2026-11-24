@@ -12,6 +12,8 @@ async function errorMessage(response: Response, fallback: string) {
 export function useParticipation() {
   const [session, setSession] = useState<Session | null>(null);
   const [eventState, setEventState] = useState<EventState | null>(null);
+  const [startingEvent, setStartingEvent] = useState(false);
+  const [eventStartError, setEventStartError] = useState("");
   const [responseCount, setResponseCount] = useState(0);
   const [latestSession, setLatestSession] = useState<LatestSession | null>(null);
   const [history, setHistory] = useState<LatestSession[]>([]);
@@ -42,7 +44,7 @@ export function useParticipation() {
     setPending(value);
   }
 
-  const loadState = useCallback(async (initial = false) => {
+  const loadState = useCallback(async (initial = false, restart = false) => {
     if (loadingState.current) return;
     loadingState.current = true;
     let finish!: () => void;
@@ -53,10 +55,14 @@ export function useParticipation() {
     try {
       if (initial) {
         const saved = readPending(); pendingRequest.current = saved; setPending(saved); storageReady.current = true;
-        const participantResponse = await fetch("/api/participants", { method: "POST", signal });
+        const participantResponse = await fetch(restart ? "/api/participants?restart=1" : "/api/participants", { method: "POST", signal });
         if (!participantResponse.ok) {
           if (participantResponse.status === 401) setAuthExpired(true);
           throw new Error(await errorMessage(participantResponse, "참여 인증을 준비하지 못했습니다."));
+        }
+        if (participantResponse.status === 201) {
+          if (saved) rememberPending(null);
+          activeSession.current = null;
         }
       }
       const [currentResponse, meResponse] = await Promise.all([
@@ -113,6 +119,7 @@ export function useParticipation() {
       if (changed) {
         setMessages({});
       }
+      if (changed || !nextEvent?.can_start) setEventStartError("");
       const retry = pendingRequest.current;
       if (retry && retry.session_id === targetId && records.some(item => retry.event_id ? item.event_id === retry.event_id : item.request_key === retry.request_key)) {
         rememberPending(null);
@@ -145,6 +152,38 @@ export function useParticipation() {
     const timer = window.setInterval(() => { if (storageReady.current && !document.hidden && !busy.current) void loadState(false); }, 2_500);
     return () => { mounted.current = false; controller.current?.abort(); window.clearTimeout(first); window.clearInterval(timer); window.removeEventListener("online", refresh); document.removeEventListener("visibilitychange", refresh); };
   }, [loadState]);
+
+  async function startEvent() {
+    if (!session?.accepting_choices || !eventState?.can_start || busy.current || pendingRequest.current) return;
+    const sessionId = session.id;
+    busy.current = true;
+    setStartingEvent(true);
+    setEventStartError("");
+    try {
+      await loadFinished.current;
+      if (!mounted.current || activeSession.current !== sessionId) return;
+      const response = await fetch(`/api/sessions/${sessionId}/event/start`, {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ request_key: crypto.randomUUID() }),
+      });
+      if (!response.ok) {
+        const message = await errorMessage(response, "상황을 시작하지 못했습니다.");
+        if (response.status === 401) {
+          setAuthExpired(true);
+          setLoadError(message);
+        }
+        throw new Error(message);
+      }
+      const nextEvent = await response.json() as EventState;
+      if (mounted.current && activeSession.current === sessionId) setEventState(nextEvent);
+    } catch (error) {
+      if (mounted.current && activeSession.current === sessionId)
+        setEventStartError(error instanceof Error ? error.message : "상황을 시작하지 못했습니다.");
+    } finally {
+      busy.current = false;
+      setStartingEvent(false);
+    }
+  }
 
   async function submit(situation: Situation) {
     if (authExpired || busy.current) return;
@@ -184,8 +223,7 @@ export function useParticipation() {
       if (response.status === 401) {
         setAuthExpired(true);
         setLoadError("참여 인증이 만료되었습니다.");
-      }
-      if (result.error?.code === "SESSION_CLOSED") {
+      } else if (result.error?.code === "SESSION_CLOSED") {
         setSession(previous => previous?.id === payload.session_id ? { ...previous, accepting_choices: false } : previous);
         rememberPending(null);
       } else if (response.status < 500 && ![408, 429].includes(response.status)) {
@@ -200,15 +238,22 @@ export function useParticipation() {
     } finally { busy.current = false; setSubmitting(null); }
   }
 
+  async function retryLoad(restart = false) {
+    await loadFinished.current;
+    if (!mounted.current || loadingState.current) return;
+    setLoading(true);
+    await loadState(true, restart);
+  }
+
   return {
     session, eventState, responseCount, latestSession, history, loading, loadError, authExpired, selected, answered, messages,
-    submitting, pending, profile, joined, departments,
+    submitting, pending, profile, joined, departments, startEvent, startingEvent, eventStartError,
     completeProfile: (value: Profile) => { setProfile(value); setJoined(true); void loadState(false); },
     refresh: () => void loadState(false), selectChoice: (situationId: string, choiceId: string) =>
       setSelected(previous => ({ ...previous, [situationId]: choiceId })),
     submit, retryPending: () => {
       const saved = pendingRequest.current;
       if (saved) return submit({ id: saved.situation_id, title: "", body: "", choices: [] });
-    }, retryLoad: () => { setLoading(true); void loadState(true); },
+    }, retryLoad: () => void retryLoad(), restart: () => void retryLoad(true),
   };
 }

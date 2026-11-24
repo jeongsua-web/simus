@@ -7,7 +7,7 @@ import { npcPosition, type Npc } from "@/app/participate/lib/npc-motion";
 import { normalizeEventLocation, type EventLocation } from "../events/event-locations";
 import { playableLocation } from "../city/city-v002-event-mapping.mjs";
 import { scanPlace } from "./npc-place-trajectory";
-import { V003_MAP_VERSION } from "../city/city-builds";
+import { V003_MAP_VERSION, V003_PATH_VERSION } from "../city/city-builds";
 import { localRoute } from "../routes/v003-route";
 import { choiceOutcome } from "../routes/v003-local-event";
 type Point = number[];
@@ -22,6 +22,7 @@ type State = {
 type Occupancy = { inside: boolean; entry_seq: number; consumed_entry_seq: number };
 type Member = State & {
   participant_id: string; npc_id: string; npc_motion: Npc["motion"];
+  profile_completed_at: Date | null;
   active: Event | null;
 };
 type Situation = {
@@ -67,7 +68,7 @@ async function readWorld(db: PoolClient, session: Session, participant?: string)
     SELECT session_id,participant_id,joined_at,joined_at,joined_at FROM simus.participant_sessions
     WHERE session_id=$1 AND ($2::uuid IS NULL OR participant_id=$2)
     ON CONFLICT DO NOTHING`, [session.id, participant ?? null]);
-  const members = await db.query<Member>(`SELECT p.participant_id,p.npc_id,p.npc_motion,st.*,
+  const members = await db.query<Member>(`SELECT p.participant_id,p.npc_id,p.npc_motion,p.profile_completed_at,st.*,
     CASE WHEN e.id IS NULL THEN NULL ELSE to_jsonb(e) || jsonb_build_object('entry_seq',e.entry_seq::text) END AS active
     FROM simus.participant_sessions p JOIN simus.npc_event_states st USING(session_id,participant_id)
     LEFT JOIN simus.npc_events e ON e.session_id=p.session_id
@@ -99,7 +100,6 @@ function transitionFor(world: World, p: Member): Transition | null {
   if (!isOpen(world.session)) return null;
   const now = timestamp(world.session.now);
   const v003 = p.npc_motion.map_version === V003_MAP_VERSION;
-  // This authored local route starts only through the explicit start command.
   if (v003 && !p.guidance_point) return null;
   const fresh = world.situations.filter(t => !world.answered.get(p.participant_id)?.has(t.id));
   const places = new Map<string, EventLocation>();
@@ -262,9 +262,19 @@ export async function advanceEvent(db: PoolClient, sid: string, pid: string) {
   const event = open && p.active && situation ? { ...p.active, situation } : null;
   const outcome = p.active && p.npc_motion.map_version === V003_MAP_VERSION
     ? await choiceOutcome(db, sid, pid, p.active.id) : null;
+  const phase = outcome ? "RESULT" : !open ? "CLOSED" : event ? "ACTIVE" : p.guidance_point ? "GUIDING" : "WAITING";
+  const canStart = phase === "WAITING" && Boolean(p.profile_completed_at) && !p.active && !p.resume_motion &&
+    p.npc_motion.map_version === V003_MAP_VERSION && p.npc_motion.path_version === V003_PATH_VERSION &&
+    world.situations.some(t => {
+      if (t.code !== "EXHIBITION_30" || world.answered.get(pid)?.has(t.id)) return false;
+      const location = t.event_location;
+      const expected = localRoute().event_location;
+      return location?.map_version === expected.map_version && location.place_id === expected.place_id &&
+        location.radius_m === expected.radius_m && JSON.stringify(location.point) === JSON.stringify(expected.point);
+    });
   return {
     ...(outcome ? { outcome } : {}),
-    phase: outcome ? "RESULT" : !open ? "CLOSED" : event ? "ACTIVE" : p.guidance_point ? "GUIDING" : "WAITING",
+    phase, can_start: canStart,
     server_time: new Date(session.now).toISOString(), waiting_since: new Date(p.waiting_since).toISOString(),
     deadline_at: null, guidance_at: p.npc_motion.map_version === V003_MAP_VERSION ? null : new Date(timestamp(p.waiting_since) + 60000).toISOString(), event: outcome && p.active && situation ? { ...p.active, situation } : event,
     overdue_since: p.overdue_since?.toISOString() ?? null, overdue: p.overdue_since !== null,
