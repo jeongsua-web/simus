@@ -156,7 +156,10 @@ public static class CityMasterplanV003LocalBuild
         follow.overviewTarget = Points[0];
         follow.overviewSize = 9;
         follow.smoothFollowTransitions = true;
-        follow.occlusionShader = Shader.Find("SIMUS/NPC Reveal");
+        // Keep facades solid, including while following a participant.
+        follow.enableBuildingTransparency = false;
+        follow.contextBuildingFade = false;
+        follow.occlusionShader = null;
         var bridge = new GameObject("SIMUS Web Bridge").AddComponent<WebCityBridge>();
         bridge.mapVersion = MapVersion;
         bridge.followCamera = follow;
@@ -193,7 +196,8 @@ public static class CityMasterplanV003LocalBuild
                 ["source_scene_sha256"] = Hash(ScenePath), ["npc_motion_enabled"] = true,
                 ["route_validation_status"] = "unity_physics_passed", ["exhibition_ready"] = false,
                 ["initial_memory_mb"] = 512, ["maximum_memory_mb"] = 2048,
-                ["memory_growth"] = "geometric", ["run_in_background"] = true
+                ["memory_growth"] = "geometric", ["run_in_background"] = true,
+                ["building_transparency"] = false
             }.ToString());
         }
         finally
