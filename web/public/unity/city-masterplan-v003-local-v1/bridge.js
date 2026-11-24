@@ -5,6 +5,7 @@
     const id = new URL(win.location.href).searchParams.get('bridge_id');
     const valid = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id || '') && win.parent !== win;
     let instance, readyMap, desiredVisibility, inspection, stopped = false, readySent = false;
+    let supportsStatPreview = false;
     let zoom = 1, supportsZoom = false, bound = false, pinchDistance = 0;
     const send = (type, fields = {}) => {
       if (valid && !stopped) win.parent.postMessage({ ...fields, channel: 'simus-city', version: 1, bridge_id: id, type }, win.location.origin);
@@ -66,7 +67,11 @@
       const m = event.data;
       if (stopped || !valid || event.origin !== win.location.origin || event.source !== win.parent || !m || typeof m !== 'object' || Array.isArray(m) || m.channel !== 'simus-city' || m.version !== 1 || m.bridge_id !== id) return;
       if (m.type === 'DISPOSE') { dispose(); return; }
-      if (m.type === 'SET_ZOOM') { setZoom(m.zoom); }
+      if (readySent && supportsStatPreview && (m.type === 'SET_STAT_PREVIEW' || m.type === 'CLEAR_STAT_PREVIEW')) {
+        try { instance.SendMessage('SIMUS Web Bridge', 'SetStatPreview', JSON.stringify(m.type === 'CLEAR_STAT_PREVIEW' ? null : m.stats)); }
+        catch (_) { fatal(); }
+      }
+      else if (m.type === 'SET_ZOOM') { setZoom(m.zoom); }
       else if (m.type === 'VISIBILITY') {
         if (typeof m.visible !== 'boolean') { error('INVALID_VISIBILITY'); return; }
         desiredVisibility = m.visible;
@@ -80,7 +85,7 @@
       if (instance && readyMap && !readySent && !stopped) {
         readySent = true;
         if (desiredVisibility !== undefined) instance.SendMessage('SIMUS Web Bridge', 'SetVisibility', desiredVisibility ? 'true' : 'false');
-        send('READY', { map_version: readyMap, camera_zoom: supportsZoom });
+        send('READY', { map_version: readyMap, camera_zoom: supportsZoom, stat_preview: supportsStatPreview });
       }
     }
     win.addEventListener('message', receive);
@@ -100,7 +105,7 @@
         if (stopped) return;
         try {
           const m = JSON.parse(json);
-          if (m.type === 'READY') { readyMap = m.map_version; supportsZoom = m.camera_zoom === true; maybeReady(); }
+          if (m.type === 'READY') { readyMap = m.map_version; supportsZoom = m.camera_zoom === true; supportsStatPreview = m.stat_preview === true; maybeReady(); }
           else if (m.type === 'BOUND' && readySent) { bound = true; send('BOUND', { session_id: m.session_id, npc_id: m.npc_id }); }
           else if (m.type === 'ERROR') error(m.code || 'RUNTIME_FAILURE');
           else if (m.type === 'INSPECTION') inspection = m;
