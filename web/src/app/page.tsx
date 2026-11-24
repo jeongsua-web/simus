@@ -72,11 +72,13 @@ export default function Home() {
         </h1>
 
         <p className={styles.lead}>
-          도시에서 벌어지는 상황을 읽고 행동을 선택하세요. 한 사람의 결정이 도시의 변화에 반영됩니다
+          도시에서 벌어지는 상황을 읽고 행동을 선택하세요.
+          <br />
+          한 사람의 결정이 도시의 변화에 반영됩니다
         </p>
 
         <Link className={styles.start} href="/participate" prefetch={false}>
-          참여 시작하기 <span aria-hidden="true">→</span>
+          참여 시작하기
         </Link>
       </section>
 
